@@ -1,0 +1,350 @@
+[
+  {
+    "id": 21217,
+    "name": "Alternativet",
+    "short_name": "ALT",
+    "member_count": 6,
+    "member_ids": [
+      15775,
+      20351,
+      20352,
+      20353,
+      20370,
+      20381
+    ]
+  },
+  {
+    "id": 21218,
+    "name": "Borgernes Parti – Lars Boje Mathiesen",
+    "short_name": "BP",
+    "member_count": 1,
+    "member_ids": [
+      18724
+    ]
+  },
+  {
+    "id": 21209,
+    "name": "Danmarksdemokraterne – Inger Støjberg",
+    "short_name": "DD",
+    "member_count": 16,
+    "member_ids": [
+      34,
+      48,
+      82,
+      113,
+      119,
+      162,
+      182,
+      1146,
+      15774,
+      17629,
+      20355,
+      20372,
+      20373,
+      20374,
+      20375,
+      20376
+    ]
+  },
+  {
+    "id": 21215,
+    "name": "Dansk Folkeparti",
+    "short_name": "DF",
+    "member_count": 7,
+    "member_ids": [
+      18,
+      238,
+      252,
+      15763,
+      18721,
+      20350,
+      20356
+    ]
+  },
+  {
+    "id": 21214,
+    "name": "Enhedslisten",
+    "short_name": "EL",
+    "member_count": 9,
+    "member_ids": [
+      109,
+      110,
+      176,
+      667,
+      15777,
+      16582,
+      18693,
+      18694,
+      20411
+    ]
+  },
+  {
+    "id": 21220,
+    "name": "Inuit Ataqatigiit",
+    "short_name": "IA",
+    "member_count": 1,
+    "member_ids": [
+      15757
+    ]
+  },
+  {
+    "id": 21222,
+    "name": "Javnaðarflokkurin",
+    "short_name": "JF",
+    "member_count": 1,
+    "member_ids": [
+      262
+    ]
+  },
+  {
+    "id": 21213,
+    "name": "Det Konservative Folkeparti",
+    "short_name": "KF",
+    "member_count": 11,
+    "member_ids": [
+      189,
+      1454,
+      11702,
+      15793,
+      17141,
+      18713,
+      20357,
+      20369,
+      20925,
+      20966,
+      21194
+    ]
+  },
+  {
+    "id": 21211,
+    "name": "Liberal Alliance",
+    "short_name": "LA",
+    "member_count": 15,
+    "member_ids": [
+      99,
+      15779,
+      18703,
+      18723,
+      20391,
+      20392,
+      20393,
+      20394,
+      20395,
+      20396,
+      20397,
+      20398,
+      20399,
+      20400,
+      20820
+    ]
+  },
+  {
+    "id": 21212,
+    "name": "Moderaterne",
+    "short_name": "M",
+    "member_count": 12,
+    "member_ids": [
+      57,
+      145,
+      20377,
+      20378,
+      20379,
+      20380,
+      20382,
+      20384,
+      20385,
+      20386,
+      20389,
+      20415
+    ]
+  },
+  {
+    "id": 21219,
+    "name": "Naleraq",
+    "short_name": "N",
+    "member_count": 1,
+    "member_ids": [
+      18688
+    ]
+  },
+  {
+    "id": 21216,
+    "name": "Radikale Venstre",
+    "short_name": "RV",
+    "member_count": 6,
+    "member_ids": [
+      112,
+      141,
+      191,
+      18725,
+      18726,
+      18729
+    ]
+  },
+  {
+    "id": 21207,
+    "name": "Socialdemokratiet",
+    "short_name": "S",
+    "member_count": 50,
+    "member_ids": [
+      12,
+      38,
+      74,
+      97,
+      118,
+      120,
+      138,
+      152,
+      154,
+      201,
+      208,
+      213,
+      214,
+      220,
+      224,
+      244,
+      257,
+      260,
+      266,
+      273,
+      278,
+      286,
+      1619,
+      15760,
+      15762,
+      15770,
+      15776,
+      15787,
+      16180,
+      16351,
+      16503,
+      18715,
+      18716,
+      18717,
+      18718,
+      18719,
+      18720,
+      18882,
+      19928,
+      20361,
+      20362,
+      20363,
+      20364,
+      20365,
+      20366,
+      20367,
+      20368,
+      20781,
+      21044,
+      21143
+    ]
+  },
+  {
+    "id": 21210,
+    "name": "Socialistisk Folkeparti",
+    "short_name": "SF",
+    "member_count": 15,
+    "member_ids": [
+      43,
+      121,
+      199,
+      219,
+      16728,
+      17628,
+      18706,
+      18707,
+      18708,
+      18709,
+      19000,
+      20358,
+      20359,
+      20360,
+      20798
+    ]
+  },
+  {
+    "id": 21221,
+    "name": "Sambandsflokkurin",
+    "short_name": "SP",
+    "member_count": 1,
+    "member_ids": [
+      20349
+    ]
+  },
+  {
+    "id": 21226,
+    "name": "Uden for folketingsgrupperne - Jeppe Søe",
+    "short_name": "UFG",
+    "member_count": 1,
+    "member_ids": [
+      20383
+    ]
+  },
+  {
+    "id": 21227,
+    "name": "Uden for folketingsgrupperne - Jon Stephensen",
+    "short_name": "UFG",
+    "member_count": 1,
+    "member_ids": [
+      20388
+    ]
+  },
+  {
+    "id": 21224,
+    "name": "Uden for folketingsgrupperne - Mike Villa Fonseca",
+    "short_name": "UFG",
+    "member_count": 1,
+    "member_ids": [
+      20390
+    ]
+  },
+  {
+    "id": 21223,
+    "name": "Uden for folketingsgrupperne - Peter Seier Christensen",
+    "short_name": "UFG",
+    "member_count": 1,
+    "member_ids": [
+      18722
+    ]
+  },
+  {
+    "id": 21225,
+    "name": "Uden for folketingsgrupperne - Theresa Scavenius",
+    "short_name": "UFG",
+    "member_count": 1,
+    "member_ids": [
+      20354
+    ]
+  },
+  {
+    "id": 21208,
+    "name": "Venstre, Danmarks Liberale Parti",
+    "short_name": "V",
+    "member_count": 23,
+    "member_ids": [
+      49,
+      80,
+      93,
+      102,
+      125,
+      127,
+      130,
+      134,
+      139,
+      164,
+      168,
+      173,
+      180,
+      206,
+      1845,
+      18695,
+      18696,
+      18698,
+      18699,
+      18700,
+      18701,
+      20371,
+      21168
+    ]
+  }
+]
