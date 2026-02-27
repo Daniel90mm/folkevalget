@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Folkevalget</title>
+    <meta
+      name="description"
+      content="Se hvordan folketingsmedlemmer stemmer, møder op og arbejder i udvalg baseret på offentlige data."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Source+Serif+4:wght@600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">folkevalget.dk</p>
+          <h1>Hvad gør dine folkevalgte faktisk?</h1>
+          <p class="hero-text">
+            Offentlige data om stemmer, fremmøde og udvalg. Ingen reklamer. Ingen spin.
+          </p>
+        </div>
+        <div class="hero-stats" id="hero-stats">
+          <div class="stat-card">
+            <span class="stat-label">Profiler</span>
+            <strong class="stat-value" data-stat="profiles">-</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Afstemninger</span>
+            <strong class="stat-value" data-stat="votes">-</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Opdateret</span>
+            <strong class="stat-value stat-value-small" data-stat="updated">-</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="catalogue">
+          <div class="toolbar">
+            <label class="search-field">
+              <span class="sr-only">Søg efter politiker</span>
+              <input id="search-input" type="search" placeholder="Søg på navn eller parti">
+            </label>
+            <label class="select-field">
+              <span class="sr-only">Filtrer på parti</span>
+              <select id="party-filter">
+                <option value="">Alle partier</option>
+              </select>
+            </label>
+            <div class="toolbar-note" id="result-count">Indlæser...</div>
+          </div>
+
+          <div class="profile-grid" id="profile-grid" aria-live="polite"></div>
+        </section>
+
+        <aside class="detail-panel" id="detail-panel">
+          <div class="detail-empty" id="detail-empty">
+            <h2>Vælg en profil</h2>
+            <p>Åbn en profil for at se stemmehistorik, fremmøde og udvalg.</p>
+          </div>
+
+          <article class="detail-card hidden" id="detail-card">
+            <div class="detail-header">
+              <div>
+                <p class="eyebrow" id="detail-party">-</p>
+                <h2 id="detail-name">-</h2>
+                <p class="detail-role" id="detail-role">-</p>
+              </div>
+              <a class="source-link" id="detail-link" href="#" target="_blank" rel="noreferrer">Kilde</a>
+            </div>
+
+            <div class="metric-grid">
+              <div class="metric">
+                <span>Fremmøde</span>
+                <strong id="metric-attendance">-</strong>
+              </div>
+              <div class="metric">
+                <span>Partiloyalitet</span>
+                <strong id="metric-loyalty">-</strong>
+              </div>
+              <div class="metric">
+                <span>Stemmer for</span>
+                <strong id="metric-for">-</strong>
+              </div>
+              <div class="metric">
+                <span>Stemmer imod</span>
+                <strong id="metric-against">-</strong>
+              </div>
+            </div>
+
+            <section class="detail-section">
+              <h3>Udvalg</h3>
+              <ul class="tag-list" id="detail-committees"></ul>
+            </section>
+
+            <section class="detail-section">
+              <h3>Seneste afstemninger</h3>
+              <ul class="vote-list" id="detail-votes"></ul>
+            </section>
+          </article>
+        </aside>
+      </main>
+    </div>
+
+    <template id="profile-card-template">
+      <button class="profile-card" type="button">
+        <span class="party-pill"></span>
+        <h2 class="profile-name"></h2>
+        <p class="profile-role"></p>
+        <dl class="profile-metrics">
+          <div>
+            <dt>Fremmøde</dt>
+            <dd class="profile-attendance"></dd>
+          </div>
+          <div>
+            <dt>Loyalitet</dt>
+            <dd class="profile-loyalty"></dd>
+          </div>
+        </dl>
+      </button>
+    </template>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

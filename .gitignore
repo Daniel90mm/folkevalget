@@ -1,0 +1,51 @@
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+!.env.sample
+*.local
+*.secret
+*.secrets
+
+# Keys, certificates, and signing material
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.csr
+*.cer
+*.der
+*.jks
+*.keystore
+*.asc
+*.gpg
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+
+# Private project docs and handoff notes
+private/
+.private/
+secrets/
+.secrets/
+.claude/
+docs/private/
+notes/private/
+PROJECT_CONTEXT_PRIVATE.md
+HANDOFF_PRIVATE.md
+LOCAL_NOTES.md
+
+# Registrar, DNS, and deployment exports
+dns-export*
+registrar-export*
+domain-export*
+whois-export*
+github-pages-export*
+
+# Local raw fetch snapshots
+data/raw/
+.tmpdata/
+__pycache__/
+*.pyc
