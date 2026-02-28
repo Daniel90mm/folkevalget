@@ -119,23 +119,14 @@ const ProfileApp = (() => {
     }
 
     for (const committee of committees) {
-      const link = document.createElement("a");
-      link.className = "committee-card";
-      link.href = window.Folkevalget.buildCommitteeUrl(committee.short_name);
-      link.target = "_blank";
-      link.rel = "noreferrer";
-
-      const code = document.createElement("strong");
-      code.textContent = committee.short_name || "Udvalg";
-
-      const name = document.createElement("span");
-      name.textContent = committee.name || committee.short_name || "Ukendt udvalg";
-
-      const note = document.createElement("small");
-      note.textContent = "Åbn på ft.dk";
-
-      link.append(code, name, note);
-      root.append(link);
+      const tag = document.createElement("a");
+      tag.className = "committee-tag";
+      tag.href = window.Folkevalget.buildCommitteeUrl(committee.short_name);
+      tag.target = "_blank";
+      tag.rel = "noreferrer";
+      tag.title = committee.name || committee.short_name || "Udvalg";
+      tag.textContent = committee.short_name || "Udvalg";
+      root.append(tag);
     }
   }
 

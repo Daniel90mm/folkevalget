@@ -1069,34 +1069,31 @@ p {
   line-height: 1.45;
 }
 
-.committee-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.6rem;
+.committee-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
-.committee-card {
-  display: grid;
-  gap: 0.22rem;
-  padding: 0.75rem 0.85rem;
-  border: 1px solid var(--line);
-  border-radius: 6px;
+.committee-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.7rem;
   background: var(--panel-muted);
-}
-
-.committee-card strong {
-  font-size: 0.95rem;
-}
-
-.committee-card span {
+  border: 1px solid var(--line);
+  border-radius: 4px;
   color: var(--muted-strong);
-  line-height: 1.45;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: border-color 120ms ease, background 120ms ease;
 }
 
-.committee-card small {
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.committee-tag:hover,
+.committee-tag:focus-visible {
+  border-color: rgba(27, 77, 110, 0.22);
+  background: rgba(27, 77, 110, 0.06);
+  color: var(--accent);
 }
 
 .vote-feed {
@@ -1775,4 +1772,102 @@ p {
   .member-card-link {
     margin-left: 0;
   }
+}
+
+/* ── Tooltip ─────────────────────────────────────────────────────────── */
+.tooltip-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tooltip-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.3rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  cursor: help;
+  line-height: 1;
+}
+
+.tooltip-body {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  padding: 0.6rem 0.75rem;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.45;
+  border-radius: 5px;
+  z-index: 100;
+  pointer-events: none;
+  white-space: normal;
+}
+
+.tooltip-wrap:hover .tooltip-body,
+.tooltip-trigger:focus-visible + .tooltip-body {
+  display: block;
+}
+
+/* ── Context note accordion ──────────────────────────────────────────── */
+.context-note-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--muted-strong);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}
+
+.context-note-caret {
+  display: inline-block;
+  font-size: 1rem;
+  transition: transform 180ms ease;
+  flex-shrink: 0;
+}
+
+.context-note-toggle[aria-expanded="true"] .context-note-caret {
+  transform: rotate(90deg);
+}
+
+.context-note-body {
+  display: none;
+  margin-top: 0.5rem;
+}
+
+.context-note-toggle[aria-expanded="true"] + .context-note-body {
+  display: grid;
+  gap: 0.4rem;
+}
+
+/* ── Discover card cleanup ───────────────────────────────────────────── */
+/* Hide progress bars — attendance % value is sufficient */
+.mini-metric-track {
+  display: none;
+}
+
+/* Hide for/imod raw counts from member cards — detail belongs on profile */
+.member-card .vote-chip {
+  display: none;
+}
+
+/* ── Votes page ──────────────────────────────────────────────────────── */
+/* Hide redundant metric strip — distribution chart shows the same data */
+.votes-metric-strip {
+  display: none;
 }
