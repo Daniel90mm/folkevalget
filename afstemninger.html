@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Afstemninger | Folkevalget</title>
+    <meta
+      name="description"
+      content="Vælg et forslag, se ja- og nej-stemmerne, og filtrér deltagerne pr. parti."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Source+Serif+4:wght@600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="page-votes">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-brand-row">
+          <a class="site-brand" href="./index.html">folkevalget.dk</a>
+          <nav class="site-nav" aria-label="Primær navigation">
+            <a href="./index.html">Forside</a>
+            <a href="./discover.html">Opdag profiler</a>
+            <a aria-current="page" href="./afstemninger.html">Afstemninger</a>
+            <a href="./partier.html">Partier</a>
+          </nav>
+        </div>
+        <div class="site-stats" data-site-stats aria-live="polite">
+          <span><strong data-stat="profiles">-</strong> profiler</span>
+          <span class="site-stats-dot" aria-hidden="true"></span>
+          <span><strong data-stat="votes">-</strong> afstemninger</span>
+          <span class="site-stats-dot" aria-hidden="true"></span>
+          <span>Opdateret: <strong data-stat="updated">-</strong></span>
+        </div>
+      </header>
+
+      <main class="votes-layout">
+        <section class="page-intro votes-intro">
+          <p class="eyebrow">Afstemninger</p>
+          <h1>Vælg et forslag og se præcis hvem der stemte for og imod.</h1>
+          <p>
+            Start i listen over afstemninger. Når du vælger et forslag, kan du se de samlede ja- og nej-tal,
+            åbne profilerne bag stemmerne og filtrere listerne pr. parti.
+          </p>
+        </section>
+
+        <section class="votes-shell">
+          <aside class="panel votes-browser">
+            <div class="panel-heading panel-heading-inline votes-browser-head">
+              <div>
+                <p class="eyebrow">Vælg forslag</p>
+                <h2>Forslagsliste</h2>
+              </div>
+              <div class="toolbar-summary" id="vote-result-count">-</div>
+            </div>
+
+            <label class="field">
+              <span class="field-label">Søg forslag</span>
+              <input id="vote-search" type="search" placeholder="Sag, titel eller nummer" autofocus>
+            </label>
+
+            <div class="vote-browser-list" id="vote-list" aria-live="polite"></div>
+          </aside>
+
+          <section class="panel votes-detail">
+            <div class="panel-empty hidden" id="vote-empty">
+              Ingen afstemninger matcher søgningen.
+            </div>
+
+            <div class="vote-detail-content hidden" id="vote-detail-content">
+              <div class="vote-detail-head">
+                <div class="vote-detail-copy">
+                  <p class="eyebrow" id="vote-detail-kicker">Forslag</p>
+                  <h2 id="vote-title">-</h2>
+                  <p class="vote-detail-meta" id="vote-meta">-</p>
+                </div>
+                <div class="profile-hero-actions">
+                  <a class="button-link button-link-secondary hidden" href="#" id="vote-source-link" target="_blank" rel="noreferrer">Åbn sag</a>
+                </div>
+              </div>
+
+              <section class="metric-strip votes-metric-strip">
+                <article class="metric-card" data-vote-metric="for" data-tone="good">
+                  <span>Stemmer for</span>
+                  <strong data-value>-</strong>
+                </article>
+                <article class="metric-card" data-vote-metric="against" data-tone="risk">
+                  <span>Stemmer imod</span>
+                  <strong data-value>-</strong>
+                </article>
+                <article class="metric-card" data-vote-metric="absent" data-tone="warn">
+                  <span>Fravær</span>
+                  <strong data-value>-</strong>
+                </article>
+                <article class="metric-card" data-vote-metric="neither" data-tone="neutral">
+                  <span>Hverken</span>
+                  <strong data-value>-</strong>
+                </article>
+              </section>
+
+              <section class="context-note hidden" id="vote-context"></section>
+
+              <div class="votes-toolbar">
+                <label class="field field-inline">
+                  <span class="field-label">Partifilter</span>
+                  <select id="vote-party-filter">
+                    <option value="">Alle partier</option>
+                  </select>
+                </label>
+                <p class="table-note" id="vote-filter-summary">
+                  Viser alle registrerede ja- og nej-stemmer for denne afstemning.
+                </p>
+              </div>
+
+              <div class="vote-lists-grid">
+                <article class="vote-list-panel">
+                  <div class="panel-heading">
+                    <p class="eyebrow">Stemte for</p>
+                    <h2 id="vote-yes-title">-</h2>
+                  </div>
+                  <div class="voter-list" id="vote-yes-list"></div>
+                </article>
+
+                <article class="vote-list-panel">
+                  <div class="panel-heading">
+                    <p class="eyebrow">Stemte imod</p>
+                    <h2 id="vote-no-title">-</h2>
+                  </div>
+                  <div class="voter-list" id="vote-no-list"></div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <template id="vote-list-item-template">
+      <button class="vote-list-item" type="button">
+        <div class="vote-list-item-top">
+          <strong data-cell="number"></strong>
+          <span data-cell="date"></span>
+        </div>
+        <h3 data-cell="title"></h3>
+        <div class="vote-list-item-footer">
+          <span class="vote-chip for" data-cell="for-count"></span>
+          <span class="vote-chip imod" data-cell="against-count"></span>
+        </div>
+      </button>
+    </template>
+
+    <template id="voter-row-template">
+      <a class="voter-row" href="#">
+        <div class="voter-row-main">
+          <span class="party-pill" data-cell="party"></span>
+          <div class="voter-row-copy">
+            <strong data-cell="name"></strong>
+            <span data-cell="role"></span>
+          </div>
+        </div>
+        <span class="member-card-link voter-row-link">Profil</span>
+      </a>
+    </template>
+
+    <script src="catalog.js" defer></script>
+    <script src="vote-catalog.js" defer></script>
+    <script src="shared.js" defer></script>
+    <script src="votes.js" defer></script>
+  </body>
+</html>

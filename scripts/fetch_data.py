@@ -736,6 +736,18 @@ def build_vote_context(
     return votes
 
 
+def vote_group_key(vote_type_id: int) -> str | None:
+    if vote_type_id == 1:
+        return "for"
+    if vote_type_id == 2:
+        return "imod"
+    if vote_type_id == 3:
+        return "fravaer"
+    if vote_type_id == 4:
+        return "hverken"
+    return None
+
+
 def derive_profiles(
     *,
     people: list[dict[str, Any]],
@@ -770,6 +782,13 @@ def derive_profiles(
         if vote_id in vote_context_by_id:
             stems_by_vote[vote_id].append(stem)
 
+    def person_id_from_stem(stem: dict[str, Any]) -> int:
+        for key in ("aktørid", "aktør_id", "aktoerid", "aktoer_id", "aktÃ¸rid", "aktÃƒÂ¸rid"):
+            raw_value = stem.get(key)
+            if raw_value is not None:
+                return int(raw_value)
+        raise KeyError("Missing actor id in stem row")
+
     def party_for_person_on(person_id: int, when_iso: str) -> dict[str, Any] | None:
         cache_key = (person_id, when_iso)
         if cache_key in membership_cache:
@@ -801,7 +820,7 @@ def derive_profiles(
         party_vote_buckets: dict[str, dict[int, int]] = defaultdict(lambda: defaultdict(int))
 
         for stem in vote_stems:
-            person_id = int(stem["aktørid"])
+            person_id = person_id_from_stem(stem)
             if person_id not in person_ids:
                 continue
 
@@ -844,7 +863,7 @@ def derive_profiles(
                 party_split_count += 1
 
         for stem in vote_stems:
-            person_id = int(stem["aktørid"])
+            person_id = person_id_from_stem(stem)
             if person_id not in person_ids:
                 continue
 
@@ -865,8 +884,38 @@ def derive_profiles(
                 loyalty_matches[person_id] += 1
 
         counts: dict[int, int] = defaultdict(int)
+        vote_groups: dict[str, list[int]] = {
+            "for": [],
+            "imod": [],
+            "fravaer": [],
+            "hverken": [],
+        }
+        vote_groups_by_party: dict[str, dict[str, list[int]]] = defaultdict(
+            lambda: {
+                "for": [],
+                "imod": [],
+                "fravaer": [],
+                "hverken": [],
+            }
+        )
         for stem in vote_stems:
-            counts[int(stem["typeid"])] += 1
+            person_id = person_id_from_stem(stem)
+            if person_id not in person_ids:
+                continue
+
+            vote_type_id = int(stem["typeid"])
+            counts[vote_type_id] += 1
+            group_key = vote_group_key(vote_type_id)
+            if group_key:
+                vote_groups[group_key].append(person_id)
+                party_membership = party_for_person_on(person_id, vote_date_iso)
+                party_actor = party_membership["actor"] if party_membership else None
+                party_key = (
+                    party_actor.get("gruppenavnkort")
+                    or party_actor.get("navn")
+                    or "Uden parti"
+                ) if party_actor else "Uden parti"
+                vote_groups_by_party[party_key][group_key].append(person_id)
 
         summarized_votes.append(
             {
@@ -877,6 +926,8 @@ def derive_profiles(
                     "fravaer": counts.get(3, 0),
                     "hverken": counts.get(4, 0),
                 },
+                "vote_groups": vote_groups,
+                "vote_groups_by_party": vote_groups_by_party,
                 "party_split_count": party_split_count,
                 "margin": abs(counts.get(1, 0) - counts.get(2, 0)),
             }
@@ -1385,6 +1436,13 @@ def main() -> None:
             "profiles": profiles,
             "parties": party_summaries,
             "stats": site_stats,
+        },
+    )
+    write_javascript_payload(
+        output_dir.parent / "vote-catalog.js",
+        "__FOLKEVALGET_VOTES__",
+        {
+            "votes": summarized_votes,
         },
     )
 
