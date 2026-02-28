@@ -27,6 +27,7 @@ const heroStats = {
 
 const detail = {
   party: document.querySelector("#detail-party"),
+  photo: document.querySelector("#detail-photo"),
   name: document.querySelector("#detail-name"),
   role: document.querySelector("#detail-role"),
   link: document.querySelector("#detail-link"),
@@ -188,8 +189,17 @@ function renderProfiles() {
     const attendanceValue = profile.attendance_pct;
     const loyaltyValue = profile.party_loyalty_pct;
 
-    card.querySelector(".party-pill").textContent = partyLabel;
-    card.querySelector(".party-pill").title = profile.party || partyLabel;
+    const pill = card.querySelector(".party-pill");
+    pill.textContent = partyLabel;
+    pill.title = profile.party || partyLabel;
+    pill.dataset.party = profile.party_short || "";
+
+    const avatar = card.querySelector(".card-avatar");
+    if (profile.photo_url) {
+      avatar.src = profile.photo_url;
+      avatar.alt = profile.name;
+      avatar.classList.remove("hidden");
+    }
     card.querySelector(".profile-name").textContent = profile.name;
     card.querySelector(".profile-role").textContent = roleLabel;
     card.querySelector(".profile-role").title = roleLabel;
@@ -238,6 +248,16 @@ function renderDetail(profile) {
 
   detail.party.textContent = partyDisplayName(profile.party, profile.party_short);
   detail.party.title = profile.party || "Uden parti";
+  detail.party.dataset.party = profile.party_short || "";
+
+  if (profile.photo_url) {
+    detail.photo.src = profile.photo_url;
+    detail.photo.alt = profile.name;
+    detail.photo.classList.remove("hidden");
+  } else {
+    detail.photo.classList.add("hidden");
+  }
+
   detail.name.textContent = profile.name;
   detail.role.textContent = [
     profile.role || profile.constituency || "Folketingsmedlem",
@@ -425,6 +445,41 @@ function compareProfiles(left, right) {
 
   if (state.sortMode === "attendance_asc") {
     return compareAttendance(left, right, "asc");
+  }
+
+  if (state.sortMode === "loyalty_desc") {
+    return compareLoyalty(left, right, "desc");
+  }
+
+  if (state.sortMode === "loyalty_asc") {
+    return compareLoyalty(left, right, "asc");
+  }
+
+  return compareByName(left, right);
+}
+
+function compareLoyalty(left, right, direction) {
+  const leftValue = left.party_loyalty_pct;
+  const rightValue = right.party_loyalty_pct;
+  const leftMissing = leftValue === null || leftValue === undefined;
+  const rightMissing = rightValue === null || rightValue === undefined;
+
+  if (leftMissing && rightMissing) {
+    return compareByName(left, right);
+  }
+  if (leftMissing) {
+    return 1;
+  }
+  if (rightMissing) {
+    return -1;
+  }
+
+  const delta =
+    direction === "desc"
+      ? Number(rightValue) - Number(leftValue)
+      : Number(leftValue) - Number(rightValue);
+  if (delta !== 0) {
+    return delta;
   }
 
   return compareByName(left, right);

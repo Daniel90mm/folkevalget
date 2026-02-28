@@ -247,6 +247,18 @@ h3 {
   text-transform: uppercase;
 }
 
+.party-pill[data-party="S"]   { background: rgba(210, 20,  40,  0.12); color: #b51428; }
+.party-pill[data-party="V"]   { background: rgba(0,   60,  130, 0.12); color: #003c82; }
+.party-pill[data-party="M"]   { background: rgba(100, 45,  140, 0.12); color: #5c2a84; }
+.party-pill[data-party="SF"]  { background: rgba(220, 80,  0,   0.12); color: #c44e00; }
+.party-pill[data-party="EL"]  { background: rgba(170, 10,  30,  0.12); color: #990d1c; }
+.party-pill[data-party="KF"]  { background: rgba(0,   90,  50,  0.12); color: #00552e; }
+.party-pill[data-party="LA"]  { background: rgba(0,   155, 210, 0.12); color: #007ba8; }
+.party-pill[data-party="RV"]  { background: rgba(120, 40,  130, 0.12); color: #6e2278; }
+.party-pill[data-party="ALT"] { background: rgba(44,  174, 99,  0.12); color: #1f8a50; }
+.party-pill[data-party="DD"]  { background: rgba(20,  45,  90,  0.12); color: #162d5a; }
+.party-pill[data-party="DF"]  { background: rgba(210, 120, 0,   0.12); color: #9a5800; }
+
 .profile-name,
 .detail-card h2,
 .detail-empty h2 {
@@ -395,6 +407,32 @@ h3 {
 .detail-heading {
   display: grid;
   gap: 0.45rem;
+}
+
+.detail-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.detail-photo {
+  flex: 0 0 auto;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 2px solid var(--line-strong);
+}
+
+.card-avatar {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 1.5px solid var(--line);
 }
 
 .detail-heading-row {

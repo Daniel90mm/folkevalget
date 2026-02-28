@@ -63,6 +63,8 @@
                 <option value="name">Navn A-Å</option>
                 <option value="attendance_desc">Fremmøde: højest først</option>
                 <option value="attendance_asc">Fremmøde: lavest først</option>
+                <option value="loyalty_desc">Loyalitet: højest først</option>
+                <option value="loyalty_asc">Loyalitet: lavest først</option>
               </select>
             </label>
             <div class="toolbar-note" id="result-count">Indlæser...</div>
@@ -85,8 +87,13 @@
                   <span class="party-pill detail-party-pill" id="detail-party">-</span>
                   <a class="source-link" id="detail-link" href="#" target="_blank" rel="noreferrer">Kilde</a>
                 </div>
-                <h2 id="detail-name">-</h2>
-                <p class="detail-role" id="detail-role">-</p>
+                <div class="detail-name-row">
+                  <img class="detail-photo hidden" id="detail-photo" alt="">
+                  <div>
+                    <h2 id="detail-name">-</h2>
+                    <p class="detail-role" id="detail-role">-</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -128,6 +135,7 @@
     <template id="profile-card-template">
       <button class="profile-card" type="button">
         <div class="profile-heading-row">
+          <img class="card-avatar hidden" src="" alt="" loading="lazy">
           <span class="party-pill"></span>
           <h2 class="profile-name"></h2>
           <p class="profile-role"></p>
