@@ -55,6 +55,7 @@ const heroStats = {
 const detail = {
   party: document.querySelector("#detail-party"),
   photo: document.querySelector("#detail-photo"),
+  initials: document.querySelector("#detail-initials"),
   name: document.querySelector("#detail-name"),
   role: document.querySelector("#detail-role"),
   link: document.querySelector("#detail-link"),
@@ -251,11 +252,18 @@ function renderProfiles() {
     pill.dataset.party = profile.party_short || "";
 
     const avatar = card.querySelector(".card-avatar");
+    const cardInitials = card.querySelector(".card-initials");
+    cardInitials.textContent = getInitials(profile.name);
     if (profile.photo_url) {
       avatar.src = profile.photo_url.replace(/\.ashx$/, ".jpg");
       avatar.alt = profile.name;
       avatar.classList.remove("hidden");
-      avatar.onerror = () => avatar.classList.add("hidden");
+      avatar.onerror = () => {
+        avatar.classList.add("hidden");
+        cardInitials.classList.remove("hidden");
+      };
+    } else {
+      cardInitials.classList.remove("hidden");
     }
     card.querySelector(".profile-name").textContent = profile.name;
     card.querySelector(".profile-role").textContent = roleLabel;
@@ -307,13 +315,19 @@ function renderDetail(profile) {
   detail.party.title = profile.party || "Uden parti";
   detail.party.dataset.party = profile.party_short || "";
 
+  detail.initials.textContent = getInitials(profile.name);
+  detail.initials.classList.add("hidden");
   if (profile.photo_url) {
     detail.photo.src = profile.photo_url.replace(/\.ashx$/, ".jpg");
     detail.photo.alt = profile.name;
     detail.photo.classList.remove("hidden");
-    detail.photo.onerror = () => detail.photo.classList.add("hidden");
+    detail.photo.onerror = () => {
+      detail.photo.classList.add("hidden");
+      detail.initials.classList.remove("hidden");
+    };
   } else {
     detail.photo.classList.add("hidden");
+    detail.initials.classList.remove("hidden");
   }
 
   detail.name.textContent = profile.name;
@@ -355,11 +369,9 @@ function renderCommittees(committees) {
     return;
   }
 
-  const sessionId = currentSessionId();
-
   for (const committee of committees) {
     const item = document.createElement("li");
-    const url = `https://www.ft.dk/samling/${sessionId}/udvalg/${committee.short_name}/`;
+    const url = `https://www.ft.dk/da/udvalg/udvalgene/${committee.short_name.toLowerCase()}/`;
     item.title = `Åbn ${committee.name || committee.short_name} på ft.dk`;
     item.style.cursor = "pointer";
     item.setAttribute("role", "link");
@@ -509,7 +521,7 @@ function buildSagUrl(sagNumber, dateStr) {
   if (!type) return null;
   const d = new Date(dateStr);
   const sessionYear = d.getMonth() >= 9 ? d.getFullYear() : d.getFullYear() - 1;
-  return `https://www.ft.dk/samling/${sessionYear}1/${type}/${prefix}${number}/`;
+  return `https://www.folketingstidende.dk/samling/${sessionYear}1/${type}/${prefix}${number}/index.htm`;
 }
 
 function voteBadgeClass(label) {
@@ -671,6 +683,16 @@ function metricTone(value, metricKind) {
   }
 
   return "neutral";
+}
+
+function getInitials(name) {
+  return (name || "")
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((w) => w[0])
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
 }
 
 function clampPercent(value) {
