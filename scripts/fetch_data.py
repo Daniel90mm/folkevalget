@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import hashlib
 import html
 import json
 import re
@@ -27,6 +28,11 @@ DEFAULT_START_DATE = "2022-11-01"
 DEFAULT_RECENT_VOTES = 10
 REQUEST_TIMEOUT = 60
 MAX_RETRIES = 3
+
+WIKIDATA_HEADERS = {
+    "User-Agent": "folkevalget-data-fetcher/1.0 (https://folkevalget.dk)",
+    "Accept": "application/json",
+}
 
 
 @dataclass
@@ -164,6 +170,17 @@ def parse_args() -> argparse.Namespace:
         "--write-raw",
         action="store_true",
         help="Write raw snapshot files to raw-dir.",
+    )
+    parser.add_argument(
+        "--skip-photos",
+        action="store_true",
+        help="Skip downloading member photos.",
+    )
+    parser.add_argument(
+        "--photo-workers",
+        type=int,
+        default=8,
+        help="Parallel workers for photo downloads.",
     )
     parser.add_argument(
         "--verbose",
@@ -880,6 +897,139 @@ def derive_profiles(
     return profiles, party_summaries, committee_summaries, summarized_votes, metadata
 
 
+def _wikidata_photo_url(name: str) -> str | None:
+    """Search Wikidata for a person by name and return their Wikimedia Commons image URL."""
+    search_url = (
+        "https://www.wikidata.org/w/api.php"
+        "?action=wbsearchentities"
+        f"&search={quote(name)}"
+        "&language=da&type=item&format=json&limit=3"
+    )
+    try:
+        req = Request(search_url, headers=WIKIDATA_HEADERS)
+        with urlopen(req, timeout=15) as resp:
+            data = json.load(resp)
+    except Exception:
+        return None
+
+    results = data.get("search", [])
+    if not results:
+        return None
+
+    # Prefer an exact label match; fall back to description-keyword match
+    name_lower = name.lower().strip()
+    best = None
+    for result in results:
+        if (result.get("label") or "").lower().strip() == name_lower:
+            best = result
+            break
+    if best is None:
+        for result in results:
+            desc = (result.get("description") or "").lower()
+            if any(kw in desc for kw in ("politik", "folket", "minister", "borgmester")):
+                best = result
+                break
+    if best is None:
+        return None
+
+    qid = best["id"]
+    entity_url = f"https://www.wikidata.org/wiki/Special:EntityData/{qid}.json"
+    try:
+        req = Request(entity_url, headers=WIKIDATA_HEADERS)
+        with urlopen(req, timeout=15) as resp:
+            entity_data = json.load(resp)
+    except Exception:
+        return None
+
+    entity = entity_data.get("entities", {}).get(qid, {})
+    p18 = entity.get("claims", {}).get("P18", [])
+    if not p18:
+        return None
+
+    image_value = p18[0].get("mainsnak", {}).get("datavalue", {}).get("value")
+    if not image_value:
+        return None
+
+    fname = image_value.replace(" ", "_")
+    # Skip non-web-renderable formats
+    if fname.lower().endswith((".svg", ".tif", ".tiff", ".pdf")):
+        return None
+
+    md5 = hashlib.md5(fname.encode("utf-8")).hexdigest()
+    return f"https://upload.wikimedia.org/wikipedia/commons/{md5[0]}/{md5[:2]}/{quote(fname)}"
+
+
+def _download_one_photo(
+    person_id: int,
+    name: str,
+    photos_dir: Path,
+) -> tuple[int, str | None]:
+    # Return cached photo if it already exists (any common extension)
+    for ext in (".jpg", ".jpeg", ".png", ".webp", ".gif"):
+        cached = photos_dir / f"{person_id}{ext}"
+        if cached.exists():
+            return person_id, f"photos/{person_id}{ext}"
+
+    img_url = _wikidata_photo_url(name)
+    if not img_url:
+        return person_id, None
+
+    # Determine extension from URL (default jpg)
+    url_lower = img_url.split("?")[0].lower()
+    ext = ".jpg"
+    for candidate in (".png", ".gif", ".webp", ".jpeg"):
+        if url_lower.endswith(candidate):
+            ext = candidate
+            break
+
+    target = photos_dir / f"{person_id}{ext}"
+    try:
+        req = Request(img_url, headers=WIKIDATA_HEADERS)
+        with urlopen(req, timeout=20) as resp:
+            content_type = resp.headers.get("Content-Type", "")
+            if not content_type.startswith("image/"):
+                return person_id, None
+            target.write_bytes(resp.read())
+            return person_id, f"photos/{person_id}{ext}"
+    except Exception:
+        return person_id, None
+
+
+def download_all_photos(
+    profiles: list[dict[str, Any]],
+    photos_dir: Path,
+    verbose: bool,
+    max_workers: int,
+) -> None:
+    ensure_dir(photos_dir)
+    to_download = [(p["id"], p["name"]) for p in profiles if p.get("name")]
+    if not to_download:
+        return
+
+    log(verbose, f"looking up {len(to_download)} photos via Wikidata with {max_workers} workers")
+
+    results: dict[int, str | None] = {}
+    with ThreadPoolExecutor(max_workers=max(1, max_workers)) as executor:
+        futures = {
+            executor.submit(_download_one_photo, pid, name, photos_dir): pid
+            for pid, name in to_download
+        }
+        for future in as_completed(futures):
+            pid, local_path = future.result()
+            results[pid] = local_path
+            if verbose and len(results) % 20 == 0:
+                ok = sum(1 for v in results.values() if v)
+                log(True, f"photos: {len(results)}/{len(to_download)} done, {ok} ok")
+
+    ok_count = sum(1 for v in results.values() if v)
+    log(verbose, f"photos: {ok_count}/{len(to_download)} fetched from Wikidata")
+
+    for profile in profiles:
+        pid = profile["id"]
+        if pid in results:
+            profile["photo_url"] = results[pid]
+
+
 def main() -> None:
     args = parse_args()
     options = FetchOptions(
@@ -979,6 +1129,10 @@ def main() -> None:
             "profiles": derived_meta["profile_count"],
         },
     }
+
+    if not args.skip_photos:
+        photos_dir = Path(args.output_dir).parent / "photos"
+        download_all_photos(profiles, photos_dir, options.verbose, max_workers=args.photo_workers)
 
     write_json(output_dir / "profiler.json", profiles)
     write_json(output_dir / "partier.json", party_summaries)
