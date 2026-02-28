@@ -6,7 +6,7 @@
     <title>Folkevalget</title>
     <meta
       name="description"
-      content="Se hvordan folketingsmedlemmer stemmer, møder op og arbejder i udvalg baseret på offentlige data."
+      content="Et neutralt overblik over folketingsmedlemmers stemmer, fremmøde og udvalg baseret på offentlige data."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,166 +16,140 @@
     >
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand-mark" href="./">folkevalget.dk</a>
-        <div class="topbar-stats" id="hero-stats" aria-live="polite">
-          <span class="topbar-stat">
-            <strong data-stat="profiles">-</strong>
-            <span>profiler</span>
-          </span>
-          <span class="topbar-separator" aria-hidden="true"></span>
-          <span class="topbar-stat">
-            <strong data-stat="votes">-</strong>
-            <span>afstemninger</span>
-          </span>
-          <span class="topbar-separator" aria-hidden="true"></span>
-          <span class="topbar-stat topbar-stat-updated">
-            <span>Opdateret:</span>
-            <strong data-stat="updated">-</strong>
-          </span>
+  <body class="page-home">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-brand-row">
+          <a class="site-brand" href="./index.html">folkevalget.dk</a>
+          <nav class="site-nav" aria-label="Primær navigation">
+            <a aria-current="page" href="./index.html">Forside</a>
+            <a href="./discover.html">Opdag profiler</a>
+          </nav>
+        </div>
+        <div class="site-stats" data-site-stats aria-live="polite">
+          <span><strong data-stat="profiles">-</strong> profiler</span>
+          <span class="site-stats-dot" aria-hidden="true"></span>
+          <span><strong data-stat="votes">-</strong> afstemninger</span>
+          <span class="site-stats-dot" aria-hidden="true"></span>
+          <span>Opdateret: <strong data-stat="updated">-</strong></span>
         </div>
       </header>
 
-      <main class="layout">
-        <section class="catalogue">
-          <div class="catalogue-header">
-            <p class="catalogue-intro">
-              Offentlige data om stemmer, fremmøde og udvalg. Ingen reklamer. Ingen spin.
+      <main class="home-layout">
+        <section class="hero-panel">
+          <div class="hero-copy">
+            <p class="eyebrow">Offentlig kontrol med Folketinget</p>
+            <h1>Se, hvad dine folkevalgte faktisk gør mellem valgplakaterne.</h1>
+            <p class="hero-lead">
+              Folkevalget samler officielle data om stemmer, fremmøde og udvalg i et format, der er let
+              at gennemskue. Ingen reklamer. Ingen AI-meninger. Ingen partispin.
             </p>
+            <div class="hero-actions">
+              <a class="button-link" href="./discover.html">Gå til profilerne</a>
+              <a class="button-link button-link-secondary" href="#saadan-virker-det">Sådan virker siden</a>
+            </div>
           </div>
 
-          <div class="toolbar">
-            <label class="search-field">
-              <span class="sr-only">Søg efter politiker</span>
-              <input id="search-input" type="search" placeholder="Søg på navn eller parti">
-            </label>
-            <label class="select-field">
-              <span class="sr-only">Filtrer på parti</span>
-              <select id="party-filter">
-                <option value="">Alle partier</option>
-              </select>
-            </label>
-            <label class="select-field">
-              <span class="sr-only">Filtrer på udvalg</span>
-              <select id="committee-filter">
-                <option value="">Alle udvalg</option>
-              </select>
-            </label>
-            <label class="select-field">
-              <span class="sr-only">Sorter profiler</span>
-              <select id="sort-select">
-                <option value="name">Navn A-Å</option>
-                <option value="attendance_desc">Fremmøde: højest først</option>
-                <option value="attendance_asc">Fremmøde: lavest først</option>
-                <option value="loyalty_desc">Loyalitet: højest først</option>
-                <option value="loyalty_asc">Loyalitet: lavest først</option>
-              </select>
-            </label>
-            <div class="toolbar-note" id="result-count">Indlæser...</div>
+          <div class="hero-metrics">
+            <article class="signal-card">
+              <span class="signal-label">Profiler</span>
+              <strong data-home="profiles">-</strong>
+              <p>Alle profiler er bygget på de samme offentlige kilder og vises i samme format.</p>
+            </article>
+            <article class="signal-card">
+              <span class="signal-label">Afstemninger</span>
+              <strong data-home="votes">-</strong>
+              <p>Stemmedata samles til et katalog, så du kan starte med overblik og gå videre til detaljen.</p>
+            </article>
+            <article class="signal-card">
+              <span class="signal-label">Opdateret</span>
+              <strong data-home="updated">-</strong>
+              <p>Data opdateres som statiske filer, så siden er hurtig og ikke belaster Folketingets API for hver besøgende.</p>
+            </article>
           </div>
-
-          <div class="profile-grid" id="profile-grid" aria-live="polite"></div>
         </section>
 
-        <aside class="detail-panel" id="detail-panel">
-          <div class="detail-empty" id="detail-empty">
-            <p class="eyebrow">Detaljer</p>
-            <h2>Vælg en profil</h2>
-            <p>Åbn en profil for at se stemmehistorik, fremmøde og udvalg.</p>
+        <section class="content-section">
+          <div class="section-heading">
+            <p class="eyebrow">Hvorfor siden findes</p>
+            <h2>Valgkamp fortæller meget om budskaber og meget lidt om adfærd.</h2>
           </div>
+          <div class="info-grid">
+            <article class="info-card">
+              <h3>Løfter er lette. Afstemninger er dokumenterede.</h3>
+              <p>Folkevalget gør det nemt at se, om en politiker møder op, stemmer med partiet og hvilke udvalg personen arbejder i.</p>
+            </article>
+            <article class="info-card">
+              <h3>Offentlige data er til for borgere, ikke kun for specialister.</h3>
+              <p>Rå data fra Folketinget bliver ofte for tekniske. Her bliver de samlet i en form, der kan bruges af vælgere uden kendskab til OData eller dokumentstrømme.</p>
+            </article>
+            <article class="info-card">
+              <h3>Neutralitet kræver gennemsigtige regler.</h3>
+              <p>Siden viser tal, kilder og links tilbage til Folketinget. Den forsøger ikke at forklare, hvad du skal mene om dem.</p>
+            </article>
+          </div>
+        </section>
 
-          <article class="detail-card hidden" id="detail-card">
-            <div class="detail-header">
-              <div class="detail-heading">
-                <div class="detail-heading-row">
-                  <span class="party-pill detail-party-pill" id="detail-party">-</span>
-                  <a class="source-link" id="detail-link" href="#" target="_blank" rel="noreferrer">Kilde</a>
-                </div>
-                <div class="detail-name-row">
-                  <span class="detail-initials hidden" id="detail-initials" aria-hidden="true"></span>
-                  <img class="detail-photo hidden" id="detail-photo" alt="" referrerpolicy="no-referrer">
-                  <div>
-                    <h2 id="detail-name">-</h2>
-                    <p class="detail-role" id="detail-role">-</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <section class="content-section" id="saadan-virker-det">
+          <div class="section-heading">
+            <p class="eyebrow">Sådan virker det</p>
+            <h2>Tre trin fra officiel kilde til brugbar oversigt.</h2>
+          </div>
+          <div class="step-grid">
+            <article class="step-card">
+              <span>1</span>
+              <h3>Data hentes fra Folketingets åbne data</h3>
+              <p>Medlemmer, afstemninger, stemmer og udvalg hentes fra Folketingets offentlige ODA-kilder.</p>
+            </article>
+            <article class="step-card">
+              <span>2</span>
+              <h3>Statistik bygges som statiske filer</h3>
+              <p>Fremmøde, partiloyalitet og seneste stemmer beregnes på forhånd, så alle besøgende ser den samme dokumenterede version.</p>
+            </article>
+            <article class="step-card">
+              <span>3</span>
+              <h3>Du starter med overblik og går videre til detailniveau</h3>
+              <p>Først en opdageside med filtre. Derefter en selvstændig profilside med udvalg, afstemninger og forklaringer.</p>
+            </article>
+          </div>
+        </section>
 
-            <div class="metric-grid">
-              <div class="metric">
-                <span>Fremmøde</span>
-                <strong id="metric-attendance">-</strong>
-              </div>
-              <div class="metric">
-                <span>Loyalitet</span>
-                <strong id="metric-loyalty">-</strong>
-              </div>
-              <div class="metric">
-                <span>Stemmer for</span>
-                <strong id="metric-for">-</strong>
-              </div>
-              <div class="metric">
-                <span>Stemmer imod</span>
-                <strong id="metric-against">-</strong>
-              </div>
-            </div>
+        <section class="content-section">
+          <div class="section-heading">
+            <p class="eyebrow">Hvad det forbedrer</p>
+            <h2>Det skal være lettere at vurdere politikere på handlinger end på kampagnemateriale.</h2>
+          </div>
+          <div class="promise-grid">
+            <article class="promise-card">
+              <h3>Hurtigere sammenligning</h3>
+              <p>Du kan gå direkte til kataloget og sortere efter fremmøde eller loyalitet i stedet for at læse enkeltsider i blinde.</p>
+            </article>
+            <article class="promise-card">
+              <h3>Bedre kildeforståelse</h3>
+              <p>Profilsiderne linker videre til officielle kilder, så tallene altid kan spores tilbage.</p>
+            </article>
+            <article class="promise-card">
+              <h3>Mere plads til kommende analyse</h3>
+              <p>Den nye struktur gør det muligt at udbygge profilsiderne med flere datapunkter uden at gøre oversigten tung og rodet.</p>
+            </article>
+          </div>
+        </section>
 
-            <section class="detail-section">
-              <h3>Udvalg</h3>
-              <ul class="tag-list" id="detail-committees"></ul>
-            </section>
-
-            <section class="detail-section">
-              <h3>Seneste afstemninger</h3>
-              <div class="vote-list-shell">
-                <ul class="vote-list" id="detail-votes"></ul>
-              </div>
-            </section>
-          </article>
-        </aside>
+        <section class="content-section content-section-cta">
+          <div class="section-heading">
+            <p class="eyebrow">Klar til at udforske</p>
+            <h2>Begynd med oversigten over folketingsmedlemmer.</h2>
+          </div>
+          <p class="cta-copy">
+            Opdagesiden er stedet, hvor du filtrerer, sorterer og finder de profiler, du vil dykke videre ned i.
+          </p>
+          <a class="button-link" href="./discover.html">Åbn opdag profiler</a>
+        </section>
       </main>
     </div>
 
-    <template id="profile-card-template">
-      <button class="profile-card" type="button">
-        <div class="profile-heading-row">
-          <span class="card-initials hidden" aria-hidden="true"></span>
-          <img class="card-avatar hidden" src="" alt="" loading="lazy" referrerpolicy="no-referrer">
-          <span class="party-pill"></span>
-          <h2 class="profile-name"></h2>
-          <p class="profile-role"></p>
-        </div>
-        <div class="profile-metrics">
-          <div class="mini-stat mini-stat-attendance">
-            <div class="mini-stat-head">
-              <span class="mini-stat-label">Fremmøde</span>
-              <strong class="profile-attendance"></strong>
-            </div>
-            <div class="mini-stat-bar">
-              <span class="mini-stat-fill profile-attendance-bar"></span>
-            </div>
-          </div>
-          <div class="mini-stat mini-stat-loyalty">
-            <div class="mini-stat-head">
-              <span class="mini-stat-label">Loyalitet</span>
-              <strong class="profile-loyalty"></strong>
-            </div>
-            <div class="mini-stat-bar">
-              <span class="mini-stat-fill profile-loyalty-bar"></span>
-            </div>
-          </div>
-        </div>
-        <div class="profile-footer">
-          <span class="profile-vote-chip profile-votes-for"></span>
-          <span class="profile-vote-chip profile-votes-against"></span>
-        </div>
-      </button>
-    </template>
-
     <script src="catalog.js" defer></script>
-    <script src="app.js" defer></script>
+    <script src="shared.js" defer></script>
+    <script src="home.js" defer></script>
   </body>
 </html>

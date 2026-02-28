@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profil | Folkevalget</title>
+    <meta
+      name="description"
+      content="En detaljeside for ét folketingsmedlem med udvalg, stemmer og nøglemål baseret på offentlige data."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Source+Serif+4:wght@600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="page-profile">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-brand-row">
+          <a class="site-brand" href="./index.html">folkevalget.dk</a>
+          <nav class="site-nav" aria-label="Primær navigation">
+            <a href="./index.html">Forside</a>
+            <a href="./discover.html">Opdag profiler</a>
+          </nav>
+        </div>
+        <div class="site-stats" data-site-stats aria-live="polite">
+          <span><strong data-stat="profiles">-</strong> profiler</span>
+          <span class="site-stats-dot" aria-hidden="true"></span>
+          <span><strong data-stat="votes">-</strong> afstemninger</span>
+          <span class="site-stats-dot" aria-hidden="true"></span>
+          <span>Opdateret: <strong data-stat="updated">-</strong></span>
+        </div>
+      </header>
+
+      <main class="profile-layout">
+        <div class="profile-empty hidden" id="profile-empty">
+          <p class="eyebrow">Profil</p>
+          <h1>Vi kunne ikke finde denne profil</h1>
+          <p>Brug oversigten for at vælge et folketingsmedlem og åbne profilsiden derfra.</p>
+          <a class="button-link" href="./discover.html">Tilbage til opdag</a>
+        </div>
+
+        <div class="profile-page hidden" id="profile-page">
+          <nav class="breadcrumb" aria-label="Brødkrumme">
+            <a href="./index.html">Forside</a>
+            <span>›</span>
+            <a href="./discover.html">Opdag profiler</a>
+            <span>›</span>
+            <span id="breadcrumb-name">Profil</span>
+          </nav>
+
+          <section class="profile-hero">
+            <div class="profile-hero-main">
+              <span class="party-pill party-pill-wide" id="profile-party"></span>
+              <div class="profile-identity">
+                <div class="profile-avatar-wrap">
+                  <span class="profile-initials hidden" id="profile-initials" aria-hidden="true"></span>
+                  <img class="profile-photo hidden" id="profile-photo" alt="" referrerpolicy="no-referrer">
+                </div>
+                <div class="profile-title-block">
+                  <h1 id="profile-name">-</h1>
+                  <p class="profile-role" id="profile-role">-</p>
+                  <p class="profile-summary" id="profile-summary">-</p>
+                  <p class="profile-summary" id="profile-vote-total">-</p>
+                </div>
+              </div>
+            </div>
+            <div class="profile-hero-actions">
+              <a class="button-link button-link-secondary" href="./discover.html">Tilbage til oversigten</a>
+              <a class="button-link hidden" href="#" id="profile-source" target="_blank" rel="noreferrer">Åbn officiel profil</a>
+            </div>
+          </section>
+
+          <section class="metric-strip">
+            <article class="metric-card" data-metric="attendance">
+              <span>Fremmøde</span>
+              <strong data-value>-</strong>
+            </article>
+            <article class="metric-card" data-metric="loyalty">
+              <span>Partiloyalitet</span>
+              <strong data-value>-</strong>
+            </article>
+            <article class="metric-card" data-metric="for">
+              <span>Stemmer for</span>
+              <strong data-value>-</strong>
+            </article>
+            <article class="metric-card" data-metric="against">
+              <span>Stemmer imod</span>
+              <strong data-value>-</strong>
+            </article>
+            <article class="metric-card" data-metric="absent">
+              <span>Fravær</span>
+              <strong data-value>-</strong>
+            </article>
+          </section>
+
+          <section class="profile-section-grid">
+            <article class="panel">
+              <div class="panel-heading">
+                <p class="eyebrow">Hvordan læses tallene</p>
+                <h2>To nøgletal, som går igen på alle profiler</h2>
+              </div>
+              <div class="definition-grid">
+                <div class="definition-card">
+                  <h3>Fremmøde</h3>
+                  <p>Andelen af registrerede afstemninger, hvor medlemmet faktisk afgav en stemme i stedet for at være fraværende.</p>
+                </div>
+                <div class="definition-card">
+                  <h3>Partiloyalitet</h3>
+                  <p>Andelen af sammenlignelige afstemninger, hvor medlemmet stemte som flertallet i eget parti.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="panel">
+              <div class="panel-heading">
+                <p class="eyebrow">Udvalg</p>
+                <h2>Aktive udvalg og delegationer</h2>
+              </div>
+              <div class="committee-grid" id="committee-grid"></div>
+            </article>
+          </section>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <p class="eyebrow">Seneste afstemninger</p>
+              <h2>Et hurtigt blik på de seneste registrerede stemmer</h2>
+            </div>
+            <div class="vote-feed" id="vote-feed"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="catalog.js" defer></script>
+    <script src="shared.js" defer></script>
+    <script src="profile.js" defer></script>
+  </body>
+</html>
