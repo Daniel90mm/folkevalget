@@ -335,6 +335,13 @@ window.Folkevalget = (() => {
     return `${toSiteUrl("profil.html")}?id=${encodeURIComponent(profileId)}`;
   }
 
+  function buildVoteUrl(voteId) {
+    if (!voteId) {
+      return toSiteUrl("afstemninger.html");
+    }
+    return `${toSiteUrl("afstemninger.html")}?id=${encodeURIComponent(voteId)}`;
+  }
+
   function isNorthAtlanticMandate(profile) {
     return NORTH_ATLANTIC_PARTIES.has(profile?.party_short || "");
   }
@@ -393,6 +400,7 @@ window.Folkevalget = (() => {
     applyPhoto,
     buildCommitteeUrl,
     buildProfileUrl,
+    buildVoteUrl,
     buildSagUrl,
     clampPercent,
     committeeDisplayName,
