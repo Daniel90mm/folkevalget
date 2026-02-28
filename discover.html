@@ -50,7 +50,7 @@
           <div class="toolbar-grid">
             <label class="field">
               <span class="field-label">Søg</span>
-              <input id="search-input" type="search" placeholder="Navn, parti eller udvalg">
+              <input id="search-input" type="search" placeholder="Navn, parti eller udvalg" autofocus>
             </label>
             <label class="field">
               <span class="field-label">Storkreds</span>
@@ -120,7 +120,13 @@
           <div class="mini-metric" data-card="attendance-meter">
             <div class="mini-metric-head">
               <span>Fremmøde</span>
-              <strong data-card="attendance-value"></strong>
+              <div class="mini-metric-value-wrap">
+                <span class="metric-alert hidden" data-card="attendance-alert">
+                  <span class="metric-alert-icon">!</span>
+                  Lavt
+                </span>
+                <strong data-card="attendance-value"></strong>
+              </div>
             </div>
             <div class="mini-metric-track">
               <span class="mini-metric-fill" data-card="attendance-bar"></span>

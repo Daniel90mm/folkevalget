@@ -542,11 +542,21 @@ p {
 }
 
 .member-card {
+  position: relative;
+  overflow: hidden;
   display: grid;
   gap: 0.85rem;
   padding: 1rem;
   border-radius: 20px;
   transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+}
+
+.member-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: rgba(27, 77, 110, 0.22);
 }
 
 .member-card:hover,
@@ -715,6 +725,12 @@ p {
   gap: 0.7rem;
 }
 
+.mini-metric-value-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
 .mini-metric,
 .metric-card {
   --tone-color: var(--neutral);
@@ -744,6 +760,30 @@ p {
 .metric-card strong {
   color: var(--tone-color);
   font-size: 1rem;
+}
+
+.metric-alert {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--risk);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.metric-alert-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 999px;
+  background: rgba(198, 40, 40, 0.12);
+  border: 1px solid rgba(198, 40, 40, 0.18);
+  font-size: 0.7rem;
+  line-height: 1;
 }
 
 .mini-metric-track {
@@ -793,9 +833,41 @@ p {
 
 .member-card-link {
   margin-left: auto;
-  background: rgba(27, 77, 110, 0.1);
+  min-height: 2rem;
+  padding-inline: 0.82rem;
+  background: rgba(27, 77, 110, 0.14);
+  border: 1px solid rgba(27, 77, 110, 0.16);
   color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
+
+.member-card-link::after {
+  content: ">";
+  margin-left: 0.45rem;
+  font-size: 0.82rem;
+}
+
+.member-card[data-party="S"]::before   { background: #b51428; }
+.member-card[data-party="V"]::before   { background: #005da6; }
+.member-card[data-party="M"]::before   { background: #6f5493; }
+.member-card[data-party="SF"]::before  { background: #b60063; }
+.member-card[data-party="EL"]::before  { background: #ae5f0d; }
+.member-card[data-party="KF"]::before  { background: #00583c; }
+.member-card[data-party="LA"]::before  { background: #0086ab; }
+.member-card[data-party="RV"]::before  { background: #733280; }
+.member-card[data-party="ALT"]::before { background: #218a4d; }
+.member-card[data-party="DD"]::before  { background: #004450; }
+.member-card[data-party="DF"]::before  { background: #003b6f; }
+.member-card[data-party="IA"]::before  { background: #266a91; }
+.member-card[data-party="JF"]::before  { background: #6d3149; }
+.member-card[data-party="N"]::before   { background: #915a0f; }
+.member-card[data-party="SP"]::before  { background: #6f5a16; }
+.member-card[data-party="SIU"]::before { background: #7c3b3b; }
+.member-card[data-party="BP"]::before  { background: #4f5f75; }
+.member-card[data-party="UFG"]::before { background: #707b75; }
 
 .empty-state,
 .panel-empty {

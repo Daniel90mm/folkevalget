@@ -201,6 +201,7 @@ const DiscoverApp = (() => {
     for (const profile of state.filteredProfiles) {
       const card = cardTemplate.content.firstElementChild.cloneNode(true);
       card.href = window.Folkevalget.buildProfileUrl(profile.id);
+      card.dataset.party = profile.party_short || "";
 
       card.querySelector("[data-card='party']").textContent = window.Folkevalget.partyDisplayName(
         profile.party,
@@ -226,6 +227,7 @@ const DiscoverApp = (() => {
         profile.attendance_pct,
         "attendance"
       );
+      setAttendanceAlert(card.querySelector("[data-card='attendance-alert']"), profile.attendance_pct);
       setMeter(
         card.querySelector("[data-card='loyalty-bar']"),
         card.querySelector("[data-card='loyalty-meter']"),
@@ -251,6 +253,15 @@ const DiscoverApp = (() => {
     const tone = window.Folkevalget.metricTone(value, kind);
     bar.style.width = `${window.Folkevalget.clampPercent(value)}%`;
     container.dataset.tone = tone;
+  }
+
+  function setAttendanceAlert(node, value) {
+    if (!node) {
+      return;
+    }
+
+    const hasWarning = value !== null && value !== undefined && Number(value) < 30;
+    node.classList.toggle("hidden", !hasWarning);
   }
 
   function renderContextTags(root, profile) {
