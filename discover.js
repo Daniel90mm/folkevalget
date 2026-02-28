@@ -7,7 +7,7 @@ const DiscoverApp = (() => {
     constituencyFilter: "",
     partyFilter: "",
     committeeFilter: "",
-    sortMode: "attendance_asc",
+    sortMode: "attendance_desc",
   };
 
   const statsRoot = document.querySelector("[data-site-stats]");
@@ -41,7 +41,7 @@ const DiscoverApp = (() => {
     state.constituencyFilter = params.get("storkreds") || "";
     state.partyFilter = params.get("party") || "";
     state.committeeFilter = params.get("committee") || "";
-    state.sortMode = params.get("sort") || "attendance_asc";
+    state.sortMode = params.get("sort") || "attendance_desc";
   }
 
   function syncControls() {

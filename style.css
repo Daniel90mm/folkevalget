@@ -758,11 +758,18 @@ p {
 
 .member-meta-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 0.85rem;
+  flex-wrap: nowrap;
+  gap: 0.3rem 0.7rem;
   color: var(--muted);
   font-size: 0.73rem;
   font-weight: 600;
+  overflow: hidden;
+}
+
+.member-meta-row span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .member-metrics {
