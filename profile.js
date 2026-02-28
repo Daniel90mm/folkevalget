@@ -6,6 +6,7 @@ const ProfileApp = (() => {
   const breadcrumbName = document.querySelector("#breadcrumb-name");
   const profileTags = document.querySelector("#profile-tags");
   const contextNote = document.querySelector("#profile-context-note");
+  const photoCredit = document.querySelector("#profile-photo-credit");
 
   async function boot() {
     const profileId = Number(new URLSearchParams(window.location.search).get("id"));
@@ -59,8 +60,10 @@ const ProfileApp = (() => {
       document.querySelector("#profile-photo"),
       document.querySelector("#profile-initials"),
       profile.photo_url,
-      profile.name
+      profile.name,
+      window.Folkevalget.photoCreditText(profile)
     );
+    renderPhotoCredit(profile);
 
     renderMetric("attendance", profile.attendance_pct, "attendance");
     renderMetric("loyalty", profile.party_loyalty_pct, "loyalty");
@@ -144,6 +147,18 @@ const ProfileApp = (() => {
 
     contextNote.classList.remove("hidden");
     contextNote.innerHTML = notes.map((note) => `<p>${note}</p>`).join("");
+  }
+
+  function renderPhotoCredit(profile) {
+    const creditText = window.Folkevalget.photoCreditText(profile);
+    if (!creditText || !profile.photo_url) {
+      photoCredit.classList.add("hidden");
+      photoCredit.textContent = "";
+      return;
+    }
+
+    photoCredit.classList.remove("hidden");
+    photoCredit.textContent = `Portrætfoto: ${creditText}`;
   }
 
   function renderRecentVotes(votes) {

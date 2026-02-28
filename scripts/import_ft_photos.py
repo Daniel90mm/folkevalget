@@ -33,6 +33,7 @@ PHOTO_EXTENSIONS = {
     "image/webp": ".webp",
     "image/gif": ".gif",
 }
+PHOTO_CREDITS_FILENAME = "credits.json"
 
 
 def parse_args() -> argparse.Namespace:
@@ -52,6 +53,15 @@ def parse_args() -> argparse.Namespace:
 
 def load_profiles(path: Path) -> list[dict]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_manifest(path: Path) -> dict[str, dict]:
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
 
 
 def discover_chrome_path(raw_path: str) -> str:
@@ -148,7 +158,18 @@ def write_image_file(target_dir: Path, actor_id: int, body: bytes, content_type:
     return target_path.name
 
 
-def fetch_portrait(page, member_url: str) -> tuple[str, bytes, str | None] | None:
+def extract_photographer(*values: str | None) -> str | None:
+    for value in values:
+        if not value:
+            continue
+        match = re.search(r"(?:-|–)\s*Fotograf\s+(.+)$", value.strip(), flags=re.IGNORECASE)
+        if match:
+            photographer = match.group(1).strip()
+            return photographer or None
+    return None
+
+
+def fetch_portrait(page, member_url: str) -> dict[str, object] | None:
     captured: dict[str, tuple[bytes, str | None]] = {}
 
     def handle_response(response) -> None:
@@ -169,13 +190,29 @@ def fetch_portrait(page, member_url: str) -> tuple[str, bytes, str | None] | Non
         src = img.get_attribute("src")
         if not src:
             return None
+        alt_text = img.get_attribute("alt")
+        title_text = img.get_attribute("title")
         payload = captured.get(src)
         if payload is None:
             with page.expect_response(lambda response: response.url == src and response.request.resource_type == "image", timeout=20000) as response_info:
                 page.reload(wait_until="networkidle", timeout=60000)
             response = response_info.value
             payload = (response.body(), response.headers.get("content-type"))
-        return src, payload[0], payload[1]
+        photographer = extract_photographer(title_text, alt_text)
+        credit_text = "Folketinget"
+        if photographer:
+            credit_text = f"Folketinget / Fotograf {photographer}"
+        return {
+            "src": src,
+            "body": payload[0],
+            "content_type": payload[1],
+            "member_url": member_url,
+            "alt_text": alt_text,
+            "title_text": title_text,
+            "photographer": photographer,
+            "credit_text": credit_text,
+            "source_name": "Folketinget",
+        }
     except PlaywrightTimeoutError:
         return None
     finally:
@@ -213,6 +250,8 @@ def main() -> None:
     process = wait_for_cdp(chrome_path, args.debug_port, DEFAULT_SEED_URL, user_data_dir)
     imported = 0
     failed: list[str] = []
+    manifest_path = temp_dir / PHOTO_CREDITS_FILENAME
+    manifest = load_manifest(manifest_path)
 
     try:
         time.sleep(8)
@@ -234,8 +273,22 @@ def main() -> None:
                         last_error = f"no portrait on {member_url}"
                         continue
 
-                    _src, body, content_type = result
-                    write_image_file(temp_dir, profile["id"], body, content_type)
+                    filename = write_image_file(
+                        temp_dir,
+                        profile["id"],
+                        result["body"],
+                        result["content_type"],
+                    )
+                    manifest[str(profile["id"])] = {
+                        "file": f"photos/{filename}",
+                        "member_url": str(result["member_url"]),
+                        "source_url": str(result["src"]),
+                        "source_name": str(result["source_name"]),
+                        "alt_text": result["alt_text"],
+                        "title_text": result["title_text"],
+                        "photographer": result["photographer"],
+                        "credit_text": str(result["credit_text"]),
+                    }
                     imported += 1
                     saved = True
                     break
@@ -247,6 +300,7 @@ def main() -> None:
 
             browser.close()
 
+        manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
         if photos_dir.exists():
             shutil.rmtree(photos_dir)
         temp_dir.replace(photos_dir)
