@@ -78,11 +78,23 @@ const ProfileApp = (() => {
   function buildSummary(profile) {
     const committeeCount = (profile.committees || []).length;
     return [
+      buildSenioritySummary(profile),
       committeeCount > 0 ? `${window.Folkevalget.formatNumber(committeeCount)} aktive udvalg` : "Ingen registrerede udvalg",
-      profile.party_loyalty_pct !== null && profile.party_loyalty_pct !== undefined
-        ? `${window.Folkevalget.formatPercent(profile.party_loyalty_pct)} partiloyalitet`
-        : "Ingen loyaltetsmåling endnu",
-    ].join(" · ");
+    ]
+      .filter(Boolean)
+      .join(" · ");
+  }
+
+  function buildSenioritySummary(profile) {
+    if (!profile.seniority_label && !profile.member_since_year) {
+      return "Anciennitet ikke angivet";
+    }
+
+    if (profile.seniority_label && profile.member_since_year) {
+      return `${profile.seniority_label} · medlem siden ${profile.member_since_year}`;
+    }
+
+    return profile.seniority_label || `Medlem siden ${profile.member_since_year}`;
   }
 
   function renderMetric(key, value, kind) {

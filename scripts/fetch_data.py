@@ -31,6 +31,21 @@ REQUEST_TIMEOUT = 60
 MAX_RETRIES = 3
 PHOTO_CREDITS_FILENAME = "credits.json"
 
+DA_MONTHS = {
+    "januar": 1,
+    "februar": 2,
+    "marts": 3,
+    "april": 4,
+    "maj": 5,
+    "juni": 6,
+    "juli": 7,
+    "august": 8,
+    "september": 9,
+    "oktober": 10,
+    "november": 11,
+    "december": 12,
+}
+
 WIKIDATA_HEADERS = {
     "User-Agent": "folkevalget-data-fetcher/1.0 (https://folkevalget.dk)",
     "Accept": "application/json",
@@ -243,13 +258,66 @@ def write_javascript_payload(path: Path, variable_name: str, payload: Any) -> No
 def parse_iso_date(value: str | None) -> date | None:
     if not value:
         return None
-    return date.fromisoformat(value[:10])
+    value = value.strip()
+    if not value:
+        return None
+
+    try:
+        return date.fromisoformat(value[:10])
+    except ValueError:
+        pass
+
+    dash_match = re.match(r"^(\d{1,2})-(\d{1,2})-(\d{4})$", value)
+    if dash_match:
+        day, month, year = (int(part) for part in dash_match.groups())
+        return date(year, month, day)
+
+    month_match = re.match(r"^(\d{1,2})\.\s*([A-Za-zÆØÅæøå]+)\s+(\d{4})$", value)
+    if month_match:
+        day = int(month_match.group(1))
+        month_name = month_match.group(2).lower()
+        year = int(month_match.group(3))
+        month = DA_MONTHS.get(month_name)
+        if month:
+            return date(year, month, day)
+
+    return None
 
 
 def round_pct(numerator: int, denominator: int) -> float | None:
     if denominator == 0:
         return None
     return round((numerator / denominator) * 100, 1)
+
+
+def completed_months_between(start_date: date | None, end_date: date) -> int | None:
+    if not start_date:
+        return None
+
+    months = (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month)
+    if end_date.day < start_date.day:
+        months -= 1
+    return max(months, 0)
+
+
+def format_seniority_label(start_date: date | None, end_date: date) -> tuple[str | None, int | None, int | None]:
+    months = completed_months_between(start_date, end_date)
+    if months is None:
+        return None, None, None
+
+    years = months // 12
+    if months < 12:
+        return "Under 1 aar i Folketinget", 0, months
+    if years == 1:
+        return "1 aar i Folketinget", years, months
+    return f"{years} aar i Folketinget", years, months
+
+
+def seniority_tag_key(start_date: date | None, end_date: date) -> str | None:
+    months = completed_months_between(start_date, end_date)
+    if months is None:
+        return None
+    return "newcomer" if months < 48 else "experienced"
 
 
 def extract_tag(blob: str | None, tag: str) -> str | None:
@@ -405,6 +473,7 @@ def build_biography_fields(person: dict[str, Any]) -> dict[str, Any]:
         "title": extract_tag(biography, "title"),
         "current_constituency": constituency,
         "party_short_from_bio": extract_tag(biography, "partyShortname"),
+        "function_start_date": parse_iso_date(extract_tag(biography, "functionStartDate")),
     }
 
 
@@ -981,6 +1050,8 @@ def derive_profiles(
         votes_absent = counts.get("3", 0)
         votes_neither = counts.get("4", 0)
         total_votes = counts.get("total", 0)
+        member_since_date = bio_fields.get("function_start_date") or parse_iso_date(person.get("startdato"))
+        seniority_label, seniority_years, seniority_months = format_seniority_label(member_since_date, now)
 
         profiles.append(
             {
@@ -1015,6 +1086,12 @@ def derive_profiles(
                 "photo_source_name": None,
                 "photo_photographer": None,
                 "photo_credit_text": None,
+                "member_since_date": member_since_date.isoformat() if member_since_date else None,
+                "member_since_year": member_since_date.year if member_since_date else None,
+                "seniority_label": seniority_label,
+                "seniority_years": seniority_years,
+                "seniority_months": seniority_months,
+                "seniority_tag": seniority_tag_key(member_since_date, now),
                 "votes_total": total_votes,
                 "votes_for": votes_for,
                 "votes_against": votes_against,

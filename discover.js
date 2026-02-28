@@ -213,7 +213,7 @@ const DiscoverApp = (() => {
       renderContextTags(card.querySelector("[data-card='tags']"), profile);
       card.querySelector("[data-card='constituency']").textContent = profile.storkreds || "Storkreds ikke angivet";
       card.querySelector("[data-card='votes']").textContent =
-        `${window.Folkevalget.formatNumber(profile.votes_total)} registrerede stemmer`;
+        profile.seniority_label || "Anciennitet ikke angivet";
       card.querySelector("[data-card='committees']").textContent =
         `${window.Folkevalget.formatNumber((profile.committees || []).length)} udvalg`;
       card.querySelector("[data-card='attendance-value']").textContent = window.Folkevalget.formatPercent(profile.attendance_pct);

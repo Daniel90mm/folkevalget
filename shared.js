@@ -359,6 +359,12 @@ window.Folkevalget = (() => {
     if (isNorthAtlanticMandate(profile)) {
       flags.push({ key: "north-atlantic", label: "Nordatlantisk mandat" });
     }
+    if (profile?.seniority_tag === "newcomer") {
+      flags.push({ key: "newcomer", label: "Ny i Folketinget" });
+    }
+    if (profile?.seniority_tag === "experienced") {
+      flags.push({ key: "experienced", label: "Erfaren" });
+    }
     return flags;
   }
 
