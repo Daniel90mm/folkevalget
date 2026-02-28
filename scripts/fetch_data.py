@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import html
 import json
 import re
@@ -44,7 +45,9 @@ class OdaClient:
         url = f"{BASE_URL}/{endpoint}"
         if query:
             url = f"{url}?{query}"
+        return self.get_json_url(url)
 
+    def get_json_url(self, url: str) -> dict[str, Any]:
         last_error: Exception | None = None
         for attempt in range(1, MAX_RETRIES + 1):
             try:
@@ -150,6 +153,12 @@ def parse_args() -> argparse.Namespace:
         type=int,
         default=DEFAULT_RECENT_VOTES,
         help="Recent votes to keep per member profile.",
+    )
+    parser.add_argument(
+        "--vote-workers",
+        type=int,
+        default=6,
+        help="Parallel workers for overflow vote-record pages.",
     )
     parser.add_argument(
         "--write-raw",
@@ -296,7 +305,7 @@ def determine_vote_window(
         params={
             "$filter": filter_expr,
             "$orderby": "dato asc",
-            "$expand": "Afstemning,Sag,Sagstrinstype",
+            "$expand": "Afstemning,Afstemning/Stemme,Sag,Sagstrinstype",
         },
         label="sagstrin",
     )
@@ -382,6 +391,73 @@ def fetch_people_by_ids(client: OdaClient, *, person_ids: list[int]) -> list[dic
 
     deduped = {int(row["id"]): row for row in rows}
     return list(deduped.values())
+
+
+def _fetch_vote_stem_overflow(
+    client: OdaClient,
+    *,
+    vote_id: int,
+    next_url: str,
+) -> tuple[int, list[dict[str, Any]]]:
+    rows: list[dict[str, Any]] = []
+    url = next_url
+
+    while url:
+        payload = client.get_json_url(url)
+        page_rows = payload.get("value", [])
+        rows.extend(page_rows)
+        url = payload.get("odata.nextLink")
+        if url:
+            time.sleep(client.options.delay)
+
+    return vote_id, rows
+
+
+def extract_vote_records(
+    client: OdaClient,
+    *,
+    sagstrin_rows: list[dict[str, Any]],
+    max_workers: int,
+) -> list[dict[str, Any]]:
+    stems: list[dict[str, Any]] = []
+    overflow_jobs: list[tuple[int, str]] = []
+
+    for sagstrin_row in sagstrin_rows:
+        for vote_row in sagstrin_row.get("Afstemning") or []:
+            vote_id = int(vote_row["id"])
+            embedded_stems = vote_row.pop("Stemme", []) or []
+            stems.extend(embedded_stems)
+
+            next_link = vote_row.pop("Stemme@odata.nextLink", None)
+            if next_link:
+                overflow_jobs.append((vote_id, next_link))
+
+    if not overflow_jobs:
+        return stems
+
+    log(
+        client.options.verbose,
+        f"fetching overflow vote pages for {len(overflow_jobs)} afstemninger with up to {max_workers} workers",
+    )
+
+    workers = max(1, max_workers)
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = [
+            executor.submit(_fetch_vote_stem_overflow, client, vote_id=vote_id, next_url=next_url)
+            for vote_id, next_url in overflow_jobs
+        ]
+        completed = 0
+        for future in as_completed(futures):
+            vote_id, rows = future.result()
+            stems.extend(rows)
+            completed += 1
+            if client.options.verbose and (completed % 50 == 0 or completed == len(overflow_jobs)):
+                log(
+                    True,
+                    f"overflow stems: completed {completed}/{len(overflow_jobs)} afstemninger",
+                )
+
+    return stems
 
 
 def build_memberships(
@@ -821,27 +897,18 @@ def main() -> None:
 
     log(options.verbose, "determining vote window")
     vote_window, sagstrin_rows = determine_vote_window(client, start_date=start_date, today_iso=today_iso)
-    earliest_vote_id = int(vote_window["first_vote_id"])
-
-    log(options.verbose, "fetching vote data")
-    raw_votes = client.fetch_collection(
-        "Afstemning",
-        params={"$filter": f"id ge {earliest_vote_id}"},
-        label="afstemning",
-    )
-    raw_stems = client.fetch_collection(
-        "Stemme",
-        params={"$filter": f"afstemningid ge {earliest_vote_id}"},
-        label="stemme",
-    )
 
     allowed_vote_ids = {
         int(vote_row["id"])
         for sagstrin_row in sagstrin_rows
         for vote_row in (sagstrin_row.get("Afstemning") or [])
     }
-    votes = [row for row in raw_votes if int(row["id"]) in allowed_vote_ids]
-    stems = [row for row in raw_stems if int(row["afstemningid"]) in allowed_vote_ids]
+    log(options.verbose, "extracting vote records from expanded vote pages")
+    stems = extract_vote_records(
+        client,
+        sagstrin_rows=sagstrin_rows,
+        max_workers=max(args.vote_workers, 1),
+    )
 
     log(options.verbose, "fetching party and committee actors")
     active_actor_filter = (
@@ -875,13 +942,9 @@ def main() -> None:
     )
     people = fetch_people_by_ids(client, person_ids=person_ids)
 
-    sag_ids = sorted({int(row["sagid"]) for row in sagstrin_rows})
-    log(options.verbose, "fetching document links")
-    sag_documents = fetch_sag_documents(client, sag_ids=sag_ids)
-
     stemmetype_lookup = collect_lookup_map(stemmetyper)
     afstemningstype_lookup = collect_lookup_map(afstemningstyper)
-    document_links_by_sag = make_document_links(sag_documents)
+    document_links_by_sag: dict[int, list[dict[str, Any]]] = {}
     vote_summaries = build_vote_context(sagstrin_rows, document_links_by_sag, afstemningstype_lookup)
 
     profiles, party_summaries, committee_summaries, summarized_votes, derived_meta = derive_profiles(
@@ -901,9 +964,9 @@ def main() -> None:
         "start_date": start_date,
         "vote_window": vote_window,
         "counts": {
-            "people": len(people),
-            "parties": len(parties),
-            "committees": len(committees),
+            "people": derived_meta["profile_count"],
+            "parties": derived_meta["party_count"],
+            "committees": derived_meta["committee_count"],
             "actor_relations": len(actor_relations),
             "votes": len(summarized_votes),
             "individual_votes": len(stems),
@@ -926,9 +989,8 @@ def main() -> None:
         write_json(raw_dir / "aktorer_udvalg.json", committees)
         write_json(raw_dir / "aktor_aktor.json", actor_relations)
         write_json(raw_dir / "sagstrin.json", sagstrin_rows)
-        write_json(raw_dir / "afstemninger.json", votes)
         write_json(raw_dir / "stemmer.json", stems)
-        write_json(raw_dir / "sag_dokumenter.json", sag_documents)
+        write_json(raw_dir / "sag_dokumenter.json", [])
 
     print(
         json.dumps(

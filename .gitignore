@@ -46,6 +46,6 @@ github-pages-export*
 
 # Local raw fetch snapshots
 data/raw/
-.tmpdata/
+.tmpdata*/
 __pycache__/
 *.pyc
