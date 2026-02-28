@@ -316,9 +316,9 @@ const VotesApp = (() => {
   }
 
   function renderVoteContext(vote) {
-    const notes = ["Partifilteret bruger partierne paa afstemningstidspunktet."];
+    const notes = ["Partifilteret bruger partierne på afstemningstidspunktet."];
     if (isCloseVote(vote)) {
-      notes.push("Afstemningen er markeret som taet, fordi ja/nej-marginen er hoejst 10 procentpoint.");
+      notes.push("Afstemningen er markeret som tæt, fordi ja/nej-marginen er højst 10 procentpoint.");
     }
     if (hasPartySplit(vote)) {
       notes.push("Partisplit betyder, at mindst ét parti ikke stemte samlet i ja/nej-afstemningen.");
@@ -331,7 +331,23 @@ const VotesApp = (() => {
     }
 
     voteContext.classList.toggle("hidden", notes.length === 0);
-    voteContext.innerHTML = notes.map((note) => `<p>${note}</p>`).join("");
+
+    const toggle = document.createElement("button");
+    toggle.className = "context-note-toggle";
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.innerHTML = 'Læs mere om afstemningen <span class="context-note-caret" aria-hidden="true">›</span>';
+
+    const body = document.createElement("div");
+    body.className = "context-note-body";
+    body.innerHTML = notes.map((note) => `<p>${note}</p>`).join("");
+
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+    });
+
+    voteContext.innerHTML = "";
+    voteContext.append(toggle, body);
   }
 
   function renderPartyFilter(vote) {
