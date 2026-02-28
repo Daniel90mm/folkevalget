@@ -59,6 +59,18 @@ window.Folkevalget = (() => {
     return { profiles, stats };
   }
 
+  async function loadVoteData() {
+    const bootstrapVotes = Array.isArray(window.__FOLKEVALGET_VOTES__?.votes)
+      ? window.__FOLKEVALGET_VOTES__.votes
+      : null;
+
+    if (bootstrapVotes) {
+      return bootstrapVotes;
+    }
+
+    return fetchJson("data/afstemninger.json");
+  }
+
   async function fetchJson(path) {
     const url = toSiteUrl(path);
     let lastError = null;
@@ -393,6 +405,7 @@ window.Folkevalget = (() => {
     isCurrentMinister,
     isNorthAtlanticMandate,
     loadCatalogueData,
+    loadVoteData,
     metricTone,
     normaliseText,
     partyDisplayName,
