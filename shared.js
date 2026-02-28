@@ -205,7 +205,20 @@ window.Folkevalget = (() => {
     return toSiteUrl(photoUrl);
   }
 
-  function applyPhoto(image, fallback, photoUrl, name) {
+  function photoCreditText(profile) {
+    if (!profile) {
+      return null;
+    }
+    if (profile.photo_credit_text) {
+      return profile.photo_credit_text;
+    }
+    if (profile.photo_source_name && profile.photo_photographer) {
+      return `${profile.photo_source_name} / Fotograf ${profile.photo_photographer}`;
+    }
+    return profile.photo_source_name || null;
+  }
+
+  function applyPhoto(image, fallback, photoUrl, name, attributionText = null) {
     const resolvedUrl = resolvePhotoUrl(photoUrl);
     if (!resolvedUrl) {
       image.classList.add("hidden");
@@ -217,6 +230,7 @@ window.Folkevalget = (() => {
     fallback.textContent = getInitials(name);
     image.src = resolvedUrl;
     image.alt = name || "";
+    image.title = attributionText || "";
     image.classList.remove("hidden");
     fallback.classList.add("hidden");
     image.onerror = () => {
@@ -382,6 +396,7 @@ window.Folkevalget = (() => {
     metricTone,
     normaliseText,
     partyDisplayName,
+    photoCreditText,
     profileContextFlags,
     profileContextNotes,
     readBootstrapPayload,

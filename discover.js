@@ -239,7 +239,8 @@ const DiscoverApp = (() => {
         card.querySelector("[data-card='photo']"),
         card.querySelector("[data-card='initials']"),
         profile.photo_url,
-        profile.name
+        profile.name,
+        window.Folkevalget.photoCreditText(profile)
       );
 
       fragment.append(card);

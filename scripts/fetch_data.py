@@ -29,6 +29,7 @@ DEFAULT_START_DATE = "2022-11-01"
 DEFAULT_RECENT_VOTES = 10
 REQUEST_TIMEOUT = 60
 MAX_RETRIES = 3
+PHOTO_CREDITS_FILENAME = "credits.json"
 
 WIKIDATA_HEADERS = {
     "User-Agent": "folkevalget-data-fetcher/1.0 (https://folkevalget.dk)",
@@ -304,9 +305,51 @@ def find_local_photo_path(person_id: int, photos_dir: Path) -> str | None:
     return None
 
 
+def load_photo_credit_manifest(photos_dir: Path) -> dict[int, dict[str, Any]]:
+    manifest_path = photos_dir / PHOTO_CREDITS_FILENAME
+    if not manifest_path.exists():
+        return {}
+    try:
+        payload = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+    manifest: dict[int, dict[str, Any]] = {}
+    for raw_id, entry in payload.items():
+        try:
+            person_id = int(raw_id)
+        except (TypeError, ValueError):
+            continue
+        if isinstance(entry, dict):
+            manifest[person_id] = entry
+    return manifest
+
+
 def apply_local_photo_inventory(profiles: list[dict[str, Any]], photos_dir: Path) -> None:
+    photo_manifest = load_photo_credit_manifest(photos_dir)
     for profile in profiles:
-        profile["photo_url"] = find_local_photo_path(profile["id"], photos_dir)
+        local_photo_url = find_local_photo_path(profile["id"], photos_dir)
+        if local_photo_url:
+            profile["photo_url"] = local_photo_url
+
+        credit_entry = photo_manifest.get(profile["id"]) or {}
+        if local_photo_url and not profile.get("photo_source_name"):
+            profile["photo_source_name"] = "Folketinget"
+
+        if credit_entry.get("file"):
+            profile["photo_url"] = credit_entry["file"]
+        if credit_entry.get("member_url"):
+            profile["member_url"] = credit_entry["member_url"]
+        if credit_entry.get("source_url"):
+            profile["photo_source_url"] = credit_entry["source_url"]
+        if credit_entry.get("source_name"):
+            profile["photo_source_name"] = credit_entry["source_name"]
+        if credit_entry.get("photographer"):
+            profile["photo_photographer"] = credit_entry["photographer"]
+        if credit_entry.get("credit_text"):
+            profile["photo_credit_text"] = credit_entry["credit_text"]
+        elif local_photo_url and profile.get("photo_source_name"):
+            profile["photo_credit_text"] = profile["photo_source_name"]
 
 
 def build_filter_for_ids(field: str, ids: list[int]) -> str:
@@ -917,6 +960,10 @@ def derive_profiles(
                 "storkreds": extract_constituency_label(constituency_text),
                 "member_url": bio_fields.get("member_url"),
                 "photo_url": bio_fields.get("photo_url"),
+                "photo_source_url": None,
+                "photo_source_name": None,
+                "photo_photographer": None,
+                "photo_credit_text": None,
                 "votes_total": total_votes,
                 "votes_for": votes_for,
                 "votes_against": votes_against,
