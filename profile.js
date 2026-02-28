@@ -4,6 +4,8 @@ const ProfileApp = (() => {
   const pageContent = document.querySelector("#profile-page");
   const sourceLink = document.querySelector("#profile-source");
   const breadcrumbName = document.querySelector("#breadcrumb-name");
+  const profileTags = document.querySelector("#profile-tags");
+  const contextNote = document.querySelector("#profile-context-note");
 
   async function boot() {
     const profileId = Number(new URLSearchParams(window.location.search).get("id"));
@@ -39,6 +41,8 @@ const ProfileApp = (() => {
     document.querySelector("#profile-name").textContent = profile.name;
     document.querySelector("#profile-role").textContent =
       [profile.role || "Folketingsmedlem", profile.party].filter(Boolean).join(" · ");
+    renderContextTags(profile);
+    renderContextNote(profile);
     document.querySelector("#profile-summary").textContent = buildSummary(profile);
     document.querySelector("#profile-vote-total").textContent =
       `${window.Folkevalget.formatNumber(profile.votes_total)} registrerede afstemninger i datasættet`;
@@ -118,6 +122,28 @@ const ProfileApp = (() => {
       link.append(code, name, note);
       root.append(link);
     }
+  }
+
+  function renderContextTags(profile) {
+    profileTags.innerHTML = "";
+    for (const flag of window.Folkevalget.profileContextFlags(profile)) {
+      const tag = document.createElement("span");
+      tag.className = `context-tag context-tag-${flag.key}`;
+      tag.textContent = flag.label;
+      profileTags.append(tag);
+    }
+  }
+
+  function renderContextNote(profile) {
+    const notes = window.Folkevalget.profileContextNotes(profile);
+    if (notes.length === 0) {
+      contextNote.classList.add("hidden");
+      contextNote.innerHTML = "";
+      return;
+    }
+
+    contextNote.classList.remove("hidden");
+    contextNote.innerHTML = notes.map((note) => `<p>${note}</p>`).join("");
   }
 
   function renderRecentVotes(votes) {

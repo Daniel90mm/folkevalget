@@ -19,6 +19,7 @@ window.Folkevalget = (() => {
     SIU: "Siumut",
     UFG: "Uden for grupperne",
   };
+  const NORTH_ATLANTIC_PARTIES = new Set(["IA", "JF", "SP", "SIU", "N"]);
 
   const SAG_TYPES = {
     L: "lovforslag",
@@ -308,6 +309,41 @@ window.Folkevalget = (() => {
     return `${toSiteUrl("profil.html")}?id=${encodeURIComponent(profileId)}`;
   }
 
+  function isNorthAtlanticMandate(profile) {
+    return NORTH_ATLANTIC_PARTIES.has(profile?.party_short || "");
+  }
+
+  function isCurrentMinister(profile) {
+    const role = (profile?.role || "").toLowerCase();
+    return role.includes("minister") && !role.includes("fhv.");
+  }
+
+  function profileContextFlags(profile) {
+    const flags = [];
+    if (isCurrentMinister(profile)) {
+      flags.push({ key: "minister", label: "Minister" });
+    }
+    if (isNorthAtlanticMandate(profile)) {
+      flags.push({ key: "north-atlantic", label: "Nordatlantisk mandat" });
+    }
+    return flags;
+  }
+
+  function profileContextNotes(profile) {
+    const notes = [];
+    if (isCurrentMinister(profile)) {
+      notes.push(
+        "Ministre deltager ofte sjældnere i afstemninger, fordi de varetager ministerarbejde og ikke altid er til stede i salen."
+      );
+    }
+    if (isNorthAtlanticMandate(profile)) {
+      notes.push(
+        "Medlemmer valgt i Færøerne og Grønland deltager ikke nødvendigvis i alle afstemninger, så fremmøde skal læses med ekstra kontekst."
+      );
+    }
+    return notes;
+  }
+
   function renderStats(root, stats) {
     if (!root || !stats) {
       return;
@@ -340,10 +376,14 @@ window.Folkevalget = (() => {
     formatNumber,
     formatPercent,
     getInitials,
+    isCurrentMinister,
+    isNorthAtlanticMandate,
     loadCatalogueData,
     metricTone,
     normaliseText,
     partyDisplayName,
+    profileContextFlags,
+    profileContextNotes,
     readBootstrapPayload,
     renderStats,
     resolvePhotoUrl,
