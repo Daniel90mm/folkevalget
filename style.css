@@ -778,6 +778,14 @@ p {
   gap: 0.5rem;
 }
 
+[data-card="loyalty-meter"] {
+  display: none;
+}
+
+[data-card="attendance-meter"] {
+  grid-column: 1 / -1;
+}
+
 .mini-metric-value-wrap {
   display: inline-flex;
   align-items: center;
@@ -814,6 +822,7 @@ p {
 .metric-card strong {
   color: var(--tone-color);
   font-size: 1rem;
+  white-space: nowrap;
 }
 
 .metric-alert {
