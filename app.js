@@ -174,12 +174,34 @@ function renderProfiles() {
       card.classList.add("is-active");
     }
 
-    card.querySelector(".party-pill").textContent = profile.party_short || profile.party || "Uden parti";
+    const partyLabel = profile.party_short || profile.party || "Uden parti";
+    const roleLabel = profile.role || profile.constituency || "Folketingsmedlem";
+    const attendanceValue = profile.attendance_pct;
+    const loyaltyValue = profile.party_loyalty_pct;
+
+    card.querySelector(".party-pill").textContent = partyLabel;
+    card.querySelector(".party-pill").title = profile.party || partyLabel;
     card.querySelector(".profile-name").textContent = profile.name;
-    card.querySelector(".profile-role").textContent =
-      profile.role || profile.constituency || "Folketingsmedlem";
-    card.querySelector(".profile-attendance").textContent = formatPercent(profile.attendance_pct);
-    card.querySelector(".profile-loyalty").textContent = formatPercent(profile.party_loyalty_pct);
+    card.querySelector(".profile-role").textContent = roleLabel;
+    card.querySelector(".profile-role").title = roleLabel;
+    card.querySelector(".profile-attendance").textContent = formatPercent(attendanceValue);
+    card.querySelector(".profile-loyalty").textContent = formatPercent(loyaltyValue);
+    card.querySelector(".profile-votes-for").textContent = `${formatNumber(profile.votes_for)} for`;
+    card.querySelector(".profile-votes-against").textContent =
+      `${formatNumber(profile.votes_against)} imod`;
+
+    setMeter(
+      card.querySelector(".profile-attendance-bar"),
+      attendanceValue,
+      card.querySelector(".mini-stat-attendance"),
+      "attendance"
+    );
+    setMeter(
+      card.querySelector(".profile-loyalty-bar"),
+      loyaltyValue,
+      card.querySelector(".mini-stat-loyalty"),
+      "loyalty"
+    );
 
     card.addEventListener("click", () => selectProfile(profile.id));
     fragment.append(card);
@@ -205,13 +227,24 @@ function renderDetail(profile) {
   detailEmpty.classList.add("hidden");
   detailCard.classList.remove("hidden");
 
-  detail.party.textContent = profile.party || "Uden parti";
+  detail.party.textContent = profile.party_short || profile.party || "Uden parti";
+  detail.party.title = profile.party || "Uden parti";
   detail.name.textContent = profile.name;
-  detail.role.textContent = profile.role || profile.constituency || "Folketingsmedlem";
+  detail.role.textContent = [
+    profile.role || profile.constituency || "Folketingsmedlem",
+    profile.party,
+  ]
+    .filter(Boolean)
+    .join(" · ");
   detail.attendance.textContent = formatPercent(profile.attendance_pct);
   detail.loyalty.textContent = formatPercent(profile.party_loyalty_pct);
   detail.votesFor.textContent = formatNumber(profile.votes_for);
   detail.votesAgainst.textContent = formatNumber(profile.votes_against);
+
+  setMetricTone(detail.attendance.closest(".metric"), profile.attendance_pct, "attendance");
+  setMetricTone(detail.loyalty.closest(".metric"), profile.party_loyalty_pct, "loyalty");
+  setStaticTone(detail.votesFor.closest(".metric"), "good");
+  setStaticTone(detail.votesAgainst.closest(".metric"), "risk");
 
   if (profile.member_url) {
     detail.link.href = profile.member_url;
@@ -338,7 +371,7 @@ function formatNumber(value) {
 
 function formatPercent(value) {
   if (value === null || value === undefined) {
-    return "–";
+    return "-";
   }
   return `${String(value).replace(".", ",")} %`;
 }
@@ -366,4 +399,72 @@ function voteBadgeClass(label) {
     return "fravaer";
   }
   return "hverken";
+}
+
+function setMeter(bar, value, toneTarget, metricKind) {
+  if (!bar) {
+    return;
+  }
+
+  const normalized = clampPercent(value);
+  bar.style.width = `${normalized}%`;
+  setMetricTone(toneTarget, value, metricKind);
+}
+
+function setMetricTone(element, value, metricKind) {
+  if (!element) {
+    return;
+  }
+
+  setStaticTone(element, metricTone(value, metricKind));
+}
+
+function setStaticTone(element, tone) {
+  if (!element) {
+    return;
+  }
+
+  element.classList.remove("tone-good", "tone-ok", "tone-warn", "tone-risk", "tone-neutral");
+  element.classList.add(`tone-${tone}`);
+}
+
+function metricTone(value, metricKind) {
+  if (value === null || value === undefined) {
+    return "neutral";
+  }
+
+  if (metricKind === "loyalty") {
+    if (value >= 95) {
+      return "good";
+    }
+    if (value >= 85) {
+      return "ok";
+    }
+    if (value >= 70) {
+      return "warn";
+    }
+    return "risk";
+  }
+
+  if (metricKind === "attendance") {
+    if (value >= 85) {
+      return "good";
+    }
+    if (value >= 65) {
+      return "ok";
+    }
+    if (value >= 40) {
+      return "warn";
+    }
+    return "risk";
+  }
+
+  return "neutral";
+}
+
+function clampPercent(value) {
+  if (value === null || value === undefined) {
+    return 0;
+  }
+  return Math.max(0, Math.min(100, Number(value)));
 }

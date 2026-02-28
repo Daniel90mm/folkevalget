@@ -18,32 +18,34 @@
   </head>
   <body>
     <div class="page-shell">
-      <header class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">folkevalget.dk</p>
-          <h1>Hvad gør dine folkevalgte faktisk?</h1>
-          <p class="hero-text">
-            Offentlige data om stemmer, fremmøde og udvalg. Ingen reklamer. Ingen spin.
-          </p>
-        </div>
-        <div class="hero-stats" id="hero-stats">
-          <div class="stat-card">
-            <span class="stat-label">Profiler</span>
-            <strong class="stat-value" data-stat="profiles">-</strong>
-          </div>
-          <div class="stat-card">
-            <span class="stat-label">Afstemninger</span>
-            <strong class="stat-value" data-stat="votes">-</strong>
-          </div>
-          <div class="stat-card">
-            <span class="stat-label">Opdateret</span>
-            <strong class="stat-value stat-value-small" data-stat="updated">-</strong>
-          </div>
+      <header class="topbar">
+        <a class="brand-mark" href="./">folkevalget.dk</a>
+        <div class="topbar-stats" id="hero-stats" aria-live="polite">
+          <span class="topbar-stat">
+            <strong data-stat="profiles">-</strong>
+            <span>profiler</span>
+          </span>
+          <span class="topbar-separator" aria-hidden="true"></span>
+          <span class="topbar-stat">
+            <strong data-stat="votes">-</strong>
+            <span>afstemninger</span>
+          </span>
+          <span class="topbar-separator" aria-hidden="true"></span>
+          <span class="topbar-stat topbar-stat-updated">
+            <span>Opdateret:</span>
+            <strong data-stat="updated">-</strong>
+          </span>
         </div>
       </header>
 
       <main class="layout">
         <section class="catalogue">
+          <div class="catalogue-header">
+            <p class="catalogue-intro">
+              Offentlige data om stemmer, fremmøde og udvalg. Ingen reklamer. Ingen spin.
+            </p>
+          </div>
+
           <div class="toolbar">
             <label class="search-field">
               <span class="sr-only">Søg efter politiker</span>
@@ -63,18 +65,21 @@
 
         <aside class="detail-panel" id="detail-panel">
           <div class="detail-empty" id="detail-empty">
+            <p class="eyebrow">Detaljer</p>
             <h2>Vælg en profil</h2>
             <p>Åbn en profil for at se stemmehistorik, fremmøde og udvalg.</p>
           </div>
 
           <article class="detail-card hidden" id="detail-card">
             <div class="detail-header">
-              <div>
-                <p class="eyebrow" id="detail-party">-</p>
+              <div class="detail-heading">
+                <div class="detail-heading-row">
+                  <span class="party-pill detail-party-pill" id="detail-party">-</span>
+                  <a class="source-link" id="detail-link" href="#" target="_blank" rel="noreferrer">Kilde</a>
+                </div>
                 <h2 id="detail-name">-</h2>
                 <p class="detail-role" id="detail-role">-</p>
               </div>
-              <a class="source-link" id="detail-link" href="#" target="_blank" rel="noreferrer">Kilde</a>
             </div>
 
             <div class="metric-grid">
@@ -112,19 +117,35 @@
 
     <template id="profile-card-template">
       <button class="profile-card" type="button">
-        <span class="party-pill"></span>
-        <h2 class="profile-name"></h2>
-        <p class="profile-role"></p>
-        <dl class="profile-metrics">
-          <div>
-            <dt>Fremmøde</dt>
-            <dd class="profile-attendance"></dd>
+        <div class="profile-heading-row">
+          <span class="party-pill"></span>
+          <h2 class="profile-name"></h2>
+          <p class="profile-role"></p>
+        </div>
+        <div class="profile-metrics">
+          <div class="mini-stat mini-stat-attendance">
+            <div class="mini-stat-head">
+              <span class="mini-stat-label">Fremmøde</span>
+              <strong class="profile-attendance"></strong>
+            </div>
+            <div class="mini-stat-bar">
+              <span class="mini-stat-fill profile-attendance-bar"></span>
+            </div>
           </div>
-          <div>
-            <dt>Loyalitet</dt>
-            <dd class="profile-loyalty"></dd>
+          <div class="mini-stat mini-stat-loyalty">
+            <div class="mini-stat-head">
+              <span class="mini-stat-label">Loyalitet</span>
+              <strong class="profile-loyalty"></strong>
+            </div>
+            <div class="mini-stat-bar">
+              <span class="mini-stat-fill profile-loyalty-bar"></span>
+            </div>
           </div>
-        </dl>
+        </div>
+        <div class="profile-footer">
+          <span class="profile-vote-chip profile-votes-for"></span>
+          <span class="profile-vote-chip profile-votes-against"></span>
+        </div>
       </button>
     </template>
 
