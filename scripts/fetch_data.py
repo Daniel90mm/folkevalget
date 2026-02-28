@@ -353,15 +353,31 @@ def choose_latest_active(
 
 def build_biography_fields(person: dict[str, Any]) -> dict[str, Any]:
     biography = person.get("biografi")
+    constituency = extract_tag(biography, "currentConstituency") or extract_tag(biography, "constituency")
     return {
         "member_url": normalize_member_url(extract_tag(biography, "url")),
         "photo_url": normalize_photo_url(extract_tag(biography, "pictureMiRes"))
         or normalize_photo_url(extract_tag(biography, "pictureHiRes")),
         "profession": extract_tag(biography, "profession"),
         "title": extract_tag(biography, "title"),
-        "current_constituency": extract_tag(biography, "currentConstituency"),
+        "current_constituency": constituency,
         "party_short_from_bio": extract_tag(biography, "partyShortname"),
     }
+
+
+def extract_constituency_label(raw_text: str | None) -> str | None:
+    if not raw_text:
+        return None
+
+    cleaned = " ".join(raw_text.replace("\xa0", " ").split())
+    match = re.search(r"i ([^.]+?)(?: fra |, )", cleaned)
+    if match:
+        label = match.group(1).strip()
+    else:
+        label = cleaned
+
+    label = re.sub(r"^i\s+", "", label).strip(" .")
+    return label or None
 
 
 def determine_vote_window(
@@ -860,6 +876,7 @@ def derive_profiles(
         )
         display_party = current_party or last_vote_party
         party_actor = display_party["actor"] if display_party else None
+        constituency_text = bio_fields.get("current_constituency")
 
         recent_votes = member_recent_votes.get(person_id, [])
         recent_votes.sort(key=lambda item: (item["date"], item["afstemning_id"]), reverse=True)
@@ -896,7 +913,8 @@ def derive_profiles(
                     for membership in current_committees
                 ],
                 "role": bio_fields.get("profession") or bio_fields.get("title"),
-                "constituency": bio_fields.get("current_constituency"),
+                "constituency": constituency_text,
+                "storkreds": extract_constituency_label(constituency_text),
                 "member_url": bio_fields.get("member_url"),
                 "photo_url": bio_fields.get("photo_url"),
                 "votes_total": total_votes,
