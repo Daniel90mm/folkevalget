@@ -101,6 +101,45 @@
                 </article>
               </section>
 
+              <section class="vote-distribution">
+                <div class="panel-heading">
+                  <p class="eyebrow">Stemmefordeling</p>
+                  <h2>Fordeling i den aktuelle visning</h2>
+                </div>
+                <div class="vote-distribution-bar" id="vote-distribution-bar" aria-label="Stemmefordeling">
+                  <span class="vote-distribution-segment vote-distribution-for" data-segment="for"></span>
+                  <span class="vote-distribution-segment vote-distribution-against" data-segment="imod"></span>
+                  <span class="vote-distribution-segment vote-distribution-absent" data-segment="fravaer"></span>
+                  <span class="vote-distribution-segment vote-distribution-neither" data-segment="hverken"></span>
+                </div>
+                <div class="vote-distribution-legend">
+                  <article class="distribution-stat" data-distribution="for">
+                    <span class="distribution-swatch"></span>
+                    <strong>For</strong>
+                    <span data-value>-</span>
+                    <span data-share>-</span>
+                  </article>
+                  <article class="distribution-stat" data-distribution="imod">
+                    <span class="distribution-swatch"></span>
+                    <strong>Imod</strong>
+                    <span data-value>-</span>
+                    <span data-share>-</span>
+                  </article>
+                  <article class="distribution-stat" data-distribution="fravaer">
+                    <span class="distribution-swatch"></span>
+                    <strong>Fravaer</strong>
+                    <span data-value>-</span>
+                    <span data-share>-</span>
+                  </article>
+                  <article class="distribution-stat" data-distribution="hverken">
+                    <span class="distribution-swatch"></span>
+                    <strong>Blank</strong>
+                    <span data-value>-</span>
+                    <span data-share>-</span>
+                  </article>
+                </div>
+              </section>
+
               <section class="context-note hidden" id="vote-context"></section>
 
               <div class="votes-toolbar">
@@ -155,13 +194,14 @@
     <template id="voter-row-template">
       <a class="voter-row" href="#">
         <div class="voter-row-main">
-          <span class="party-pill" data-cell="party"></span>
+          <span class="party-code-badge" data-cell="party-code"></span>
           <div class="voter-row-copy">
             <strong data-cell="name"></strong>
             <span data-cell="role"></span>
+            <span class="voter-row-party" data-cell="party-name"></span>
           </div>
         </div>
-        <span class="member-card-link voter-row-link">Profil</span>
+        <span class="voter-row-link">Aabn profil</span>
       </a>
     </template>
 

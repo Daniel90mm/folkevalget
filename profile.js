@@ -171,20 +171,14 @@ const ProfileApp = (() => {
     }
 
     for (const vote of votes) {
-      const row = document.createElement("article");
-      row.className = "vote-row";
+      const voteUrl = window.Folkevalget.buildVoteUrl(vote.afstemning_id);
+      const row = document.createElement("a");
+      row.className = "vote-row vote-row-linkable";
+      row.href = voteUrl;
 
       const meta = document.createElement("div");
       meta.className = "vote-row-meta";
-      const label = document.createElement(vote.sag_number ? "a" : "span");
-      if (vote.sag_number) {
-        const url = window.Folkevalget.buildSagUrl(vote.sag_number, vote.date);
-        if (url) {
-          label.href = url;
-          label.target = "_blank";
-          label.rel = "noreferrer";
-        }
-      }
+      const label = document.createElement("span");
       label.className = "vote-link";
       label.textContent = vote.sag_number || "Afstemning";
 
@@ -204,7 +198,11 @@ const ProfileApp = (() => {
       badge.className = `vote-chip ${window.Folkevalget.voteBadgeClass(vote.vote_type)}`;
       badge.textContent = vote.vote_type || "Ukendt";
 
-      row.append(meta, body, badge);
+      const action = document.createElement("span");
+      action.className = "vote-row-action";
+      action.textContent = "Se forslag";
+
+      row.append(meta, body, badge, action);
       root.append(row);
     }
   }

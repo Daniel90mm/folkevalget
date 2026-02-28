@@ -172,10 +172,7 @@ const VotesApp = (() => {
   }
 
   function renderVoteHeader(vote) {
-    document.querySelector("#vote-detail-kicker").textContent = [
-      vote.type || "Afstemning",
-      vote.sag_number || null,
-    ]
+    document.querySelector("#vote-detail-kicker").textContent = [vote.type || "Afstemning", vote.sag_number || null]
       .filter(Boolean)
       .join(" · ");
 
@@ -212,9 +209,7 @@ const VotesApp = (() => {
   }
 
   function renderVoteContext(vote) {
-    const notes = [
-      "Partifilteret bruger partierne på afstemningstidspunktet.",
-    ];
+    const notes = ["Partifilteret bruger partierne paa afstemningstidspunktet."];
 
     if (vote.konklusion) {
       notes.push(vote.konklusion.trim());
@@ -252,11 +247,15 @@ const VotesApp = (() => {
 
   function renderVoteLists(vote) {
     const partyKeyByPersonId = buildPartyLookup(vote);
-    const yesIds = participantIdsFor(vote, "for");
-    const noIds = participantIdsFor(vote, "imod");
+    const visibleCounts = {
+      for: participantIdsFor(vote, "for").length,
+      imod: participantIdsFor(vote, "imod").length,
+      fravaer: participantIdsFor(vote, "fravaer").length,
+      hverken: participantIdsFor(vote, "hverken").length,
+    };
 
-    const filteredYes = enrichParticipants(yesIds, partyKeyByPersonId);
-    const filteredNo = enrichParticipants(noIds, partyKeyByPersonId);
+    const filteredYes = enrichParticipants(participantIdsFor(vote, "for"), partyKeyByPersonId);
+    const filteredNo = enrichParticipants(participantIdsFor(vote, "imod"), partyKeyByPersonId);
 
     document.querySelector("#vote-yes-title").textContent =
       `${window.Folkevalget.formatNumber(filteredYes.length)} stemte for`;
@@ -266,14 +265,35 @@ const VotesApp = (() => {
     const filterSummary = document.querySelector("#vote-filter-summary");
     if (state.partyFilter) {
       filterSummary.textContent =
-        `${formatPartyLabel(state.partyFilter)}: ${window.Folkevalget.formatNumber(filteredYes.length)} for og ${window.Folkevalget.formatNumber(filteredNo.length)} imod.`;
+        `${formatPartyLabel(state.partyFilter)}: ${window.Folkevalget.formatNumber(filteredYes.length)} for og ${window.Folkevalget.formatNumber(filteredNo.length)} imod. Grafen viser det samme udsnit.`;
     } else {
-      filterSummary.textContent =
-        `Viser alle registrerede ja- og nej-stemmer for denne afstemning.`;
+      filterSummary.textContent = "Viser alle registrerede ja- og nej-stemmer for denne afstemning.";
     }
 
+    renderVoteDistribution(visibleCounts);
     renderParticipantList(document.querySelector("#vote-yes-list"), filteredYes);
     renderParticipantList(document.querySelector("#vote-no-list"), filteredNo);
+  }
+
+  function renderVoteDistribution(counts) {
+    const total = Object.values(counts).reduce((sum, value) => sum + Number(value || 0), 0);
+
+    for (const key of ["for", "imod", "fravaer", "hverken"]) {
+      const value = Number(counts[key] || 0);
+      const share = total > 0 ? (value / total) * 100 : 0;
+      const segment = document.querySelector(`[data-segment='${key}']`);
+      const stat = document.querySelector(`[data-distribution='${key}']`);
+
+      if (segment) {
+        segment.style.width = `${share}%`;
+        segment.title = `${labelForGroup(key)}: ${window.Folkevalget.formatNumber(value)} (${formatShare(share)})`;
+      }
+
+      if (stat) {
+        stat.querySelector("[data-value]").textContent = window.Folkevalget.formatNumber(value);
+        stat.querySelector("[data-share]").textContent = formatShare(share);
+      }
+    }
   }
 
   function participantIdsFor(vote, groupKey) {
@@ -320,9 +340,12 @@ const VotesApp = (() => {
     const fragment = document.createDocumentFragment();
     for (const participant of participants) {
       const row = voterRowTemplate.content.firstElementChild.cloneNode(true);
+      const partyCode = shortPartyValue(participant.partyKey);
+
       row.href = window.Folkevalget.buildProfileUrl(participant.id);
-      row.querySelector("[data-cell='party']").textContent = formatPartyLabel(participant.partyKey);
-      row.querySelector("[data-cell='party']").dataset.party = shortPartyValue(participant.partyKey);
+      row.querySelector("[data-cell='party-code']").textContent = partyCode || "-";
+      row.querySelector("[data-cell='party-code']").dataset.party = partyCode;
+      row.querySelector("[data-cell='party-name']").textContent = fullPartyName(participant.partyKey);
       row.querySelector("[data-cell='name']").textContent = participant.name;
       row.querySelector("[data-cell='role']").textContent = participant.role;
       fragment.append(row);
@@ -345,6 +368,30 @@ const VotesApp = (() => {
     return /^[A-ZÆØÅ]{1,4}$/u.test(partyKey || "") ? partyKey : "";
   }
 
+  function fullPartyName(partyKey) {
+    if (!partyKey) {
+      return "Uden parti";
+    }
+    if (/^[A-ZÆØÅ]{1,4}$/u.test(partyKey)) {
+      return window.Folkevalget.PARTY_NAMES[partyKey] || partyKey;
+    }
+    return partyKey;
+  }
+
+  function labelForGroup(key) {
+    const labels = {
+      for: "For",
+      imod: "Imod",
+      fravaer: "Fravaer",
+      hverken: "Blank",
+    };
+    return labels[key] || key;
+  }
+
+  function formatShare(value) {
+    return `${value.toFixed(1).replace(".", ",")} %`;
+  }
+
   return { boot };
 })();
 
@@ -353,10 +400,10 @@ VotesApp.boot().catch((error) => {
   const voteList = document.querySelector("#vote-list");
   const voteEmpty = document.querySelector("#vote-empty");
   if (voteList) {
-    voteList.innerHTML = '<div class="panel-empty">Kunne ikke indlæse afstemninger.</div>';
+    voteList.innerHTML = '<div class="panel-empty">Kunne ikke indlaese afstemninger.</div>';
   }
   if (voteEmpty) {
     voteEmpty.classList.remove("hidden");
-    voteEmpty.textContent = "Detaljer for afstemningen kunne ikke indlæses.";
+    voteEmpty.textContent = "Detaljer for afstemningen kunne ikke indlaeses.";
   }
 });
