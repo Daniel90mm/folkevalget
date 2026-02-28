@@ -1,3 +1,28 @@
+const PARTY_NAMES = {
+  S: "Socialdemokratiet",
+  V: "Venstre, Danmarks Liberale Parti",
+  M: "Moderaterne",
+  SF: "Socialistisk Folkeparti",
+  EL: "Enhedslisten",
+  KF: "Det Konservative Folkeparti",
+  LA: "Liberal Alliance",
+  RV: "Radikale Venstre",
+  ALT: "Alternativet",
+  DD: "Danmarksdemokraterne – Inger Støjberg",
+  DF: "Dansk Folkeparti",
+  BP: "Borgernes Parti – Lars Boje Mathiesen",
+  IA: "Inuit Ataqatigiit",
+  JF: "Javnaðarflokkurin",
+  N: "Naleraq",
+  SP: "Sambandsflokkurin",
+};
+
+const SAG_TYPES = {
+  L: "lovforslag",
+  B: "beslutningsforslag",
+  V: "vedtagelse",
+};
+
 const state = {
   profiles: [],
   votesById: new Map(),
@@ -330,6 +355,14 @@ function renderCommittees(committees) {
 
   for (const committee of committees) {
     const item = document.createElement("li");
+    item.title = "Filtrer på dette udvalg";
+    item.style.cursor = "pointer";
+    item.addEventListener("click", () => {
+      committeeFilter.value = committee.short_name;
+      state.committeeFilter = committee.short_name;
+      applyFilters();
+    });
+
     const code = document.createElement("strong");
     code.className = "committee-code";
     code.textContent = committee.short_name || "Udvalg";
@@ -357,7 +390,12 @@ function renderRecentVotes(recentVotes) {
 
     const meta = document.createElement("div");
     meta.className = "vote-meta";
-    meta.innerHTML = `<span>${vote.sag_number || "Afstemning"}</span><span>${formatDate(vote.date)}</span>`;
+    const sagUrl = buildSagUrl(vote.sag_number, vote.date);
+    const sagLabel = vote.sag_number || "Afstemning";
+    const sagHtml = sagUrl
+      ? `<a class="vote-sag-link" href="${sagUrl}" target="_blank" rel="noreferrer">${sagLabel}</a>`
+      : `<span>${sagLabel}</span>`;
+    meta.innerHTML = `${sagHtml}<span>${formatDate(vote.date)}</span>`;
 
     const title = document.createElement("p");
     title.className = "vote-title";
@@ -455,6 +493,17 @@ function formatDate(value) {
   }).format(new Date(value));
 }
 
+function buildSagUrl(sagNumber, dateStr) {
+  const match = (sagNumber || "").match(/^([A-Z]+)\s+(\d+)$/);
+  if (!match) return null;
+  const [, prefix, number] = match;
+  const type = SAG_TYPES[prefix];
+  if (!type) return null;
+  const d = new Date(dateStr);
+  const sessionYear = d.getMonth() >= 9 ? d.getFullYear() : d.getFullYear() - 1;
+  return `https://www.ft.dk/samling/${sessionYear}1/${type}/${prefix}${number}/`;
+}
+
 function voteBadgeClass(label) {
   const normalized = (label || "").toLowerCase();
   if (normalized.includes("for")) {
@@ -548,10 +597,11 @@ function compareByName(left, right) {
 }
 
 function partyDisplayName(partyName, partyShort) {
-  if (partyName && partyShort) {
-    return `${partyName} (${partyShort})`;
+  const name = partyName || (partyShort && PARTY_NAMES[partyShort]) || null;
+  if (name && partyShort) {
+    return `${name} (${partyShort})`;
   }
-  return partyName || partyShort || "Uden parti";
+  return name || partyShort || "Uden parti";
 }
 
 function setMeter(bar, value, toneTarget, metricKind) {

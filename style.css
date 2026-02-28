@@ -572,6 +572,21 @@ h3 {
   font-size: 0.75rem;
 }
 
+.vote-sag-link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.vote-sag-link:hover {
+  text-decoration: underline;
+}
+
+.tag-list li:hover {
+  background: var(--bg-soft);
+  border-radius: 14px;
+}
+
 .vote-title {
   margin: 0;
   color: var(--ink);
