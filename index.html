@@ -57,6 +57,14 @@
                 <option value="">Alle partier</option>
               </select>
             </label>
+            <label class="select-field">
+              <span class="sr-only">Sorter profiler</span>
+              <select id="sort-select">
+                <option value="name">Navn A-Å</option>
+                <option value="attendance_desc">Fremmøde: højest først</option>
+                <option value="attendance_asc">Fremmøde: lavest først</option>
+              </select>
+            </label>
             <div class="toolbar-note" id="result-count">Indlæser...</div>
           </div>
 
@@ -108,7 +116,9 @@
 
             <section class="detail-section">
               <h3>Seneste afstemninger</h3>
-              <ul class="vote-list" id="detail-votes"></ul>
+              <div class="vote-list-shell">
+                <ul class="vote-list" id="detail-votes"></ul>
+              </div>
             </section>
           </article>
         </aside>

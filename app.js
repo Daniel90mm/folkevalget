@@ -5,6 +5,7 @@ const state = {
   selectedId: null,
   partyFilter: "",
   query: "",
+  sortMode: "name",
   stats: null,
 };
 
@@ -13,6 +14,7 @@ const bootstrapPayload = readBootstrapPayload();
 
 const profileGrid = document.querySelector("#profile-grid");
 const partyFilter = document.querySelector("#party-filter");
+const sortSelect = document.querySelector("#sort-select");
 const searchInput = document.querySelector("#search-input");
 const resultCount = document.querySelector("#result-count");
 const detailEmpty = document.querySelector("#detail-empty");
@@ -89,11 +91,7 @@ async function boot() {
   populatePartyFilter(profiles);
   renderHeroStats(stats);
   bindEvents();
-  renderProfiles();
-
-  if (profiles.length > 0) {
-    selectProfile(profiles[0].id);
-  }
+  applyFilters();
 }
 
 function bindEvents() {
@@ -106,21 +104,31 @@ function bindEvents() {
     state.partyFilter = event.target.value;
     applyFilters();
   });
+
+  sortSelect.addEventListener("change", (event) => {
+    state.sortMode = event.target.value;
+    applyFilters();
+  });
 }
 
 function populatePartyFilter(profiles) {
-  const parties = Array.from(
-    new Set(
-      profiles
-        .map((profile) => profile.party_short || profile.party)
-        .filter(Boolean)
-    )
-  ).sort((left, right) => left.localeCompare(right, "da"));
+  const partyOptions = new Map();
+  for (const profile of profiles) {
+    const partyValue = profile.party_short || profile.party;
+    if (!partyValue || partyOptions.has(partyValue)) {
+      continue;
+    }
+    partyOptions.set(partyValue, partyDisplayName(profile.party, profile.party_short));
+  }
 
-  for (const party of parties) {
+  const parties = Array.from(partyOptions.entries()).sort((left, right) =>
+    left[1].localeCompare(right[1], "da")
+  );
+
+  for (const [partyValue, partyLabel] of parties) {
     const option = document.createElement("option");
-    option.value = party;
-    option.textContent = party;
+    option.value = partyValue;
+    option.textContent = partyLabel;
     partyFilter.append(option);
   }
 }
@@ -144,6 +152,7 @@ function applyFilters() {
     return matchesParty && matchesQuery;
   });
 
+  state.filteredProfiles.sort(compareProfiles);
   renderProfiles();
 
   if (!state.filteredProfiles.some((profile) => profile.id === state.selectedId)) {
@@ -227,7 +236,7 @@ function renderDetail(profile) {
   detailEmpty.classList.add("hidden");
   detailCard.classList.remove("hidden");
 
-  detail.party.textContent = profile.party_short || profile.party || "Uden parti";
+  detail.party.textContent = partyDisplayName(profile.party, profile.party_short);
   detail.party.title = profile.party || "Uden parti";
   detail.name.textContent = profile.name;
   detail.role.textContent = [
@@ -270,7 +279,15 @@ function renderCommittees(committees) {
 
   for (const committee of committees) {
     const item = document.createElement("li");
-    item.textContent = committee.short_name || committee.name;
+    const code = document.createElement("strong");
+    code.className = "committee-code";
+    code.textContent = committee.short_name || "Udvalg";
+
+    const name = document.createElement("span");
+    name.className = "committee-name";
+    name.textContent = committee.name || committee.short_name || "Ukendt udvalg";
+
+    item.append(code, name);
     detail.committees.append(item);
   }
 }
@@ -399,6 +416,56 @@ function voteBadgeClass(label) {
     return "fravaer";
   }
   return "hverken";
+}
+
+function compareProfiles(left, right) {
+  if (state.sortMode === "attendance_desc") {
+    return compareAttendance(left, right, "desc");
+  }
+
+  if (state.sortMode === "attendance_asc") {
+    return compareAttendance(left, right, "asc");
+  }
+
+  return compareByName(left, right);
+}
+
+function compareAttendance(left, right, direction) {
+  const leftValue = left.attendance_pct;
+  const rightValue = right.attendance_pct;
+  const leftMissing = leftValue === null || leftValue === undefined;
+  const rightMissing = rightValue === null || rightValue === undefined;
+
+  if (leftMissing && rightMissing) {
+    return compareByName(left, right);
+  }
+  if (leftMissing) {
+    return 1;
+  }
+  if (rightMissing) {
+    return -1;
+  }
+
+  const delta =
+    direction === "desc"
+      ? Number(rightValue) - Number(leftValue)
+      : Number(leftValue) - Number(rightValue);
+  if (delta !== 0) {
+    return delta;
+  }
+
+  return compareByName(left, right);
+}
+
+function compareByName(left, right) {
+  return left.name.localeCompare(right.name, "da");
+}
+
+function partyDisplayName(partyName, partyShort) {
+  if (partyName && partyShort) {
+    return `${partyName} (${partyShort})`;
+  }
+  return partyName || partyShort || "Uden parti";
 }
 
 function setMeter(bar, value, toneTarget, metricKind) {
