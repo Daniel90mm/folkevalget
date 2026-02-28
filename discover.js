@@ -6,7 +6,7 @@ const DiscoverApp = (() => {
     query: "",
     partyFilter: "",
     committeeFilter: "",
-    sortMode: "name",
+    sortMode: "attendance_asc",
   };
 
   const statsRoot = document.querySelector("[data-site-stats]");
@@ -37,7 +37,7 @@ const DiscoverApp = (() => {
     state.query = params.get("q") || "";
     state.partyFilter = params.get("party") || "";
     state.committeeFilter = params.get("committee") || "";
-    state.sortMode = params.get("sort") || "name";
+    state.sortMode = params.get("sort") || "attendance_asc";
   }
 
   function syncControls() {
@@ -149,7 +149,7 @@ const DiscoverApp = (() => {
     if (state.committeeFilter) {
       params.set("committee", state.committeeFilter);
     }
-    if (state.sortMode && state.sortMode !== "name") {
+    if (state.sortMode && state.sortMode !== "attendance_asc") {
       params.set("sort", state.sortMode);
     }
     const next = params.toString() ? `?${params.toString()}` : window.location.pathname;
@@ -177,6 +177,7 @@ const DiscoverApp = (() => {
       card.querySelector("[data-card='party']").dataset.party = profile.party_short || "";
       card.querySelector("[data-card='name']").textContent = profile.name;
       card.querySelector("[data-card='role']").textContent = profile.role || "Folketingsmedlem";
+      renderContextTags(card.querySelector("[data-card='tags']"), profile);
       card.querySelector("[data-card='votes']").textContent =
         `${window.Folkevalget.formatNumber(profile.votes_total)} registrerede stemmer`;
       card.querySelector("[data-card='committees']").textContent =
@@ -217,6 +218,16 @@ const DiscoverApp = (() => {
     const tone = window.Folkevalget.metricTone(value, kind);
     bar.style.width = `${window.Folkevalget.clampPercent(value)}%`;
     container.dataset.tone = tone;
+  }
+
+  function renderContextTags(root, profile) {
+    root.innerHTML = "";
+    for (const flag of window.Folkevalget.profileContextFlags(profile)) {
+      const tag = document.createElement("span");
+      tag.className = `context-tag context-tag-${flag.key}`;
+      tag.textContent = flag.label;
+      root.append(tag);
+    }
   }
 
   return { boot };

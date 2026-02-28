@@ -38,7 +38,7 @@
       <main class="discover-layout">
         <section class="page-intro">
           <p class="eyebrow">Opdag profiler</p>
-          <h1>Find medlemmerne først. Gå til detaljen bagefter.</h1>
+          <h1>Find profilerne først. Gå til detaljen bagefter.</h1>
           <p>
             Filtrér på parti og udvalg, sorter efter fremmøde eller loyalitet, og åbn en selvstændig
             profilside for hver politiker.
@@ -66,18 +66,22 @@
             <label class="field">
               <span class="field-label">Sortering</span>
               <select id="sort-select">
-                <option value="name">Navn A-Å</option>
-                <option value="attendance_desc">Fremmøde: højest først</option>
                 <option value="attendance_asc">Fremmøde: lavest først</option>
+                <option value="attendance_desc">Fremmøde: højest først</option>
                 <option value="loyalty_desc">Loyalitet: højest først</option>
                 <option value="loyalty_asc">Loyalitet: lavest først</option>
+                <option value="name">Navn A-Å</option>
               </select>
             </label>
             <div class="toolbar-summary" id="result-count">Indlæser profiler...</div>
           </div>
-          <p class="toolbar-copy">
-            Klik på en profil for at åbne en dedikeret analyseside med udvalg, stemmer og nøglemål.
-          </p>
+          <div class="toolbar-copy">
+            <p>Klik på en profil for at åbne en dedikeret analyseside med udvalg, stemmer og nøglemål.</p>
+            <p>
+              Viser lavest fremmøde først. Husk at ministre og nordatlantiske mandater ofte har en anden
+              afstemningspraksis end almindelige folketingsmedlemmer.
+            </p>
+          </div>
         </section>
 
         <section class="discover-grid" id="discover-grid" aria-live="polite"></section>
@@ -95,6 +99,7 @@
             <span class="party-pill party-pill-wide" data-card="party"></span>
             <h2 data-card="name"></h2>
             <p class="member-role" data-card="role"></p>
+            <div class="context-tag-row" data-card="tags"></div>
           </div>
         </div>
 
