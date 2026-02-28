@@ -710,6 +710,16 @@ p {
   color: var(--warn);
 }
 
+.context-tag-newcomer {
+  background: rgba(27, 77, 110, 0.1);
+  color: var(--accent);
+}
+
+.context-tag-experienced {
+  background: rgba(66, 81, 74, 0.12);
+  color: var(--muted-strong);
+}
+
 .member-meta-row {
   display: flex;
   flex-wrap: wrap;
