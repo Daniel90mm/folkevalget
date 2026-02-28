@@ -9,6 +9,7 @@ const state = {
 };
 
 const siteBasePath = detectSiteBasePath();
+const bootstrapPayload = readBootstrapPayload();
 
 const profileGrid = document.querySelector("#profile-grid");
 const partyFilter = document.querySelector("#party-filter");
@@ -44,10 +45,15 @@ boot().catch((error) => {
 });
 
 async function boot() {
+  const bootstrapProfiles = Array.isArray(bootstrapPayload?.profiles)
+    ? bootstrapPayload.profiles
+    : null;
+  const bootstrapStats = bootstrapPayload?.stats ?? null;
+
   const [profilesResult, votesResult, statsResult] = await Promise.allSettled([
-    fetchJson("data/profiler.json"),
+    bootstrapProfiles ? Promise.resolve(bootstrapProfiles) : fetchJson("data/profiler.json"),
     fetchJson("data/afstemninger.json"),
-    fetchJson("data/site_stats.json"),
+    bootstrapStats ? Promise.resolve(bootstrapStats) : fetchJson("data/site_stats.json"),
   ]);
 
   if (profilesResult.status !== "fulfilled") {
@@ -309,6 +315,14 @@ function detectSiteBasePath() {
 function toSiteUrl(path) {
   const normalizedPath = path.replace(/^\/+/, "");
   return `${siteBasePath}${normalizedPath}`;
+}
+
+function readBootstrapPayload() {
+  const payload = window.__FOLKEVALGET_BOOTSTRAP__;
+  if (!payload || typeof payload !== "object") {
+    return null;
+  }
+  return payload;
 }
 
 function wait(durationMs) {
