@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Partier | Folkevalget</title>
+    <meta
+      name="description"
+      content="En enkel partioversigt med gennemsnitligt fremmøde, loyalitet og medlemstal baseret på offentlige data."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Source+Serif+4:wght@600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="page-parties">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-brand-row">
+          <a class="site-brand" href="./index.html">folkevalget.dk</a>
+          <nav class="site-nav" aria-label="Primær navigation">
+            <a href="./index.html">Forside</a>
+            <a href="./discover.html">Opdag profiler</a>
+            <a aria-current="page" href="./partier.html">Partier</a>
+          </nav>
+        </div>
+        <div class="site-stats" data-site-stats aria-live="polite">
+          <span><strong data-stat="profiles">-</strong> profiler</span>
+          <span class="site-stats-dot" aria-hidden="true"></span>
+          <span><strong data-stat="votes">-</strong> afstemninger</span>
+          <span class="site-stats-dot" aria-hidden="true"></span>
+          <span>Opdateret: <strong data-stat="updated">-</strong></span>
+        </div>
+      </header>
+
+      <main class="parties-layout">
+        <section class="page-intro parties-intro">
+          <p class="eyebrow">Partioversigt</p>
+          <h1>Sammenlign partierne på tværs af fremmøde, loyalitet og medlemstal.</h1>
+          <p>
+            Oversigten bygger på nuværende medlemmer i hver folketingsgruppe. Gennemsnit skal læses med
+            kontekst: ministre og nordatlantiske mandater har ofte en anden afstemningspraksis.
+          </p>
+          <div class="hero-actions">
+            <a class="button-link" href="./discover.html">Gå til profilerne</a>
+          </div>
+        </section>
+
+        <section class="party-summary-strip" aria-live="polite">
+          <article class="summary-card">
+            <span class="signal-label">Partier og grupper</span>
+            <strong id="party-count">-</strong>
+            <p>Antal grupper med aktuelle medlemmer i oversigten.</p>
+          </article>
+          <article class="summary-card">
+            <span class="signal-label">Aktuelle medlemmer</span>
+            <strong id="member-count">-</strong>
+            <p>Samlede mandater i den nuværende partioversigt.</p>
+          </article>
+          <article class="summary-card">
+            <span class="signal-label">Ministre</span>
+            <strong id="minister-count">-</strong>
+            <p>Ministre vises særskilt, fordi det ofte påvirker fremmødet.</p>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading panel-heading-inline">
+            <div>
+              <p class="eyebrow">Sammenlign partier</p>
+              <h2>Nøgletal pr. folketingsgruppe</h2>
+            </div>
+            <label class="field field-inline">
+              <span class="field-label">Sortering</span>
+              <select id="party-sort">
+                <option value="members_desc">Medlemmer: flest først</option>
+                <option value="attendance_desc">Fremmøde: højest først</option>
+                <option value="attendance_asc">Fremmøde: lavest først</option>
+                <option value="loyalty_desc">Loyalitet: højest først</option>
+                <option value="loyalty_asc">Loyalitet: lavest først</option>
+                <option value="name">Parti A-Å</option>
+              </select>
+            </label>
+          </div>
+          <p class="table-note">
+            Fremmøde og partiloyalitet er gennemsnit for partiets nuværende medlemmer. Brug "Se profiler"
+            for at dykke ned i de enkelte navne bag gennemsnittet.
+          </p>
+          <div class="party-table-wrap">
+            <table class="party-table">
+              <thead>
+                <tr>
+                  <th scope="col">Parti</th>
+                  <th scope="col">Medlemmer</th>
+                  <th scope="col">Gns. fremmøde</th>
+                  <th scope="col">Gns. loyalitet</th>
+                  <th scope="col">Gns. udvalg</th>
+                  <th scope="col">Se profiler</th>
+                </tr>
+              </thead>
+              <tbody id="party-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <template id="party-row-template">
+      <tr>
+        <td data-cell="party"></td>
+        <td class="party-table-number" data-cell="members"></td>
+        <td data-cell="attendance"></td>
+        <td data-cell="loyalty"></td>
+        <td class="party-table-number" data-cell="committees"></td>
+        <td class="party-table-action">
+          <a class="table-link" data-cell="link" href="#">Se profiler</a>
+        </td>
+      </tr>
+    </template>
+
+    <script src="catalog.js" defer></script>
+    <script src="shared.js" defer></script>
+    <script src="parties.js" defer></script>
+  </body>
+</html>

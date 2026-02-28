@@ -1336,6 +1336,7 @@ def main() -> None:
         "__FOLKEVALGET_BOOTSTRAP__",
         {
             "profiles": profiles,
+            "parties": party_summaries,
             "stats": site_stats,
         },
     )
