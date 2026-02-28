@@ -254,8 +254,9 @@ function renderProfiles() {
     const avatar = card.querySelector(".card-avatar");
     const cardInitials = card.querySelector(".card-initials");
     cardInitials.textContent = getInitials(profile.name);
-    if (profile.photo_url) {
-      avatar.src = profile.photo_url.replace(/\.ashx$/, ".jpg");
+    const cardPhotoUrl = resolvePhotoUrl(profile.photo_url);
+    if (cardPhotoUrl) {
+      avatar.src = cardPhotoUrl;
       avatar.alt = profile.name;
       avatar.classList.remove("hidden");
       avatar.onerror = () => {
@@ -317,8 +318,9 @@ function renderDetail(profile) {
 
   detail.initials.textContent = getInitials(profile.name);
   detail.initials.classList.add("hidden");
-  if (profile.photo_url) {
-    detail.photo.src = profile.photo_url.replace(/\.ashx$/, ".jpg");
+  const detailPhotoUrl = resolvePhotoUrl(profile.photo_url);
+  if (detailPhotoUrl) {
+    detail.photo.src = detailPhotoUrl;
     detail.photo.alt = profile.name;
     detail.photo.classList.remove("hidden");
     detail.photo.onerror = () => {
@@ -683,6 +685,14 @@ function metricTone(value, metricKind) {
   }
 
   return "neutral";
+}
+
+function resolvePhotoUrl(photoUrl) {
+  if (!photoUrl) return null;
+  if (photoUrl.startsWith("http://") || photoUrl.startsWith("https://")) {
+    return photoUrl;
+  }
+  return toSiteUrl(photoUrl);
 }
 
 function getInitials(name) {
