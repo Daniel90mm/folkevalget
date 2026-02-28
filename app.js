@@ -8,6 +8,8 @@ const state = {
   stats: null,
 };
 
+const siteBasePath = detectSiteBasePath();
+
 const profileGrid = document.querySelector("#profile-grid");
 const partyFilter = document.querySelector("#party-filter");
 const searchInput = document.querySelector("#search-input");
@@ -42,11 +44,36 @@ boot().catch((error) => {
 });
 
 async function boot() {
-  const [profiles, votes, stats] = await Promise.all([
+  const [profilesResult, votesResult, statsResult] = await Promise.allSettled([
     fetchJson("data/profiler.json"),
     fetchJson("data/afstemninger.json"),
     fetchJson("data/site_stats.json"),
   ]);
+
+  if (profilesResult.status !== "fulfilled") {
+    throw profilesResult.reason;
+  }
+
+  const profiles = profilesResult.value;
+  const votes = votesResult.status === "fulfilled" ? votesResult.value : [];
+  const stats =
+    statsResult.status === "fulfilled"
+      ? statsResult.value
+      : {
+          generated_at: null,
+          counts: {
+            profiles: profiles.length,
+            votes: votes.length,
+          },
+        };
+
+  if (votesResult.status !== "fulfilled") {
+    console.warn("Could not load vote index", votesResult.reason);
+  }
+
+  if (statsResult.status !== "fulfilled") {
+    console.warn("Could not load site stats", statsResult.reason);
+  }
 
   state.profiles = profiles;
   state.filteredProfiles = profiles.slice();
@@ -243,11 +270,49 @@ function renderRecentVotes(recentVotes) {
 }
 
 async function fetchJson(path) {
-  const response = await fetch(path, { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`Failed to load ${path}: ${response.status}`);
+  const url = toSiteUrl(path);
+  let lastError = null;
+
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    try {
+      const response = await fetch(url, { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error(`Failed to load ${path}: ${response.status}`);
+      }
+      return response.json();
+    } catch (error) {
+      lastError = error;
+      if (attempt === 2) {
+        break;
+      }
+      await wait(300 * (attempt + 1));
+    }
   }
-  return response.json();
+
+  throw lastError;
+}
+
+function detectSiteBasePath() {
+  const { hostname, pathname } = window.location;
+  if (!hostname.endsWith("github.io")) {
+    return "/";
+  }
+
+  const segments = pathname.split("/").filter(Boolean);
+  if (segments.length === 0) {
+    return "/";
+  }
+
+  return `/${segments[0]}/`;
+}
+
+function toSiteUrl(path) {
+  const normalizedPath = path.replace(/^\/+/, "");
+  return `${siteBasePath}${normalizedPath}`;
+}
+
+function wait(durationMs) {
+  return new Promise((resolve) => window.setTimeout(resolve, durationMs));
 }
 
 function formatNumber(value) {
