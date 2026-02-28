@@ -252,9 +252,10 @@ function renderProfiles() {
 
     const avatar = card.querySelector(".card-avatar");
     if (profile.photo_url) {
-      avatar.src = profile.photo_url;
+      avatar.src = profile.photo_url.replace(/\.ashx$/, ".jpg");
       avatar.alt = profile.name;
       avatar.classList.remove("hidden");
+      avatar.onerror = () => avatar.classList.add("hidden");
     }
     card.querySelector(".profile-name").textContent = profile.name;
     card.querySelector(".profile-role").textContent = roleLabel;
@@ -307,9 +308,10 @@ function renderDetail(profile) {
   detail.party.dataset.party = profile.party_short || "";
 
   if (profile.photo_url) {
-    detail.photo.src = profile.photo_url;
+    detail.photo.src = profile.photo_url.replace(/\.ashx$/, ".jpg");
     detail.photo.alt = profile.name;
     detail.photo.classList.remove("hidden");
+    detail.photo.onerror = () => detail.photo.classList.add("hidden");
   } else {
     detail.photo.classList.add("hidden");
   }
@@ -353,15 +355,15 @@ function renderCommittees(committees) {
     return;
   }
 
+  const sessionId = currentSessionId();
+
   for (const committee of committees) {
     const item = document.createElement("li");
-    item.title = "Filtrer på dette udvalg";
+    const url = `https://www.ft.dk/samling/${sessionId}/udvalg/${committee.short_name}/`;
+    item.title = `Åbn ${committee.name || committee.short_name} på ft.dk`;
     item.style.cursor = "pointer";
-    item.addEventListener("click", () => {
-      committeeFilter.value = committee.short_name;
-      state.committeeFilter = committee.short_name;
-      applyFilters();
-    });
+    item.setAttribute("role", "link");
+    item.addEventListener("click", () => window.open(url, "_blank", "noreferrer"));
 
     const code = document.createElement("strong");
     code.className = "committee-code";
@@ -491,6 +493,12 @@ function formatDate(value) {
     month: "short",
     year: "numeric",
   }).format(new Date(value));
+}
+
+function currentSessionId() {
+  const now = new Date();
+  const year = now.getMonth() >= 9 ? now.getFullYear() : now.getFullYear() - 1;
+  return `${year}1`;
 }
 
 function buildSagUrl(sagNumber, dateStr) {

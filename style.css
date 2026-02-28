@@ -575,11 +575,24 @@ h3 {
 .vote-sag-link {
   color: var(--accent);
   font-weight: 700;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.vote-sag-link::after {
+  content: " ↗";
+  font-size: 0.82em;
 }
 
 .vote-sag-link:hover {
-  text-decoration: underline;
+  opacity: 0.75;
+}
+
+.tag-list li[role="link"] .committee-code::after {
+  content: " ↗";
+  font-size: 0.75em;
+  font-weight: 400;
+  opacity: 0.55;
 }
 
 .tag-list li:hover {
