@@ -208,13 +208,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--skip-photos",
         action="store_true",
-        help="Skip downloading member photos.",
+        help="Skip applying locally cached portrait files from photos/.",
     )
     parser.add_argument(
         "--photo-workers",
         type=int,
         default=2,
-        help="Parallel workers for photo downloads.",
+        help="Unused legacy flag kept for CLI compatibility.",
     )
     parser.add_argument(
         "--verbose",
@@ -294,6 +294,19 @@ def normalize_name_text(value: str | None) -> str:
     normalized = "".join(ch for ch in normalized if not unicodedata.combining(ch))
     normalized = re.sub(r"[^a-z0-9]+", " ", normalized)
     return " ".join(normalized.split())
+
+
+def find_local_photo_path(person_id: int, photos_dir: Path) -> str | None:
+    for ext in (".jpg", ".jpeg", ".png", ".webp", ".gif"):
+        candidate = photos_dir / f"{person_id}{ext}"
+        if candidate.exists():
+            return f"photos/{person_id}{ext}"
+    return None
+
+
+def apply_local_photo_inventory(profiles: list[dict[str, Any]], photos_dir: Path) -> None:
+    for profile in profiles:
+        profile["photo_url"] = find_local_photo_path(profile["id"], photos_dir)
 
 
 def build_filter_for_ids(field: str, ids: list[int]) -> str:
@@ -1291,9 +1304,9 @@ def main() -> None:
         },
     }
 
+    photos_dir = Path(args.output_dir).parent / "photos"
     if not args.skip_photos:
-        photos_dir = Path(args.output_dir).parent / "photos"
-        download_all_photos(profiles, photos_dir, options.verbose, max_workers=args.photo_workers)
+        apply_local_photo_inventory(profiles, photos_dir)
 
     write_json(output_dir / "profiler.json", profiles)
     write_json(output_dir / "partier.json", party_summaries)
