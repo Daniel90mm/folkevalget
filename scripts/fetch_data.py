@@ -182,6 +182,12 @@ def write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def write_javascript_payload(path: Path, variable_name: str, payload: Any) -> None:
+    ensure_dir(path.parent)
+    serialized = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+    path.write_text(f"window.{variable_name}={serialized};\n", encoding="utf-8")
+
+
 def parse_iso_date(value: str | None) -> date | None:
     if not value:
         return None
@@ -979,6 +985,14 @@ def main() -> None:
     write_json(output_dir / "udvalg.json", committee_summaries)
     write_json(output_dir / "afstemninger.json", summarized_votes)
     write_json(output_dir / "site_stats.json", site_stats)
+    write_javascript_payload(
+        output_dir.parent / "catalog.js",
+        "__FOLKEVALGET_BOOTSTRAP__",
+        {
+            "profiles": profiles,
+            "stats": site_stats,
+        },
+    )
 
     if args.write_raw:
         write_json(raw_dir / "actor_types.json", actor_types)
