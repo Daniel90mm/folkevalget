@@ -7,6 +7,15 @@ const ProfileApp = (() => {
   const profileTags = document.querySelector("#profile-tags");
   const contextNote = document.querySelector("#profile-context-note");
   const photoCredit = document.querySelector("#profile-photo-credit");
+  const overviewPanel = document.querySelector("#profile-overview-panel");
+  const overviewList = document.querySelector("#profile-overview-list");
+  const backgroundPanel = document.querySelector("#profile-background-panel");
+  const educationBlock = document.querySelector("#profile-education-block");
+  const educationList = document.querySelector("#profile-education-list");
+  const occupationBlock = document.querySelector("#profile-occupation-block");
+  const occupationList = document.querySelector("#profile-occupation-list");
+  const historyPanel = document.querySelector("#profile-history-panel");
+  const historyList = document.querySelector("#profile-history-list");
 
   async function boot() {
     const profileId = Number(new URLSearchParams(window.location.search).get("id"));
@@ -71,6 +80,9 @@ const ProfileApp = (() => {
     renderStaticMetric("against", profile.votes_against, "risk");
     renderStaticMetric("absent", profile.votes_absent, "warn");
 
+    renderOverview(profile);
+    renderBackground(profile);
+    renderHistory(profile);
     renderCommittees(profile.committees || []);
     renderRecentVotes(profile.recent_votes || []);
   }
@@ -79,6 +91,7 @@ const ProfileApp = (() => {
     const committeeCount = (profile.committees || []).length;
     return [
       buildSenioritySummary(profile),
+      profile.storkreds ? `valgt i ${profile.storkreds}` : null,
       committeeCount > 0 ? `${window.Folkevalget.formatNumber(committeeCount)} aktive udvalg` : "Ingen registrerede udvalg",
     ]
       .filter(Boolean)
@@ -107,6 +120,143 @@ const ProfileApp = (() => {
     const metric = document.querySelector(`[data-metric='${key}']`);
     metric.dataset.tone = tone;
     metric.querySelector("[data-value]").textContent = window.Folkevalget.formatNumber(value);
+  }
+
+  function renderOverview(profile) {
+    overviewList.innerHTML = "";
+
+    const rows = [
+      buildOverviewRow("Storkreds", profile.storkreds || profile.constituency || null),
+      buildOverviewRow("Anciennitet", buildSenioritySummary(profile)),
+      buildOverviewRow("Kontakt", profile.email ? { type: "email", value: profile.email } : null),
+      buildOverviewRow("Telefon", profile.phone ? { type: "phone", value: profile.phone } : null),
+      buildOverviewRow("Hjemmeside", profile.website_url ? { type: "link", value: profile.website_url } : null),
+      buildOverviewRow("Adresse", profile.address || null),
+    ].filter(Boolean);
+
+    overviewPanel.classList.toggle("hidden", rows.length === 0);
+    for (const row of rows) {
+      overviewList.append(row);
+    }
+  }
+
+  function buildOverviewRow(label, content) {
+    if (!content) {
+      return null;
+    }
+
+    const row = document.createElement("div");
+    row.className = "fact-row";
+
+    const dt = document.createElement("dt");
+    dt.textContent = label;
+
+    const dd = document.createElement("dd");
+    if (typeof content === "string") {
+      dd.textContent = content;
+    } else if (content.type === "email") {
+      const link = document.createElement("a");
+      link.href = `mailto:${content.value}`;
+      link.textContent = content.value;
+      dd.append(link);
+    } else if (content.type === "phone") {
+      const link = document.createElement("a");
+      link.href = `tel:${String(content.value).replace(/\s+/g, "")}`;
+      link.textContent = content.value;
+      dd.append(link);
+    } else if (content.type === "link") {
+      const link = document.createElement("a");
+      link.href = content.value;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.textContent = content.value;
+      dd.append(link);
+    } else {
+      return null;
+    }
+
+    row.append(dt, dd);
+    return row;
+  }
+
+  function renderBackground(profile) {
+    const educations = Array.isArray(profile.educations) ? profile.educations.filter(Boolean) : [];
+    const occupations = Array.isArray(profile.occupations) ? profile.occupations.filter(Boolean) : [];
+
+    renderDetailList(educationBlock, educationList, educations);
+    renderDetailList(occupationBlock, occupationList, occupations);
+    backgroundPanel.classList.toggle("hidden", educations.length === 0 && occupations.length === 0);
+  }
+
+  function renderDetailList(block, listNode, items) {
+    listNode.innerHTML = "";
+    block.classList.toggle("hidden", items.length === 0);
+    for (const item of items) {
+      const entry = document.createElement("li");
+      entry.textContent = item;
+      listNode.append(entry);
+    }
+  }
+
+  function renderHistory(profile) {
+    historyList.innerHTML = "";
+
+    const constituencyHistory = Array.isArray(profile.constituency_history)
+      ? profile.constituency_history.filter(Boolean)
+      : [];
+    const partyHistory = Array.isArray(profile.party_history) ? profile.party_history.filter(Boolean) : [];
+
+    if (constituencyHistory.length > 0) {
+      historyPanel.classList.remove("hidden");
+      for (const entry of constituencyHistory) {
+        const item = document.createElement("li");
+        item.className = "timeline-item";
+
+        const meta = document.createElement("div");
+        meta.className = "timeline-meta";
+        meta.textContent = "Officiel medlemsregistrering";
+
+        const body = document.createElement("div");
+        body.className = "timeline-body";
+        const title = document.createElement("strong");
+        title.textContent = entry;
+        body.append(title);
+
+        item.append(meta, body);
+        historyList.append(item);
+      }
+      return;
+    }
+
+    if (partyHistory.length === 0) {
+      historyPanel.classList.add("hidden");
+      return;
+    }
+
+    historyPanel.classList.remove("hidden");
+    for (const entry of partyHistory) {
+      const item = document.createElement("li");
+      item.className = "timeline-item";
+
+      const meta = document.createElement("div");
+      meta.className = "timeline-meta";
+      meta.textContent = formatHistoryRange(entry.start_date, entry.end_date, entry.active);
+
+      const body = document.createElement("div");
+      body.className = "timeline-body";
+      const title = document.createElement("strong");
+      title.textContent = window.Folkevalget.partyDisplayName(entry.party, entry.party_short);
+      body.append(title);
+
+      item.append(meta, body);
+      historyList.append(item);
+    }
+  }
+
+  function formatHistoryRange(startDate, endDate, active) {
+    const startLabel = startDate ? window.Folkevalget.formatDate(startDate) : "Ukendt start";
+    const endLabel = active || !endDate ? "nu" : window.Folkevalget.formatDate(endDate);
+    return `${startLabel} - ${endLabel}`;
   }
 
   function renderCommittees(committees) {

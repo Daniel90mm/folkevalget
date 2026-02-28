@@ -12,6 +12,7 @@ import re
 import sys
 import time
 import unicodedata
+import xml.etree.ElementTree as ET
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
@@ -331,6 +332,46 @@ def extract_tag(blob: str | None, tag: str) -> str | None:
     return text or None
 
 
+def parse_biography_xml(blob: str | None) -> ET.Element | None:
+    if not blob:
+        return None
+    try:
+        return ET.fromstring(blob)
+    except ET.ParseError:
+        return None
+
+
+def normalize_biography_text(value: str | None) -> str | None:
+    if value is None:
+        return None
+    value = html.unescape(value).replace("\xa0", " ")
+    value = re.sub(r"\s+", " ", value).strip()
+    return value or None
+
+
+def xml_text(root: ET.Element | None, path: str) -> str | None:
+    if root is None:
+        return None
+    node = root.find(path)
+    if node is None:
+        return None
+    text = " ".join(fragment.strip() for fragment in node.itertext() if fragment and fragment.strip())
+    return normalize_biography_text(text)
+
+
+def xml_text_list(root: ET.Element | None, path: str) -> list[str]:
+    if root is None:
+        return []
+
+    values: list[str] = []
+    for node in root.findall(path):
+        text = " ".join(fragment.strip() for fragment in node.itertext() if fragment and fragment.strip())
+        cleaned = normalize_biography_text(text)
+        if cleaned:
+            values.append(cleaned)
+    return values
+
+
 def normalize_member_url(raw_url: str | None) -> str | None:
     if not raw_url:
         return None
@@ -363,6 +404,86 @@ def normalize_name_text(value: str | None) -> str:
     normalized = "".join(ch for ch in normalized if not unicodedata.combining(ch))
     normalized = re.sub(r"[^a-z0-9]+", " ", normalized)
     return " ".join(normalized.split())
+
+
+def effective_membership_dates(membership: dict[str, Any]) -> tuple[date | None, date | None]:
+    start_candidates = [
+        membership.get("relation_start"),
+        membership.get("actor_start"),
+    ]
+    end_candidates = [
+        membership.get("relation_end"),
+        membership.get("actor_end"),
+    ]
+    start_dates = [value for value in start_candidates if value]
+    end_dates = [value for value in end_candidates if value]
+    start_date = max(start_dates) if start_dates else None
+    end_date = min(end_dates) if end_dates else None
+    return start_date, end_date
+
+
+def build_party_history(
+    memberships: list[dict[str, Any]],
+    *,
+    on_date: date,
+) -> list[dict[str, Any]]:
+    items: list[dict[str, Any]] = []
+
+    for membership in sorted(memberships, key=membership_sort_key, reverse=True):
+        actor = membership["actor"]
+        start_date, end_date = effective_membership_dates(membership)
+        item = {
+            "party": actor.get("navn"),
+            "party_short": actor.get("gruppenavnkort"),
+            "start_date": start_date.isoformat() if start_date else None,
+            "end_date": end_date.isoformat() if end_date else None,
+            "active": membership_active_on(membership, on_date),
+        }
+        if not items:
+            items.append(item)
+            continue
+
+        previous = items[-1]
+        same_party = (
+            previous.get("party_short") == item.get("party_short")
+            and previous.get("party") == item.get("party")
+        )
+        if same_party and can_merge_party_history(previous, item):
+            items[-1] = merge_party_history_entries(previous, item)
+        else:
+            items.append(item)
+
+    return items
+
+
+def can_merge_party_history(left: dict[str, Any], right: dict[str, Any]) -> bool:
+    left_start = parse_iso_date(left.get("start_date"))
+    right_end = parse_iso_date(right.get("end_date"))
+
+    if left_start and right_end:
+        return right_end >= left_start
+    return True
+
+
+def merge_party_history_entries(newer: dict[str, Any], older: dict[str, Any]) -> dict[str, Any]:
+    newer_start = parse_iso_date(newer.get("start_date"))
+    older_start = parse_iso_date(older.get("start_date"))
+    newer_end = parse_iso_date(newer.get("end_date"))
+    older_end = parse_iso_date(older.get("end_date"))
+
+    merged_start_candidates = [value for value in (newer_start, older_start) if value]
+    merged_end_candidates = [value for value in (newer_end, older_end) if value]
+
+    merged_start = min(merged_start_candidates) if merged_start_candidates else None
+    merged_end = max(merged_end_candidates) if merged_end_candidates else None
+
+    return {
+        "party": newer.get("party") or older.get("party"),
+        "party_short": newer.get("party_short") or older.get("party_short"),
+        "start_date": merged_start.isoformat() if merged_start else None,
+        "end_date": None if newer.get("active") or older.get("active") else (merged_end.isoformat() if merged_end else None),
+        "active": newer.get("active") or older.get("active"),
+    }
 
 
 def find_local_photo_path(person_id: int, photos_dir: Path) -> str | None:
@@ -464,16 +585,35 @@ def choose_latest_active(
 
 def build_biography_fields(person: dict[str, Any]) -> dict[str, Any]:
     biography = person.get("biografi")
-    constituency = extract_tag(biography, "currentConstituency") or extract_tag(biography, "constituency")
+    root = parse_biography_xml(biography)
+    constituency_entries = xml_text_list(root, ".//career/constituencies/constituency")
+    constituency = constituency_entries[0] if constituency_entries else None
     return {
-        "member_url": normalize_member_url(extract_tag(biography, "url")),
-        "photo_url": normalize_photo_url(extract_tag(biography, "pictureMiRes"))
+        "member_url": normalize_member_url(xml_text(root, ".//url") or extract_tag(biography, "url")),
+        "photo_url": normalize_photo_url(xml_text(root, ".//pictureMiRes"))
+        or normalize_photo_url(xml_text(root, ".//pictureHiRes"))
+        or normalize_photo_url(extract_tag(biography, "pictureMiRes"))
         or normalize_photo_url(extract_tag(biography, "pictureHiRes")),
-        "profession": extract_tag(biography, "profession"),
-        "title": extract_tag(biography, "title"),
+        "profession": xml_text(root, ".//profession") or extract_tag(biography, "profession"),
+        "title": xml_text(root, ".//title") or extract_tag(biography, "title"),
         "current_constituency": constituency,
-        "party_short_from_bio": extract_tag(biography, "partyShortname"),
-        "function_start_date": parse_iso_date(extract_tag(biography, "functionStartDate")),
+        "constituency_history": constituency_entries,
+        "party_short_from_bio": xml_text(root, ".//partyShortname") or extract_tag(biography, "partyShortname"),
+        "function_start_date": parse_iso_date(
+            xml_text(root, ".//personalInformation/function/functionStartDate")
+            or extract_tag(biography, "functionStartDate")
+        ),
+        "educations": xml_text_list(root, ".//educations/education"),
+        "occupations": xml_text_list(root, ".//occupations/occupation"),
+        "email": xml_text(root, ".//emails/email"),
+        "phone": (
+            xml_text(root, ".//mobilePhone")
+            or xml_text(root, ".//ministerPhone")
+            or xml_text(root, ".//phoneFolketinget")
+            or xml_text(root, ".//privatePhone")
+        ),
+        "website_url": xml_text(root, ".//Websites/WebsiteUrl/Url"),
+        "address": xml_text(root, ".//addresses/address"),
     }
 
 
@@ -1032,6 +1172,7 @@ def derive_profiles(
 
         bio_fields = build_biography_fields(person)
         current_party = choose_latest_active(party_memberships.get(person_id, []), now)
+        party_history = build_party_history(party_memberships.get(person_id, []), on_date=now)
         current_committees = committees_for_person_on(person_id, now.isoformat())
         latest_vote_date = latest_vote_date_by_person.get(person_id)
         last_vote_party = (
@@ -1080,6 +1221,14 @@ def derive_profiles(
                 "role": bio_fields.get("profession") or bio_fields.get("title"),
                 "constituency": constituency_text,
                 "storkreds": extract_constituency_label(constituency_text),
+                "constituency_history": bio_fields.get("constituency_history", []),
+                "party_history": party_history,
+                "educations": bio_fields.get("educations", []),
+                "occupations": bio_fields.get("occupations", []),
+                "email": bio_fields.get("email"),
+                "phone": bio_fields.get("phone"),
+                "website_url": bio_fields.get("website_url"),
+                "address": bio_fields.get("address"),
                 "member_url": bio_fields.get("member_url"),
                 "photo_url": bio_fields.get("photo_url"),
                 "photo_source_url": None,

@@ -142,6 +142,10 @@ const DiscoverApp = (() => {
         profile.party,
         profile.party_short,
         profile.role,
+        profile.storkreds,
+        ...(profile.educations || []),
+        ...(profile.occupations || []),
+        ...(profile.constituency_history || []),
         ...(profile.committees || []).map((committee) => `${committee.short_name} ${committee.name || ""}`),
       ]
         .filter(Boolean)
@@ -181,7 +185,7 @@ const DiscoverApp = (() => {
     if (state.committeeFilter) {
       params.set("committee", state.committeeFilter);
     }
-    if (state.sortMode && state.sortMode !== "attendance_asc") {
+    if (state.sortMode && state.sortMode !== "attendance_desc") {
       params.set("sort", state.sortMode);
     }
     const next = params.toString() ? `?${params.toString()}` : window.location.pathname;
