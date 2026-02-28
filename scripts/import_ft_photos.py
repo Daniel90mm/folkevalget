@@ -40,6 +40,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--profiles", default="data/profiler.json", help="Path to existing profiles.json")
     parser.add_argument("--photos-dir", default="photos", help="Directory for cached portrait files")
     parser.add_argument("--limit", type=int, default=0, help="Only process the first N profiles")
+    parser.add_argument(
+        "--ids",
+        default="",
+        help="Comma-separated actor ids to process instead of the whole dataset.",
+    )
     parser.add_argument("--chrome-path", default="", help="Path to chrome.exe")
     parser.add_argument("--debug-port", type=int, default=9230, help="Remote debugging port for Chrome")
     return parser.parse_args()
@@ -72,7 +77,13 @@ def fetch_actor(actor_id: int) -> dict:
 
 def normalize_slug(text: str) -> str:
     text = text.lower().strip()
-    text = text.replace("æ", "ae").replace("ø", "oe").replace("å", "aa")
+    text = (
+        text.replace("æ", "ae")
+        .replace("ø", "oe")
+        .replace("å", "aa")
+        .replace("ð", "oe")
+        .replace("þ", "th")
+    )
     text = unicodedata.normalize("NFKD", text)
     text = "".join(ch for ch in text if not unicodedata.combining(ch))
     text = re.sub(r"[^a-z0-9]+", "-", text)
@@ -182,12 +193,17 @@ def main() -> None:
 
     chrome_path = discover_chrome_path(args.chrome_path)
     profiles = load_profiles(profiles_path)
+    if args.ids.strip():
+        requested_ids = {int(item.strip()) for item in args.ids.split(",") if item.strip()}
+        profiles = [profile for profile in profiles if profile["id"] in requested_ids]
     if args.limit > 0:
         profiles = profiles[: args.limit]
 
     if temp_dir.exists():
         shutil.rmtree(temp_dir)
     temp_dir.mkdir(parents=True, exist_ok=True)
+    if args.ids.strip() and photos_dir.exists():
+        shutil.copytree(photos_dir, temp_dir, dirs_exist_ok=True)
 
     user_data_dir = Path("tmp_chrome_ft_profile").resolve()
     if user_data_dir.exists():

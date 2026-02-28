@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Opdag profiler | Folkevalget</title>
+    <meta
+      name="description"
+      content="Filtrér og sortér folketingsmedlemmer efter parti, udvalg, fremmøde og loyalitet."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Source+Serif+4:wght@600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="page-discover">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-brand-row">
+          <a class="site-brand" href="./index.html">folkevalget.dk</a>
+          <nav class="site-nav" aria-label="Primær navigation">
+            <a href="./index.html">Forside</a>
+            <a aria-current="page" href="./discover.html">Opdag profiler</a>
+          </nav>
+        </div>
+        <div class="site-stats" data-site-stats aria-live="polite">
+          <span><strong data-stat="profiles">-</strong> profiler</span>
+          <span class="site-stats-dot" aria-hidden="true"></span>
+          <span><strong data-stat="votes">-</strong> afstemninger</span>
+          <span class="site-stats-dot" aria-hidden="true"></span>
+          <span>Opdateret: <strong data-stat="updated">-</strong></span>
+        </div>
+      </header>
+
+      <main class="discover-layout">
+        <section class="page-intro">
+          <p class="eyebrow">Opdag profiler</p>
+          <h1>Find medlemmerne først. Gå til detaljen bagefter.</h1>
+          <p>
+            Filtrér på parti og udvalg, sorter efter fremmøde eller loyalitet, og åbn en selvstændig
+            profilside for hver politiker.
+          </p>
+        </section>
+
+        <section class="toolbar-panel">
+          <div class="toolbar-grid">
+            <label class="field">
+              <span class="field-label">Søg</span>
+              <input id="search-input" type="search" placeholder="Navn, parti eller udvalg">
+            </label>
+            <label class="field">
+              <span class="field-label">Parti</span>
+              <select id="party-filter">
+                <option value="">Alle partier</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Udvalg</span>
+              <select id="committee-filter">
+                <option value="">Alle udvalg</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">Sortering</span>
+              <select id="sort-select">
+                <option value="name">Navn A-Å</option>
+                <option value="attendance_desc">Fremmøde: højest først</option>
+                <option value="attendance_asc">Fremmøde: lavest først</option>
+                <option value="loyalty_desc">Loyalitet: højest først</option>
+                <option value="loyalty_asc">Loyalitet: lavest først</option>
+              </select>
+            </label>
+            <div class="toolbar-summary" id="result-count">Indlæser profiler...</div>
+          </div>
+          <p class="toolbar-copy">
+            Klik på en profil for at åbne en dedikeret analyseside med udvalg, stemmer og nøglemål.
+          </p>
+        </section>
+
+        <section class="discover-grid" id="discover-grid" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <template id="discover-card-template">
+      <a class="member-card" href="#">
+        <div class="member-card-head">
+          <div class="member-avatar-wrap">
+            <span class="member-initials hidden" data-card="initials" aria-hidden="true"></span>
+            <img class="member-photo hidden" data-card="photo" alt="" loading="lazy" referrerpolicy="no-referrer">
+          </div>
+          <div class="member-headline">
+            <span class="party-pill party-pill-wide" data-card="party"></span>
+            <h2 data-card="name"></h2>
+            <p class="member-role" data-card="role"></p>
+          </div>
+        </div>
+
+        <div class="member-meta-row">
+          <span data-card="votes"></span>
+          <span data-card="committees"></span>
+        </div>
+
+        <div class="member-metrics">
+          <div class="mini-metric" data-card="attendance-meter">
+            <div class="mini-metric-head">
+              <span>Fremmøde</span>
+              <strong data-card="attendance-value"></strong>
+            </div>
+            <div class="mini-metric-track">
+              <span class="mini-metric-fill" data-card="attendance-bar"></span>
+            </div>
+          </div>
+          <div class="mini-metric" data-card="loyalty-meter">
+            <div class="mini-metric-head">
+              <span>Loyalitet</span>
+              <strong data-card="loyalty-value"></strong>
+            </div>
+            <div class="mini-metric-track">
+              <span class="mini-metric-fill" data-card="loyalty-bar"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="member-card-footer">
+          <span class="vote-chip for" data-card="for"></span>
+          <span class="vote-chip imod" data-card="against"></span>
+          <span class="member-card-link">Åbn profil</span>
+        </div>
+      </a>
+    </template>
+
+    <script src="catalog.js" defer></script>
+    <script src="shared.js" defer></script>
+    <script src="discover.js" defer></script>
+  </body>
+</html>
