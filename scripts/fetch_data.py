@@ -11,6 +11,7 @@ import json
 import re
 import sys
 import time
+import unicodedata
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
@@ -33,6 +34,39 @@ WIKIDATA_HEADERS = {
     "User-Agent": "folkevalget-data-fetcher/1.0 (https://folkevalget.dk)",
     "Accept": "application/json",
 }
+
+WIKIDATA_POSITIVE_DESC_KEYWORDS = (
+    "politician",
+    "parliamentarian",
+    "member of the folketing",
+    "member of parliament",
+    "politiker",
+    "folketingsmedlem",
+    "minister",
+    "borgmester",
+)
+WIKIDATA_POSITIVE_NATIONALITY_KEYWORDS = (
+    "danish",
+    "dansk",
+    "greenlandic",
+    "grønlandsk",
+    "faroese",
+    "færøsk",
+)
+WIKIDATA_NEGATIVE_DESC_KEYWORDS = (
+    "album",
+    "song",
+    "bay",
+    "film",
+    "tv series",
+    "footballer",
+    "handball",
+    "racewalker",
+    "cyclist",
+    "disambiguation",
+)
+WIKIDATA_SEARCH_CACHE: dict[tuple[str, str], list[dict[str, Any]]] = {}
+WIKIDATA_ENTITY_CACHE: dict[str, dict[str, Any]] = {}
 
 
 @dataclass
@@ -179,7 +213,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--photo-workers",
         type=int,
-        default=8,
+        default=2,
         help="Parallel workers for photo downloads.",
     )
     parser.add_argument(
@@ -238,6 +272,30 @@ def normalize_member_url(raw_url: str | None) -> str | None:
     return f"https://www.ft.dk/{raw_url.lstrip('/')}"
 
 
+def normalize_photo_url(raw_url: str | None) -> str | None:
+    if not raw_url:
+        return None
+    raw_url = raw_url.strip()
+    if not raw_url:
+        return None
+    if raw_url.lower().endswith(".zip"):
+        return None
+    if raw_url.startswith("http://") or raw_url.startswith("https://"):
+        return raw_url
+    if raw_url.startswith("/"):
+        return f"https://www.ft.dk{raw_url}"
+    return f"https://www.ft.dk/{raw_url.lstrip('/')}"
+
+
+def normalize_name_text(value: str | None) -> str:
+    if not value:
+        return ""
+    normalized = unicodedata.normalize("NFKD", value.lower())
+    normalized = "".join(ch for ch in normalized if not unicodedata.combining(ch))
+    normalized = re.sub(r"[^a-z0-9]+", " ", normalized)
+    return " ".join(normalized.split())
+
+
 def build_filter_for_ids(field: str, ids: list[int]) -> str:
     return " or ".join(f"{field} eq {item}" for item in ids)
 
@@ -284,7 +342,8 @@ def build_biography_fields(person: dict[str, Any]) -> dict[str, Any]:
     biography = person.get("biografi")
     return {
         "member_url": normalize_member_url(extract_tag(biography, "url")),
-        "photo_url": extract_tag(biography, "pictureMiRes") or extract_tag(biography, "pictureHiRes"),
+        "photo_url": normalize_photo_url(extract_tag(biography, "pictureMiRes"))
+        or normalize_photo_url(extract_tag(biography, "pictureHiRes")),
         "profession": extract_tag(biography, "profession"),
         "title": extract_tag(biography, "title"),
         "current_constituency": extract_tag(biography, "currentConstituency"),
@@ -897,66 +956,168 @@ def derive_profiles(
     return profiles, party_summaries, committee_summaries, summarized_votes, metadata
 
 
-def _wikidata_photo_url(name: str) -> str | None:
-    """Search Wikidata for a person by name and return their Wikimedia Commons image URL."""
+def _wikidata_search(name: str, language: str) -> list[dict[str, Any]]:
+    cache_key = (language, name)
+    if cache_key in WIKIDATA_SEARCH_CACHE:
+        return WIKIDATA_SEARCH_CACHE[cache_key]
+
     search_url = (
         "https://www.wikidata.org/w/api.php"
         "?action=wbsearchentities"
         f"&search={quote(name)}"
-        "&language=da&type=item&format=json&limit=3"
+        f"&language={quote(language)}"
+        "&type=item&format=json&limit=8"
     )
     try:
         req = Request(search_url, headers=WIKIDATA_HEADERS)
         with urlopen(req, timeout=15) as resp:
             data = json.load(resp)
     except Exception:
-        return None
+        WIKIDATA_SEARCH_CACHE[cache_key] = []
+        return []
 
     results = data.get("search", [])
-    if not results:
-        return None
+    WIKIDATA_SEARCH_CACHE[cache_key] = results
+    return results
 
-    # Prefer an exact label match; fall back to description-keyword match
-    name_lower = name.lower().strip()
-    best = None
-    for result in results:
-        if (result.get("label") or "").lower().strip() == name_lower:
-            best = result
-            break
-    if best is None:
-        for result in results:
-            desc = (result.get("description") or "").lower()
-            if any(kw in desc for kw in ("politik", "folket", "minister", "borgmester")):
-                best = result
-                break
-    if best is None:
-        return None
 
-    qid = best["id"]
+def _wikidata_candidate_name_score(query: str, candidate: str) -> int:
+    normalized_query = normalize_name_text(query)
+    normalized_candidate = normalize_name_text(candidate)
+    if not normalized_query or not normalized_candidate:
+        return 0
+    if normalized_query == normalized_candidate:
+        return 140
+
+    query_tokens = normalized_query.split()
+    candidate_tokens = normalized_candidate.split()
+    overlap = len(set(query_tokens) & set(candidate_tokens))
+    score = overlap * 16
+
+    if normalized_query in normalized_candidate:
+        score += 28
+    if normalized_candidate in normalized_query:
+        score += 10
+    if query_tokens and all(token in candidate_tokens for token in query_tokens):
+        score += 35
+
+    return score
+
+
+def _wikidata_candidate_score(name: str, result: dict[str, Any]) -> int:
+    score = _wikidata_candidate_name_score(name, result.get("label") or "")
+
+    for alias in result.get("aliases", []):
+        score = max(score, _wikidata_candidate_name_score(name, alias) + 18)
+
+    match = result.get("match") or {}
+    match_text = match.get("text") or ""
+    if match_text:
+        score = max(score, _wikidata_candidate_name_score(name, match_text) + 22)
+
+    description = (result.get("description") or "").lower()
+    if any(keyword in description for keyword in WIKIDATA_POSITIVE_DESC_KEYWORDS):
+        score += 24
+    if any(keyword in description for keyword in WIKIDATA_POSITIVE_NATIONALITY_KEYWORDS):
+        score += 8
+    if any(keyword in description for keyword in WIKIDATA_NEGATIVE_DESC_KEYWORDS):
+        score -= 18
+
+    if (match.get("type") or "") == "alias":
+        score += 8
+    return score
+
+
+def _wikidata_entity(qid: str) -> dict[str, Any]:
+    if qid in WIKIDATA_ENTITY_CACHE:
+        return WIKIDATA_ENTITY_CACHE[qid]
+
     entity_url = f"https://www.wikidata.org/wiki/Special:EntityData/{qid}.json"
     try:
         req = Request(entity_url, headers=WIKIDATA_HEADERS)
         with urlopen(req, timeout=15) as resp:
             entity_data = json.load(resp)
     except Exception:
-        return None
+        WIKIDATA_ENTITY_CACHE[qid] = {}
+        return {}
 
     entity = entity_data.get("entities", {}).get(qid, {})
-    p18 = entity.get("claims", {}).get("P18", [])
-    if not p18:
+    WIKIDATA_ENTITY_CACHE[qid] = entity
+    return entity
+
+
+def _wikidata_entity_has_political_signal(entity: dict[str, Any], fallback_description: str) -> bool:
+    description_values = [
+        value.get("value", "").lower()
+        for value in entity.get("descriptions", {}).values()
+        if isinstance(value, dict)
+    ]
+    descriptions = description_values + [fallback_description.lower()]
+    if any(
+        keyword in description
+        for description in descriptions
+        for keyword in WIKIDATA_POSITIVE_DESC_KEYWORDS
+    ):
+        return True
+
+    position_ids = {
+        claim.get("mainsnak", {}).get("datavalue", {}).get("value", {}).get("id")
+        for claim in entity.get("claims", {}).get("P39", [])
+    }
+    occupation_ids = {
+        claim.get("mainsnak", {}).get("datavalue", {}).get("value", {}).get("id")
+        for claim in entity.get("claims", {}).get("P106", [])
+    }
+    return bool({"Q12311817", "Q82955"} & (position_ids | occupation_ids))
+
+
+def _wikidata_photo_url(name: str) -> str | None:
+    """Search Wikidata for a person by name and return their Wikimedia Commons image URL."""
+    candidates: dict[str, dict[str, Any]] = {}
+    for language in ("da", "en"):
+        for result in _wikidata_search(name, language):
+            qid = result.get("id")
+            if not qid:
+                continue
+            score = _wikidata_candidate_score(name, result)
+            previous = candidates.get(qid)
+            if previous is None or score > previous["score"]:
+                candidates[qid] = {"result": result, "score": score}
+
+    ranked_candidates = sorted(
+        candidates.values(),
+        key=lambda item: item["score"],
+        reverse=True,
+    )
+    if not ranked_candidates:
         return None
 
-    image_value = p18[0].get("mainsnak", {}).get("datavalue", {}).get("value")
-    if not image_value:
-        return None
+    for candidate in ranked_candidates[:4]:
+        if candidate["score"] < 42:
+            continue
+        result = candidate["result"]
+        entity = _wikidata_entity(result["id"])
+        if not entity:
+            continue
+        if not _wikidata_entity_has_political_signal(entity, result.get("description") or ""):
+            continue
 
-    fname = image_value.replace(" ", "_")
-    # Skip non-web-renderable formats
-    if fname.lower().endswith((".svg", ".tif", ".tiff", ".pdf")):
-        return None
+        p18 = entity.get("claims", {}).get("P18", [])
+        if not p18:
+            continue
 
-    md5 = hashlib.md5(fname.encode("utf-8")).hexdigest()
-    return f"https://upload.wikimedia.org/wikipedia/commons/{md5[0]}/{md5[:2]}/{quote(fname)}"
+        image_value = p18[0].get("mainsnak", {}).get("datavalue", {}).get("value")
+        if not image_value:
+            continue
+
+        fname = image_value.replace(" ", "_")
+        if fname.lower().endswith((".svg", ".tif", ".tiff", ".pdf")):
+            continue
+
+        md5 = hashlib.md5(fname.encode("utf-8")).hexdigest()
+        return f"https://upload.wikimedia.org/wikipedia/commons/{md5[0]}/{md5[:2]}/{quote(fname)}"
+
+    return None
 
 
 def _download_one_photo(
