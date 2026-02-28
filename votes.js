@@ -1,3 +1,5 @@
+const CLOSE_VOTE_THRESHOLD_PCT = 10;
+
 const VotesApp = (() => {
   const state = {
     profiles: [],
@@ -7,10 +9,16 @@ const VotesApp = (() => {
     selectedVoteId: null,
     query: "",
     partyFilter: "",
+    sortMode: "date_desc",
+    closeOnly: false,
+    splitOnly: false,
   };
 
   const statsRoot = document.querySelector("[data-site-stats]");
   const voteSearch = document.querySelector("#vote-search");
+  const voteSortSelect = document.querySelector("#vote-sort-select");
+  const voteCloseOnly = document.querySelector("#vote-close-only");
+  const voteSplitOnly = document.querySelector("#vote-split-only");
   const voteList = document.querySelector("#vote-list");
   const voteListTemplate = document.querySelector("#vote-list-item-template");
   const voterRowTemplate = document.querySelector("#voter-row-template");
@@ -43,6 +51,9 @@ const VotesApp = (() => {
     const params = new URLSearchParams(window.location.search);
     state.query = params.get("q") || "";
     state.partyFilter = params.get("party") || "";
+    state.sortMode = params.get("sort") || "date_desc";
+    state.closeOnly = params.get("close") === "1";
+    state.splitOnly = params.get("split") === "1";
 
     const rawVoteId = Number(params.get("id"));
     state.selectedVoteId = Number.isFinite(rawVoteId) && rawVoteId > 0 ? rawVoteId : null;
@@ -50,11 +61,29 @@ const VotesApp = (() => {
 
   function syncControls() {
     voteSearch.value = state.query;
+    voteSortSelect.value = state.sortMode;
+    voteCloseOnly.checked = state.closeOnly;
+    voteSplitOnly.checked = state.splitOnly;
   }
 
   function bindEvents() {
     voteSearch.addEventListener("input", (event) => {
       state.query = event.target.value;
+      applyVoteFilter();
+    });
+
+    voteSortSelect.addEventListener("change", (event) => {
+      state.sortMode = event.target.value;
+      applyVoteFilter();
+    });
+
+    voteCloseOnly.addEventListener("change", (event) => {
+      state.closeOnly = event.target.checked;
+      applyVoteFilter();
+    });
+
+    voteSplitOnly.addEventListener("change", (event) => {
+      state.splitOnly = event.target.checked;
       applyVoteFilter();
     });
 
@@ -79,26 +108,35 @@ const VotesApp = (() => {
   function applyVoteFilter() {
     const query = window.Folkevalget.normaliseText(state.query);
 
-    state.filteredVotes = state.votes.filter((vote) => {
-      if (!query) {
-        return true;
-      }
+    state.filteredVotes = state.votes
+      .filter((vote) => {
+        if (state.closeOnly && !isCloseVote(vote)) {
+          return false;
+        }
+        if (state.splitOnly && !hasPartySplit(vote)) {
+          return false;
+        }
 
-      const searchable = window.Folkevalget.normaliseText(
-        [
-          vote.sag_number,
-          vote.sag_short_title,
-          vote.sag_title,
-          vote.type,
-          vote.konklusion,
-          vote.date,
-        ]
-          .filter(Boolean)
-          .join(" ")
-      );
+        if (!query) {
+          return true;
+        }
 
-      return searchable.includes(query);
-    });
+        const searchable = window.Folkevalget.normaliseText(
+          [
+            vote.sag_number,
+            vote.sag_short_title,
+            vote.sag_title,
+            vote.type,
+            vote.konklusion,
+            vote.date,
+          ]
+            .filter(Boolean)
+            .join(" ")
+        );
+
+        return searchable.includes(query);
+      })
+      .sort(compareVotes);
 
     if (!state.filteredVotes.some((vote) => vote.afstemning_id === state.selectedVoteId)) {
       state.selectedVoteId = state.filteredVotes[0]?.afstemning_id ?? null;
@@ -108,6 +146,38 @@ const VotesApp = (() => {
     renderVoteList();
     renderSelectedVote();
     syncQueryString();
+  }
+
+  function compareVotes(left, right) {
+    if (state.sortMode === "close_first") {
+      const delta = voteMarginSharePct(left) - voteMarginSharePct(right);
+      if (delta !== 0) {
+        return delta;
+      }
+      return compareVotesByDate(left, right);
+    }
+
+    if (state.sortMode === "split_first") {
+      const splitDelta = (right.party_split_count || 0) - (left.party_split_count || 0);
+      if (splitDelta !== 0) {
+        return splitDelta;
+      }
+      const marginDelta = voteMarginSharePct(left) - voteMarginSharePct(right);
+      if (marginDelta !== 0) {
+        return marginDelta;
+      }
+      return compareVotesByDate(left, right);
+    }
+
+    return compareVotesByDate(left, right);
+  }
+
+  function compareVotesByDate(left, right) {
+    const dateDelta = String(right.date || "").localeCompare(String(left.date || ""));
+    if (dateDelta !== 0) {
+      return dateDelta;
+    }
+    return Number(right.afstemning_id || 0) - Number(left.afstemning_id || 0);
   }
 
   function syncQueryString() {
@@ -120,6 +190,15 @@ const VotesApp = (() => {
     }
     if (state.partyFilter) {
       params.set("party", state.partyFilter);
+    }
+    if (state.sortMode !== "date_desc") {
+      params.set("sort", state.sortMode);
+    }
+    if (state.closeOnly) {
+      params.set("close", "1");
+    }
+    if (state.splitOnly) {
+      params.set("split", "1");
     }
     const next = params.toString() ? `?${params.toString()}` : window.location.pathname;
     window.history.replaceState({}, "", next);
@@ -145,6 +224,7 @@ const VotesApp = (() => {
         `${window.Folkevalget.formatNumber(vote.counts?.for)} for`;
       item.querySelector("[data-cell='against-count']").textContent =
         `${window.Folkevalget.formatNumber(vote.counts?.imod)} imod`;
+      renderVoteSignals(item.querySelector("[data-cell='signals']"), vote);
       fragment.append(item);
     }
 
@@ -166,6 +246,7 @@ const VotesApp = (() => {
     document.title = `${selectedVote.sag_number || "Afstemning"} | Folkevalget`;
     renderVoteHeader(selectedVote);
     renderVoteMetrics(selectedVote);
+    renderVoteSignalsSummary(selectedVote);
     renderVoteContext(selectedVote);
     renderPartyFilter(selectedVote);
     renderVoteLists(selectedVote);
@@ -208,9 +289,40 @@ const VotesApp = (() => {
     metric.querySelector("[data-value]").textContent = window.Folkevalget.formatNumber(value);
   }
 
+  function renderVoteSignalsSummary(vote) {
+    const marginValue = document.querySelector("#vote-margin-value");
+    const marginNote = document.querySelector("#vote-margin-note");
+    const splitValue = document.querySelector("#vote-split-value");
+    const splitNote = document.querySelector("#vote-split-note");
+
+    const marginVotes = Number(vote.margin || 0);
+    const marginShare = voteMarginSharePct(vote);
+    if (voteDecisionTotal(vote) > 0) {
+      marginValue.textContent = `${window.Folkevalget.formatNumber(marginVotes)} stemmer`;
+      marginNote.textContent = isCloseVote(vote)
+        ? `Tæt afstemning med ${formatShare(marginShare)} mellem ja og nej.`
+        : `${formatShare(marginShare)} mellem ja og nej.`;
+    } else {
+      marginValue.textContent = "Ingen ja/nej-data";
+      marginNote.textContent = "Afstemningen har ingen registrerede ja/nej-stemmer i datasættet.";
+    }
+
+    const splitCount = Number(vote.party_split_count || 0);
+    splitValue.textContent = `${window.Folkevalget.formatNumber(splitCount)} partier`;
+    splitNote.textContent =
+      splitCount > 0
+        ? `${window.Folkevalget.formatNumber(splitCount)} parti${splitCount === 1 ? "" : "er"} havde intern uenighed.`
+        : "Ingen registrerede partisplits i denne afstemning.";
+  }
+
   function renderVoteContext(vote) {
     const notes = ["Partifilteret bruger partierne paa afstemningstidspunktet."];
-
+    if (isCloseVote(vote)) {
+      notes.push("Afstemningen er markeret som taet, fordi ja/nej-marginen er hoejst 10 procentpoint.");
+    }
+    if (hasPartySplit(vote)) {
+      notes.push("Partisplit betyder, at mindst ét parti ikke stemte samlet i ja/nej-afstemningen.");
+    }
     if (vote.konklusion) {
       notes.push(vote.konklusion.trim());
     }
@@ -296,6 +408,24 @@ const VotesApp = (() => {
     }
   }
 
+  function renderVoteSignals(root, vote) {
+    root.innerHTML = "";
+    if (isCloseVote(vote)) {
+      root.append(buildSignalBadge("Tæt", "close"));
+    }
+    if (hasPartySplit(vote)) {
+      const count = Number(vote.party_split_count || 0);
+      root.append(buildSignalBadge(`${window.Folkevalget.formatNumber(count)} partisplit${count === 1 ? "" : "s"}`, "split"));
+    }
+  }
+
+  function buildSignalBadge(label, tone) {
+    const badge = document.createElement("span");
+    badge.className = `vote-flag vote-flag-${tone}`;
+    badge.textContent = label;
+    return badge;
+  }
+
   function participantIdsFor(vote, groupKey) {
     if (state.partyFilter) {
       return vote.vote_groups_by_party?.[state.partyFilter]?.[groupKey] || [];
@@ -354,6 +484,26 @@ const VotesApp = (() => {
     root.append(fragment);
   }
 
+  function voteDecisionTotal(vote) {
+    return Number(vote.counts?.for || 0) + Number(vote.counts?.imod || 0);
+  }
+
+  function voteMarginSharePct(vote) {
+    const total = voteDecisionTotal(vote);
+    if (total === 0) {
+      return Number.POSITIVE_INFINITY;
+    }
+    return (Math.abs(Number(vote.counts?.for || 0) - Number(vote.counts?.imod || 0)) / total) * 100;
+  }
+
+  function isCloseVote(vote) {
+    return voteDecisionTotal(vote) > 0 && voteMarginSharePct(vote) <= CLOSE_VOTE_THRESHOLD_PCT;
+  }
+
+  function hasPartySplit(vote) {
+    return Number(vote.party_split_count || 0) > 0;
+  }
+
   function formatPartyLabel(partyKey) {
     if (!partyKey) {
       return "Uden parti";
@@ -389,6 +539,9 @@ const VotesApp = (() => {
   }
 
   function formatShare(value) {
+    if (!Number.isFinite(value)) {
+      return "-";
+    }
     return `${value.toFixed(1).replace(".", ",")} %`;
   }
 

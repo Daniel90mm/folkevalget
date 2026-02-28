@@ -1165,6 +1165,32 @@ p {
   gap: 0.8rem;
 }
 
+.votes-browser-controls {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.votes-filter-toggles {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.toggle-check {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--muted-strong);
+  font-size: 0.9rem;
+}
+
+.toggle-check input {
+  margin: 0;
+}
+
 .vote-browser-list {
   display: grid;
   gap: 0.7rem;
@@ -1217,7 +1243,7 @@ p {
 .vote-list-item-footer {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
 }
@@ -1235,6 +1261,13 @@ p {
 .vote-list-item h3 {
   font-size: 1rem;
   line-height: 1.5;
+}
+
+.vote-list-counts,
+.vote-list-signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
 .vote-detail-content {
@@ -1268,6 +1301,38 @@ p {
 
 .votes-metric-strip {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.vote-signal-strip {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.vote-signal-card {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--panel-strong);
+}
+
+.vote-signal-card span {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vote-signal-card strong {
+  font-size: 1.1rem;
+}
+
+.vote-signal-card p {
+  color: var(--muted-strong);
+  line-height: 1.45;
 }
 
 .vote-distribution {
@@ -1470,6 +1535,33 @@ p {
   letter-spacing: 0.06em;
 }
 
+.vote-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.7rem;
+  padding: 0.22rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.vote-flag-close {
+  border-color: rgba(170, 122, 16, 0.2);
+  background: rgba(170, 122, 16, 0.1);
+  color: var(--warn);
+}
+
+.vote-flag-split {
+  border-color: rgba(27, 77, 110, 0.18);
+  background: rgba(27, 77, 110, 0.08);
+  color: var(--accent);
+}
+
 @media (max-width: 1160px) {
   .hero-panel,
   .profile-section-grid {
@@ -1501,6 +1593,7 @@ p {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .vote-signal-strip,
   .vote-distribution-legend {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1565,6 +1658,7 @@ p {
     align-items: stretch;
   }
 
+  .vote-signal-strip,
   .vote-distribution-legend {
     grid-template-columns: 1fr;
   }

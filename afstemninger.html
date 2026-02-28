@@ -62,6 +62,27 @@
               <input id="vote-search" type="search" placeholder="Sag, titel eller nummer" autofocus>
             </label>
 
+            <div class="votes-browser-controls">
+              <label class="field">
+                <span class="field-label">Sortering</span>
+                <select id="vote-sort-select">
+                  <option value="date_desc">Nyeste først</option>
+                  <option value="close_first">Tætteste først</option>
+                  <option value="split_first">Flest partisplits</option>
+                </select>
+              </label>
+              <div class="votes-filter-toggles">
+                <label class="toggle-check">
+                  <input id="vote-close-only" type="checkbox">
+                  <span>Kun tætte afstemninger</span>
+                </label>
+                <label class="toggle-check">
+                  <input id="vote-split-only" type="checkbox">
+                  <span>Kun partisplits</span>
+                </label>
+              </div>
+            </div>
+
             <div class="vote-browser-list" id="vote-list" aria-live="polite"></div>
           </aside>
 
@@ -98,6 +119,19 @@
                 <article class="metric-card" data-vote-metric="neither" data-tone="neutral">
                   <span>Hverken</span>
                   <strong data-value>-</strong>
+                </article>
+              </section>
+
+              <section class="vote-signal-strip">
+                <article class="vote-signal-card">
+                  <span>Ja/nej-margin</span>
+                  <strong id="vote-margin-value">-</strong>
+                  <p id="vote-margin-note">-</p>
+                </article>
+                <article class="vote-signal-card">
+                  <span>Partisplits</span>
+                  <strong id="vote-split-value">-</strong>
+                  <p id="vote-split-note">-</p>
                 </article>
               </section>
 
@@ -185,8 +219,11 @@
         </div>
         <h3 data-cell="title"></h3>
         <div class="vote-list-item-footer">
-          <span class="vote-chip for" data-cell="for-count"></span>
-          <span class="vote-chip imod" data-cell="against-count"></span>
+          <div class="vote-list-counts">
+            <span class="vote-chip for" data-cell="for-count"></span>
+            <span class="vote-chip imod" data-cell="against-count"></span>
+          </div>
+          <div class="vote-list-signals" data-cell="signals"></div>
         </div>
       </button>
     </template>
