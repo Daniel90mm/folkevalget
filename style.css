@@ -448,6 +448,35 @@ h3 {
   border: 1.5px solid var(--line);
 }
 
+.card-initials,
+.detail-initials {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.card-initials {
+  width: 32px;
+  height: 32px;
+  font-size: 0.68rem;
+  border: 1.5px solid var(--line);
+}
+
+.detail-initials {
+  width: 72px;
+  height: 72px;
+  font-size: 1.15rem;
+  border: 2px solid var(--line-strong);
+}
+
 .detail-heading-row {
   display: flex;
   align-items: center;
