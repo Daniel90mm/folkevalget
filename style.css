@@ -492,6 +492,37 @@ p {
   justify-items: start;
 }
 
+.page-parties .party-overview .party-pill {
+  --party-tone: rgba(27, 77, 110, 0.28);
+  min-height: 2.2rem;
+  padding: 0.4rem 0.9rem 0.4rem 1rem;
+  border: 1px solid rgba(22, 22, 22, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: inset 4px 0 0 var(--party-tone);
+  color: var(--ink);
+  letter-spacing: 0;
+}
+
+.page-parties .party-overview .party-pill[data-party="S"]   { --party-tone: rgba(181, 20, 40, 0.42); }
+.page-parties .party-overview .party-pill[data-party="V"]   { --party-tone: rgba(0, 93, 166, 0.42); }
+.page-parties .party-overview .party-pill[data-party="M"]   { --party-tone: rgba(111, 84, 147, 0.42); }
+.page-parties .party-overview .party-pill[data-party="SF"]  { --party-tone: rgba(182, 0, 99, 0.4); }
+.page-parties .party-overview .party-pill[data-party="EL"]  { --party-tone: rgba(174, 95, 13, 0.4); }
+.page-parties .party-overview .party-pill[data-party="KF"]  { --party-tone: rgba(0, 88, 60, 0.4); }
+.page-parties .party-overview .party-pill[data-party="LA"]  { --party-tone: rgba(0, 134, 171, 0.4); }
+.page-parties .party-overview .party-pill[data-party="RV"]  { --party-tone: rgba(115, 50, 128, 0.4); }
+.page-parties .party-overview .party-pill[data-party="ALT"] { --party-tone: rgba(33, 138, 77, 0.4); }
+.page-parties .party-overview .party-pill[data-party="DD"]  { --party-tone: rgba(0, 68, 80, 0.4); }
+.page-parties .party-overview .party-pill[data-party="DF"]  { --party-tone: rgba(0, 59, 111, 0.4); }
+.page-parties .party-overview .party-pill[data-party="IA"]  { --party-tone: rgba(38, 106, 145, 0.4); }
+.page-parties .party-overview .party-pill[data-party="JF"]  { --party-tone: rgba(109, 49, 73, 0.4); }
+.page-parties .party-overview .party-pill[data-party="N"]   { --party-tone: rgba(145, 90, 15, 0.4); }
+.page-parties .party-overview .party-pill[data-party="SP"]  { --party-tone: rgba(111, 90, 22, 0.4); }
+.page-parties .party-overview .party-pill[data-party="SIU"] { --party-tone: rgba(124, 59, 59, 0.4); }
+.page-parties .party-overview .party-pill[data-party="BP"]  { --party-tone: rgba(79, 95, 117, 0.4); }
+.page-parties .party-overview .party-pill[data-party="UFG"] { --party-tone: rgba(112, 123, 117, 0.4); }
+
 .party-overview-meta {
   display: flex;
   flex-wrap: wrap;
