@@ -4,6 +4,7 @@ const DiscoverApp = (() => {
     filteredProfiles: [],
     stats: null,
     query: "",
+    constituencyFilter: "",
     partyFilter: "",
     committeeFilter: "",
     sortMode: "attendance_asc",
@@ -11,6 +12,7 @@ const DiscoverApp = (() => {
 
   const statsRoot = document.querySelector("[data-site-stats]");
   const searchInput = document.querySelector("#search-input");
+  const constituencyFilter = document.querySelector("#constituency-filter");
   const partyFilter = document.querySelector("#party-filter");
   const committeeFilter = document.querySelector("#committee-filter");
   const sortSelect = document.querySelector("#sort-select");
@@ -24,6 +26,7 @@ const DiscoverApp = (() => {
     state.profiles = profiles;
     state.stats = stats;
 
+    populateConstituencyFilter(profiles);
     populatePartyFilter(profiles);
     populateCommitteeFilter(profiles);
     syncControls();
@@ -35,6 +38,7 @@ const DiscoverApp = (() => {
   function hydrateStateFromQuery() {
     const params = new URLSearchParams(window.location.search);
     state.query = params.get("q") || "";
+    state.constituencyFilter = params.get("storkreds") || "";
     state.partyFilter = params.get("party") || "";
     state.committeeFilter = params.get("committee") || "";
     state.sortMode = params.get("sort") || "attendance_asc";
@@ -42,6 +46,7 @@ const DiscoverApp = (() => {
 
   function syncControls() {
     searchInput.value = state.query;
+    constituencyFilter.value = state.constituencyFilter;
     partyFilter.value = state.partyFilter;
     committeeFilter.value = state.committeeFilter;
     sortSelect.value = state.sortMode;
@@ -50,6 +55,11 @@ const DiscoverApp = (() => {
   function bindEvents() {
     searchInput.addEventListener("input", (event) => {
       state.query = event.target.value;
+      applyFilters();
+    });
+
+    constituencyFilter.addEventListener("change", (event) => {
+      state.constituencyFilter = event.target.value;
       applyFilters();
     });
 
@@ -67,6 +77,23 @@ const DiscoverApp = (() => {
       state.sortMode = event.target.value;
       applyFilters();
     });
+  }
+
+  function populateConstituencyFilter(profiles) {
+    const options = new Map();
+    for (const profile of profiles) {
+      if (!profile.storkreds || options.has(profile.storkreds)) {
+        continue;
+      }
+      options.set(profile.storkreds, profile.storkreds);
+    }
+
+    for (const [value, label] of [...options.entries()].sort((left, right) => left[1].localeCompare(right[1], "da"))) {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = label;
+      constituencyFilter.append(option);
+    }
   }
 
   function populatePartyFilter(profiles) {
@@ -124,12 +151,14 @@ const DiscoverApp = (() => {
 
       const partyValue = profile.party_short || profile.party || "";
       const matchesQuery = !rawQuery || searchable.includes(query) || rawSearchable.includes(rawQuery);
+      const matchesConstituency =
+        !state.constituencyFilter || (profile.storkreds || "") === state.constituencyFilter;
       const matchesParty = !state.partyFilter || partyValue === state.partyFilter;
       const matchesCommittee =
         !state.committeeFilter ||
         (profile.committees || []).some((committee) => committee.short_name === state.committeeFilter);
 
-      return matchesQuery && matchesParty && matchesCommittee;
+      return matchesQuery && matchesConstituency && matchesParty && matchesCommittee;
     });
 
     state.filteredProfiles.sort((left, right) => window.Folkevalget.compareProfiles(left, right, state.sortMode));
@@ -142,6 +171,9 @@ const DiscoverApp = (() => {
     const params = new URLSearchParams();
     if (state.query.trim()) {
       params.set("q", state.query.trim());
+    }
+    if (state.constituencyFilter) {
+      params.set("storkreds", state.constituencyFilter);
     }
     if (state.partyFilter) {
       params.set("party", state.partyFilter);
@@ -178,6 +210,7 @@ const DiscoverApp = (() => {
       card.querySelector("[data-card='name']").textContent = profile.name;
       card.querySelector("[data-card='role']").textContent = profile.role || "Folketingsmedlem";
       renderContextTags(card.querySelector("[data-card='tags']"), profile);
+      card.querySelector("[data-card='constituency']").textContent = profile.storkreds || "Storkreds ikke angivet";
       card.querySelector("[data-card='votes']").textContent =
         `${window.Folkevalget.formatNumber(profile.votes_total)} registrerede stemmer`;
       card.querySelector("[data-card='committees']").textContent =

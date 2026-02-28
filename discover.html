@@ -52,6 +52,12 @@
               <input id="search-input" type="search" placeholder="Navn, parti eller udvalg">
             </label>
             <label class="field">
+              <span class="field-label">Storkreds</span>
+              <select id="constituency-filter">
+                <option value="">Alle storkredse</option>
+              </select>
+            </label>
+            <label class="field">
               <span class="field-label">Parti</span>
               <select id="party-filter">
                 <option value="">Alle partier</option>
@@ -104,6 +110,7 @@
         </div>
 
         <div class="member-meta-row">
+          <span data-card="constituency"></span>
           <span data-card="votes"></span>
           <span data-card="committees"></span>
         </div>
