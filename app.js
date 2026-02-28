@@ -4,6 +4,7 @@ const state = {
   filteredProfiles: [],
   selectedId: null,
   partyFilter: "",
+  committeeFilter: "",
   query: "",
   sortMode: "name",
   stats: null,
@@ -14,6 +15,7 @@ const bootstrapPayload = readBootstrapPayload();
 
 const profileGrid = document.querySelector("#profile-grid");
 const partyFilter = document.querySelector("#party-filter");
+const committeeFilter = document.querySelector("#committee-filter");
 const sortSelect = document.querySelector("#sort-select");
 const searchInput = document.querySelector("#search-input");
 const resultCount = document.querySelector("#result-count");
@@ -90,6 +92,7 @@ async function boot() {
   state.votesById = new Map(votes.map((vote) => [vote.afstemning_id, vote]));
 
   populatePartyFilter(profiles);
+  populateCommitteeFilter(profiles);
   renderHeroStats(stats);
   bindEvents();
   applyFilters();
@@ -103,6 +106,11 @@ function bindEvents() {
 
   partyFilter.addEventListener("change", (event) => {
     state.partyFilter = event.target.value;
+    applyFilters();
+  });
+
+  committeeFilter.addEventListener("change", (event) => {
+    state.committeeFilter = event.target.value;
     applyFilters();
   });
 
@@ -134,6 +142,26 @@ function populatePartyFilter(profiles) {
   }
 }
 
+function populateCommitteeFilter(profiles) {
+  const seen = new Map();
+  for (const profile of profiles) {
+    for (const committee of profile.committees || []) {
+      if (!seen.has(committee.short_name)) {
+        seen.set(committee.short_name, committee.name || committee.short_name);
+      }
+    }
+  }
+
+  const sorted = Array.from(seen.entries()).sort((a, b) => a[1].localeCompare(b[1], "da"));
+
+  for (const [value, name] of sorted) {
+    const option = document.createElement("option");
+    option.value = value;
+    option.textContent = `${value} – ${name}`;
+    committeeFilter.append(option);
+  }
+}
+
 function renderHeroStats(stats) {
   heroStats.profiles.textContent = formatNumber(stats.counts.profiles);
   heroStats.votes.textContent = formatNumber(stats.counts.votes);
@@ -150,7 +178,10 @@ function applyFilters() {
 
     const matchesParty = !state.partyFilter || partyValue === state.partyFilter;
     const matchesQuery = !state.query || searchable.includes(state.query);
-    return matchesParty && matchesQuery;
+    const matchesCommittee =
+      !state.committeeFilter ||
+      (profile.committees || []).some((c) => c.short_name === state.committeeFilter);
+    return matchesParty && matchesQuery && matchesCommittee;
   });
 
   state.filteredProfiles.sort(compareProfiles);
