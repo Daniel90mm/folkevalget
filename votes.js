@@ -532,7 +532,7 @@ const VotesApp = (() => {
     const labels = {
       for: "For",
       imod: "Imod",
-      fravaer: "Fravaer",
+      fravaer: "Fravær",
       hverken: "Blank",
     };
     return labels[key] || key;

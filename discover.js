@@ -211,9 +211,9 @@ const DiscoverApp = (() => {
       card.querySelector("[data-card='name']").textContent = profile.name;
       card.querySelector("[data-card='role']").textContent = profile.role || "Folketingsmedlem";
       renderContextTags(card.querySelector("[data-card='tags']"), profile);
-      card.querySelector("[data-card='constituency']").textContent = profile.storkreds || "Storkreds ikke angivet";
+      card.querySelector("[data-card='constituency']").textContent = profile.storkreds || "–";
       card.querySelector("[data-card='votes']").textContent =
-        profile.seniority_label || "Anciennitet ikke angivet";
+        profile.seniority_label || "–";
       card.querySelector("[data-card='committees']").textContent =
         `${window.Folkevalget.formatNumber((profile.committees || []).length)} udvalg`;
       card.querySelector("[data-card='attendance-value']").textContent = window.Folkevalget.formatPercent(profile.attendance_pct);
