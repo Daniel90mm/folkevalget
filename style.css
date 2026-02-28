@@ -995,6 +995,46 @@ p {
   font-weight: 700;
 }
 
+.fact-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.fact-row {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 0.85rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.fact-row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.fact-row dt {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fact-row dd {
+  margin: 0;
+  color: var(--muted-strong);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.fact-row a,
+.timeline-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .photo-credit {
   color: var(--muted-strong);
   font-size: 0.84rem;
@@ -1040,6 +1080,79 @@ p {
 
 .panel-heading h2 {
   font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+}
+
+.detail-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.detail-block {
+  display: grid;
+  gap: 0.6rem;
+  align-content: start;
+}
+
+.detail-block h3 {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.detail-list,
+.timeline-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detail-list {
+  max-height: 21rem;
+  overflow-y: auto;
+  padding-right: 0.2rem;
+}
+
+.detail-list li,
+.timeline-item {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel-strong);
+}
+
+.detail-list li {
+  padding: 0.75rem 0.8rem;
+  color: var(--muted-strong);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 0.9rem;
+  padding: 0.85rem 0.95rem;
+}
+
+.timeline-meta {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.timeline-body {
+  display: grid;
+  gap: 0.22rem;
+}
+
+.timeline-body strong {
+  font-size: 0.96rem;
+  line-height: 1.5;
 }
 
 .definition-grid {
@@ -1630,6 +1743,10 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .detail-columns {
+    grid-template-columns: 1fr;
+  }
+
   .discover-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1713,6 +1830,11 @@ p {
   .member-avatar-wrap,
   .profile-avatar-wrap {
     justify-content: flex-start;
+  }
+
+  .fact-row,
+  .timeline-item {
+    grid-template-columns: 1fr;
   }
 
   .votes-toolbar {
