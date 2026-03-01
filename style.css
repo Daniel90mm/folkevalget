@@ -166,12 +166,17 @@ img {
 .site-nav {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
   gap: var(--space-lg);
   min-width: 0;
 }
 
 .site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
   padding-bottom: 0.2rem;
+  line-height: 1;
   color: var(--color-text-secondary);
   border-bottom: 2px solid transparent;
   transition: color var(--transition-fast), border-color var(--transition-fast);
