@@ -77,7 +77,9 @@ const ProfileApp = (() => {
     renderPhotoCredit(profile);
 
     renderMetric("attendance", window.Folkevalget.formatPercent(profile.attendance_pct));
-    renderMetric("votes", window.Folkevalget.formatNumber(profile.votes_total));
+    renderMetric("for", window.Folkevalget.formatNumber(profile.votes_for));
+    renderMetric("against", window.Folkevalget.formatNumber(profile.votes_against));
+    renderMetric("absent", window.Folkevalget.formatNumber(profile.votes_absent));
 
     renderOverview(profile);
     renderBackground(profile);
