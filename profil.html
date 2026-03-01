@@ -84,6 +84,24 @@
                   <p class="photo-credit hidden" id="profile-photo-credit"></p>
                   <p class="profile-summary" id="profile-summary">-</p>
                   <p class="profile-summary" id="profile-vote-total">-</p>
+                  <section class="profile-stat-rail" aria-label="Profilens nøgletal">
+                    <article class="key-stat" data-metric="attendance">
+                      <span class="key-stat__label">Fremmøde <span class="tooltip-wrap"><span class="tooltip-trigger" tabindex="0" aria-label="Hvad er fremmøde?">ⓘ</span><span class="tooltip-body" role="tooltip">Andelen af registrerede afstemninger, hvor medlemmet afgav en stemme i stedet for at være fraværende.</span></span></span>
+                      <strong class="key-stat__value" data-value>-</strong>
+                    </article>
+                    <article class="key-stat" data-metric="for">
+                      <span class="key-stat__label">Stemmer for</span>
+                      <strong class="key-stat__value" data-value>-</strong>
+                    </article>
+                    <article class="key-stat" data-metric="against">
+                      <span class="key-stat__label">Stemmer imod</span>
+                      <strong class="key-stat__value" data-value>-</strong>
+                    </article>
+                    <article class="key-stat" data-metric="absent">
+                      <span class="key-stat__label">Fravær</span>
+                      <strong class="key-stat__value" data-value>-</strong>
+                    </article>
+                  </section>
                 </div>
               </div>
             </div>
@@ -91,25 +109,6 @@
               <a class="button-link button-link-secondary" href="./discover.html">Tilbage til oversigten</a>
               <a class="button-link button-link-secondary hidden" href="#" id="profile-source" target="_blank" rel="noreferrer">Åbn officiel profil</a>
             </div>
-          </section>
-
-          <section class="metric-strip">
-            <article class="metric-card" data-metric="attendance">
-              <span>Fremmøde <span class="tooltip-wrap"><span class="tooltip-trigger" tabindex="0" aria-label="Hvad er fremmøde?">ⓘ</span><span class="tooltip-body" role="tooltip">Andelen af registrerede afstemninger, hvor medlemmet afgav en stemme i stedet for at være fraværende.</span></span></span>
-              <strong data-value>-</strong>
-            </article>
-            <article class="metric-card" data-metric="for">
-              <span>Stemmer for</span>
-              <strong data-value>-</strong>
-            </article>
-            <article class="metric-card" data-metric="against">
-              <span>Stemmer imod</span>
-              <strong data-value>-</strong>
-            </article>
-            <article class="metric-card" data-metric="absent">
-              <span>Fravær</span>
-              <strong data-value>-</strong>
-            </article>
           </section>
 
           <section class="context-note hidden" id="profile-context-note"></section>
@@ -148,14 +147,12 @@
             <ol class="timeline-list" id="profile-history-list"></ol>
           </section>
 
-          <section class="profile-section-grid">
-            <article class="panel hidden" id="profile-committee-panel">
-              <div class="panel-heading">
-                <p class="eyebrow">Udvalg</p>
-                <h2>Aktive udvalg og delegationer</h2>
-              </div>
-              <div class="committee-tags" id="committee-grid"></div>
-            </article>
+          <section class="panel hidden" id="profile-committee-panel">
+            <div class="panel-heading">
+              <p class="eyebrow">Udvalg</p>
+              <h2>Aktive udvalg og delegationer</h2>
+            </div>
+            <ul class="committee-list" id="committee-grid"></ul>
           </section>
 
           <section class="panel">

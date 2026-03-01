@@ -17,6 +17,7 @@ const ProfileApp = (() => {
   const historyPanel = document.querySelector("#profile-history-panel");
   const historyList = document.querySelector("#profile-history-list");
   const committeePanel = document.querySelector("#profile-committee-panel");
+  const sectionGrids = Array.from(document.querySelectorAll(".profile-section-grid"));
 
   async function boot() {
     const profileId = Number(new URLSearchParams(window.location.search).get("id"));
@@ -86,6 +87,7 @@ const ProfileApp = (() => {
     renderHistory(profile);
     renderCommittees(profile.committees || []);
     renderRecentVotes(profile.recent_votes || []);
+    updateSectionGrids();
   }
 
   function buildSummary(profile) {
@@ -263,14 +265,33 @@ const ProfileApp = (() => {
     }
 
     for (const committee of committees) {
-      const tag = document.createElement("a");
-      tag.className = "committee-tag";
-      tag.href = window.Folkevalget.buildCommitteeUrl(committee.short_name);
-      tag.target = "_blank";
-      tag.rel = "noreferrer";
-      tag.title = committee.name || committee.short_name || "Udvalg";
-      tag.textContent = committee.short_name || "Udvalg";
-      root.append(tag);
+      const item = document.createElement("li");
+      item.className = "committee-list-item";
+
+      const link = document.createElement("a");
+      link.className = "committee-list-link";
+      link.href = window.Folkevalget.buildCommitteeUrl(committee.short_name);
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.textContent = committee.name || committee.short_name || "Udvalg";
+
+      item.append(link);
+
+      if (committee.name && committee.short_name) {
+        const meta = document.createElement("span");
+        meta.className = "committee-list-meta";
+        meta.textContent = committee.short_name;
+        item.append(meta);
+      }
+
+      root.append(item);
+    }
+  }
+
+  function updateSectionGrids() {
+    for (const grid of sectionGrids) {
+      const visibleChildren = Array.from(grid.children).filter((child) => !child.classList.contains("hidden"));
+      grid.dataset.single = visibleChildren.length <= 1 ? "true" : "false";
     }
   }
 
