@@ -1540,6 +1540,24 @@ img {
   background: var(--color-surface);
 }
 
+.hverv-voluntary-note {
+  margin-top: var(--space-md);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.panel-source-note {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.panel-source-note a {
+  color: var(--color-accent);
+}
+
 .site-footer {
   display: flex;
   flex-wrap: wrap;
