@@ -1591,6 +1591,36 @@ img {
   background: var(--color-surface);
 }
 
+.interest-block {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.interest-block + .interest-block {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.cvr-relation-item {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.cvr-relation-link {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.cvr-relation-link:hover,
+.cvr-relation-link:focus-visible {
+  color: var(--color-accent);
+}
+
+.cvr-relation-meta {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
 .panel-source-note {
   margin-top: var(--space-lg);
   padding-top: var(--space-md);
