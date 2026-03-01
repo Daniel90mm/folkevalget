@@ -461,7 +461,7 @@ window.Folkevalget = (() => {
     });
 
     stats.parentNode.insertBefore(tools, stats);
-    tools.append(toggle, stats);
+    tools.append(stats, toggle);
   }
 
   function initGlobalSiteStats() {
