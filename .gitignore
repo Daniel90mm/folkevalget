@@ -49,3 +49,15 @@ data/raw/
 .tmpdata*/
 __pycache__/
 *.pyc
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+
+# Logs and local temp files
+*.log
+*.tmp
+*.temp

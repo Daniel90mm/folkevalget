@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Om | Folkevalget</title>
+    <meta
+      name="description"
+      content="Baggrunden for Folkevalget, datakilderne, opdateringsrytmen og de vigtigste metodevalg."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Source+Serif+4:wght@600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="page-about">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="site-brand-row">
+          <a class="site-brand" href="./index.html">folkevalget.dk</a>
+          <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+            Menu
+          </button>
+        </div>
+        <div class="site-header-meta">
+          <nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Primær navigation">
+            <a href="./discover.html">Profiler</a>
+            <a href="./afstemninger.html">Afstemninger</a>
+            <a href="./folketinget.html">Folketinget</a>
+          </nav>
+          <div class="site-stats" data-site-stats aria-live="polite">
+            <span><strong data-stat="profiles">-</strong> profiler</span>
+            <span class="site-stats-dot" aria-hidden="true"></span>
+            <span><strong data-stat="votes">-</strong> afstemninger</span>
+            <span class="site-stats-dot" aria-hidden="true"></span>
+            <span>Opdateret: <strong data-stat="updated">-</strong></span>
+          </div>
+        </div>
+      </header>
+
+      <main class="home-layout">
+        <section class="page-intro">
+          <p class="eyebrow">Om Folkevalget</p>
+          <h1>Hvorfor siden findes, og hvordan data bliver til et brugbart overblik.</h1>
+          <p>
+            Folkevalget er et uafhængigt analyseværktøj. Siden samler offentlige data fra Folketinget i et
+            format, der gør det lettere at sammenligne profiler, forstå afstemninger og gå videre til kilden.
+          </p>
+        </section>
+
+        <section class="content-section">
+          <div class="section-heading">
+            <p class="eyebrow">Baggrund</p>
+            <h2>Hvem står bag?</h2>
+          </div>
+          <div class="info-grid">
+            <article class="info-card">
+              <h3>Projektets formål</h3>
+              <p>At gøre Folketingets officielle data lettere at læse for borgere uden teknisk baggrund.</p>
+            </article>
+            <article class="info-card">
+              <h3>Uafhængighed</h3>
+              <p>Folkevalget anbefaler ikke partier eller kandidater og tager ikke stilling til politiske spørgsmål.</p>
+            </article>
+            <article class="info-card">
+              <h3>Produktprincip</h3>
+              <p>Overblik først, detalje bagefter. Hvert tal skal kunne spores til en officiel kilde.</p>
+            </article>
+            <article class="info-card">
+              <h3>Kontakt</h3>
+              <p>Spørgsmål, fejl og forslag kan meldes via GitHub-repositoriet, så arbejdet kan følges åbent.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-heading">
+            <p class="eyebrow">Data og metode</p>
+            <h2>Hvordan bliver data behandlet?</h2>
+          </div>
+          <div class="definition-grid">
+            <article class="definition-card">
+              <h3>Datakilder</h3>
+              <p>Primært ft.dk, oda.ft.dk og andre officielle kilder som retsinformation.dk.</p>
+            </article>
+            <article class="definition-card">
+              <h3>Publicering</h3>
+              <p>Data forbehandles og publiceres som statiske filer, så brugerne ser den samme dokumenterede version.</p>
+            </article>
+            <article class="definition-card">
+              <h3>Opdateringsfrekvens</h3>
+              <p>Den automatiske opdatering er sat til at køre hver 6. time, og headeren viser seneste publicering.</p>
+            </article>
+            <article class="definition-card">
+              <h3>Nøgletal</h3>
+              <p>Fremmøde og partiloyalitet beregnes på baggrund af registrerede afstemninger i salen.</p>
+            </article>
+            <article class="definition-card">
+              <h3>Forbehold</h3>
+              <p>Hvis officielle data mangler eller kræver kontekst, markeres det i stedet for at blive skjult.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <div class="section-heading">
+            <p class="eyebrow">Drift</p>
+            <h2>Opdatering og kode</h2>
+          </div>
+          <div class="committee-tags">
+            <a class="committee-tag" href="https://github.com/Daniel90mm/folkevalget" target="_blank" rel="noreferrer">GitHub-repositoriet</a>
+            <a class="committee-tag" href="https://github.com/Daniel90mm/folkevalget/issues" target="_blank" rel="noreferrer">Fejl og forslag</a>
+            <a class="committee-tag" href="./folketinget.html">Forklaringer og begreber</a>
+            <a class="committee-tag" href="./discover.html">Profiler</a>
+            <a class="committee-tag" href="./afstemninger.html">Afstemninger</a>
+          </div>
+          <p class="table-note">
+            Siden opdateres, når datasættet regenereres. Hver publicering viser seneste opdateringsdato i headeren.
+            Kildekoden ligger på GitHub:
+            <a href="https://github.com/Daniel90mm/folkevalget" target="_blank" rel="noreferrer">github.com/Daniel90mm/folkevalget</a>.
+            Det gør metode, ændringer og fejlrettelser gennemskuelige.
+          </p>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p class="footer-note">
+          Folkevalget bygger på officielle data fra Folketinget og deler kode og metode åbent.
+        </p>
+        <div class="footer-links">
+          <a href="./folketinget.html">Forklaringer og begreber</a>
+          <a href="https://github.com/Daniel90mm/folkevalget" target="_blank" rel="noreferrer">Kildekode på GitHub</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="catalog.js" defer></script>
+    <script src="shared.js" defer></script>
+  </body>
+</html>

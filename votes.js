@@ -158,7 +158,7 @@ const VotesApp = (() => {
     }
 
     if (state.sortMode === "split_first") {
-      const splitDelta = (right.party_split_count || 0) - (left.party_split_count || 0);
+      const splitDelta = Number(right.party_split_count || 0) - Number(left.party_split_count || 0);
       if (splitDelta !== 0) {
         return splitDelta;
       }
@@ -263,7 +263,7 @@ const VotesApp = (() => {
     const againstCount = Number(vote.counts?.imod || 0);
     document.querySelector("#vote-meta").textContent = [
       window.Folkevalget.formatDate(vote.date),
-      vote.vedtaget ? "Forslaget blev vedtaget" : "Forslaget faldt eller blev forkastet",
+      vote.vedtaget ? "Forslaget blev vedtaget" : "Forslaget blev forkastet",
       `${window.Folkevalget.formatNumber(forCount + againstCount)} ja/nej-stemmer`,
     ].join(" · ");
 
@@ -304,7 +304,7 @@ const VotesApp = (() => {
         : `${formatShare(marginShare)} mellem ja og nej.`;
     } else {
       marginValue.textContent = "Ingen ja/nej-data";
-      marginNote.textContent = "Afstemningen har ingen registrerede ja/nej-stemmer i datasættet.";
+      marginNote.textContent = "Afstemningen har ingen registrerede ja- og nej-stemmer i datasættet.";
     }
 
     const splitCount = Number(vote.party_split_count || 0);
@@ -331,23 +331,7 @@ const VotesApp = (() => {
     }
 
     voteContext.classList.toggle("hidden", notes.length === 0);
-
-    const toggle = document.createElement("button");
-    toggle.className = "context-note-toggle";
-    toggle.setAttribute("aria-expanded", "false");
-    toggle.innerHTML = 'Læs mere om afstemningen <span class="context-note-caret" aria-hidden="true">›</span>';
-
-    const body = document.createElement("div");
-    body.className = "context-note-body";
-    body.innerHTML = notes.map((note) => `<p>${note}</p>`).join("");
-
-    toggle.addEventListener("click", () => {
-      const expanded = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!expanded));
-    });
-
-    voteContext.innerHTML = "";
-    voteContext.append(toggle, body);
+    voteContext.innerHTML = notes.map((note) => `<p>${note}</p>`).join("");
   }
 
   function renderPartyFilter(vote) {
@@ -549,7 +533,7 @@ const VotesApp = (() => {
       for: "For",
       imod: "Imod",
       fravaer: "Fravær",
-      hverken: "Blank",
+      hverken: "Hverken",
     };
     return labels[key] || key;
   }
@@ -566,13 +550,13 @@ const VotesApp = (() => {
 
 VotesApp.boot().catch((error) => {
   console.error(error);
-  const voteList = document.querySelector("#vote-list");
-  const voteEmpty = document.querySelector("#vote-empty");
-  if (voteList) {
-    voteList.innerHTML = '<div class="panel-empty">Kunne ikke indlaese afstemninger.</div>';
+  const list = document.querySelector("#vote-list");
+  const empty = document.querySelector("#vote-empty");
+  if (list) {
+    list.innerHTML = '<div class="panel-empty">Afstemningerne kunne ikke indlæses.</div>';
   }
-  if (voteEmpty) {
-    voteEmpty.classList.remove("hidden");
-    voteEmpty.textContent = "Detaljer for afstemningen kunne ikke indlaeses.";
+  if (empty) {
+    empty.classList.remove("hidden");
+    empty.textContent = "Detaljer for afstemningen kunne ikke indlæses.";
   }
 });

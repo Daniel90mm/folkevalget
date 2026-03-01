@@ -6,7 +6,7 @@
     <title>Profil | Folkevalget</title>
     <meta
       name="description"
-      content="En detaljeside for ét folketingsmedlem med udvalg, stemmer og nøglemål baseret på offentlige data."
+      content="En detaljeside for ét folketingsmedlem med udvalg, stemmer og nøgletal baseret på offentlige data."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,19 +21,23 @@
       <header class="site-header">
         <div class="site-brand-row">
           <a class="site-brand" href="./index.html">folkevalget.dk</a>
-          <nav class="site-nav" aria-label="Primær navigation">
-            <a href="./index.html">Forside</a>
-            <a href="./discover.html">Opdag profiler</a>
-            <a href="./afstemninger.html">Afstemninger</a>
-            <a href="./partier.html">Partier</a>
-          </nav>
+          <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+            Menu
+          </button>
         </div>
-        <div class="site-stats" data-site-stats aria-live="polite">
-          <span><strong data-stat="profiles">-</strong> profiler</span>
-          <span class="site-stats-dot" aria-hidden="true"></span>
-          <span><strong data-stat="votes">-</strong> afstemninger</span>
-          <span class="site-stats-dot" aria-hidden="true"></span>
-          <span>Opdateret: <strong data-stat="updated">-</strong></span>
+        <div class="site-header-meta">
+          <nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Primær navigation">
+            <a aria-current="page" href="./discover.html">Profiler</a>
+            <a href="./afstemninger.html">Afstemninger</a>
+            <a href="./folketinget.html">Folketinget</a>
+          </nav>
+          <div class="site-stats" data-site-stats aria-live="polite">
+            <span><strong data-stat="profiles">-</strong> profiler</span>
+            <span class="site-stats-dot" aria-hidden="true"></span>
+            <span><strong data-stat="votes">-</strong> afstemninger</span>
+            <span class="site-stats-dot" aria-hidden="true"></span>
+            <span>Opdateret: <strong data-stat="updated">-</strong></span>
+          </div>
         </div>
       </header>
 
@@ -42,31 +46,33 @@
           <p class="eyebrow">Profil</p>
           <h1>Vi kunne ikke finde denne profil</h1>
           <p>Brug oversigten for at vælge et folketingsmedlem og åbne profilsiden derfra.</p>
-          <a class="button-link" href="./discover.html">Tilbage til opdag</a>
+          <a class="button-link button-link-secondary" href="./discover.html">Tilbage til profiler</a>
         </div>
 
         <div class="profile-page hidden" id="profile-page">
           <nav class="breadcrumb" aria-label="Brødkrumme">
             <a href="./index.html">Forside</a>
             <span>›</span>
-            <a href="./discover.html">Opdag profiler</a>
+            <a href="./discover.html">Profiler</a>
             <span>›</span>
             <span id="breadcrumb-name">Profil</span>
           </nav>
 
           <section class="profile-hero">
             <div class="profile-hero-main">
-              <span class="party-pill party-pill-wide" id="profile-party"></span>
               <div class="profile-identity">
                 <div class="profile-avatar-wrap">
                   <span class="profile-initials hidden" id="profile-initials" aria-hidden="true"></span>
                   <img class="profile-photo hidden" id="profile-photo" alt="" referrerpolicy="no-referrer">
                 </div>
                 <div class="profile-title-block">
+                  <div class="member-badges">
+                    <span class="party-pill" id="profile-party"></span>
+                    <div class="context-tag-row" id="profile-tags"></div>
+                  </div>
                   <h1 id="profile-name">-</h1>
                   <p class="profile-role" id="profile-role">-</p>
                   <p class="photo-credit hidden" id="profile-photo-credit"></p>
-                  <div class="context-tag-row" id="profile-tags"></div>
                   <p class="profile-summary" id="profile-summary">-</p>
                   <p class="profile-summary" id="profile-vote-total">-</p>
                 </div>
@@ -74,29 +80,21 @@
             </div>
             <div class="profile-hero-actions">
               <a class="button-link button-link-secondary" href="./discover.html">Tilbage til oversigten</a>
-              <a class="button-link hidden" href="#" id="profile-source" target="_blank" rel="noreferrer">Åbn officiel profil</a>
+              <a class="button-link button-link-secondary hidden" href="#" id="profile-source" target="_blank" rel="noreferrer">Åbn officiel profil</a>
             </div>
           </section>
 
           <section class="metric-strip">
             <article class="metric-card" data-metric="attendance">
-              <span>Fremmøde <span class="tooltip-wrap"><span class="tooltip-trigger" tabindex="0" aria-label="Hvad er fremmøde?">ⓘ</span><span class="tooltip-body" role="tooltip">Andelen af registrerede afstemninger, hvor medlemmet faktisk afgav en stemme i stedet for at være fraværende.</span></span></span>
+              <span>Fremmøde <span class="tooltip-wrap"><span class="tooltip-trigger" tabindex="0" aria-label="Hvad er fremmøde?">ⓘ</span><span class="tooltip-body" role="tooltip">Andelen af registrerede afstemninger, hvor medlemmet afgav en stemme i stedet for at være fraværende.</span></span></span>
               <strong data-value>-</strong>
             </article>
             <article class="metric-card" data-metric="loyalty">
               <span>Partiloyalitet <span class="tooltip-wrap"><span class="tooltip-trigger" tabindex="0" aria-label="Hvad er partiloyalitet?">ⓘ</span><span class="tooltip-body" role="tooltip">Andelen af sammenlignelige afstemninger, hvor medlemmet stemte som flertallet i eget parti.</span></span></span>
               <strong data-value>-</strong>
             </article>
-            <article class="metric-card" data-metric="for">
-              <span>Stemmer for</span>
-              <strong data-value>-</strong>
-            </article>
-            <article class="metric-card" data-metric="against">
-              <span>Stemmer imod</span>
-              <strong data-value>-</strong>
-            </article>
-            <article class="metric-card" data-metric="absent">
-              <span>Fravær</span>
+            <article class="metric-card" data-metric="votes">
+              <span>Registrerede afstemninger</span>
               <strong data-value>-</strong>
             </article>
           </section>
@@ -138,7 +136,7 @@
           </section>
 
           <section class="profile-section-grid">
-            <article class="panel">
+            <article class="panel hidden" id="profile-committee-panel">
               <div class="panel-heading">
                 <p class="eyebrow">Udvalg</p>
                 <h2>Aktive udvalg og delegationer</h2>
@@ -156,6 +154,16 @@
           </section>
         </div>
       </main>
+
+      <footer class="site-footer">
+        <p class="footer-note">
+          Folkevalget bygger på officielle data fra Folketinget og deler kode og metode åbent.
+        </p>
+        <div class="footer-links">
+          <a href="./om.html">Om Folkevalget</a>
+          <a href="https://github.com/Daniel90mm/folkevalget" target="_blank" rel="noreferrer">Kildekode på GitHub</a>
+        </div>
+      </footer>
     </div>
 
     <script src="catalog.js" defer></script>

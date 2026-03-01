@@ -21,19 +21,23 @@
       <header class="site-header">
         <div class="site-brand-row">
           <a class="site-brand" href="./index.html">folkevalget.dk</a>
-          <nav class="site-nav" aria-label="Primær navigation">
-            <a href="./index.html">Forside</a>
-            <a href="./discover.html">Opdag profiler</a>
-            <a aria-current="page" href="./afstemninger.html">Afstemninger</a>
-            <a href="./partier.html">Partier</a>
-          </nav>
+          <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+            Menu
+          </button>
         </div>
-        <div class="site-stats" data-site-stats aria-live="polite">
-          <span><strong data-stat="profiles">-</strong> profiler</span>
-          <span class="site-stats-dot" aria-hidden="true"></span>
-          <span><strong data-stat="votes">-</strong> afstemninger</span>
-          <span class="site-stats-dot" aria-hidden="true"></span>
-          <span>Opdateret: <strong data-stat="updated">-</strong></span>
+        <div class="site-header-meta">
+          <nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Primær navigation">
+            <a href="./discover.html">Profiler</a>
+            <a aria-current="page" href="./afstemninger.html">Afstemninger</a>
+            <a href="./folketinget.html">Folketinget</a>
+          </nav>
+          <div class="site-stats" data-site-stats aria-live="polite">
+            <span><strong data-stat="profiles">-</strong> profiler</span>
+            <span class="site-stats-dot" aria-hidden="true"></span>
+            <span><strong data-stat="votes">-</strong> afstemninger</span>
+            <span class="site-stats-dot" aria-hidden="true"></span>
+            <span>Opdateret: <strong data-stat="updated">-</strong></span>
+          </div>
         </div>
       </header>
 
@@ -99,24 +103,24 @@
                   <p class="vote-detail-meta" id="vote-meta">-</p>
                 </div>
                 <div class="profile-hero-actions">
-                  <a class="button-link button-link-secondary hidden" href="#" id="vote-source-link" target="_blank" rel="noreferrer">Åbn sag</a>
+                  <a class="button-link button-link-secondary hidden" href="#" id="vote-source-link" target="_blank" rel="noreferrer">Åbn officiel sag</a>
                 </div>
               </div>
 
               <section class="metric-strip votes-metric-strip">
-                <article class="metric-card" data-vote-metric="for" data-tone="good">
+                <article class="metric-card" data-vote-metric="for">
                   <span>Stemmer for</span>
                   <strong data-value>-</strong>
                 </article>
-                <article class="metric-card" data-vote-metric="against" data-tone="risk">
+                <article class="metric-card" data-vote-metric="against">
                   <span>Stemmer imod</span>
                   <strong data-value>-</strong>
                 </article>
-                <article class="metric-card" data-vote-metric="absent" data-tone="warn">
+                <article class="metric-card" data-vote-metric="absent">
                   <span>Fravær</span>
                   <strong data-value>-</strong>
                 </article>
-                <article class="metric-card" data-vote-metric="neither" data-tone="neutral">
+                <article class="metric-card" data-vote-metric="neither">
                   <span>Hverken</span>
                   <strong data-value>-</strong>
                 </article>
@@ -167,7 +171,7 @@
                   </article>
                   <article class="distribution-stat" data-distribution="hverken">
                     <span class="distribution-swatch"></span>
-                    <strong>Blank</strong>
+                    <strong>Hverken</strong>
                     <span data-value>-</span>
                     <span data-share>-</span>
                   </article>
@@ -209,6 +213,16 @@
           </section>
         </section>
       </main>
+
+      <footer class="site-footer">
+        <p class="footer-note">
+          Folkevalget bygger på officielle data fra Folketinget og deler kode og metode åbent.
+        </p>
+        <div class="footer-links">
+          <a href="./om.html">Om Folkevalget</a>
+          <a href="https://github.com/Daniel90mm/folkevalget" target="_blank" rel="noreferrer">Kildekode på GitHub</a>
+        </div>
+      </footer>
     </div>
 
     <template id="vote-list-item-template">

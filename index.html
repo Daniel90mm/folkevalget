@@ -21,34 +21,38 @@
       <header class="site-header">
         <div class="site-brand-row">
           <a class="site-brand" href="./index.html">folkevalget.dk</a>
-          <nav class="site-nav" aria-label="Primær navigation">
-            <a aria-current="page" href="./index.html">Forside</a>
-            <a href="./discover.html">Opdag profiler</a>
-            <a href="./afstemninger.html">Afstemninger</a>
-            <a href="./partier.html">Partier</a>
-          </nav>
+          <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+            Menu
+          </button>
         </div>
-        <div class="site-stats" data-site-stats aria-live="polite">
-          <span><strong data-stat="profiles">-</strong> profiler</span>
-          <span class="site-stats-dot" aria-hidden="true"></span>
-          <span><strong data-stat="votes">-</strong> afstemninger</span>
-          <span class="site-stats-dot" aria-hidden="true"></span>
-          <span>Opdateret: <strong data-stat="updated">-</strong></span>
+        <div class="site-header-meta">
+          <nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Primær navigation">
+            <a href="./discover.html">Profiler</a>
+            <a href="./afstemninger.html">Afstemninger</a>
+            <a href="./folketinget.html">Folketinget</a>
+          </nav>
+          <div class="site-stats" data-site-stats aria-live="polite">
+            <span><strong data-stat="profiles">-</strong> profiler</span>
+            <span class="site-stats-dot" aria-hidden="true"></span>
+            <span><strong data-stat="votes">-</strong> afstemninger</span>
+            <span class="site-stats-dot" aria-hidden="true"></span>
+            <span>Opdateret: <strong data-stat="updated">-</strong></span>
+          </div>
         </div>
       </header>
 
       <main class="home-layout">
         <section class="hero-panel">
           <div class="hero-copy">
-            <p class="eyebrow">Offentlig kontrol med Folketinget</p>
-            <h1>Se, hvad dine folkevalgte faktisk gør mellem valgplakaterne.</h1>
+            <p class="eyebrow">Officielle data, samlet og forklaret</p>
+            <h1>Se stemmer, fremmøde og udvalg samlet på ét sted.</h1>
             <p class="hero-lead">
-              Folkevalget samler officielle data om stemmer, fremmøde og udvalg i et format, der er let
-              at gennemskue. Ingen reklamer. Ingen AI-meninger. Ingen partispin.
+              Folkevalget gør Folketingets officielle data lettere at udforske. Du starter med overblik og
+              kan gå videre til profiler, afstemninger og de oprindelige kilder.
             </p>
             <div class="hero-actions">
-              <a class="button-link" href="./discover.html">Gå til profilerne</a>
-              <a class="button-link button-link-secondary" href="#saadan-virker-det">Sådan virker siden</a>
+              <a class="button-link" href="./discover.html">Udforsk profiler</a>
+              <a class="button-link button-link-secondary" href="./afstemninger.html">Udforsk afstemninger</a>
             </div>
           </div>
 
@@ -56,17 +60,17 @@
             <article class="signal-card">
               <span class="signal-label">Profiler</span>
               <strong data-home="profiles">-</strong>
-              <p>Alle profiler er bygget på de samme offentlige kilder og vises i samme format.</p>
+              <p>Alle profiler bygger på de samme offentlige kilder og vises i samme format.</p>
             </article>
             <article class="signal-card">
               <span class="signal-label">Afstemninger</span>
               <strong data-home="votes">-</strong>
-              <p>Stemmedata samles til et katalog, så du kan starte med overblik og gå videre til detaljen.</p>
+              <p>Stemmedata samles i ét katalog, så du kan starte med overblik og gå videre til detaljen.</p>
             </article>
             <article class="signal-card">
               <span class="signal-label">Opdateret</span>
               <strong data-home="updated">-</strong>
-              <p>Data opdateres som statiske filer, så siden er hurtig og ikke belaster Folketingets API for hver besøgende.</p>
+              <p>Data udgives som statiske filer, så siden er hurtig og ikke belaster Folketingets API for hver besøgende.</p>
             </article>
           </div>
         </section>
@@ -89,13 +93,22 @@
             </article>
             <article class="step-card">
               <span>3</span>
-              <h3>Du starter med overblik og går videre til detailniveau</h3>
+              <h3>Du starter med overblik og går videre til detaljen</h3>
               <p>Først en opdageside med filtre. Derefter en selvstændig profilside med udvalg, afstemninger og forklaringer.</p>
             </article>
           </div>
         </section>
-
       </main>
+
+      <footer class="site-footer">
+        <p class="footer-note">
+          Folkevalget bygger på officielle data fra Folketinget og deler kode og metode åbent.
+        </p>
+        <div class="footer-links">
+          <a href="./om.html">Om Folkevalget</a>
+          <a href="https://github.com/Daniel90mm/folkevalget" target="_blank" rel="noreferrer">Kildekode på GitHub</a>
+        </div>
+      </footer>
     </div>
 
     <script src="catalog.js" defer></script>

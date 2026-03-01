@@ -2,12 +2,12 @@ const DiscoverApp = (() => {
   const state = {
     profiles: [],
     filteredProfiles: [],
-    stats: null,
     query: "",
     constituencyFilter: "",
     partyFilter: "",
     committeeFilter: "",
-    sortMode: "attendance_desc",
+    sortMode: "name",
+    mobileFiltersOpen: false,
   };
 
   const statsRoot = document.querySelector("[data-site-stats]");
@@ -19,17 +19,21 @@ const DiscoverApp = (() => {
   const resultCount = document.querySelector("#result-count");
   const cardGrid = document.querySelector("#discover-grid");
   const cardTemplate = document.querySelector("#discover-card-template");
+  const filtersToggle = document.querySelector("#filters-toggle");
+  const filtersPanel = document.querySelector("#discover-filters-panel");
+  const filtersClose = document.querySelector("#filters-close");
+  const activeFilters = document.querySelector("#active-filters");
 
   async function boot() {
     hydrateStateFromQuery();
     const { profiles, stats } = await window.Folkevalget.loadCatalogueData();
     state.profiles = profiles;
-    state.stats = stats;
 
     populateConstituencyFilter(profiles);
     populatePartyFilter(profiles);
     populateCommitteeFilter(profiles);
     syncControls();
+    syncFilterPanel();
     window.Folkevalget.renderStats(statsRoot, stats);
     bindEvents();
     applyFilters();
@@ -41,7 +45,7 @@ const DiscoverApp = (() => {
     state.constituencyFilter = params.get("storkreds") || "";
     state.partyFilter = params.get("party") || "";
     state.committeeFilter = params.get("committee") || "";
-    state.sortMode = params.get("sort") || "attendance_desc";
+    state.sortMode = params.get("sort") || "name";
   }
 
   function syncControls() {
@@ -75,6 +79,51 @@ const DiscoverApp = (() => {
 
     sortSelect.addEventListener("change", (event) => {
       state.sortMode = event.target.value;
+      applyFilters();
+    });
+
+    if (filtersToggle) {
+      filtersToggle.addEventListener("click", () => {
+        state.mobileFiltersOpen = !state.mobileFiltersOpen;
+        syncFilterPanel();
+      });
+    }
+
+    if (filtersClose) {
+      filtersClose.addEventListener("click", () => {
+        state.mobileFiltersOpen = false;
+        syncFilterPanel();
+      });
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && state.mobileFiltersOpen) {
+        state.mobileFiltersOpen = false;
+        syncFilterPanel();
+      }
+    });
+
+    activeFilters.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-clear-filter]");
+      if (!button) {
+        return;
+      }
+
+      const filterKey = button.dataset.clearFilter;
+      if (filterKey === "query") {
+        state.query = "";
+      }
+      if (filterKey === "storkreds") {
+        state.constituencyFilter = "";
+      }
+      if (filterKey === "party") {
+        state.partyFilter = "";
+      }
+      if (filterKey === "committee") {
+        state.committeeFilter = "";
+      }
+
+      syncControls();
       applyFilters();
     });
   }
@@ -118,9 +167,10 @@ const DiscoverApp = (() => {
     const committees = new Map();
     for (const profile of profiles) {
       for (const committee of profile.committees || []) {
-        if (!committees.has(committee.short_name)) {
-          committees.set(committee.short_name, committee.name || committee.short_name);
+        if (!committee.short_name || committees.has(committee.short_name)) {
+          continue;
         }
+        committees.set(committee.short_name, committee.name || committee.short_name);
       }
     }
 
@@ -168,6 +218,7 @@ const DiscoverApp = (() => {
     state.filteredProfiles.sort((left, right) => window.Folkevalget.compareProfiles(left, right, state.sortMode));
 
     renderCards();
+    renderActiveFilters();
     syncQueryString();
   }
 
@@ -185,7 +236,7 @@ const DiscoverApp = (() => {
     if (state.committeeFilter) {
       params.set("committee", state.committeeFilter);
     }
-    if (state.sortMode && state.sortMode !== "attendance_desc") {
+    if (state.sortMode && state.sortMode !== "name") {
       params.set("sort", state.sortMode);
     }
     const next = params.toString() ? `?${params.toString()}` : window.location.pathname;
@@ -196,7 +247,7 @@ const DiscoverApp = (() => {
     cardGrid.innerHTML = "";
 
     if (state.filteredProfiles.length === 0) {
-      cardGrid.innerHTML = '<div class="empty-state">Ingen profiler matcher filtrene.</div>';
+      cardGrid.innerHTML = '<div class="empty-state">Ingen profiler matcher de valgte filtre.</div>';
       resultCount.textContent = "0 profiler";
       return;
     }
@@ -204,41 +255,24 @@ const DiscoverApp = (() => {
     const fragment = document.createDocumentFragment();
     for (const profile of state.filteredProfiles) {
       const card = cardTemplate.content.firstElementChild.cloneNode(true);
-      card.href = window.Folkevalget.buildProfileUrl(profile.id);
-      card.dataset.party = profile.party_short || "";
+      const link = card.querySelector("[data-card='link']");
+      link.href = window.Folkevalget.buildProfileUrl(profile.id);
+      link.textContent = profile.name;
 
-      card.querySelector("[data-card='party']").textContent = window.Folkevalget.partyDisplayName(
-        profile.party,
-        profile.party_short
-      );
-      card.querySelector("[data-card='party']").dataset.party = profile.party_short || "";
-      card.querySelector("[data-card='name']").textContent = profile.name;
+      const partyBadge = card.querySelector("[data-card='party']");
+      partyBadge.textContent = profile.party_short || profile.party || "UP";
+      partyBadge.dataset.party = profile.party_short || "";
+
+      card.dataset.party = profile.party_short || "";
       card.querySelector("[data-card='role']").textContent = profile.role || "Folketingsmedlem";
-      renderContextTags(card.querySelector("[data-card='tags']"), profile);
-      card.querySelector("[data-card='constituency']").textContent = profile.storkreds || "–";
-      card.querySelector("[data-card='votes']").textContent =
-        profile.seniority_label || "–";
-      card.querySelector("[data-card='committees']").textContent =
-        `${window.Folkevalget.formatNumber((profile.committees || []).length)} udvalg`;
+      card.querySelector("[data-card='constituency']").textContent = profile.storkreds || "Storkreds ikke angivet";
       card.querySelector("[data-card='attendance-value']").textContent = window.Folkevalget.formatPercent(profile.attendance_pct);
       card.querySelector("[data-card='loyalty-value']").textContent = window.Folkevalget.formatPercent(profile.party_loyalty_pct);
-      card.querySelector("[data-card='for']").textContent = `${window.Folkevalget.formatNumber(profile.votes_for)} for`;
-      card.querySelector("[data-card='against']").textContent = `${window.Folkevalget.formatNumber(profile.votes_against)} imod`;
+      card.querySelector("[data-card='votes']").textContent = window.Folkevalget.formatNumber(profile.votes_total);
+      card.querySelector("[data-card='committees']").textContent =
+        `${window.Folkevalget.formatNumber((profile.committees || []).length)} udvalg`;
 
-      setMeter(
-        card.querySelector("[data-card='attendance-bar']"),
-        card.querySelector("[data-card='attendance-meter']"),
-        profile.attendance_pct,
-        "attendance"
-      );
-      setAttendanceAlert(card.querySelector("[data-card='attendance-alert']"), profile.attendance_pct);
-      setMeter(
-        card.querySelector("[data-card='loyalty-bar']"),
-        card.querySelector("[data-card='loyalty-meter']"),
-        profile.party_loyalty_pct,
-        "loyalty"
-      );
-
+      renderContextTags(card.querySelector("[data-card='tags']"), profile);
       window.Folkevalget.applyPhoto(
         card.querySelector("[data-card='photo']"),
         card.querySelector("[data-card='initials']"),
@@ -254,21 +288,6 @@ const DiscoverApp = (() => {
     resultCount.textContent = `${window.Folkevalget.formatNumber(state.filteredProfiles.length)} profiler`;
   }
 
-  function setMeter(bar, container, value, kind) {
-    const tone = window.Folkevalget.metricTone(value, kind);
-    bar.style.width = `${window.Folkevalget.clampPercent(value)}%`;
-    container.dataset.tone = tone;
-  }
-
-  function setAttendanceAlert(node, value) {
-    if (!node) {
-      return;
-    }
-
-    const hasWarning = value !== null && value !== undefined && Number(value) < 30;
-    node.classList.toggle("hidden", !hasWarning);
-  }
-
   function renderContextTags(root, profile) {
     root.innerHTML = "";
     for (const flag of window.Folkevalget.profileContextFlags(profile)) {
@@ -279,6 +298,50 @@ const DiscoverApp = (() => {
     }
   }
 
+  function renderActiveFilters() {
+    activeFilters.innerHTML = "";
+
+    const filters = [
+      state.query.trim() ? { key: "query", label: `Søg: ${state.query.trim()}` } : null,
+      state.constituencyFilter ? { key: "storkreds", label: state.constituencyFilter } : null,
+      state.partyFilter ? { key: "party", label: formatPartyLabel(state.partyFilter) } : null,
+      state.committeeFilter ? { key: "committee", label: formatCommitteeLabel(state.committeeFilter) } : null,
+    ].filter(Boolean);
+
+    activeFilters.classList.toggle("hidden", filters.length === 0);
+
+    for (const filter of filters) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "active-filter";
+      button.dataset.clearFilter = filter.key;
+      button.textContent = `${filter.label} ×`;
+      activeFilters.append(button);
+    }
+  }
+
+  function formatPartyLabel(value) {
+    return findOptionLabel(partyFilter, value);
+  }
+
+  function formatCommitteeLabel(value) {
+    return findOptionLabel(committeeFilter, value);
+  }
+
+  function findOptionLabel(select, value) {
+    const option = [...select.options].find((entry) => entry.value === value);
+    return option?.textContent || value;
+  }
+
+  function syncFilterPanel() {
+    if (!filtersToggle || !filtersPanel) {
+      return;
+    }
+    filtersToggle.setAttribute("aria-expanded", String(state.mobileFiltersOpen));
+    filtersPanel.dataset.open = String(state.mobileFiltersOpen);
+    document.body.classList.toggle("filters-open", state.mobileFiltersOpen);
+  }
+
   return { boot };
 })();
 
@@ -287,7 +350,7 @@ DiscoverApp.boot().catch((error) => {
   const grid = document.querySelector("#discover-grid");
   const resultCount = document.querySelector("#result-count");
   if (grid) {
-    grid.innerHTML = '<div class="empty-state">Kunne ikke indlæse profiler.</div>';
+    grid.innerHTML = '<div class="empty-state">Profilerne kunne ikke indlæses.</div>';
   }
   if (resultCount) {
     resultCount.textContent = "Fejl ved indlæsning";

@@ -19,8 +19,8 @@ window.Folkevalget = (() => {
     SIU: "Siumut",
     UFG: "Uden for grupperne",
   };
-  const NORTH_ATLANTIC_PARTIES = new Set(["IA", "JF", "SP", "SIU", "N"]);
 
+  const NORTH_ATLANTIC_PARTIES = new Set(["IA", "JF", "SP", "SIU", "N"]);
   const SAG_TYPES = {
     L: "lovforslag",
     B: "beslutningsforslag",
@@ -28,6 +28,7 @@ window.Folkevalget = (() => {
   };
 
   const siteBasePath = detectSiteBasePath();
+  initNavigation();
 
   async function loadCatalogueData() {
     const bootstrapProfiles = Array.isArray(readBootstrapPayload()?.profiles)
@@ -148,11 +149,13 @@ window.Folkevalget = (() => {
     if (!match) {
       return null;
     }
+
     const [, prefix, number] = match;
     const type = SAG_TYPES[prefix];
     if (!type) {
       return null;
     }
+
     const date = new Date(dateStr);
     const sessionYear = date.getMonth() >= 9 ? date.getFullYear() : date.getFullYear() - 1;
     return `https://www.folketingstidende.dk/samling/${sessionYear}1/${type}/${prefix}${number}/index.htm`;
@@ -173,7 +176,7 @@ window.Folkevalget = (() => {
   }
 
   function partyDisplayName(partyName, partyShort) {
-    const name = partyName || (partyShort && PARTY_NAMES[partyShort]) || null;
+    const name = partyName || (partyShort ? PARTY_NAMES[partyShort] : null);
     if (name && partyShort) {
       return `${name} (${partyShort})`;
     }
@@ -249,24 +252,6 @@ window.Folkevalget = (() => {
       image.classList.add("hidden");
       fallback.classList.remove("hidden");
     };
-  }
-
-  function metricTone(value, kind) {
-    if (value === null || value === undefined) {
-      return "neutral";
-    }
-
-    if (kind === "loyalty") {
-      if (value >= 95) return "good";
-      if (value >= 85) return "ok";
-      if (value >= 70) return "warn";
-      return "risk";
-    }
-
-    if (value >= 85) return "good";
-    if (value >= 65) return "ok";
-    if (value >= 40) return "warn";
-    return "risk";
   }
 
   function clampPercent(value) {
@@ -356,23 +341,20 @@ window.Folkevalget = (() => {
     if (isCurrentMinister(profile)) {
       flags.push({ key: "minister", label: "Minister" });
     }
-    if (isNorthAtlanticMandate(profile)) {
-      flags.push({ key: "north-atlantic", label: "Nordatlantisk mandat" });
-    }
     if (profile?.seniority_tag === "newcomer") {
-      flags.push({ key: "newcomer", label: "Ny i Folketinget" });
+      flags.push({ key: "newcomer", label: "Ny" });
     }
-    if (profile?.seniority_tag === "experienced") {
-      flags.push({ key: "experienced", label: "Erfaren" });
+    if (isNorthAtlanticMandate(profile)) {
+      flags.push({ key: "north-atlantic", label: "Nordatlantisk" });
     }
-    return flags;
+    return flags.slice(0, 2);
   }
 
   function profileContextNotes(profile) {
     const notes = [];
     if (isCurrentMinister(profile)) {
       notes.push(
-        "Ministre deltager ofte sjældnere i afstemninger, fordi de varetager ministerarbejde og ikke altid er til stede i salen."
+        "Ministre deltager sjældnere i afstemninger, fordi de varetager ministerarbejde og ikke altid er til stede i salen."
       );
     }
     if (isNorthAtlanticMandate(profile)) {
@@ -387,9 +369,11 @@ window.Folkevalget = (() => {
     if (!root || !stats) {
       return;
     }
+
     const profileNode = root.querySelector("[data-stat='profiles']");
     const voteNode = root.querySelector("[data-stat='votes']");
     const updatedNode = root.querySelector("[data-stat='updated']");
+
     if (profileNode) {
       profileNode.textContent = formatNumber(stats.counts?.profiles);
     }
@@ -399,6 +383,44 @@ window.Folkevalget = (() => {
     if (updatedNode) {
       updatedNode.textContent = formatDate(stats.generated_at);
     }
+  }
+
+  function initNavigation() {
+    const toggle = document.querySelector("[data-nav-toggle]");
+    const nav = document.querySelector("[data-site-nav]");
+    if (!toggle || !nav) {
+      return;
+    }
+
+    const closeMenu = () => {
+      toggle.setAttribute("aria-expanded", "false");
+      nav.dataset.open = "false";
+    };
+
+    toggle.addEventListener("click", () => {
+      const isOpen = nav.dataset.open === "true";
+      nav.dataset.open = String(!isOpen);
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+    });
+
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    const mediaQuery = window.matchMedia("(min-width: 641px)");
+    const syncForViewport = () => {
+      if (mediaQuery.matches) {
+        closeMenu();
+      }
+    };
+
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", syncForViewport);
+    } else if (typeof mediaQuery.addListener === "function") {
+      mediaQuery.addListener(syncForViewport);
+    }
+
+    syncForViewport();
   }
 
   return {
@@ -420,7 +442,6 @@ window.Folkevalget = (() => {
     isNorthAtlanticMandate,
     loadCatalogueData,
     loadVoteData,
-    metricTone,
     normaliseText,
     partyDisplayName,
     photoCreditText,
