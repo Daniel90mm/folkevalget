@@ -1,6 +1,7 @@
 const CLOSE_VOTE_THRESHOLD_PCT = 10;
-
 const VotesApp = (() => {
+  const VALID_SORTS = new Set(["date_desc", "passed_first", "failed_first", "close_first", "split_first"]);
+
   const state = {
     profiles: [],
     profilesById: new Map(),
@@ -51,7 +52,8 @@ const VotesApp = (() => {
     const params = new URLSearchParams(window.location.search);
     state.query = params.get("q") || "";
     state.partyFilter = params.get("party") || "";
-    state.sortMode = params.get("sort") || "date_desc";
+    const sortMode = params.get("sort") || "date_desc";
+    state.sortMode = VALID_SORTS.has(sortMode) ? sortMode : "date_desc";
     state.closeOnly = params.get("close") === "1";
     state.splitOnly = params.get("split") === "1";
 
@@ -149,6 +151,22 @@ const VotesApp = (() => {
   }
 
   function compareVotes(left, right) {
+    if (state.sortMode === "passed_first") {
+      const outcomeDelta = compareOutcomePriority(left, right, true);
+      if (outcomeDelta !== 0) {
+        return outcomeDelta;
+      }
+      return compareVotesByDate(left, right);
+    }
+
+    if (state.sortMode === "failed_first") {
+      const outcomeDelta = compareOutcomePriority(left, right, false);
+      if (outcomeDelta !== 0) {
+        return outcomeDelta;
+      }
+      return compareVotesByDate(left, right);
+    }
+
     if (state.sortMode === "close_first") {
       const delta = voteMarginSharePct(left) - voteMarginSharePct(right);
       if (delta !== 0) {
@@ -170,6 +188,12 @@ const VotesApp = (() => {
     }
 
     return compareVotesByDate(left, right);
+  }
+
+  function compareOutcomePriority(left, right, outcomeFirst) {
+    const leftMatches = left.vedtaget === outcomeFirst ? 1 : 0;
+    const rightMatches = right.vedtaget === outcomeFirst ? 1 : 0;
+    return rightMatches - leftMatches;
   }
 
   function compareVotesByDate(left, right) {
