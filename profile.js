@@ -18,11 +18,17 @@ const ProfileApp = (() => {
   const historyPanel = document.querySelector("#profile-history-panel");
   const historyList = document.querySelector("#profile-history-list");
   const committeePanel = document.querySelector("#profile-committee-panel");
+  const hvervPanel = document.querySelector("#profile-hverv-panel");
+  const hvervBody = document.querySelector("#profile-hverv-body");
+  const hvervSourceNote = document.querySelector("#profile-hverv-source-note");
   const sectionGrids = Array.from(document.querySelectorAll(".profile-section-grid"));
 
   async function boot() {
     const profileId = Number(new URLSearchParams(window.location.search).get("id"));
-    const { profiles, stats } = await window.Folkevalget.loadCatalogueData();
+    const [{ profiles, stats }, hvervData] = await Promise.all([
+      window.Folkevalget.loadCatalogueData(),
+      window.Folkevalget.fetchJson("data/hverv.json").catch(() => null),
+    ]);
     window.Folkevalget.renderStats(statsRoot, stats);
 
     const profile = profiles.find((entry) => entry.id === profileId) || null;
@@ -31,7 +37,7 @@ const ProfileApp = (() => {
       return;
     }
 
-    renderProfile(profile);
+    renderProfile(profile, hvervData);
   }
 
   function renderEmpty() {
@@ -39,7 +45,7 @@ const ProfileApp = (() => {
     pageContent.classList.add("hidden");
   }
 
-  function renderProfile(profile) {
+  function renderProfile(profile, hvervData) {
     emptyState.classList.add("hidden");
     pageContent.classList.remove("hidden");
 
@@ -88,6 +94,7 @@ const ProfileApp = (() => {
     renderBackground(profile);
     renderHistory(profile);
     renderCommittees(profile.committees || []);
+    renderHverv(profile, hvervData);
     renderRecentVotes(profile.recent_votes || []);
     updateSectionGrids();
   }
@@ -354,6 +361,84 @@ const ProfileApp = (() => {
 
     photoCredit.classList.remove("hidden");
     photoCredit.textContent = `Portrætfoto: ${creditText}`;
+  }
+
+  function renderHverv(profile, hvervData) {
+    hvervBody.innerHTML = "";
+    hvervSourceNote.textContent = "";
+    hvervPanel.classList.add("hidden");
+
+    if (!hvervData) return;
+
+    const entry = (hvervData.medlemmer || {})[String(profile.id)];
+
+    // Ingen data for dette MF overhovedet — skjul sektionen
+    if (!entry) return;
+
+    // Siden har ingen hverv-sektion (ny MF, eks-MF, Færø/Grønland) — skjul
+    if (entry.ingen_hverv_sektion) return;
+
+    hvervPanel.classList.remove("hidden");
+
+    const registreringer = entry.registreringer || [];
+
+    if (registreringer.length === 0) {
+      // Tom registrering — vis, men med forklaring (jf. design language 8.3)
+      const empty = document.createElement("p");
+      empty.className = "panel-empty";
+      empty.textContent = "Ikke registreret i Folketingets hvervregister.";
+      hvervBody.append(empty);
+    } else {
+      // Grupper poster efter kategori
+      const byKategori = new Map();
+      for (const post of registreringer) {
+        const kat = post.kategori || "Øvrigt";
+        if (!byKategori.has(kat)) byKategori.set(kat, []);
+        byKategori.get(kat).push(post.beskrivelse);
+      }
+
+      const list = document.createElement("dl");
+      list.className = "fact-list hverv-list";
+
+      for (const [kategori, beskrivelser] of byKategori) {
+        for (const beskrivelse of beskrivelser) {
+          const row = document.createElement("div");
+          row.className = "fact-row";
+
+          const dt = document.createElement("dt");
+          dt.textContent = kategori;
+
+          const dd = document.createElement("dd");
+          dd.textContent = beskrivelse;
+
+          row.append(dt, dd);
+          list.append(row);
+        }
+      }
+      hvervBody.append(list);
+    }
+
+    // Frivillighedsforbehold — vises altid
+    const note = document.createElement("p");
+    note.className = "hverv-voluntary-note";
+    note.textContent =
+      "Hvervregisteret er frivilligt. Manglende registreringer er ikke ensbetydende med fraværet af interesser.";
+    hvervBody.append(note);
+
+    // Kilde og dato — scrapet data, ikke løbende opdateret
+    const hentet = entry.hentet ? window.Folkevalget.formatDate(entry.hentet) : null;
+    const sourceText = hentet
+      ? `Kilde: Folketingets hvervregister. Data hentet ${hentet} — opdateres manuelt, ikke løbende.`
+      : "Kilde: Folketingets hvervregister.";
+
+    const sourceLink = document.createElement("a");
+    sourceLink.href = "https://www.ft.dk/da/medlemmer/hverv-og-oekonomiske-interesser";
+    sourceLink.target = "_blank";
+    sourceLink.rel = "noreferrer";
+    sourceLink.textContent = "Se hvervregisteret på ft.dk";
+
+    hvervSourceNote.textContent = sourceText + " ";
+    hvervSourceNote.append(sourceLink);
   }
 
   function renderRecentVotes(votes) {

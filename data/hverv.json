@@ -1,0 +1,3157 @@
+{
+  "genereret": "2026-03-01",
+  "antal_mf": 240,
+  "note": "Hvervregisteret er frivilligt. Manglende registreringer betyder IKKE nødvendigvis fraværet af økonomiske interesser.",
+  "medlemmer": {
+    "20352": {
+      "id": 20352,
+      "navn": "Helene Brydensholt",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/h/helene-brydensholt",
+      "hentet": "2026-03-01"
+    },
+    "20353": {
+      "id": 20353,
+      "navn": "Sascha Faxe",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/sascha-faxe",
+      "hentet": "2026-03-01"
+    },
+    "15775": {
+      "id": 15775,
+      "navn": "Torsten Gejl",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Delejer af Nordic Pass og OCN Danmark. Virksomhederne drives af en driftchef.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/torsten-gejl",
+      "hentet": "2026-03-01"
+    },
+    "20629": {
+      "id": 20629,
+      "navn": "Nikoline Erbs Hillers-Bendtsen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/n/nikoline-erbs-hillers-bendtsen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20527": {
+      "id": 20527,
+      "navn": "Nanna Høyrup",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/n/nanna-hoeyrup",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20381": {
+      "id": 20381,
+      "navn": "Karin Liltorp",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Konsulentvirksomhed CMC solutions ApS.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/karin-liltorp",
+      "hentet": "2026-03-01"
+    },
+    "20370": {
+      "id": 20370,
+      "navn": "Christina Olumeko",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/c/christina-olumeko",
+      "hentet": "2026-03-01"
+    },
+    "20351": {
+      "id": 20351,
+      "navn": "Franciska Rosenkilde",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/f/franciska-rosenkilde",
+      "hentet": "2026-03-01"
+    },
+    "20539": {
+      "id": 20539,
+      "navn": "Noah Sturis",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/n/noah-sturis",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "18724": {
+      "id": 18724,
+      "navn": "Lars Boje Mathiesen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/lars-boje-mathiesen",
+      "hentet": "2026-03-01"
+    },
+    "162": {
+      "id": 162,
+      "navn": "Karina Adsbøl",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/karina-adsboel",
+      "hentet": "2026-03-01"
+    },
+    "20355": {
+      "id": 20355,
+      "navn": "Kim Edberg Andersen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/kim-edberg-andersen",
+      "hentet": "2026-03-01"
+    },
+    "20747": {
+      "id": 20747,
+      "navn": "Jenny Andresen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jenny-andresen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "15774": {
+      "id": 15774,
+      "navn": "Lise Bech",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/lise-bech",
+      "hentet": "2026-03-01"
+    },
+    "20376": {
+      "id": 20376,
+      "navn": "Kristian Bøgsted",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/kristian-boegsted",
+      "hentet": "2026-03-01"
+    },
+    "113": {
+      "id": 113,
+      "navn": "Jens Henrik Thulesen Dahl",
+      "registreringer": [
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov fra Aarhus Kommune.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jens-henrik-thulesen-dahl",
+      "hentet": "2026-03-01"
+    },
+    "34": {
+      "id": 34,
+      "navn": "Søren Espersen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/soeren-espersen",
+      "hentet": "2026-03-01"
+    },
+    "119": {
+      "id": 119,
+      "navn": "Dennis Flydtkjær",
+      "registreringer": [
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Novo Nordisk",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/d/dennis-flydtkjaer",
+      "hentet": "2026-03-01"
+    },
+    "17629": {
+      "id": 17629,
+      "navn": "Mads Fuglede",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Radiovært og kommentator i aviserne, bl.a. Jyllands-Posten og TV2-News.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Oplægsholder.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mads-fuglede",
+      "hentet": "2026-03-01"
+    },
+    "1146": {
+      "id": 1146,
+      "navn": "Marlene Harpsøe",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem Plejehjemmet Birkebo.",
+          "cvr": null
+        },
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov fra Fredensborg Kommune.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/marlene-harpsoee",
+      "hentet": "2026-03-01"
+    },
+    "20373": {
+      "id": 20373,
+      "navn": "Susie Jessen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/susie-jessen",
+      "hentet": "2026-03-01"
+    },
+    "20372": {
+      "id": 20372,
+      "navn": "Betina Kastbjerg",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/b/betina-kastbjerg",
+      "hentet": "2026-03-01"
+    },
+    "20375": {
+      "id": 20375,
+      "navn": "Charlotte Munch Pasler",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem i selskaberne HOFOR Vand Holding A/S og HOFOR Spildevand Holding A/S. Observatør i DIPD.",
+          "cvr": null
+        },
+        {
+          "kategori": "Udenlandsrejser",
+          "beskrivelse": "Rejse til Israel den 19.-23. maj 2024, betalt af ELNET (European Leadership Network).",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/c/charlotte-munch-pasler",
+      "hentet": "2026-03-01"
+    },
+    "20374": {
+      "id": 20374,
+      "navn": "Kenneth Fredslund Petersen",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Enkeltmandsvirksomhed Opportunity Management.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Apple Inc.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/kenneth-fredslund-petersen",
+      "hentet": "2026-03-01"
+    },
+    "48": {
+      "id": 48,
+      "navn": "Peter Skaarup",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Medlem af Landsskatteretten.",
+          "cvr": null
+        },
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Gruppeformand Danmarksdemokraterne.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/peter-skaarup",
+      "hentet": "2026-03-01"
+    },
+    "82": {
+      "id": 82,
+      "navn": "Hans Kristian Skibby",
+      "registreringer": [
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Danske Bank Novo Nordisk DSV Maersk Royal Unibrew Bavarian Nordic Vestas Ørsted A/S",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/h/hans-kristian-skibby",
+      "hentet": "2026-03-01"
+    },
+    "182": {
+      "id": 182,
+      "navn": "Inger Støjberg",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Partiformand for Danmarksdemokraterne.",
+          "cvr": null
+        },
+        {
+          "kategori": "Udenlandsrejser",
+          "beskrivelse": "Rejse til Israel den 2.-4. januar 2024, betalt af ELNET (European Leadership Network).",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/i/inger-stoejberg",
+      "hentet": "2026-03-01"
+    },
+    "20823": {
+      "id": 20823,
+      "navn": "Morten Vehl",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/morten-vehl",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "18": {
+      "id": 18,
+      "navn": "Alex Ahrendtsen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/alex-ahrendtsen",
+      "hentet": "2026-03-01"
+    },
+    "20356": {
+      "id": 20356,
+      "navn": "Mikkel Bjørn",
+      "registreringer": [
+        {
+          "kategori": "Udenlandsrejser",
+          "beskrivelse": "Rejse til Helsinki, Finland, den 19.-21. maj 2023. Givet af New Direction, Foundation of European Reform. Rejse til London, UK, den 29. oktober - 1. november 2023. Givet af ARC, Alliance for Responsible Citizenship. Rejse til Jerusalem og Tel Aviv, Israel, den 16.-20. juni 2024. Givet af ELNET, European Leadership Network. Rejse til Taipei, Taiwan, den 10.-16. oktober 2024. Givet af Taiwans repræsentation, København. Rejse til London, UK, den 16.-19. februar 2025. Givet af ARC, Alliance for Responsible Citizenship.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mikkel-bjoern",
+      "hentet": "2026-03-01"
+    },
+    "252": {
+      "id": 252,
+      "navn": "Pia Kjærsgaard",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Indtægter ved udgivelse af bogen »Sådan blev jeg Pia Kjærsgaard«. Udgivelsesdato den 9. september 2025.",
+          "cvr": {
+            "cvr_nummer": "30497880",
+            "virksomhedsnavn": "Kjærgaard & Kjærsgaard Distribution A/S",
+            "type": "",
+            "branche": "Vejgodstransport",
+            "adresse": "Skovlyvej 12B, 2690, Karlslunde",
+            "aktiv": true
+          }
+        },
+        {
+          "kategori": "Udenlandsrejser",
+          "beskrivelse": "Rejse til Taiwan den 10.-16. november 2024, givet af den taiwanske regering.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/pia-kjaersgaard",
+      "hentet": "2026-03-01"
+    },
+    "15763": {
+      "id": 15763,
+      "navn": "Peter Kofod",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/peter-kofod",
+      "hentet": "2026-03-01"
+    },
+    "238": {
+      "id": 238,
+      "navn": "Morten Messerschmidt",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Artikler, radioprogrammer m.v. som freelance. Juridisk konsulent for \"Stefansens Forlystelser fra 2009\".",
+          "cvr": {
+            "cvr_nummer": "15084774",
+            "virksomhedsnavn": "OTTO STEFANSEN A/S",
+            "type": "",
+            "branche": "Anlæg af veje og motorveje",
+            "adresse": "Fjordvejen 25B, 7600, Struer",
+            "aktiv": true
+          }
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "MASH Energy",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/morten-messerschmidt",
+      "hentet": "2026-03-01"
+    },
+    "20599": {
+      "id": 20599,
+      "navn": "Søren Rasmussen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/soeren-rasmussen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "18721": {
+      "id": 18721,
+      "navn": "Mette Thiesen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mette-thiesen",
+      "hentet": "2026-03-01"
+    },
+    "20350": {
+      "id": 20350,
+      "navn": "Nick Zimmermann",
+      "registreringer": [
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov fra stilling som lager- og logistikoperatør på Aarhus Universitetshospital.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/n/nick-zimmermann",
+      "hentet": "2026-03-01"
+    },
+    "15777": {
+      "id": 15777,
+      "navn": "Pelle Dragsted",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Forfatter.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/pelle-dragsted",
+      "hentet": "2026-03-01"
+    },
+    "9976": {
+      "id": 9976,
+      "navn": "Jette Gottlieb",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jette-gottlieb",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20779": {
+      "id": 20779,
+      "navn": "Runa Friis Hansen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/r/runa-friis-hansen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20642": {
+      "id": 20642,
+      "navn": "Anne Hegelund",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/anne-hegelund",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "16582": {
+      "id": 16582,
+      "navn": "Peder Hvelplund",
+      "registreringer": [
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov uden løn fra stilling i arbejdsmarkedsforvaltningen ved Hjørring Kommune på ubestemt tid.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/peder-hvelplund",
+      "hentet": "2026-03-01"
+    },
+    "20559": {
+      "id": 20559,
+      "navn": "Reza Javid",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/r/reza-javid",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "110": {
+      "id": 110,
+      "navn": "Rosa Lund",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/r/rosa-lund",
+      "hentet": "2026-03-01"
+    },
+    "109": {
+      "id": 109,
+      "navn": "Trine Pertou Mach",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/trine-pertou-mach",
+      "hentet": "2026-03-01"
+    },
+    "667": {
+      "id": 667,
+      "navn": "Søren Egge Rasmussen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Organisationsbestyrelsen Lejerbo Århus.",
+          "cvr": null
+        },
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Repræsentantskabsmedlem NRGI amba.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Andele i Den almennyttige Andelskasse Merkur. Vestas Wind System A/S",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/soeren-egge-rasmussen",
+      "hentet": "2026-03-01"
+    },
+    "20411": {
+      "id": 20411,
+      "navn": "Leila Stockmarr",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/leila-stockmarr",
+      "hentet": "2026-03-01"
+    },
+    "176": {
+      "id": 176,
+      "navn": "Søren Søndergaard",
+      "registreringer": [
+        {
+          "kategori": "Gaver fra indenlandske givere",
+          "beskrivelse": "Valgkampsbidrag fra kunstnere og kulturproducenter i regi af Copydan Verdens TV modtaget den 6. oktober 2022. Legatudlodning fra TGF-fonden modtaget den 28. oktober 2022.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/soeren-soendergaard",
+      "hentet": "2026-03-01"
+    },
+    "18694": {
+      "id": 18694,
+      "navn": "Victoria Velasquez",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/v/victoria-velasquez",
+      "hentet": "2026-03-01"
+    },
+    "18693": {
+      "id": 18693,
+      "navn": "Mai Villadsen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mai-villadsen",
+      "hentet": "2026-03-01"
+    },
+    "15757": {
+      "id": 15757,
+      "navn": "Aaja Chemnitz",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/aaja-chemnitz",
+      "hentet": "2026-03-01"
+    },
+    "19142": {
+      "id": 19142,
+      "navn": "Barbara Gaardlykke Apol",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/b/barbara-gaardlykke-apol",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "262": {
+      "id": 262,
+      "navn": "Sjúrður Skaale",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Laver underholdning/stand-up og holder foredrag.",
+          "cvr": null
+        },
+        {
+          "kategori": "Udenlandsrejser",
+          "beskrivelse": "Rejse til Armenien 2.-6. september 2024, delvis betalt af den danske hjælpeorganisation Mission10Forty. Rejse til Israel 6.-10. oktober 2024, delvis betalt af organisationen Elnet.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/sjuroeur-skaale",
+      "hentet": "2026-03-01"
+    },
+    "15793": {
+      "id": 15793,
+      "navn": "Mette Abildgaard",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Udlejning af sommerhus og lejlighed via tjenesten Air Bnb.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mette-abildgaard",
+      "hentet": "2026-03-01"
+    },
+    "18711": {
+      "id": 18711,
+      "navn": "Birgitte Bergman",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/b/birgitte-bergman",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20357": {
+      "id": 20357,
+      "navn": "Lise Bertelsen",
+      "registreringer": [
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov uden løn fra Region Midt, Børne- og Ungdomspsykiatrisk ambulatorium, Viborg.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/lise-bertelsen",
+      "hentet": "2026-03-01"
+    },
+    "20369": {
+      "id": 20369,
+      "navn": "Helle Bonnesen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem i Metroselskabet.",
+          "cvr": null
+        },
+        {
+          "kategori": "Udenlandsrejser",
+          "beskrivelse": "Rejse til Israel den 12.-14. februar 2024, betalt af ELNET (European Leadership Network). Rejse til Palæstina og Israel den 7.-11. september 2025, arrangeret af Folkekirkens Nødhjælp med støtte fra EU.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Cph Village Holding ApS. Gilead Sciences",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/h/helle-bonnesen",
+      "hentet": "2026-03-01"
+    },
+    "18712": {
+      "id": 18712,
+      "navn": "Niels Flemming Hansen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/n/niels-flemming-hansen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20917": {
+      "id": 20917,
+      "navn": "Tina Cartey Hansen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/tina-cartey-hansen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "21194": {
+      "id": 21194,
+      "navn": "Joachim Hoffmann-Petersen",
+      "registreringer": [
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov fra stilling som overlæge overlæge på anæstesi- og intensivafdelingen på Svendborg sygehus.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/joachim-hoffmann-petersen",
+      "hentet": "2026-03-01"
+    },
+    "1454": {
+      "id": 1454,
+      "navn": "Rasmus Jarlov",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesformand i Insectum.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Ejer af sightseeingvirksomheden Hamlet Tours.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Novo Nordisk Ørsted Green Mobility Scandion Oncology Fluoguide Genmab Jyske Bank Amazon Siemens Pfizer",
+          "cvr": null
+        },
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov fra stillingen som ekstern lektor på Handelshøjskolen i København.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/r/rasmus-jarlov",
+      "hentet": "2026-03-01"
+    },
+    "17141": {
+      "id": 17141,
+      "navn": "Brigitte Klintskov Jerkel",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/b/brigitte-klintskov-jerkel",
+      "hentet": "2026-03-01"
+    },
+    "18713": {
+      "id": 18713,
+      "navn": "Mona Juul",
+      "registreringer": [
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Mona Juul Holding ApS.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mona-juul",
+      "hentet": "2026-03-01"
+    },
+    "20767": {
+      "id": 20767,
+      "navn": "Andreas Karlsen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/andreas-karlsen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "11702": {
+      "id": 11702,
+      "navn": "Per Larsen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesformand Amgros I/S, cvr-nummer 1449880. Bestyrelsesmedlem Nordjyske Jernbaner, cvr-nummer 29818983.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Udlejning af ejendomme.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/per-larsen",
+      "hentet": "2026-03-01"
+    },
+    "189": {
+      "id": 189,
+      "navn": "Mai Mercado",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mai-mercado",
+      "hentet": "2026-03-01"
+    },
+    "20966": {
+      "id": 20966,
+      "navn": "Frederik Bloch Münster",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/f/frederik-bloch-munster",
+      "hentet": "2026-03-01"
+    },
+    "15784": {
+      "id": 15784,
+      "navn": "Søren Pape Poulsen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/soeren-pape-poulsen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20925": {
+      "id": 20925,
+      "navn": "Dina Raabjerg",
+      "registreringer": [
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Danske Bank A/S Kraken Robotics Inc",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/d/dina-raabjerg",
+      "hentet": "2026-03-01"
+    },
+    "17360": {
+      "id": 17360,
+      "navn": "Merete Scheelsbeck",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/merete-scheelsbeck",
+      "hentet": "2026-03-01"
+    },
+    "20820": {
+      "id": 20820,
+      "navn": "Carl Andersen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Ansættelse i Dansk Erhverv (stilling opsagt til udgangen af august 2024).",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/c/carl-andersen",
+      "hentet": "2026-03-01"
+    },
+    "20398": {
+      "id": 20398,
+      "navn": "Helena Artmann Andresen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/h/helena-artmann-andresen",
+      "hentet": "2026-03-01"
+    },
+    "15779": {
+      "id": 15779,
+      "navn": "Carsten Bach",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/c/carsten-bach",
+      "hentet": "2026-03-01"
+    },
+    "20392": {
+      "id": 20392,
+      "navn": "Lars-Christian Brask",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesformand Board Company A/S. Bestyrelsesmedlem CH Byg A/S. Bestyrelsesmedlem LM/Pihl A/S. Bestyrelsesmedlem Dyreværnet Bestyrelsesmedlem FORS A/S Bestyrelsesmedlem Selskabet for Liberale Visioner",
+          "cvr": null
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Konsulentvirksomhed 1G9 v/Lars-Christian Brask.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Alibaba Group AMBU Apple AP Møller-Mærsk Astrazeneca Cisco Danske Bank DSV Exxon Mobil Corporation Goldman Sachs Group H. Lundbeck Heineken Hennes & Mauritz Intel Jyske Bank Metro AG Novo Nordisk Novonesis Nvidia Pandora Rias Rockwool SSAB Skako Tryg Vestas Waste Management Zealand Pharma",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/lars-christian-brask",
+      "hentet": "2026-03-01"
+    },
+    "20399": {
+      "id": 20399,
+      "navn": "Louise Brown",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/louise-brown",
+      "hentet": "2026-03-01"
+    },
+    "15800": {
+      "id": 15800,
+      "navn": "Henrik Dahl",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/h/henrik-dahl",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20393": {
+      "id": 20393,
+      "navn": "Katrine Daugaard",
+      "registreringer": [
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Tjenestefrihed uden løn fra Nordfyns Musikskole, Nordfyns Kommune.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/katrine-daugaard",
+      "hentet": "2026-03-01"
+    },
+    "20394": {
+      "id": 20394,
+      "navn": "Steffen W. Frølund",
+      "registreringer": [
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Likeminded.vc ApS Likeminded.vc Management ApS Likeminded.vc GP I ApS Likeminded.vc Fund I K/S Likeminded.vc CIV I K/S PLUTO.MARKETS INC. MARKET READER INC. GamerPay Inc. Adress A/S Estaid ApS All Gravy ApS Palett Food A/S Legaldesk.dk ApS Simpelwire ApS Strise A/S Comundo ApS Metacompany Holding ApS Toddle ApS SmallClaims ApS NordInsights Health Tech ApS Teacherspace ApS Chase Labs LTD Prescriby ehf. Lightbringer AB Wolfpack A/S Chatsimple Inc. Pandektes ApS Paradox ApS",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/steffen-w-froelund",
+      "hentet": "2026-03-01"
+    },
+    "20391": {
+      "id": 20391,
+      "navn": "Sólbjørg Jakobsen",
+      "registreringer": [
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov fra stilling som fuldmægtig i Vurderingsstyrelsen. Orlov fra stilling som ekstern lektor ved Aalborg Universitet.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/solbjoerg-jakobsen",
+      "hentet": "2026-03-01"
+    },
+    "20397": {
+      "id": 20397,
+      "navn": "Steffen Larsen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Driftsdirektør ved Amalo.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "SL Electric som el-installatør/elektriker.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/steffen-larsen",
+      "hentet": "2026-03-01"
+    },
+    "20396": {
+      "id": 20396,
+      "navn": "Jens Meilvang",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem Grenaa Havn.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Ejendomsinvestering",
+          "cvr": null
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "BioPorto A/S MPA Invest ApS Djursbyg 1 ApS Djurs Estate ApS Djurs Invest ApS Novo Nordisk",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jens-meilvang",
+      "hentet": "2026-03-01"
+    },
+    "99": {
+      "id": 99,
+      "navn": "Ole Birk Olesen",
+      "registreringer": [
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Próspera 4301 50th St. NW Ste 300-1093 Washington DC 20016-4364",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/o/ole-birk-olesen",
+      "hentet": "2026-03-01"
+    },
+    "20395": {
+      "id": 20395,
+      "navn": "Alexander Ryle",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Medlem af Vurderingsankenævn København.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/alexander-ryle",
+      "hentet": "2026-03-01"
+    },
+    "20400": {
+      "id": 20400,
+      "navn": "Sandra Elisabeth Skalvig",
+      "registreringer": [
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov i valgperioden fra Professionshøjskolen VIA University College.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/sandra-elisabeth-skalvig",
+      "hentet": "2026-03-01"
+    },
+    "18703": {
+      "id": 18703,
+      "navn": "Alex Vanopslagh",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Partiformand for Liberal Alliance.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Ejer af enkeltmandsvirksomheden \"Vejen til ansvar\".",
+          "cvr": {
+            "cvr_nummer": "37221120",
+            "virksomhedsnavn": "Vejen til Ansvar",
+            "type": "",
+            "branche": "Detailhandel med bøger",
+            "adresse": "Göteborg Plads 15, 5. th., 2150, Nordhavn",
+            "aktiv": true
+          }
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/alex-vanopslagh",
+      "hentet": "2026-03-01"
+    },
+    "18723": {
+      "id": 18723,
+      "navn": "Pernille Vermund",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Indehaver af arkitektfirmaet \"Vermund Gere Arkitekter\".",
+          "cvr": {
+            "cvr_nummer": "37367796",
+            "virksomhedsnavn": "Vermund Gere Arkitekter MAA",
+            "type": "",
+            "branche": "Arkitektvirksomhed",
+            "adresse": "G A Hagemanns Vej 14, 3070, Snekkersten",
+            "aktiv": false
+          }
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/pernille-vermund",
+      "hentet": "2026-03-01"
+    },
+    "21159": {
+      "id": 21159,
+      "navn": "Ammar Ali",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/ammar-ali",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20496": {
+      "id": 20496,
+      "navn": "Henrik Rejnholt Andersen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/h/henrik-rejnholt-andersen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20916": {
+      "id": 20916,
+      "navn": "Kenneth Bjerg Andersen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/kenneth-bjerg-andersen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20805": {
+      "id": 20805,
+      "navn": "Jan Carlsen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jan-carlsen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20841": {
+      "id": 20841,
+      "navn": "Lars Arne Christensen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/lars-arne-christensen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20379": {
+      "id": 20379,
+      "navn": "Tobias Grotkjær Elmstrøm",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Advokat og ejer af Advokatfirmaet Grotkjær Elmstrøm.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Advokatfirmaet Grotkjær Elmstrøm.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/tobias-grotkjaer-elmstroem",
+      "hentet": "2026-03-01"
+    },
+    "57": {
+      "id": 57,
+      "navn": "Jakob Engel-Schmidt",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jakob-engel-schmidt",
+      "hentet": "2026-03-01"
+    },
+    "20378": {
+      "id": 20378,
+      "navn": "Rosa Eriksen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Timelønnet sygeplejerske på OUH, registreret i vikarbureauet Powercare.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/r/rosa-eriksen",
+      "hentet": "2026-03-01"
+    },
+    "20377": {
+      "id": 20377,
+      "navn": "Henrik Frandsen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/h/henrik-frandsen",
+      "hentet": "2026-03-01"
+    },
+    "20384": {
+      "id": 20384,
+      "navn": "Nanna W. Gotfredsen",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "BDH Lawyering - foredragsvirksomhed.",
+          "cvr": null
+        },
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Ulønnet orlov fra stilling hos Gadejuristen.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/n/nanna-w-gotfredsen",
+      "hentet": "2026-03-01"
+    },
+    "20385": {
+      "id": 20385,
+      "navn": "Charlotte Bagge Hansen",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Ejer af butikken Moshroom.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/c/charlotte-bagge-hansen",
+      "hentet": "2026-03-01"
+    },
+    "20389": {
+      "id": 20389,
+      "navn": "Peter Have",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Hoteldrift.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Låsby Kro og Hotel ApS, cvr-nummer 36534540. P & F Ejendomsselskab, cvr-nummer 37868639.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/peter-have",
+      "hentet": "2026-03-01"
+    },
+    "20382": {
+      "id": 20382,
+      "navn": "Mette Kierkgaard",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mette-kierkgaard",
+      "hentet": "2026-03-01"
+    },
+    "20387": {
+      "id": 20387,
+      "navn": "Kristian Klarskov",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/kristian-klarskov",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20386": {
+      "id": 20386,
+      "navn": "Rasmus Lund-Nielsen",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Faciliterer et netværk om mental sundhed cirka hver anden måned. Lejlighedsvis varetagelse af opgaver som selvstændig erhvervspsykolog.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/r/rasmus-lund-nielsen",
+      "hentet": "2026-03-01"
+    },
+    "20580": {
+      "id": 20580,
+      "navn": "Lean Milo",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesformand Ducksuite.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "C Media, cvr-nummer 35814108.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/lean-milo",
+      "hentet": "2026-03-01"
+    },
+    "20976": {
+      "id": 20976,
+      "navn": "Caroline Stage Olsen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/c/caroline-stage-olsen",
+      "hentet": "2026-03-01"
+    },
+    "145": {
+      "id": 145,
+      "navn": "Lars Løkke Rasmussen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/lars-loekke-rasmussen",
+      "hentet": "2026-03-01"
+    },
+    "20415": {
+      "id": 20415,
+      "navn": "Mohammad Rona",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mohammad-rona",
+      "hentet": "2026-03-01"
+    },
+    "20380": {
+      "id": 20380,
+      "navn": "Monika Rubin",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Facilitator hos Samuelsens sundhedsnetværk. Underviser på SOL-kurser i speciallægeuddannelsen, ansat af Sundhedsstyrelsen.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Northwest Biotherapeutics.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/monika-rubin",
+      "hentet": "2026-03-01"
+    },
+    "18688": {
+      "id": 18688,
+      "navn": "Aki-Matilda Høegh-Dam",
+      "registreringer": [
+        {
+          "kategori": "Udenlandsrejser",
+          "beskrivelse": "Rejse til USA, 16. september - 8. oktober 2023, til The International Visitor Leadership Programme, givet af U.S. Department of State.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/aki-matilda-hoeegh-dam",
+      "hentet": "2026-03-01"
+    },
+    "21206": {
+      "id": 21206,
+      "navn": "Elvira Kûitse",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/e/elvira-kuitse",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "141": {
+      "id": 141,
+      "navn": "Martin Lidegaard",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/martin-lidegaard",
+      "hentet": "2026-03-01"
+    },
+    "18726": {
+      "id": 18726,
+      "navn": "Stinus Lindgreen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem Videnskabsklubben.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/stinus-lindgreen",
+      "hentet": "2026-03-01"
+    },
+    "18725": {
+      "id": 18725,
+      "navn": "Samira Nawa",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Medlem af Danmarks Nationalbanks Repræsentantskab.",
+          "cvr": null
+        },
+        {
+          "kategori": "Udenlandsrejser",
+          "beskrivelse": "Rejse til Palæstina og Israel den 7.-11. september 2025, arrangeret af Folkekirkens Nødhjælp med støtte fra EU.",
+          "cvr": null
+        },
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Tjenestefri uden løn fra stilling som specialkonsulent i Finansministeriet.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/samira-nawa",
+      "hentet": "2026-03-01"
+    },
+    "100": {
+      "id": 100,
+      "navn": "Sofie Carsten Nielsen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/sofie-carsten-nielsen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "18729": {
+      "id": 18729,
+      "navn": "Katrine Robsøe",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/katrine-robsoee",
+      "hentet": "2026-03-01"
+    },
+    "112": {
+      "id": 112,
+      "navn": "Lotte Rod",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/lotte-rod",
+      "hentet": "2026-03-01"
+    },
+    "191": {
+      "id": 191,
+      "navn": "Zenia Stampe",
+      "registreringer": [
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov fra Erhvervs- og Byggestyrelsen.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/z/zenia-stampe",
+      "hentet": "2026-03-01"
+    },
+    "19928": {
+      "id": 19928,
+      "navn": "Kim Aas",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/kim-aas",
+      "hentet": "2026-03-01"
+    },
+    "1619": {
+      "id": 1619,
+      "navn": "Yildiz Akdogan",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/y/yildiz-akdogan",
+      "hentet": "2026-03-01"
+    },
+    "351": {
+      "id": 351,
+      "navn": "Sophie Hæstorp Andersen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/sophie-haestorp-andersen",
+      "hentet": "2026-03-01"
+    },
+    "152": {
+      "id": 152,
+      "navn": "Ida Auken",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Enkeltmandsvirksomheden \"Circular Economy\" der tilbyder rådgivning og foredragsvirksomhed.",
+          "cvr": {
+            "cvr_nummer": "37626384",
+            "virksomhedsnavn": "Circular Economy",
+            "type": "",
+            "branche": "Public relations og kommunikation",
+            "adresse": "Folkets Alle 21, st, 2000, Frederiksberg",
+            "aktiv": true
+          }
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/i/ida-auken",
+      "hentet": "2026-03-01"
+    },
+    "20363": {
+      "id": 20363,
+      "navn": "Sara Emil Baaring",
+      "registreringer": [
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov fra arbejdet som skolelærer i Assens Kommune.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/sara-emil-baaring",
+      "hentet": "2026-03-01"
+    },
+    "15787": {
+      "id": 15787,
+      "navn": "Kaare Dybvad Bek",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/kaare-dybvad-bek",
+      "hentet": "2026-03-01"
+    },
+    "118": {
+      "id": 118,
+      "navn": "Trine Bramsen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/trine-bramsen",
+      "hentet": "2026-03-01"
+    },
+    "18717": {
+      "id": 18717,
+      "navn": "Bjørn Brandenborg",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Formand for Ungdomsringen, lønnet bestyrelsespost.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/b/bjoern-brandenborg",
+      "hentet": "2026-03-01"
+    },
+    "214": {
+      "id": 214,
+      "navn": "Jeppe Bruus",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jeppe-bruus",
+      "hentet": "2026-03-01"
+    },
+    "220": {
+      "id": 220,
+      "navn": "Morten Bødskov",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/morten-boedskov",
+      "hentet": "2026-03-01"
+    },
+    "20368": {
+      "id": 20368,
+      "navn": "Maria Durhuus",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/maria-durhuus",
+      "hentet": "2026-03-01"
+    },
+    "120": {
+      "id": 120,
+      "navn": "Benny Engelbrecht",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem Danmarks Nationalbanks Repræsentantskab.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Udgivelse af bøger og musik.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/b/benny-engelbrecht",
+      "hentet": "2026-03-01"
+    },
+    "18720": {
+      "id": 18720,
+      "navn": "Camilla Fabricius",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/c/camilla-fabricius",
+      "hentet": "2026-03-01"
+    },
+    "138": {
+      "id": 138,
+      "navn": "Mette Frederiksen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mette-frederiksen",
+      "hentet": "2026-03-01"
+    },
+    "278": {
+      "id": 278,
+      "navn": "Karin Gaardsted",
+      "registreringer": [
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Ambu DSV A/S Ringkøbing Landbobank GN Store Nord Novo Nordisk Zealand Pharma",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/karin-gaardsted",
+      "hentet": "2026-03-01"
+    },
+    "197": {
+      "id": 197,
+      "navn": "Mette Gjerskov",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mette-gjerskov",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "286": {
+      "id": 286,
+      "navn": "Ane Halsboe-Jørgensen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/ane-halsboe-joergensen",
+      "hentet": "2026-03-01"
+    },
+    "21186": {
+      "id": 21186,
+      "navn": "Mads Madsen Henriksen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mads-madsen-henriksen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "244": {
+      "id": 244,
+      "navn": "Magnus Heunicke",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/magnus-heunicke",
+      "hentet": "2026-03-01"
+    },
+    "21083": {
+      "id": 21083,
+      "navn": "Thorkild Holmboe-Hay",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/thorkild-holmboe-hay",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20051": {
+      "id": 20051,
+      "navn": "Theis Kylling Hommeltoft",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/theis-kylling-hommeltoft",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "15776": {
+      "id": 15776,
+      "navn": "Peter Hummelgaard",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/peter-hummelgaard",
+      "hentet": "2026-03-01"
+    },
+    "273": {
+      "id": 273,
+      "navn": "Per Husted",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem MARTEC.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Konsulentydelser gennem PH Information ApS.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "PH Information ApS (ejer 100 pct.) GTI Invest ApS (ejer 12,5 pct.) Ved Havnen A/S (ejer 10,7 pct.) Ved Stranden Erhverv A/S (ejer 12,5 pct.) Jacob Møllers Gård A/S (ejer 12,5 pct.) Ved Banen A/S (ejer 12,5 pct.) Erhvervshuset Ved Aalborgvej A/S (ejer 12,5 pct.) Hadsund Erhvervspark A/S (ejer 10 pct.) Ved Færgen A/S (ejer 7,5 pct.) Erhvervshuset Revlingen, Møldrup A/S (ejer 1,3 pct.)",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/per-husted",
+      "hentet": "2026-03-01"
+    },
+    "20361": {
+      "id": 20361,
+      "navn": "Fie Hækkerup",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/f/fie-haekkerup",
+      "hentet": "2026-03-01"
+    },
+    "260": {
+      "id": 260,
+      "navn": "Leif Lahn Jensen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/leif-lahn-jensen",
+      "hentet": "2026-03-01"
+    },
+    "154": {
+      "id": 154,
+      "navn": "Mogens Jensen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Formand for Folketeatrets bestyrelse.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mogens-jensen",
+      "hentet": "2026-03-01"
+    },
+    "201": {
+      "id": 201,
+      "navn": "Thomas Jensen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/thomas-jensen",
+      "hentet": "2026-03-01"
+    },
+    "20366": {
+      "id": 20366,
+      "navn": "Thomas Skriver Jensen",
+      "registreringer": [
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "AL Sydbank.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/thomas-skriver-jensen",
+      "hentet": "2026-03-01"
+    },
+    "213": {
+      "id": 213,
+      "navn": "Jens Joel",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Medlem af Skatterådet.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jens-joel",
+      "hentet": "2026-03-01"
+    },
+    "167": {
+      "id": 167,
+      "navn": "Dan Jørgensen",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/d/dan-joergensen",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "18714": {
+      "id": 18714,
+      "navn": "Kasper Sand Kjær",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/kasper-sand-kjaer",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "21143": {
+      "id": 21143,
+      "navn": "Morten Klessen",
+      "registreringer": [
+        {
+          "kategori": "Udenlandsrejser",
+          "beskrivelse": "Rejse til Taiwan den 23.-29. november 2025, givet af Det Taiwanesiske repræsentative kontor i Danmark.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/morten-klessen",
+      "hentet": "2026-03-01"
+    },
+    "235": {
+      "id": 235,
+      "navn": "Jeppe Kofod",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jeppe-kofod",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "208": {
+      "id": 208,
+      "navn": "Simon Kollerup",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem i Aalborg Universitet. Præsident i Beredskabsforbundet.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/simon-kollerup",
+      "hentet": "2026-03-01"
+    },
+    "38": {
+      "id": 38,
+      "navn": "Astrid Krag",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/astrid-krag",
+      "hentet": "2026-03-01"
+    },
+    "18718": {
+      "id": 18718,
+      "navn": "Anders Kronborg",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Medlem af regionsbestyrelsen i Arbejdernes Landsbank.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/anders-kronborg",
+      "hentet": "2026-03-01"
+    },
+    "266": {
+      "id": 266,
+      "navn": "Rasmus Horn Langhoff",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Foredragsvirksomhed.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/r/rasmus-horn-langhoff",
+      "hentet": "2026-03-01"
+    },
+    "16351": {
+      "id": 16351,
+      "navn": "Malte Larsen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem Norlys a.m.b.a. Bestyrelsesmedlem Norlys Fibernet.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Udlejning og landbrug, cvr-nummer 15845007.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/malte-larsen",
+      "hentet": "2026-03-01"
+    },
+    "18882": {
+      "id": 18882,
+      "navn": "Tanja Larsson",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/tanja-larsson",
+      "hentet": "2026-03-01"
+    },
+    "257": {
+      "id": 257,
+      "navn": "Bjarne Laustsen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/b/bjarne-laustsen",
+      "hentet": "2026-03-01"
+    },
+    "181": {
+      "id": 181,
+      "navn": "Annette Lind",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/annette-lind",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "15762": {
+      "id": 15762,
+      "navn": "Christian Rabjerg Madsen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem i Helsefonden.",
+          "cvr": null
+        },
+        {
+          "kategori": "Udenlandsrejser",
+          "beskrivelse": "Rejse til USA's officielle repræsentation i NATOs hovedkvarter i Bruxelles den 25.-27. april 2022. Turen blev betalt af Den Amerikanske ambassade i Danmark. Rejse (endagstur) til Grønland, Thule den 19. april 2023. Turen blev betalt af Den Amerikanske ambassade i Danmark.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/c/christian-rabjerg-madsen",
+      "hentet": "2026-03-01"
+    },
+    "20930": {
+      "id": 20930,
+      "navn": "Louise Mehnke",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/louise-mehnke",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "20362": {
+      "id": 20362,
+      "navn": "Thomas Monberg",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/thomas-monberg",
+      "hentet": "2026-03-01"
+    },
+    "224": {
+      "id": 224,
+      "navn": "Flemming Møller Mortensen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Klosterforstander Aalborg Kloster. Formand for Danish Institute for Parties and Democracy. Næstformand for Dansk Kulturinstitut.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/f/flemming-moeller-mortensen",
+      "hentet": "2026-03-01"
+    },
+    "18715": {
+      "id": 18715,
+      "navn": "Henrik Møller",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem i Den Koorperative Fond. Formand for Fællesrådet. Medlem af Regionsrådet i Arbejdernes Landsbank.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/h/henrik-moeller",
+      "hentet": "2026-03-01"
+    },
+    "16503": {
+      "id": 16503,
+      "navn": "Anne Paulin",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/anne-paulin",
+      "hentet": "2026-03-01"
+    },
+    "21044": {
+      "id": 21044,
+      "navn": "Lasse Haugaard Pedersen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/lasse-haugaard-pedersen",
+      "hentet": "2026-03-01"
+    },
+    "97": {
+      "id": 97,
+      "navn": "Jesper Petersen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Medlem af Danmarks Nationalbanks Repræsentantskab.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jesper-petersen",
+      "hentet": "2026-03-01"
+    },
+    "20365": {
+      "id": 20365,
+      "navn": "Matilde Powers",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Medlem af Det rådgivende repræsentantskab, Arbejdernes Landsbank.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/matilde-powers",
+      "hentet": "2026-03-01"
+    },
+    "264": {
+      "id": 264,
+      "navn": "Rasmus Prehn",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/r/rasmus-prehn",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "74": {
+      "id": 74,
+      "navn": "Mette Reissmann",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesformand på Marstal Navigationsskole.",
+          "cvr": null
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Forbruger Consult ApS, konsulentvirksomhed.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mette-reissmann",
+      "hentet": "2026-03-01"
+    },
+    "172": {
+      "id": 172,
+      "navn": "Pernille Rosenkrantz-Theil",
+      "registreringer": [],
+      "ingen_registreringer": null,
+      "cvr_berigelse": [],
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/pernille-rosenkrantz-theil",
+      "hentet": "2026-03-01",
+      "fejl": "Siden kunne ikke hentes"
+    },
+    "16180": {
+      "id": 16180,
+      "navn": "Kasper Roug",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/kasper-roug",
+      "hentet": "2026-03-01"
+    },
+    "20367": {
+      "id": 20367,
+      "navn": "Kris Jensen Skriver",
+      "registreringer": [
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov uden løn fra lærerstilling i Billund Kommune.",
+          "cvr": null
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/kris-jensen-skriver",
+      "hentet": "2026-03-01"
+    },
+    "18716": {
+      "id": 18716,
+      "navn": "Rasmus Stoklund",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/r/rasmus-stoklund",
+      "hentet": "2026-03-01"
+    },
+    "15770": {
+      "id": 15770,
+      "navn": "Mattias Tesfaye",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mattias-tesfaye",
+      "hentet": "2026-03-01"
+    },
+    "20364": {
+      "id": 20364,
+      "navn": "Frederik Vad",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem A/B Valentinergården, cvr-nummer 15168919."
+        },
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Udviklingsansvarlig i Træningsskolens Arbejdsmarkedsuddannelser TAMU."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/f/frederik-vad",
+      "hentet": "2026-03-01"
+    },
+    "18719": {
+      "id": 18719,
+      "navn": "Birgitte Vind",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Lejlighedsvis udlejning af værelser som Bed and Breakfast."
+        },
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov uden løn fra stilling som afdelingsleder i Vejle Kommunes Skolevæsen."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/b/birgitte-vind",
+      "hentet": "2026-03-01"
+    },
+    "12": {
+      "id": 12,
+      "navn": "Nicolai Wammen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/n/nicolai-wammen",
+      "hentet": "2026-03-01"
+    },
+    "15760": {
+      "id": 15760,
+      "navn": "Lea Wermelin",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem Horsens Fjernvarme A/S. Bestyrelsesmedlem Fonden Mental Sundhed."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/lea-wermelin",
+      "hentet": "2026-03-01"
+    },
+    "20781": {
+      "id": 20781,
+      "navn": "Gunvor Wibroe",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "GW kommunikation, cvr-nr. 45301419."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/g/gunvor-wibroe",
+      "hentet": "2026-03-01"
+    },
+    "20359": {
+      "id": 20359,
+      "navn": "Sigurd Agersnap",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/sigurd-agersnap",
+      "hentet": "2026-03-01"
+    },
+    "16728": {
+      "id": 16728,
+      "navn": "Kirsten Normann Andersen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Gæstelærer på Sundhedsstyrelsens Overbygningsuddannelse for Læger (SOL)."
+        },
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov fra Aarhus Kommune fra stilling som sygehjælper."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/kirsten-normann-andersen",
+      "hentet": "2026-03-01"
+    },
+    "19000": {
+      "id": 19000,
+      "navn": "Theresa Berg Andersen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Censor ved pædagoguddannelsen i Danmark."
+        },
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov uden løn fra stillingen som dagtilbudsleder i Vesthimmerlands Kommune."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/theresa-berg-andersen",
+      "hentet": "2026-03-01"
+    },
+    "219": {
+      "id": 219,
+      "navn": "Lisbeth Bech-Nielsen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Medlem af Danmarks Nationalbanks Repræsentantskab."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/lisbeth-bech-nielsen",
+      "hentet": "2026-03-01"
+    },
+    "18278": {
+      "id": 18278,
+      "navn": "Serdal Benli",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/serdal-benli",
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "18706": {
+      "id": 18706,
+      "navn": "Anne Valentina Berthelsen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/anne-valentina-berthelsen",
+      "hentet": "2026-03-01"
+    },
+    "20358": {
+      "id": 20358,
+      "navn": "Marianne Bigum",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem i Hellebro"
+        },
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Beskikket censor ved Civilingeniøruddannelsernes Censorkorps."
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Udlejning af lejlighed via tjenesten airbnb."
+        },
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov fra stilling som chefkonsulent i Københavns Kommune."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/marianne-bigum",
+      "hentet": "2026-03-01"
+    },
+    "18707": {
+      "id": 18707,
+      "navn": "Astrid Carøe",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/astrid-caroee",
+      "hentet": "2026-03-01"
+    },
+    "121": {
+      "id": 121,
+      "navn": "Karina Lorentzen Dehnhardt",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/karina-lorentzen-dehnhardt",
+      "hentet": "2026-03-01"
+    },
+    "43": {
+      "id": 43,
+      "navn": "Pia Olsen Dyhr",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/pia-olsen-dyhr",
+      "hentet": "2026-03-01"
+    },
+    "19920": {
+      "id": 19920,
+      "navn": "Karsten Filsø",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/karsten-filsoe",
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "199": {
+      "id": 199,
+      "navn": "Karsten Hønge",
+      "registreringer": [
+        {
+          "kategori": "Udenlandsrejser",
+          "beskrivelse": "Juli 2024, international møde i Taipei, betalt af Taiwans udenrigsministerium. September 2025, rundrejse i Palæstina/Israel, betalt af Folkekirkens Nødhjælp."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/karsten-hoenge",
+      "hentet": "2026-03-01"
+    },
+    "20962": {
+      "id": 20962,
+      "navn": "Claus Jørgensen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/c/claus-joergensen",
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "20360": {
+      "id": 20360,
+      "navn": "Sofie Lippert",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Lægdommer ved Retten på Frederiksberg."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/sofie-lippert",
+      "hentet": "2026-03-01"
+    },
+    "15788": {
+      "id": 15788,
+      "navn": "Jacob Mark",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jacob-mark",
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "18709": {
+      "id": 18709,
+      "navn": "Signe Munk",
+      "registreringer": [
+        {
+          "kategori": "Gaver fra indenlandske givere",
+          "beskrivelse": "Billet til Skanderborg Festival 2022, givet af Skanderborg Festival."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/signe-munk",
+      "hentet": "2026-03-01"
+    },
+    "18708": {
+      "id": 18708,
+      "navn": "Charlotte Broman Mølbæk",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/c/charlotte-broman-moelbaek",
+      "hentet": "2026-03-01"
+    },
+    "18704": {
+      "id": 18704,
+      "navn": "Halime Oguz",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/h/halime-oguz",
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "20798": {
+      "id": 20798,
+      "navn": "Mads Olsen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mads-olsen",
+      "hentet": "2026-03-01"
+    },
+    "17628": {
+      "id": 17628,
+      "navn": "Carl Valentin",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/c/carl-valentin",
+      "hentet": "2026-03-01"
+    },
+    "20635": {
+      "id": 20635,
+      "navn": "Markus E. Olsen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/markus-e-olsen",
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "20349": {
+      "id": 20349,
+      "navn": "Anna Falkenberg",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/anna-falkenberg",
+      "hentet": "2026-03-01"
+    },
+    "18722": {
+      "id": 18722,
+      "navn": "Peter Seier Christensen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/peter-seier-christensen",
+      "hentet": "2026-03-01"
+    },
+    "20390": {
+      "id": 20390,
+      "navn": "Mike Villa Fonseca",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Sygeplejerske, Sjællands Universitetshospital, akutafdelingen (Køge sygehus). Brandmand, Køge brand og redning."
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Udlejning af lejlighed."
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Novo Nordisk B A/S"
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/mike-villa-fonseca",
+      "hentet": "2026-03-01"
+    },
+    "20354": {
+      "id": 20354,
+      "navn": "Theresa Scavenius",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "1/10 stilling som lektor ved Aalborg Universitet."
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Klimapolitisk Foredrag og Rådgivning, cvr-nummer 40689672."
+        },
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov fra Aalborg Universitet uden løn for 9/10 af ansættelsen."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/theresa-scavenius",
+      "hentet": "2026-03-01"
+    },
+    "20388": {
+      "id": 20388,
+      "navn": "Jon Stephensen",
+      "registreringer": [
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Mærsk Vestas Danske Bank Novozymes Novo Advice"
+        },
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Aftale om fortsat lønudbetaling for opsagt direktørstilling i Aveny-T frem til juni 2023, der modregnes i folketingsvederlaget."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jon-stephensen",
+      "hentet": "2026-03-01"
+    },
+    "20383": {
+      "id": 20383,
+      "navn": "Jeppe Søe",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem i Thrane Erhverv."
+        },
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Arbejder freelance i Zensro."
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Enkeltmands virksomheden FRIHED TIL FORSKELLIGHED."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jeppe-soee",
+      "hentet": "2026-03-01"
+    },
+    "18698": {
+      "id": 18698,
+      "navn": "Marlene Ambo-Rasmussen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Næstformand i bestyrelsen i Vandcenter Syd, Odense."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/marlene-ambo-rasmussen",
+      "hentet": "2026-03-01"
+    },
+    "164": {
+      "id": 164,
+      "navn": "Hans Andersen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem We Power A/S Bestyrelsesmedlem i Fonden Mariehjemmene Bestyrelsesformand Selma Marie"
+        },
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Kommiteret for Hjemmeværnet."
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Andersen Rådgivning (PMV)."
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Novo Nordisk A/S"
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/h/hans-andersen",
+      "hentet": "2026-03-01"
+    },
+    "134": {
+      "id": 134,
+      "navn": "Christian Friis Bach",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem Engsko A/S, cvr-nummer 35493018."
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Deltidslandmand, Vejgaard, cvr-nummer 13859086. Direktør og medejer af Warfair ApS, cvr-nummer 40934731. Direktør og medejer af Vejgaard Holding ApS, cvr-nummer 40930078."
+        },
+        {
+          "kategori": "Udenlandsrejser",
+          "beskrivelse": "Rejse til Palæstina/Israel den 7.-11. september 2025, givet af Folkekirkens Nødhjælp. Rejse til Palæstina/Israel den 11.-12. september 2025, givet af Warfair ApS."
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Ejer af Vejgaard, cvr-nummer 13859086. Medejer af Warfair ApS, cvr-nummer 40934731. Medejer af Vejgaard Holding ApS, cvr-nummer 40930078."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/c/christian-friis-bach",
+      "hentet": "2026-03-01"
+    },
+    "18700": {
+      "id": 18700,
+      "navn": "Heidi Bank",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Medlem af Planklagenævnet."
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Ejer et økologisk landbrug."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/h/heidi-bank",
+      "hentet": "2026-03-01"
+    },
+    "18701": {
+      "id": 18701,
+      "navn": "Marie Bjerre",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/marie-bjerre",
+      "hentet": "2026-03-01"
+    },
+    "49": {
+      "id": 49,
+      "navn": "Erling Bonnesen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem i Fonden Dansk Gastronomisk Union. Medlem af Miljø- og Fødevareklagenævnet."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/e/erling-bonnesen",
+      "hentet": "2026-03-01"
+    },
+    "18696": {
+      "id": 18696,
+      "navn": "Morten Dahlin",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/morten-dahlin",
+      "hentet": "2026-03-01"
+    },
+    "139": {
+      "id": 139,
+      "navn": "Thomas Danielsen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/thomas-danielsen",
+      "hentet": "2026-03-01"
+    },
+    "93": {
+      "id": 93,
+      "navn": "Louise Elholm",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Danmarks Nationalbanks Repræsentantskab. Landsskatteretten."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/louise-elholm",
+      "hentet": "2026-03-01"
+    },
+    "207": {
+      "id": 207,
+      "navn": "Jakob Ellemann-Jensen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jakob-ellemann-jensen",
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "20941": {
+      "id": 20941,
+      "navn": "Preben Friis-Hauge",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/preben-friis-hauge",
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "1845": {
+      "id": 1845,
+      "navn": "Søren Gade",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesformand Esbjerg Havn."
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Vestjysk Bank Danske Bank Deutsche Bank Novo Nordisk B Ørsted A/S"
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/soeren-gade",
+      "hentet": "2026-03-01"
+    },
+    "265": {
+      "id": 265,
+      "navn": "Eva Kjer Hansen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/e/eva-kjer-hansen",
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "127": {
+      "id": 127,
+      "navn": "Preben Bang Henriksen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/preben-bang-henriksen",
+      "hentet": "2026-03-01"
+    },
+    "173": {
+      "id": 173,
+      "navn": "Jacob Jensen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jacob-jensen",
+      "hentet": "2026-03-01"
+    },
+    "178": {
+      "id": 178,
+      "navn": "Michael Aastrup Jensen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/m/michael-aastrup-jensen",
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "180": {
+      "id": 180,
+      "navn": "Peter Juel-Jensen",
+      "registreringer": [
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Medejer af landbrugsvirksomhed Ndr. Ellebygård."
+        },
+        {
+          "kategori": "Aftaler med tidligere arbejdsgiver",
+          "beskrivelse": "Orlov fra Bornholms Regionskommune."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/p/peter-juel-jensen",
+      "hentet": "2026-03-01"
+    },
+    "102": {
+      "id": 102,
+      "navn": "Jan E. Jørgensen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Medlem af Skatterådet."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/j/jan-e-joergensen",
+      "hentet": "2026-03-01"
+    },
+    "20790": {
+      "id": 20790,
+      "navn": "Ken Kristensen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/ken-kristensen",
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "217": {
+      "id": 217,
+      "navn": "Lars Christian Lilleholt",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/lars-christian-lilleholt",
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "194": {
+      "id": 194,
+      "navn": "Kristian Pihl Lorentzen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/kristian-pihl-lorentzen",
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "130": {
+      "id": 130,
+      "navn": "Sophie Løhde",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/s/sophie-loehde",
+      "hentet": "2026-03-01"
+    },
+    "168": {
+      "id": 168,
+      "navn": "Anni Matthiesen",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem i Helsefonden. Stedfortræder i Miljø- og Fødevareklagenævnet."
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Udlejning af en lejlighed i Aarhus og København."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/a/anni-matthiesen",
+      "hentet": "2026-03-01"
+    },
+    "18699": {
+      "id": 18699,
+      "navn": "Christoffer Aagaard Melson",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem Dansk Institut for Partier og Demokrati (DIPD)."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/c/christoffer-aagaard-melson",
+      "hentet": "2026-03-01"
+    },
+    "80": {
+      "id": 80,
+      "navn": "Torsten Schack Pedersen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/torsten-schack-pedersen",
+      "hentet": "2026-03-01"
+    },
+    "206": {
+      "id": 206,
+      "navn": "Troels Lund Poulsen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/t/troels-lund-poulsen",
+      "hentet": "2026-03-01"
+    },
+    "21168": {
+      "id": 21168,
+      "navn": "Erik Veje Rasmussen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "registrering_note": "Ingen registreringer. Registreringen er frivillig — dette er ikke ensbetydende med fraværet af interesser.",
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/e/erik-veje-rasmussen",
+      "hentet": "2026-03-01"
+    },
+    "125": {
+      "id": 125,
+      "navn": "Hans Christian Schmidt",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Bestyrelsesmedlem i Dansk Hestevæddeløb."
+        },
+        {
+          "kategori": "Selvstændig virksomhed",
+          "beskrivelse": "Udlejning af bolig."
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Genmab B&O Bavarian Nordic Ambu B"
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/h/hans-christian-schmidt",
+      "hentet": "2026-03-01"
+    },
+    "20371": {
+      "id": 20371,
+      "navn": "Linea Søgaard-Lidell",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Medlem af Danmarks Nationalbanks Repræsentantskab."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/l/linea-soegaard-lidell",
+      "hentet": "2026-03-01"
+    },
+    "18695": {
+      "id": 18695,
+      "navn": "Kim Valentin",
+      "registreringer": [
+        {
+          "kategori": "Lønnede bestyrelsesposter",
+          "beskrivelse": "Medlem af repræsentantskabet i Tryghedsgruppen. Landsformand for Liberalt Oplysningsforbund."
+        },
+        {
+          "kategori": "Lønnede stillinger, hverv el.lign.",
+          "beskrivelse": "Administrerende direktør og partner i Finanshuset i Fredensborg A/S."
+        },
+        {
+          "kategori": "Udenlandsrejser",
+          "beskrivelse": "Green tour, Japan. Betalt flybillet og ophold i Miyama i perioden 2.-6. august 2019."
+        },
+        {
+          "kategori": "Selskabsinteresser",
+          "beskrivelse": "Finanshuset i Fredensborg gennem holdingselskab. Treasury ApS. Pivot partner ApS."
+        }
+      ],
+      "ingen_registreringer": false,
+      "registrering_note": null,
+      "kilde_url": "https://www.ft.dk/da/medlemmer/mf/k/kim-valentin",
+      "hentet": "2026-03-01"
+    },
+    "20128": {
+      "id": 20128,
+      "navn": "Ida Holmgaard",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": null,
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "1158": {
+      "id": 1158,
+      "navn": "Per Movritsen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": null,
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "19548": {
+      "id": 19548,
+      "navn": "Andreas Sommer Møller",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": null,
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "20529": {
+      "id": 20529,
+      "navn": "Rikke Abildgaard Ryberg",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": null,
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "19826": {
+      "id": 19826,
+      "navn": "Dennis Barndorph Sichlau",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": null,
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "21285": {
+      "id": 21285,
+      "navn": "Mikkeline Storch",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": null,
+      "hentet": "2026-03-01",
+      "fejl": null
+    },
+    "390": {
+      "id": 390,
+      "navn": "Morten Villumsen",
+      "registreringer": [],
+      "ingen_registreringer": true,
+      "ingen_hverv_sektion": true,
+      "registrering_note": "Siden har ingen hverv-sektion. Registreringen er frivillig.",
+      "kilde_url": null,
+      "hentet": "2026-03-01",
+      "fejl": null
+    }
+  }
+}
