@@ -27,39 +27,52 @@ window.Folkevalget = (() => {
     V: "vedtagelse",
   };
   const THEME_STORAGE_KEY = "folkevalget-theme";
+  let catalogueDataPromise = null;
 
   const siteBasePath = detectSiteBasePath();
   initThemeToggle();
   initNavigation();
+  initGlobalSiteStats();
 
   async function loadCatalogueData() {
+    if (catalogueDataPromise) {
+      return catalogueDataPromise;
+    }
+
     const bootstrapProfiles = Array.isArray(readBootstrapPayload()?.profiles)
       ? readBootstrapPayload().profiles
       : null;
     const bootstrapStats = readBootstrapPayload()?.stats ?? null;
 
-    const [profilesResult, statsResult] = await Promise.allSettled([
-      bootstrapProfiles ? Promise.resolve(bootstrapProfiles) : fetchJson("data/profiler.json"),
-      bootstrapStats ? Promise.resolve(bootstrapStats) : fetchJson("data/site_stats.json"),
-    ]);
+    catalogueDataPromise = (async () => {
+      const [profilesResult, statsResult] = await Promise.allSettled([
+        bootstrapProfiles ? Promise.resolve(bootstrapProfiles) : fetchJson("data/profiler.json"),
+        bootstrapStats ? Promise.resolve(bootstrapStats) : fetchJson("data/site_stats.json"),
+      ]);
 
-    if (profilesResult.status !== "fulfilled") {
-      throw profilesResult.reason;
-    }
+      if (profilesResult.status !== "fulfilled") {
+        throw profilesResult.reason;
+      }
 
-    const profiles = profilesResult.value;
-    const stats =
-      statsResult.status === "fulfilled"
-        ? statsResult.value
-        : {
-            generated_at: null,
-            counts: {
-              profiles: profiles.length,
-              votes: 0,
-            },
-          };
+      const profiles = profilesResult.value;
+      const stats =
+        statsResult.status === "fulfilled"
+          ? statsResult.value
+          : {
+              generated_at: null,
+              counts: {
+                profiles: profiles.length,
+                votes: 0,
+              },
+            };
 
-    return { profiles, stats };
+      return { profiles, stats };
+    })().catch((error) => {
+      catalogueDataPromise = null;
+      throw error;
+    });
+
+    return catalogueDataPromise;
   }
 
   async function loadVoteData() {
@@ -448,6 +461,21 @@ window.Folkevalget = (() => {
 
     stats.parentNode.insertBefore(tools, stats);
     tools.append(toggle, stats);
+  }
+
+  function initGlobalSiteStats() {
+    const statsRoot = document.querySelector("[data-site-stats]");
+    if (!statsRoot) {
+      return;
+    }
+
+    loadCatalogueData()
+      .then(({ stats }) => {
+        renderStats(statsRoot, stats);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
 
   function readStoredTheme() {
