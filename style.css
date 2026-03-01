@@ -1684,6 +1684,15 @@ img {
   color: #003b6f;
 }
 
+html[data-theme="dark"] .member-card[data-party="DF"]::before {
+  background: #4f8fc2;
+}
+
+html[data-theme="dark"] .party-pill[data-party="DF"],
+html[data-theme="dark"] .party-code-badge[data-party="DF"] {
+  color: #4f8fc2;
+}
+
 .member-card[data-party="IA"]::before {
   background: #266a91;
 }
