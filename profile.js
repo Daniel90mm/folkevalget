@@ -7,6 +7,7 @@ const ProfileApp = (() => {
   const profileTags = document.querySelector("#profile-tags");
   const contextNote = document.querySelector("#profile-context-note");
   const photoCredit = document.querySelector("#profile-photo-credit");
+  const attendanceTooltip = document.querySelector("#attendance-tooltip-body");
   const overviewPanel = document.querySelector("#profile-overview-panel");
   const overviewList = document.querySelector("#profile-overview-list");
   const backgroundPanel = document.querySelector("#profile-background-panel");
@@ -76,6 +77,7 @@ const ProfileApp = (() => {
       window.Folkevalget.photoCreditText(profile)
     );
     renderPhotoCredit(profile);
+    renderAttendanceTooltip(profile);
 
     renderMetric("attendance", window.Folkevalget.formatPercent(profile.attendance_pct));
     renderMetric("for", window.Folkevalget.formatNumber(profile.votes_for));
@@ -293,6 +295,24 @@ const ProfileApp = (() => {
 
       root.append(item);
     }
+  }
+
+  function renderAttendanceTooltip(profile) {
+    if (!attendanceTooltip) {
+      return;
+    }
+
+    const notes = [
+      "Andelen af registrerede afstemninger, hvor medlemmet afgav en stemme i stedet for at være fraværende.",
+    ];
+
+    if (window.Folkevalget.isNorthAtlanticMandate(profile)) {
+      notes.push(
+        "Medlemmer valgt i Færøerne og Grønland deltager ikke nødvendigvis i alle afstemninger, så fremmøde skal læses med ekstra kontekst."
+      );
+    }
+
+    attendanceTooltip.textContent = notes.join(" ");
   }
 
   function updateSectionGrids() {

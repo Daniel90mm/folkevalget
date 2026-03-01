@@ -366,11 +366,6 @@ window.Folkevalget = (() => {
         "Ministre deltager sjældnere i afstemninger, fordi de varetager ministerarbejde og ikke altid er til stede i salen."
       );
     }
-    if (isNorthAtlanticMandate(profile)) {
-      notes.push(
-        "Medlemmer valgt i Færøerne og Grønland deltager ikke nødvendigvis i alle afstemninger, så fremmøde skal læses med ekstra kontekst."
-      );
-    }
     return notes;
   }
 
