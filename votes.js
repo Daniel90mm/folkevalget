@@ -305,6 +305,7 @@ const VotesApp = (() => {
     const marginNote = document.querySelector("#vote-margin-note");
     const splitValue = document.querySelector("#vote-split-value");
     const splitNote = document.querySelector("#vote-split-note");
+    const splitParties = splitPartyLabels(vote);
 
     const marginVotes = Number(vote.margin || 0);
     const marginShare = voteMarginSharePct(vote);
@@ -320,29 +321,55 @@ const VotesApp = (() => {
 
     const splitCount = Number(vote.party_split_count || 0);
     splitValue.textContent = `${window.Folkevalget.formatNumber(splitCount)} partier`;
-    splitNote.textContent =
-      splitCount > 0
-        ? `${window.Folkevalget.formatNumber(splitCount)} parti${splitCount === 1 ? "" : "er"} havde intern uenighed.`
-        : "Ingen registrerede partisplits i denne afstemning.";
+    splitNote.textContent = describeSplitParties(splitParties, splitCount);
   }
 
   function renderVoteContext(vote) {
-    const notes = ["Partifilteret bruger partierne på afstemningstidspunktet."];
+    const notes = [];
+    const splitParties = splitPartyLabels(vote);
+
+    if (state.partyFilter) {
+      notes.push({
+        text: "Partifilteret bruger partierne på afstemningstidspunktet.",
+      });
+    }
+
     if (isCloseVote(vote)) {
-      notes.push("Afstemningen er markeret som tæt, fordi ja/nej-marginen er højst 10 procentpoint.");
+      notes.push({
+        text: "Afstemningen er markeret som tæt, fordi ja/nej-marginen er højst 10 procentpoint.",
+      });
     }
-    if (hasPartySplit(vote)) {
-      notes.push("Partisplit betyder, at mindst ét parti ikke stemte samlet i ja/nej-afstemningen.");
+
+    if (splitParties.length > 0) {
+      notes.push({
+        text: `Partisplit i denne afstemning: ${formatTextList(splitParties)}.`,
+      });
     }
+
     if (vote.konklusion) {
-      notes.push(vote.konklusion.trim());
+      notes.push({
+        text: vote.konklusion.trim(),
+      });
     }
+
     if (vote.kommentar) {
-      notes.push(vote.kommentar.trim());
+      notes.push({
+        text: vote.kommentar.trim(),
+        className: isMistakeVoteComment(vote.kommentar) ? "context-note-emphasis" : "",
+      });
     }
 
     voteContext.classList.toggle("hidden", notes.length === 0);
-    voteContext.innerHTML = notes.map((note) => `<p>${note}</p>`).join("");
+    voteContext.replaceChildren();
+
+    for (const note of notes) {
+      const paragraph = document.createElement("p");
+      paragraph.textContent = note.text;
+      if (note.className) {
+        paragraph.className = note.className;
+      }
+      voteContext.append(paragraph);
+    }
   }
 
   function renderPartyFilter(vote) {
@@ -513,6 +540,41 @@ const VotesApp = (() => {
 
   function hasPartySplit(vote) {
     return Number(vote.party_split_count || 0) > 0;
+  }
+
+  function splitPartyLabels(vote) {
+    return Object.entries(vote.vote_groups_by_party || {})
+      .filter(([, groups]) => Number(groups?.for?.length || 0) > 0 && Number(groups?.imod?.length || 0) > 0)
+      .map(([partyKey]) => formatPartyLabel(partyKey))
+      .sort((left, right) => left.localeCompare(right, "da"));
+  }
+
+  function describeSplitParties(splitParties, splitCount) {
+    if (splitParties.length > 0) {
+      return `Intern uenighed i ${formatTextList(splitParties)}.`;
+    }
+
+    if (splitCount > 0) {
+      return `${window.Folkevalget.formatNumber(splitCount)} parti${splitCount === 1 ? "" : "er"} havde intern uenighed.`;
+    }
+
+    return "Ingen registrerede partisplits i denne afstemning.";
+  }
+
+  function formatTextList(items) {
+    if (items.length <= 1) {
+      return items[0] || "";
+    }
+
+    if (items.length === 2) {
+      return `${items[0]} og ${items[1]}`;
+    }
+
+    return `${items.slice(0, -1).join(", ")} og ${items[items.length - 1]}`;
+  }
+
+  function isMistakeVoteComment(comment) {
+    return /^Ved en fejl\b/i.test(String(comment || "").trim());
   }
 
   function formatPartyLabel(partyKey) {
