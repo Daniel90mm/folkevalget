@@ -25,9 +25,10 @@ const ProfileApp = (() => {
 
   async function boot() {
     const profileId = Number(new URLSearchParams(window.location.search).get("id"));
-    const [{ profiles, stats }, hvervData] = await Promise.all([
+    const [{ profiles, stats }, hvervData, cvrData] = await Promise.all([
       window.Folkevalget.loadCatalogueData(),
       window.Folkevalget.fetchJson("data/hverv.json").catch(() => null),
+      window.Folkevalget.fetchJson("data/cvr_personer.json").catch(() => null),
     ]);
     window.Folkevalget.renderStats(statsRoot, stats);
 
@@ -37,7 +38,7 @@ const ProfileApp = (() => {
       return;
     }
 
-    renderProfile(profile, hvervData);
+    renderProfile(profile, hvervData, cvrData);
   }
 
   function renderEmpty() {
@@ -45,7 +46,7 @@ const ProfileApp = (() => {
     pageContent.classList.add("hidden");
   }
 
-  function renderProfile(profile, hvervData) {
+  function renderProfile(profile, hvervData, cvrData) {
     emptyState.classList.add("hidden");
     pageContent.classList.remove("hidden");
 
@@ -94,7 +95,7 @@ const ProfileApp = (() => {
     renderBackground(profile);
     renderHistory(profile);
     renderCommittees(profile.committees || []);
-    renderHverv(profile, hvervData);
+    renderHverv(profile, hvervData, cvrData);
     renderRecentVotes(profile.recent_votes || []);
     updateSectionGrids();
   }
@@ -363,86 +364,235 @@ const ProfileApp = (() => {
     photoCredit.textContent = `Portrætfoto: ${creditText}`;
   }
 
-  function renderHverv(profile, hvervData) {
+  function renderHverv(profile, hvervData, cvrData) {
     hvervBody.innerHTML = "";
     hvervSourceNote.textContent = "";
     hvervPanel.classList.add("hidden");
 
-    if (!hvervData) return;
+    const hvervEntry = (hvervData?.medlemmer || {})[String(profile.id)] || null;
+    const cvrEntry = (cvrData?.medlemmer || {})[String(profile.id)] || null;
+    const hasFtRegister = Boolean(hvervEntry) && !hvervEntry.ingen_hverv_sektion;
+    const activeCvrRelations = Array.isArray(cvrEntry?.active_relations) ? cvrEntry.active_relations.filter(Boolean) : [];
 
-    const entry = (hvervData.medlemmer || {})[String(profile.id)];
-
-    // Ingen data for dette MF overhovedet — skjul sektionen
-    if (!entry) return;
-
-    // Siden har ingen hverv-sektion (ny MF, eks-MF, Færø/Grønland) — skjul
-    if (entry.ingen_hverv_sektion) return;
+    if (!hasFtRegister && activeCvrRelations.length === 0) {
+      return;
+    }
 
     hvervPanel.classList.remove("hidden");
 
+    if (hasFtRegister) {
+      renderFtHvervBlock(hvervEntry);
+    }
+
+    if (activeCvrRelations.length > 0) {
+      renderCvrBlock(activeCvrRelations);
+    }
+
+    renderHvervSources(hvervEntry, hasFtRegister, cvrEntry, activeCvrRelations.length > 0, cvrData?.generated || null);
+  }
+
+  function renderFtHvervBlock(entry) {
+    const block = appendHvervBlock("Folketingets register");
     const registreringer = entry.registreringer || [];
 
     if (registreringer.length === 0) {
-      // Tom registrering — vis, men med forklaring (jf. design language 8.3)
       const empty = document.createElement("p");
       empty.className = "panel-empty";
       empty.textContent = "Ikke registreret i Folketingets hvervregister.";
-      hvervBody.append(empty);
-    } else {
-      // Grupper poster efter kategori
-      const byKategori = new Map();
-      for (const post of registreringer) {
-        const kat = post.kategori || "Øvrigt";
-        if (!byKategori.has(kat)) byKategori.set(kat, []);
-        byKategori.get(kat).push(post.beskrivelse);
-      }
-
-      const list = document.createElement("dl");
-      list.className = "fact-list hverv-list";
-
-      for (const [kategori, beskrivelser] of byKategori) {
-        for (const beskrivelse of beskrivelser) {
-          const row = document.createElement("div");
-          row.className = "fact-row";
-
-          const dt = document.createElement("dt");
-          dt.textContent = kategori;
-
-          const dd = document.createElement("dd");
-          dd.textContent = beskrivelse;
-
-          row.append(dt, dd);
-          list.append(row);
-        }
-      }
-      hvervBody.append(list);
+      block.append(empty);
+      return;
     }
 
-    // Kilde, dato og frivillighedsforbehold — kombineret én linje med tooltip
-    const hentet = entry.hentet ? window.Folkevalget.formatDate(entry.hentet) : null;
+    const byKategori = new Map();
+    for (const post of registreringer) {
+      const kategori = post.kategori || "Øvrigt";
+      if (!byKategori.has(kategori)) {
+        byKategori.set(kategori, []);
+      }
+      byKategori.get(kategori).push(post.beskrivelse);
+    }
 
-    const sourceLink = document.createElement("a");
-    sourceLink.href = "https://www.ft.dk/da/medlemmer/hverv-og-oekonomiske-interesser";
-    sourceLink.target = "_blank";
-    sourceLink.rel = "noreferrer";
-    sourceLink.textContent = "Se hvervregisteret på ft.dk";
+    const list = document.createElement("dl");
+    list.className = "fact-list hverv-list";
+
+    for (const [kategori, beskrivelser] of byKategori) {
+      for (const beskrivelse of beskrivelser) {
+        const row = document.createElement("div");
+        row.className = "fact-row";
+
+        const dt = document.createElement("dt");
+        dt.textContent = kategori;
+
+        const dd = document.createElement("dd");
+        dd.textContent = beskrivelse;
+
+        row.append(dt, dd);
+        list.append(row);
+      }
+    }
+
+    block.append(list);
+  }
+
+  function renderCvrBlock(relations) {
+    const block = appendHvervBlock("CVR-registeret");
+    const list = document.createElement("ul");
+    list.className = "detail-list cvr-relation-list";
+
+    for (const relation of relations) {
+      const item = document.createElement("li");
+      item.className = "cvr-relation-item";
+
+      const title = document.createElement("a");
+      title.className = "cvr-relation-link";
+      title.href = relation.company_url || "#";
+      title.target = "_blank";
+      title.rel = "noreferrer";
+      title.textContent = relation.company_name || relation.company_cvr || "CVR-relation";
+      item.append(title);
+
+      const summary = formatCvrRelationSummary(relation);
+      if (summary) {
+        const summaryLine = document.createElement("p");
+        summaryLine.className = "cvr-relation-meta";
+        summaryLine.textContent = summary;
+        item.append(summaryLine);
+      }
+
+      const factsLine = buildCvrFactsLine(relation);
+      if (factsLine) {
+        const facts = document.createElement("p");
+        facts.className = "cvr-relation-meta";
+        facts.textContent = factsLine;
+        item.append(facts);
+      }
+
+      list.append(item);
+    }
+
+    block.append(list);
+  }
+
+  function appendHvervBlock(labelText) {
+    const block = document.createElement("section");
+    block.className = "interest-block";
+
+    const label = document.createElement("p");
+    label.className = "field-label";
+    label.textContent = labelText;
+
+    block.append(label);
+    hvervBody.append(block);
+    return block;
+  }
+
+  function formatCvrRelationSummary(relation) {
+    const parts = [];
+    const roles = Array.isArray(relation.roles) ? relation.roles.filter(Boolean) : [];
+    if (roles.length > 0) {
+      parts.push(`Roller: ${roles.join(", ")}`);
+    }
+    if (relation.company_cvr) {
+      parts.push(`CVR ${relation.company_cvr}`);
+    }
+    if (relation.status) {
+      parts.push(`Status: ${relation.status}`);
+    }
+    return parts.join(" · ");
+  }
+
+  function buildCvrFactsLine(relation) {
+    const facts = Array.isArray(relation.facts) ? relation.facts : [];
+    if (facts.length === 0) {
+      return "";
+    }
+
+    const pickFirst = (label) => facts.find((fact) => normaliseFactLabel(fact.label) === label) || null;
+    const selected = [pickFirst("Ejerandel"), pickFirst("Stemmerettigheder"), pickFirst("Fratrådt")].filter(Boolean);
+
+    if (selected.length === 0) {
+      const joined = pickFirst("Tiltrædelsesdato");
+      if (joined) {
+        selected.push(joined);
+      }
+    }
+
+    return selected.map((fact) => `${normaliseFactLabel(fact.label)}: ${fact.value}`).join(" · ");
+  }
+
+  function normaliseFactLabel(label) {
+    return String(label || "").replace(/:$/, "").trim();
+  }
+
+  function renderHvervSources(hvervEntry, hasFtRegister, cvrEntry, hasCvrRegister, cvrGenerated) {
+    const sources = [];
+
+    if (hasFtRegister) {
+      const ftLink = document.createElement("a");
+      ftLink.href = "https://www.ft.dk/da/medlemmer/hverv-og-oekonomiske-interesser";
+      ftLink.target = "_blank";
+      ftLink.rel = "noreferrer";
+      ftLink.textContent = "ft.dk-hvervregister";
+      sources.push({
+        link: ftLink,
+        fetched: hvervEntry?.hentet ? window.Folkevalget.formatDate(hvervEntry.hentet) : "",
+      });
+    }
+
+    if (hasCvrRegister) {
+      const cvrLink = document.createElement("a");
+      cvrLink.href = cvrEntry?.person_url || cvrEntry?.search_url || "https://datacvr.virk.dk/";
+      cvrLink.target = "_blank";
+      cvrLink.rel = "noreferrer";
+      cvrLink.textContent = "Virk/CVR";
+      sources.push({
+        link: cvrLink,
+        fetched: cvrGenerated ? window.Folkevalget.formatDate(cvrGenerated) : "",
+      });
+    }
+
+    if (sources.length === 0) {
+      hvervSourceNote.textContent = "";
+      return;
+    }
+
+    hvervSourceNote.append("Kilder: ");
+    sources.forEach((source, index) => {
+      if (index > 0) {
+        hvervSourceNote.append(" · ");
+      }
+      hvervSourceNote.append(source.link);
+      if (source.fetched) {
+        hvervSourceNote.append(` (hentet ${source.fetched})`);
+      }
+    });
 
     const tooltipWrap = document.createElement("span");
     tooltipWrap.className = "tooltip-wrap";
     const tooltipTrigger = document.createElement("span");
     tooltipTrigger.className = "tooltip-trigger";
     tooltipTrigger.tabIndex = 0;
-    tooltipTrigger.setAttribute("aria-label", "Om hvervregisteret");
+    tooltipTrigger.setAttribute("aria-label", "Om registre og matchning");
     tooltipTrigger.textContent = "ⓘ";
+
     const tooltipBody = document.createElement("span");
     tooltipBody.className = "tooltip-body";
     tooltipBody.setAttribute("role", "tooltip");
-    tooltipBody.textContent =
-      "Hvervregisteret er frivilligt at udfylde. Manglende registreringer er ikke ensbetydende med fraværet af interesser. Data opdateres manuelt, ikke løbende.";
+
+    const notes = [];
+    if (hasFtRegister) {
+      notes.push(
+        "Hvervregisteret på ft.dk er frivilligt at udfylde. Manglende registreringer er ikke ensbetydende med fraværet af interesser."
+      );
+    }
+    if (hasCvrRegister) {
+      notes.push(
+        "CVR-delen bygger på præcis navnesøgning i den offentlige Virk-søgning. Hvis søgningen gav flere persontræf eller var usikker, vises intet."
+      );
+    }
+    tooltipBody.textContent = notes.join(" ");
     tooltipWrap.append(tooltipTrigger, tooltipBody);
 
-    hvervSourceNote.append("Kilde: ", sourceLink);
-    if (hentet) hvervSourceNote.append(` · Hentet ${hentet}`);
     hvervSourceNote.append(" ", tooltipWrap);
   }
 
