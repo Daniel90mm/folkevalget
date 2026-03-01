@@ -1,7 +1,7 @@
 const PartiesApp = (() => {
   const state = {
     rows: [],
-    sortMode: "members_desc",
+    sortMode: "name",
   };
 
   const statsRoot = document.querySelector("[data-site-stats]");
@@ -34,7 +34,7 @@ const PartiesApp = (() => {
 
   function hydrateStateFromQuery() {
     const params = new URLSearchParams(window.location.search);
-    state.sortMode = params.get("sort") || "members_desc";
+    state.sortMode = params.get("sort") || "name";
   }
 
   function syncControls() {
@@ -51,7 +51,7 @@ const PartiesApp = (() => {
 
   function syncQueryString() {
     const params = new URLSearchParams();
-    if (state.sortMode !== "members_desc") {
+    if (state.sortMode !== "name") {
       params.set("sort", state.sortMode);
     }
     const next = params.toString() ? `?${params.toString()}` : window.location.pathname;
@@ -159,10 +159,17 @@ const PartiesApp = (() => {
     const sortedRows = [...state.rows].sort(compareRows);
     for (const row of sortedRows) {
       const tableRow = rowTemplate.content.firstElementChild.cloneNode(true);
+      setDataLabel(tableRow.querySelector("[data-cell='party']"), "Parti");
+      setDataLabel(tableRow.querySelector("[data-cell='members']"), "Medlemmer");
+      setDataLabel(tableRow.querySelector("[data-cell='attendance']"), "Gns. fremmøde");
+      setDataLabel(tableRow.querySelector("[data-cell='loyalty']"), "Gns. loyalitet");
+      setDataLabel(tableRow.querySelector("[data-cell='committees']"), "Gns. udvalg");
+      setDataLabel(tableRow.querySelector("[data-cell='link']").parentElement, "Se profiler");
+
       renderPartyCell(tableRow.querySelector("[data-cell='party']"), row);
       tableRow.querySelector("[data-cell='members']").textContent = window.Folkevalget.formatNumber(row.memberCount);
-      tableRow.querySelector("[data-cell='attendance']").append(buildMetricBlock(row.attendanceAvg, "attendance"));
-      tableRow.querySelector("[data-cell='loyalty']").append(buildMetricBlock(row.loyaltyAvg, "loyalty"));
+      tableRow.querySelector("[data-cell='attendance']").append(buildMetricBlock(row.attendanceAvg, "Fremmøde"));
+      tableRow.querySelector("[data-cell='loyalty']").append(buildMetricBlock(row.loyaltyAvg, "Loyalitet"));
       tableRow.querySelector("[data-cell='committees']").textContent = formatDecimal(row.committeeAvg);
       tableRow.querySelector("[data-cell='link']").href = row.discoverUrl;
       tableBody.append(tableRow);
@@ -182,11 +189,11 @@ const PartiesApp = (() => {
     if (state.sortMode === "loyalty_asc") {
       return compareMetricRows(left, right, "loyaltyAvg", "asc");
     }
-    if (state.sortMode === "name") {
-      return left.displayName.localeCompare(right.displayName, "da");
+    if (state.sortMode === "members_desc") {
+      return right.memberCount - left.memberCount || left.displayName.localeCompare(right.displayName, "da");
     }
 
-    return right.memberCount - left.memberCount || left.displayName.localeCompare(right.displayName, "da");
+    return left.displayName.localeCompare(right.displayName, "da");
   }
 
   function compareMetricRows(left, right, key, direction) {
@@ -213,52 +220,52 @@ const PartiesApp = (() => {
     const wrap = document.createElement("div");
     wrap.className = "party-overview";
 
-    const pill = document.createElement("span");
-    pill.className = "party-pill party-pill-wide";
-    pill.dataset.party = row.shortName || "";
-    pill.textContent = row.displayName;
+    const badge = document.createElement("span");
+    badge.className = "party-pill";
+    badge.dataset.party = row.shortName || "";
+    badge.textContent = row.shortName || row.partyName;
 
-    const meta = document.createElement("div");
-    meta.className = "party-overview-meta";
+    const name = document.createElement("strong");
+    name.className = "party-name-text";
+    name.textContent = row.partyName;
 
-    if (row.ministerCount > 0) {
-      const tag = document.createElement("span");
-      tag.className = "context-tag context-tag-minister";
-      tag.textContent = `${window.Folkevalget.formatNumber(row.ministerCount)} ministre`;
-      meta.append(tag);
-    }
+    wrap.append(badge, name);
 
-    if (row.northAtlanticCount > 0) {
-      const tag = document.createElement("span");
-      tag.className = "context-tag context-tag-north-atlantic";
-      tag.textContent = `${window.Folkevalget.formatNumber(row.northAtlanticCount)} nordatlantisk`;
-      meta.append(tag);
-    }
+    if (row.ministerCount > 0 || row.northAtlanticCount > 0) {
+      const meta = document.createElement("div");
+      meta.className = "party-overview-meta";
 
-    wrap.append(pill);
-    if (meta.childElementCount > 0) {
+      if (row.ministerCount > 0) {
+        const tag = document.createElement("span");
+        tag.className = "context-tag context-tag-minister";
+        tag.textContent = `${window.Folkevalget.formatNumber(row.ministerCount)} ministre`;
+        meta.append(tag);
+      }
+
+      if (row.northAtlanticCount > 0) {
+        const tag = document.createElement("span");
+        tag.className = "context-tag context-tag-north-atlantic";
+        tag.textContent = `${window.Folkevalget.formatNumber(row.northAtlanticCount)} nordatlantiske`;
+        meta.append(tag);
+      }
+
       wrap.append(meta);
     }
+
     root.append(wrap);
   }
 
-  function buildMetricBlock(value, kind) {
+  function buildMetricBlock(value, label) {
     const block = document.createElement("div");
     block.className = "table-metric";
-    block.dataset.tone = window.Folkevalget.metricTone(value, kind);
 
     const valueNode = document.createElement("strong");
     valueNode.textContent = window.Folkevalget.formatPercent(value);
 
-    const track = document.createElement("div");
-    track.className = "mini-metric-track";
+    const labelNode = document.createElement("span");
+    labelNode.textContent = label;
 
-    const fill = document.createElement("span");
-    fill.className = "mini-metric-fill";
-    fill.style.width = `${window.Folkevalget.clampPercent(value)}%`;
-
-    track.append(fill);
-    block.append(valueNode, track);
+    block.append(valueNode, labelNode);
     return block;
   }
 
@@ -272,13 +279,19 @@ const PartiesApp = (() => {
     }).format(value);
   }
 
+  function setDataLabel(node, label) {
+    if (node) {
+      node.dataset.label = label;
+    }
+  }
+
   return { boot };
 })();
 
 PartiesApp.boot().catch((error) => {
   console.error(error);
-  const tableBody = document.querySelector("#party-table-body");
-  if (tableBody) {
-    tableBody.innerHTML = '<tr><td colspan="6"><div class="panel-empty">Kunne ikke indlæse partioversigten.</div></td></tr>';
+  const body = document.querySelector("#party-table-body");
+  if (body) {
+    body.innerHTML = '<tr><td colspan="6"><div class="panel-empty">Partioversigten kunne ikke indlæses.</div></td></tr>';
   }
 });
