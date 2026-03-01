@@ -245,7 +245,6 @@ const VotesApp = (() => {
 
     document.title = `${selectedVote.sag_number || "Afstemning"} | Folkevalget`;
     renderVoteHeader(selectedVote);
-    renderVoteMetrics(selectedVote);
     renderVoteSignalsSummary(selectedVote);
     renderVoteContext(selectedVote);
     renderPartyFilter(selectedVote);
@@ -275,18 +274,6 @@ const VotesApp = (() => {
       voteSourceLink.classList.add("hidden");
       voteSourceLink.removeAttribute("href");
     }
-  }
-
-  function renderVoteMetrics(vote) {
-    renderVoteMetric("for", vote.counts?.for);
-    renderVoteMetric("against", vote.counts?.imod);
-    renderVoteMetric("absent", vote.counts?.fravaer);
-    renderVoteMetric("neither", vote.counts?.hverken);
-  }
-
-  function renderVoteMetric(key, value) {
-    const metric = document.querySelector(`[data-vote-metric='${key}']`);
-    metric.querySelector("[data-value]").textContent = window.Folkevalget.formatNumber(value);
   }
 
   function renderVoteSignalsSummary(vote) {

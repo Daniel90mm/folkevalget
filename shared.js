@@ -268,12 +268,6 @@ window.Folkevalget = (() => {
     if (sortMode === "attendance_asc") {
       return compareMetric(left.attendance_pct, right.attendance_pct, left, right, "asc");
     }
-    if (sortMode === "loyalty_desc") {
-      return compareMetric(left.party_loyalty_pct, right.party_loyalty_pct, left, right, "desc");
-    }
-    if (sortMode === "loyalty_asc") {
-      return compareMetric(left.party_loyalty_pct, right.party_loyalty_pct, left, right, "asc");
-    }
     return compareByName(left, right);
   }
 

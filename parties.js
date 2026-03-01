@@ -1,4 +1,6 @@
 const PartiesApp = (() => {
+  const VALID_SORTS = new Set(["name", "members_desc", "attendance_desc", "attendance_asc"]);
+
   const state = {
     rows: [],
     sortMode: "name",
@@ -34,7 +36,8 @@ const PartiesApp = (() => {
 
   function hydrateStateFromQuery() {
     const params = new URLSearchParams(window.location.search);
-    state.sortMode = params.get("sort") || "name";
+    const sortMode = params.get("sort") || "name";
+    state.sortMode = VALID_SORTS.has(sortMode) ? sortMode : "name";
   }
 
   function syncControls() {
@@ -95,7 +98,6 @@ const PartiesApp = (() => {
           displayName: window.Folkevalget.partyDisplayName(partyName, group.shortName),
           memberCount: members.length,
           attendanceAvg: averageMetric(members.map((member) => member.attendance_pct)),
-          loyaltyAvg: averageMetric(members.map((member) => member.party_loyalty_pct)),
           committeeAvg: averageMetric(members.map((member) => (member.committees || []).length)),
           ministerCount: members.filter((member) => window.Folkevalget.isCurrentMinister(member)).length,
           northAtlanticCount: members.filter((member) => window.Folkevalget.isNorthAtlanticMandate(member)).length,
@@ -162,14 +164,12 @@ const PartiesApp = (() => {
       setDataLabel(tableRow.querySelector("[data-cell='party']"), "Parti");
       setDataLabel(tableRow.querySelector("[data-cell='members']"), "Medlemmer");
       setDataLabel(tableRow.querySelector("[data-cell='attendance']"), "Gns. fremmøde");
-      setDataLabel(tableRow.querySelector("[data-cell='loyalty']"), "Gns. loyalitet");
       setDataLabel(tableRow.querySelector("[data-cell='committees']"), "Gns. udvalg");
       setDataLabel(tableRow.querySelector("[data-cell='link']").parentElement, "Se profiler");
 
       renderPartyCell(tableRow.querySelector("[data-cell='party']"), row);
       tableRow.querySelector("[data-cell='members']").textContent = window.Folkevalget.formatNumber(row.memberCount);
       tableRow.querySelector("[data-cell='attendance']").append(buildMetricBlock(row.attendanceAvg, "Fremmøde"));
-      tableRow.querySelector("[data-cell='loyalty']").append(buildMetricBlock(row.loyaltyAvg, "Loyalitet"));
       tableRow.querySelector("[data-cell='committees']").textContent = formatDecimal(row.committeeAvg);
       tableRow.querySelector("[data-cell='link']").href = row.discoverUrl;
       tableBody.append(tableRow);
@@ -182,12 +182,6 @@ const PartiesApp = (() => {
     }
     if (state.sortMode === "attendance_asc") {
       return compareMetricRows(left, right, "attendanceAvg", "asc");
-    }
-    if (state.sortMode === "loyalty_desc") {
-      return compareMetricRows(left, right, "loyaltyAvg", "desc");
-    }
-    if (state.sortMode === "loyalty_asc") {
-      return compareMetricRows(left, right, "loyaltyAvg", "asc");
     }
     if (state.sortMode === "members_desc") {
       return right.memberCount - left.memberCount || left.displayName.localeCompare(right.displayName, "da");
@@ -292,6 +286,6 @@ PartiesApp.boot().catch((error) => {
   console.error(error);
   const body = document.querySelector("#party-table-body");
   if (body) {
-    body.innerHTML = '<tr><td colspan="6"><div class="panel-empty">Partioversigten kunne ikke indlæses.</div></td></tr>';
+    body.innerHTML = '<tr><td colspan="5"><div class="panel-empty">Partioversigten kunne ikke indlæses.</div></td></tr>';
   }
 });

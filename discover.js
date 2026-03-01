@@ -1,4 +1,6 @@
 const DiscoverApp = (() => {
+  const VALID_SORTS = new Set(["name", "attendance_desc", "attendance_asc"]);
+
   const state = {
     profiles: [],
     filteredProfiles: [],
@@ -45,7 +47,8 @@ const DiscoverApp = (() => {
     state.constituencyFilter = params.get("storkreds") || "";
     state.partyFilter = params.get("party") || "";
     state.committeeFilter = params.get("committee") || "";
-    state.sortMode = params.get("sort") || "name";
+    const sortMode = params.get("sort") || "name";
+    state.sortMode = VALID_SORTS.has(sortMode) ? sortMode : "name";
   }
 
   function syncControls() {
@@ -267,7 +270,6 @@ const DiscoverApp = (() => {
       card.querySelector("[data-card='role']").textContent = profile.role || "Folketingsmedlem";
       card.querySelector("[data-card='constituency']").textContent = profile.storkreds || "Storkreds ikke angivet";
       card.querySelector("[data-card='attendance-value']").textContent = window.Folkevalget.formatPercent(profile.attendance_pct);
-      card.querySelector("[data-card='loyalty-value']").textContent = window.Folkevalget.formatPercent(profile.party_loyalty_pct);
       card.querySelector("[data-card='votes']").textContent = window.Folkevalget.formatNumber(profile.votes_total);
       card.querySelector("[data-card='committees']").textContent =
         `${window.Folkevalget.formatNumber((profile.committees || []).length)} udvalg`;

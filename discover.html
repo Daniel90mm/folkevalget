@@ -6,7 +6,7 @@
     <title>Opdag profiler | Folkevalget</title>
     <meta
       name="description"
-      content="Filtrer og sorter folketingsmedlemmer efter parti, udvalg, fremmøde og loyalitet."
+      content="Filtrer og sorter folketingsmedlemmer efter parti, udvalg og fremmøde."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +57,7 @@
         <section class="toolbar-panel">
           <div class="discover-toolbar-head">
             <div class="toolbar-copy">
-              <p>Sortering er neutral som udgangspunkt. Vælg selv, hvis du vil se profiler efter fremmøde eller loyalitet.</p>
+              <p>Sortering er neutral som udgangspunkt. Vælg selv, hvis du vil se profiler efter fremmøde.</p>
               <p>Ministre og nordatlantiske mandater kan have en anden stemmepraksis end andre medlemmer. Den kontekst vises på profilerne.</p>
             </div>
             <button class="button-link button-link-secondary filters-toggle" type="button" id="filters-toggle" aria-expanded="false">
@@ -99,8 +99,6 @@
                 <option value="name">Navn A-Å</option>
                 <option value="attendance_desc">Fremmøde: højest først</option>
                 <option value="attendance_asc">Fremmøde: lavest først</option>
-                <option value="loyalty_desc">Loyalitet: højest først</option>
-                <option value="loyalty_asc">Loyalitet: lavest først</option>
               </select>
             </label>
           </div>
@@ -144,10 +142,6 @@
           <div class="mini-metric">
             <span class="mini-metric-label">Fremmøde</span>
             <strong data-card="attendance-value"></strong>
-          </div>
-          <div class="mini-metric">
-            <span class="mini-metric-label">Partiloyalitet</span>
-            <strong data-card="loyalty-value"></strong>
           </div>
           <div class="mini-metric">
             <span class="mini-metric-label">Registrerede stemmer</span>

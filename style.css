@@ -85,7 +85,7 @@ img {
 }
 
 .site-shell {
-  width: min(1160px, calc(100vw - 2rem));
+  width: min(1480px, calc(100vw - 3rem));
   margin: 0 auto;
   padding: var(--space-md) 0 var(--space-xl);
 }
@@ -289,7 +289,7 @@ img {
 
 .hero-panel {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
   gap: var(--space-lg);
 }
 
@@ -317,7 +317,7 @@ img {
 
 .hero-copy h1 {
   font-size: clamp(2.25rem, 5vw, var(--text-3xl));
-  max-width: 11ch;
+  max-width: 13ch;
 }
 
 .page-intro h1,
@@ -665,9 +665,12 @@ img {
   gap: var(--space-md);
 }
 
-.member-metrics,
+.member-metrics {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
 .metric-strip {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .mini-metric,
@@ -675,7 +678,6 @@ img {
 .vote-distribution,
 .vote-list-item,
 .voter-row,
-.distribution-stat,
 .vote-row,
 .committee-tag,
 .toggle-check,
@@ -887,7 +889,7 @@ img {
 
 .votes-shell {
   display: grid;
-  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(340px, 0.85fr) minmax(0, 1.35fr);
   gap: var(--space-lg);
   align-items: start;
 }
@@ -956,8 +958,8 @@ img {
 
 .vote-distribution-legend {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-sm);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md) var(--space-lg);
 }
 
 .distribution-stat {
@@ -965,6 +967,9 @@ img {
   grid-template-columns: auto minmax(0, 1fr) auto auto;
   align-items: center;
   gap: var(--space-sm);
+  padding: 0;
+  border: none;
+  background: transparent;
 }
 
 .distribution-stat [data-share] {
