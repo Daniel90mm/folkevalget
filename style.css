@@ -37,6 +37,20 @@ html {
   color-scheme: light;
 }
 
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #10161c;
+  --color-surface: #171f27;
+  --color-text: #f3efe6;
+  --color-text-secondary: #b8c0ca;
+  --color-border: #30404f;
+  --color-accent: #8fb4d1;
+  --color-accent-hover: #b0cbdf;
+  --color-for: #78b882;
+  --color-imod: #e07777;
+  --color-fravaer: #98a0a8;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -45,6 +59,12 @@ body {
   font-family: var(--font-body);
   font-size: var(--text-base);
   line-height: 1.5;
+}
+
+html[data-theme="dark"] body {
+  background:
+    linear-gradient(180deg, rgba(143, 180, 209, 0.08) 0%, rgba(143, 180, 209, 0) 220px),
+    linear-gradient(180deg, #0e141a 0%, #10161c 100%);
 }
 
 a {
@@ -134,6 +154,15 @@ img {
   min-width: 0;
 }
 
+.site-header-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-md);
+  margin-left: auto;
+}
+
 .site-nav {
   display: flex;
   flex-wrap: wrap;
@@ -168,6 +197,28 @@ img {
   color: var(--color-accent);
   border-radius: 2px;
   cursor: pointer;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 2px solid var(--color-accent);
+  border-radius: 2px;
+  color: var(--color-accent);
+  background: transparent;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  background: var(--color-accent);
+  color: var(--color-bg);
 }
 
 .site-stats {
@@ -1327,6 +1378,12 @@ img {
     align-items: flex-start;
   }
 
+  .site-header-tools {
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 0;
+  }
+
   .toolbar-grid,
   .step-grid,
   .definition-grid,
@@ -1380,6 +1437,15 @@ img {
     width: 100%;
     flex-direction: column;
     gap: var(--space-sm);
+  }
+
+  .site-header-tools {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .theme-toggle {
+    width: 100%;
   }
 
   .site-nav[data-open="true"] {
