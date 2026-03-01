@@ -441,11 +441,9 @@ const ProfileApp = (() => {
       "Hvervregisteret er frivilligt at udfylde. Manglende registreringer er ikke ensbetydende med fraværet af interesser. Data opdateres manuelt, ikke løbende.";
     tooltipWrap.append(tooltipTrigger, tooltipBody);
 
-    hvervSourceNote.textContent = "Kilde: ";
-    hvervSourceNote.append(sourceLink);
-    if (hentet) hvervSourceNote.append(document.createTextNode(` · Hentet ${hentet} `));
-    else hvervSourceNote.append(document.createTextNode(" "));
-    hvervSourceNote.append(tooltipWrap);
+    hvervSourceNote.append("Kilde: ", sourceLink);
+    if (hentet) hvervSourceNote.append(` · Hentet ${hentet}`);
+    hvervSourceNote.append(" ", tooltipWrap);
   }
 
   function renderRecentVotes(votes) {
