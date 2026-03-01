@@ -778,9 +778,14 @@ img {
 
 .member-initials,
 .profile-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--color-surface);
   color: var(--color-accent);
+  text-align: center;
   font-weight: 700;
+  line-height: 1;
 }
 
 .member-headline,
