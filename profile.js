@@ -107,10 +107,17 @@ const ProfileApp = (() => {
     }
 
     if (profile.seniority_label && profile.member_since_year) {
-      return `${profile.seniority_label} · medlem siden ${profile.member_since_year}`;
+      return `${formatSeniorityLabel(profile.seniority_label)} · medlem siden ${profile.member_since_year}`;
     }
 
-    return profile.seniority_label || `Medlem siden ${profile.member_since_year}`;
+    return formatSeniorityLabel(profile.seniority_label) || `Medlem siden ${profile.member_since_year}`;
+  }
+
+  function formatSeniorityLabel(label) {
+    if (!label) {
+      return label;
+    }
+    return label.replace(/\baar\b/gi, "år");
   }
 
   function renderMetric(key, text) {
