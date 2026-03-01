@@ -270,7 +270,8 @@ const DiscoverApp = (() => {
       card.querySelector("[data-card='role']").textContent = profile.role || "Folketingsmedlem";
       card.querySelector("[data-card='constituency']").textContent = profile.storkreds || "Storkreds ikke angivet";
       card.querySelector("[data-card='attendance-value']").textContent = window.Folkevalget.formatPercent(profile.attendance_pct);
-      card.querySelector("[data-card='votes']").textContent = window.Folkevalget.formatNumber(profile.votes_total);
+      card.querySelector("[data-card='votes-for']").textContent = window.Folkevalget.formatNumber(profile.votes_for);
+      card.querySelector("[data-card='votes-against']").textContent = window.Folkevalget.formatNumber(profile.votes_against);
       card.querySelector("[data-card='committees']").textContent =
         `${window.Folkevalget.formatNumber((profile.committees || []).length)} udvalg`;
 
