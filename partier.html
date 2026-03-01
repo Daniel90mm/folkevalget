@@ -6,7 +6,7 @@
     <title>Partier | Folkevalget</title>
     <meta
       name="description"
-      content="En enkel partioversigt med gennemsnitligt fremmøde, loyalitet og medlemstal baseret på offentlige data."
+      content="En enkel partioversigt med gennemsnitligt fremmøde, udvalg og medlemstal baseret på offentlige data."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
       <main class="parties-layout">
         <section class="page-intro parties-intro">
           <p class="eyebrow">Partioversigt</p>
-          <h1>Sammenlign partierne på tværs af fremmøde, loyalitet og medlemstal.</h1>
+          <h1>Sammenlign partierne på tværs af fremmøde, udvalg og medlemstal.</h1>
           <p>
             Oversigten bygger på nuværende medlemmer i hver folketingsgruppe. Gennemsnit skal læses med
             kontekst: ministre og nordatlantiske mandater har ofte en anden afstemningspraksis.
@@ -85,13 +85,11 @@
                 <option value="members_desc">Medlemmer: flest først</option>
                 <option value="attendance_desc">Fremmøde: højest først</option>
                 <option value="attendance_asc">Fremmøde: lavest først</option>
-                <option value="loyalty_desc">Loyalitet: højest først</option>
-                <option value="loyalty_asc">Loyalitet: lavest først</option>
               </select>
             </label>
           </div>
           <p class="table-note">
-            Fremmøde og partiloyalitet er gennemsnit for partiets nuværende medlemmer. Brug "Se profiler"
+            Fremmøde og udvalg er gennemsnit for partiets nuværende medlemmer. Brug "Se profiler"
             for at dykke ned i de enkelte navne bag gennemsnittet.
           </p>
           <div class="party-table-wrap">
@@ -101,7 +99,6 @@
                   <th scope="col">Parti</th>
                   <th scope="col">Medlemmer</th>
                   <th scope="col">Gns. fremmøde</th>
-                  <th scope="col">Gns. loyalitet</th>
                   <th scope="col">Gns. udvalg</th>
                   <th scope="col">Se profiler</th>
                 </tr>
@@ -128,7 +125,6 @@
         <td data-cell="party"></td>
         <td class="party-table-number" data-cell="members"></td>
         <td data-cell="attendance"></td>
-        <td data-cell="loyalty"></td>
         <td class="party-table-number" data-cell="committees"></td>
         <td class="party-table-action">
           <a class="table-link" data-cell="link" href="#">Se profiler</a>
