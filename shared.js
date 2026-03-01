@@ -26,8 +26,10 @@ window.Folkevalget = (() => {
     B: "beslutningsforslag",
     V: "vedtagelse",
   };
+  const THEME_STORAGE_KEY = "folkevalget-theme";
 
   const siteBasePath = detectSiteBasePath();
+  initThemeToggle();
   initNavigation();
 
   async function loadCatalogueData() {
@@ -415,6 +417,63 @@ window.Folkevalget = (() => {
     }
 
     syncForViewport();
+  }
+
+  function initThemeToggle() {
+    const headerMeta = document.querySelector(".site-header-meta");
+    const stats = document.querySelector("[data-site-stats]");
+    if (!headerMeta || !stats) {
+      return;
+    }
+
+    const tools = document.createElement("div");
+    tools.className = "site-header-tools";
+
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "theme-toggle";
+
+    const storedTheme = readStoredTheme();
+    if (storedTheme === "dark") {
+      applyTheme("dark");
+    }
+
+    syncThemeToggle(toggle);
+
+    toggle.addEventListener("click", () => {
+      const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
+      syncThemeToggle(toggle);
+    });
+
+    stats.parentNode.insertBefore(tools, stats);
+    tools.append(toggle, stats);
+  }
+
+  function readStoredTheme() {
+    try {
+      return window.localStorage.getItem(THEME_STORAGE_KEY);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      document.documentElement.dataset.theme = "dark";
+    } else {
+      delete document.documentElement.dataset.theme;
+    }
+
+    try {
+      window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+    } catch (error) {}
+  }
+
+  function syncThemeToggle(toggle) {
+    const isDark = document.documentElement.dataset.theme === "dark";
+    toggle.setAttribute("aria-pressed", String(isDark));
+    toggle.textContent = isDark ? "Lys visning" : "Mørk visning";
   }
 
   return {
