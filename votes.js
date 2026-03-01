@@ -1,4 +1,20 @@
 const CLOSE_VOTE_THRESHOLD_PCT = 10;
+
+const SAG_TYPE_TEKST = {
+  L:  "Lovforslag — forslag til en ny lov eller ændring af gældende lovgivning. Behandles normalt tre gange i Folketinget.",
+  B:  "Beslutningsforslag — opfordring til regeringen om at handle på en bestemt måde. Ikke en lov, men et politisk signal.",
+  V:  "Forslag til vedtagelse — en parlamentarisk hensigtserklæring. Har ikke lovkraft, men udtrykker Folketingets holdning.",
+  LA: "Ændringsforslag til lovforslag (A-række) — konkret ændring foreslået under lovbehandlingen.",
+  LB: "Ændringsforslag til lovforslag (B-række) — konkret ændring foreslået under lovbehandlingen.",
+  LC: "Ændringsforslag til lovforslag (C-række) — konkret ændring foreslået under lovbehandlingen.",
+};
+
+const STEMME_TYPE_TEKST = {
+  "Endelig vedtagelse": "Afgørende afstemning ved 3. behandling — her afgøres forslagets endelige skæbne.",
+  "Ændringsforslag": "Afstemning om en specifik ændring til forslaget under behandlingen.",
+  "Forslag til vedtagelse": "Afstemning om en parlamentarisk hensigtserklæring.",
+};
+
 const VotesApp = (() => {
   const VALID_SORTS = new Set(["date_desc", "passed_first", "failed_first", "close_first", "split_first"]);
 
@@ -277,10 +293,36 @@ const VotesApp = (() => {
     renderVoteLists(selectedVote);
   }
 
+  function buildKickerTooltipText(vote) {
+    const prefix = (vote.sag_number || "").replace(/\s.*$/, "");
+    const parts = [];
+    if (SAG_TYPE_TEKST[prefix]) parts.push(SAG_TYPE_TEKST[prefix]);
+    if (STEMME_TYPE_TEKST[vote.type]) parts.push(STEMME_TYPE_TEKST[vote.type]);
+    return parts.join(" ");
+  }
+
   function renderVoteHeader(vote) {
-    document.querySelector("#vote-detail-kicker").textContent = [vote.type || "Afstemning", vote.sag_number || null]
-      .filter(Boolean)
-      .join(" · ");
+    const kickerLabel = [vote.type || "Afstemning", vote.sag_number || null].filter(Boolean).join(" · ");
+    const tooltipText = buildKickerTooltipText(vote);
+    const kicker = document.querySelector("#vote-detail-kicker");
+
+    if (tooltipText) {
+      const wrap = document.createElement("span");
+      wrap.className = "tooltip-wrap";
+      const trigger = document.createElement("span");
+      trigger.className = "tooltip-trigger";
+      trigger.tabIndex = 0;
+      trigger.setAttribute("aria-label", "Om denne forslagstype");
+      trigger.textContent = "ⓘ";
+      const body = document.createElement("span");
+      body.className = "tooltip-body";
+      body.setAttribute("role", "tooltip");
+      body.textContent = tooltipText;
+      wrap.append(trigger, body);
+      kicker.replaceChildren(kickerLabel, " ", wrap);
+    } else {
+      kicker.textContent = kickerLabel;
+    }
 
     document.querySelector("#vote-title").textContent = vote.sag_short_title || vote.sag_title || "Afstemning";
 
