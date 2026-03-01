@@ -29,6 +29,8 @@ const VotesApp = (() => {
   const votePartyFilter = document.querySelector("#vote-party-filter");
   const voteContext = document.querySelector("#vote-context");
   const voteSourceLink = document.querySelector("#vote-source-link");
+  const voteResume = document.querySelector("#vote-resume");
+  const voteResumeBody = document.querySelector("#vote-resume-body");
 
   async function boot() {
     hydrateStateFromQuery();
@@ -289,6 +291,14 @@ const VotesApp = (() => {
       vote.vedtaget ? "Forslaget blev vedtaget" : "Forslaget blev forkastet",
       `${window.Folkevalget.formatNumber(forCount + againstCount)} ja/nej-stemmer`,
     ].join(" · ");
+
+    if (vote.sag_resume) {
+      voteResumeBody.textContent = vote.sag_resume;
+      voteResume.open = false;
+      voteResume.classList.remove("hidden");
+    } else {
+      voteResume.classList.add("hidden");
+    }
 
     const sourceUrl = window.Folkevalget.buildSagUrl(vote.sag_number, vote.date);
     if (sourceUrl) {

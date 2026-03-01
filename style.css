@@ -458,6 +458,43 @@ img {
   max-width: 68ch;
 }
 
+.vote-resume {
+  margin-top: var(--space-sm);
+  max-width: 68ch;
+}
+
+.vote-resume summary {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  list-style: none;
+  user-select: none;
+}
+
+.vote-resume summary::-webkit-details-marker {
+  display: none;
+}
+
+.vote-resume summary::before {
+  content: "▸";
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.vote-resume[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.vote-resume p {
+  margin-top: var(--space-sm);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
 .hero-actions,
 .member-badges,
 .context-tag-row,
@@ -1256,7 +1293,22 @@ img {
 
 .page-profile .vote-row-action {
   padding: 0;
+  border: none;
+  background: transparent;
   color: var(--color-accent);
+}
+
+.page-profile .vote-row-action:hover,
+.page-profile .vote-row-action:focus-visible {
+  border: none;
+  background: transparent;
+  color: var(--color-accent-hover);
+}
+
+.page-profile .vote-chip {
+  padding: 0;
+  border: none;
+  background: transparent;
 }
 
 .breadcrumb {

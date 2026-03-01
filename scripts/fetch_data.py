@@ -935,6 +935,7 @@ def build_vote_context(
                     "sag_id": sag_id,
                     "sag_title": sag.get("titel"),
                     "sag_short_title": sag.get("titelkort"),
+                    "sag_resume": sag.get("resume") or None,
                     "sag_number": sag.get("nummer"),
                     "sag_type_id": sag.get("typeid"),
                     "source_documents": sag_documents[:3],
