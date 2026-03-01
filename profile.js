@@ -418,18 +418,8 @@ const ProfileApp = (() => {
       hvervBody.append(list);
     }
 
-    // Frivillighedsforbehold — vises altid
-    const note = document.createElement("p");
-    note.className = "hverv-voluntary-note";
-    note.textContent =
-      "Hvervregisteret er frivilligt. Manglende registreringer er ikke ensbetydende med fraværet af interesser.";
-    hvervBody.append(note);
-
-    // Kilde og dato — scrapet data, ikke løbende opdateret
+    // Kilde, dato og frivillighedsforbehold — kombineret én linje med tooltip
     const hentet = entry.hentet ? window.Folkevalget.formatDate(entry.hentet) : null;
-    const sourceText = hentet
-      ? `Kilde: Folketingets hvervregister. Data hentet ${hentet} — opdateres manuelt, ikke løbende.`
-      : "Kilde: Folketingets hvervregister.";
 
     const sourceLink = document.createElement("a");
     sourceLink.href = "https://www.ft.dk/da/medlemmer/hverv-og-oekonomiske-interesser";
@@ -437,8 +427,25 @@ const ProfileApp = (() => {
     sourceLink.rel = "noreferrer";
     sourceLink.textContent = "Se hvervregisteret på ft.dk";
 
-    hvervSourceNote.textContent = sourceText + " ";
+    const tooltipWrap = document.createElement("span");
+    tooltipWrap.className = "tooltip-wrap";
+    const tooltipTrigger = document.createElement("span");
+    tooltipTrigger.className = "tooltip-trigger";
+    tooltipTrigger.tabIndex = 0;
+    tooltipTrigger.setAttribute("aria-label", "Om hvervregisteret");
+    tooltipTrigger.textContent = "ⓘ";
+    const tooltipBody = document.createElement("span");
+    tooltipBody.className = "tooltip-body";
+    tooltipBody.setAttribute("role", "tooltip");
+    tooltipBody.textContent =
+      "Hvervregisteret er frivilligt at udfylde. Manglende registreringer er ikke ensbetydende med fraværet af interesser. Data opdateres manuelt, ikke løbende.";
+    tooltipWrap.append(tooltipTrigger, tooltipBody);
+
+    hvervSourceNote.textContent = "Kilde: ";
     hvervSourceNote.append(sourceLink);
+    if (hentet) hvervSourceNote.append(document.createTextNode(` · Hentet ${hentet} `));
+    else hvervSourceNote.append(document.createTextNode(" "));
+    hvervSourceNote.append(tooltipWrap);
   }
 
   function renderRecentVotes(votes) {

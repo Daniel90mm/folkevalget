@@ -1540,12 +1540,6 @@ img {
   background: var(--color-surface);
 }
 
-.hverv-voluntary-note {
-  margin-top: var(--space-md);
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
-}
-
 .panel-source-note {
   margin-top: var(--space-lg);
   padding-top: var(--space-md);
