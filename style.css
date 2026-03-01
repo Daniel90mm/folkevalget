@@ -766,8 +766,20 @@ img {
   align-items: start;
 }
 
-.member-avatar-wrap,
+.member-avatar-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .profile-avatar-wrap {
+  display: grid;
+  gap: var(--space-sm);
+  align-content: start;
+  justify-items: center;
+}
+
+.profile-avatar-frame {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -803,6 +815,13 @@ img {
   text-align: center;
   font-weight: 700;
   line-height: 1;
+}
+
+.profile-avatar-wrap .photo-credit {
+  max-width: 16ch;
+  font-size: var(--text-xs);
+  line-height: 1.45;
+  text-align: center;
 }
 
 .member-headline,
@@ -1557,7 +1576,11 @@ img {
   align-items: center;
   justify-content: center;
   margin-left: 0.3rem;
+  min-width: 1rem;
+  min-height: 1rem;
   color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1;
   cursor: help;
 }
 
