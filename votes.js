@@ -372,7 +372,23 @@ const VotesApp = (() => {
     }
 
     const splitCount = Number(vote.party_split_count || 0);
-    splitValue.textContent = `${window.Folkevalget.formatNumber(splitCount)} partier`;
+    if (splitCount > 0 && mistakeVoteInSplitParty(vote)) {
+      const wrap = document.createElement("span");
+      wrap.className = "tooltip-wrap";
+      const trigger = document.createElement("span");
+      trigger.className = "tooltip-trigger";
+      trigger.tabIndex = 0;
+      trigger.setAttribute("aria-label", "Mulig fejlstemme");
+      trigger.textContent = "ⓘ";
+      const body = document.createElement("span");
+      body.className = "tooltip-body";
+      body.setAttribute("role", "tooltip");
+      body.textContent = "Et parti i dette split har en registreret fejlstemme. Splittet kan helt eller delvist skyldes en fejl frem for reel uenighed — se kommentaren nedenfor.";
+      wrap.append(trigger, body);
+      splitValue.replaceChildren(`${window.Folkevalget.formatNumber(splitCount)} partier `, wrap);
+    } else {
+      splitValue.textContent = `${window.Folkevalget.formatNumber(splitCount)} partier`;
+    }
     splitNote.textContent = describeSplitParties(splitParties, splitCount);
   }
 
@@ -627,6 +643,14 @@ const VotesApp = (() => {
 
   function isMistakeVoteComment(comment) {
     return /^Ved en fejl\b/i.test(String(comment || "").trim());
+  }
+
+  function mistakeVoteInSplitParty(vote) {
+    if (!isMistakeVoteComment(vote.kommentar)) return false;
+    const match = String(vote.kommentar).match(/\(([A-ZÆØÅ]{1,4})\)/u);
+    if (!match) return false;
+    const groups = vote.vote_groups_by_party?.[match[1]];
+    return Number(groups?.for?.length || 0) > 0 && Number(groups?.imod?.length || 0) > 0;
   }
 
   function formatPartyLabel(partyKey) {
