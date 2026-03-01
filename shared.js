@@ -445,18 +445,19 @@ window.Folkevalget = (() => {
     const toggle = document.createElement("button");
     toggle.type = "button";
     toggle.className = "theme-toggle";
+    toggle.innerHTML = '<span class="theme-toggle-icon" aria-hidden="true"></span><span class="sr-only"></span>';
 
     const storedTheme = readStoredTheme();
     if (storedTheme === "dark") {
       applyTheme("dark");
     }
 
-    syncThemeToggle(toggle);
+    updateThemeToggle(toggle);
 
     toggle.addEventListener("click", () => {
       const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
       applyTheme(nextTheme);
-      syncThemeToggle(toggle);
+      updateThemeToggle(toggle);
     });
 
     stats.parentNode.insertBefore(tools, stats);
@@ -502,6 +503,20 @@ window.Folkevalget = (() => {
     const isDark = document.documentElement.dataset.theme === "dark";
     toggle.setAttribute("aria-pressed", String(isDark));
     toggle.textContent = isDark ? "Lys visning" : "Mørk visning";
+  }
+
+  function updateThemeToggle(toggle) {
+    const isDark = document.documentElement.dataset.theme === "dark";
+    const label = isDark ? "Skift til lys visning" : "Skift til mørk visning";
+    toggle.setAttribute("aria-pressed", String(isDark));
+    toggle.setAttribute("aria-label", label);
+    toggle.setAttribute("title", label);
+    toggle.dataset.theme = isDark ? "dark" : "light";
+
+    const srLabel = toggle.querySelector(".sr-only");
+    if (srLabel) {
+      srLabel.textContent = label;
+    }
   }
 
   return {
