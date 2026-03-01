@@ -208,24 +208,24 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  min-width: 44px;
-  padding: 10px;
-  border: 2px solid var(--color-accent);
-  border-radius: 2px;
+  min-height: auto;
+  min-width: auto;
+  padding: 0;
+  border: none;
+  border-radius: 0;
   color: var(--color-accent);
   background: transparent;
   cursor: pointer;
-  transition: background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  transition: color var(--transition-fast), opacity var(--transition-fast);
 }
 
 .theme-toggle-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.25rem;
-  height: 1.25rem;
-  font-size: 1.1rem;
+  width: 1rem;
+  height: 1rem;
+  font-size: 1rem;
   line-height: 1;
 }
 
@@ -239,8 +239,8 @@ img {
 
 .theme-toggle:hover,
 .theme-toggle:focus-visible {
-  background: var(--color-accent);
-  color: var(--color-bg);
+  color: var(--color-accent-hover);
+  opacity: 1;
 }
 
 .sr-only {
