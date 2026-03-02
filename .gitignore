@@ -46,6 +46,7 @@ registrar-export*
 domain-export*
 whois-export*
 github-pages-export*
+*.pdf
 *.pdf.pdf
 
 # Local raw fetch snapshots
