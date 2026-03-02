@@ -147,7 +147,6 @@ const ProfileApp = (() => {
       buildOverviewRow("Kontakt", profile.email ? { type: "email", value: profile.email } : null),
       buildOverviewRow("Telefon", profile.phone ? { type: "phone", value: profile.phone } : null),
       buildOverviewRow("Hjemmeside", profile.website_url ? { type: "link", value: profile.website_url } : null),
-      buildOverviewRow("Adresse", profile.address || null),
     ].filter(Boolean);
 
     overviewPanel.classList.toggle("hidden", rows.length === 0);

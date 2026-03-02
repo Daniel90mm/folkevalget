@@ -36,6 +36,7 @@ notes/private/
 PROJECT_CONTEXT_PRIVATE.md
 HANDOFF_PRIVATE.md
 LOCAL_NOTES.md
+CLAUDE.md
 
 # Registrar, DNS, and deployment exports
 dns-export*
@@ -43,6 +44,7 @@ registrar-export*
 domain-export*
 whois-export*
 github-pages-export*
+*.pdf.pdf
 
 # Local raw fetch snapshots
 data/raw/

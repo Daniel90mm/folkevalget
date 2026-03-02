@@ -1,0 +1,2154 @@
+{
+  "summary": {
+    "generated_from": {
+      "cvr_file": "data\\cvr_personer.json",
+      "profiles_file": "data\\profiler.json"
+    },
+    "counts": {
+      "unresolved_total": 93,
+      "not_found": 71,
+      "ambiguous": 22,
+      "with_company_cvrs": 2,
+      "with_company_names": 4,
+      "with_candidates": 30,
+      "with_expanded_official_name": 21
+    }
+  },
+  "entries": [
+    {
+      "rank": 1,
+      "score": 93,
+      "status": "not_found",
+      "id": 20389,
+      "name": "Peter Have",
+      "official_name": "Peter Have",
+      "member_url": "https://www.ft.dk/medlemmer/mf/p/peter-have",
+      "candidate_count": 1,
+      "person_total": 12,
+      "company_cvr_count": 2,
+      "company_name_count": 1,
+      "candidate_names": [
+        "Revisionsfirmaet Peter Have & Ejner Petersen"
+      ],
+      "company_name_samples": [
+        "lasby kro og hotel aps"
+      ],
+      "company_cvr_samples": [
+        "36534540",
+        "37868639"
+      ],
+      "next_step": "Søg virksomhederne direkte i Virk via CVR-numre og sammenhold personrelationer med medlemmet.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "kun én kandidat at afklare",
+        "officielle CVR-numre i hvervregisteret",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 2,
+      "score": 85,
+      "status": "ambiguous",
+      "id": 20388,
+      "name": "Jon Stephensen",
+      "official_name": "Jon Stephensen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/j/jon-stephensen",
+      "candidate_count": 2,
+      "person_total": 2,
+      "company_cvr_count": 0,
+      "company_name_count": 1,
+      "candidate_names": [
+        "Jon Læssøe Stephensen",
+        "Jon Henrik Westy Stephensen"
+      ],
+      "company_name_samples": [
+        "mærsk vestas danske bank"
+      ],
+      "company_cvr_samples": [],
+      "next_step": "Søg de erklærede virksomhedsnavne direkte i Virk og match personrelationer mod officielle hverv.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officielle virksomhedsnavne i hvervregisteret",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 3,
+      "score": 82,
+      "status": "ambiguous",
+      "id": 15763,
+      "name": "Peter Kofod",
+      "official_name": "Peter Kofod Hristov",
+      "member_url": "https://www.ft.dk/medlemmer/mf/p/peter-kofod",
+      "candidate_count": 2,
+      "person_total": 17,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Peter Kofod",
+        "Peter Kofod"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Brug flere officielle navnekilder til at afklare mellemnavn eller ekstra efternavn.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 4,
+      "score": 82,
+      "status": "ambiguous",
+      "id": 15793,
+      "name": "Mette Abildgaard",
+      "official_name": "Mette Abildgaard Juulsager",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/mette-abildgaard",
+      "candidate_count": 2,
+      "person_total": 8,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Mette Abildgaard",
+        "Mette Abildgaard"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Brug flere officielle navnekilder til at afklare mellemnavn eller ekstra efternavn.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 5,
+      "score": 64,
+      "status": "ambiguous",
+      "id": 20362,
+      "name": "Thomas Monberg",
+      "official_name": "Thomas Monberg",
+      "member_url": "https://www.ft.dk/medlemmer/mf/t/thomas-monberg",
+      "candidate_count": 2,
+      "person_total": 5,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Thomas Monberg",
+        "Thomas Monberg"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 6,
+      "score": 64,
+      "status": "ambiguous",
+      "id": 20378,
+      "name": "Rosa Eriksen",
+      "official_name": "Rosa Eriksen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/r/rosa-eriksen",
+      "candidate_count": 2,
+      "person_total": 3,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Rosa Zangenberg Eriksen",
+        "Rosa Anne-Lise Eriksen"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 7,
+      "score": 64,
+      "status": "ambiguous",
+      "id": 48,
+      "name": "Peter Skaarup",
+      "official_name": "Peter Skaarup",
+      "member_url": "https://www.ft.dk/medlemmer/mf/p/peter-skaarup",
+      "candidate_count": 2,
+      "person_total": 17,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Peter Skaarup",
+        "Peter Skaarup"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 8,
+      "score": 64,
+      "status": "ambiguous",
+      "id": 20357,
+      "name": "Lise Bertelsen",
+      "official_name": "Lise Bertelsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/l/lise-bertelsen",
+      "candidate_count": 2,
+      "person_total": 7,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Lise Bertelsen",
+        "Lise Bertelsen"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 9,
+      "score": 64,
+      "status": "ambiguous",
+      "id": 19928,
+      "name": "Kim Aas",
+      "official_name": "Kim Aas",
+      "member_url": "https://www.ft.dk/medlemmer/mf/k/kim-aas",
+      "candidate_count": 2,
+      "person_total": 2,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Kim Aas Christensen",
+        "Kim Steen Aas Jensen"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 10,
+      "score": 64,
+      "status": "ambiguous",
+      "id": 162,
+      "name": "Karina Adsbøl",
+      "official_name": "Karina Adsbøl",
+      "member_url": "https://www.ft.dk/medlemmer/mf/k/karina-adsboel",
+      "candidate_count": 2,
+      "person_total": 3,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Karina Adsbøl Klovgaard",
+        "Karina Marie Adsbøl"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 11,
+      "score": 64,
+      "status": "ambiguous",
+      "id": 9976,
+      "name": "Jette Gottlieb",
+      "official_name": "Jette Gottlieb",
+      "member_url": "https://www.ft.dk/medlemmer/mf/j/jette-gottlieb",
+      "candidate_count": 2,
+      "person_total": 2,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Jette Ryde Gottlieb",
+        "Jette Marianne Gottlieb"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 12,
+      "score": 64,
+      "status": "ambiguous",
+      "id": 20383,
+      "name": "Jeppe Søe",
+      "official_name": "Jeppe Søe",
+      "member_url": "https://www.ft.dk/medlemmer/mf/j/jeppe-soee",
+      "candidate_count": 2,
+      "person_total": 2,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Jeppe Søe",
+        "Jeppe Søe"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 13,
+      "score": 64,
+      "status": "ambiguous",
+      "id": 265,
+      "name": "Eva Kjer Hansen",
+      "official_name": "Eva Kjer Hansen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/e/eva-kjer-hansen",
+      "candidate_count": 2,
+      "person_total": 2,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Eva Kjer Hansen",
+        "Eva Kjer Hansen"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 14,
+      "score": 64,
+      "status": "ambiguous",
+      "id": 257,
+      "name": "Bjarne Laustsen",
+      "official_name": "Bjarne Laustsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/b/bjarne-laustsen",
+      "candidate_count": 2,
+      "person_total": 7,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Bjarne Laustsen",
+        "Bjarne Laustsen"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 15,
+      "score": 64,
+      "status": "ambiguous",
+      "id": 18719,
+      "name": "Birgitte Vind",
+      "official_name": "Birgitte Vind",
+      "member_url": "https://www.ft.dk/medlemmer/mf/b/birgitte-vind",
+      "candidate_count": 2,
+      "person_total": 5,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Birgitte Vind",
+        "Birgitte Vind"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 16,
+      "score": 64,
+      "status": "ambiguous",
+      "id": 15757,
+      "name": "Aaja Chemnitz",
+      "official_name": "Aaja Chemnitz",
+      "member_url": "https://www.ft.dk/medlemmer/mf/a/aaja-chemnitz",
+      "candidate_count": 2,
+      "person_total": 2,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Aaja Arnatsiak Chemnitz Larsen",
+        "Aaja Arnatsiaq Chemnitz Driefer"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "to kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 17,
+      "score": 63,
+      "status": "not_found",
+      "id": 11702,
+      "name": "Per Larsen",
+      "official_name": "Per Larsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/p/per-larsen",
+      "candidate_count": 0,
+      "person_total": 413,
+      "company_cvr_count": 2,
+      "company_name_count": 2,
+      "candidate_names": [],
+      "company_name_samples": [
+        "amgros i s",
+        "nordjyske jernbaner"
+      ],
+      "company_cvr_samples": [
+        "1449880",
+        "29818983"
+      ],
+      "next_step": "Søg virksomhederne direkte i Virk via CVR-numre og sammenhold personrelationer med medlemmet.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "officielle CVR-numre i hvervregisteret",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 18,
+      "score": 55,
+      "status": "not_found",
+      "id": 252,
+      "name": "Pia Kjærsgaard",
+      "official_name": "Pia Merete Kjærsgaard",
+      "member_url": "https://www.ft.dk/medlemmer/mf/p/pia-kjaersgaard",
+      "candidate_count": 3,
+      "person_total": 5,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Pia Kjærsgaard Jørgensen",
+        "Pia Kjærsgaard Hansen",
+        "Pia Kjærsgaard Andersen"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "få kandidater at afklare",
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 19,
+      "score": 55,
+      "status": "not_found",
+      "id": 17628,
+      "name": "Carl Valentin",
+      "official_name": "Carl Valentin Lehrmann",
+      "member_url": "https://www.ft.dk/medlemmer/mf/c/carl-valentin",
+      "candidate_count": 5,
+      "person_total": 5,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Ib Carl Valentin Hansen",
+        "Carl Gustav Valentin Jensen",
+        "Oliver Valentin Carl Gauthier",
+        "Carl Olaf Valentin Olsen",
+        "Carl Marius Struzik Valentin Krull"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "få kandidater at afklare",
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 20,
+      "score": 54,
+      "status": "ambiguous",
+      "id": 208,
+      "name": "Simon Kollerup",
+      "official_name": "Simon Kollerup",
+      "member_url": "https://www.ft.dk/medlemmer/mf/s/simon-kollerup",
+      "candidate_count": 3,
+      "person_total": 3,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Simon Kollerup Poulsen",
+        "Simon Kollerup Søe-Larsen",
+        "Simon Monrad Kollerup"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "få kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 21,
+      "score": 54,
+      "status": "ambiguous",
+      "id": 20841,
+      "name": "Lars Arne Christensen",
+      "official_name": "Lars Arne Christensen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/l/lars-arne-christensen",
+      "candidate_count": 3,
+      "person_total": 3,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Lars Arne Christensen",
+        "Lars Arne Christensen",
+        "Lars Arne Christensen"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "få kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 22,
+      "score": 54,
+      "status": "ambiguous",
+      "id": 110,
+      "name": "Rosa Lund",
+      "official_name": "Rosa Lund",
+      "member_url": "https://www.ft.dk/medlemmer/mf/r/rosa-lund",
+      "candidate_count": 4,
+      "person_total": 5,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Rosa Lund From",
+        "Rosa Siri Lund",
+        "Rosa Torp Lund",
+        "Rosa Karen Johanne Andersen Moth-Lund"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Indsaml flere officielle identitetsmarkører før der vælges en Virk-person.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "få kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 23,
+      "score": 54,
+      "status": "ambiguous",
+      "id": 20790,
+      "name": "Ken Kristensen",
+      "official_name": "Ken Kristensen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/k/ken-kristensen",
+      "candidate_count": 4,
+      "person_total": 7,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Ken Kristensen",
+        "Ken Kristensen",
+        "Ken Kristensen",
+        "Ken Kristensen"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Indsaml flere officielle identitetsmarkører før der vælges en Virk-person.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "få kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 24,
+      "score": 54,
+      "status": "ambiguous",
+      "id": 20767,
+      "name": "Andreas Karlsen",
+      "official_name": "Andreas Karlsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/a/andreas-karlsen",
+      "candidate_count": 4,
+      "person_total": 4,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Andreas Aarenstrup Karlsen",
+        "Andreas Stefan Karlsen",
+        "Andreas Engelsborg Karlsen",
+        "Andreas Axel Jens Karlsen"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Indsaml flere officielle identitetsmarkører før der vælges en Virk-person.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "få kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 25,
+      "score": 54,
+      "status": "ambiguous",
+      "id": 18718,
+      "name": "Anders Kronborg",
+      "official_name": "Anders Kronborg",
+      "member_url": "https://www.ft.dk/medlemmer/mf/a/anders-kronborg",
+      "candidate_count": 4,
+      "person_total": 11,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Anders Kronborg",
+        "Anders Kronborg",
+        "Anders Kronborg",
+        "Anders Kronborg"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Indsaml flere officielle identitetsmarkører før der vælges en Virk-person.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "få kandidater at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 26,
+      "score": 53,
+      "status": "not_found",
+      "id": 20394,
+      "name": "Steffen W. Frølund",
+      "official_name": "Steffen W",
+      "member_url": "https://www.ft.dk/medlemmer/mf/s/steffen-w-froelund",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 25,
+      "candidate_names": [],
+      "company_name_samples": [
+        "likeminded vc aps",
+        "likeminded vc management aps",
+        "likeminded vc gp i aps",
+        "likeminded vc fund i k s",
+        "likeminded vc civ i k s"
+      ],
+      "company_cvr_samples": [],
+      "next_step": "Søg de erklærede virksomhedsnavne direkte i Virk og match personrelationer mod officielle hverv.",
+      "reasons": [
+        "officielle virksomhedsnavne i hvervregisteret",
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 27,
+      "score": 53,
+      "status": "not_found",
+      "id": 262,
+      "name": "Sjúrður Skaale",
+      "official_name": "Sjúrður Skaale",
+      "member_url": "https://www.ft.dk/medlemmer/mf/s/sjuroeur-skaale",
+      "candidate_count": 1,
+      "person_total": 1,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Sjurdur Skaale"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "kun én kandidat at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 28,
+      "score": 53,
+      "status": "not_found",
+      "id": 15776,
+      "name": "Peter Hummelgaard",
+      "official_name": "Peter Hummelgaard",
+      "member_url": "https://www.ft.dk/medlemmer/mf/p/peter-hummelgaard",
+      "candidate_count": 1,
+      "person_total": 1,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Leif Peter Hummelgård"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "kun én kandidat at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 29,
+      "score": 53,
+      "status": "not_found",
+      "id": 18723,
+      "name": "Pernille Vermund",
+      "official_name": "Pernille Vermund",
+      "member_url": "https://www.ft.dk/medlemmer/mf/p/pernille-vermund",
+      "candidate_count": 1,
+      "person_total": 1,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Ann Pernille Vermund Bretton-Meyer"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "kun én kandidat at afklare",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 30,
+      "score": 47,
+      "status": "not_found",
+      "id": 15788,
+      "name": "Jacob Mark",
+      "official_name": "Jacob Rene Mark",
+      "member_url": "https://www.ft.dk/medlemmer/mf/j/jacob-mark",
+      "candidate_count": 6,
+      "person_total": 9,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Jacob Mark Henriksen",
+        "Jacob Mark Nielsen",
+        "Jacob Mark Mogensen",
+        "Jacob Mark Thygesen",
+        "Jacob Mark Hou"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "mange kandidater gør sagen tungere",
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 31,
+      "score": 47,
+      "status": "not_found",
+      "id": 20356,
+      "name": "Mikkel Bjørn",
+      "official_name": "Mikkel Bjørn Sørensen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/mikkel-bjoern",
+      "candidate_count": 9,
+      "person_total": 14,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Mikkel Bjørn Rasmussen",
+        "Mikkel Bjørn Clausen",
+        "Mikkel Bjørn Martinsen",
+        "Mikkel Bjørn Rasmussen",
+        "Mikkel Bjørn Beck"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "mange kandidater gør sagen tungere",
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 32,
+      "score": 46,
+      "status": "ambiguous",
+      "id": 18720,
+      "name": "Camilla Fabricius",
+      "official_name": "Camilla Fabricius",
+      "member_url": "https://www.ft.dk/medlemmer/mf/c/camilla-fabricius",
+      "candidate_count": 6,
+      "person_total": 6,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [
+        "Camilla Fabricius Mørk",
+        "Camilla Fabricius-Jensen",
+        "Camilla Fabricius Pedersen",
+        "Camilla Anina Fabricius",
+        "Camilla Stougaard Fabricius"
+      ],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Indsaml flere officielle identitetsmarkører før der vælges en Virk-person.",
+      "reasons": [
+        "flere konkrete Virk-kandidater",
+        "mange kandidater gør sagen tungere",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 33,
+      "score": 41,
+      "status": "not_found",
+      "id": 167,
+      "name": "Dan Jørgensen",
+      "official_name": "Dan Jannik Jørgensen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/d/dan-joergensen",
+      "candidate_count": 0,
+      "person_total": 73,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 34,
+      "score": 23,
+      "status": "not_found",
+      "id": 201,
+      "name": "Thomas Jensen",
+      "official_name": "Thomas Jensen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/t/thomas-jensen",
+      "candidate_count": 0,
+      "person_total": 907,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 35,
+      "score": 23,
+      "status": "not_found",
+      "id": 20397,
+      "name": "Steffen Larsen",
+      "official_name": "Steffen Larsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/s/steffen-larsen",
+      "candidate_count": 0,
+      "person_total": 70,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 36,
+      "score": 23,
+      "status": "not_found",
+      "id": 20599,
+      "name": "Søren Rasmussen",
+      "official_name": "Søren Rasmussen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/s/soeren-rasmussen",
+      "candidate_count": 0,
+      "person_total": 457,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 37,
+      "score": 23,
+      "status": "not_found",
+      "id": 154,
+      "name": "Mogens Jensen",
+      "official_name": "Mogens Jensen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/mogens-jensen",
+      "candidate_count": 0,
+      "person_total": 461,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 38,
+      "score": 23,
+      "status": "not_found",
+      "id": 138,
+      "name": "Mette Frederiksen",
+      "official_name": "Mette Frederiksen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/mette-frederiksen",
+      "candidate_count": 0,
+      "person_total": 37,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 39,
+      "score": 23,
+      "status": "not_found",
+      "id": 18701,
+      "name": "Marie Bjerre",
+      "official_name": "Marie Bjerre",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/marie-bjerre",
+      "candidate_count": 0,
+      "person_total": 19,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 40,
+      "score": 23,
+      "status": "not_found",
+      "id": 97,
+      "name": "Jesper Petersen",
+      "official_name": "Jesper Petersen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/j/jesper-petersen",
+      "candidate_count": 0,
+      "person_total": 263,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 41,
+      "score": 23,
+      "status": "not_found",
+      "id": 173,
+      "name": "Jacob Jensen",
+      "official_name": "Jacob Jensen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/j/jacob-jensen",
+      "candidate_count": 0,
+      "person_total": 358,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 42,
+      "score": 23,
+      "status": "not_found",
+      "id": 20962,
+      "name": "Claus Jørgensen",
+      "official_name": "Claus Jørgensen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/c/claus-joergensen",
+      "candidate_count": 0,
+      "person_total": 215,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 43,
+      "score": 23,
+      "status": "not_found",
+      "id": 20820,
+      "name": "Carl Andersen",
+      "official_name": "Carl Andersen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/c/carl-andersen",
+      "candidate_count": 0,
+      "person_total": 138,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "officiel medlemsside findes"
+      ]
+    },
+    {
+      "rank": 44,
+      "score": 13,
+      "status": "not_found",
+      "id": 191,
+      "name": "Zenia Stampe",
+      "official_name": "Zenia Stampe Lyngbo",
+      "member_url": "https://www.ft.dk/medlemmer/mf/z/zenia-stampe",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 45,
+      "score": 13,
+      "status": "not_found",
+      "id": 20373,
+      "name": "Susie Jessen",
+      "official_name": "Susie Janet Jessen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/s/susie-jessen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 46,
+      "score": 13,
+      "status": "not_found",
+      "id": 18716,
+      "name": "Rasmus Stoklund",
+      "official_name": "Rasmus Stoklund Holm-Nielsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/r/rasmus-stoklund",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 47,
+      "score": 13,
+      "status": "not_found",
+      "id": 20384,
+      "name": "Nanna W. Gotfredsen",
+      "official_name": "Nanna W",
+      "member_url": "https://www.ft.dk/medlemmer/mf/n/nanna-w-gotfredsen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 48,
+      "score": 13,
+      "status": "not_found",
+      "id": 17360,
+      "name": "Merete Scheelsbeck",
+      "official_name": "Merete Eybye Scheelsbeck",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/merete-scheelsbeck",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 49,
+      "score": 13,
+      "status": "not_found",
+      "id": 20365,
+      "name": "Matilde Powers",
+      "official_name": "Matilde Hersland Powers",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/matilde-powers",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 50,
+      "score": 13,
+      "status": "not_found",
+      "id": 1146,
+      "name": "Marlene Harpsøe",
+      "official_name": "Marlene Birkehøj Harpsøe",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/marlene-harpsoee",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 51,
+      "score": 13,
+      "status": "not_found",
+      "id": 20635,
+      "name": "Markus E. Olsen",
+      "official_name": "Markus E",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/markus-e-olsen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 52,
+      "score": 13,
+      "status": "not_found",
+      "id": 219,
+      "name": "Lisbeth Bech-Nielsen",
+      "official_name": "Lisbeth Bech-Nielsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/l/lisbeth-bech-nielsen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 53,
+      "score": 13,
+      "status": "not_found",
+      "id": 18729,
+      "name": "Katrine Robsøe",
+      "official_name": "Katrine Kjær Robsøe",
+      "member_url": "https://www.ft.dk/medlemmer/mf/k/katrine-robsoee",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 54,
+      "score": 13,
+      "status": "not_found",
+      "id": 214,
+      "name": "Jeppe Bruus",
+      "official_name": "Jeppe Bruus Christensen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/j/jeppe-bruus",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 55,
+      "score": 13,
+      "status": "not_found",
+      "id": 18707,
+      "name": "Astrid Carøe",
+      "official_name": "Astrid Thorell Carøe",
+      "member_url": "https://www.ft.dk/medlemmer/mf/a/astrid-caroee",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 56,
+      "score": 13,
+      "status": "not_found",
+      "id": 18688,
+      "name": "Aki-Matilda Høegh-Dam",
+      "official_name": "Aki-Matilda Tilia Ditte Høegh-Dam",
+      "member_url": "https://www.ft.dk/medlemmer/mf/a/aki-matilda-hoeegh-dam",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
+      "reasons": [
+        "officielt fuldnavn er mere specifikt end profilnavnet",
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 57,
+      "score": -5,
+      "status": "not_found",
+      "id": 18694,
+      "name": "Victoria Velasquez",
+      "official_name": "Victoria Velásquez",
+      "member_url": "https://www.ft.dk/medlemmer/mf/v/victoria-velasquez",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 58,
+      "score": -5,
+      "status": "not_found",
+      "id": 21083,
+      "name": "Thorkild Holmboe-Hay",
+      "official_name": "Thorkild Holmboe-Hay",
+      "member_url": "https://www.ft.dk/medlemmer/mf/t/thorkild-holmboe-hay",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 59,
+      "score": -5,
+      "status": "not_found",
+      "id": 19000,
+      "name": "Theresa Berg Andersen",
+      "official_name": "Theresa Berg Andersen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/t/theresa-berg-andersen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 60,
+      "score": -5,
+      "status": "not_found",
+      "id": 20360,
+      "name": "Sofie Lippert",
+      "official_name": "Sofie Lippert",
+      "member_url": "https://www.ft.dk/medlemmer/mf/s/sofie-lippert",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 61,
+      "score": -5,
+      "status": "not_found",
+      "id": 100,
+      "name": "Sofie Carsten Nielsen",
+      "official_name": "Sofie Carsten Nielsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/s/sofie-carsten-nielsen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 62,
+      "score": -5,
+      "status": "not_found",
+      "id": 20779,
+      "name": "Runa Friis Hansen",
+      "official_name": "Runa Friis Hansen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/r/runa-friis-hansen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 63,
+      "score": -5,
+      "status": "not_found",
+      "id": 20559,
+      "name": "Reza Javid",
+      "official_name": "Reza Javid",
+      "member_url": "https://www.ft.dk/medlemmer/mf/r/reza-javid",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 64,
+      "score": -5,
+      "status": "not_found",
+      "id": 266,
+      "name": "Rasmus Horn Langhoff",
+      "official_name": "Rasmus Horn Langhoff",
+      "member_url": "https://www.ft.dk/medlemmer/mf/r/rasmus-horn-langhoff",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 65,
+      "score": -5,
+      "status": "not_found",
+      "id": 18722,
+      "name": "Peter Seier Christensen",
+      "official_name": "Peter Seier Christensen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/p/peter-seier-christensen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 66,
+      "score": -5,
+      "status": "not_found",
+      "id": 20350,
+      "name": "Nick Zimmermann",
+      "official_name": "Nick Zimmermann",
+      "member_url": "https://www.ft.dk/medlemmer/mf/n/nick-zimmermann",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 67,
+      "score": -5,
+      "status": "not_found",
+      "id": 20527,
+      "name": "Nanna Høyrup",
+      "official_name": "Nanna Høyrup",
+      "member_url": "https://www.ft.dk/medlemmer/mf/n/nanna-hoeyrup",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 68,
+      "score": -5,
+      "status": "not_found",
+      "id": 21143,
+      "name": "Morten Klessen",
+      "official_name": "Morten Klessen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/morten-klessen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 69,
+      "score": -5,
+      "status": "not_found",
+      "id": 20380,
+      "name": "Monika Rubin",
+      "official_name": "Monika Rubin",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/monika-rubin",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 70,
+      "score": -5,
+      "status": "not_found",
+      "id": 197,
+      "name": "Mette Gjerskov",
+      "official_name": "Mette Gjerskov",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/mette-gjerskov",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 71,
+      "score": -5,
+      "status": "not_found",
+      "id": 18693,
+      "name": "Mai Villadsen",
+      "official_name": "Mai Villadsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/mai-villadsen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 72,
+      "score": -5,
+      "status": "not_found",
+      "id": 21186,
+      "name": "Mads Madsen Henriksen",
+      "official_name": "Mads Madsen Henriksen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/mads-madsen-henriksen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 73,
+      "score": -5,
+      "status": "not_found",
+      "id": 20930,
+      "name": "Louise Mehnke",
+      "official_name": "Louise Mehnke",
+      "member_url": "https://www.ft.dk/medlemmer/mf/l/louise-mehnke",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 74,
+      "score": -5,
+      "status": "not_found",
+      "id": 93,
+      "name": "Louise Elholm",
+      "official_name": "Louise Elholm",
+      "member_url": "https://www.ft.dk/medlemmer/mf/l/louise-elholm",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 75,
+      "score": -5,
+      "status": "not_found",
+      "id": 20371,
+      "name": "Linea Søgaard-Lidell",
+      "official_name": "Linea Søgaard-Lidell",
+      "member_url": "https://www.ft.dk/medlemmer/mf/l/linea-soegaard-lidell",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 76,
+      "score": -5,
+      "status": "not_found",
+      "id": 21044,
+      "name": "Lasse Haugaard Pedersen",
+      "official_name": "Lasse Haugaard Pedersen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/l/lasse-haugaard-pedersen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 77,
+      "score": -5,
+      "status": "not_found",
+      "id": 20367,
+      "name": "Kris Jensen Skriver",
+      "official_name": "Kris Jensen Skriver",
+      "member_url": "https://www.ft.dk/medlemmer/mf/k/kris-jensen-skriver",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 78,
+      "score": -5,
+      "status": "not_found",
+      "id": 20916,
+      "name": "Kenneth Bjerg Andersen",
+      "official_name": "Kenneth Bjerg Andersen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/k/kenneth-bjerg-andersen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 79,
+      "score": -5,
+      "status": "not_found",
+      "id": 20747,
+      "name": "Jenny Andresen",
+      "official_name": "Jenny Andresen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/j/jenny-andresen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 80,
+      "score": -5,
+      "status": "not_found",
+      "id": 20351,
+      "name": "Franciska Rosenkilde",
+      "official_name": "Franciska Rosenkilde",
+      "member_url": "https://www.ft.dk/medlemmer/mf/f/franciska-rosenkilde",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 81,
+      "score": -5,
+      "status": "not_found",
+      "id": 20361,
+      "name": "Fie Hækkerup",
+      "official_name": "Fie Hækkerup",
+      "member_url": "https://www.ft.dk/medlemmer/mf/f/fie-haekkerup",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 82,
+      "score": -5,
+      "status": "not_found",
+      "id": 21206,
+      "name": "Elvira Kûitse",
+      "official_name": "Elvira Kûitse",
+      "member_url": "https://www.ft.dk/medlemmer/mf/e/elvira-kuitse",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 83,
+      "score": -5,
+      "status": "not_found",
+      "id": 15762,
+      "name": "Christian Rabjerg Madsen",
+      "official_name": "Christian Rabjerg Madsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/c/christian-rabjerg-madsen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 84,
+      "score": -5,
+      "status": "not_found",
+      "id": 18708,
+      "name": "Charlotte Broman Mølbæk",
+      "official_name": "Charlotte Broman Mølbæk",
+      "member_url": "https://www.ft.dk/medlemmer/mf/c/charlotte-broman-moelbaek",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 85,
+      "score": -5,
+      "status": "not_found",
+      "id": 20976,
+      "name": "Caroline Stage Olsen",
+      "official_name": "Caroline Stage Olsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/c/caroline-stage-olsen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 86,
+      "score": -5,
+      "status": "not_found",
+      "id": 17141,
+      "name": "Brigitte Klintskov Jerkel",
+      "official_name": "Brigitte Klintskov Jerkel",
+      "member_url": "https://www.ft.dk/medlemmer/mf/b/brigitte-klintskov-jerkel",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 87,
+      "score": -5,
+      "status": "not_found",
+      "id": 18717,
+      "name": "Bjørn Brandenborg",
+      "official_name": "Bjørn Brandenborg",
+      "member_url": "https://www.ft.dk/medlemmer/mf/b/bjoern-brandenborg",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 88,
+      "score": -5,
+      "status": "not_found",
+      "id": 19142,
+      "name": "Barbara Gaardlykke Apol",
+      "official_name": "Barbara Gaardlykke Apol",
+      "member_url": "https://www.ft.dk/medlemmer/mf/b/barbara-gaardlykke-apol",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 89,
+      "score": -5,
+      "status": "not_found",
+      "id": 18706,
+      "name": "Anne Valentina Berthelsen",
+      "official_name": "Anne Valentina Berthelsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/a/anne-valentina-berthelsen",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 90,
+      "score": -18,
+      "status": "not_found",
+      "id": 1158,
+      "name": "Per Movritsen",
+      "official_name": "Per Movritsen",
+      "member_url": null,
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "mangler officiel medlemsside",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 91,
+      "score": -18,
+      "status": "not_found",
+      "id": 21285,
+      "name": "Mikkeline Storch",
+      "official_name": "Mikkeline Storch",
+      "member_url": null,
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "mangler officiel medlemsside",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 92,
+      "score": -18,
+      "status": "not_found",
+      "id": 19826,
+      "name": "Dennis Barndorph Sichlau",
+      "official_name": "Dennis Barndorph Sichlau",
+      "member_url": null,
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "mangler officiel medlemsside",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 93,
+      "score": -18,
+      "status": "not_found",
+      "id": 19548,
+      "name": "Andreas Sommer Møller",
+      "official_name": "Andreas Sommer Møller",
+      "member_url": null,
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "candidate_names": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "mangler officiel medlemsside",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    }
+  ]
+}
