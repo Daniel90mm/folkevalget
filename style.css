@@ -511,6 +511,26 @@ img {
   display: grid;
 }
 
+.page-home .hero-metrics {
+  gap: 0;
+}
+
+.page-home .hero-metrics .signal-card {
+  padding: var(--space-md) 0;
+  border: none;
+  border-top: 1px solid var(--color-border);
+  background: transparent;
+}
+
+.page-home .hero-metrics .signal-card:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.page-home .hero-metrics .signal-card:last-child {
+  padding-bottom: 0;
+}
+
 .signal-card,
 .info-card,
 .step-card,
