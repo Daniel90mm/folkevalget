@@ -27,12 +27,34 @@ window.Folkevalget = (() => {
     V: "vedtagelse",
   };
   const THEME_STORAGE_KEY = "folkevalget-theme";
+  const GLOBAL_SEARCH_SECTION_ORDER = ["profile", "vote", "party", "constituency"];
+  const GLOBAL_SEARCH_SECTION_LABELS = {
+    profile: "Politikere",
+    vote: "Afstemninger",
+    party: "Partier",
+    constituency: "Storkredse",
+  };
+  const GLOBAL_SEARCH_RESULT_LIMIT = 12;
+  const GLOBAL_SEARCH_PER_SECTION = 4;
   let catalogueDataPromise = null;
+  let globalSearchIndexPromise = null;
+  const globalSearchState = {
+    open: false,
+    query: "",
+    activeIndex: -1,
+    results: [],
+    resultNodes: [],
+    index: null,
+    elements: null,
+    previousFocus: null,
+    isMac: /Mac|iPhone|iPad/i.test(window.navigator.platform || ""),
+  };
 
   const siteBasePath = detectSiteBasePath();
   initThemeToggle();
   initNavigation();
   initGlobalSiteStats();
+  initGlobalSearch();
 
   async function loadCatalogueData() {
     if (catalogueDataPromise) {
@@ -490,6 +512,673 @@ window.Folkevalget = (() => {
       .catch((error) => {
         console.error(error);
       });
+  }
+
+  function initGlobalSearch() {
+    const tools = document.querySelector(".site-header-tools");
+    if (!tools) {
+      return;
+    }
+
+    const trigger = buildGlobalSearchTrigger();
+    const overlay = buildGlobalSearchOverlay();
+    globalSearchState.elements = { trigger, ...overlay };
+
+    tools.insertBefore(trigger, tools.firstChild);
+    document.body.append(overlay.root);
+
+    trigger.addEventListener("click", () => {
+      openGlobalSearch();
+    });
+
+    overlay.close.addEventListener("click", () => {
+      closeGlobalSearch();
+    });
+
+    overlay.backdrop.addEventListener("click", () => {
+      closeGlobalSearch();
+    });
+
+    overlay.input.addEventListener("input", (event) => {
+      globalSearchState.query = event.target.value;
+      renderGlobalSearch();
+    });
+
+    overlay.input.addEventListener("keydown", (event) => {
+      handleGlobalSearchInputKeydown(event);
+    });
+
+    overlay.results.addEventListener("mouseover", (event) => {
+      const result = event.target.closest("[data-search-index]");
+      if (!result) {
+        return;
+      }
+      globalSearchState.activeIndex = Number(result.dataset.searchIndex);
+      syncActiveGlobalSearchResult(false);
+    });
+
+    overlay.results.addEventListener("focusin", (event) => {
+      const result = event.target.closest("[data-search-index]");
+      if (!result) {
+        return;
+      }
+      globalSearchState.activeIndex = Number(result.dataset.searchIndex);
+      syncActiveGlobalSearchResult(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (isGlobalSearchShortcut(event)) {
+        event.preventDefault();
+        openGlobalSearch();
+        return;
+      }
+
+      if (event.key === "Escape" && globalSearchState.open) {
+        event.preventDefault();
+        closeGlobalSearch();
+      }
+    });
+
+    warmGlobalSearchIndex();
+  }
+
+  function buildGlobalSearchTrigger() {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "global-search-trigger";
+    button.setAttribute("aria-label", "Søg i hele Folkevalget");
+    button.innerHTML = `
+      <span class="global-search-trigger-label">Søg i hele Folkevalget</span>
+      <span class="global-search-trigger-shortcut" data-search-shortcut></span>
+    `;
+
+    const shortcut = button.querySelector("[data-search-shortcut]");
+    if (shortcut) {
+      shortcut.textContent = keyboardShortcutLabel();
+    }
+
+    return button;
+  }
+
+  function buildGlobalSearchOverlay() {
+    const root = document.createElement("div");
+    root.className = "global-search";
+    root.hidden = true;
+
+    const backdrop = document.createElement("button");
+    backdrop.type = "button";
+    backdrop.className = "global-search-backdrop";
+    backdrop.setAttribute("aria-label", "Luk søgning");
+
+    const shell = document.createElement("section");
+    shell.className = "global-search-shell";
+    shell.setAttribute("role", "dialog");
+    shell.setAttribute("aria-modal", "true");
+    shell.setAttribute("aria-labelledby", "global-search-status");
+
+    const head = document.createElement("div");
+    head.className = "global-search-head";
+
+    const label = document.createElement("label");
+    label.className = "sr-only";
+    label.setAttribute("for", "global-search-input");
+    label.textContent = "Søg i hele Folkevalget";
+
+    const input = document.createElement("input");
+    input.id = "global-search-input";
+    input.className = "global-search-input";
+    input.type = "search";
+    input.autocomplete = "off";
+    input.spellcheck = false;
+    input.placeholder = "Navn, parti, storkreds eller sagsnummer";
+
+    const close = document.createElement("button");
+    close.type = "button";
+    close.className = "global-search-close";
+    close.textContent = "Luk";
+
+    const status = document.createElement("p");
+    status.className = "global-search-status";
+    status.id = "global-search-status";
+    status.setAttribute("aria-live", "polite");
+
+    const results = document.createElement("div");
+    results.className = "global-search-results";
+
+    head.append(label, input, close);
+    shell.append(head, status, results);
+    root.append(backdrop, shell);
+
+    return { root, backdrop, shell, input, close, status, results };
+  }
+
+  function keyboardShortcutLabel() {
+    return globalSearchState.isMac ? "Cmd K" : "Ctrl K";
+  }
+
+  function isGlobalSearchShortcut(event) {
+    return (event.metaKey || event.ctrlKey) && !event.altKey && !event.shiftKey && event.key.toLowerCase() === "k";
+  }
+
+  function openGlobalSearch() {
+    const { root, input } = globalSearchState.elements || {};
+    if (!root || !input) {
+      return;
+    }
+
+    globalSearchState.previousFocus = document.activeElement;
+    globalSearchState.open = true;
+    globalSearchState.query = "";
+    globalSearchState.activeIndex = -1;
+    globalSearchState.results = [];
+    root.hidden = false;
+    document.body.classList.add("global-search-open");
+    input.value = "";
+    renderGlobalSearch();
+    input.focus();
+  }
+
+  function closeGlobalSearch() {
+    const { root, trigger } = globalSearchState.elements || {};
+    if (!root) {
+      return;
+    }
+
+    globalSearchState.open = false;
+    globalSearchState.activeIndex = -1;
+    globalSearchState.results = [];
+    globalSearchState.resultNodes = [];
+    document.body.classList.remove("global-search-open");
+    root.hidden = true;
+    if (globalSearchState.previousFocus instanceof HTMLElement) {
+      globalSearchState.previousFocus = null;
+      trigger?.focus();
+    }
+  }
+
+  function warmGlobalSearchIndex() {
+    const startWarmup = () => {
+      loadGlobalSearchIndex().catch((error) => {
+        console.error(error);
+      });
+    };
+
+    if (typeof window.requestIdleCallback === "function") {
+      window.requestIdleCallback(startWarmup, { timeout: 1800 });
+      return;
+    }
+
+    window.setTimeout(startWarmup, 900);
+  }
+
+  async function loadGlobalSearchIndex() {
+    if (globalSearchState.index) {
+      return globalSearchState.index;
+    }
+
+    if (globalSearchIndexPromise) {
+      return globalSearchIndexPromise;
+    }
+
+    globalSearchIndexPromise = Promise.all([
+      loadCatalogueData(),
+      loadVoteData().catch(() => []),
+    ])
+      .then(([{ profiles }, votes]) => {
+        const index = buildGlobalSearchIndex(profiles, Array.isArray(votes) ? votes : []);
+        globalSearchState.index = index;
+        return index;
+      })
+      .catch((error) => {
+        globalSearchIndexPromise = null;
+        throw error;
+      });
+
+    return globalSearchIndexPromise;
+  }
+
+  function buildGlobalSearchIndex(profiles, votes) {
+    return [
+      ...buildProfileSearchItems(profiles),
+      ...buildVoteSearchItems(votes),
+      ...buildPartySearchItems(profiles),
+      ...buildConstituencySearchItems(profiles),
+    ];
+  }
+
+  function buildProfileSearchItems(profiles) {
+    return (profiles || []).map((profile) => {
+      const current = isCurrentProfile(profile);
+      const partyName = partyDisplayName(
+        profile.current_party || profile.party,
+        profile.current_party_short || profile.party_short
+      );
+      const meta = [partyName, profile.storkreds || (current ? profile.constituency : "Tidligere medlem")]
+        .filter(Boolean)
+        .join(" · ");
+      const searchParts = [
+        profile.name,
+        profile.first_name,
+        profile.last_name,
+        profile.current_party,
+        profile.current_party_short,
+        profile.party,
+        profile.party_short,
+        profile.role,
+        profile.storkreds,
+        ...(profile.committees || []).map((committee) => `${committee.short_name || ""} ${committee.name || ""}`),
+      ];
+
+      return createSearchItem({
+        kind: "profile",
+        title: profile.name || "Ukendt profil",
+        meta,
+        trailing: profile.current_party_short || profile.party_short || "",
+        href: buildProfileUrl(profile.id),
+        searchParts,
+        exactTerms: [profile.name],
+        priority: current ? 260 : 180,
+      });
+    });
+  }
+
+  function buildVoteSearchItems(votes) {
+    return (votes || []).map((vote) => {
+      const title = vote.sag_short_title || vote.sag_title || vote.sag_number || "Afstemning";
+      const meta = [vote.sag_number || `Afstemning ${vote.nummer || ""}`, formatDate(vote.date), vote.vedtaget ? "Vedtaget" : "Forkastet"]
+        .filter(Boolean)
+        .join(" · ");
+      const searchParts = [
+        vote.sag_number,
+        vote.sag_short_title,
+        vote.sag_title,
+        vote.sag_resume,
+        vote.type,
+        vote.sagstrin_title,
+        vote.date,
+        vote.konklusion,
+      ];
+
+      return createSearchItem({
+        kind: "vote",
+        title,
+        meta,
+        trailing: vote.sag_number || "",
+        href: buildVoteUrl(vote.afstemning_id),
+        searchParts,
+        exactTerms: [vote.sag_number, String(vote.afstemning_id || "")],
+        priority: 220,
+        date: vote.date,
+      });
+    });
+  }
+
+  function buildPartySearchItems(profiles) {
+    const groups = new Map();
+
+    for (const profile of (profiles || []).filter(isCurrentProfile)) {
+      const shortName = profile.current_party_short || profile.party_short || "";
+      const partyName = profile.current_party || profile.party || shortName || "Ukendt parti";
+      const key = shortName || partyName;
+      if (!groups.has(key)) {
+        groups.set(key, {
+          shortName,
+          partyName,
+          memberCount: 0,
+        });
+      }
+
+      groups.get(key).memberCount += 1;
+    }
+
+    return [...groups.values()].map((party) =>
+      createSearchItem({
+        kind: "party",
+        title: partyDisplayName(party.partyName, party.shortName),
+        meta: `${formatNumber(party.memberCount)} nuværende medlemmer`,
+        trailing: party.shortName || "",
+        href: `${toSiteUrl("discover.html")}?party=${encodeURIComponent(party.shortName || party.partyName)}`,
+        searchParts: [party.partyName, party.shortName],
+        exactTerms: [party.partyName, party.shortName],
+        priority: 200,
+      })
+    );
+  }
+
+  function buildConstituencySearchItems(profiles) {
+    const groups = new Map();
+
+    for (const profile of (profiles || []).filter(isCurrentProfile)) {
+      if (!profile.storkreds) {
+        continue;
+      }
+
+      groups.set(profile.storkreds, (groups.get(profile.storkreds) || 0) + 1);
+    }
+
+    return [...groups.entries()].map(([storkreds, memberCount]) =>
+      createSearchItem({
+        kind: "constituency",
+        title: storkreds,
+        meta: `${formatNumber(memberCount)} nuværende medlemmer`,
+        trailing: "",
+        href: `${toSiteUrl("discover.html")}?storkreds=${encodeURIComponent(storkreds)}`,
+        searchParts: [storkreds],
+        exactTerms: [storkreds],
+        priority: 170,
+      })
+    );
+  }
+
+  function createSearchItem({ kind, title, meta, trailing, href, searchParts, exactTerms, priority, date = null }) {
+    const searchText = normaliseText((searchParts || []).filter(Boolean).join(" "));
+    const titleText = normaliseText(title);
+    const titleWords = titleText.split(" ").filter(Boolean);
+    const searchWords = searchText.split(" ").filter(Boolean);
+
+    return {
+      kind,
+      title,
+      meta,
+      trailing,
+      href,
+      date,
+      priority,
+      titleText,
+      titleWords,
+      searchText,
+      searchWords,
+      exactTerms: (exactTerms || []).map((entry) => normaliseText(entry)).filter(Boolean),
+    };
+  }
+
+  function renderGlobalSearch() {
+    const { status, results } = globalSearchState.elements || {};
+    if (!status || !results) {
+      return;
+    }
+
+    const query = globalSearchState.query.trim();
+    if (!query) {
+      globalSearchState.results = [];
+      globalSearchState.activeIndex = -1;
+      status.textContent = "Søg i profiler, afstemninger, partier og storkredse.";
+      results.innerHTML = `
+        <div class="global-search-empty">
+          <p>Skriv et navn, et parti, en storkreds eller et sagsnummer.</p>
+          <p>Eksempler: "Mette Frederiksen", "L 92", "Venstre", "Københavns Storkreds".</p>
+        </div>
+      `;
+      globalSearchState.resultNodes = [];
+      return;
+    }
+
+    if (!globalSearchState.index) {
+      status.textContent = "Indlæser søgning...";
+      results.innerHTML = '<div class="global-search-empty"><p>Indlæser profiler og afstemninger...</p></div>';
+      loadGlobalSearchIndex()
+        .then(() => {
+          if (globalSearchState.open) {
+            renderGlobalSearch();
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          if (globalSearchState.open) {
+            status.textContent = "Søgning kunne ikke indlæses.";
+            results.innerHTML = '<div class="global-search-empty"><p>Søgningen kunne ikke indlæses lige nu.</p></div>';
+          }
+        });
+      return;
+    }
+
+    const matchState = findGlobalSearchResults(query);
+    const displayItems = GLOBAL_SEARCH_SECTION_ORDER.flatMap((sectionKey) =>
+      matchState.items.filter((item) => item.kind === sectionKey)
+    );
+    globalSearchState.results = displayItems;
+    globalSearchState.activeIndex = displayItems.length > 0 ? 0 : -1;
+
+    if (matchState.totalMatches === 0) {
+      status.textContent = "Ingen resultater.";
+      results.innerHTML = '<div class="global-search-empty"><p>Ingen resultater matcher søgningen.</p></div>';
+      globalSearchState.resultNodes = [];
+      return;
+    }
+
+    status.textContent = `${formatNumber(matchState.totalMatches)} resultater fundet`;
+    results.innerHTML = "";
+
+    for (const sectionKey of GLOBAL_SEARCH_SECTION_ORDER) {
+      const sectionItems = displayItems.filter((item) => item.kind === sectionKey);
+      if (sectionItems.length === 0) {
+        continue;
+      }
+
+      results.append(buildGlobalSearchSection(sectionKey, sectionItems));
+    }
+
+    globalSearchState.resultNodes = Array.from(results.querySelectorAll("[data-search-index]"));
+    syncActiveGlobalSearchResult(false);
+  }
+
+  function findGlobalSearchResults(rawQuery) {
+    const query = normaliseText(rawQuery);
+    const tokens = query.split(" ").filter(Boolean);
+    const matches = globalSearchState.index
+      .map((item) => ({
+        item,
+        score: scoreGlobalSearchItem(item, query, tokens),
+      }))
+      .filter((entry) => entry.score > 0)
+      .sort((left, right) => {
+        if (right.score !== left.score) {
+          return right.score - left.score;
+        }
+
+        if (left.item.kind !== right.item.kind) {
+          return GLOBAL_SEARCH_SECTION_ORDER.indexOf(left.item.kind) - GLOBAL_SEARCH_SECTION_ORDER.indexOf(right.item.kind);
+        }
+
+        return left.item.title.localeCompare(right.item.title, "da");
+      });
+
+    const visible = [];
+    const perSectionCounts = new Map();
+
+    for (const entry of matches) {
+      const currentCount = perSectionCounts.get(entry.item.kind) || 0;
+      if (currentCount >= GLOBAL_SEARCH_PER_SECTION) {
+        continue;
+      }
+
+      visible.push(entry.item);
+      perSectionCounts.set(entry.item.kind, currentCount + 1);
+
+      if (visible.length >= GLOBAL_SEARCH_RESULT_LIMIT) {
+        break;
+      }
+    }
+
+    return {
+      items: visible,
+      totalMatches: matches.length,
+    };
+  }
+
+  function scoreGlobalSearchItem(item, query, tokens) {
+    if (!query) {
+      return 0;
+    }
+
+    let score = item.priority || 0;
+    if (item.exactTerms.includes(query)) {
+      score += 900;
+    }
+    if (item.titleText === query) {
+      score += 700;
+    }
+    if (item.titleText.startsWith(query)) {
+      score += 420;
+    }
+    if (item.searchText.includes(query)) {
+      score += 140;
+    }
+
+    for (const token of tokens) {
+      let matched = false;
+
+      if (item.exactTerms.includes(token)) {
+        score += 260;
+        matched = true;
+      } else if (item.titleWords.some((word) => word === token)) {
+        score += 120;
+        matched = true;
+      } else if (item.titleWords.some((word) => word.startsWith(token))) {
+        score += 90;
+        matched = true;
+      } else if (item.searchWords.some((word) => word === token)) {
+        score += 60;
+        matched = true;
+      } else if (item.searchWords.some((word) => word.startsWith(token))) {
+        score += 45;
+        matched = true;
+      } else if (item.searchText.includes(token)) {
+        score += 20;
+        matched = true;
+      }
+
+      if (!matched) {
+        return -1;
+      }
+    }
+
+    if (item.kind === "vote" && item.date) {
+      const daysOld = Math.max(0, Math.floor((Date.now() - new Date(item.date).getTime()) / 86400000));
+      score += Math.max(0, 40 - Math.min(daysOld / 30, 40));
+    }
+
+    return score;
+  }
+
+  function buildGlobalSearchSection(sectionKey, items) {
+    const section = document.createElement("section");
+    section.className = "global-search-section";
+
+    const heading = document.createElement("h2");
+    heading.className = "global-search-section-title";
+    heading.textContent = GLOBAL_SEARCH_SECTION_LABELS[sectionKey] || sectionKey;
+
+    const list = document.createElement("ul");
+    list.className = "global-search-list";
+
+    items.forEach((item) => {
+      const globalIndex = globalSearchState.results.indexOf(item);
+      const row = document.createElement("li");
+      const link = document.createElement("a");
+      link.className = "global-search-result";
+      link.href = item.href;
+      link.dataset.searchIndex = String(globalIndex);
+
+      const copy = document.createElement("div");
+      copy.className = "global-search-result-copy";
+
+      const title = document.createElement("span");
+      title.className = "global-search-result-title";
+      title.textContent = item.title;
+
+      const meta = document.createElement("span");
+      meta.className = "global-search-result-meta";
+      meta.textContent = item.meta || "";
+
+      copy.append(title);
+      if (item.meta) {
+        copy.append(meta);
+      }
+
+      const trailing = document.createElement("span");
+      trailing.className = "global-search-result-trailing";
+      trailing.textContent = item.trailing || "";
+
+      link.append(copy);
+      if (item.trailing) {
+        link.append(trailing);
+      }
+
+      row.append(link);
+      list.append(row);
+    });
+
+    section.append(heading, list);
+    return section;
+  }
+
+  function handleGlobalSearchInputKeydown(event) {
+    if (!globalSearchState.open) {
+      return;
+    }
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      moveGlobalSearchSelection(1);
+      return;
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      moveGlobalSearchSelection(-1);
+      return;
+    }
+
+    if (event.key === "Enter" && globalSearchState.activeIndex >= 0) {
+      event.preventDefault();
+      openGlobalSearchResult(globalSearchState.activeIndex, event.metaKey || event.ctrlKey);
+    }
+  }
+
+  function moveGlobalSearchSelection(delta) {
+    if (globalSearchState.results.length === 0) {
+      return;
+    }
+
+    const lastIndex = globalSearchState.results.length - 1;
+    const nextIndex =
+      globalSearchState.activeIndex < 0
+        ? 0
+        : Math.max(0, Math.min(lastIndex, globalSearchState.activeIndex + delta));
+
+    globalSearchState.activeIndex = nextIndex;
+    syncActiveGlobalSearchResult();
+  }
+
+  function syncActiveGlobalSearchResult(shouldScroll = true) {
+    globalSearchState.resultNodes.forEach((node, index) => {
+      node.classList.toggle("is-active", index === globalSearchState.activeIndex);
+      node.setAttribute("aria-selected", String(index === globalSearchState.activeIndex));
+    });
+
+    if (!shouldScroll || globalSearchState.activeIndex < 0) {
+      return;
+    }
+
+    globalSearchState.resultNodes[globalSearchState.activeIndex]?.scrollIntoView({
+      block: "nearest",
+    });
+  }
+
+  function openGlobalSearchResult(resultIndex, inNewTab = false) {
+    const result = globalSearchState.results[resultIndex];
+    if (!result) {
+      return;
+    }
+
+    closeGlobalSearch();
+    if (inNewTab) {
+      window.open(result.href, "_blank", "noopener");
+      return;
+    }
+
+    window.location.href = result.href;
   }
 
   function readStoredTheme() {
