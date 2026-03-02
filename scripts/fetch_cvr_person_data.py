@@ -34,6 +34,7 @@ PROFILES_FILE = DATA_DIR / "profiler.json"
 OUTPUT_FILE = DATA_DIR / "cvr_personer.json"
 HVERV_FILE = DATA_DIR / "hverv.json"
 OVERRIDES_FILE = DATA_DIR / "cvr_person_overrides.json"
+LOCAL_OVERRIDES_FILE = ROOT / "LOCAL_CVR_OVERRIDES.json"
 
 CVR_BASE_URL = "https://datacvr.virk.dk"
 ODA_ACTOR_URL = "https://oda.ft.dk/api/Akt%C3%B8r"
@@ -118,6 +119,11 @@ def parse_args() -> argparse.Namespace:
         "--retry-errors",
         action="store_true",
         help="Retry only profiles marked with an error in the existing output file.",
+    )
+    parser.add_argument(
+        "--no-local-overrides",
+        action="store_true",
+        help="Ignore LOCAL_CVR_OVERRIDES.json even if it exists.",
     )
     return parser.parse_args()
 
@@ -396,14 +402,23 @@ def load_hverv_index() -> dict[str, Any]:
     return payload.get("medlemmer", {})
 
 
-def load_overrides() -> dict[str, Any]:
-    if not OVERRIDES_FILE.exists():
+def load_override_file(path: Path) -> dict[str, Any]:
+    if not path.exists():
         return {}
     try:
-        payload = json.loads(OVERRIDES_FILE.read_text(encoding="utf-8"))
+        payload = json.loads(path.read_text(encoding="utf-8"))
     except Exception:  # noqa: BLE001
         return {}
-    return payload.get("medlemmer", {})
+    if isinstance(payload, dict) and "medlemmer" in payload and isinstance(payload["medlemmer"], dict):
+        return payload["medlemmer"]
+    return payload if isinstance(payload, dict) else {}
+
+
+def load_overrides(include_local: bool = True) -> dict[str, Any]:
+    overrides = dict(load_override_file(OVERRIDES_FILE))
+    if include_local:
+        overrides.update(load_override_file(LOCAL_OVERRIDES_FILE))
+    return overrides
 
 
 def extract_hverv_clues(hverv_entry: dict[str, Any] | None) -> dict[str, list[str]]:
@@ -1219,7 +1234,7 @@ def main() -> None:
     profiles = load_profiles(args)
     existing_output = load_existing_output(output_path)
     hverv_index = load_hverv_index()
-    overrides = load_overrides()
+    overrides = load_overrides(include_local=not args.no_local_overrides)
     official_name_map = load_official_name_map({int(profile["id"]) for profile in profiles})
 
     chrome_path = find_chrome(args.chrome_path)

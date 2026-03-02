@@ -21,6 +21,7 @@ CVR_FILE = DATA_DIR / "cvr_personer.json"
 PROFILES_FILE = DATA_DIR / "profiler.json"
 JSON_REPORT = REPORTS_DIR / "cvr_unresolved_review.json"
 MARKDOWN_REPORT = REPORTS_DIR / "cvr_unresolved_review.md"
+LOCAL_OVERRIDES_FILE = ROOT / "LOCAL_CVR_OVERRIDES.json"
 
 
 @dataclass
@@ -73,6 +74,26 @@ class ReviewEntry:
         }
 
 
+@dataclass
+class LocalOverrideEntry:
+    member_id: int
+    name: str
+    person_name: str
+    person_enhedsnummer: str
+    source_count: int
+    member_url: str | None
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "id": self.member_id,
+            "name": self.name,
+            "person_name": self.person_name,
+            "person_enhedsnummer": self.person_enhedsnummer,
+            "source_count": self.source_count,
+            "member_url": self.member_url,
+        }
+
+
 def normalise(value: str | None) -> str:
     text = unicodedata.normalize("NFKD", value or "")
     text = "".join(char for char in text if not unicodedata.combining(char))
@@ -82,6 +103,18 @@ def normalise(value: str | None) -> str:
 
 def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_override_members(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        return {}
+    try:
+        payload = load_json(path)
+    except Exception:  # noqa: BLE001
+        return {}
+    if isinstance(payload, dict) and isinstance(payload.get("medlemmer"), dict):
+        return payload["medlemmer"]
+    return payload if isinstance(payload, dict) else {}
 
 
 def build_ft_search_url(query: str) -> str:
@@ -102,18 +135,18 @@ def pick_next_step(
     official_name_differs: bool,
 ) -> str:
     if company_cvr_count:
-        return "Søg virksomhederne direkte i Virk via CVR-numre og sammenhold personrelationer med medlemmet."
+        return "Sog virksomhederne direkte i Virk via CVR-numre og sammenhold personrelationer med medlemmet."
     if company_name_count:
-        return "Søg de erklærede virksomhedsnavne direkte i Virk og match personrelationer mod officielle hverv."
+        return "Sog de erklaerede virksomhedsnavne direkte i Virk og match personrelationer mod officielle hverv."
     if status == "ambiguous" and candidate_count <= 3 and official_name_differs:
         return "Brug flere officielle navnekilder til at afklare mellemnavn eller ekstra efternavn."
     if status == "ambiguous" and candidate_count <= 3:
-        return "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier."
+        return "Gennemga de fa Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier."
     if official_name_differs:
-        return "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override."
+        return "Prov flere officielle navnevarianter og historiske medlemssider for manuel override."
     if status == "ambiguous":
-        return "Indsaml flere officielle identitetsmarkører før der vælges en Virk-person."
-    return "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation."
+        return "Indsaml flere officielle identitetsmarkorer for der vaelges en Virk-person."
+    return "Ingen staerke spor endnu; kraever nye officielle kilder eller manuel verifikation."
 
 
 def score_entry(
@@ -134,20 +167,20 @@ def score_entry(
         reasons.append("flere konkrete Virk-kandidater")
     elif person_total > 0:
         score += 18
-        reasons.append("Virk gav persontræf uden sikker identitet")
+        reasons.append("Virk gav persontraef uden sikker identitet")
 
     if candidate_count == 1:
         score += 30
-        reasons.append("kun én kandidat at afklare")
+        reasons.append("kun en kandidat at afklare")
     elif candidate_count == 2:
         score += 24
         reasons.append("to kandidater at afklare")
     elif 3 <= candidate_count <= 5:
         score += 14
-        reasons.append("få kandidater at afklare")
+        reasons.append("fa kandidater at afklare")
     elif candidate_count > 5:
         score += 6
-        reasons.append("mange kandidater gør sagen tungere")
+        reasons.append("mange kandidater gor sagen tungere")
 
     if company_cvr_count:
         score += 30 + min(company_cvr_count, 3) * 5
@@ -173,21 +206,39 @@ def score_entry(
 
     if verified_company_count:
         score -= 35 + min(verified_company_count, 5) * 2
-        reasons.append("profilen har allerede verificerede virksomhedstræf")
+        reasons.append("profilen har allerede verificerede virksomhedstraef")
 
     return score, reasons
 
 
-def build_review_entries() -> tuple[dict[str, Any], list[ReviewEntry]]:
+def build_review_entries() -> tuple[dict[str, Any], list[ReviewEntry], list[LocalOverrideEntry]]:
     cvr_data = load_json(CVR_FILE)["medlemmer"]
     profiles = {str(item["id"]): item for item in load_json(PROFILES_FILE)}
+    local_overrides = load_override_members(LOCAL_OVERRIDES_FILE)
 
     entries: list[ReviewEntry] = []
+    local_pending: list[LocalOverrideEntry] = []
     unresolved_status_counts = Counter()
+
+    for member_id, override in local_overrides.items():
+        profile = profiles.get(member_id, {})
+        local_pending.append(
+            LocalOverrideEntry(
+                member_id=int(member_id),
+                name=profile.get("name") or "",
+                person_name=override.get("person_name") or profile.get("name") or "",
+                person_enhedsnummer=str(override.get("person_enhedsnummer") or ""),
+                source_count=len(override.get("sources") or []),
+                member_url=profile.get("member_url"),
+            )
+        )
+    local_pending.sort(key=lambda entry: normalise(entry.name))
 
     for member_id, item in cvr_data.items():
         status = item.get("status")
         if status not in {"not_found", "ambiguous"}:
+            continue
+        if member_id in local_overrides:
             continue
 
         unresolved_status_counts[status] += 1
@@ -272,11 +323,13 @@ def build_review_entries() -> tuple[dict[str, Any], list[ReviewEntry]]:
         "generated_from": {
             "cvr_file": str(CVR_FILE.relative_to(ROOT)),
             "profiles_file": str(PROFILES_FILE.relative_to(ROOT)),
+            "local_overrides_file": str(LOCAL_OVERRIDES_FILE.relative_to(ROOT)),
         },
         "counts": {
             "unresolved_total": len(entries),
             "not_found": unresolved_status_counts.get("not_found", 0),
             "ambiguous": unresolved_status_counts.get("ambiguous", 0),
+            "local_override_pending": len(local_pending),
             "with_company_cvrs": sum(1 for entry in entries if entry.company_cvr_count),
             "with_company_names": sum(1 for entry in entries if entry.company_name_count),
             "with_verified_companies": sum(1 for entry in entries if entry.verified_company_count),
@@ -287,39 +340,68 @@ def build_review_entries() -> tuple[dict[str, Any], list[ReviewEntry]]:
         },
     }
 
-    return summary, entries
+    return summary, entries, local_pending
 
 
-def write_reports(summary: dict[str, Any], entries: list[ReviewEntry]) -> None:
+def write_reports(summary: dict[str, Any], entries: list[ReviewEntry], local_pending: list[LocalOverrideEntry]) -> None:
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
     json_payload = {
         "summary": summary,
         "entries": [entry.to_dict() for entry in entries],
+        "local_pending": [entry.to_dict() for entry in local_pending],
     }
     JSON_REPORT.write_text(json.dumps(json_payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
     lines = [
-        "# CVR review af uløste navne",
+        "# CVR review af uloste navne",
         "",
-        f"- Uløste sager: {summary['counts']['unresolved_total']}",
+        f"- Uloste sager: {summary['counts']['unresolved_total']}",
         f"- Ikke fundet: {summary['counts']['not_found']}",
         f"- Tvetydige: {summary['counts']['ambiguous']}",
+        f"- Lokalt verificeret, ikke publiceret: {summary['counts']['local_override_pending']}",
         f"- Med CVR-spor fra hverv: {summary['counts']['with_company_cvrs']}",
         f"- Med virksomhedsnavne fra hverv: {summary['counts']['with_company_names']}",
         f"- Allerede beriget med verificerede virksomheder: {summary['counts']['with_verified_companies']}",
         f"- Med Virk-kandidater: {summary['counts']['with_candidates']}",
         f"- Med udvidet officielt navn: {summary['counts']['with_expanded_official_name']}",
         "",
-        "## Top 25",
-        "",
     ]
+
+    if local_pending:
+        lines.extend(
+            [
+                "## Lokale overrides",
+                "",
+                "Disse sager er verificeret lokalt i `LOCAL_CVR_OVERRIDES.json`, men er endnu ikke publiceret i den tracked override-fil.",
+                "",
+            ]
+        )
+        for entry in local_pending:
+            member_link = f"[medlemsside]({entry.member_url})" if entry.member_url else "—"
+            lines.extend(
+                [
+                    f"### {entry.name}",
+                    f"- ID: `{entry.member_id}`",
+                    f"- Virk-person: {entry.person_name} (`{entry.person_enhedsnummer}`)",
+                    f"- FT.dk: {member_link}",
+                    f"- Kildeantal: {entry.source_count}",
+                    "",
+                ]
+            )
+
+    lines.extend(
+        [
+            "## Top 25",
+            "",
+        ]
+    )
 
     for entry in entries[:25]:
         ft_links = []
         if entry.member_url:
             ft_links.append(f"[medlemsside]({entry.member_url})")
-        ft_links.append(f"[ft-søgning]({entry.ft_search_url})")
+        ft_links.append(f"[ft-sogning]({entry.ft_search_url})")
         candidate_links = ", ".join(
             f"[{index}]({url})" for index, url in enumerate(entry.candidate_urls, start=1)
         ) or "—"
@@ -329,16 +411,16 @@ def write_reports(summary: dict[str, Any], entries: list[ReviewEntry]) -> None:
                 f"- ID: `{entry.member_id}`",
                 f"- Officielt navn: {entry.official_name or '—'}",
                 f"- FT.dk: {' / '.join(ft_links)}",
-                f"- Virk: [søgning]({entry.virk_search_url})",
-                f"- Søgte navne: {', '.join(entry.search_names_tried) if entry.search_names_tried else '—'}",
+                f"- Virk: [sogning]({entry.virk_search_url})",
+                f"- Sogte navne: {', '.join(entry.search_names_tried) if entry.search_names_tried else '—'}",
                 f"- Virk-kandidater: {entry.candidate_count} (personTotal: {entry.person_total})",
                 f"- Kandidatlinks: {candidate_links}",
                 f"- Virksomhedsnavne: {', '.join(entry.company_name_samples) if entry.company_name_samples else '—'}",
                 f"- CVR-spor: {', '.join(entry.company_cvr_samples) if entry.company_cvr_samples else '—'}",
                 f"- Verificerede virksomheder: {entry.verified_company_count}",
                 f"- Kandidater: {', '.join(entry.candidate_names) if entry.candidate_names else '—'}",
-                f"- Næste skridt: {entry.next_step}",
-                f"- Hvorfor højt prioriteret: {', '.join(entry.reasons)}",
+                f"- Naeste skridt: {entry.next_step}",
+                f"- Hvorfor hojt prioriteret: {', '.join(entry.reasons)}",
                 "",
             ]
         )
@@ -347,8 +429,8 @@ def write_reports(summary: dict[str, Any], entries: list[ReviewEntry]) -> None:
 
 
 def main() -> None:
-    summary, entries = build_review_entries()
-    write_reports(summary, entries)
+    summary, entries, local_pending = build_review_entries()
+    write_reports(summary, entries, local_pending)
     print(f"Skrev {JSON_REPORT}")
     print(f"Skrev {MARKDOWN_REPORT}")
     print(json.dumps(summary["counts"], ensure_ascii=False, indent=2))
