@@ -5,13 +5,13 @@
       "profiles_file": "data\\profiler.json"
     },
     "counts": {
-      "unresolved_total": 88,
+      "unresolved_total": 87,
       "not_found": 71,
-      "ambiguous": 17,
+      "ambiguous": 16,
       "with_company_cvrs": 2,
       "with_company_names": 3,
       "with_verified_companies": 3,
-      "with_candidates": 25,
+      "with_candidates": 24,
       "with_expanded_official_name": 17
     }
   },
@@ -267,41 +267,6 @@
       "rank": 8,
       "score": 64,
       "status": "ambiguous",
-      "id": 265,
-      "name": "Eva Kjer Hansen",
-      "official_name": "Eva Kjer Hansen",
-      "member_url": "https://www.ft.dk/medlemmer/mf/e/eva-kjer-hansen",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Eva%20Kjer%20Hansen&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Eva%20Kjer%20Hansen&sideIndex=0&size=10",
-      "candidate_count": 2,
-      "person_total": 2,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "verified_company_count": 0,
-      "candidate_names": [
-        "Eva Kjer Hansen",
-        "Eva Kjer Hansen"
-      ],
-      "candidate_urls": [
-        "https://datacvr.virk.dk/enhed/person/4004057381/deltager",
-        "https://datacvr.virk.dk/enhed/person/4000440426/deltager"
-      ],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Eva Kjer Hansen"
-      ],
-      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
-      "reasons": [
-        "flere konkrete Virk-kandidater",
-        "to kandidater at afklare",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 9,
-      "score": 64,
-      "status": "ambiguous",
       "id": 257,
       "name": "Bjarne Laustsen",
       "official_name": "Bjarne Laustsen",
@@ -334,7 +299,7 @@
       ]
     },
     {
-      "rank": 10,
+      "rank": 9,
       "score": 64,
       "status": "ambiguous",
       "id": 18719,
@@ -369,7 +334,7 @@
       ]
     },
     {
-      "rank": 11,
+      "rank": 10,
       "score": 55,
       "status": "not_found",
       "id": 252,
@@ -408,7 +373,7 @@
       ]
     },
     {
-      "rank": 12,
+      "rank": 11,
       "score": 55,
       "status": "not_found",
       "id": 17628,
@@ -451,7 +416,7 @@
       ]
     },
     {
-      "rank": 13,
+      "rank": 12,
       "score": 54,
       "status": "not_found",
       "id": 20389,
@@ -491,7 +456,7 @@
       ]
     },
     {
-      "rank": 14,
+      "rank": 13,
       "score": 54,
       "status": "ambiguous",
       "id": 208,
@@ -528,7 +493,7 @@
       ]
     },
     {
-      "rank": 15,
+      "rank": 14,
       "score": 54,
       "status": "ambiguous",
       "id": 20841,
@@ -565,7 +530,7 @@
       ]
     },
     {
-      "rank": 16,
+      "rank": 15,
       "score": 54,
       "status": "ambiguous",
       "id": 110,
@@ -604,7 +569,7 @@
       ]
     },
     {
-      "rank": 17,
+      "rank": 16,
       "score": 54,
       "status": "ambiguous",
       "id": 20790,
@@ -643,7 +608,7 @@
       ]
     },
     {
-      "rank": 18,
+      "rank": 17,
       "score": 54,
       "status": "ambiguous",
       "id": 20767,
@@ -682,7 +647,7 @@
       ]
     },
     {
-      "rank": 19,
+      "rank": 18,
       "score": 54,
       "status": "ambiguous",
       "id": 18718,
@@ -721,7 +686,7 @@
       ]
     },
     {
-      "rank": 20,
+      "rank": 19,
       "score": 53,
       "status": "not_found",
       "id": 262,
@@ -754,7 +719,7 @@
       ]
     },
     {
-      "rank": 21,
+      "rank": 20,
       "score": 53,
       "status": "not_found",
       "id": 15776,
@@ -787,7 +752,7 @@
       ]
     },
     {
-      "rank": 22,
+      "rank": 21,
       "score": 53,
       "status": "not_found",
       "id": 18723,
@@ -820,7 +785,7 @@
       ]
     },
     {
-      "rank": 23,
+      "rank": 22,
       "score": 47,
       "status": "not_found",
       "id": 15788,
@@ -863,7 +828,7 @@
       ]
     },
     {
-      "rank": 24,
+      "rank": 23,
       "score": 47,
       "status": "not_found",
       "id": 20356,
@@ -906,7 +871,7 @@
       ]
     },
     {
-      "rank": 25,
+      "rank": 24,
       "score": 46,
       "status": "ambiguous",
       "id": 18720,
@@ -947,7 +912,7 @@
       ]
     },
     {
-      "rank": 26,
+      "rank": 25,
       "score": 41,
       "status": "not_found",
       "id": 167,
@@ -977,7 +942,7 @@
       ]
     },
     {
-      "rank": 27,
+      "rank": 26,
       "score": 26,
       "status": "not_found",
       "id": 11702,
@@ -1013,7 +978,7 @@
       ]
     },
     {
-      "rank": 28,
+      "rank": 27,
       "score": 23,
       "status": "not_found",
       "id": 201,
@@ -1041,7 +1006,7 @@
       ]
     },
     {
-      "rank": 29,
+      "rank": 28,
       "score": 23,
       "status": "not_found",
       "id": 20397,
@@ -1069,7 +1034,7 @@
       ]
     },
     {
-      "rank": 30,
+      "rank": 29,
       "score": 23,
       "status": "not_found",
       "id": 20599,
@@ -1097,7 +1062,7 @@
       ]
     },
     {
-      "rank": 31,
+      "rank": 30,
       "score": 23,
       "status": "not_found",
       "id": 154,
@@ -1125,7 +1090,7 @@
       ]
     },
     {
-      "rank": 32,
+      "rank": 31,
       "score": 23,
       "status": "not_found",
       "id": 138,
@@ -1153,7 +1118,7 @@
       ]
     },
     {
-      "rank": 33,
+      "rank": 32,
       "score": 23,
       "status": "not_found",
       "id": 18701,
@@ -1181,7 +1146,7 @@
       ]
     },
     {
-      "rank": 34,
+      "rank": 33,
       "score": 23,
       "status": "not_found",
       "id": 97,
@@ -1209,7 +1174,7 @@
       ]
     },
     {
-      "rank": 35,
+      "rank": 34,
       "score": 23,
       "status": "not_found",
       "id": 173,
@@ -1237,7 +1202,7 @@
       ]
     },
     {
-      "rank": 36,
+      "rank": 35,
       "score": 23,
       "status": "not_found",
       "id": 20962,
@@ -1265,7 +1230,7 @@
       ]
     },
     {
-      "rank": 37,
+      "rank": 36,
       "score": 23,
       "status": "not_found",
       "id": 20820,
@@ -1293,7 +1258,7 @@
       ]
     },
     {
-      "rank": 38,
+      "rank": 37,
       "score": 13,
       "status": "not_found",
       "id": 191,
@@ -1323,7 +1288,7 @@
       ]
     },
     {
-      "rank": 39,
+      "rank": 38,
       "score": 13,
       "status": "not_found",
       "id": 20373,
@@ -1353,7 +1318,7 @@
       ]
     },
     {
-      "rank": 40,
+      "rank": 39,
       "score": 13,
       "status": "not_found",
       "id": 18716,
@@ -1383,7 +1348,7 @@
       ]
     },
     {
-      "rank": 41,
+      "rank": 40,
       "score": 13,
       "status": "not_found",
       "id": 17360,
@@ -1413,7 +1378,7 @@
       ]
     },
     {
-      "rank": 42,
+      "rank": 41,
       "score": 13,
       "status": "not_found",
       "id": 20365,
@@ -1443,7 +1408,7 @@
       ]
     },
     {
-      "rank": 43,
+      "rank": 42,
       "score": 13,
       "status": "not_found",
       "id": 1146,
@@ -1473,7 +1438,7 @@
       ]
     },
     {
-      "rank": 44,
+      "rank": 43,
       "score": 13,
       "status": "not_found",
       "id": 219,
@@ -1503,7 +1468,7 @@
       ]
     },
     {
-      "rank": 45,
+      "rank": 44,
       "score": 13,
       "status": "not_found",
       "id": 18729,
@@ -1533,7 +1498,7 @@
       ]
     },
     {
-      "rank": 46,
+      "rank": 45,
       "score": 13,
       "status": "not_found",
       "id": 214,
@@ -1563,7 +1528,7 @@
       ]
     },
     {
-      "rank": 47,
+      "rank": 46,
       "score": 13,
       "status": "not_found",
       "id": 18707,
@@ -1593,7 +1558,7 @@
       ]
     },
     {
-      "rank": 48,
+      "rank": 47,
       "score": 13,
       "status": "not_found",
       "id": 18688,
@@ -1623,7 +1588,7 @@
       ]
     },
     {
-      "rank": 49,
+      "rank": 48,
       "score": -5,
       "status": "not_found",
       "id": 18694,
@@ -1652,7 +1617,7 @@
       ]
     },
     {
-      "rank": 50,
+      "rank": 49,
       "score": -5,
       "status": "not_found",
       "id": 21083,
@@ -1680,7 +1645,7 @@
       ]
     },
     {
-      "rank": 51,
+      "rank": 50,
       "score": -5,
       "status": "not_found",
       "id": 19000,
@@ -1708,7 +1673,7 @@
       ]
     },
     {
-      "rank": 52,
+      "rank": 51,
       "score": -5,
       "status": "not_found",
       "id": 20360,
@@ -1736,7 +1701,7 @@
       ]
     },
     {
-      "rank": 53,
+      "rank": 52,
       "score": -5,
       "status": "not_found",
       "id": 100,
@@ -1764,7 +1729,7 @@
       ]
     },
     {
-      "rank": 54,
+      "rank": 53,
       "score": -5,
       "status": "not_found",
       "id": 20779,
@@ -1792,7 +1757,7 @@
       ]
     },
     {
-      "rank": 55,
+      "rank": 54,
       "score": -5,
       "status": "not_found",
       "id": 20559,
@@ -1820,7 +1785,7 @@
       ]
     },
     {
-      "rank": 56,
+      "rank": 55,
       "score": -5,
       "status": "not_found",
       "id": 266,
@@ -1848,7 +1813,7 @@
       ]
     },
     {
-      "rank": 57,
+      "rank": 56,
       "score": -5,
       "status": "not_found",
       "id": 18722,
@@ -1876,7 +1841,7 @@
       ]
     },
     {
-      "rank": 58,
+      "rank": 57,
       "score": -5,
       "status": "not_found",
       "id": 20350,
@@ -1904,7 +1869,7 @@
       ]
     },
     {
-      "rank": 59,
+      "rank": 58,
       "score": -5,
       "status": "not_found",
       "id": 20384,
@@ -1932,7 +1897,7 @@
       ]
     },
     {
-      "rank": 60,
+      "rank": 59,
       "score": -5,
       "status": "not_found",
       "id": 20527,
@@ -1960,7 +1925,7 @@
       ]
     },
     {
-      "rank": 61,
+      "rank": 60,
       "score": -5,
       "status": "not_found",
       "id": 21143,
@@ -1988,7 +1953,7 @@
       ]
     },
     {
-      "rank": 62,
+      "rank": 61,
       "score": -5,
       "status": "not_found",
       "id": 20380,
@@ -2016,7 +1981,7 @@
       ]
     },
     {
-      "rank": 63,
+      "rank": 62,
       "score": -5,
       "status": "not_found",
       "id": 197,
@@ -2044,7 +2009,7 @@
       ]
     },
     {
-      "rank": 64,
+      "rank": 63,
       "score": -5,
       "status": "not_found",
       "id": 20635,
@@ -2072,7 +2037,7 @@
       ]
     },
     {
-      "rank": 65,
+      "rank": 64,
       "score": -5,
       "status": "not_found",
       "id": 18693,
@@ -2100,7 +2065,7 @@
       ]
     },
     {
-      "rank": 66,
+      "rank": 65,
       "score": -5,
       "status": "not_found",
       "id": 21186,
@@ -2128,7 +2093,7 @@
       ]
     },
     {
-      "rank": 67,
+      "rank": 66,
       "score": -5,
       "status": "not_found",
       "id": 20930,
@@ -2156,7 +2121,7 @@
       ]
     },
     {
-      "rank": 68,
+      "rank": 67,
       "score": -5,
       "status": "not_found",
       "id": 93,
@@ -2184,7 +2149,7 @@
       ]
     },
     {
-      "rank": 69,
+      "rank": 68,
       "score": -5,
       "status": "not_found",
       "id": 20371,
@@ -2212,7 +2177,7 @@
       ]
     },
     {
-      "rank": 70,
+      "rank": 69,
       "score": -5,
       "status": "not_found",
       "id": 21044,
@@ -2240,7 +2205,7 @@
       ]
     },
     {
-      "rank": 71,
+      "rank": 70,
       "score": -5,
       "status": "not_found",
       "id": 20367,
@@ -2268,7 +2233,7 @@
       ]
     },
     {
-      "rank": 72,
+      "rank": 71,
       "score": -5,
       "status": "not_found",
       "id": 20916,
@@ -2296,7 +2261,7 @@
       ]
     },
     {
-      "rank": 73,
+      "rank": 72,
       "score": -5,
       "status": "not_found",
       "id": 20747,
@@ -2324,7 +2289,7 @@
       ]
     },
     {
-      "rank": 74,
+      "rank": 73,
       "score": -5,
       "status": "not_found",
       "id": 20351,
@@ -2352,7 +2317,7 @@
       ]
     },
     {
-      "rank": 75,
+      "rank": 74,
       "score": -5,
       "status": "not_found",
       "id": 20361,
@@ -2380,7 +2345,7 @@
       ]
     },
     {
-      "rank": 76,
+      "rank": 75,
       "score": -5,
       "status": "not_found",
       "id": 21206,
@@ -2408,7 +2373,7 @@
       ]
     },
     {
-      "rank": 77,
+      "rank": 76,
       "score": -5,
       "status": "not_found",
       "id": 15762,
@@ -2436,7 +2401,7 @@
       ]
     },
     {
-      "rank": 78,
+      "rank": 77,
       "score": -5,
       "status": "not_found",
       "id": 18708,
@@ -2464,7 +2429,7 @@
       ]
     },
     {
-      "rank": 79,
+      "rank": 78,
       "score": -5,
       "status": "not_found",
       "id": 20976,
@@ -2492,7 +2457,7 @@
       ]
     },
     {
-      "rank": 80,
+      "rank": 79,
       "score": -5,
       "status": "not_found",
       "id": 17141,
@@ -2520,7 +2485,7 @@
       ]
     },
     {
-      "rank": 81,
+      "rank": 80,
       "score": -5,
       "status": "not_found",
       "id": 18717,
@@ -2548,7 +2513,7 @@
       ]
     },
     {
-      "rank": 82,
+      "rank": 81,
       "score": -5,
       "status": "not_found",
       "id": 19142,
@@ -2576,7 +2541,7 @@
       ]
     },
     {
-      "rank": 83,
+      "rank": 82,
       "score": -5,
       "status": "not_found",
       "id": 18706,
@@ -2604,7 +2569,7 @@
       ]
     },
     {
-      "rank": 84,
+      "rank": 83,
       "score": -10,
       "status": "not_found",
       "id": 20394,
@@ -2639,7 +2604,7 @@
       ]
     },
     {
-      "rank": 85,
+      "rank": 84,
       "score": -18,
       "status": "not_found",
       "id": 1158,
@@ -2667,7 +2632,7 @@
       ]
     },
     {
-      "rank": 86,
+      "rank": 85,
       "score": -18,
       "status": "not_found",
       "id": 21285,
@@ -2695,7 +2660,7 @@
       ]
     },
     {
-      "rank": 87,
+      "rank": 86,
       "score": -18,
       "status": "not_found",
       "id": 19826,
@@ -2723,7 +2688,7 @@
       ]
     },
     {
-      "rank": 88,
+      "rank": 87,
       "score": -18,
       "status": "not_found",
       "id": 19548,

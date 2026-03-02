@@ -7146,29 +7146,92 @@
     "265": {
       "id": 265,
       "name": "Eva Kjer Hansen",
-      "status": "ambiguous",
-      "person_total": 2,
-      "exact_match_count": 2,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Eva Kjer Hansen",
+      "person_enhedsnummer": "4000440426",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000440426/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Eva%20Kjer%20Hansen&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Eva Kjer Hansen",
-          "person_enhedsnummer": "4004057381",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004057381/deltager"
+          "company_name": "EVaction",
+          "company_enhedsnummer": "4001375221",
+          "company_cvr": "26749794",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001375221",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "25.01.2024"
+            }
+          ]
         },
         {
-          "name": "Eva Kjer Hansen",
-          "person_enhedsnummer": "4000440426",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000440426/deltager"
+          "company_name": "EVaction ApS",
+          "company_enhedsnummer": "4009533038",
+          "company_cvr": "43789368",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009533038",
+          "status": "Normal",
+          "roles": [
+            "Legal ejer",
+            "Stiftere",
+            "Direktør"
+          ],
+          "facts": [
+            {
+              "label": "Ejerandel:",
+              "value": "100% (10.01.2023 - )"
+            },
+            {
+              "label": "Stemmerettigheder:",
+              "value": "100% (10.01.2023 - )"
+            },
+            {
+              "label": "Ændringsdato:",
+              "value": "10.01.2023"
+            },
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "10.01.2023"
+            }
+          ]
+        },
+        {
+          "company_name": "Investering og Feriebolig A/S",
+          "company_enhedsnummer": "4008619893",
+          "company_cvr": "41796340",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4008619893",
+          "status": "Normal",
+          "roles": [
+            "Bestyrelse"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "12.06.2025"
+            }
+          ]
         }
       ],
+      "historical_relation_count": 4,
       "official_name": "Eva Kjer Hansen",
-      "search_names_tried": [
-        "Eva Kjer Hansen"
-      ]
+      "search_name_used": "Eva Kjer Hansen",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet via selskabets egen 'om os'-side, hvor Eva Kjer Hansen står som bestyrelsesmedlem i Investering og Feriebolig. Det matcher præcist den aktive Virk-person med relation til Investering og Feriebolig A/S, EVaction og EVaction ApS. Den alternative Virk-person har ingen aktive relationer og kun en ophørt relation til Novo Nordisk Pharmatech A/S.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/e/eva-kjer-hansen",
+          "https://investeringogferiebolig.dk/om-os/",
+          "https://www.linkedin.com/posts/lokk_en-tidligere-minister-indtr%C3%A6der-i-lokks-activity-7168992835263639552-j9Vu",
+          "https://datacvr.virk.dk/enhed/person/4000440426/deltager",
+          "https://datacvr.virk.dk/enhed/person/4004057381/deltager"
+        ]
+      }
     },
     "127": {
       "id": 127,

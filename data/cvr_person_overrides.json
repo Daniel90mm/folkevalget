@@ -62,6 +62,19 @@
         "https://datacvr.virk.dk/enhed/person/4006516781/deltager",
         "https://datacvr.virk.dk/enhed/person/4000375149/deltager"
       ]
+    },
+    "265": {
+      "person_enhedsnummer": "4000440426",
+      "person_type": "deltager",
+      "person_name": "Eva Kjer Hansen",
+      "note": "Bekræftet via selskabets egen 'om os'-side, hvor Eva Kjer Hansen står som bestyrelsesmedlem i Investering og Feriebolig. Det matcher præcist den aktive Virk-person med relation til Investering og Feriebolig A/S, EVaction og EVaction ApS. Den alternative Virk-person har ingen aktive relationer og kun en ophørt relation til Novo Nordisk Pharmatech A/S.",
+      "sources": [
+        "https://www.ft.dk/medlemmer/mf/e/eva-kjer-hansen",
+        "https://investeringogferiebolig.dk/om-os/",
+        "https://www.linkedin.com/posts/lokk_en-tidligere-minister-indtr%C3%A6der-i-lokks-activity-7168992835263639552-j9Vu",
+        "https://datacvr.virk.dk/enhed/person/4000440426/deltager",
+        "https://datacvr.virk.dk/enhed/person/4004057381/deltager"
+      ]
     }
   }
 }
