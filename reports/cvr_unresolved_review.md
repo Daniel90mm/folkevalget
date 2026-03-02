@@ -1,12 +1,12 @@
 # CVR review af uløste navne
 
-- Uløste sager: 80
-- Ikke fundet: 71
+- Uløste sager: 78
+- Ikke fundet: 69
 - Tvetydige: 9
 - Med CVR-spor fra hverv: 2
 - Med virksomhedsnavne fra hverv: 3
 - Allerede beriget med verificerede virksomheder: 3
-- Med Virk-kandidater: 17
+- Med Virk-kandidater: 15
 - Med udvidet officielt navn: 17
 
 ## Top 25
@@ -191,22 +191,7 @@
 - Næste skridt: Indsaml flere officielle identitetsmarkører før der vælges en Virk-person.
 - Hvorfor højt prioriteret: flere konkrete Virk-kandidater, få kandidater at afklare, officiel medlemsside findes
 
-### 13. Sjúrður Skaale (not_found, score 53)
-- ID: `262`
-- Officielt navn: Sjúrður Skaale
-- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/s/sjuroeur-skaale) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Sj%C3%BAr%C3%B0ur%20Skaale&sf=mf)
-- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Sj%C3%BAr%C3%B0ur%20Skaale&sideIndex=0&size=10)
-- Søgte navne: Sjúrður Skaale
-- Virk-kandidater: 1 (personTotal: 1)
-- Kandidatlinks: [1](https://datacvr.virk.dk/enhed/person/4000712912/deltager)
-- Virksomhedsnavne: —
-- CVR-spor: —
-- Verificerede virksomheder: 0
-- Kandidater: Sjurdur Skaale
-- Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
-- Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, kun én kandidat at afklare, officiel medlemsside findes
-
-### 14. Peter Hummelgaard (not_found, score 53)
+### 13. Peter Hummelgaard (not_found, score 53)
 - ID: `15776`
 - Officielt navn: Peter Hummelgaard
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/p/peter-hummelgaard) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Peter%20Hummelgaard&sf=mf)
@@ -221,22 +206,7 @@
 - Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, kun én kandidat at afklare, officiel medlemsside findes
 
-### 15. Pernille Vermund (not_found, score 53)
-- ID: `18723`
-- Officielt navn: Pernille Vermund
-- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/p/pernille-vermund) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Pernille%20Vermund&sf=mf)
-- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Pernille%20Vermund&sideIndex=0&size=10)
-- Søgte navne: Pernille Vermund
-- Virk-kandidater: 1 (personTotal: 1)
-- Kandidatlinks: [1](https://datacvr.virk.dk/enhed/person/4000717333/deltager)
-- Virksomhedsnavne: —
-- CVR-spor: —
-- Verificerede virksomheder: 0
-- Kandidater: Ann Pernille Vermund Bretton-Meyer
-- Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
-- Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, kun én kandidat at afklare, officiel medlemsside findes
-
-### 16. Jacob Mark (not_found, score 47)
+### 14. Jacob Mark (not_found, score 47)
 - ID: `15788`
 - Officielt navn: Jacob Rene Mark
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/j/jacob-mark) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Jacob%20Rene%20Mark&sf=mf)
@@ -251,7 +221,7 @@
 - Næste skridt: Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, mange kandidater gør sagen tungere, officielt fuldnavn er mere specifikt end profilnavnet, officiel medlemsside findes
 
-### 17. Mikkel Bjørn (not_found, score 47)
+### 15. Mikkel Bjørn (not_found, score 47)
 - ID: `20356`
 - Officielt navn: Mikkel Bjørn Sørensen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/m/mikkel-bjoern) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Mikkel%20Bj%C3%B8rn%20S%C3%B8rensen&sf=mf)
@@ -266,7 +236,7 @@
 - Næste skridt: Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, mange kandidater gør sagen tungere, officielt fuldnavn er mere specifikt end profilnavnet, officiel medlemsside findes
 
-### 18. Dan Jørgensen (not_found, score 41)
+### 16. Dan Jørgensen (not_found, score 41)
 - ID: `167`
 - Officielt navn: Dan Jannik Jørgensen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/d/dan-joergensen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Dan%20Jannik%20J%C3%B8rgensen&sf=mf)
@@ -281,7 +251,7 @@
 - Næste skridt: Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officielt fuldnavn er mere specifikt end profilnavnet, officiel medlemsside findes
 
-### 19. Per Larsen (not_found, score 26)
+### 17. Per Larsen (not_found, score 26)
 - ID: `11702`
 - Officielt navn: Per Larsen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/p/per-larsen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Per%20Larsen&sf=mf)
@@ -296,7 +266,7 @@
 - Næste skridt: Søg virksomhederne direkte i Virk via CVR-numre og sammenhold personrelationer med medlemmet.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officielle CVR-numre i hvervregisteret, officiel medlemsside findes, profilen har allerede verificerede virksomhedstræf
 
-### 20. Thomas Jensen (not_found, score 23)
+### 18. Thomas Jensen (not_found, score 23)
 - ID: `201`
 - Officielt navn: Thomas Jensen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/t/thomas-jensen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Thomas%20Jensen&sf=mf)
@@ -311,7 +281,7 @@
 - Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officiel medlemsside findes
 
-### 21. Steffen Larsen (not_found, score 23)
+### 19. Steffen Larsen (not_found, score 23)
 - ID: `20397`
 - Officielt navn: Steffen Larsen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/s/steffen-larsen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Steffen%20Larsen&sf=mf)
@@ -326,7 +296,7 @@
 - Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officiel medlemsside findes
 
-### 22. Søren Rasmussen (not_found, score 23)
+### 20. Søren Rasmussen (not_found, score 23)
 - ID: `20599`
 - Officielt navn: Søren Rasmussen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/s/soeren-rasmussen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=S%C3%B8ren%20Rasmussen&sf=mf)
@@ -341,7 +311,7 @@
 - Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officiel medlemsside findes
 
-### 23. Mogens Jensen (not_found, score 23)
+### 21. Mogens Jensen (not_found, score 23)
 - ID: `154`
 - Officielt navn: Mogens Jensen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/m/mogens-jensen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Mogens%20Jensen&sf=mf)
@@ -356,7 +326,7 @@
 - Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officiel medlemsside findes
 
-### 24. Mette Frederiksen (not_found, score 23)
+### 22. Mette Frederiksen (not_found, score 23)
 - ID: `138`
 - Officielt navn: Mette Frederiksen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/m/mette-frederiksen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Mette%20Frederiksen&sf=mf)
@@ -371,13 +341,43 @@
 - Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officiel medlemsside findes
 
-### 25. Marie Bjerre (not_found, score 23)
+### 23. Marie Bjerre (not_found, score 23)
 - ID: `18701`
 - Officielt navn: Marie Bjerre
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/m/marie-bjerre) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Marie%20Bjerre&sf=mf)
 - Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Marie%20Bjerre&sideIndex=0&size=10)
 - Søgte navne: Marie Bjerre
 - Virk-kandidater: 0 (personTotal: 19)
+- Kandidatlinks: —
+- Virksomhedsnavne: —
+- CVR-spor: —
+- Verificerede virksomheder: 0
+- Kandidater: —
+- Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
+- Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officiel medlemsside findes
+
+### 24. Jesper Petersen (not_found, score 23)
+- ID: `97`
+- Officielt navn: Jesper Petersen
+- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/j/jesper-petersen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Jesper%20Petersen&sf=mf)
+- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Jesper%20Petersen&sideIndex=0&size=10)
+- Søgte navne: Jesper Petersen
+- Virk-kandidater: 0 (personTotal: 263)
+- Kandidatlinks: —
+- Virksomhedsnavne: —
+- CVR-spor: —
+- Verificerede virksomheder: 0
+- Kandidater: —
+- Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
+- Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officiel medlemsside findes
+
+### 25. Jacob Jensen (not_found, score 23)
+- ID: `173`
+- Officielt navn: Jacob Jensen
+- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/j/jacob-jensen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Jacob%20Jensen&sf=mf)
+- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Jacob%20Jensen&sideIndex=0&size=10)
+- Søgte navne: Jacob Jensen
+- Virk-kandidater: 0 (personTotal: 358)
 - Kandidatlinks: —
 - Virksomhedsnavne: —
 - CVR-spor: —

@@ -170,6 +170,29 @@
         "https://datacvr.virk.dk/enhed/person/4000664551/deltager",
         "https://datacvr.virk.dk/enhed/person/4003893113/deltager"
       ]
+    },
+    "262": {
+      "person_enhedsnummer": "4000712912",
+      "person_type": "deltager",
+      "person_name": "Sjurdur Skaale",
+      "note": "Bekræftet via officiel translitteration og partiorganisation. Folketingets medlemsside bruger den færøske stavemåde Sjúrður Skaale, mens de tekniske ft.dk-identifikatorer bruger den ASCII-translittererede form sjurdur.skaale. Virk-kandidaten hedder Sjurdur Skaale og er aktiv i Javnaðarflokkurin á Fólkatingi v/Sjurdur Skaale, hvilket matcher Folketingets officielle biografi om hans mandat for Javnaðarflokkurin.",
+      "sources": [
+        "https://www.ft.dk/medlemmer/mf/s/sjuroeur-skaale",
+        "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%20262&$format=json",
+        "https://datacvr.virk.dk/enhed/person/4000712912/deltager"
+      ]
+    },
+    "18723": {
+      "person_enhedsnummer": "4000717333",
+      "person_type": "deltager",
+      "person_name": "Ann Pernille Vermund Bretton-Meyer",
+      "note": "Bekræftet via præcist sammenfald mellem Folketingets officielle biografi og Virk-historikken. Ft.dk angiver, at Pernille Vermund var selvstændig arkitekt i Vermund Gere Arkitekter fra 2006 til 2019. Den eneste Virk-kandidat har historiske relationer til Vermund & Gere Arkitekter MAA I/S og Vermund Gere Arkitekter MAA i netop samme periode, og kandidatens fulde navn udvider profilnavnet med offentligt kendte mellem- og efternavne.",
+      "sources": [
+        "https://www.ft.dk/medlemmer/mf/p/pernille-vermund",
+        "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%2018723&$format=json",
+        "https://www.paqle.dk/p/ann-pernille-vermund-bretton-meyer/1641745",
+        "https://datacvr.virk.dk/enhed/person/4000717333/deltager"
+      ]
     }
   }
 }

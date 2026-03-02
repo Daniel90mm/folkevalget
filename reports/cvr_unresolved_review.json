@@ -5,13 +5,13 @@
       "profiles_file": "data\\profiler.json"
     },
     "counts": {
-      "unresolved_total": 80,
-      "not_found": 71,
+      "unresolved_total": 78,
+      "not_found": 69,
       "ambiguous": 9,
       "with_company_cvrs": 2,
       "with_company_names": 3,
       "with_verified_companies": 3,
-      "with_candidates": 17,
+      "with_candidates": 15,
       "with_expanded_official_name": 17
     }
   },
@@ -477,39 +477,6 @@
       "rank": 13,
       "score": 53,
       "status": "not_found",
-      "id": 262,
-      "name": "Sjúrður Skaale",
-      "official_name": "Sjúrður Skaale",
-      "member_url": "https://www.ft.dk/medlemmer/mf/s/sjuroeur-skaale",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Sj%C3%BAr%C3%B0ur%20Skaale&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Sj%C3%BAr%C3%B0ur%20Skaale&sideIndex=0&size=10",
-      "candidate_count": 1,
-      "person_total": 1,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "verified_company_count": 0,
-      "candidate_names": [
-        "Sjurdur Skaale"
-      ],
-      "candidate_urls": [
-        "https://datacvr.virk.dk/enhed/person/4000712912/deltager"
-      ],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Sjúrður Skaale"
-      ],
-      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
-      "reasons": [
-        "Virk gav persontræf uden sikker identitet",
-        "kun én kandidat at afklare",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 14,
-      "score": 53,
-      "status": "not_found",
       "id": 15776,
       "name": "Peter Hummelgaard",
       "official_name": "Peter Hummelgaard",
@@ -540,40 +507,7 @@
       ]
     },
     {
-      "rank": 15,
-      "score": 53,
-      "status": "not_found",
-      "id": 18723,
-      "name": "Pernille Vermund",
-      "official_name": "Pernille Vermund",
-      "member_url": "https://www.ft.dk/medlemmer/mf/p/pernille-vermund",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Pernille%20Vermund&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Pernille%20Vermund&sideIndex=0&size=10",
-      "candidate_count": 1,
-      "person_total": 1,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "verified_company_count": 0,
-      "candidate_names": [
-        "Ann Pernille Vermund Bretton-Meyer"
-      ],
-      "candidate_urls": [
-        "https://datacvr.virk.dk/enhed/person/4000717333/deltager"
-      ],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Pernille Vermund"
-      ],
-      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
-      "reasons": [
-        "Virk gav persontræf uden sikker identitet",
-        "kun én kandidat at afklare",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 16,
+      "rank": 14,
       "score": 47,
       "status": "not_found",
       "id": 15788,
@@ -616,7 +550,7 @@
       ]
     },
     {
-      "rank": 17,
+      "rank": 15,
       "score": 47,
       "status": "not_found",
       "id": 20356,
@@ -659,7 +593,7 @@
       ]
     },
     {
-      "rank": 18,
+      "rank": 16,
       "score": 41,
       "status": "not_found",
       "id": 167,
@@ -689,7 +623,7 @@
       ]
     },
     {
-      "rank": 19,
+      "rank": 17,
       "score": 26,
       "status": "not_found",
       "id": 11702,
@@ -725,7 +659,7 @@
       ]
     },
     {
-      "rank": 20,
+      "rank": 18,
       "score": 23,
       "status": "not_found",
       "id": 201,
@@ -753,7 +687,7 @@
       ]
     },
     {
-      "rank": 21,
+      "rank": 19,
       "score": 23,
       "status": "not_found",
       "id": 20397,
@@ -781,7 +715,7 @@
       ]
     },
     {
-      "rank": 22,
+      "rank": 20,
       "score": 23,
       "status": "not_found",
       "id": 20599,
@@ -809,7 +743,7 @@
       ]
     },
     {
-      "rank": 23,
+      "rank": 21,
       "score": 23,
       "status": "not_found",
       "id": 154,
@@ -837,7 +771,7 @@
       ]
     },
     {
-      "rank": 24,
+      "rank": 22,
       "score": 23,
       "status": "not_found",
       "id": 138,
@@ -865,7 +799,7 @@
       ]
     },
     {
-      "rank": 25,
+      "rank": 23,
       "score": 23,
       "status": "not_found",
       "id": 18701,
@@ -893,7 +827,7 @@
       ]
     },
     {
-      "rank": 26,
+      "rank": 24,
       "score": 23,
       "status": "not_found",
       "id": 97,
@@ -921,7 +855,7 @@
       ]
     },
     {
-      "rank": 27,
+      "rank": 25,
       "score": 23,
       "status": "not_found",
       "id": 173,
@@ -949,7 +883,7 @@
       ]
     },
     {
-      "rank": 28,
+      "rank": 26,
       "score": 23,
       "status": "not_found",
       "id": 20962,
@@ -977,7 +911,7 @@
       ]
     },
     {
-      "rank": 29,
+      "rank": 27,
       "score": 23,
       "status": "not_found",
       "id": 20820,
@@ -1005,7 +939,7 @@
       ]
     },
     {
-      "rank": 30,
+      "rank": 28,
       "score": 13,
       "status": "not_found",
       "id": 191,
@@ -1035,7 +969,7 @@
       ]
     },
     {
-      "rank": 31,
+      "rank": 29,
       "score": 13,
       "status": "not_found",
       "id": 20373,
@@ -1065,7 +999,7 @@
       ]
     },
     {
-      "rank": 32,
+      "rank": 30,
       "score": 13,
       "status": "not_found",
       "id": 18716,
@@ -1095,7 +1029,7 @@
       ]
     },
     {
-      "rank": 33,
+      "rank": 31,
       "score": 13,
       "status": "not_found",
       "id": 17360,
@@ -1125,7 +1059,7 @@
       ]
     },
     {
-      "rank": 34,
+      "rank": 32,
       "score": 13,
       "status": "not_found",
       "id": 20365,
@@ -1155,7 +1089,7 @@
       ]
     },
     {
-      "rank": 35,
+      "rank": 33,
       "score": 13,
       "status": "not_found",
       "id": 1146,
@@ -1185,7 +1119,7 @@
       ]
     },
     {
-      "rank": 36,
+      "rank": 34,
       "score": 13,
       "status": "not_found",
       "id": 219,
@@ -1215,7 +1149,7 @@
       ]
     },
     {
-      "rank": 37,
+      "rank": 35,
       "score": 13,
       "status": "not_found",
       "id": 18729,
@@ -1245,7 +1179,7 @@
       ]
     },
     {
-      "rank": 38,
+      "rank": 36,
       "score": 13,
       "status": "not_found",
       "id": 214,
@@ -1275,7 +1209,7 @@
       ]
     },
     {
-      "rank": 39,
+      "rank": 37,
       "score": 13,
       "status": "not_found",
       "id": 18707,
@@ -1305,7 +1239,7 @@
       ]
     },
     {
-      "rank": 40,
+      "rank": 38,
       "score": 13,
       "status": "not_found",
       "id": 18688,
@@ -1335,7 +1269,7 @@
       ]
     },
     {
-      "rank": 41,
+      "rank": 39,
       "score": -5,
       "status": "not_found",
       "id": 18694,
@@ -1364,7 +1298,7 @@
       ]
     },
     {
-      "rank": 42,
+      "rank": 40,
       "score": -5,
       "status": "not_found",
       "id": 21083,
@@ -1392,7 +1326,7 @@
       ]
     },
     {
-      "rank": 43,
+      "rank": 41,
       "score": -5,
       "status": "not_found",
       "id": 19000,
@@ -1420,7 +1354,7 @@
       ]
     },
     {
-      "rank": 44,
+      "rank": 42,
       "score": -5,
       "status": "not_found",
       "id": 20360,
@@ -1448,7 +1382,7 @@
       ]
     },
     {
-      "rank": 45,
+      "rank": 43,
       "score": -5,
       "status": "not_found",
       "id": 100,
@@ -1476,7 +1410,7 @@
       ]
     },
     {
-      "rank": 46,
+      "rank": 44,
       "score": -5,
       "status": "not_found",
       "id": 20779,
@@ -1504,7 +1438,7 @@
       ]
     },
     {
-      "rank": 47,
+      "rank": 45,
       "score": -5,
       "status": "not_found",
       "id": 20559,
@@ -1532,7 +1466,7 @@
       ]
     },
     {
-      "rank": 48,
+      "rank": 46,
       "score": -5,
       "status": "not_found",
       "id": 266,
@@ -1560,7 +1494,7 @@
       ]
     },
     {
-      "rank": 49,
+      "rank": 47,
       "score": -5,
       "status": "not_found",
       "id": 18722,
@@ -1588,7 +1522,7 @@
       ]
     },
     {
-      "rank": 50,
+      "rank": 48,
       "score": -5,
       "status": "not_found",
       "id": 20350,
@@ -1616,7 +1550,7 @@
       ]
     },
     {
-      "rank": 51,
+      "rank": 49,
       "score": -5,
       "status": "not_found",
       "id": 20384,
@@ -1644,7 +1578,7 @@
       ]
     },
     {
-      "rank": 52,
+      "rank": 50,
       "score": -5,
       "status": "not_found",
       "id": 20527,
@@ -1672,7 +1606,7 @@
       ]
     },
     {
-      "rank": 53,
+      "rank": 51,
       "score": -5,
       "status": "not_found",
       "id": 21143,
@@ -1700,7 +1634,7 @@
       ]
     },
     {
-      "rank": 54,
+      "rank": 52,
       "score": -5,
       "status": "not_found",
       "id": 20380,
@@ -1728,7 +1662,7 @@
       ]
     },
     {
-      "rank": 55,
+      "rank": 53,
       "score": -5,
       "status": "not_found",
       "id": 197,
@@ -1756,7 +1690,7 @@
       ]
     },
     {
-      "rank": 56,
+      "rank": 54,
       "score": -5,
       "status": "not_found",
       "id": 20635,
@@ -1784,7 +1718,7 @@
       ]
     },
     {
-      "rank": 57,
+      "rank": 55,
       "score": -5,
       "status": "not_found",
       "id": 18693,
@@ -1812,7 +1746,7 @@
       ]
     },
     {
-      "rank": 58,
+      "rank": 56,
       "score": -5,
       "status": "not_found",
       "id": 21186,
@@ -1840,7 +1774,7 @@
       ]
     },
     {
-      "rank": 59,
+      "rank": 57,
       "score": -5,
       "status": "not_found",
       "id": 20930,
@@ -1868,7 +1802,7 @@
       ]
     },
     {
-      "rank": 60,
+      "rank": 58,
       "score": -5,
       "status": "not_found",
       "id": 93,
@@ -1896,7 +1830,7 @@
       ]
     },
     {
-      "rank": 61,
+      "rank": 59,
       "score": -5,
       "status": "not_found",
       "id": 20371,
@@ -1924,7 +1858,7 @@
       ]
     },
     {
-      "rank": 62,
+      "rank": 60,
       "score": -5,
       "status": "not_found",
       "id": 21044,
@@ -1952,7 +1886,7 @@
       ]
     },
     {
-      "rank": 63,
+      "rank": 61,
       "score": -5,
       "status": "not_found",
       "id": 20367,
@@ -1980,7 +1914,7 @@
       ]
     },
     {
-      "rank": 64,
+      "rank": 62,
       "score": -5,
       "status": "not_found",
       "id": 20916,
@@ -2008,7 +1942,7 @@
       ]
     },
     {
-      "rank": 65,
+      "rank": 63,
       "score": -5,
       "status": "not_found",
       "id": 20747,
@@ -2036,7 +1970,7 @@
       ]
     },
     {
-      "rank": 66,
+      "rank": 64,
       "score": -5,
       "status": "not_found",
       "id": 20351,
@@ -2064,7 +1998,7 @@
       ]
     },
     {
-      "rank": 67,
+      "rank": 65,
       "score": -5,
       "status": "not_found",
       "id": 20361,
@@ -2092,7 +2026,7 @@
       ]
     },
     {
-      "rank": 68,
+      "rank": 66,
       "score": -5,
       "status": "not_found",
       "id": 21206,
@@ -2120,7 +2054,7 @@
       ]
     },
     {
-      "rank": 69,
+      "rank": 67,
       "score": -5,
       "status": "not_found",
       "id": 15762,
@@ -2148,7 +2082,7 @@
       ]
     },
     {
-      "rank": 70,
+      "rank": 68,
       "score": -5,
       "status": "not_found",
       "id": 18708,
@@ -2176,7 +2110,7 @@
       ]
     },
     {
-      "rank": 71,
+      "rank": 69,
       "score": -5,
       "status": "not_found",
       "id": 20976,
@@ -2204,7 +2138,7 @@
       ]
     },
     {
-      "rank": 72,
+      "rank": 70,
       "score": -5,
       "status": "not_found",
       "id": 17141,
@@ -2232,7 +2166,7 @@
       ]
     },
     {
-      "rank": 73,
+      "rank": 71,
       "score": -5,
       "status": "not_found",
       "id": 18717,
@@ -2260,7 +2194,7 @@
       ]
     },
     {
-      "rank": 74,
+      "rank": 72,
       "score": -5,
       "status": "not_found",
       "id": 19142,
@@ -2288,7 +2222,7 @@
       ]
     },
     {
-      "rank": 75,
+      "rank": 73,
       "score": -5,
       "status": "not_found",
       "id": 18706,
@@ -2316,7 +2250,7 @@
       ]
     },
     {
-      "rank": 76,
+      "rank": 74,
       "score": -10,
       "status": "not_found",
       "id": 20394,
@@ -2351,7 +2285,7 @@
       ]
     },
     {
-      "rank": 77,
+      "rank": 75,
       "score": -18,
       "status": "not_found",
       "id": 1158,
@@ -2379,7 +2313,7 @@
       ]
     },
     {
-      "rank": 78,
+      "rank": 76,
       "score": -18,
       "status": "not_found",
       "id": 21285,
@@ -2407,7 +2341,7 @@
       ]
     },
     {
-      "rank": 79,
+      "rank": 77,
       "score": -18,
       "status": "not_found",
       "id": 19826,
@@ -2435,7 +2369,7 @@
       ]
     },
     {
-      "rank": 80,
+      "rank": 78,
       "score": -18,
       "status": "not_found",
       "id": 19548,

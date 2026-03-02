@@ -1336,20 +1336,44 @@
     "262": {
       "id": 262,
       "name": "Sjúrður Skaale",
-      "status": "not_found",
-      "person_total": 1,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Sjurdur Skaale",
+      "person_enhedsnummer": "4000712912",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000712912/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Sj%C3%BAr%C3%B0ur%20Skaale&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Sjurdur Skaale",
-          "person_enhedsnummer": "4000712912",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000712912/deltager"
+          "company_name": "Javnaðarflokkurin á Fólkatingi v/Sjurdur Skaale",
+          "company_enhedsnummer": "4001890942",
+          "company_cvr": "33935684",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001890942",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "01.10.2011"
+            }
+          ]
         }
       ],
+      "historical_relation_count": 0,
       "official_name": "Sjúrður Skaale",
-      "search_names_tried": [
-        "Sjúrður Skaale"
-      ]
+      "search_name_used": "Sjúrður Skaale",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet via officiel translitteration og partiorganisation. Folketingets medlemsside bruger den færøske stavemåde Sjúrður Skaale, mens de tekniske ft.dk-identifikatorer bruger den ASCII-translittererede form sjurdur.skaale. Virk-kandidaten hedder Sjurdur Skaale og er aktiv i Javnaðarflokkurin á Fólkatingi v/Sjurdur Skaale, hvilket matcher Folketingets officielle biografi om hans mandat for Javnaðarflokkurin.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/s/sjuroeur-skaale",
+          "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%20262&$format=json",
+          "https://datacvr.virk.dk/enhed/person/4000712912/deltager"
+        ]
+      }
     },
     "15793": {
       "id": 15793,
@@ -2677,20 +2701,28 @@
     "18723": {
       "id": 18723,
       "name": "Pernille Vermund",
-      "status": "not_found",
-      "person_total": 1,
-      "candidates": [
-        {
-          "name": "Ann Pernille Vermund Bretton-Meyer",
-          "person_enhedsnummer": "4000717333",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000717333/deltager"
-        }
-      ],
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Ann Pernille Vermund Bretton-Meyer",
+      "person_enhedsnummer": "4000717333",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000717333/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Pernille%20Vermund&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 3,
       "official_name": "Pernille Vermund",
-      "search_names_tried": [
-        "Pernille Vermund"
-      ]
+      "search_name_used": "Pernille Vermund",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet via præcist sammenfald mellem Folketingets officielle biografi og Virk-historikken. Ft.dk angiver, at Pernille Vermund var selvstændig arkitekt i Vermund Gere Arkitekter fra 2006 til 2019. Den eneste Virk-kandidat har historiske relationer til Vermund & Gere Arkitekter MAA I/S og Vermund Gere Arkitekter MAA i netop samme periode, og kandidatens fulde navn udvider profilnavnet med offentligt kendte mellem- og efternavne.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/p/pernille-vermund",
+          "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%2018723&$format=json",
+          "https://www.paqle.dk/p/ann-pernille-vermund-bretton-meyer/1641745",
+          "https://datacvr.virk.dk/enhed/person/4000717333/deltager"
+        ]
+      }
     },
     "21159": {
       "id": 21159,
