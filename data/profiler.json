@@ -5175,7 +5175,7 @@
     "email": "alex.ahrendtsen@ft.dk",
     "phone": "+45 3337 5105",
     "website_url": null,
-    "address": "Folketinget, Christiansborg 1240 København K",
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/a/alex-ahrendtsen",
     "photo_url": "photos/18.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/df/alex-ahrendtsen/alex_ahrendtsen_500.jpg",
@@ -10391,7 +10391,7 @@
     "photo_source_name": "Folketinget",
     "photo_photographer": "Folketinget",
     "photo_credit_text": "Folketinget / Fotograf Folketinget",
-    "member_since_date": "2025-10-07",
+    "member_since_date": "2025-10-08",
     "member_since_year": 2025,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
@@ -10456,7 +10456,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2025-11-22",
-        "end_date": "2026-10-06",
+        "end_date": "2026-03-24",
         "active": true
       },
       {
@@ -11325,7 +11325,38 @@
     "party_short": "KF",
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21263,
+        "name": "Børne- og Undervisningsudvalget",
+        "short_name": "BUU"
+      },
+      {
+        "id": 21256,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21253,
+        "name": "Kulturudvalget",
+        "short_name": "KUU"
+      },
+      {
+        "id": 21243,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21240,
+        "name": "Kirkeudvalget",
+        "short_name": "KIU"
+      },
+      {
+        "id": 21237,
+        "name": "Forsvars-, Samfundssikkerheds- og Beredskabsudvalget",
+        "short_name": "FOU"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Fyns Storkreds fra 15. september 2011.",
     "storkreds": "Fyns Storkreds",
@@ -11336,9 +11367,16 @@
       {
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
-        "start_date": "2025-09-09",
-        "end_date": null,
+        "start_date": "2026-02-27",
+        "end_date": "2026-03-24",
         "active": true
+      },
+      {
+        "party": "Det Konservative Folkeparti",
+        "party_short": "KF",
+        "start_date": "2025-09-09",
+        "end_date": "2026-02-26",
+        "active": false
       },
       {
         "party": "Det Konservative Folkeparti",
@@ -12916,7 +12954,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2025-11-14",
-        "end_date": "2026-10-06",
+        "end_date": "2026-03-24",
         "active": true
       },
       {
@@ -15786,7 +15824,53 @@
     "party_short": "M",
     "current_party": "Moderaterne",
     "current_party_short": "M",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21276,
+        "name": "Udvalget for Det Tyske Mindretal",
+        "short_name": "UTM"
+      },
+      {
+        "id": 21253,
+        "name": "Kulturudvalget",
+        "short_name": "KUU"
+      },
+      {
+        "id": 21243,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21241,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      },
+      {
+        "id": 21240,
+        "name": "Kirkeudvalget",
+        "short_name": "KIU"
+      },
+      {
+        "id": 21239,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21238,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21184,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21154,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Moderaterne i Østjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Østjyllands Storkreds",
@@ -15798,7 +15882,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-02-26",
-        "end_date": "2026-10-06",
+        "end_date": "2026-03-24",
         "active": true
       },
       {
@@ -18077,7 +18161,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-02-16",
-        "end_date": "2026-10-06",
+        "end_date": "2026-03-24",
         "active": true
       },
       {
@@ -18266,7 +18350,7 @@
         "party": "Naleraq",
         "party_short": "N",
         "start_date": "2025-11-15",
-        "end_date": "2026-10-06",
+        "end_date": "2026-03-24",
         "active": true
       },
       {
@@ -21014,7 +21098,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2025-11-03",
-        "end_date": "2026-10-06",
+        "end_date": "2026-03-24",
         "active": true
       },
       {
@@ -21750,7 +21834,7 @@
     "email": "benny.engelbrecht@ft.dk",
     "phone": "+45 3337 4037",
     "website_url": null,
-    "address": "Folketinget, Christiansborg 1240 København K",
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/b/benny-engelbrecht",
     "photo_url": "photos/120.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/s/benny-engelbrecht/benny_engelbrecht_500.jpg",
@@ -23620,7 +23704,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-02-03",
-        "end_date": "2026-10-06",
+        "end_date": "2026-03-24",
         "active": true
       },
       {
@@ -26313,7 +26397,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2025-11-03",
-        "end_date": "2026-10-06",
+        "end_date": "2026-03-24",
         "active": true
       },
       {
@@ -31259,6 +31343,11 @@
     "current_party_short": "SF",
     "committees": [
       {
+        "id": 21154,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
+      {
         "id": 21259,
         "name": "Udvalget for Digitalisering og It",
         "short_name": "DIU"
@@ -31267,11 +31356,6 @@
         "id": 21255,
         "name": "Retsudvalget",
         "short_name": "REU"
-      },
-      {
-        "id": 21237,
-        "name": "Forsvars-, Samfundssikkerheds- og Beredskabsudvalget",
-        "short_name": "FOU"
       },
       {
         "id": 21236,
@@ -31598,7 +31682,23 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21260,
+        "name": "Ældreudvalget",
+        "short_name": "ÆLU"
+      },
+      {
+        "id": 21241,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      },
+      {
+        "id": 21237,
+        "name": "Forsvars-, Samfundssikkerheds- og Beredskabsudvalget",
+        "short_name": "FOU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Sjællands Storkreds fra 5. juni 2019.",
     "storkreds": "Sjællands Storkreds",
@@ -31610,7 +31710,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-02-27",
-        "end_date": "2026-10-06",
+        "end_date": "2026-03-24",
         "active": true
       },
       {
@@ -34183,7 +34283,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-02-07",
-        "end_date": "2026-10-06",
+        "end_date": "2026-03-24",
         "active": true
       },
       {
@@ -35613,7 +35713,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2025-12-10",
-        "end_date": "2026-10-06",
+        "end_date": "2026-03-24",
         "active": true
       },
       {
@@ -41262,11 +41362,11 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2025-10-08",
-    "member_since_year": 2025,
+    "member_since_date": "2026-03-01",
+    "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 4,
+    "seniority_months": 0,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
