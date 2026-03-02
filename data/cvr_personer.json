@@ -1,6 +1,6 @@
 {
   "generated": "2026-03-02",
-  "note": "Data bygger paa praecis navnesoegning i det offentlige CVR paa Virk. Kun entydige persontraef gemmes. Navne med ekstra mellemnavne accepteres kun ved et enkelt persontraef. Tvetydige eller usikre navnetraef skjules.",
+  "note": "Data bygger paa praecis navnesoegning i det offentlige CVR paa Virk. Kun entydige persontraef gemmes. Navne med ekstra mellemnavne eller efternavne accepteres kun ved entydig identitet. Tvetydige navnetraef kan kun vises hvis de bekræftes mod Folketingets hvervregister eller via en manuel officiel verifikation.",
   "medlemmer": {
     "20352": {
       "id": 20352,
@@ -275,16 +275,16 @@
     "20355": {
       "id": 20355,
       "name": "Kim Edberg Andersen",
-      "status": "not_found",
-      "person_total": 1,
-      "candidates": [
-        {
-          "name": "Kim Edberg Andersen-Kristoffersen",
-          "person_enhedsnummer": "4000423343",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000423343/deltager"
-        }
-      ]
+      "status": "exact_match",
+      "match_quality": "variant_name",
+      "person_name": "Kim Edberg Andersen-Kristoffersen",
+      "person_enhedsnummer": "4000423343",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000423343/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Kim%20Edberg%20Andersen&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0
     },
     "20747": {
       "id": 20747,
@@ -355,16 +355,16 @@
     "34": {
       "id": 34,
       "name": "Søren Espersen",
-      "status": "not_found",
-      "person_total": 6,
-      "candidates": [
-        {
-          "name": "Søren Espersen Jensen",
-          "person_enhedsnummer": "4000605525",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000605525/deltager"
-        }
-      ]
+      "status": "exact_match",
+      "match_quality": "variant_name",
+      "person_name": "Søren Espersen Jensen",
+      "person_enhedsnummer": "4000605525",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000605525/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=S%C3%B8ren%20Espersen&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0
     },
     "119": {
       "id": 119,
@@ -526,16 +526,16 @@
     "82": {
       "id": 82,
       "name": "Hans Kristian Skibby",
-      "status": "not_found",
-      "person_total": 1,
-      "candidates": [
-        {
-          "name": "Hans Kristian Bundgaard-Skibby",
-          "person_enhedsnummer": "4000656617",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000656617/deltager"
-        }
-      ]
+      "status": "exact_match",
+      "match_quality": "variant_name",
+      "person_name": "Hans Kristian Bundgaard-Skibby",
+      "person_enhedsnummer": "4000656617",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000656617/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Hans%20Kristian%20Skibby&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0
     },
     "182": {
       "id": 182,
@@ -554,16 +554,33 @@
     "20823": {
       "id": 20823,
       "name": "Morten Vehl",
-      "status": "not_found",
-      "person_total": 1,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "variant_name",
+      "person_name": "Morten Vehl Bjerk Revsbeck",
+      "person_enhedsnummer": "4000484981",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000484981/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Morten%20Vehl&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Morten Vehl Bjerk Revsbeck",
-          "person_enhedsnummer": "4000484981",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000484981/deltager"
+          "company_name": "Vehlsgaard Horses v/Morten Vehl Bjerk Revsbeck",
+          "company_enhedsnummer": "4001763878",
+          "company_cvr": "32227325",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001763878",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "01.08.2009"
+            }
+          ]
         }
-      ]
+      ],
+      "historical_relation_count": 1
     },
     "18": {
       "id": 18,
@@ -603,6 +620,24 @@
       "person_total": 14,
       "candidates": [
         {
+          "name": "Mikkel Bjørn Spliid",
+          "person_enhedsnummer": "4009627820",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4009627820/deltager"
+        },
+        {
+          "name": "Mikkel Bjørn Aaen",
+          "person_enhedsnummer": "4008407942",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4008407942/deltager"
+        },
+        {
+          "name": "Mikkel Bjørn Nielsen",
+          "person_enhedsnummer": "4010564841",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4010564841/deltager"
+        },
+        {
           "name": "Mikkel Bjørn Rasmussen",
           "person_enhedsnummer": "4004123029",
           "person_type": "deltager",
@@ -633,28 +668,10 @@
           "person_url": "https://datacvr.virk.dk/enhed/person/4010434931/deltager"
         },
         {
-          "name": "Mikkel Bjørn Aaen",
-          "person_enhedsnummer": "4008407942",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4008407942/deltager"
-        },
-        {
-          "name": "Mikkel Bjørn Spliid",
-          "person_enhedsnummer": "4009627820",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4009627820/deltager"
-        },
-        {
           "name": "Mikkel Bjørn Jensen",
           "person_enhedsnummer": "4008965995",
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4008965995/deltager"
-        },
-        {
-          "name": "Mikkel Bjørn Goldschmidt",
-          "person_enhedsnummer": "4006970898",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006970898/deltager"
         }
       ]
     },
@@ -665,16 +682,16 @@
       "person_total": 5,
       "candidates": [
         {
-          "name": "Pia Kjærsgaard Jørgensen",
-          "person_enhedsnummer": "4000416584",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000416584/deltager"
-        },
-        {
           "name": "Pia Kjærsgaard Hansen",
           "person_enhedsnummer": "4000648524",
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4000648524/deltager"
+        },
+        {
+          "name": "Pia Kjærsgaard Andersen",
+          "person_enhedsnummer": "4009084993",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4009084993/deltager"
         }
       ]
     },
@@ -896,16 +913,16 @@
       "person_total": 5,
       "candidates": [
         {
-          "name": "Hanne Rosa Lund",
-          "person_enhedsnummer": "4006268081",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006268081/deltager"
-        },
-        {
           "name": "Rosa Lund From",
           "person_enhedsnummer": "4004169189",
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4004169189/deltager"
+        },
+        {
+          "name": "Hanne Rosa Lund",
+          "person_enhedsnummer": "4006268081",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4006268081/deltager"
         },
         {
           "name": "Rosa Torp Lund",
@@ -1077,17 +1094,17 @@
       "candidates": [
         {
           "name": "Lise Bertelsen",
-          "person_enhedsnummer": "4000676600",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000676600/deltager"
-        },
-        {
-          "name": "Lise Bertelsen",
           "person_enhedsnummer": "4008783468",
           "person_type": "deltager",
           "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4008783468/deltager"
+        },
+        {
+          "name": "Lise Bertelsen",
+          "person_enhedsnummer": "4000676600",
+          "person_type": "deltager",
+          "has_active_relations": false,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4000676600/deltager"
         }
       ]
     },
@@ -1115,7 +1132,14 @@
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4000548692/deltager"
         }
-      ]
+      ],
+      "verification_clues": {
+        "company_names": [
+          "cph village holding aps",
+          "gilead sciences"
+        ],
+        "company_cvrs": []
+      }
     },
     "18712": {
       "id": 18712,
@@ -1126,17 +1150,17 @@
       "candidates": [
         {
           "name": "Niels Flemming Hansen",
-          "person_enhedsnummer": "4004161657",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004161657/deltager"
-        },
-        {
-          "name": "Niels Flemming Hansen",
           "person_enhedsnummer": "4003916743",
           "person_type": "deltager",
           "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4003916743/deltager"
+        },
+        {
+          "name": "Niels Flemming Hansen",
+          "person_enhedsnummer": "4004161657",
+          "person_type": "deltager",
+          "has_active_relations": false,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4004161657/deltager"
         }
       ]
     },
@@ -1367,7 +1391,17 @@
       "name": "Per Larsen",
       "status": "not_found",
       "person_total": 413,
-      "candidates": []
+      "candidates": [],
+      "verification_clues": {
+        "company_names": [
+          "amgros i s",
+          "nordjyske jernbaner"
+        ],
+        "company_cvrs": [
+          "1449880",
+          "29818983"
+        ]
+      }
     },
     "189": {
       "id": 189,
@@ -1414,16 +1448,16 @@
     "20925": {
       "id": 20925,
       "name": "Dina Raabjerg",
-      "status": "not_found",
-      "person_total": 1,
-      "candidates": [
-        {
-          "name": "Dina Myrup Andersen-Raabjerg",
-          "person_enhedsnummer": "4006442690",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006442690/deltager"
-        }
-      ]
+      "status": "exact_match",
+      "match_quality": "variant_name",
+      "person_name": "Dina Myrup Andersen-Raabjerg",
+      "person_enhedsnummer": "4006442690",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4006442690/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Dina%20Raabjerg&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0
     },
     "17360": {
       "id": 17360,
@@ -1807,7 +1841,37 @@
       "name": "Steffen W. Frølund",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "verification_clues": {
+        "company_names": [
+          "likeminded vc aps",
+          "likeminded vc management aps",
+          "likeminded vc gp i aps",
+          "likeminded vc fund i k s",
+          "likeminded vc civ i k s",
+          "pluto markets inc market reader inc gamerpay inc",
+          "adress a s",
+          "estaid aps",
+          "all gravy aps",
+          "palett food a s",
+          "legaldesk dk aps",
+          "simpelwire aps",
+          "strise a s",
+          "comundo aps",
+          "metacompany holding aps",
+          "toddle aps",
+          "smallclaims aps",
+          "nordinsights health tech aps",
+          "teacherspace aps",
+          "chase labs ltd prescriby ehf",
+          "lightbringer ab",
+          "wolfpack a s",
+          "chatsimple inc",
+          "pandektes aps",
+          "paradox aps"
+        ],
+        "company_cvrs": []
+      }
     },
     "20391": {
       "id": 20391,
@@ -2039,7 +2103,26 @@
       "name": "Jan Carlsen",
       "status": "not_found",
       "person_total": 34,
-      "candidates": []
+      "candidates": [
+        {
+          "name": "Jan Lonnebjerg Carlsen",
+          "person_enhedsnummer": "4000416712",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4000416712/deltager"
+        },
+        {
+          "name": "Jan Emil Carlsen",
+          "person_enhedsnummer": "4004238497",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4004238497/deltager"
+        },
+        {
+          "name": "Jan Birger Carlsen",
+          "person_enhedsnummer": "4004238498",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4004238498/deltager"
+        }
+      ]
     },
     "20841": {
       "id": 20841,
@@ -2048,13 +2131,6 @@
       "person_total": 3,
       "exact_match_count": 3,
       "candidates": [
-        {
-          "name": "Lars Arne Christensen",
-          "person_enhedsnummer": "4006405821",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006405821/deltager"
-        },
         {
           "name": "Lars Arne Christensen",
           "person_enhedsnummer": "4000428628",
@@ -2068,6 +2144,13 @@
           "person_type": "deltager",
           "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000499582/deltager"
+        },
+        {
+          "name": "Lars Arne Christensen",
+          "person_enhedsnummer": "4006405821",
+          "person_type": "deltager",
+          "has_active_relations": false,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4006405821/deltager"
         }
       ]
     },
@@ -2215,7 +2298,16 @@
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4004214718/deltager"
         }
-      ]
+      ],
+      "verification_clues": {
+        "company_names": [
+          "lasby kro og hotel aps"
+        ],
+        "company_cvrs": [
+          "36534540",
+          "37868639"
+        ]
+      }
     },
     "20382": {
       "id": 20382,
@@ -2581,16 +2673,16 @@
     "18725": {
       "id": 18725,
       "name": "Samira Nawa",
-      "status": "not_found",
-      "person_total": 1,
-      "candidates": [
-        {
-          "name": "Samira Nawa Amini",
-          "person_enhedsnummer": "4004156952",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004156952/deltager"
-        }
-      ]
+      "status": "exact_match",
+      "match_quality": "variant_name",
+      "person_name": "Samira Nawa Amini",
+      "person_enhedsnummer": "4004156952",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004156952/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Samira%20Nawa&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0
     },
     "100": {
       "id": 100,
@@ -2942,12 +3034,6 @@
       "person_total": 6,
       "candidates": [
         {
-          "name": "Camilla Fabricius Pedersen",
-          "person_enhedsnummer": "4008725189",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4008725189/deltager"
-        },
-        {
           "name": "Camilla Fabricius Mørk",
           "person_enhedsnummer": "4009028583",
           "person_type": "deltager",
@@ -2960,6 +3046,18 @@
           "person_url": "https://datacvr.virk.dk/enhed/person/4000787188/deltager"
         },
         {
+          "name": "Camilla Fabricius Pedersen",
+          "person_enhedsnummer": "4008725189",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4008725189/deltager"
+        },
+        {
+          "name": "Camilla Anina Fabricius",
+          "person_enhedsnummer": "4000738331",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4000738331/deltager"
+        },
+        {
           "name": "Camilla Stougaard Fabricius",
           "person_enhedsnummer": "4009951410",
           "person_type": "deltager",
@@ -2970,12 +3068,6 @@
           "person_enhedsnummer": "4000657923",
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4000657923/deltager"
-        },
-        {
-          "name": "Camilla Anina Fabricius",
-          "person_enhedsnummer": "4000738331",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000738331/deltager"
         }
       ]
     },
@@ -3181,16 +3273,16 @@
       "person_total": 2,
       "candidates": [
         {
-          "name": "Jens Joel Munch",
-          "person_enhedsnummer": "4006186088",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006186088/deltager"
-        },
-        {
           "name": "Jens Joel Sand",
           "person_enhedsnummer": "4006046860",
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4006046860/deltager"
+        },
+        {
+          "name": "Jens Joel Munch",
+          "person_enhedsnummer": "4006186088",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4006186088/deltager"
         }
       ]
     },
@@ -3229,16 +3321,16 @@
       "person_total": 4,
       "candidates": [
         {
-          "name": "Jeppe Kofod Ringgaard",
-          "person_enhedsnummer": "4007754942",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4007754942/deltager"
-        },
-        {
           "name": "Jeppe Kofod Hansen",
           "person_enhedsnummer": "4010296302",
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4010296302/deltager"
+        },
+        {
+          "name": "Jeppe Kofod Ringgaard",
+          "person_enhedsnummer": "4007754942",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4007754942/deltager"
         },
         {
           "name": "Jeppe Sebastian Kofod",
@@ -3283,16 +3375,33 @@
     "38": {
       "id": 38,
       "name": "Astrid Krag",
-      "status": "not_found",
-      "person_total": 1,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "variant_name",
+      "person_name": "Astrid Krag Kristensen",
+      "person_enhedsnummer": "4007428563",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4007428563/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Astrid%20Krag&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Astrid Krag Kristensen",
-          "person_enhedsnummer": "4007428563",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4007428563/deltager"
+          "company_name": "Common Ground",
+          "company_enhedsnummer": "4010677617",
+          "company_cvr": "46204301",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4010677617",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "01.01.2026"
+            }
+          ]
         }
-      ]
+      ],
+      "historical_relation_count": 0
     },
     "18718": {
       "id": 18718,
@@ -3317,10 +3426,10 @@
         },
         {
           "name": "Anders Kronborg",
-          "person_enhedsnummer": "4009832266",
+          "person_enhedsnummer": "4004031384",
           "person_type": "deltager",
           "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4009832266/deltager"
+          "person_url": "https://datacvr.virk.dk/enhed/person/4004031384/deltager"
         }
       ]
     },
@@ -4889,7 +4998,7 @@
       "id": 20354,
       "name": "Theresa Scavenius",
       "status": "exact_match",
-      "match_quality": "extended_name",
+      "match_quality": "hverv_verified",
       "person_name": "Theresa Birgitta Brønnum Scavenius",
       "person_enhedsnummer": "4008159680",
       "person_type": "deltager",
@@ -4930,7 +5039,14 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "verification": {
+        "method": "hverv_verified",
+        "matched_company_names": [],
+        "matched_company_cvrs": [
+          "40689672"
+        ]
+      }
     },
     "20388": {
       "id": 20388,
@@ -4950,7 +5066,13 @@
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4003884199/deltager"
         }
-      ]
+      ],
+      "verification_clues": {
+        "company_names": [
+          "mærsk vestas danske bank"
+        ],
+        "company_cvrs": []
+      }
     },
     "20383": {
       "id": 20383,
@@ -4961,17 +5083,17 @@
       "candidates": [
         {
           "name": "Jeppe Søe",
-          "person_enhedsnummer": "4000322388",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000322388/deltager"
-        },
-        {
-          "name": "Jeppe Søe",
           "person_enhedsnummer": "4000198046",
           "person_type": "deltager",
           "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000198046/deltager"
+        },
+        {
+          "name": "Jeppe Søe",
+          "person_enhedsnummer": "4000322388",
+          "person_type": "deltager",
+          "has_active_relations": true,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4000322388/deltager"
         }
       ]
     },
@@ -5059,7 +5181,15 @@
       "name": "Hans Andersen",
       "status": "not_found",
       "person_total": 717,
-      "candidates": []
+      "candidates": [],
+      "verification_clues": {
+        "company_names": [
+          "fonden mariehjemmene bestyrelsesformand selma marie",
+          "we power a s",
+          "novo nordisk a s"
+        ],
+        "company_cvrs": []
+      }
     },
     "134": {
       "id": 134,
@@ -5161,22 +5291,33 @@
     "18700": {
       "id": 18700,
       "name": "Heidi Bank",
-      "status": "not_found",
-      "person_total": 2,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "variant_name",
+      "person_name": "Heidi Farsøe Bank",
+      "person_enhedsnummer": "4000491490",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000491490/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Heidi%20Bank&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Heidi Farsøe Bank",
-          "person_enhedsnummer": "4000491490",
-          "person_type": "liberal_udoever",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000491490/liberal_udoever"
-        },
-        {
-          "name": "Heidi Farsøe Bank",
-          "person_enhedsnummer": "4000491490",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000491490/deltager"
+          "company_name": "Heidi Farsøe Bank",
+          "company_enhedsnummer": "4001445908",
+          "company_cvr": "27632270",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001445908",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "01.01.2026"
+            }
+          ]
         }
-      ]
+      ],
+      "historical_relation_count": 1
     },
     "18701": {
       "id": 18701,
@@ -5188,28 +5329,56 @@
     "49": {
       "id": 49,
       "name": "Erling Bonnesen",
-      "status": "not_found",
-      "person_total": 3,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "hverv_verified",
+      "person_name": "Erling Faber Bonnesen",
+      "person_enhedsnummer": "4004158471",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004158471/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Erling%20Bonnesen&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Revisionsfirmaet Erling Bonnesen",
-          "person_enhedsnummer": "4004236145",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004236145/deltager"
+          "company_name": "Fonden Dansk Gastronomisk Union",
+          "company_enhedsnummer": "4008689970",
+          "company_cvr": "41965703",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4008689970",
+          "status": "Normal",
+          "roles": [
+            "Bestyrelse"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "09.11.2020"
+            }
+          ]
         },
         {
-          "name": "Erling Faber Bonnesen",
-          "person_enhedsnummer": "4004158471",
-          "person_type": "liberal_udoever",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004158471/liberal_udoever"
-        },
-        {
-          "name": "Erling Faber Bonnesen",
-          "person_enhedsnummer": "4004158471",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004158471/deltager"
+          "company_name": "Foreningen for medlemmer af Venstres Folketingsgruppe",
+          "company_enhedsnummer": "4008715793",
+          "company_cvr": "42027332",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4008715793",
+          "status": null,
+          "roles": [
+            "Foreningsrepræsentant"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "02.06.2023"
+            }
+          ]
         }
-      ]
+      ],
+      "historical_relation_count": 19,
+      "verification": {
+        "method": "hverv_verified",
+        "matched_company_names": [
+          "fonden dansk gastronomisk union"
+        ],
+        "matched_company_cvrs": []
+      }
     },
     "18696": {
       "id": 18696,
@@ -5234,13 +5403,6 @@
       "candidates": [
         {
           "name": "Thomas Danielsen",
-          "person_enhedsnummer": "4000463077",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000463077/deltager"
-        },
-        {
-          "name": "Thomas Danielsen",
           "person_enhedsnummer": "4006782134",
           "person_type": "deltager",
           "has_active_relations": true,
@@ -5248,10 +5410,10 @@
         },
         {
           "name": "Thomas Danielsen",
-          "person_enhedsnummer": "4000691771",
+          "person_enhedsnummer": "4000463077",
           "person_type": "deltager",
           "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000691771/deltager"
+          "person_url": "https://datacvr.virk.dk/enhed/person/4000463077/deltager"
         },
         {
           "name": "Thomas Danielsen",
@@ -5259,6 +5421,13 @@
           "person_type": "deltager",
           "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000642306/deltager"
+        },
+        {
+          "name": "Thomas Danielsen",
+          "person_enhedsnummer": "4000691771",
+          "person_type": "deltager",
+          "has_active_relations": true,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4000691771/deltager"
         }
       ]
     },
@@ -5560,7 +5729,17 @@
       "name": "Søren Gade",
       "status": "not_found",
       "person_total": 71,
-      "candidates": []
+      "candidates": [],
+      "verification_clues": {
+        "company_names": [
+          "esbjerg havn",
+          "vestjysk bank",
+          "danske bank",
+          "deutsche bank",
+          "novo nordisk b ørsted a s"
+        ],
+        "company_cvrs": []
+      }
     },
     "265": {
       "id": 265,
@@ -5588,25 +5767,16 @@
     "127": {
       "id": 127,
       "name": "Preben Bang Henriksen",
-      "status": "ambiguous",
-      "person_total": 2,
-      "exact_match_count": 2,
-      "candidates": [
-        {
-          "name": "Preben Bang Henriksen",
-          "person_enhedsnummer": "4000110350",
-          "person_type": "liberal_udoever",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000110350/liberal_udoever"
-        },
-        {
-          "name": "Preben Bang Henriksen",
-          "person_enhedsnummer": "4000110350",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000110350/deltager"
-        }
-      ]
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Preben Bang Henriksen",
+      "person_enhedsnummer": "4000110350",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000110350/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Preben%20Bang%20Henriksen&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0
     },
     "173": {
       "id": 173,
@@ -5699,6 +5869,13 @@
       "candidates": [
         {
           "name": "Ken Kristensen",
+          "person_enhedsnummer": "4004058261",
+          "person_type": "deltager",
+          "has_active_relations": false,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4004058261/deltager"
+        },
+        {
+          "name": "Ken Kristensen",
           "person_enhedsnummer": "4000628989",
           "person_type": "deltager",
           "has_active_relations": false,
@@ -5717,13 +5894,6 @@
           "person_type": "deltager",
           "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4009150270/deltager"
-        },
-        {
-          "name": "Ken Kristensen",
-          "person_enhedsnummer": "4004058261",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004058261/deltager"
         }
       ]
     },
@@ -5838,16 +6008,16 @@
     "130": {
       "id": 130,
       "name": "Sophie Løhde",
-      "status": "not_found",
-      "person_total": 1,
-      "candidates": [
-        {
-          "name": "Sophie Løhde Jacobsen",
-          "person_enhedsnummer": "4004144939",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004144939/deltager"
-        }
-      ]
+      "status": "exact_match",
+      "match_quality": "variant_name",
+      "person_name": "Sophie Løhde Jacobsen",
+      "person_enhedsnummer": "4004144939",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004144939/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Sophie%20L%C3%B8hde&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0
     },
     "168": {
       "id": 168,
