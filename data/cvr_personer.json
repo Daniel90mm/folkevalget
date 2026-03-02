@@ -1,6 +1,6 @@
 {
   "generated": "2026-03-02",
-  "note": "Data bygger paa praecis navnesoegning i det offentlige CVR paa Virk. Kun entydige persontraef gemmes. Navne med ekstra mellemnavne eller efternavne accepteres kun ved entydig identitet. Tvetydige navnetraef kan kun vises hvis de bekræftes mod Folketingets hvervregister eller via en manuel officiel verifikation.",
+  "note": "Data bygger paa officielle navne fra Folketingets ODA-biografier og praecis navnesoegning i det offentlige CVR paa Virk. Kun entydige persontraef gemmes. Navne med ekstra mellemnavne eller efternavne accepteres kun ved entydig identitet. Tvetydige navnetraef kan kun vises hvis de bekræftes mod Folketingets hvervregister eller via en manuel officiel verifikation.",
   "medlemmer": {
     "20352": {
       "id": 20352,
@@ -14,7 +14,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Helene%20Brydensholt&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Helene Brydensholt",
+      "search_name_used": "Helene Brydensholt"
     },
     "20353": {
       "id": 20353,
@@ -28,7 +30,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Sascha%20Faxe&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Sascha Faxe",
+      "search_name_used": "Sascha Faxe"
     },
     "15775": {
       "id": 15775,
@@ -93,7 +97,9 @@
           ]
         }
       ],
-      "historical_relation_count": 4
+      "historical_relation_count": 4,
+      "official_name": "Torsten Gejl",
+      "search_name_used": "Torsten Gejl"
     },
     "20629": {
       "id": 20629,
@@ -124,14 +130,20 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Nikoline Erbs Hillers-Bendtsen",
+      "search_name_used": "Nikoline Erbs Hillers-Bendtsen"
     },
     "20527": {
       "id": 20527,
       "name": "Nanna Høyrup",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Nanna Høyrup",
+      "search_names_tried": [
+        "Nanna Høyrup"
+      ]
     },
     "20381": {
       "id": 20381,
@@ -145,28 +157,36 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Karin%20Liltorp&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Karin Liltorp",
+      "search_name_used": "Karin Liltorp"
     },
     "20370": {
       "id": 20370,
       "name": "Christina Olumeko",
       "status": "exact_match",
-      "match_quality": "extended_name",
+      "match_quality": "exact",
       "person_name": "Christina Sade Olumeko",
       "person_enhedsnummer": "4008021884",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4008021884/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Christina%20Olumeko&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Christina%20Sade%20Olumeko&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Christina Sade Olumeko",
+      "search_name_used": "Christina Sade Olumeko"
     },
     "20351": {
       "id": 20351,
       "name": "Franciska Rosenkilde",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Franciska Rosenkilde",
+      "search_names_tried": [
+        "Franciska Rosenkilde"
+      ]
     },
     "20539": {
       "id": 20539,
@@ -197,7 +217,9 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Noah Sturis",
+      "search_name_used": "Noah Sturis"
     },
     "18724": {
       "id": 18724,
@@ -244,54 +266,63 @@
           ]
         }
       ],
-      "historical_relation_count": 4
+      "historical_relation_count": 4,
+      "official_name": "Lars Boje Mathiesen",
+      "search_name_used": "Lars Boje Mathiesen"
     },
     "162": {
       "id": 162,
       "name": "Karina Adsbøl",
-      "status": "not_found",
+      "status": "ambiguous",
       "person_total": 3,
+      "exact_match_count": 2,
       "candidates": [
-        {
-          "name": "Laila Karina Adsbøl",
-          "person_enhedsnummer": "4000271210",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000271210/deltager"
-        },
         {
           "name": "Karina Adsbøl Klovgaard",
           "person_enhedsnummer": "4000501360",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000501360/deltager"
         },
         {
           "name": "Karina Marie Adsbøl",
           "person_enhedsnummer": "4009190334",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4009190334/deltager"
         }
+      ],
+      "official_name": "Karina Adsbøl",
+      "search_names_tried": [
+        "Karina Adsbøl"
       ]
     },
     "20355": {
       "id": 20355,
       "name": "Kim Edberg Andersen",
       "status": "exact_match",
-      "match_quality": "variant_name",
+      "match_quality": "exact",
       "person_name": "Kim Edberg Andersen-Kristoffersen",
       "person_enhedsnummer": "4000423343",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4000423343/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Kim%20Edberg%20Andersen&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Kim%20Edberg%20Andersen-Kristoffersen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Kim Edberg Andersen-Kristoffersen",
+      "search_name_used": "Kim Edberg Andersen-Kristoffersen"
     },
     "20747": {
       "id": 20747,
       "name": "Jenny Andresen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Jenny Andresen",
+      "search_names_tried": [
+        "Jenny Andresen"
+      ]
     },
     "15774": {
       "id": 15774,
@@ -322,7 +353,9 @@
           ]
         }
       ],
-      "historical_relation_count": 2
+      "historical_relation_count": 2,
+      "official_name": "Lise Bech",
+      "search_name_used": "Lise Bech"
     },
     "20376": {
       "id": 20376,
@@ -336,21 +369,25 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Kristian%20B%C3%B8gsted&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Kristian Bøgsted",
+      "search_name_used": "Kristian Bøgsted"
     },
     "113": {
       "id": 113,
       "name": "Jens Henrik Thulesen Dahl",
       "status": "exact_match",
-      "match_quality": "extended_name",
+      "match_quality": "exact",
       "person_name": "Jens Henrik Winther Thulesen Dahl",
       "person_enhedsnummer": "4000611114",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4000611114/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jens%20Henrik%20Thulesen%20Dahl&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jens%20Henrik%20Winther%20Thulesen%20Dahl&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Jens Henrik Winther Thulesen Dahl",
+      "search_name_used": "Jens Henrik Winther Thulesen Dahl"
     },
     "34": {
       "id": 34,
@@ -364,7 +401,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=S%C3%B8ren%20Espersen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Søren Espersen",
+      "search_name_used": "Søren Espersen"
     },
     "119": {
       "id": 119,
@@ -378,7 +417,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Dennis%20Flydtkj%C3%A6r&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Dennis Flydtkjær",
+      "search_name_used": "Dennis Flydtkjær"
     },
     "17629": {
       "id": 17629,
@@ -392,35 +433,49 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Mads%20Fuglede&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Mads Fuglede",
+      "search_name_used": "Mads Fuglede"
     },
     "1146": {
       "id": 1146,
       "name": "Marlene Harpsøe",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Marlene Birkehøj Harpsøe",
+      "search_names_tried": [
+        "Marlene Birkehøj Harpsøe",
+        "Marlene Harpsøe"
+      ]
     },
     "20373": {
       "id": 20373,
       "name": "Susie Jessen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Susie Janet Jessen",
+      "search_names_tried": [
+        "Susie Janet Jessen",
+        "Susie Jessen"
+      ]
     },
     "20372": {
       "id": 20372,
       "name": "Betina Kastbjerg",
       "status": "exact_match",
-      "match_quality": "extended_name",
+      "match_quality": "exact",
       "person_name": "Betina Timm Kastbjerg",
       "person_enhedsnummer": "4000522738",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4000522738/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Betina%20Kastbjerg&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Betina%20Timm%20Kastbjerg&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Betina Timm Kastbjerg",
+      "search_name_used": "Betina Timm Kastbjerg"
     },
     "20375": {
       "id": 20375,
@@ -467,7 +522,9 @@
           ]
         }
       ],
-      "historical_relation_count": 2
+      "historical_relation_count": 2,
+      "official_name": "Charlotte Munch Pasler",
+      "search_name_used": "Charlotte Munch Pasler"
     },
     "20374": {
       "id": 20374,
@@ -498,7 +555,9 @@
           ]
         }
       ],
-      "historical_relation_count": 2
+      "historical_relation_count": 2,
+      "official_name": "Kenneth Fredslund Petersen",
+      "search_name_used": "Kenneth Fredslund Petersen"
     },
     "48": {
       "id": 48,
@@ -509,18 +568,22 @@
       "candidates": [
         {
           "name": "Peter Skaarup",
-          "person_enhedsnummer": "4000521883",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000521883/deltager"
-        },
-        {
-          "name": "Peter Skaarup",
           "person_enhedsnummer": "4000139368",
           "person_type": "deltager",
           "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000139368/deltager"
+        },
+        {
+          "name": "Peter Skaarup",
+          "person_enhedsnummer": "4000521883",
+          "person_type": "deltager",
+          "has_active_relations": false,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4000521883/deltager"
         }
+      ],
+      "official_name": "Peter Skaarup",
+      "search_names_tried": [
+        "Peter Skaarup"
       ]
     },
     "82": {
@@ -535,7 +598,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Hans%20Kristian%20Skibby&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Hans Kristian Skibby",
+      "search_name_used": "Hans Kristian Skibby"
     },
     "182": {
       "id": 182,
@@ -549,18 +614,20 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Inger%20St%C3%B8jberg&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Inger Støjberg",
+      "search_name_used": "Inger Støjberg"
     },
     "20823": {
       "id": 20823,
       "name": "Morten Vehl",
       "status": "exact_match",
-      "match_quality": "variant_name",
+      "match_quality": "extended_name",
       "person_name": "Morten Vehl Bjerk Revsbeck",
       "person_enhedsnummer": "4000484981",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4000484981/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Morten%20Vehl&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Morten%20Vehl%20Revsbeck&sideIndex=0&size=10",
       "has_active_relations": true,
       "active_relations": [
         {
@@ -580,7 +647,9 @@
           ]
         }
       ],
-      "historical_relation_count": 1
+      "historical_relation_count": 1,
+      "official_name": "Morten Vehl Revsbeck",
+      "search_name_used": "Morten Vehl Revsbeck"
     },
     "18": {
       "id": 18,
@@ -611,7 +680,9 @@
           ]
         }
       ],
-      "historical_relation_count": 6
+      "historical_relation_count": 6,
+      "official_name": "Alex Ahrendtsen",
+      "search_name_used": "Alex Ahrendtsen"
     },
     "20356": {
       "id": 20356,
@@ -619,24 +690,6 @@
       "status": "not_found",
       "person_total": 14,
       "candidates": [
-        {
-          "name": "Mikkel Bjørn Spliid",
-          "person_enhedsnummer": "4009627820",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4009627820/deltager"
-        },
-        {
-          "name": "Mikkel Bjørn Aaen",
-          "person_enhedsnummer": "4008407942",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4008407942/deltager"
-        },
-        {
-          "name": "Mikkel Bjørn Nielsen",
-          "person_enhedsnummer": "4010564841",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4010564841/deltager"
-        },
         {
           "name": "Mikkel Bjørn Rasmussen",
           "person_enhedsnummer": "4004123029",
@@ -672,7 +725,30 @@
           "person_enhedsnummer": "4008965995",
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4008965995/deltager"
+        },
+        {
+          "name": "Mikkel Bjørn Goldschmidt",
+          "person_enhedsnummer": "4006970898",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4006970898/deltager"
+        },
+        {
+          "name": "Mikkel Bjørn Spliid",
+          "person_enhedsnummer": "4009627820",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4009627820/deltager"
+        },
+        {
+          "name": "Mikkel Bjørn Aaen",
+          "person_enhedsnummer": "4008407942",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4008407942/deltager"
         }
+      ],
+      "official_name": "Mikkel Bjørn Sørensen",
+      "search_names_tried": [
+        "Mikkel Bjørn Sørensen",
+        "Mikkel Bjørn"
       ]
     },
     "252": {
@@ -681,6 +757,12 @@
       "status": "not_found",
       "person_total": 5,
       "candidates": [
+        {
+          "name": "Pia Kjærsgaard Jørgensen",
+          "person_enhedsnummer": "4000416584",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4000416584/deltager"
+        },
         {
           "name": "Pia Kjærsgaard Hansen",
           "person_enhedsnummer": "4000648524",
@@ -693,6 +775,11 @@
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4009084993/deltager"
         }
+      ],
+      "official_name": "Pia Merete Kjærsgaard",
+      "search_names_tried": [
+        "Pia Merete Kjærsgaard",
+        "Pia Kjærsgaard"
       ]
     },
     "15763": {
@@ -704,18 +791,23 @@
       "candidates": [
         {
           "name": "Peter Kofod",
-          "person_enhedsnummer": "4009213539",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4009213539/deltager"
-        },
-        {
-          "name": "Peter Kofod",
           "person_enhedsnummer": "4000414959",
           "person_type": "deltager",
           "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000414959/deltager"
+        },
+        {
+          "name": "Peter Kofod",
+          "person_enhedsnummer": "4009213539",
+          "person_type": "deltager",
+          "has_active_relations": true,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4009213539/deltager"
         }
+      ],
+      "official_name": "Peter Kofod Hristov",
+      "search_names_tried": [
+        "Peter Kofod Hristov",
+        "Peter Kofod"
       ]
     },
     "238": {
@@ -783,14 +875,20 @@
           ]
         }
       ],
-      "historical_relation_count": 6
+      "historical_relation_count": 6,
+      "official_name": "Morten Messerschmidt",
+      "search_name_used": "Morten Messerschmidt"
     },
     "20599": {
       "id": 20599,
       "name": "Søren Rasmussen",
       "status": "not_found",
       "person_total": 457,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Søren Rasmussen",
+      "search_names_tried": [
+        "Søren Rasmussen"
+      ]
     },
     "18721": {
       "id": 18721,
@@ -804,14 +902,20 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Mette%20Thiesen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Mette Thiesen",
+      "search_name_used": "Mette Thiesen"
     },
     "20350": {
       "id": 20350,
       "name": "Nick Zimmermann",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Nick Zimmermann",
+      "search_names_tried": [
+        "Nick Zimmermann"
+      ]
     },
     "15777": {
       "id": 15777,
@@ -825,26 +929,35 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Pelle%20Dragsted&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Pelle Dragsted",
+      "search_name_used": "Pelle Dragsted"
     },
     "9976": {
       "id": 9976,
       "name": "Jette Gottlieb",
-      "status": "not_found",
+      "status": "ambiguous",
       "person_total": 2,
+      "exact_match_count": 2,
       "candidates": [
         {
           "name": "Jette Ryde Gottlieb",
           "person_enhedsnummer": "4006516781",
           "person_type": "deltager",
+          "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4006516781/deltager"
         },
         {
           "name": "Jette Marianne Gottlieb",
           "person_enhedsnummer": "4000375149",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000375149/deltager"
         }
+      ],
+      "official_name": "Jette Gottlieb",
+      "search_names_tried": [
+        "Jette Gottlieb"
       ]
     },
     "20779": {
@@ -852,7 +965,11 @@
       "name": "Runa Friis Hansen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Runa Friis Hansen",
+      "search_names_tried": [
+        "Runa Friis Hansen"
+      ]
     },
     "20642": {
       "id": 20642,
@@ -866,7 +983,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Anne%20Hegelund&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Anne Hegelund",
+      "search_name_used": "Anne Hegelund"
     },
     "16582": {
       "id": 16582,
@@ -897,51 +1016,60 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Peder Hvelplund",
+      "search_name_used": "Peder Hvelplund"
     },
     "20559": {
       "id": 20559,
       "name": "Reza Javid",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Reza Javid",
+      "search_names_tried": [
+        "Reza Javid"
+      ]
     },
     "110": {
       "id": 110,
       "name": "Rosa Lund",
-      "status": "not_found",
+      "status": "ambiguous",
       "person_total": 5,
+      "exact_match_count": 4,
       "candidates": [
         {
           "name": "Rosa Lund From",
           "person_enhedsnummer": "4004169189",
           "person_type": "deltager",
+          "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4004169189/deltager"
-        },
-        {
-          "name": "Hanne Rosa Lund",
-          "person_enhedsnummer": "4006268081",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006268081/deltager"
-        },
-        {
-          "name": "Rosa Torp Lund",
-          "person_enhedsnummer": "4010215538",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4010215538/deltager"
         },
         {
           "name": "Rosa Siri Lund",
           "person_enhedsnummer": "4003852356",
           "person_type": "deltager",
+          "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4003852356/deltager"
+        },
+        {
+          "name": "Rosa Torp Lund",
+          "person_enhedsnummer": "4010215538",
+          "person_type": "deltager",
+          "has_active_relations": true,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4010215538/deltager"
         },
         {
           "name": "Rosa Karen Johanne Andersen Moth-Lund",
           "person_enhedsnummer": "4008889341",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4008889341/deltager"
         }
+      ],
+      "official_name": "Rosa Lund",
+      "search_names_tried": [
+        "Rosa Lund"
       ]
     },
     "109": {
@@ -956,7 +1084,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Trine%20Pertou%20Mach&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Trine Pertou Mach",
+      "search_name_used": "Trine Pertou Mach"
     },
     "667": {
       "id": 667,
@@ -970,7 +1100,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=S%C3%B8ren%20Egge%20Rasmussen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Søren Egge Rasmussen",
+      "search_name_used": "Søren Egge Rasmussen"
     },
     "20411": {
       "id": 20411,
@@ -984,47 +1116,74 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Leila%20Stockmarr&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Leila Stockmarr",
+      "search_name_used": "Leila Stockmarr"
     },
     "176": {
       "id": 176,
       "name": "Søren Søndergaard",
-      "status": "not_found",
-      "person_total": 91,
-      "candidates": []
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Søren Bo Søndergaard",
+      "person_enhedsnummer": "4000659368",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000659368/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=S%C3%B8ren%20Bo%20S%C3%B8ndergaard&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0,
+      "official_name": "Søren Bo Søndergaard",
+      "search_name_used": "Søren Bo Søndergaard"
     },
     "18694": {
       "id": 18694,
       "name": "Victoria Velasquez",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Victoria Velásquez",
+      "search_names_tried": [
+        "Victoria Velásquez",
+        "Victoria Velasquez"
+      ]
     },
     "18693": {
       "id": 18693,
       "name": "Mai Villadsen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Mai Villadsen",
+      "search_names_tried": [
+        "Mai Villadsen"
+      ]
     },
     "15757": {
       "id": 15757,
       "name": "Aaja Chemnitz",
-      "status": "not_found",
+      "status": "ambiguous",
       "person_total": 2,
+      "exact_match_count": 2,
       "candidates": [
         {
           "name": "Aaja Arnatsiak Chemnitz Larsen",
           "person_enhedsnummer": "4006512265",
           "person_type": "deltager",
+          "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4006512265/deltager"
         },
         {
           "name": "Aaja Arnatsiaq Chemnitz Driefer",
           "person_enhedsnummer": "4004183159",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4004183159/deltager"
         }
+      ],
+      "official_name": "Aaja Chemnitz",
+      "search_names_tried": [
+        "Aaja Chemnitz"
       ]
     },
     "19142": {
@@ -1032,7 +1191,11 @@
       "name": "Barbara Gaardlykke Apol",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Barbara Gaardlykke Apol",
+      "search_names_tried": [
+        "Barbara Gaardlykke Apol"
+      ]
     },
     "262": {
       "id": 262,
@@ -1046,6 +1209,10 @@
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4000712912/deltager"
         }
+      ],
+      "official_name": "Sjúrður Skaale",
+      "search_names_tried": [
+        "Sjúrður Skaale"
       ]
     },
     "15793": {
@@ -1057,18 +1224,23 @@
       "candidates": [
         {
           "name": "Mette Abildgaard",
-          "person_enhedsnummer": "4000445539",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000445539/deltager"
-        },
-        {
-          "name": "Mette Abildgaard",
           "person_enhedsnummer": "4004115466",
           "person_type": "deltager",
           "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4004115466/deltager"
+        },
+        {
+          "name": "Mette Abildgaard",
+          "person_enhedsnummer": "4000445539",
+          "person_type": "deltager",
+          "has_active_relations": true,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4000445539/deltager"
         }
+      ],
+      "official_name": "Mette Abildgaard Juulsager",
+      "search_names_tried": [
+        "Mette Abildgaard Juulsager",
+        "Mette Abildgaard"
       ]
     },
     "18711": {
@@ -1083,7 +1255,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Birgitte%20Bergman&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Birgitte Bergman",
+      "search_name_used": "Birgitte Bergman"
     },
     "20357": {
       "id": 20357,
@@ -1094,75 +1268,155 @@
       "candidates": [
         {
           "name": "Lise Bertelsen",
-          "person_enhedsnummer": "4008783468",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4008783468/deltager"
-        },
-        {
-          "name": "Lise Bertelsen",
           "person_enhedsnummer": "4000676600",
           "person_type": "deltager",
           "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000676600/deltager"
+        },
+        {
+          "name": "Lise Bertelsen",
+          "person_enhedsnummer": "4008783468",
+          "person_type": "deltager",
+          "has_active_relations": true,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4008783468/deltager"
         }
+      ],
+      "official_name": "Lise Bertelsen",
+      "search_names_tried": [
+        "Lise Bertelsen"
       ]
     },
     "20369": {
       "id": 20369,
       "name": "Helle Bonnesen",
-      "status": "not_found",
-      "person_total": 3,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Helle Caroline Elfelt Bonnesen",
+      "person_enhedsnummer": "4000548692",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000548692/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Helle%20Caroline%20Elfelt%20Bonnesen&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Helle Pedersen Bonnesen",
-          "person_enhedsnummer": "4008871042",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4008871042/deltager"
+          "company_name": "MANDRUP-POULSEN TAPETER ApS",
+          "company_enhedsnummer": "4001127561",
+          "company_cvr": "42522228",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001127561",
+          "status": "Normal",
+          "roles": [
+            "Bestyrelse"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "17.12.2012"
+            }
+          ]
         },
         {
-          "name": "Helle Thomassen Bonnesen",
-          "person_enhedsnummer": "4009874297",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4009874297/deltager"
-        },
-        {
-          "name": "Helle Caroline Elfelt Bonnesen",
-          "person_enhedsnummer": "4000548692",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000548692/deltager"
+          "company_name": "METROSELSKABET I/S",
+          "company_enhedsnummer": "4001651491",
+          "company_cvr": "30823699",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001651491",
+          "status": "Normal",
+          "roles": [
+            "Bestyrelse"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "01.01.2022"
+            }
+          ]
         }
       ],
-      "verification_clues": {
-        "company_names": [
-          "cph village holding aps",
-          "gilead sciences"
-        ],
-        "company_cvrs": []
-      }
+      "historical_relation_count": 4,
+      "official_name": "Helle Caroline Elfelt Bonnesen",
+      "search_name_used": "Helle Caroline Elfelt Bonnesen"
     },
     "18712": {
       "id": 18712,
       "name": "Niels Flemming Hansen",
-      "status": "ambiguous",
-      "person_total": 5,
-      "exact_match_count": 2,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Niels Flemming Lærkeborg Hansen",
+      "person_enhedsnummer": "4004037282",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004037282/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Niels%20Flemming%20L%C3%A6rkeborg%20Hansen&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Niels Flemming Hansen",
-          "person_enhedsnummer": "4003916743",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4003916743/deltager"
+          "company_name": "HOLST HOLDING A/S",
+          "company_enhedsnummer": "4001267764",
+          "company_cvr": "25336186",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001267764",
+          "status": "Normal",
+          "roles": [
+            "Bestyrelse",
+            "Adm. dir."
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "17.09.2002"
+            },
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "02.01.2015"
+            }
+          ]
         },
         {
-          "name": "Niels Flemming Hansen",
-          "person_enhedsnummer": "4004161657",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004161657/deltager"
+          "company_name": "LANI INVEST A/S",
+          "company_enhedsnummer": "4001040441",
+          "company_cvr": "20771844",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001040441",
+          "status": "Normal",
+          "roles": [
+            "Bestyrelse"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "17.09.2002"
+            }
+          ]
+        },
+        {
+          "company_name": "NFLH Holding ApS",
+          "company_enhedsnummer": "4009903093",
+          "company_cvr": "44508443",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009903093",
+          "status": "Normal",
+          "roles": [
+            "Legal ejer",
+            "Direktør"
+          ],
+          "facts": [
+            {
+              "label": "Ejerandel:",
+              "value": "100% (18.12.2023 - )"
+            },
+            {
+              "label": "Stemmerettigheder:",
+              "value": "100% (18.12.2023 - )"
+            },
+            {
+              "label": "Ændringsdato:",
+              "value": "18.12.2023"
+            },
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "18.12.2023"
+            }
+          ]
         }
-      ]
+      ],
+      "historical_relation_count": 10,
+      "official_name": "Niels Flemming Lærkeborg Hansen",
+      "search_name_used": "Niels Flemming Lærkeborg Hansen"
     },
     "20917": {
       "id": 20917,
@@ -1225,7 +1479,9 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Tina Cartey Hansen",
+      "search_name_used": "Tina Cartey Hansen"
     },
     "21194": {
       "id": 21194,
@@ -1239,7 +1495,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Joachim%20Hoffmann-Petersen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Joachim Hoffmann-Petersen",
+      "search_name_used": "Joachim Hoffmann-Petersen"
     },
     "1454": {
       "id": 1454,
@@ -1300,14 +1558,20 @@
           ]
         }
       ],
-      "historical_relation_count": 2
+      "historical_relation_count": 2,
+      "official_name": "Rasmus Jarlov",
+      "search_name_used": "Rasmus Jarlov"
     },
     "17141": {
       "id": 17141,
       "name": "Brigitte Klintskov Jerkel",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Brigitte Klintskov Jerkel",
+      "search_names_tried": [
+        "Brigitte Klintskov Jerkel"
+      ]
     },
     "18713": {
       "id": 18713,
@@ -1352,38 +1616,49 @@
           ]
         }
       ],
-      "historical_relation_count": 29
+      "historical_relation_count": 29,
+      "official_name": "Mona Juul",
+      "search_name_used": "Mona Juul"
     },
     "20767": {
       "id": 20767,
       "name": "Andreas Karlsen",
-      "status": "not_found",
+      "status": "ambiguous",
       "person_total": 4,
+      "exact_match_count": 4,
       "candidates": [
         {
-          "name": "Andreas Engelsborg Karlsen",
-          "person_enhedsnummer": "4007457433",
+          "name": "Andreas Aarenstrup Karlsen",
+          "person_enhedsnummer": "4010047555",
           "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4007457433/deltager"
+          "has_active_relations": true,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4010047555/deltager"
         },
         {
           "name": "Andreas Stefan Karlsen",
           "person_enhedsnummer": "4010058900",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4010058900/deltager"
         },
         {
-          "name": "Andreas Aarenstrup Karlsen",
-          "person_enhedsnummer": "4010047555",
+          "name": "Andreas Engelsborg Karlsen",
+          "person_enhedsnummer": "4007457433",
           "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4010047555/deltager"
+          "has_active_relations": false,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4007457433/deltager"
         },
         {
           "name": "Andreas Axel Jens Karlsen",
           "person_enhedsnummer": "4007724021",
           "person_type": "deltager",
+          "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4007724021/deltager"
         }
+      ],
+      "official_name": "Andreas Karlsen",
+      "search_names_tried": [
+        "Andreas Karlsen"
       ]
     },
     "11702": {
@@ -1392,6 +1667,10 @@
       "status": "not_found",
       "person_total": 413,
       "candidates": [],
+      "official_name": "Per Larsen",
+      "search_names_tried": [
+        "Per Larsen"
+      ],
       "verification_clues": {
         "company_names": [
           "amgros i s",
@@ -1415,7 +1694,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Mai%20Mercado&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Mai Mercado",
+      "search_name_used": "Mai Mercado"
     },
     "20966": {
       "id": 20966,
@@ -1429,7 +1710,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Frederik%20Bloch%20M%C3%BCnster&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Frederik Bloch Münster",
+      "search_name_used": "Frederik Bloch Münster"
     },
     "15784": {
       "id": 15784,
@@ -1443,35 +1726,48 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=S%C3%B8ren%20Pape%20Poulsen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Søren Pape Poulsen",
+      "search_name_used": "Søren Pape Poulsen"
     },
     "20925": {
       "id": 20925,
       "name": "Dina Raabjerg",
       "status": "exact_match",
-      "match_quality": "variant_name",
+      "match_quality": "exact",
       "person_name": "Dina Myrup Andersen-Raabjerg",
       "person_enhedsnummer": "4006442690",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4006442690/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Dina%20Raabjerg&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Dina%20Myrup%20Andersen-Raabjerg&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Dina Myrup Andersen-Raabjerg",
+      "search_name_used": "Dina Myrup Andersen-Raabjerg"
     },
     "17360": {
       "id": 17360,
       "name": "Merete Scheelsbeck",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Merete Eybye Scheelsbeck",
+      "search_names_tried": [
+        "Merete Eybye Scheelsbeck",
+        "Merete Scheelsbeck"
+      ]
     },
     "20820": {
       "id": 20820,
       "name": "Carl Andersen",
       "status": "not_found",
       "person_total": 138,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Carl Andersen",
+      "search_names_tried": [
+        "Carl Andersen"
+      ]
     },
     "20398": {
       "id": 20398,
@@ -1502,14 +1798,25 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Helena Artmann Andresen",
+      "search_name_used": "Helena Artmann Andresen"
     },
     "15779": {
       "id": 15779,
       "name": "Carsten Bach",
-      "status": "not_found",
-      "person_total": 37,
-      "candidates": []
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Carsten Bach Riis",
+      "person_enhedsnummer": "4008219283",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4008219283/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Carsten%20Bach%20Riis&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0,
+      "official_name": "Carsten Bach Riis",
+      "search_name_used": "Carsten Bach Riis"
     },
     "20392": {
       "id": 20392,
@@ -1764,7 +2071,9 @@
           ]
         }
       ],
-      "historical_relation_count": 57
+      "historical_relation_count": 57,
+      "official_name": "Lars-Christian Brask",
+      "search_name_used": "Lars-Christian Brask"
     },
     "20399": {
       "id": 20399,
@@ -1795,46 +2104,41 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Louise Brown",
+      "search_name_used": "Louise Brown"
     },
     "15800": {
       "id": 15800,
       "name": "Henrik Dahl",
-      "status": "not_found",
-      "person_total": 104,
-      "candidates": []
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Johan Henrik Dahl",
+      "person_enhedsnummer": "4004033989",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004033989/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Johan%20Henrik%20Dahl&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0,
+      "official_name": "Johan Henrik Dahl",
+      "search_name_used": "Johan Henrik Dahl"
     },
     "20393": {
       "id": 20393,
       "name": "Katrine Daugaard",
-      "status": "not_found",
-      "person_total": 4,
-      "candidates": [
-        {
-          "name": "Katrine Daugaard Stevnhoved",
-          "person_enhedsnummer": "4008023057",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4008023057/deltager"
-        },
-        {
-          "name": "Katrine Daugaard Jørgensen",
-          "person_enhedsnummer": "4010485496",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4010485496/deltager"
-        },
-        {
-          "name": "Katrine Daugaard Jørgensen",
-          "person_enhedsnummer": "4000524922",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000524922/deltager"
-        },
-        {
-          "name": "Katrine Tabita Daugaard Christensen",
-          "person_enhedsnummer": "4008089013",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4008089013/deltager"
-        }
-      ]
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Katrine Tabita Daugaard Christensen",
+      "person_enhedsnummer": "4008089013",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4008089013/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Katrine%20Tabita%20Daugaard%20Christensen&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0,
+      "official_name": "Katrine Tabita Daugaard Christensen",
+      "search_name_used": "Katrine Tabita Daugaard Christensen"
     },
     "20394": {
       "id": 20394,
@@ -1842,6 +2146,11 @@
       "status": "not_found",
       "person_total": 0,
       "candidates": [],
+      "official_name": "Steffen W",
+      "search_names_tried": [
+        "Steffen W",
+        "Steffen W. Frølund"
+      ],
       "verification_clues": {
         "company_names": [
           "likeminded vc aps",
@@ -1936,14 +2245,20 @@
           ]
         }
       ],
-      "historical_relation_count": 2
+      "historical_relation_count": 2,
+      "official_name": "Sólbjørg Jakobsen",
+      "search_name_used": "Sólbjørg Jakobsen"
     },
     "20397": {
       "id": 20397,
       "name": "Steffen Larsen",
       "status": "not_found",
       "person_total": 70,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Steffen Larsen",
+      "search_names_tried": [
+        "Steffen Larsen"
+      ]
     },
     "20396": {
       "id": 20396,
@@ -1957,7 +2272,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jens%20Meilvang&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Jens Meilvang",
+      "search_name_used": "Jens Meilvang"
     },
     "99": {
       "id": 99,
@@ -1971,18 +2288,20 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Ole%20Birk%20Olesen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Ole Birk Olesen",
+      "search_name_used": "Ole Birk Olesen"
     },
     "20395": {
       "id": 20395,
       "name": "Alexander Ryle",
       "status": "exact_match",
-      "match_quality": "extended_name",
+      "match_quality": "exact",
       "person_name": "Alexander Adam Ryle",
       "person_enhedsnummer": "4000775765",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4000775765/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Alexander%20Ryle&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Alexander%20Adam%20Ryle&sideIndex=0&size=10",
       "has_active_relations": true,
       "active_relations": [
         {
@@ -2002,32 +2321,36 @@
           ]
         }
       ],
-      "historical_relation_count": 2
+      "historical_relation_count": 2,
+      "official_name": "Alexander Adam Ryle",
+      "search_name_used": "Alexander Adam Ryle"
     },
     "20400": {
       "id": 20400,
       "name": "Sandra Elisabeth Skalvig",
       "status": "exact_match",
-      "match_quality": "extended_name",
+      "match_quality": "exact",
       "person_name": "Sandra Elisabeth Winther Skalvig",
       "person_enhedsnummer": "4009233881",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4009233881/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Sandra%20Elisabeth%20Skalvig&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Sandra%20Elisabeth%20Winther%20Skalvig&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Sandra Elisabeth Winther Skalvig",
+      "search_name_used": "Sandra Elisabeth Winther Skalvig"
     },
     "18703": {
       "id": 18703,
       "name": "Alex Vanopslagh",
       "status": "exact_match",
-      "match_quality": "extended_name",
+      "match_quality": "exact",
       "person_name": "Alex Dominique Kristensen Vanopslagh",
       "person_enhedsnummer": "4006326625",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4006326625/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Alex%20Vanopslagh&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Alex%20Dominique%20Kristensen%20Vanopslagh&sideIndex=0&size=10",
       "has_active_relations": true,
       "active_relations": [
         {
@@ -2047,7 +2370,9 @@
           ]
         }
       ],
-      "historical_relation_count": 3
+      "historical_relation_count": 3,
+      "official_name": "Alex Dominique Kristensen Vanopslagh",
+      "search_name_used": "Alex Dominique Kristensen Vanopslagh"
     },
     "18723": {
       "id": 18723,
@@ -2061,6 +2386,10 @@
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4000717333/deltager"
         }
+      ],
+      "official_name": "Pernille Vermund",
+      "search_names_tried": [
+        "Pernille Vermund"
       ]
     },
     "21159": {
@@ -2075,7 +2404,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Ammar%20Ali&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Ammar Ali",
+      "search_name_used": "Ammar Ali"
     },
     "20496": {
       "id": 20496,
@@ -2089,40 +2420,36 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Henrik%20Rejnholt%20Andersen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Henrik Rejnholt Andersen",
+      "search_name_used": "Henrik Rejnholt Andersen"
     },
     "20916": {
       "id": 20916,
       "name": "Kenneth Bjerg Andersen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Kenneth Bjerg Andersen",
+      "search_names_tried": [
+        "Kenneth Bjerg Andersen"
+      ]
     },
     "20805": {
       "id": 20805,
       "name": "Jan Carlsen",
-      "status": "not_found",
-      "person_total": 34,
-      "candidates": [
-        {
-          "name": "Jan Lonnebjerg Carlsen",
-          "person_enhedsnummer": "4000416712",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000416712/deltager"
-        },
-        {
-          "name": "Jan Emil Carlsen",
-          "person_enhedsnummer": "4004238497",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004238497/deltager"
-        },
-        {
-          "name": "Jan Birger Carlsen",
-          "person_enhedsnummer": "4004238498",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004238498/deltager"
-        }
-      ]
+      "status": "exact_match",
+      "match_quality": "extended_name",
+      "person_name": "Jan Lonnebjerg Carlsen",
+      "person_enhedsnummer": "4000416712",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000416712/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jan%20Carlsen&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0,
+      "official_name": "Jan Carlsen",
+      "search_name_used": "Jan Carlsen"
     },
     "20841": {
       "id": 20841,
@@ -2131,6 +2458,13 @@
       "person_total": 3,
       "exact_match_count": 3,
       "candidates": [
+        {
+          "name": "Lars Arne Christensen",
+          "person_enhedsnummer": "4006405821",
+          "person_type": "deltager",
+          "has_active_relations": false,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4006405821/deltager"
+        },
         {
           "name": "Lars Arne Christensen",
           "person_enhedsnummer": "4000428628",
@@ -2144,14 +2478,11 @@
           "person_type": "deltager",
           "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000499582/deltager"
-        },
-        {
-          "name": "Lars Arne Christensen",
-          "person_enhedsnummer": "4006405821",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006405821/deltager"
         }
+      ],
+      "official_name": "Lars Arne Christensen",
+      "search_names_tried": [
+        "Lars Arne Christensen"
       ]
     },
     "20379": {
@@ -2183,7 +2514,9 @@
           ]
         }
       ],
-      "historical_relation_count": 10
+      "historical_relation_count": 10,
+      "official_name": "Tobias Grotkjær Elmstrøm",
+      "search_name_used": "Tobias Grotkjær Elmstrøm"
     },
     "57": {
       "id": 57,
@@ -2197,47 +2530,81 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jakob%20Engel-Schmidt&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Jakob Engel-Schmidt",
+      "search_name_used": "Jakob Engel-Schmidt"
     },
     "20378": {
       "id": 20378,
       "name": "Rosa Eriksen",
-      "status": "not_found",
+      "status": "ambiguous",
       "person_total": 3,
+      "exact_match_count": 2,
       "candidates": [
-        {
-          "name": "Michelle Rosa Eriksen",
-          "person_enhedsnummer": "4006825829",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006825829/deltager"
-        },
         {
           "name": "Rosa Zangenberg Eriksen",
           "person_enhedsnummer": "4000664551",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000664551/deltager"
         },
         {
           "name": "Rosa Anne-Lise Eriksen",
           "person_enhedsnummer": "4003893113",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4003893113/deltager"
         }
+      ],
+      "official_name": "Rosa Eriksen",
+      "search_names_tried": [
+        "Rosa Eriksen"
       ]
     },
     "20377": {
       "id": 20377,
       "name": "Henrik Frandsen",
-      "status": "not_found",
-      "person_total": 41,
-      "candidates": []
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Henrik Hasling Frandsen",
+      "person_enhedsnummer": "4000078169",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000078169/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Henrik%20Hasling%20Frandsen&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
+        {
+          "company_name": "GRD HENRIK FRANDSEN",
+          "company_enhedsnummer": "4001207681",
+          "company_cvr": "77801715",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001207681",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "01.04.1985"
+            }
+          ]
+        }
+      ],
+      "historical_relation_count": 8,
+      "official_name": "Henrik Hasling Frandsen",
+      "search_name_used": "Henrik Hasling Frandsen"
     },
     "20384": {
       "id": 20384,
       "name": "Nanna W. Gotfredsen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Nanna W",
+      "search_names_tried": [
+        "Nanna W",
+        "Nanna W. Gotfredsen"
+      ]
     },
     "20385": {
       "id": 20385,
@@ -2284,7 +2651,9 @@
           ]
         }
       ],
-      "historical_relation_count": 7
+      "historical_relation_count": 7,
+      "official_name": "Charlotte Bagge Hansen",
+      "search_name_used": "Charlotte Bagge Hansen"
     },
     "20389": {
       "id": 20389,
@@ -2298,6 +2667,10 @@
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4004214718/deltager"
         }
+      ],
+      "official_name": "Peter Have",
+      "search_names_tried": [
+        "Peter Have"
       ],
       "verification_clues": {
         "company_names": [
@@ -2321,7 +2694,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Mette%20Kierkgaard&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Mette Kierkgaard",
+      "search_name_used": "Mette Kierkgaard"
     },
     "20387": {
       "id": 20387,
@@ -2382,7 +2757,9 @@
           ]
         }
       ],
-      "historical_relation_count": 5
+      "historical_relation_count": 5,
+      "official_name": "Kristian Klarskov",
+      "search_name_used": "Kristian Klarskov"
     },
     "20386": {
       "id": 20386,
@@ -2413,7 +2790,9 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Rasmus Lund-Nielsen",
+      "search_name_used": "Rasmus Lund-Nielsen"
     },
     "20580": {
       "id": 20580,
@@ -2505,14 +2884,20 @@
           ]
         }
       ],
-      "historical_relation_count": 8
+      "historical_relation_count": 8,
+      "official_name": "Lean Milo",
+      "search_name_used": "Lean Milo"
     },
     "20976": {
       "id": 20976,
       "name": "Caroline Stage Olsen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Caroline Stage Olsen",
+      "search_names_tried": [
+        "Caroline Stage Olsen"
+      ]
     },
     "145": {
       "id": 145,
@@ -2588,7 +2973,9 @@
           ]
         }
       ],
-      "historical_relation_count": 4
+      "historical_relation_count": 4,
+      "official_name": "Lars Løkke Rasmussen",
+      "search_name_used": "Lars Løkke Rasmussen"
     },
     "20415": {
       "id": 20415,
@@ -2619,28 +3006,43 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Mohammad Rona",
+      "search_name_used": "Mohammad Rona"
     },
     "20380": {
       "id": 20380,
       "name": "Monika Rubin",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Monika Rubin",
+      "search_names_tried": [
+        "Monika Rubin"
+      ]
     },
     "18688": {
       "id": 18688,
       "name": "Aki-Matilda Høegh-Dam",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Aki-Matilda Tilia Ditte Høegh-Dam",
+      "search_names_tried": [
+        "Aki-Matilda Tilia Ditte Høegh-Dam",
+        "Aki-Matilda Høegh-Dam"
+      ]
     },
     "21206": {
       "id": 21206,
       "name": "Elvira Kûitse",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Elvira Kûitse",
+      "search_names_tried": [
+        "Elvira Kûitse"
+      ]
     },
     "141": {
       "id": 141,
@@ -2654,7 +3056,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Martin%20Lidegaard&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Martin Lidegaard",
+      "search_name_used": "Martin Lidegaard"
     },
     "18726": {
       "id": 18726,
@@ -2668,7 +3072,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Stinus%20Lindgreen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Stinus Lindgreen",
+      "search_name_used": "Stinus Lindgreen"
     },
     "18725": {
       "id": 18725,
@@ -2682,21 +3088,32 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Samira%20Nawa&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Samira Nawa",
+      "search_name_used": "Samira Nawa"
     },
     "100": {
       "id": 100,
       "name": "Sofie Carsten Nielsen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Sofie Carsten Nielsen",
+      "search_names_tried": [
+        "Sofie Carsten Nielsen"
+      ]
     },
     "18729": {
       "id": 18729,
       "name": "Katrine Robsøe",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Katrine Kjær Robsøe",
+      "search_names_tried": [
+        "Katrine Kjær Robsøe",
+        "Katrine Robsøe"
+      ]
     },
     "112": {
       "id": 112,
@@ -2710,33 +3127,47 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Lotte%20Rod&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Lotte Rod",
+      "search_name_used": "Lotte Rod"
     },
     "191": {
       "id": 191,
       "name": "Zenia Stampe",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Zenia Stampe Lyngbo",
+      "search_names_tried": [
+        "Zenia Stampe Lyngbo",
+        "Zenia Stampe"
+      ]
     },
     "19928": {
       "id": 19928,
       "name": "Kim Aas",
-      "status": "not_found",
+      "status": "ambiguous",
       "person_total": 2,
+      "exact_match_count": 2,
       "candidates": [
         {
           "name": "Kim Aas Christensen",
           "person_enhedsnummer": "4004191722",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4004191722/deltager"
         },
         {
           "name": "Kim Steen Aas Jensen",
           "person_enhedsnummer": "4000233367",
           "person_type": "deltager",
+          "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000233367/deltager"
         }
+      ],
+      "official_name": "Kim Aas",
+      "search_names_tried": [
+        "Kim Aas"
       ]
     },
     "1619": {
@@ -2751,41 +3182,58 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Yildiz%20Akdogan&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Yildiz Akdogan",
+      "search_name_used": "Yildiz Akdogan"
     },
     "351": {
       "id": 351,
       "name": "Sophie Hæstorp Andersen",
-      "status": "not_found",
-      "person_total": 1,
-      "candidates": [
-        {
-          "name": "Anne Sophie Hæstorp Andersen",
-          "person_enhedsnummer": "4006001189",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006001189/deltager"
-        }
-      ]
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Anne Sophie Hæstorp Andersen",
+      "person_enhedsnummer": "4006001189",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4006001189/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Anne%20Sophie%20H%C3%A6storp%20Andersen&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0,
+      "official_name": "Anne Sophie Hæstorp Andersen",
+      "search_name_used": "Anne Sophie Hæstorp Andersen"
     },
     "152": {
       "id": 152,
       "name": "Ida Auken",
-      "status": "not_found",
-      "person_total": 2,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Ida Margrete Meier Auken",
+      "person_enhedsnummer": "4006513441",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4006513441/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Ida%20Margrete%20Meier%20Auken&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Ida Margrete Meier Auken",
-          "person_enhedsnummer": "4006513441",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006513441/deltager"
-        },
-        {
-          "name": "Ida Marie Auken Beck",
-          "person_enhedsnummer": "4006640583",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006640583/deltager"
+          "company_name": "Circular Economy",
+          "company_enhedsnummer": "4006513440",
+          "company_cvr": "37626384",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4006513440",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "20.04.2016"
+            }
+          ]
         }
-      ]
+      ],
+      "historical_relation_count": 1,
+      "official_name": "Ida Margrete Meier Auken",
+      "search_name_used": "Ida Margrete Meier Auken"
     },
     "20363": {
       "id": 20363,
@@ -2799,7 +3247,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Sara%20Emil%20Baaring&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Sara Emil Baaring",
+      "search_name_used": "Sara Emil Baaring"
     },
     "15787": {
       "id": 15787,
@@ -2813,7 +3263,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Kaare%20Dybvad%20Bek&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Kaare Dybvad Bek",
+      "search_name_used": "Kaare Dybvad Bek"
     },
     "118": {
       "id": 118,
@@ -2858,21 +3310,32 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Trine Bramsen",
+      "search_name_used": "Trine Bramsen"
     },
     "18717": {
       "id": 18717,
       "name": "Bjørn Brandenborg",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Bjørn Brandenborg",
+      "search_names_tried": [
+        "Bjørn Brandenborg"
+      ]
     },
     "214": {
       "id": 214,
       "name": "Jeppe Bruus",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Jeppe Bruus Christensen",
+      "search_names_tried": [
+        "Jeppe Bruus Christensen",
+        "Jeppe Bruus"
+      ]
     },
     "220": {
       "id": 220,
@@ -2933,18 +3396,20 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Morten Bødskov",
+      "search_name_used": "Morten Bødskov"
     },
     "20368": {
       "id": 20368,
       "name": "Maria Durhuus",
       "status": "exact_match",
-      "match_quality": "extended_name",
+      "match_quality": "exact",
       "person_name": "Maria Staghøj Durhuus",
       "person_enhedsnummer": "4010203918",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4010203918/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Maria%20Durhuus&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Maria%20Stagh%C3%B8j%20Durhuus&sideIndex=0&size=10",
       "has_active_relations": true,
       "active_relations": [
         {
@@ -2980,7 +3445,9 @@
           ]
         }
       ],
-      "historical_relation_count": 1
+      "historical_relation_count": 1,
+      "official_name": "Maria Staghøj Durhuus",
+      "search_name_used": "Maria Staghøj Durhuus"
     },
     "120": {
       "id": 120,
@@ -3025,50 +3492,63 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Benny Engelbrecht",
+      "search_name_used": "Benny Engelbrecht"
     },
     "18720": {
       "id": 18720,
       "name": "Camilla Fabricius",
-      "status": "not_found",
+      "status": "ambiguous",
       "person_total": 6,
+      "exact_match_count": 6,
       "candidates": [
         {
           "name": "Camilla Fabricius Mørk",
           "person_enhedsnummer": "4009028583",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4009028583/deltager"
         },
         {
           "name": "Camilla Fabricius-Jensen",
           "person_enhedsnummer": "4000787188",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000787188/deltager"
         },
         {
           "name": "Camilla Fabricius Pedersen",
           "person_enhedsnummer": "4008725189",
           "person_type": "deltager",
+          "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4008725189/deltager"
         },
         {
           "name": "Camilla Anina Fabricius",
           "person_enhedsnummer": "4000738331",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000738331/deltager"
         },
         {
           "name": "Camilla Stougaard Fabricius",
           "person_enhedsnummer": "4009951410",
           "person_type": "deltager",
+          "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4009951410/deltager"
         },
         {
           "name": "Camilla Lee Fabricius",
           "person_enhedsnummer": "4000657923",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000657923/deltager"
         }
+      ],
+      "official_name": "Camilla Fabricius",
+      "search_names_tried": [
+        "Camilla Fabricius"
       ]
     },
     "138": {
@@ -3076,7 +3556,11 @@
       "name": "Mette Frederiksen",
       "status": "not_found",
       "person_total": 37,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Mette Frederiksen",
+      "search_names_tried": [
+        "Mette Frederiksen"
+      ]
     },
     "278": {
       "id": 278,
@@ -3090,14 +3574,20 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Karin%20Gaardsted&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Karin Gaardsted",
+      "search_name_used": "Karin Gaardsted"
     },
     "197": {
       "id": 197,
       "name": "Mette Gjerskov",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Mette Gjerskov",
+      "search_names_tried": [
+        "Mette Gjerskov"
+      ]
     },
     "286": {
       "id": 286,
@@ -3111,35 +3601,47 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Ane%20Halsboe-J%C3%B8rgensen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Ane Halsboe-Jørgensen",
+      "search_name_used": "Ane Halsboe-Jørgensen"
     },
     "21186": {
       "id": 21186,
       "name": "Mads Madsen Henriksen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Mads Madsen Henriksen",
+      "search_names_tried": [
+        "Mads Madsen Henriksen"
+      ]
     },
     "244": {
       "id": 244,
       "name": "Magnus Heunicke",
       "status": "exact_match",
-      "match_quality": "extended_name",
+      "match_quality": "exact",
       "person_name": "Magnus Johannes Heunicke",
       "person_enhedsnummer": "4000697352",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4000697352/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Magnus%20Heunicke&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Magnus%20Johannes%20Heunicke&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Magnus Johannes Heunicke",
+      "search_name_used": "Magnus Johannes Heunicke"
     },
     "21083": {
       "id": 21083,
       "name": "Thorkild Holmboe-Hay",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Thorkild Holmboe-Hay",
+      "search_names_tried": [
+        "Thorkild Holmboe-Hay"
+      ]
     },
     "20051": {
       "id": 20051,
@@ -3170,7 +3672,9 @@
           ]
         }
       ],
-      "historical_relation_count": 2
+      "historical_relation_count": 2,
+      "official_name": "Theis Kylling Hommeltoft",
+      "search_name_used": "Theis Kylling Hommeltoft"
     },
     "15776": {
       "id": 15776,
@@ -3184,6 +3688,10 @@
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4000024650/deltager"
         }
+      ],
+      "official_name": "Peter Hummelgaard",
+      "search_names_tried": [
+        "Peter Hummelgaard"
       ]
     },
     "273": {
@@ -3198,14 +3706,20 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Per%20Husted&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Per Husted",
+      "search_name_used": "Per Husted"
     },
     "20361": {
       "id": 20361,
       "name": "Fie Hækkerup",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Fie Hækkerup",
+      "search_names_tried": [
+        "Fie Hækkerup"
+      ]
     },
     "260": {
       "id": 260,
@@ -3219,21 +3733,31 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Leif%20Lahn%20Jensen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Leif Lahn Jensen",
+      "search_name_used": "Leif Lahn Jensen"
     },
     "154": {
       "id": 154,
       "name": "Mogens Jensen",
       "status": "not_found",
       "person_total": 461,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Mogens Jensen",
+      "search_names_tried": [
+        "Mogens Jensen"
+      ]
     },
     "201": {
       "id": 201,
       "name": "Thomas Jensen",
       "status": "not_found",
       "person_total": 907,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Thomas Jensen",
+      "search_names_tried": [
+        "Thomas Jensen"
+      ]
     },
     "20366": {
       "id": 20366,
@@ -3264,34 +3788,54 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Thomas Skriver Jensen",
+      "search_name_used": "Thomas Skriver Jensen"
     },
     "213": {
       "id": 213,
       "name": "Jens Joel",
-      "status": "not_found",
-      "person_total": 2,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Jens Joel Sand",
+      "person_enhedsnummer": "4006046860",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4006046860/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jens%20Joel%20Sand&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Jens Joel Sand",
-          "person_enhedsnummer": "4006046860",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006046860/deltager"
-        },
-        {
-          "name": "Jens Joel Munch",
-          "person_enhedsnummer": "4006186088",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006186088/deltager"
+          "company_name": "JJ47",
+          "company_enhedsnummer": "4010713432",
+          "company_cvr": "46296141",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4010713432",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "01.03.2026"
+            }
+          ]
         }
-      ]
+      ],
+      "historical_relation_count": 2,
+      "official_name": "Jens Joel Sand",
+      "search_name_used": "Jens Joel Sand"
     },
     "167": {
       "id": 167,
       "name": "Dan Jørgensen",
       "status": "not_found",
       "person_total": 73,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Dan Jannik Jørgensen",
+      "search_names_tried": [
+        "Dan Jannik Jørgensen",
+        "Dan Jørgensen"
+      ]
     },
     "18714": {
       "id": 18714,
@@ -3305,83 +3849,209 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Kasper%20Sand%20Kj%C3%A6r&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Kasper Sand Kjær",
+      "search_name_used": "Kasper Sand Kjær"
     },
     "21143": {
       "id": 21143,
       "name": "Morten Klessen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Morten Klessen",
+      "search_names_tried": [
+        "Morten Klessen"
+      ]
     },
     "235": {
       "id": 235,
       "name": "Jeppe Kofod",
-      "status": "not_found",
-      "person_total": 4,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Jeppe Sebastian Kofod",
+      "person_enhedsnummer": "4004050977",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004050977/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jeppe%20Sebastian%20Kofod&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Jeppe Kofod Hansen",
-          "person_enhedsnummer": "4010296302",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4010296302/deltager"
+          "company_name": "Danish Ukrainian Combat Systems A/S",
+          "company_enhedsnummer": "4010534787",
+          "company_cvr": "45898199",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4010534787",
+          "status": "Normal",
+          "roles": [
+            "Bestyrelse"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "06.10.2025"
+            }
+          ]
         },
         {
-          "name": "Jeppe Kofod Ringgaard",
-          "person_enhedsnummer": "4007754942",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4007754942/deltager"
+          "company_name": "GrønBlå A/S",
+          "company_enhedsnummer": "4009595500",
+          "company_cvr": "43905880",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009595500",
+          "status": "Normal",
+          "roles": [
+            "Bestyrelse"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "15.07.2025"
+            }
+          ]
         },
         {
-          "name": "Jeppe Sebastian Kofod",
-          "person_enhedsnummer": "4004050977",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004050977/deltager"
+          "company_name": "GrønBlå Distribution A/S",
+          "company_enhedsnummer": "4010362672",
+          "company_cvr": "45519430",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4010362672",
+          "status": "Normal",
+          "roles": [
+            "Bestyrelse"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "07.03.2025"
+            }
+          ]
         },
         {
-          "name": "Jeppe Juhl Blom Kofod",
-          "person_enhedsnummer": "4010076501",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4010076501/deltager"
+          "company_name": "JESEKO Holding ApS",
+          "company_enhedsnummer": "4009532245",
+          "company_cvr": "43788418",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009532245",
+          "status": "Normal",
+          "roles": [
+            "Stiftere",
+            "Legal ejer",
+            "Adm. dir."
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "19.01.2023"
+            },
+            {
+              "label": "Ejerandel:",
+              "value": "100% (20.01.2023 - )"
+            },
+            {
+              "label": "Stemmerettigheder:",
+              "value": "100% (20.01.2023 - )"
+            },
+            {
+              "label": "Ændringsdato:",
+              "value": "20.01.2023"
+            },
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "20.01.2023"
+            }
+          ]
+        },
+        {
+          "company_name": "KofodGlobal ApS",
+          "company_enhedsnummer": "4009534056",
+          "company_cvr": "43790978",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009534056",
+          "status": "Normal",
+          "roles": [
+            "Legal ejer",
+            "Adm. dir."
+          ],
+          "facts": [
+            {
+              "label": "Ejerandel:",
+              "value": "100% (20.01.2023 - )"
+            },
+            {
+              "label": "Stemmerettigheder:",
+              "value": "100% (20.01.2023 - )"
+            },
+            {
+              "label": "Ændringsdato:",
+              "value": "20.01.2023"
+            },
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "20.01.2023"
+            }
+          ]
+        },
+        {
+          "company_name": "KofodGlobal v/ Jeppe Sebastian Kofod",
+          "company_enhedsnummer": "4009500840",
+          "company_cvr": "43731092",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009500840",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "22.12.2022"
+            }
+          ]
         }
-      ]
+      ],
+      "historical_relation_count": 4,
+      "official_name": "Jeppe Sebastian Kofod",
+      "search_name_used": "Jeppe Sebastian Kofod"
     },
     "208": {
       "id": 208,
       "name": "Simon Kollerup",
-      "status": "not_found",
+      "status": "ambiguous",
       "person_total": 3,
+      "exact_match_count": 3,
       "candidates": [
         {
           "name": "Simon Kollerup Poulsen",
           "person_enhedsnummer": "4006080851",
           "person_type": "deltager",
+          "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4006080851/deltager"
         },
         {
           "name": "Simon Kollerup Søe-Larsen",
           "person_enhedsnummer": "4008665340",
           "person_type": "deltager",
+          "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4008665340/deltager"
         },
         {
           "name": "Simon Monrad Kollerup",
           "person_enhedsnummer": "4000552272",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000552272/deltager"
         }
+      ],
+      "official_name": "Simon Kollerup",
+      "search_names_tried": [
+        "Simon Kollerup"
       ]
     },
     "38": {
       "id": 38,
       "name": "Astrid Krag",
       "status": "exact_match",
-      "match_quality": "variant_name",
+      "match_quality": "exact",
       "person_name": "Astrid Krag Kristensen",
       "person_enhedsnummer": "4007428563",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4007428563/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Astrid%20Krag&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Astrid%20Krag%20Kristensen&sideIndex=0&size=10",
       "has_active_relations": true,
       "active_relations": [
         {
@@ -3401,14 +4071,16 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Astrid Krag Kristensen",
+      "search_name_used": "Astrid Krag Kristensen"
     },
     "18718": {
       "id": 18718,
       "name": "Anders Kronborg",
       "status": "ambiguous",
       "person_total": 11,
-      "exact_match_count": 3,
+      "exact_match_count": 4,
       "candidates": [
         {
           "name": "Anders Kronborg",
@@ -3426,11 +4098,22 @@
         },
         {
           "name": "Anders Kronborg",
-          "person_enhedsnummer": "4004031384",
+          "person_enhedsnummer": "4009832266",
           "person_type": "deltager",
           "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004031384/deltager"
+          "person_url": "https://datacvr.virk.dk/enhed/person/4009832266/deltager"
+        },
+        {
+          "name": "Anders Kronborg",
+          "person_enhedsnummer": "4004079429",
+          "person_type": "deltager",
+          "has_active_relations": false,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4004079429/deltager"
         }
+      ],
+      "official_name": "Anders Kronborg",
+      "search_names_tried": [
+        "Anders Kronborg"
       ]
     },
     "266": {
@@ -3438,7 +4121,11 @@
       "name": "Rasmus Horn Langhoff",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Rasmus Horn Langhoff",
+      "search_names_tried": [
+        "Rasmus Horn Langhoff"
+      ]
     },
     "16351": {
       "id": 16351,
@@ -3549,7 +4236,9 @@
           ]
         }
       ],
-      "historical_relation_count": 15
+      "historical_relation_count": 15,
+      "official_name": "Malte Larsen",
+      "search_name_used": "Malte Larsen"
     },
     "18882": {
       "id": 18882,
@@ -3563,7 +4252,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Tanja%20Larsson&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Tanja Larsson",
+      "search_name_used": "Tanja Larsson"
     },
     "257": {
       "id": 257,
@@ -3586,44 +4277,49 @@
           "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4007360494/deltager"
         }
+      ],
+      "official_name": "Bjarne Laustsen",
+      "search_names_tried": [
+        "Bjarne Laustsen"
       ]
     },
     "181": {
       "id": 181,
       "name": "Annette Lind",
-      "status": "ambiguous",
-      "person_total": 8,
-      "exact_match_count": 2,
-      "candidates": [
-        {
-          "name": "Annette Lind",
-          "person_enhedsnummer": "4010460007",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4010460007/deltager"
-        },
-        {
-          "name": "Annette Lind",
-          "person_enhedsnummer": "4003920134",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4003920134/deltager"
-        }
-      ]
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Annette Harbo Lind",
+      "person_enhedsnummer": "4003983999",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4003983999/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Annette%20Harbo%20Lind&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0,
+      "official_name": "Annette Harbo Lind",
+      "search_name_used": "Annette Harbo Lind"
     },
     "15762": {
       "id": 15762,
       "name": "Christian Rabjerg Madsen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Christian Rabjerg Madsen",
+      "search_names_tried": [
+        "Christian Rabjerg Madsen"
+      ]
     },
     "20930": {
       "id": 20930,
       "name": "Louise Mehnke",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Louise Mehnke",
+      "search_names_tried": [
+        "Louise Mehnke"
+      ]
     },
     "20362": {
       "id": 20362,
@@ -3634,18 +4330,22 @@
       "candidates": [
         {
           "name": "Thomas Monberg",
-          "person_enhedsnummer": "4004084941",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004084941/deltager"
-        },
-        {
-          "name": "Thomas Monberg",
           "person_enhedsnummer": "4003885637",
           "person_type": "deltager",
           "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4003885637/deltager"
+        },
+        {
+          "name": "Thomas Monberg",
+          "person_enhedsnummer": "4004084941",
+          "person_type": "deltager",
+          "has_active_relations": false,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4004084941/deltager"
         }
+      ],
+      "official_name": "Thomas Monberg",
+      "search_names_tried": [
+        "Thomas Monberg"
       ]
     },
     "224": {
@@ -3660,55 +4360,75 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Flemming%20M%C3%B8ller%20Mortensen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Flemming Møller Mortensen",
+      "search_name_used": "Flemming Møller Mortensen"
     },
     "18715": {
       "id": 18715,
       "name": "Henrik Møller",
-      "status": "not_found",
-      "person_total": 353,
-      "candidates": []
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Henrik Berggren Møller",
+      "person_enhedsnummer": "4004133247",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004133247/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Henrik%20Berggren%20M%C3%B8ller&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0,
+      "official_name": "Henrik Berggren Møller",
+      "search_name_used": "Henrik Berggren Møller"
     },
     "16503": {
       "id": 16503,
       "name": "Anne Paulin",
-      "status": "not_found",
-      "person_total": 2,
-      "candidates": [
-        {
-          "name": "Anne Borch Paulin",
-          "person_enhedsnummer": "4008134755",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4008134755/deltager"
-        },
-        {
-          "name": "Anne Marie Kristensen Paulin",
-          "person_enhedsnummer": "4000195943",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000195943/deltager"
-        }
-      ]
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Anne Borch Paulin",
+      "person_enhedsnummer": "4008134755",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4008134755/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Anne%20Borch%20Paulin&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0,
+      "official_name": "Anne Borch Paulin",
+      "search_name_used": "Anne Borch Paulin"
     },
     "21044": {
       "id": 21044,
       "name": "Lasse Haugaard Pedersen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Lasse Haugaard Pedersen",
+      "search_names_tried": [
+        "Lasse Haugaard Pedersen"
+      ]
     },
     "97": {
       "id": 97,
       "name": "Jesper Petersen",
       "status": "not_found",
       "person_total": 263,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Jesper Petersen",
+      "search_names_tried": [
+        "Jesper Petersen"
+      ]
     },
     "20365": {
       "id": 20365,
       "name": "Matilde Powers",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Matilde Hersland Powers",
+      "search_names_tried": [
+        "Matilde Hersland Powers",
+        "Matilde Powers"
+      ]
     },
     "264": {
       "id": 264,
@@ -3739,7 +4459,9 @@
           ]
         }
       ],
-      "historical_relation_count": 2
+      "historical_relation_count": 2,
+      "official_name": "Rasmus Prehn",
+      "search_name_used": "Rasmus Prehn"
     },
     "74": {
       "id": 74,
@@ -3816,7 +4538,9 @@
           ]
         }
       ],
-      "historical_relation_count": 4
+      "historical_relation_count": 4,
+      "official_name": "Mette Reissmann",
+      "search_name_used": "Mette Reissmann"
     },
     "172": {
       "id": 172,
@@ -3847,7 +4571,9 @@
           ]
         }
       ],
-      "historical_relation_count": 2
+      "historical_relation_count": 2,
+      "official_name": "Pernille Rosenkrantz-Theil",
+      "search_name_used": "Pernille Rosenkrantz-Theil"
     },
     "16180": {
       "id": 16180,
@@ -3861,21 +4587,32 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Kasper%20Roug&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Kasper Roug",
+      "search_name_used": "Kasper Roug"
     },
     "20367": {
       "id": 20367,
       "name": "Kris Jensen Skriver",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Kris Jensen Skriver",
+      "search_names_tried": [
+        "Kris Jensen Skriver"
+      ]
     },
     "18716": {
       "id": 18716,
       "name": "Rasmus Stoklund",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Rasmus Stoklund Holm-Nielsen",
+      "search_names_tried": [
+        "Rasmus Stoklund Holm-Nielsen",
+        "Rasmus Stoklund"
+      ]
     },
     "15770": {
       "id": 15770,
@@ -3889,7 +4626,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Mattias%20Tesfaye&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Mattias Tesfaye",
+      "search_name_used": "Mattias Tesfaye"
     },
     "20364": {
       "id": 20364,
@@ -3903,7 +4642,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Frederik%20Vad&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Frederik Vad",
+      "search_name_used": "Frederik Vad"
     },
     "18719": {
       "id": 18719,
@@ -3926,27 +4667,27 @@
           "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4004192269/deltager"
         }
+      ],
+      "official_name": "Birgitte Vind",
+      "search_names_tried": [
+        "Birgitte Vind"
       ]
     },
     "12": {
       "id": 12,
       "name": "Nicolai Wammen",
-      "status": "not_found",
-      "person_total": 2,
-      "candidates": [
-        {
-          "name": "Nicolai Wammen Fryland",
-          "person_enhedsnummer": "4000778297",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000778297/deltager"
-        },
-        {
-          "name": "Nicolai Halby Wammen",
-          "person_enhedsnummer": "4004157770",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004157770/deltager"
-        }
-      ]
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Nicolai Halby Wammen",
+      "person_enhedsnummer": "4004157770",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004157770/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Nicolai%20Halby%20Wammen&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 0,
+      "official_name": "Nicolai Halby Wammen",
+      "search_name_used": "Nicolai Halby Wammen"
     },
     "15760": {
       "id": 15760,
@@ -3993,7 +4734,9 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Lea Wermelin",
+      "search_name_used": "Lea Wermelin"
     },
     "20781": {
       "id": 20781,
@@ -4024,7 +4767,9 @@
           ]
         }
       ],
-      "historical_relation_count": 5
+      "historical_relation_count": 5,
+      "official_name": "Gunvor Wibroe",
+      "search_name_used": "Gunvor Wibroe"
     },
     "20359": {
       "id": 20359,
@@ -4038,7 +4783,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Sigurd%20Agersnap&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Sigurd Agersnap",
+      "search_name_used": "Sigurd Agersnap"
     },
     "16728": {
       "id": 16728,
@@ -4052,21 +4799,32 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Kirsten%20Normann%20Andersen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Kirsten Normann Andersen",
+      "search_name_used": "Kirsten Normann Andersen"
     },
     "19000": {
       "id": 19000,
       "name": "Theresa Berg Andersen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Theresa Berg Andersen",
+      "search_names_tried": [
+        "Theresa Berg Andersen"
+      ]
     },
     "219": {
       "id": 219,
       "name": "Lisbeth Bech-Nielsen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Lisbeth Bech-Nielsen",
+      "search_names_tried": [
+        "Lisbeth Bech-Nielsen",
+        "Lisbeth Bech-Nielsen"
+      ]
     },
     "18278": {
       "id": 18278,
@@ -4353,14 +5111,20 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Serdal Benli",
+      "search_name_used": "Serdal Benli"
     },
     "18706": {
       "id": 18706,
       "name": "Anne Valentina Berthelsen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Anne Valentina Berthelsen",
+      "search_names_tried": [
+        "Anne Valentina Berthelsen"
+      ]
     },
     "20358": {
       "id": 20358,
@@ -4374,14 +5138,21 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Marianne%20Bigum&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Marianne Bigum",
+      "search_name_used": "Marianne Bigum"
     },
     "18707": {
       "id": 18707,
       "name": "Astrid Carøe",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Astrid Thorell Carøe",
+      "search_names_tried": [
+        "Astrid Thorell Carøe",
+        "Astrid Carøe"
+      ]
     },
     "121": {
       "id": 121,
@@ -4425,7 +5196,9 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Karina Lorentzen Dehnhardt",
+      "search_name_used": "Karina Lorentzen Dehnhardt"
     },
     "43": {
       "id": 43,
@@ -4439,7 +5212,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Pia%20Olsen%20Dyhr&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Pia Olsen Dyhr",
+      "search_name_used": "Pia Olsen Dyhr"
     },
     "19920": {
       "id": 19920,
@@ -4726,7 +5501,9 @@
           ]
         }
       ],
-      "historical_relation_count": 7
+      "historical_relation_count": 7,
+      "official_name": "Karsten Filsø",
+      "search_name_used": "Karsten Filsø"
     },
     "199": {
       "id": 199,
@@ -4740,21 +5517,31 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Karsten%20H%C3%B8nge&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Karsten Hønge",
+      "search_name_used": "Karsten Hønge"
     },
     "20962": {
       "id": 20962,
       "name": "Claus Jørgensen",
       "status": "not_found",
       "person_total": 215,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Claus Jørgensen",
+      "search_names_tried": [
+        "Claus Jørgensen"
+      ]
     },
     "20360": {
       "id": 20360,
       "name": "Sofie Lippert",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Sofie Lippert",
+      "search_names_tried": [
+        "Sofie Lippert"
+      ]
     },
     "15788": {
       "id": 15788,
@@ -4762,30 +5549,6 @@
       "status": "not_found",
       "person_total": 9,
       "candidates": [
-        {
-          "name": "Jacob Mark Thygesen",
-          "person_enhedsnummer": "4007822220",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4007822220/deltager"
-        },
-        {
-          "name": "Jacob Mark Andreasen",
-          "person_enhedsnummer": "4000663362",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000663362/deltager"
-        },
-        {
-          "name": "Jacob Mark Hou",
-          "person_enhedsnummer": "4010077028",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4010077028/deltager"
-        },
-        {
-          "name": "Jacob Mark Mogensen",
-          "person_enhedsnummer": "4000559433",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000559433/deltager"
-        },
         {
           "name": "Jacob Mark Henriksen",
           "person_enhedsnummer": "4000524722",
@@ -4797,7 +5560,36 @@
           "person_enhedsnummer": "4007174300",
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4007174300/deltager"
+        },
+        {
+          "name": "Jacob Mark Mogensen",
+          "person_enhedsnummer": "4000559433",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4000559433/deltager"
+        },
+        {
+          "name": "Jacob Mark Thygesen",
+          "person_enhedsnummer": "4007822220",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4007822220/deltager"
+        },
+        {
+          "name": "Jacob Mark Hou",
+          "person_enhedsnummer": "4010077028",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4010077028/deltager"
+        },
+        {
+          "name": "Jacob Mark Andreasen",
+          "person_enhedsnummer": "4000663362",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4000663362/deltager"
         }
+      ],
+      "official_name": "Jacob Rene Mark",
+      "search_names_tried": [
+        "Jacob Rene Mark",
+        "Jacob Mark"
       ]
     },
     "18709": {
@@ -4843,14 +5635,20 @@
           ]
         }
       ],
-      "historical_relation_count": 5
+      "historical_relation_count": 5,
+      "official_name": "Signe Munk",
+      "search_name_used": "Signe Munk"
     },
     "18708": {
       "id": 18708,
       "name": "Charlotte Broman Mølbæk",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Charlotte Broman Mølbæk",
+      "search_names_tried": [
+        "Charlotte Broman Mølbæk"
+      ]
     },
     "18704": {
       "id": 18704,
@@ -4864,7 +5662,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Halime%20Oguz&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Halime Oguz",
+      "search_name_used": "Halime Oguz"
     },
     "20798": {
       "id": 20798,
@@ -4878,7 +5678,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Mads%20Olsen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Mads Olsen",
+      "search_name_used": "Mads Olsen"
     },
     "17628": {
       "id": 17628,
@@ -4899,12 +5701,6 @@
           "person_url": "https://datacvr.virk.dk/enhed/person/4000360773/deltager"
         },
         {
-          "name": "Carl Marius Struzik Valentin Krull",
-          "person_enhedsnummer": "4000691301",
-          "person_type": "deltager",
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000691301/deltager"
-        },
-        {
           "name": "Oliver Valentin Carl Gauthier",
           "person_enhedsnummer": "4009814004",
           "person_type": "deltager",
@@ -4915,7 +5711,18 @@
           "person_enhedsnummer": "4000286741",
           "person_type": "deltager",
           "person_url": "https://datacvr.virk.dk/enhed/person/4000286741/deltager"
+        },
+        {
+          "name": "Carl Marius Struzik Valentin Krull",
+          "person_enhedsnummer": "4000691301",
+          "person_type": "deltager",
+          "person_url": "https://datacvr.virk.dk/enhed/person/4000691301/deltager"
         }
+      ],
+      "official_name": "Carl Valentin Lehrmann",
+      "search_names_tried": [
+        "Carl Valentin Lehrmann",
+        "Carl Valentin"
       ]
     },
     "20635": {
@@ -4923,18 +5730,23 @@
       "name": "Markus E. Olsen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Markus E",
+      "search_names_tried": [
+        "Markus E",
+        "Markus E. Olsen"
+      ]
     },
     "20349": {
       "id": 20349,
       "name": "Anna Falkenberg",
       "status": "exact_match",
-      "match_quality": "extended_name",
+      "match_quality": "exact",
       "person_name": "Anna Lovisa Falkenberg",
       "person_enhedsnummer": "4009440594",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4009440594/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Anna%20Falkenberg&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Anna%20Lovisa%20Falkenberg&sideIndex=0&size=10",
       "has_active_relations": true,
       "active_relations": [
         {
@@ -4954,14 +5766,20 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Anna Lovisa Falkenberg",
+      "search_name_used": "Anna Lovisa Falkenberg"
     },
     "18722": {
       "id": 18722,
       "name": "Peter Seier Christensen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Peter Seier Christensen",
+      "search_names_tried": [
+        "Peter Seier Christensen"
+      ]
     },
     "20390": {
       "id": 20390,
@@ -4992,18 +5810,20 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Mike Villa Fonseca",
+      "search_name_used": "Mike Villa Fonseca"
     },
     "20354": {
       "id": 20354,
       "name": "Theresa Scavenius",
       "status": "exact_match",
-      "match_quality": "hverv_verified",
+      "match_quality": "exact",
       "person_name": "Theresa Birgitta Brønnum Scavenius",
       "person_enhedsnummer": "4008159680",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4008159680/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Theresa%20Scavenius&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Theresa%20Birgitta%20Br%C3%B8nnum%20Scavenius&sideIndex=0&size=10",
       "has_active_relations": true,
       "active_relations": [
         {
@@ -5040,32 +5860,34 @@
         }
       ],
       "historical_relation_count": 0,
-      "verification": {
-        "method": "hverv_verified",
-        "matched_company_names": [],
-        "matched_company_cvrs": [
-          "40689672"
-        ]
-      }
+      "official_name": "Theresa Birgitta Brønnum Scavenius",
+      "search_name_used": "Theresa Birgitta Brønnum Scavenius"
     },
     "20388": {
       "id": 20388,
       "name": "Jon Stephensen",
-      "status": "not_found",
+      "status": "ambiguous",
       "person_total": 2,
+      "exact_match_count": 2,
       "candidates": [
         {
           "name": "Jon Læssøe Stephensen",
           "person_enhedsnummer": "4000261072",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000261072/deltager"
         },
         {
           "name": "Jon Henrik Westy Stephensen",
           "person_enhedsnummer": "4003884199",
           "person_type": "deltager",
+          "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4003884199/deltager"
         }
+      ],
+      "official_name": "Jon Stephensen",
+      "search_names_tried": [
+        "Jon Stephensen"
       ],
       "verification_clues": {
         "company_names": [
@@ -5095,6 +5917,10 @@
           "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000322388/deltager"
         }
+      ],
+      "official_name": "Jeppe Søe",
+      "search_names_tried": [
+        "Jeppe Søe"
       ]
     },
     "18698": {
@@ -5174,22 +6000,74 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Marlene Ambo-Rasmussen",
+      "search_name_used": "Marlene Ambo-Rasmussen"
     },
     "164": {
       "id": 164,
       "name": "Hans Andersen",
-      "status": "not_found",
-      "person_total": 717,
-      "candidates": [],
-      "verification_clues": {
-        "company_names": [
-          "fonden mariehjemmene bestyrelsesformand selma marie",
-          "we power a s",
-          "novo nordisk a s"
-        ],
-        "company_cvrs": []
-      }
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Hans Nicolai Andersen",
+      "person_enhedsnummer": "4004038846",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004038846/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Hans%20Nicolai%20Andersen&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
+        {
+          "company_name": "Andersen rådgivning",
+          "company_enhedsnummer": "4009704037",
+          "company_cvr": "44122561",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009704037",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "02.01.2023"
+            }
+          ]
+        },
+        {
+          "company_name": "FONDEN MARIEHJEMMENE",
+          "company_enhedsnummer": "4001113916",
+          "company_cvr": "33327110",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001113916",
+          "status": "Normal",
+          "roles": [
+            "Bestyrelse"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "24.05.2022"
+            }
+          ]
+        },
+        {
+          "company_name": "We Power A/S",
+          "company_enhedsnummer": "4001140012",
+          "company_cvr": "49887817",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001140012",
+          "status": "Normal",
+          "roles": [
+            "Bestyrelse"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "18.01.2018"
+            }
+          ]
+        }
+      ],
+      "historical_relation_count": 15,
+      "official_name": "Hans Nicolai Andersen",
+      "search_name_used": "Hans Nicolai Andersen"
     },
     "134": {
       "id": 134,
@@ -5286,18 +6164,20 @@
           ]
         }
       ],
-      "historical_relation_count": 4
+      "historical_relation_count": 4,
+      "official_name": "Christian Friis Bach",
+      "search_name_used": "Christian Friis Bach"
     },
     "18700": {
       "id": 18700,
       "name": "Heidi Bank",
       "status": "exact_match",
-      "match_quality": "variant_name",
+      "match_quality": "exact",
       "person_name": "Heidi Farsøe Bank",
       "person_enhedsnummer": "4000491490",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4000491490/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Heidi%20Bank&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Heidi%20Fars%C3%B8e%20Bank&sideIndex=0&size=10",
       "has_active_relations": true,
       "active_relations": [
         {
@@ -5317,14 +6197,20 @@
           ]
         }
       ],
-      "historical_relation_count": 1
+      "historical_relation_count": 1,
+      "official_name": "Heidi Farsøe Bank",
+      "search_name_used": "Heidi Farsøe Bank"
     },
     "18701": {
       "id": 18701,
       "name": "Marie Bjerre",
       "status": "not_found",
       "person_total": 19,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Marie Bjerre",
+      "search_names_tried": [
+        "Marie Bjerre"
+      ]
     },
     "49": {
       "id": 49,
@@ -5372,6 +6258,8 @@
         }
       ],
       "historical_relation_count": 19,
+      "official_name": "Erling Bonnesen",
+      "search_name_used": "Erling Bonnesen",
       "verification": {
         "method": "hverv_verified",
         "matched_company_names": [
@@ -5392,51 +6280,53 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Morten%20Dahlin&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Morten Dahlin",
+      "search_name_used": "Morten Dahlin"
     },
     "139": {
       "id": 139,
       "name": "Thomas Danielsen",
-      "status": "ambiguous",
-      "person_total": 16,
-      "exact_match_count": 4,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Thomas Nolsøe Danielsen",
+      "person_enhedsnummer": "4004037982",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004037982/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Thomas%20Nols%C3%B8e%20Danielsen&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Thomas Danielsen",
-          "person_enhedsnummer": "4006782134",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006782134/deltager"
-        },
-        {
-          "name": "Thomas Danielsen",
-          "person_enhedsnummer": "4000463077",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000463077/deltager"
-        },
-        {
-          "name": "Thomas Danielsen",
-          "person_enhedsnummer": "4000642306",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000642306/deltager"
-        },
-        {
-          "name": "Thomas Danielsen",
-          "person_enhedsnummer": "4000691771",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000691771/deltager"
+          "company_name": "Rosenlundgård",
+          "company_enhedsnummer": "4006491168",
+          "company_cvr": "37558702",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4006491168",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "01.04.2016"
+            }
+          ]
         }
-      ]
+      ],
+      "historical_relation_count": 3,
+      "official_name": "Thomas Nolsøe Danielsen",
+      "search_name_used": "Thomas Nolsøe Danielsen"
     },
     "93": {
       "id": 93,
       "name": "Louise Elholm",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Louise Elholm",
+      "search_names_tried": [
+        "Louise Elholm"
+      ]
     },
     "207": {
       "id": 207,
@@ -5483,7 +6373,9 @@
           ]
         }
       ],
-      "historical_relation_count": 3
+      "historical_relation_count": 3,
+      "official_name": "Jakob Ellemann-Jensen",
+      "search_name_used": "Jakob Ellemann-Jensen"
     },
     "20941": {
       "id": 20941,
@@ -5722,24 +6614,216 @@
           ]
         }
       ],
-      "historical_relation_count": 6
+      "historical_relation_count": 6,
+      "official_name": "Preben Friis-Hauge",
+      "search_name_used": "Preben Friis-Hauge"
     },
     "1845": {
       "id": 1845,
       "name": "Søren Gade",
-      "status": "not_found",
-      "person_total": 71,
-      "candidates": [],
-      "verification_clues": {
-        "company_names": [
-          "esbjerg havn",
-          "vestjysk bank",
-          "danske bank",
-          "deutsche bank",
-          "novo nordisk b ørsted a s"
-        ],
-        "company_cvrs": []
-      }
+      "status": "exact_match",
+      "match_quality": "exact",
+      "person_name": "Søren Gade Jensen",
+      "person_enhedsnummer": "4004047849",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004047849/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=S%C3%B8ren%20Gade%20Jensen&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
+        {
+          "company_name": "Komplementarselskabet PeP ApS",
+          "company_enhedsnummer": "4010341081",
+          "company_cvr": "45471667",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4010341081",
+          "status": "Normal",
+          "roles": [
+            "Formand"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "17.03.2025"
+            }
+          ]
+        },
+        {
+          "company_name": "Komplementarselskabet PeP Holding ApS",
+          "company_enhedsnummer": "4010274026",
+          "company_cvr": "45319148",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4010274026",
+          "status": "Normal",
+          "roles": [
+            "Formand"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "09.01.2025"
+            }
+          ]
+        },
+        {
+          "company_name": "PeP 0 P/S",
+          "company_enhedsnummer": "4006837612",
+          "company_cvr": "38506498",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4006837612",
+          "status": "Normal",
+          "roles": [
+            "Formand"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "06.01.2022"
+            }
+          ]
+        },
+        {
+          "company_name": "PeP Holding Esbjerg P/S",
+          "company_enhedsnummer": "4010281363",
+          "company_cvr": "45335429",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4010281363",
+          "status": "Normal",
+          "roles": [
+            "Formand"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "16.01.2025"
+            }
+          ]
+        },
+        {
+          "company_name": "PeP I P/S",
+          "company_enhedsnummer": "4009389498",
+          "company_cvr": "43529471",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009389498",
+          "status": "Normal",
+          "roles": [
+            "Formand"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "16.09.2022"
+            }
+          ]
+        },
+        {
+          "company_name": "PeP II P/S",
+          "company_enhedsnummer": "4009389653",
+          "company_cvr": "43529625",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009389653",
+          "status": "Normal",
+          "roles": [
+            "Formand"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "16.09.2022"
+            }
+          ]
+        },
+        {
+          "company_name": "PeP III P/S",
+          "company_enhedsnummer": "4010172508",
+          "company_cvr": "45101266",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4010172508",
+          "status": "Normal",
+          "roles": [
+            "Formand"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "12.09.2024"
+            }
+          ]
+        },
+        {
+          "company_name": "PeP IV P/S",
+          "company_enhedsnummer": "4010352095",
+          "company_cvr": "45496651",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4010352095",
+          "status": "Normal",
+          "roles": [
+            "Formand"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "26.03.2025"
+            }
+          ]
+        },
+        {
+          "company_name": "PeP V P/S",
+          "company_enhedsnummer": "4010351867",
+          "company_cvr": "45496260",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4010351867",
+          "status": "Normal",
+          "roles": [
+            "Formand"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "26.03.2025"
+            }
+          ]
+        },
+        {
+          "company_name": "SGJ HOLSTEBRO ApS",
+          "company_enhedsnummer": "5576325",
+          "company_cvr": "32322174",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/5576325",
+          "status": "Normal",
+          "roles": [
+            "Stiftere",
+            "Adm. dir.",
+            "Legal ejer"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "01.02.2011"
+            },
+            {
+              "label": "Ejerandel:",
+              "value": "100% (01.02.2011 - )"
+            },
+            {
+              "label": "Stemmerettigheder:",
+              "value": "100% (01.02.2011 - )"
+            },
+            {
+              "label": "Ændringsdato:",
+              "value": "01.02.2011"
+            }
+          ]
+        },
+        {
+          "company_name": "SGJ Husby v/Søren Gade",
+          "company_enhedsnummer": "4009673742",
+          "company_cvr": "44060663",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009673742",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "15.05.2023"
+            }
+          ]
+        }
+      ],
+      "historical_relation_count": 16,
+      "official_name": "Søren Gade Jensen",
+      "search_name_used": "Søren Gade Jensen"
     },
     "265": {
       "id": 265,
@@ -5762,6 +6846,10 @@
           "has_active_relations": true,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000440426/deltager"
         }
+      ],
+      "official_name": "Eva Kjer Hansen",
+      "search_names_tried": [
+        "Eva Kjer Hansen"
       ]
     },
     "127": {
@@ -5776,14 +6864,20 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Preben%20Bang%20Henriksen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Preben Bang Henriksen",
+      "search_name_used": "Preben Bang Henriksen"
     },
     "173": {
       "id": 173,
       "name": "Jacob Jensen",
       "status": "not_found",
-      "person_total": 357,
-      "candidates": []
+      "person_total": 358,
+      "candidates": [],
+      "official_name": "Jacob Jensen",
+      "search_names_tried": [
+        "Jacob Jensen"
+      ]
     },
     "178": {
       "id": 178,
@@ -5797,7 +6891,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Michael%20Aastrup%20Jensen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Michael Aastrup Jensen",
+      "search_name_used": "Michael Aastrup Jensen"
     },
     "180": {
       "id": 180,
@@ -5844,21 +6940,25 @@
           ]
         }
       ],
-      "historical_relation_count": 2
+      "historical_relation_count": 2,
+      "official_name": "Peter Juel-Jensen",
+      "search_name_used": "Peter Juel-Jensen"
     },
     "102": {
       "id": 102,
       "name": "Jan E. Jørgensen",
       "status": "exact_match",
-      "match_quality": "extended_name",
-      "person_name": "Jan E Jørgensen",
-      "person_enhedsnummer": "4004248413",
+      "match_quality": "exact",
+      "person_name": "Jan Ejnar Jørgensen",
+      "person_enhedsnummer": "4004009096",
       "person_type": "deltager",
-      "person_url": "https://datacvr.virk.dk/enhed/person/4004248413/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jan%20E.%20J%C3%B8rgensen&sideIndex=0&size=10",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004009096/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jan%20Ejnar%20J%C3%B8rgensen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Jan Ejnar Jørgensen",
+      "search_name_used": "Jan Ejnar Jørgensen"
     },
     "20790": {
       "id": 20790,
@@ -5876,6 +6976,13 @@
         },
         {
           "name": "Ken Kristensen",
+          "person_enhedsnummer": "4009150270",
+          "person_type": "deltager",
+          "has_active_relations": true,
+          "person_url": "https://datacvr.virk.dk/enhed/person/4009150270/deltager"
+        },
+        {
+          "name": "Ken Kristensen",
           "person_enhedsnummer": "4000628989",
           "person_type": "deltager",
           "has_active_relations": false,
@@ -5887,14 +6994,11 @@
           "person_type": "deltager",
           "has_active_relations": false,
           "person_url": "https://datacvr.virk.dk/enhed/person/4000790421/deltager"
-        },
-        {
-          "name": "Ken Kristensen",
-          "person_enhedsnummer": "4009150270",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4009150270/deltager"
         }
+      ],
+      "official_name": "Ken Kristensen",
+      "search_names_tried": [
+        "Ken Kristensen"
       ]
     },
     "217": {
@@ -5942,7 +7046,9 @@
           ]
         }
       ],
-      "historical_relation_count": 19
+      "historical_relation_count": 19,
+      "official_name": "Lars Christian Lilleholt",
+      "search_name_used": "Lars Christian Lilleholt"
     },
     "194": {
       "id": 194,
@@ -6003,35 +7109,41 @@
           ]
         }
       ],
-      "historical_relation_count": 2
+      "historical_relation_count": 2,
+      "official_name": "Kristian Pihl Lorentzen",
+      "search_name_used": "Kristian Pihl Lorentzen"
     },
     "130": {
       "id": 130,
       "name": "Sophie Løhde",
       "status": "exact_match",
-      "match_quality": "variant_name",
+      "match_quality": "exact",
       "person_name": "Sophie Løhde Jacobsen",
       "person_enhedsnummer": "4004144939",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4004144939/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Sophie%20L%C3%B8hde&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Sophie%20L%C3%B8hde%20Jacobsen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Sophie Løhde Jacobsen",
+      "search_name_used": "Sophie Løhde Jacobsen"
     },
     "168": {
       "id": 168,
       "name": "Anni Matthiesen",
       "status": "exact_match",
-      "match_quality": "extended_name",
+      "match_quality": "exact",
       "person_name": "Anni Holm Kirkegaard Matthiesen",
       "person_enhedsnummer": "4004016871",
       "person_type": "deltager",
       "person_url": "https://datacvr.virk.dk/enhed/person/4004016871/deltager",
-      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Anni%20Matthiesen&sideIndex=0&size=10",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Anni%20Holm%20Kirkegaard%20Matthiesen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Anni Holm Kirkegaard Matthiesen",
+      "search_name_used": "Anni Holm Kirkegaard Matthiesen"
     },
     "18699": {
       "id": 18699,
@@ -6045,7 +7157,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Christoffer%20Aagaard%20Melson&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Christoffer Aagaard Melson",
+      "search_name_used": "Christoffer Aagaard Melson"
     },
     "80": {
       "id": 80,
@@ -6059,7 +7173,9 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Torsten%20Schack%20Pedersen&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Torsten Schack Pedersen",
+      "search_name_used": "Torsten Schack Pedersen"
     },
     "206": {
       "id": 206,
@@ -6090,7 +7206,9 @@
           ]
         }
       ],
-      "historical_relation_count": 5
+      "historical_relation_count": 5,
+      "official_name": "Troels Lund Poulsen",
+      "search_name_used": "Troels Lund Poulsen"
     },
     "21168": {
       "id": 21168,
@@ -6150,7 +7268,9 @@
           ]
         }
       ],
-      "historical_relation_count": 7
+      "historical_relation_count": 7,
+      "official_name": "Erik Veje Rasmussen",
+      "search_name_used": "Erik Veje Rasmussen"
     },
     "125": {
       "id": 125,
@@ -6164,14 +7284,20 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Hans%20Christian%20Schmidt&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Hans Christian Schmidt",
+      "search_name_used": "Hans Christian Schmidt"
     },
     "20371": {
       "id": 20371,
       "name": "Linea Søgaard-Lidell",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Linea Søgaard-Lidell",
+      "search_names_tried": [
+        "Linea Søgaard-Lidell"
+      ]
     },
     "18695": {
       "id": 18695,
@@ -6269,7 +7395,9 @@
           ]
         }
       ],
-      "historical_relation_count": 9
+      "historical_relation_count": 9,
+      "official_name": "Kim Valentin",
+      "search_name_used": "Kim Valentin"
     },
     "20128": {
       "id": 20128,
@@ -6300,21 +7428,31 @@
           ]
         }
       ],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Ida Holmgaard",
+      "search_name_used": "Ida Holmgaard"
     },
     "1158": {
       "id": 1158,
       "name": "Per Movritsen",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Per Movritsen",
+      "search_names_tried": [
+        "Per Movritsen"
+      ]
     },
     "19548": {
       "id": 19548,
       "name": "Andreas Sommer Møller",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Andreas Sommer Møller",
+      "search_names_tried": [
+        "Andreas Sommer Møller"
+      ]
     },
     "20529": {
       "id": 20529,
@@ -6328,21 +7466,31 @@
       "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Rikke%20Abildgaard%20Ryberg&sideIndex=0&size=10",
       "has_active_relations": false,
       "active_relations": [],
-      "historical_relation_count": 0
+      "historical_relation_count": 0,
+      "official_name": "Rikke Abildgaard Ryberg",
+      "search_name_used": "Rikke Abildgaard Ryberg"
     },
     "19826": {
       "id": 19826,
       "name": "Dennis Barndorph Sichlau",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Dennis Barndorph Sichlau",
+      "search_names_tried": [
+        "Dennis Barndorph Sichlau"
+      ]
     },
     "21285": {
       "id": 21285,
       "name": "Mikkeline Storch",
       "status": "not_found",
       "person_total": 0,
-      "candidates": []
+      "candidates": [],
+      "official_name": "Mikkeline Storch",
+      "search_names_tried": [
+        "Mikkeline Storch"
+      ]
     },
     "390": {
       "id": 390,
@@ -6419,7 +7567,9 @@
           ]
         }
       ],
-      "historical_relation_count": 3
+      "historical_relation_count": 3,
+      "official_name": "Morten Villumsen",
+      "search_name_used": "Morten Villumsen"
     }
   }
 }

@@ -9,6 +9,7 @@ hits are skipped on purpose to avoid false attribution.
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import re
 import shutil
@@ -19,7 +20,9 @@ import unicodedata
 from datetime import date
 from pathlib import Path
 from typing import Any
-from urllib.parse import quote
+from urllib.error import HTTPError, URLError
+from urllib.parse import quote, urlencode
+from urllib.request import Request, urlopen
 
 from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
@@ -33,8 +36,11 @@ HVERV_FILE = DATA_DIR / "hverv.json"
 OVERRIDES_FILE = DATA_DIR / "cvr_person_overrides.json"
 
 CVR_BASE_URL = "https://datacvr.virk.dk"
+ODA_ACTOR_URL = "https://oda.ft.dk/api/Akt%C3%B8r"
 DEBUG_PORT = 9235
 DEFAULT_DELAY = 0.15
+ODA_TIMEOUT = 60
+ODA_MAX_RETRIES = 3
 
 DEFAULT_CHROME_PATHS = (
     Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe"),
@@ -229,6 +235,113 @@ def build_search_payload(name: str) -> dict[str, Any]:
             "sortering": "",
         }
     }
+
+
+def fetch_json_url(url: str) -> dict[str, Any]:
+    last_error: Exception | None = None
+    for attempt in range(1, ODA_MAX_RETRIES + 1):
+        try:
+            request = Request(
+                url,
+                headers={
+                    "Accept": "application/json",
+                    "User-Agent": "folkevalget-data-fetcher/1.0",
+                },
+            )
+            with urlopen(request, timeout=ODA_TIMEOUT) as response:
+                return json.load(response)
+        except (HTTPError, URLError, TimeoutError) as exc:
+            last_error = exc
+            if attempt == ODA_MAX_RETRIES:
+                break
+            time.sleep(attempt)
+    raise RuntimeError(f"Failed to fetch {url}: {last_error}") from last_error
+
+
+def strip_html_markup(value: str) -> str:
+    text = value or ""
+    for _ in range(2):
+        text = html.unescape(text)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = text.replace("\xa0", " ")
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def extract_official_full_name(biography: str | None, fallback_name: str | None = None) -> str | None:
+    if not biography:
+        return fallback_name
+
+    member_data_match = re.search(r"<memberData>(.*?)</memberData>", biography, flags=re.IGNORECASE | re.DOTALL)
+    if not member_data_match:
+        return fallback_name
+
+    text = strip_html_markup(member_data_match.group(1))
+    if not text:
+        return fallback_name
+
+    name_match = re.match(
+        r"^(.*?)(?:(?:,\s*|\s+)f(?:ø|oe)dt\b|(?:,\s*|\s+)bosiddende\b|(?:,\s*|\s+)datter af\b|(?:,\s*|\s+)søn af\b|(?:,\s*|\s+)son af\b|[.;]|$)",
+        text,
+        flags=re.IGNORECASE,
+    )
+    if not name_match:
+        return fallback_name
+
+    candidate = name_match.group(1).strip(" ,.")
+    if not candidate:
+        return fallback_name
+    return candidate
+
+
+def load_official_name_map(profile_ids: set[int]) -> dict[int, str]:
+    official_names: dict[int, str] = {}
+    id_list = sorted(profile_ids)
+
+    for id_chunk in chunked(id_list, 40):
+        filter_expr = " or ".join(f"id eq {actor_id}" for actor_id in id_chunk)
+        next_url = f"{ODA_ACTOR_URL}?{urlencode({'$filter': filter_expr, '$top': '100', '$format': 'json'})}"
+
+        while next_url:
+            payload = fetch_json_url(next_url)
+            for row in payload.get("value", []):
+                try:
+                    actor_id = int(row.get("id"))
+                except (TypeError, ValueError):
+                    continue
+                official_name = extract_official_full_name(row.get("biografi"), row.get("navn"))
+                if official_name:
+                    official_names[actor_id] = official_name
+            next_url = payload.get("@odata.nextLink") or payload.get("odata.nextLink")
+
+    return official_names
+
+
+def build_search_names(profile: dict[str, Any], official_name_map: dict[int, str]) -> list[str]:
+    raw_names: list[str] = []
+    official_name = official_name_map.get(int(profile["id"]))
+    if official_name:
+        raw_names.append(official_name)
+
+    if profile.get("name"):
+        raw_names.append(str(profile["name"]))
+
+    combined_name = " ".join(part for part in [profile.get("first_name"), profile.get("last_name")] if part)
+    if combined_name:
+        raw_names.append(combined_name)
+
+    search_names: list[str] = []
+    seen: set[str] = set()
+    for name in raw_names:
+        normalized = normalise_name(name)
+        if not normalized or normalized in seen:
+            continue
+        seen.add(normalized)
+        search_names.append(name.strip())
+    return search_names
+
+
+def chunked(values: list[int], size: int) -> list[list[int]]:
+    return [values[index:index + size] for index in range(0, len(values), size)]
 
 
 def load_hverv_index() -> dict[str, Any]:
@@ -468,6 +581,8 @@ def build_match_entry(
     page: Any,
     match_quality: str,
     verification: dict[str, Any] | None = None,
+    search_name_used: str | None = None,
+    official_name: str | None = None,
     force_detail: bool = False,
 ) -> dict[str, Any]:
     person_enhedsnummer = str(candidate.get("enhedsnummer") or candidate.get("person_enhedsnummer") or "")
@@ -485,11 +600,15 @@ def build_match_entry(
         "person_enhedsnummer": person_enhedsnummer,
         "person_type": person_type,
         "person_url": person_url,
-        "search_url": f"{CVR_BASE_URL}/soegeresultater?fritekst={quote(profile['name'])}&sideIndex=0&size=10",
+        "search_url": f"{CVR_BASE_URL}/soegeresultater?fritekst={quote(search_name_used or profile['name'])}&sideIndex=0&size=10",
         "has_active_relations": has_active_relations,
         "active_relations": [],
         "historical_relation_count": 0,
     }
+    if official_name:
+        entry["official_name"] = official_name
+    if search_name_used:
+        entry["search_name_used"] = search_name_used
 
     if verification:
         entry["verification"] = verification
@@ -537,13 +656,25 @@ def choose_verified_candidate(
     clues: dict[str, list[str]],
     page: Any,
     text_lookup: dict[str, str],
+    *,
+    search_name_used: str | None = None,
+    official_name: str | None = None,
 ) -> dict[str, Any] | None:
     if not clues["company_names"] and not clues["company_cvrs"]:
         return None
 
     scored_candidates: list[tuple[dict[str, Any], dict[str, Any], dict[str, Any]]] = []
     for candidate in candidates:
-        entry = build_match_entry(profile, candidate, text_lookup, page, match_quality="hverv_verified", force_detail=True)
+        entry = build_match_entry(
+            profile,
+            candidate,
+            text_lookup,
+            page,
+            match_quality="hverv_verified",
+            search_name_used=search_name_used,
+            official_name=official_name,
+            force_detail=True,
+        )
         score = score_candidate_against_clues(entry, clues)
         scored_candidates.append((candidate, entry, score))
 
@@ -577,7 +708,13 @@ def choose_verified_candidate(
     return best_entry
 
 
-def build_no_match_entry(profile: dict[str, Any], results: dict[str, Any], clues: dict[str, list[str]] | None = None) -> dict[str, Any]:
+def build_no_match_entry(
+    profile: dict[str, Any],
+    results: dict[str, Any],
+    clues: dict[str, list[str]] | None = None,
+    official_name: str | None = None,
+    search_names: list[str] | None = None,
+) -> dict[str, Any]:
     person_candidates = []
     for person_entry in dedupe_person_entries([entry for entry in results.get("enheder") or [] if entry.get("enhedstype") == "person"]):
         person_candidates.append(
@@ -599,6 +736,10 @@ def build_no_match_entry(profile: dict[str, Any], results: dict[str, Any], clues
         "person_total": int(results.get("personTotal") or len(person_candidates)),
         "candidates": person_candidates,
     }
+    if official_name:
+        entry["official_name"] = official_name
+    if search_names:
+        entry["search_names_tried"] = search_names
     if clues and (clues["company_names"] or clues["company_cvrs"]):
         entry["verification_clues"] = clues
     return entry
@@ -609,6 +750,8 @@ def build_ambiguous_entry(
     matches: list[dict[str, Any]],
     results: dict[str, Any],
     clues: dict[str, list[str]] | None = None,
+    official_name: str | None = None,
+    search_names: list[str] | None = None,
 ) -> dict[str, Any]:
     entry = {
         "id": profile["id"],
@@ -631,6 +774,10 @@ def build_ambiguous_entry(
             for match in matches
         ],
     }
+    if official_name:
+        entry["official_name"] = official_name
+    if search_names:
+        entry["search_names_tried"] = search_names
     if clues and (clues["company_names"] or clues["company_cvrs"]):
         entry["verification_clues"] = clues
     return entry
@@ -642,8 +789,13 @@ def fetch_profile_entry(
     text_lookup: dict[str, str],
     hverv_index: dict[str, Any],
     overrides: dict[str, Any],
+    official_name_map: dict[int, str],
 ) -> dict[str, Any]:
     override = overrides.get(str(profile["id"]))
+    official_name = official_name_map.get(int(profile["id"]))
+    search_names = build_search_names(profile, official_name_map)
+    clues = extract_hverv_clues(hverv_index.get(str(profile["id"])))
+
     if override:
         override_candidate = {
             "person_enhedsnummer": override.get("person_enhedsnummer"),
@@ -656,37 +808,117 @@ def fetch_profile_entry(
             "note": override.get("note") or "Manuelt verificeret navn i Virk/CVR.",
             "sources": override.get("sources") or [],
         }
-        return build_match_entry(profile, override_candidate, text_lookup, page, "manual_override", verification)
+        return build_match_entry(
+            profile,
+            override_candidate,
+            text_lookup,
+            page,
+            "manual_override",
+            verification,
+            search_name_used=search_names[0] if search_names else profile["name"],
+            official_name=official_name,
+        )
 
-    search_results = fetch_json(page, "/gateway/soeg/fritekst", method="POST", payload=build_search_payload(profile["name"]))
-    every_variant = find_variant_person_matches(search_results, profile["name"])
-    clues = extract_hverv_clues(hverv_index.get(str(profile["id"])))
+    last_results: dict[str, Any] | None = None
+    has_distinct_official_name = bool(
+        official_name and normalise_name(official_name) != normalise_name(profile.get("name") or "")
+    )
 
-    matches = find_exact_person_matches(search_results, profile["name"])
-    match_quality = "exact"
+    for search_name in search_names:
+        search_results = fetch_json(page, "/gateway/soeg/fritekst", method="POST", payload=build_search_payload(search_name))
+        last_results = search_results
 
-    if len(matches) == 0:
-        verified_match = choose_verified_candidate(profile, every_variant, clues, page, text_lookup)
+        matches = find_exact_person_matches(search_results, search_name)
+        if len(matches) == 1:
+            return build_match_entry(
+                profile,
+                matches[0],
+                text_lookup,
+                page,
+                "exact",
+                search_name_used=search_name,
+                official_name=official_name,
+            )
+
+        if len(matches) > 1:
+            verified_match = choose_verified_candidate(
+                profile,
+                matches,
+                clues,
+                page,
+                text_lookup,
+                search_name_used=search_name,
+                official_name=official_name,
+            )
+            if verified_match:
+                return verified_match
+            return build_ambiguous_entry(
+                profile,
+                matches,
+                search_results,
+                clues,
+                official_name=official_name,
+                search_names=search_names,
+            )
+
+        variant_matches = find_variant_person_matches(search_results, search_name)
+        extended_match = find_single_extended_name_match(search_results, search_name)
+        is_official_name_search = bool(
+            official_name and normalise_name(search_name) == normalise_name(official_name)
+        )
+        allow_loose_name_matching = is_official_name_search or not has_distinct_official_name
+
+        verified_match = choose_verified_candidate(
+            profile,
+            variant_matches,
+            clues,
+            page,
+            text_lookup,
+            search_name_used=search_name,
+            official_name=official_name,
+        )
         if verified_match:
             return verified_match
 
-        extended_match = find_single_extended_name_match(search_results, profile["name"])
-        if extended_match:
-            matches = [extended_match]
-            match_quality = "extended_name"
-        elif len(every_variant) == 1:
-            matches = every_variant
-            match_quality = "variant_name"
-        else:
-            return build_no_match_entry(profile, search_results, clues)
+        if allow_loose_name_matching and extended_match:
+            return build_match_entry(
+                profile,
+                extended_match,
+                text_lookup,
+                page,
+                "extended_name",
+                search_name_used=search_name,
+                official_name=official_name,
+            )
 
-    if len(matches) > 1:
-        verified_match = choose_verified_candidate(profile, matches, clues, page, text_lookup)
-        if verified_match:
-            return verified_match
-        return build_ambiguous_entry(profile, matches, search_results, clues)
+        if allow_loose_name_matching and len(variant_matches) == 1:
+            return build_match_entry(
+                profile,
+                variant_matches[0],
+                text_lookup,
+                page,
+                "variant_name",
+                search_name_used=search_name,
+                official_name=official_name,
+            )
 
-    return build_match_entry(profile, matches[0], text_lookup, page, match_quality)
+        if len(variant_matches) > 1 and is_official_name_search:
+            return build_ambiguous_entry(
+                profile,
+                variant_matches,
+                search_results,
+                clues,
+                official_name=official_name,
+                search_names=search_names,
+            )
+
+    return build_no_match_entry(
+        profile,
+        last_results or {"enheder": [], "personTotal": 0},
+        clues,
+        official_name=official_name,
+        search_names=search_names,
+    )
 
 
 def write_json(path: Path, payload: Any) -> None:
@@ -723,6 +955,7 @@ def main() -> None:
     existing_output = load_existing_output(output_path)
     hverv_index = load_hverv_index()
     overrides = load_overrides()
+    official_name_map = load_official_name_map({int(profile["id"]) for profile in profiles})
 
     chrome_path = find_chrome(args.chrome_path)
     user_data_dir = (ROOT / "tmp_chrome_cvr_profile").resolve()
@@ -736,7 +969,7 @@ def main() -> None:
     output: dict[str, Any] = {
         "generated": str(date.today()),
         "note": (
-            "Data bygger paa praecis navnesoegning i det offentlige CVR paa Virk. "
+            "Data bygger paa officielle navne fra Folketingets ODA-biografier og praecis navnesoegning i det offentlige CVR paa Virk. "
             "Kun entydige persontraef gemmes. Navne med ekstra mellemnavne eller efternavne accepteres kun ved entydig identitet. "
             "Tvetydige navnetraef kan kun vises hvis de bekræftes mod Folketingets hvervregister eller via en manuel officiel verifikation."
         ),
@@ -760,7 +993,7 @@ def main() -> None:
             total = len(profiles)
             for index, profile in enumerate(profiles, start=1):
                 try:
-                    entry = fetch_profile_entry(page, profile, text_lookup, hverv_index, overrides)
+                    entry = fetch_profile_entry(page, profile, text_lookup, hverv_index, overrides, official_name_map)
                 except Exception as exc:  # noqa: BLE001
                     entry = {
                         "id": profile["id"],
