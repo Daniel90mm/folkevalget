@@ -55,13 +55,20 @@ window.Folkevalget = (() => {
       }
 
       const profiles = profilesResult.value;
+      const currentProfileCount = countCurrentProfiles(profiles);
       const stats =
         statsResult.status === "fulfilled"
-          ? statsResult.value
+          ? {
+              ...statsResult.value,
+              counts: {
+                ...statsResult.value.counts,
+                profiles: currentProfileCount,
+              },
+            }
           : {
               generated_at: null,
               counts: {
-                profiles: profiles.length,
+                profiles: currentProfileCount,
                 votes: 0,
               },
             };
@@ -308,6 +315,17 @@ window.Folkevalget = (() => {
 
   function compareByName(left, right) {
     return left.name.localeCompare(right.name, "da");
+  }
+
+  function isCurrentProfile(profile) {
+    return Boolean(profile?.current_party) && Boolean(profile?.constituency);
+  }
+
+  function countCurrentProfiles(profiles) {
+    if (!Array.isArray(profiles)) {
+      return 0;
+    }
+    return profiles.filter(isCurrentProfile).length;
   }
 
   function normaliseText(value) {

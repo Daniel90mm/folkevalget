@@ -167,9 +167,21 @@
           </section>
 
           <section class="panel">
-            <div class="panel-heading">
-              <p class="eyebrow">Seneste afstemninger</p>
-              <h2>Et hurtigt blik på de seneste registrerede stemmer</h2>
+            <div class="panel-heading-inline">
+              <div>
+                <p class="eyebrow">Seneste afstemninger</p>
+                <h2>Et hurtigt blik på de seneste registrerede stemmer</h2>
+              </div>
+              <label class="field field-inline profile-vote-filter">
+                <span class="field-label">Vis stemme</span>
+                <select id="profile-vote-filter">
+                  <option value="">Alle</option>
+                  <option value="for">For</option>
+                  <option value="imod">Imod</option>
+                  <option value="fravaer">Fravær</option>
+                  <option value="hverken">Hverken</option>
+                </select>
+              </label>
             </div>
             <div class="vote-feed" id="vote-feed"></div>
           </section>

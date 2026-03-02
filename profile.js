@@ -22,6 +22,11 @@ const ProfileApp = (() => {
   const hvervBody = document.querySelector("#profile-hverv-body");
   const hvervSourceNote = document.querySelector("#profile-hverv-source-note");
   const sectionGrids = Array.from(document.querySelectorAll(".profile-section-grid"));
+  const recentVoteFilter = document.querySelector("#profile-vote-filter");
+  const state = {
+    recentVotes: [],
+    recentVoteFilter: "",
+  };
 
   async function boot() {
     const profileId = Number(new URLSearchParams(window.location.search).get("id"));
@@ -38,6 +43,7 @@ const ProfileApp = (() => {
       return;
     }
 
+    bindEvents();
     renderProfile(profile, hvervData, cvrData);
   }
 
@@ -96,8 +102,25 @@ const ProfileApp = (() => {
     renderHistory(profile);
     renderCommittees(profile.committees || []);
     renderHverv(profile, hvervData, cvrData);
-    renderRecentVotes(profile.recent_votes || []);
+    state.recentVotes = Array.isArray(profile.recent_votes) ? profile.recent_votes : [];
+    if (recentVoteFilter) {
+      recentVoteFilter.value = state.recentVoteFilter;
+    }
+    renderRecentVotes();
     updateSectionGrids();
+  }
+
+  function bindEvents() {
+    if (!recentVoteFilter || recentVoteFilter.dataset.bound === "true") {
+      return;
+    }
+
+    recentVoteFilter.addEventListener("change", (event) => {
+      state.recentVoteFilter = event.target.value;
+      renderRecentVotes();
+    });
+
+    recentVoteFilter.dataset.bound = "true";
   }
 
   function buildSummary(profile) {
@@ -680,9 +703,17 @@ const ProfileApp = (() => {
     hvervSourceNote.append(" ", tooltipWrap);
   }
 
-  function renderRecentVotes(votes) {
+  function renderRecentVotes() {
     const root = document.querySelector("#vote-feed");
     root.innerHTML = "";
+    const votes = state.recentVotes
+      .filter((vote) => matchesRecentVoteFilter(vote, state.recentVoteFilter))
+      .slice(0, 10);
+
+    if (votes.length === 0 && state.recentVotes.length > 0) {
+      root.innerHTML = '<div class="panel-empty">Ingen registrerede afstemninger matcher den valgte stemme.</div>';
+      return;
+    }
 
     if (votes.length === 0) {
       root.innerHTML = '<div class="panel-empty">Ingen registrerede afstemninger i datasættet.</div>';
@@ -727,6 +758,14 @@ const ProfileApp = (() => {
       row.append(meta, body, badge, action);
       root.append(row);
     }
+  }
+
+  function matchesRecentVoteFilter(vote, filterValue) {
+    if (!filterValue) {
+      return true;
+    }
+
+    return window.Folkevalget.voteBadgeClass(vote?.vote_type) === filterValue;
   }
 
   return { boot };

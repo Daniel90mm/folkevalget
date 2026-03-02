@@ -1298,6 +1298,10 @@ img {
   max-height: none;
 }
 
+.profile-vote-filter {
+  align-self: end;
+}
+
 .page-profile .vote-row {
   padding: var(--space-md) 0;
   border: none;
