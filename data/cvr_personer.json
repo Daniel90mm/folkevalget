@@ -1,6 +1,6 @@
 {
   "generated": "2026-03-02",
-  "note": "Data bygger paa officielle navne fra Folketingets ODA-biografier og praecis navnesoegning i det offentlige CVR paa Virk. Kun entydige persontraef gemmes. Navne med ekstra mellemnavne eller efternavne accepteres kun ved entydig identitet. Tvetydige navnetraef kan kun vises hvis de bekræftes mod Folketingets hvervregister eller via en manuel officiel verifikation.",
+  "note": "Data bygger paa officielle navne fra Folketingets ODA-biografier og praecis navnesoegning i det offentlige CVR paa Virk. Kun entydige persontraef gemmes. Navne med ekstra mellemnavne eller efternavne accepteres kun ved entydig identitet. Tvetydige navnetraef kan kun vises hvis de bekraeftes mod Folketingets hvervregister eller via en manuel officiel verifikation. Officielt erklÃ¦rede virksomheder i hvervregisteret kan derudover beriges med Virk-opslag paa virksomhedsniveau, naar virksomhedsnavn eller CVR-nummer matcher praecist.",
   "medlemmer": {
     "20352": {
       "id": 20352,
@@ -1747,6 +1747,7 @@
       "search_names_tried": [
         "Per Larsen"
       ],
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Per%20Larsen&sideIndex=0&size=10",
       "verification_clues": {
         "company_names": [
           "amgros i s",
@@ -1756,7 +1757,21 @@
           "1449880",
           "29818983"
         ]
-      }
+      },
+      "verified_companies": [
+        {
+          "company_name": "NORDJYSKE JERNBANER A/S",
+          "company_enhedsnummer": "",
+          "company_cvr": "29818983",
+          "company_url": "",
+          "status": "Normal",
+          "branch": "491100 Persontransport med regional- eller fjerntog",
+          "verification": {
+            "method": "ft_hverv_cvr",
+            "matched_value": "29818983"
+          }
+        }
+      ]
     },
     "189": {
       "id": 189,
@@ -2222,11 +2237,11 @@
       "status": "not_found",
       "person_total": 0,
       "candidates": [],
-      "official_name": "Steffen W",
+      "official_name": "Steffen W. Frølund",
       "search_names_tried": [
-        "Steffen W",
         "Steffen W. Frølund"
       ],
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Steffen%20W.%20Fr%C3%B8lund&sideIndex=0&size=10",
       "verification_clues": {
         "company_names": [
           "likeminded vc aps",
@@ -2234,7 +2249,9 @@
           "likeminded vc gp i aps",
           "likeminded vc fund i k s",
           "likeminded vc civ i k s",
-          "pluto markets inc market reader inc gamerpay inc",
+          "pluto markets inc",
+          "market reader inc",
+          "gamerpay inc",
           "adress a s",
           "estaid aps",
           "all gravy aps",
@@ -2248,7 +2265,8 @@
           "smallclaims aps",
           "nordinsights health tech aps",
           "teacherspace aps",
-          "chase labs ltd prescriby ehf",
+          "chase labs ltd",
+          "prescriby ehf",
           "lightbringer ab",
           "wolfpack a s",
           "chatsimple inc",
@@ -2256,7 +2274,153 @@
           "paradox aps"
         ],
         "company_cvrs": []
-      }
+      },
+      "verified_companies": [
+        {
+          "company_name": "All Gravy ApS",
+          "company_enhedsnummer": "4008434227",
+          "company_cvr": "41335874",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4008434227",
+          "status": "Normal",
+          "branch": "622000 Computerkonsulentbistand og forvaltning af computerfaciliteter",
+          "verification": {
+            "method": "ft_hverv_company_name",
+            "matched_value": "all gravy aps"
+          }
+        },
+        {
+          "company_name": "Comundo ApS",
+          "company_enhedsnummer": "4009287492",
+          "company_cvr": "43309617",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009287492",
+          "status": "Normal",
+          "branch": "711290 Anden teknisk rådgivning",
+          "verification": {
+            "method": "ft_hverv_company_name",
+            "matched_value": "comundo aps"
+          }
+        },
+        {
+          "company_name": "ESTAID ApS",
+          "company_enhedsnummer": "4010677724",
+          "company_cvr": "46213998",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4010677724",
+          "status": "Normal",
+          "branch": "621000 Computerprogrammering",
+          "verification": {
+            "method": "ft_hverv_company_name",
+            "matched_value": "estaid aps"
+          }
+        },
+        {
+          "company_name": "LegalDesk.dk ApS",
+          "company_enhedsnummer": "4006602794",
+          "company_cvr": "37890235",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4006602794",
+          "status": "Normal",
+          "branch": "691000 Juridiske aktiviteter",
+          "verification": {
+            "method": "ft_hverv_company_name",
+            "matched_value": "legaldesk dk aps"
+          }
+        },
+        {
+          "company_name": "Likeminded.vc ApS",
+          "company_enhedsnummer": "4009063701",
+          "company_cvr": "42808695",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009063701",
+          "status": "Normal",
+          "branch": "642120 Ikke-finansielle holdingselskaber",
+          "verification": {
+            "method": "ft_hverv_company_name",
+            "matched_value": "likeminded vc aps"
+          }
+        },
+        {
+          "company_name": "Likeminded.vc GP I ApS",
+          "company_enhedsnummer": "4010274186",
+          "company_cvr": "45319288",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4010274186",
+          "status": "Normal",
+          "branch": "663000 Formueforvaltning",
+          "verification": {
+            "method": "ft_hverv_company_name",
+            "matched_value": "likeminded vc gp i aps"
+          }
+        },
+        {
+          "company_name": "Likeminded.vc Management ApS",
+          "company_enhedsnummer": "4010262002",
+          "company_cvr": "45290840",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4010262002",
+          "status": "Normal",
+          "branch": "663000 Formueforvaltning",
+          "verification": {
+            "method": "ft_hverv_company_name",
+            "matched_value": "likeminded vc management aps"
+          }
+        },
+        {
+          "company_name": "METACOMPANY HOLDING ApS",
+          "company_enhedsnummer": "5146204",
+          "company_cvr": "33250983",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/5146204",
+          "status": "Normal",
+          "branch": "622000 Computerkonsulentbistand og forvaltning af computerfaciliteter",
+          "verification": {
+            "method": "ft_hverv_company_name",
+            "matched_value": "metacompany holding aps"
+          }
+        },
+        {
+          "company_name": "NordInsights Health Tech ApS",
+          "company_enhedsnummer": "4009149663",
+          "company_cvr": "43001833",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009149663",
+          "status": "Normal",
+          "branch": "621000 Computerprogrammering",
+          "verification": {
+            "method": "ft_hverv_company_name",
+            "matched_value": "nordinsights health tech aps"
+          }
+        },
+        {
+          "company_name": "Pandektes ApS",
+          "company_enhedsnummer": "4009432456",
+          "company_cvr": "43620002",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009432456",
+          "status": "Normal",
+          "branch": "621000 Computerprogrammering",
+          "verification": {
+            "method": "ft_hverv_company_name",
+            "matched_value": "pandektes aps"
+          }
+        },
+        {
+          "company_name": "SmallClaims ApS",
+          "company_enhedsnummer": "4009233719",
+          "company_cvr": "43188739",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009233719",
+          "status": "Normal",
+          "branch": "582900 Anden udgivelse af software",
+          "verification": {
+            "method": "ft_hverv_company_name",
+            "matched_value": "smallclaims aps"
+          }
+        },
+        {
+          "company_name": "Teacherspace ApS",
+          "company_enhedsnummer": "4009330612",
+          "company_cvr": "43398695",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009330612",
+          "status": "Normal",
+          "branch": "621000 Computerprogrammering",
+          "verification": {
+            "method": "ft_hverv_company_name",
+            "matched_value": "teacherspace aps"
+          }
+        }
+      ]
     },
     "20391": {
       "id": 20391,
@@ -2676,9 +2840,8 @@
       "status": "not_found",
       "person_total": 0,
       "candidates": [],
-      "official_name": "Nanna W",
+      "official_name": "Nanna W. Gotfredsen",
       "search_names_tried": [
-        "Nanna W",
         "Nanna W. Gotfredsen"
       ]
     },
@@ -2748,15 +2911,42 @@
       "search_names_tried": [
         "Peter Have"
       ],
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Peter%20Have&sideIndex=0&size=10",
       "verification_clues": {
         "company_names": [
-          "lasby kro og hotel aps"
+          "kro og hotel aps"
         ],
         "company_cvrs": [
           "36534540",
           "37868639"
         ]
-      }
+      },
+      "verified_companies": [
+        {
+          "company_name": "LÅSBY KRO OG HOTEL ApS",
+          "company_enhedsnummer": "",
+          "company_cvr": "36534540",
+          "company_url": "",
+          "status": "Normal",
+          "branch": "551000 Drift af hoteller og lignende overnatningsfaciliteter",
+          "verification": {
+            "method": "ft_hverv_cvr",
+            "matched_value": "36534540"
+          }
+        },
+        {
+          "company_name": "P&F Ejendomsselskab ApS",
+          "company_enhedsnummer": "",
+          "company_cvr": "37868639",
+          "company_url": "",
+          "status": "Normal",
+          "branch": "682040 Udlejning af erhvervsejendomme",
+          "verification": {
+            "method": "ft_hverv_cvr",
+            "matched_value": "37868639"
+          }
+        }
+      ]
     },
     "20382": {
       "id": 20382,
@@ -5806,9 +5996,8 @@
       "status": "not_found",
       "person_total": 0,
       "candidates": [],
-      "official_name": "Markus E",
+      "official_name": "Markus E. Olsen",
       "search_names_tried": [
-        "Markus E",
         "Markus E. Olsen"
       ]
     },

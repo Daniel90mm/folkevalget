@@ -372,8 +372,11 @@ const ProfileApp = (() => {
     const cvrEntry = (cvrData?.medlemmer || {})[String(profile.id)] || null;
     const hasFtRegister = Boolean(hvervEntry) && !hvervEntry.ingen_hverv_sektion;
     const activeCvrRelations = Array.isArray(cvrEntry?.active_relations) ? cvrEntry.active_relations.filter(Boolean) : [];
+    const verifiedCompanies = Array.isArray(cvrEntry?.verified_companies)
+      ? cvrEntry.verified_companies.filter(Boolean)
+      : [];
 
-    if (!hasFtRegister && activeCvrRelations.length === 0) {
+    if (!hasFtRegister && activeCvrRelations.length === 0 && verifiedCompanies.length === 0) {
       return;
     }
 
@@ -383,11 +386,17 @@ const ProfileApp = (() => {
       renderFtHvervBlock(hvervEntry);
     }
 
-    if (activeCvrRelations.length > 0) {
-      renderCvrBlock(activeCvrRelations);
+    if (activeCvrRelations.length > 0 || verifiedCompanies.length > 0) {
+      renderCvrBlock(activeCvrRelations, verifiedCompanies);
     }
 
-    renderHvervSources(hvervEntry, hasFtRegister, cvrEntry, activeCvrRelations.length > 0, cvrData?.generated || null);
+    renderHvervSources(
+      hvervEntry,
+      hasFtRegister,
+      cvrEntry,
+      activeCvrRelations.length > 0 || verifiedCompanies.length > 0,
+      cvrData?.generated || null
+    );
   }
 
   function renderFtHvervBlock(entry) {
@@ -433,43 +442,17 @@ const ProfileApp = (() => {
     block.append(list);
   }
 
-  function renderCvrBlock(relations) {
+  function renderCvrBlock(relations, verifiedCompanies) {
     const block = appendHvervBlock("CVR-registeret");
-    const list = document.createElement("ul");
-    list.className = "detail-list cvr-relation-list";
-
-    for (const relation of relations) {
-      const item = document.createElement("li");
-      item.className = "cvr-relation-item";
-
-      const title = document.createElement("a");
-      title.className = "cvr-relation-link";
-      title.href = relation.company_url || "#";
-      title.target = "_blank";
-      title.rel = "noreferrer";
-      title.textContent = relation.company_name || relation.company_cvr || "CVR-relation";
-      item.append(title);
-
-      const summary = formatCvrRelationSummary(relation);
-      if (summary) {
-        const summaryLine = document.createElement("p");
-        summaryLine.className = "cvr-relation-meta";
-        summaryLine.textContent = summary;
-        item.append(summaryLine);
-      }
-
-      const factsLine = buildCvrFactsLine(relation);
-      if (factsLine) {
-        const facts = document.createElement("p");
-        facts.className = "cvr-relation-meta";
-        facts.textContent = factsLine;
-        item.append(facts);
-      }
-
-      list.append(item);
+    if (relations.length > 0) {
+      block.append(buildInterestLabel("Entydigt personmatch"));
+      block.append(buildCvrRelationList(relations));
     }
 
-    block.append(list);
+    if (verifiedCompanies.length > 0) {
+      block.append(buildInterestLabel("Officielt virksomhedstræf"));
+      block.append(buildVerifiedCompanyList(verifiedCompanies));
+    }
   }
 
   function appendHvervBlock(labelText) {
@@ -483,6 +466,110 @@ const ProfileApp = (() => {
     block.append(label);
     hvervBody.append(block);
     return block;
+  }
+
+  function buildInterestLabel(labelText) {
+    const label = document.createElement("p");
+    label.className = "field-label";
+    label.textContent = labelText;
+    return label;
+  }
+
+  function buildCvrRelationList(relations) {
+    const list = document.createElement("ul");
+    list.className = "detail-list cvr-relation-list";
+
+    for (const relation of relations) {
+      list.append(buildCvrRelationItem(relation));
+    }
+
+    return list;
+  }
+
+  function buildCvrRelationItem(relation) {
+    const item = document.createElement("li");
+    item.className = "cvr-relation-item";
+
+    const title = document.createElement("a");
+    title.className = "cvr-relation-link";
+    title.href = relation.company_url || "#";
+    title.target = "_blank";
+    title.rel = "noreferrer";
+    title.textContent = relation.company_name || relation.company_cvr || "CVR-relation";
+    item.append(title);
+
+    const summary = formatCvrRelationSummary(relation);
+    if (summary) {
+      const summaryLine = document.createElement("p");
+      summaryLine.className = "cvr-relation-meta";
+      summaryLine.textContent = summary;
+      item.append(summaryLine);
+    }
+
+    const factsLine = buildCvrFactsLine(relation);
+    if (factsLine) {
+      const facts = document.createElement("p");
+      facts.className = "cvr-relation-meta";
+      facts.textContent = factsLine;
+      item.append(facts);
+    }
+
+    return item;
+  }
+
+  function buildVerifiedCompanyList(companies) {
+    const list = document.createElement("ul");
+    list.className = "detail-list cvr-relation-list";
+
+    for (const company of companies) {
+      const item = document.createElement("li");
+      item.className = "cvr-relation-item";
+
+      const title = document.createElement("a");
+      title.className = "cvr-relation-link";
+      title.href = company.company_url || cvrFallbackUrl(company.company_cvr);
+      title.target = "_blank";
+      title.rel = "noreferrer";
+      title.textContent = company.company_name || company.company_cvr || "Virksomhed";
+      item.append(title);
+
+      const summaryParts = [];
+      if (company.company_cvr) {
+        summaryParts.push(`CVR ${company.company_cvr}`);
+      }
+      if (company.branch) {
+        summaryParts.push(company.branch);
+      }
+      if (company.status) {
+        summaryParts.push(`Status: ${company.status}`);
+      }
+      if (summaryParts.length > 0) {
+        const summary = document.createElement("p");
+        summary.className = "cvr-relation-meta";
+        summary.textContent = summaryParts.join(" · ");
+        item.append(summary);
+      }
+
+      const verificationParts = ["Verificeret via officielt hverv"];
+      if (company.co_name) {
+        verificationParts.push(company.co_name);
+      }
+      if (company.city) {
+        verificationParts.push(company.city);
+      }
+      const verificationLine = document.createElement("p");
+      verificationLine.className = "cvr-relation-meta";
+      verificationLine.textContent = verificationParts.join(" · ");
+      item.append(verificationLine);
+
+      list.append(item);
+    }
+
+    return list;
+  }
+
+  function cvrFallbackUrl(companyCvr) {
+    return companyCvr ? `https://datacvr.virk.dk/soegeresultater?fritekst=${encodeURIComponent(companyCvr)}` : "https://datacvr.virk.dk/";
   }
 
   function formatCvrRelationSummary(relation) {
@@ -540,7 +627,11 @@ const ProfileApp = (() => {
 
     if (hasCvrRegister) {
       const cvrLink = document.createElement("a");
-      cvrLink.href = cvrEntry?.person_url || cvrEntry?.search_url || "https://datacvr.virk.dk/";
+      const firstVerifiedCompany = Array.isArray(cvrEntry?.verified_companies)
+        ? cvrEntry.verified_companies.find((entry) => entry?.company_url)
+        : null;
+      cvrLink.href =
+        cvrEntry?.person_url || firstVerifiedCompany?.company_url || cvrEntry?.search_url || "https://datacvr.virk.dk/";
       cvrLink.target = "_blank";
       cvrLink.rel = "noreferrer";
       cvrLink.textContent = "Virk/CVR";
@@ -586,7 +677,7 @@ const ProfileApp = (() => {
     }
     if (hasCvrRegister) {
       notes.push(
-        "CVR-delen bygger på præcis navnesøgning i den offentlige Virk-søgning. Hvis søgningen gav flere persontræf eller var usikker, vises intet."
+        "CVR-delen viser enten entydige personmatch i Virk eller officielle virksomhedstræf for virksomheder, som allerede er erklæret i Folketingets hvervregister. Ved virksomhedstræf vises selskabet, ikke et usikkert personmatch."
       );
     }
     tooltipBody.textContent = notes.join(" ");

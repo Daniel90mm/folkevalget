@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """Fetch conservative CVR participant matches for Folkevalget profiles.
 
 This script uses the public Virk/CVR frontend in a real Chrome session and
@@ -41,6 +41,9 @@ DEBUG_PORT = 9235
 DEFAULT_DELAY = 0.15
 ODA_TIMEOUT = 60
 ODA_MAX_RETRIES = 3
+CVR_SEARCH_DELAY = 0.35
+CVR_SEARCH_MAX_RETRIES = 4
+CVR_RATE_LIMIT_SLEEP = 4.0
 
 DEFAULT_CHROME_PATHS = (
     Path(r"C:\Program Files\Google\Chrome\Application\chrome.exe"),
@@ -74,13 +77,17 @@ EXTRA_LABEL_FALLBACKS = {
 
 CVR_NUMBER_PATTERN = re.compile(r"\bcvr(?:-nummer| nr\.?|nummer)?\s*[:.]?\s*(\d{6,8})\b", re.IGNORECASE)
 COMPANY_NAME_PATTERN = re.compile(
-    r"([A-ZÆØÅ][A-Za-zÆØÅæøå0-9&./,'’()\- ]{1,120}?\b"
+    r"([A-ZÃ†Ã˜Ã…][A-Za-zÃ†Ã˜Ã…Ã¦Ã¸Ã¥0-9&./,'â€™()\- ]{1,120}?\b"
     r"(?:ApS|A/S|I/S|K/S|P/S|IVS|AMBA|FMBA|SMBA|Holding(?:\s+(?:ApS|A/S))?|"
     r"Fonden?|Forening(?:en)?|Bank(?:\s+A/S)?|Jernbaner|Havn|Metroselskabet|"
     r"Sciences|Inc\.?|Ltd\.?|AB|ehf\.?))",
 )
-FOUNDATION_NAME_PATTERN = re.compile(r"(Fonden\s+[A-ZÆØÅ0-9][^.;]{2,120})")
-ASSOCIATION_NAME_PATTERN = re.compile(r"(Foreningen\s+[A-ZÆØÅ0-9][^.;]{2,120})")
+FOUNDATION_NAME_PATTERN = re.compile(r"(Fonden\s+[A-ZÃ†Ã˜Ã…0-9][^.;]{2,120})")
+ASSOCIATION_NAME_PATTERN = re.compile(r"(Foreningen\s+[A-ZÃ†Ã˜Ã…0-9][^.;]{2,120})")
+COMPANY_SUFFIX_TOKEN_PATTERN = re.compile(
+    r"\b(?:ApS|A/S|I/S|K/S|P/S|IVS|AMBA|FMBA|SMBA|Inc\.?|Ltd\.?|AB|ehf\.?)\b\.?",
+    re.IGNORECASE,
+)
 COMPANY_PREFIXES = (
     "bestyrelsesmedlem i ",
     "bestyrelsesmedlem ",
@@ -89,13 +96,15 @@ COMPANY_PREFIXES = (
     "formand for ",
     "formand ",
     "medlem af ",
-    "medlem af regionsrådet i ",
+    "medlem af regionsrÃ¥det i ",
     "delejer af ",
     "ejer af ",
-    "selvstændig virksomhed ",
+    "selvstÃ¦ndig virksomhed ",
     "konsulentvirksomhed ",
     "virksomhed ",
 )
+
+SEARCH_CACHE: dict[str, dict[str, Any]] = {}
 
 
 def parse_args() -> argparse.Namespace:
@@ -184,6 +193,27 @@ def normalise_company_name(value: str) -> str:
     return normalise_loose(strip_company_prefixes(value))
 
 
+def split_compound_company_name(value: str) -> list[str]:
+    text = value.strip()
+    suffix_matches = list(COMPANY_SUFFIX_TOKEN_PATTERN.finditer(text))
+    if len(suffix_matches) <= 1:
+        return [text] if text else []
+
+    parts: list[str] = []
+    start = 0
+    for match in suffix_matches:
+        end = match.end()
+        candidate = text[start:end].strip(" ,.;:")
+        if candidate:
+            parts.append(candidate)
+        start = end
+
+    remainder = text[start:].strip(" ,.;:")
+    if remainder:
+        parts.append(remainder)
+    return parts
+
+
 def slug_status(value: str | None) -> str | None:
     if not value:
         return None
@@ -211,6 +241,10 @@ def build_person_url(enhedsnummer: str, person_type: str) -> str:
 
 def build_company_url(enhedsnummer: str) -> str:
     return f"{CVR_BASE_URL}/enhed/virksomhed/{enhedsnummer}"
+
+
+def build_search_url(query: str) -> str:
+    return f"{CVR_BASE_URL}/soegeresultater?fritekst={quote(query)}&sideIndex=0&size=10"
 
 
 def build_search_payload(name: str) -> dict[str, Any]:
@@ -279,8 +313,9 @@ def extract_official_full_name(biography: str | None, fallback_name: str | None 
     if not text:
         return fallback_name
 
+    # Do not stop on periods inside initials like "Steffen W. Frølund."
     name_match = re.match(
-        r"^(.*?)(?:(?:,\s*|\s+)f(?:ø|oe)dt\b|(?:,\s*|\s+)bosiddende\b|(?:,\s*|\s+)datter af\b|(?:,\s*|\s+)søn af\b|(?:,\s*|\s+)son af\b|[.;]|$)",
+        r"^(.*?)(?:(?:,\s*|\s+)f(?:ø|oe)dt\b|(?:,\s*|\s+)bosiddende\b|(?:,\s*|\s+)datter af\b|(?:,\s*|\s+)søn af\b|(?:,\s*|\s+)son af\b|;|$)",
         text,
         flags=re.IGNORECASE,
     )
@@ -382,7 +417,11 @@ def extract_hverv_clues(hverv_entry: dict[str, Any] | None) -> dict[str, list[st
         raw_names.extend(ASSOCIATION_NAME_PATTERN.findall(description))
         raw_names.extend(COMPANY_NAME_PATTERN.findall(description))
 
+        expanded_names: list[str] = []
         for match in raw_names:
+            expanded_names.extend(split_compound_company_name(match))
+
+        for match in expanded_names:
             candidate = normalise_company_name(match)
             if len(candidate) < 4 or candidate in company_names:
                 continue
@@ -421,6 +460,30 @@ async ({ path, method, payload }) => {
                 break
             time.sleep(attempt)
     raise RuntimeError(f"Failed to fetch {path}: {last_error}") from last_error
+
+
+def fetch_search_results(page: Any, query: str) -> dict[str, Any]:
+    cache_key = normalise_name(query)
+    if cache_key in SEARCH_CACHE:
+        return SEARCH_CACHE[cache_key]
+
+    last_error: Exception | None = None
+    payload = build_search_payload(query)
+    for attempt in range(1, CVR_SEARCH_MAX_RETRIES + 1):
+        try:
+            time.sleep(CVR_SEARCH_DELAY)
+            results = fetch_json(page, "/gateway/soeg/fritekst", method="POST", payload=payload, retries=1)
+            SEARCH_CACHE[cache_key] = results
+            return results
+        except Exception as exc:  # noqa: BLE001
+            last_error = exc
+            if attempt == CVR_SEARCH_MAX_RETRIES:
+                break
+
+            backoff = CVR_RATE_LIMIT_SLEEP * attempt if "429" in str(exc) else float(attempt)
+            time.sleep(backoff)
+
+    raise RuntimeError(f"Failed to search Virk for {query!r}: {last_error}") from last_error
 
 
 def build_text_lookup(text_rows: list[dict[str, Any]]) -> dict[str, str]:
@@ -508,6 +571,168 @@ def dedupe_person_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]
             deduped[key] = entry
 
     return list(deduped.values())
+
+
+def dedupe_company_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    deduped: dict[str, dict[str, Any]] = {}
+    for entry in entries:
+        if entry.get("enhedstype") != "virksomhed":
+            continue
+
+        key = str(entry.get("enhedsnummer") or entry.get("cvr") or normalise_company_name(entry.get("senesteNavn") or ""))
+        if not key:
+            continue
+
+        existing = deduped.get(key)
+        if not existing:
+            deduped[key] = entry
+            continue
+
+        existing_has_enhedsnummer = bool(existing.get("enhedsnummer"))
+        current_has_enhedsnummer = bool(entry.get("enhedsnummer"))
+        if not existing_has_enhedsnummer and current_has_enhedsnummer:
+            deduped[key] = entry
+
+    return list(deduped.values())
+
+
+def find_exact_company_matches(results: dict[str, Any], company_name: str) -> list[dict[str, Any]]:
+    expected = normalise_company_name(company_name)
+    return dedupe_company_entries([
+        entry
+        for entry in results.get("enheder") or []
+        if entry.get("enhedstype") == "virksomhed"
+        and normalise_company_name(entry.get("senesteNavn", "")) == expected
+    ])
+
+
+def company_metadata_contains_name(entry: dict[str, Any], official_name: str | None) -> bool:
+    if not official_name:
+        return False
+
+    expected = normalise_name(official_name)
+    metadata = " ".join(
+        [
+            str(entry.get("coNavn") or ""),
+            str(entry.get("beliggenhedsadresse") or ""),
+        ]
+    )
+    return bool(metadata) and expected in normalise_name(metadata)
+
+
+def choose_verified_company_match(matches: list[dict[str, Any]], official_name: str | None = None) -> dict[str, Any] | None:
+    if len(matches) == 1:
+        return matches[0]
+
+    named_matches = [entry for entry in matches if company_metadata_contains_name(entry, official_name)]
+    if len(named_matches) == 1:
+        return named_matches[0]
+
+    return None
+
+
+def build_verified_company_entry(entry: dict[str, Any], verification: dict[str, Any]) -> dict[str, Any]:
+    address = re.sub(r"\s+", " ", str(entry.get("beliggenhedsadresse") or "")).strip()
+    return {
+        "company_name": entry.get("senesteNavn") or "Ukendt virksomhed",
+        "company_enhedsnummer": entry.get("enhedsnummer") or "",
+        "company_cvr": entry.get("cvr") or "",
+        "company_url": build_company_url(entry.get("enhedsnummer")) if entry.get("enhedsnummer") else "",
+        "status": format_status(entry.get("status")),
+        "co_name": entry.get("coNavn") or "",
+        "city": entry.get("by") or "",
+        "address": address,
+        "branch": entry.get("hovedbranche") or "",
+        "verification": verification,
+    }
+
+
+def fetch_verified_companies(
+    page: Any,
+    clues: dict[str, list[str]],
+    official_name: str | None,
+    active_relations: list[dict[str, Any]] | None = None,
+) -> list[dict[str, Any]]:
+    if not clues["company_names"] and not clues["company_cvrs"]:
+        return []
+
+    existing_keys = {
+        str(relation.get("company_enhedsnummer") or relation.get("company_cvr") or normalise_company_name(relation.get("company_name") or ""))
+        for relation in (active_relations or [])
+    }
+    verified: dict[str, dict[str, Any]] = {}
+
+    for company_cvr in clues["company_cvrs"]:
+        try:
+            results = fetch_search_results(page, company_cvr)
+        except Exception:
+            continue
+        matches = dedupe_company_entries([
+            entry
+            for entry in results.get("enheder") or []
+            if entry.get("enhedstype") == "virksomhed" and str(entry.get("cvr") or "") == company_cvr
+        ])
+        chosen = choose_verified_company_match(matches, official_name)
+        if not chosen:
+            continue
+
+        key = str(chosen.get("enhedsnummer") or chosen.get("cvr") or "")
+        if key in existing_keys or key in verified:
+            continue
+        verified[key] = build_verified_company_entry(
+            chosen,
+            {
+                "method": "ft_hverv_cvr",
+                "matched_value": company_cvr,
+            },
+        )
+
+    for company_name in clues["company_names"]:
+        try:
+            results = fetch_search_results(page, company_name)
+        except Exception:
+            continue
+        matches = find_exact_company_matches(results, company_name)
+        chosen = choose_verified_company_match(matches, official_name)
+        if not chosen:
+            continue
+
+        key = str(chosen.get("enhedsnummer") or chosen.get("cvr") or normalise_company_name(chosen.get("senesteNavn") or ""))
+        if key in existing_keys or key in verified:
+            continue
+        verified[key] = build_verified_company_entry(
+            chosen,
+            {
+                "method": "ft_hverv_company_name",
+                "matched_value": company_name,
+            },
+        )
+
+    return sorted(verified.values(), key=lambda item: normalise_name(item["company_name"]))
+
+
+def attach_verified_companies(
+    entry: dict[str, Any],
+    page: Any,
+    clues: dict[str, list[str]],
+    official_name: str | None,
+) -> dict[str, Any]:
+    should_enrich = bool(clues["company_names"] or clues["company_cvrs"])
+    if not should_enrich:
+        return entry
+
+    if entry.get("status") == "exact_match" and entry.get("active_relations"):
+        return entry
+
+    verified_companies = fetch_verified_companies(
+        page,
+        clues,
+        official_name,
+        active_relations=entry.get("active_relations") or [],
+    )
+    if verified_companies:
+        entry["verified_companies"] = verified_companies
+    return entry
 
 
 def find_exact_person_matches(results: dict[str, Any], name: str) -> list[dict[str, Any]]:
@@ -600,7 +825,7 @@ def build_match_entry(
         "person_enhedsnummer": person_enhedsnummer,
         "person_type": person_type,
         "person_url": person_url,
-        "search_url": f"{CVR_BASE_URL}/soegeresultater?fritekst={quote(search_name_used or profile['name'])}&sideIndex=0&size=10",
+        "search_url": build_search_url(search_name_used or profile["name"]),
         "has_active_relations": has_active_relations,
         "active_relations": [],
         "historical_relation_count": 0,
@@ -740,6 +965,7 @@ def build_no_match_entry(
         entry["official_name"] = official_name
     if search_names:
         entry["search_names_tried"] = search_names
+        entry["search_url"] = build_search_url(search_names[0])
     if clues and (clues["company_names"] or clues["company_cvrs"]):
         entry["verification_clues"] = clues
     return entry
@@ -778,6 +1004,7 @@ def build_ambiguous_entry(
         entry["official_name"] = official_name
     if search_names:
         entry["search_names_tried"] = search_names
+        entry["search_url"] = build_search_url(search_names[0])
     if clues and (clues["company_names"] or clues["company_cvrs"]):
         entry["verification_clues"] = clues
     return entry
@@ -808,15 +1035,20 @@ def fetch_profile_entry(
             "note": override.get("note") or "Manuelt verificeret navn i Virk/CVR.",
             "sources": override.get("sources") or [],
         }
-        return build_match_entry(
-            profile,
-            override_candidate,
-            text_lookup,
+        return attach_verified_companies(
+            build_match_entry(
+                profile,
+                override_candidate,
+                text_lookup,
+                page,
+                "manual_override",
+                verification,
+                search_name_used=search_names[0] if search_names else profile["name"],
+                official_name=official_name,
+            ),
             page,
-            "manual_override",
-            verification,
-            search_name_used=search_names[0] if search_names else profile["name"],
-            official_name=official_name,
+            clues,
+            official_name,
         )
 
     last_results: dict[str, Any] | None = None
@@ -825,19 +1057,24 @@ def fetch_profile_entry(
     )
 
     for search_name in search_names:
-        search_results = fetch_json(page, "/gateway/soeg/fritekst", method="POST", payload=build_search_payload(search_name))
+        search_results = fetch_search_results(page, search_name)
         last_results = search_results
 
         matches = find_exact_person_matches(search_results, search_name)
         if len(matches) == 1:
-            return build_match_entry(
-                profile,
-                matches[0],
-                text_lookup,
+            return attach_verified_companies(
+                build_match_entry(
+                    profile,
+                    matches[0],
+                    text_lookup,
+                    page,
+                    "exact",
+                    search_name_used=search_name,
+                    official_name=official_name,
+                ),
                 page,
-                "exact",
-                search_name_used=search_name,
-                official_name=official_name,
+                clues,
+                official_name,
             )
 
         if len(matches) > 1:
@@ -851,14 +1088,19 @@ def fetch_profile_entry(
                 official_name=official_name,
             )
             if verified_match:
-                return verified_match
-            return build_ambiguous_entry(
-                profile,
-                matches,
-                search_results,
+                return attach_verified_companies(verified_match, page, clues, official_name)
+            return attach_verified_companies(
+                build_ambiguous_entry(
+                    profile,
+                    matches,
+                    search_results,
+                    clues,
+                    official_name=official_name,
+                    search_names=search_names,
+                ),
+                page,
                 clues,
-                official_name=official_name,
-                search_names=search_names,
+                official_name,
             )
 
         variant_matches = find_variant_person_matches(search_results, search_name)
@@ -878,46 +1120,66 @@ def fetch_profile_entry(
             official_name=official_name,
         )
         if verified_match:
-            return verified_match
+            return attach_verified_companies(verified_match, page, clues, official_name)
 
         if allow_loose_name_matching and extended_match:
-            return build_match_entry(
-                profile,
-                extended_match,
-                text_lookup,
+            return attach_verified_companies(
+                build_match_entry(
+                    profile,
+                    extended_match,
+                    text_lookup,
+                    page,
+                    "extended_name",
+                    search_name_used=search_name,
+                    official_name=official_name,
+                ),
                 page,
-                "extended_name",
-                search_name_used=search_name,
-                official_name=official_name,
+                clues,
+                official_name,
             )
 
         if allow_loose_name_matching and len(variant_matches) == 1:
-            return build_match_entry(
-                profile,
-                variant_matches[0],
-                text_lookup,
+            return attach_verified_companies(
+                build_match_entry(
+                    profile,
+                    variant_matches[0],
+                    text_lookup,
+                    page,
+                    "variant_name",
+                    search_name_used=search_name,
+                    official_name=official_name,
+                ),
                 page,
-                "variant_name",
-                search_name_used=search_name,
-                official_name=official_name,
+                clues,
+                official_name,
             )
 
         if len(variant_matches) > 1 and is_official_name_search:
-            return build_ambiguous_entry(
-                profile,
-                variant_matches,
-                search_results,
+            return attach_verified_companies(
+                build_ambiguous_entry(
+                    profile,
+                    variant_matches,
+                    search_results,
+                    clues,
+                    official_name=official_name,
+                    search_names=search_names,
+                ),
+                page,
                 clues,
-                official_name=official_name,
-                search_names=search_names,
+                official_name,
             )
 
-    return build_no_match_entry(
-        profile,
-        last_results or {"enheder": [], "personTotal": 0},
+    return attach_verified_companies(
+        build_no_match_entry(
+            profile,
+            last_results or {"enheder": [], "personTotal": 0},
+            clues,
+            official_name=official_name,
+            search_names=search_names,
+        ),
+        page,
         clues,
-        official_name=official_name,
-        search_names=search_names,
+        official_name,
     )
 
 
@@ -971,7 +1233,8 @@ def main() -> None:
         "note": (
             "Data bygger paa officielle navne fra Folketingets ODA-biografier og praecis navnesoegning i det offentlige CVR paa Virk. "
             "Kun entydige persontraef gemmes. Navne med ekstra mellemnavne eller efternavne accepteres kun ved entydig identitet. "
-            "Tvetydige navnetraef kan kun vises hvis de bekræftes mod Folketingets hvervregister eller via en manuel officiel verifikation."
+            "Tvetydige navnetraef kan kun vises hvis de bekraeftes mod Folketingets hvervregister eller via en manuel officiel verifikation. "
+            "Officielt erklÃ¦rede virksomheder i hvervregisteret kan derudover beriges med Virk-opslag paa virksomhedsniveau, naar virksomhedsnavn eller CVR-nummer matcher praecist."
         ),
         "medlemmer": dict(existing_output.get("medlemmer", {})),
     }
@@ -1028,3 +1291,4 @@ if __name__ == "__main__":
         main()
     except KeyboardInterrupt:
         sys.exit(130)
+
