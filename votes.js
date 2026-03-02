@@ -29,11 +29,13 @@ const VotesApp = (() => {
     sortMode: "date_desc",
     closeOnly: false,
     splitOnly: false,
+    typeFilter: "",
   };
 
   const statsRoot = document.querySelector("[data-site-stats]");
   const voteSearch = document.querySelector("#vote-search");
   const voteSortSelect = document.querySelector("#vote-sort-select");
+  const voteTypeSelect = document.querySelector("#vote-type-select");
   const voteCloseOnly = document.querySelector("#vote-close-only");
   const voteSplitOnly = document.querySelector("#vote-split-only");
   const voteList = document.querySelector("#vote-list");
@@ -74,6 +76,7 @@ const VotesApp = (() => {
     state.sortMode = VALID_SORTS.has(sortMode) ? sortMode : "date_desc";
     state.closeOnly = params.get("close") === "1";
     state.splitOnly = params.get("split") === "1";
+    state.typeFilter = params.get("type") || "";
 
     const rawVoteId = Number(params.get("id"));
     state.selectedVoteId = Number.isFinite(rawVoteId) && rawVoteId > 0 ? rawVoteId : null;
@@ -81,6 +84,7 @@ const VotesApp = (() => {
 
   function syncControls() {
     voteSearch.value = state.query;
+    voteTypeSelect.value = state.typeFilter;
     voteSortSelect.value = state.sortMode;
     voteCloseOnly.checked = state.closeOnly;
     voteSplitOnly.checked = state.splitOnly;
@@ -89,6 +93,11 @@ const VotesApp = (() => {
   function bindEvents() {
     voteSearch.addEventListener("input", (event) => {
       state.query = event.target.value;
+      applyVoteFilter();
+    });
+
+    voteTypeSelect.addEventListener("change", (event) => {
+      state.typeFilter = event.target.value;
       applyVoteFilter();
     });
 
@@ -134,6 +143,9 @@ const VotesApp = (() => {
           return false;
         }
         if (state.splitOnly && !hasPartySplit(vote)) {
+          return false;
+        }
+        if (state.typeFilter && classifyVoteType(vote) !== state.typeFilter) {
           return false;
         }
 
@@ -241,6 +253,9 @@ const VotesApp = (() => {
     }
     if (state.splitOnly) {
       params.set("split", "1");
+    }
+    if (state.typeFilter) {
+      params.set("type", state.typeFilter);
     }
     const next = params.toString() ? `?${params.toString()}` : window.location.pathname;
     window.history.replaceState({}, "", next);
@@ -600,6 +615,15 @@ const VotesApp = (() => {
       return Number.POSITIVE_INFINITY;
     }
     return (Math.abs(Number(vote.counts?.for || 0) - Number(vote.counts?.imod || 0)) / total) * 100;
+  }
+
+  function classifyVoteType(vote) {
+    const prefix = (vote.sag_number || "").match(/^([A-ZÆØÅ]+)/u)?.[1] || "";
+    if (prefix === "B") {
+      const title = vote.sag_short_title || vote.sag_title || "";
+      if (/\(borgerforslag\)/i.test(title)) return "B_borger";
+    }
+    return prefix;
   }
 
   function isCloseVote(vote) {
