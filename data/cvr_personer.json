@@ -1012,29 +1012,73 @@
     "9976": {
       "id": 9976,
       "name": "Jette Gottlieb",
-      "status": "ambiguous",
-      "person_total": 2,
-      "exact_match_count": 2,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Jette Ryde Gottlieb",
+      "person_enhedsnummer": "4006516781",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4006516781/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jette%20Gottlieb&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Jette Ryde Gottlieb",
-          "person_enhedsnummer": "4006516781",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006516781/deltager"
+          "company_name": "A/B Amagergade 1",
+          "company_enhedsnummer": "4007866259",
+          "company_cvr": "40040013",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4007866259",
+          "status": null,
+          "roles": [
+            "Foreningsrepræsentant"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "05.03.2024"
+            }
+          ]
         },
         {
-          "name": "Jette Marianne Gottlieb",
-          "person_enhedsnummer": "4000375149",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000375149/deltager"
+          "company_name": "Økologisk Samsø A/S",
+          "company_enhedsnummer": "4006511228",
+          "company_cvr": "37623350",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4006511228",
+          "status": "Normal",
+          "roles": [
+            "Legal ejer"
+          ],
+          "facts": [
+            {
+              "label": "Ejerandel:",
+              "value": "5-9,99% (15.04.2016 - )"
+            },
+            {
+              "label": "Stemmerettigheder:",
+              "value": "5-9,99% (15.04.2016 - )"
+            },
+            {
+              "label": "Kapitalklasse:",
+              "value": "B (15.04.2016 - )"
+            },
+            {
+              "label": "Ændringsdato:",
+              "value": "15.04.2016"
+            }
+          ]
         }
       ],
+      "historical_relation_count": 0,
       "official_name": "Jette Gottlieb",
-      "search_names_tried": [
-        "Jette Gottlieb"
-      ]
+      "search_name_used": "Jette Gottlieb",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet via Folketingets egne dokumenter, hvor den nuværende og tidligere MF omtales som Jette Ryde Gottlieb. Den alternative Virk-kandidat hedder Jette Marianne Gottlieb og matcher derfor ikke Folketingets officielle navnebrug.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/j/jette-gottlieb",
+          "https://www.ft.dk/samling/20211/almdel/reu/spm/920/svar/1886936/2580305/index.htm",
+          "https://datacvr.virk.dk/enhed/person/4006516781/deltager",
+          "https://datacvr.virk.dk/enhed/person/4000375149/deltager"
+        ]
+      }
     },
     "20779": {
       "id": 20779,
@@ -1238,29 +1282,46 @@
     "15757": {
       "id": 15757,
       "name": "Aaja Chemnitz",
-      "status": "ambiguous",
-      "person_total": 2,
-      "exact_match_count": 2,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Aaja Arnatsiak Chemnitz Larsen",
+      "person_enhedsnummer": "4006512265",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4006512265/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Aaja%20Chemnitz&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Aaja Arnatsiak Chemnitz Larsen",
-          "person_enhedsnummer": "4006512265",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006512265/deltager"
-        },
-        {
-          "name": "Aaja Arnatsiaq Chemnitz Driefer",
-          "person_enhedsnummer": "4004183159",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004183159/deltager"
+          "company_name": "Inuit Ataqatigiit Folketingimi v/Aaja Arnatsiak Chemnitz Larsen",
+          "company_enhedsnummer": "4006512266",
+          "company_cvr": "35442103",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4006512266",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "31.03.2016"
+            }
+          ]
         }
       ],
+      "historical_relation_count": 0,
       "official_name": "Aaja Chemnitz",
-      "search_names_tried": [
-        "Aaja Chemnitz"
-      ]
+      "search_name_used": "Aaja Chemnitz",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet via officielle Folketing-kilder, hvor medlemmet omtales som Aaja Chemnitz Larsen. Den ene Virk-kandidat matcher dette efternavn fuldt ud, mens den anden kandidat hedder Driefer og derfor ikke matcher Folketingets egne navneformer.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/a/aaja-chemnitz",
+          "https://www.ft.dk/aktuelt/nyheder/2021/04/aaja-chemnitz-larsen-valgt-som-formand-for-den-arktiske-parlamentariker-komite",
+          "https://www.ft.dk/samling/20151/lovforslag/l158/beh2/0/forhandling.htm",
+          "https://datacvr.virk.dk/enhed/person/4006512265/deltager",
+          "https://datacvr.virk.dk/enhed/person/4004183159/deltager"
+        ]
+      }
     },
     "19142": {
       "id": 19142,

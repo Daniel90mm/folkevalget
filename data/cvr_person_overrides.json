@@ -37,6 +37,31 @@
         "https://datacvr.virk.dk/enhed/person/4000261072/deltager",
         "https://datacvr.virk.dk/enhed/person/4003884199/deltager"
       ]
+    },
+    "15757": {
+      "person_enhedsnummer": "4006512265",
+      "person_type": "deltager",
+      "person_name": "Aaja Arnatsiak Chemnitz Larsen",
+      "note": "Bekræftet via officielle Folketing-kilder, hvor medlemmet omtales som Aaja Chemnitz Larsen. Den ene Virk-kandidat matcher dette efternavn fuldt ud, mens den anden kandidat hedder Driefer og derfor ikke matcher Folketingets egne navneformer.",
+      "sources": [
+        "https://www.ft.dk/medlemmer/mf/a/aaja-chemnitz",
+        "https://www.ft.dk/aktuelt/nyheder/2021/04/aaja-chemnitz-larsen-valgt-som-formand-for-den-arktiske-parlamentariker-komite",
+        "https://www.ft.dk/samling/20151/lovforslag/l158/beh2/0/forhandling.htm",
+        "https://datacvr.virk.dk/enhed/person/4006512265/deltager",
+        "https://datacvr.virk.dk/enhed/person/4004183159/deltager"
+      ]
+    },
+    "9976": {
+      "person_enhedsnummer": "4006516781",
+      "person_type": "deltager",
+      "person_name": "Jette Ryde Gottlieb",
+      "note": "Bekræftet via Folketingets egne dokumenter, hvor den nuværende og tidligere MF omtales som Jette Ryde Gottlieb. Den alternative Virk-kandidat hedder Jette Marianne Gottlieb og matcher derfor ikke Folketingets officielle navnebrug.",
+      "sources": [
+        "https://www.ft.dk/medlemmer/mf/j/jette-gottlieb",
+        "https://www.ft.dk/samling/20211/almdel/reu/spm/920/svar/1886936/2580305/index.htm",
+        "https://datacvr.virk.dk/enhed/person/4006516781/deltager",
+        "https://datacvr.virk.dk/enhed/person/4000375149/deltager"
+      ]
     }
   }
 }

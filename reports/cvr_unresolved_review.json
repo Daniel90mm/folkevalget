@@ -5,56 +5,19 @@
       "profiles_file": "data\\profiler.json"
     },
     "counts": {
-      "unresolved_total": 90,
+      "unresolved_total": 88,
       "not_found": 71,
-      "ambiguous": 19,
+      "ambiguous": 17,
       "with_company_cvrs": 2,
       "with_company_names": 3,
-      "with_candidates": 27,
-      "with_expanded_official_name": 20
+      "with_verified_companies": 3,
+      "with_candidates": 25,
+      "with_expanded_official_name": 17
     }
   },
   "entries": [
     {
       "rank": 1,
-      "score": 93,
-      "status": "not_found",
-      "id": 20389,
-      "name": "Peter Have",
-      "official_name": "Peter Have",
-      "member_url": "https://www.ft.dk/medlemmer/mf/p/peter-have",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Peter%20Have&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Peter%20Have&sideIndex=0&size=10",
-      "candidate_count": 1,
-      "person_total": 12,
-      "company_cvr_count": 2,
-      "company_name_count": 1,
-      "candidate_names": [
-        "Revisionsfirmaet Peter Have & Ejner Petersen"
-      ],
-      "candidate_urls": [
-        "https://datacvr.virk.dk/enhed/person/4004214718/deltager"
-      ],
-      "company_name_samples": [
-        "lasby kro og hotel aps"
-      ],
-      "company_cvr_samples": [
-        "36534540",
-        "37868639"
-      ],
-      "search_names_tried": [
-        "Peter Have"
-      ],
-      "next_step": "Søg virksomhederne direkte i Virk via CVR-numre og sammenhold personrelationer med medlemmet.",
-      "reasons": [
-        "Virk gav persontræf uden sikker identitet",
-        "kun én kandidat at afklare",
-        "officielle CVR-numre i hvervregisteret",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 2,
       "score": 82,
       "status": "ambiguous",
       "id": 15793,
@@ -67,6 +30,7 @@
       "person_total": 8,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Mette Abildgaard",
         "Mette Abildgaard"
@@ -90,7 +54,7 @@
       ]
     },
     {
-      "rank": 3,
+      "rank": 2,
       "score": 64,
       "status": "ambiguous",
       "id": 20378,
@@ -103,6 +67,7 @@
       "person_total": 3,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Rosa Zangenberg Eriksen",
         "Rosa Anne-Lise Eriksen"
@@ -124,7 +89,7 @@
       ]
     },
     {
-      "rank": 4,
+      "rank": 3,
       "score": 64,
       "status": "ambiguous",
       "id": 48,
@@ -137,6 +102,7 @@
       "person_total": 17,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Peter Skaarup",
         "Peter Skaarup"
@@ -158,7 +124,7 @@
       ]
     },
     {
-      "rank": 5,
+      "rank": 4,
       "score": 64,
       "status": "ambiguous",
       "id": 20357,
@@ -171,6 +137,7 @@
       "person_total": 7,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Lise Bertelsen",
         "Lise Bertelsen"
@@ -192,7 +159,7 @@
       ]
     },
     {
-      "rank": 6,
+      "rank": 5,
       "score": 64,
       "status": "ambiguous",
       "id": 19928,
@@ -205,6 +172,7 @@
       "person_total": 2,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Kim Aas Christensen",
         "Kim Steen Aas Jensen"
@@ -226,7 +194,7 @@
       ]
     },
     {
-      "rank": 7,
+      "rank": 6,
       "score": 64,
       "status": "ambiguous",
       "id": 162,
@@ -239,6 +207,7 @@
       "person_total": 3,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Karina Adsbøl Klovgaard",
         "Karina Marie Adsbøl"
@@ -260,41 +229,7 @@
       ]
     },
     {
-      "rank": 8,
-      "score": 64,
-      "status": "ambiguous",
-      "id": 9976,
-      "name": "Jette Gottlieb",
-      "official_name": "Jette Gottlieb",
-      "member_url": "https://www.ft.dk/medlemmer/mf/j/jette-gottlieb",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Jette%20Gottlieb&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jette%20Gottlieb&sideIndex=0&size=10",
-      "candidate_count": 2,
-      "person_total": 2,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "candidate_names": [
-        "Jette Ryde Gottlieb",
-        "Jette Marianne Gottlieb"
-      ],
-      "candidate_urls": [
-        "https://datacvr.virk.dk/enhed/person/4006516781/deltager",
-        "https://datacvr.virk.dk/enhed/person/4000375149/deltager"
-      ],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Jette Gottlieb"
-      ],
-      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
-      "reasons": [
-        "flere konkrete Virk-kandidater",
-        "to kandidater at afklare",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 9,
+      "rank": 7,
       "score": 64,
       "status": "ambiguous",
       "id": 20383,
@@ -307,6 +242,7 @@
       "person_total": 2,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Jeppe Søe",
         "Jeppe Søe"
@@ -328,7 +264,7 @@
       ]
     },
     {
-      "rank": 10,
+      "rank": 8,
       "score": 64,
       "status": "ambiguous",
       "id": 265,
@@ -341,6 +277,7 @@
       "person_total": 2,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Eva Kjer Hansen",
         "Eva Kjer Hansen"
@@ -362,7 +299,7 @@
       ]
     },
     {
-      "rank": 11,
+      "rank": 9,
       "score": 64,
       "status": "ambiguous",
       "id": 257,
@@ -375,6 +312,7 @@
       "person_total": 7,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Bjarne Laustsen",
         "Bjarne Laustsen"
@@ -396,7 +334,7 @@
       ]
     },
     {
-      "rank": 12,
+      "rank": 10,
       "score": 64,
       "status": "ambiguous",
       "id": 18719,
@@ -409,6 +347,7 @@
       "person_total": 5,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Birgitte Vind",
         "Birgitte Vind"
@@ -430,75 +369,7 @@
       ]
     },
     {
-      "rank": 13,
-      "score": 64,
-      "status": "ambiguous",
-      "id": 15757,
-      "name": "Aaja Chemnitz",
-      "official_name": "Aaja Chemnitz",
-      "member_url": "https://www.ft.dk/medlemmer/mf/a/aaja-chemnitz",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Aaja%20Chemnitz&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Aaja%20Chemnitz&sideIndex=0&size=10",
-      "candidate_count": 2,
-      "person_total": 2,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "candidate_names": [
-        "Aaja Arnatsiak Chemnitz Larsen",
-        "Aaja Arnatsiaq Chemnitz Driefer"
-      ],
-      "candidate_urls": [
-        "https://datacvr.virk.dk/enhed/person/4006512265/deltager",
-        "https://datacvr.virk.dk/enhed/person/4004183159/deltager"
-      ],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Aaja Chemnitz"
-      ],
-      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
-      "reasons": [
-        "flere konkrete Virk-kandidater",
-        "to kandidater at afklare",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 14,
-      "score": 63,
-      "status": "not_found",
-      "id": 11702,
-      "name": "Per Larsen",
-      "official_name": "Per Larsen",
-      "member_url": "https://www.ft.dk/medlemmer/mf/p/per-larsen",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Per%20Larsen&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Per%20Larsen&sideIndex=0&size=10",
-      "candidate_count": 0,
-      "person_total": 413,
-      "company_cvr_count": 2,
-      "company_name_count": 2,
-      "candidate_names": [],
-      "candidate_urls": [],
-      "company_name_samples": [
-        "amgros i s",
-        "nordjyske jernbaner"
-      ],
-      "company_cvr_samples": [
-        "1449880",
-        "29818983"
-      ],
-      "search_names_tried": [
-        "Per Larsen"
-      ],
-      "next_step": "Søg virksomhederne direkte i Virk via CVR-numre og sammenhold personrelationer med medlemmet.",
-      "reasons": [
-        "Virk gav persontræf uden sikker identitet",
-        "officielle CVR-numre i hvervregisteret",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 15,
+      "rank": 11,
       "score": 55,
       "status": "not_found",
       "id": 252,
@@ -511,6 +382,7 @@
       "person_total": 5,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Pia Kjærsgaard Jørgensen",
         "Pia Kjærsgaard Hansen",
@@ -536,7 +408,7 @@
       ]
     },
     {
-      "rank": 16,
+      "rank": 12,
       "score": 55,
       "status": "not_found",
       "id": 17628,
@@ -549,6 +421,7 @@
       "person_total": 5,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Ib Carl Valentin Hansen",
         "Carl Gustav Valentin Jensen",
@@ -578,7 +451,47 @@
       ]
     },
     {
-      "rank": 17,
+      "rank": 13,
+      "score": 54,
+      "status": "not_found",
+      "id": 20389,
+      "name": "Peter Have",
+      "official_name": "Peter Have",
+      "member_url": "https://www.ft.dk/medlemmer/mf/p/peter-have",
+      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Peter%20Have&sf=mf",
+      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Peter%20Have&sideIndex=0&size=10",
+      "candidate_count": 1,
+      "person_total": 12,
+      "company_cvr_count": 2,
+      "company_name_count": 1,
+      "verified_company_count": 2,
+      "candidate_names": [
+        "Revisionsfirmaet Peter Have & Ejner Petersen"
+      ],
+      "candidate_urls": [
+        "https://datacvr.virk.dk/enhed/person/4004214718/deltager"
+      ],
+      "company_name_samples": [
+        "kro og hotel aps"
+      ],
+      "company_cvr_samples": [
+        "36534540",
+        "37868639"
+      ],
+      "search_names_tried": [
+        "Peter Have"
+      ],
+      "next_step": "Søg virksomhederne direkte i Virk via CVR-numre og sammenhold personrelationer med medlemmet.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "kun én kandidat at afklare",
+        "officielle CVR-numre i hvervregisteret",
+        "officiel medlemsside findes",
+        "profilen har allerede verificerede virksomhedstræf"
+      ]
+    },
+    {
+      "rank": 14,
       "score": 54,
       "status": "ambiguous",
       "id": 208,
@@ -591,6 +504,7 @@
       "person_total": 3,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Simon Kollerup Poulsen",
         "Simon Kollerup Søe-Larsen",
@@ -614,7 +528,7 @@
       ]
     },
     {
-      "rank": 18,
+      "rank": 15,
       "score": 54,
       "status": "ambiguous",
       "id": 20841,
@@ -627,6 +541,7 @@
       "person_total": 3,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Lars Arne Christensen",
         "Lars Arne Christensen",
@@ -650,7 +565,7 @@
       ]
     },
     {
-      "rank": 19,
+      "rank": 16,
       "score": 54,
       "status": "ambiguous",
       "id": 110,
@@ -663,6 +578,7 @@
       "person_total": 5,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Rosa Lund From",
         "Rosa Siri Lund",
@@ -688,7 +604,7 @@
       ]
     },
     {
-      "rank": 20,
+      "rank": 17,
       "score": 54,
       "status": "ambiguous",
       "id": 20790,
@@ -701,6 +617,7 @@
       "person_total": 7,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Ken Kristensen",
         "Ken Kristensen",
@@ -726,7 +643,7 @@
       ]
     },
     {
-      "rank": 21,
+      "rank": 18,
       "score": 54,
       "status": "ambiguous",
       "id": 20767,
@@ -739,6 +656,7 @@
       "person_total": 4,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Andreas Aarenstrup Karlsen",
         "Andreas Stefan Karlsen",
@@ -764,7 +682,7 @@
       ]
     },
     {
-      "rank": 22,
+      "rank": 19,
       "score": 54,
       "status": "ambiguous",
       "id": 18718,
@@ -777,6 +695,7 @@
       "person_total": 11,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Anders Kronborg",
         "Anders Kronborg",
@@ -802,42 +721,7 @@
       ]
     },
     {
-      "rank": 23,
-      "score": 53,
-      "status": "not_found",
-      "id": 20394,
-      "name": "Steffen W. Frølund",
-      "official_name": "Steffen W",
-      "member_url": "https://www.ft.dk/medlemmer/mf/s/steffen-w-froelund",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Steffen%20W&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Steffen%20W&sideIndex=0&size=10",
-      "candidate_count": 0,
-      "person_total": 0,
-      "company_cvr_count": 0,
-      "company_name_count": 25,
-      "candidate_names": [],
-      "candidate_urls": [],
-      "company_name_samples": [
-        "likeminded vc aps",
-        "likeminded vc management aps",
-        "likeminded vc gp i aps",
-        "likeminded vc fund i k s",
-        "likeminded vc civ i k s"
-      ],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Steffen W",
-        "Steffen W. Frølund"
-      ],
-      "next_step": "Søg de erklærede virksomhedsnavne direkte i Virk og match personrelationer mod officielle hverv.",
-      "reasons": [
-        "officielle virksomhedsnavne i hvervregisteret",
-        "officielt fuldnavn er mere specifikt end profilnavnet",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 24,
+      "rank": 20,
       "score": 53,
       "status": "not_found",
       "id": 262,
@@ -850,6 +734,7 @@
       "person_total": 1,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Sjurdur Skaale"
       ],
@@ -869,7 +754,7 @@
       ]
     },
     {
-      "rank": 25,
+      "rank": 21,
       "score": 53,
       "status": "not_found",
       "id": 15776,
@@ -882,6 +767,7 @@
       "person_total": 1,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Leif Peter Hummelgård"
       ],
@@ -901,7 +787,7 @@
       ]
     },
     {
-      "rank": 26,
+      "rank": 22,
       "score": 53,
       "status": "not_found",
       "id": 18723,
@@ -914,6 +800,7 @@
       "person_total": 1,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Ann Pernille Vermund Bretton-Meyer"
       ],
@@ -933,7 +820,7 @@
       ]
     },
     {
-      "rank": 27,
+      "rank": 23,
       "score": 47,
       "status": "not_found",
       "id": 15788,
@@ -946,6 +833,7 @@
       "person_total": 9,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Jacob Mark Henriksen",
         "Jacob Mark Nielsen",
@@ -975,7 +863,7 @@
       ]
     },
     {
-      "rank": 28,
+      "rank": 24,
       "score": 47,
       "status": "not_found",
       "id": 20356,
@@ -988,6 +876,7 @@
       "person_total": 14,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Mikkel Bjørn Rasmussen",
         "Mikkel Bjørn Clausen",
@@ -1017,7 +906,7 @@
       ]
     },
     {
-      "rank": 29,
+      "rank": 25,
       "score": 46,
       "status": "ambiguous",
       "id": 18720,
@@ -1030,6 +919,7 @@
       "person_total": 6,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [
         "Camilla Fabricius Mørk",
         "Camilla Fabricius-Jensen",
@@ -1057,7 +947,7 @@
       ]
     },
     {
-      "rank": 30,
+      "rank": 26,
       "score": 41,
       "status": "not_found",
       "id": 167,
@@ -1070,6 +960,7 @@
       "person_total": 73,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1086,7 +977,43 @@
       ]
     },
     {
-      "rank": 31,
+      "rank": 27,
+      "score": 26,
+      "status": "not_found",
+      "id": 11702,
+      "name": "Per Larsen",
+      "official_name": "Per Larsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/p/per-larsen",
+      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Per%20Larsen&sf=mf",
+      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Per%20Larsen&sideIndex=0&size=10",
+      "candidate_count": 0,
+      "person_total": 413,
+      "company_cvr_count": 2,
+      "company_name_count": 2,
+      "verified_company_count": 1,
+      "candidate_names": [],
+      "candidate_urls": [],
+      "company_name_samples": [
+        "amgros i s",
+        "nordjyske jernbaner"
+      ],
+      "company_cvr_samples": [
+        "1449880",
+        "29818983"
+      ],
+      "search_names_tried": [
+        "Per Larsen"
+      ],
+      "next_step": "Søg virksomhederne direkte i Virk via CVR-numre og sammenhold personrelationer med medlemmet.",
+      "reasons": [
+        "Virk gav persontræf uden sikker identitet",
+        "officielle CVR-numre i hvervregisteret",
+        "officiel medlemsside findes",
+        "profilen har allerede verificerede virksomhedstræf"
+      ]
+    },
+    {
+      "rank": 28,
       "score": 23,
       "status": "not_found",
       "id": 201,
@@ -1099,6 +1026,7 @@
       "person_total": 907,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1113,7 +1041,7 @@
       ]
     },
     {
-      "rank": 32,
+      "rank": 29,
       "score": 23,
       "status": "not_found",
       "id": 20397,
@@ -1126,6 +1054,7 @@
       "person_total": 70,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1140,7 +1069,7 @@
       ]
     },
     {
-      "rank": 33,
+      "rank": 30,
       "score": 23,
       "status": "not_found",
       "id": 20599,
@@ -1153,6 +1082,7 @@
       "person_total": 457,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1167,7 +1097,7 @@
       ]
     },
     {
-      "rank": 34,
+      "rank": 31,
       "score": 23,
       "status": "not_found",
       "id": 154,
@@ -1180,6 +1110,7 @@
       "person_total": 461,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1194,7 +1125,7 @@
       ]
     },
     {
-      "rank": 35,
+      "rank": 32,
       "score": 23,
       "status": "not_found",
       "id": 138,
@@ -1207,6 +1138,7 @@
       "person_total": 37,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1221,7 +1153,7 @@
       ]
     },
     {
-      "rank": 36,
+      "rank": 33,
       "score": 23,
       "status": "not_found",
       "id": 18701,
@@ -1234,6 +1166,7 @@
       "person_total": 19,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1248,7 +1181,7 @@
       ]
     },
     {
-      "rank": 37,
+      "rank": 34,
       "score": 23,
       "status": "not_found",
       "id": 97,
@@ -1261,6 +1194,7 @@
       "person_total": 263,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1275,7 +1209,7 @@
       ]
     },
     {
-      "rank": 38,
+      "rank": 35,
       "score": 23,
       "status": "not_found",
       "id": 173,
@@ -1288,6 +1222,7 @@
       "person_total": 358,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1302,7 +1237,7 @@
       ]
     },
     {
-      "rank": 39,
+      "rank": 36,
       "score": 23,
       "status": "not_found",
       "id": 20962,
@@ -1315,6 +1250,7 @@
       "person_total": 215,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1329,7 +1265,7 @@
       ]
     },
     {
-      "rank": 40,
+      "rank": 37,
       "score": 23,
       "status": "not_found",
       "id": 20820,
@@ -1342,6 +1278,7 @@
       "person_total": 138,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1356,7 +1293,7 @@
       ]
     },
     {
-      "rank": 41,
+      "rank": 38,
       "score": 13,
       "status": "not_found",
       "id": 191,
@@ -1369,6 +1306,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1385,7 +1323,7 @@
       ]
     },
     {
-      "rank": 42,
+      "rank": 39,
       "score": 13,
       "status": "not_found",
       "id": 20373,
@@ -1398,6 +1336,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1414,7 +1353,7 @@
       ]
     },
     {
-      "rank": 43,
+      "rank": 40,
       "score": 13,
       "status": "not_found",
       "id": 18716,
@@ -1427,6 +1366,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1443,36 +1383,7 @@
       ]
     },
     {
-      "rank": 44,
-      "score": 13,
-      "status": "not_found",
-      "id": 20384,
-      "name": "Nanna W. Gotfredsen",
-      "official_name": "Nanna W",
-      "member_url": "https://www.ft.dk/medlemmer/mf/n/nanna-w-gotfredsen",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Nanna%20W&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Nanna%20W&sideIndex=0&size=10",
-      "candidate_count": 0,
-      "person_total": 0,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "candidate_names": [],
-      "candidate_urls": [],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Nanna W",
-        "Nanna W. Gotfredsen"
-      ],
-      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
-      "reasons": [
-        "officielt fuldnavn er mere specifikt end profilnavnet",
-        "officiel medlemsside findes",
-        "ingen kandidater og ingen virksomhedsspor"
-      ]
-    },
-    {
-      "rank": 45,
+      "rank": 41,
       "score": 13,
       "status": "not_found",
       "id": 17360,
@@ -1485,6 +1396,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1501,7 +1413,7 @@
       ]
     },
     {
-      "rank": 46,
+      "rank": 42,
       "score": 13,
       "status": "not_found",
       "id": 20365,
@@ -1514,6 +1426,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1530,7 +1443,7 @@
       ]
     },
     {
-      "rank": 47,
+      "rank": 43,
       "score": 13,
       "status": "not_found",
       "id": 1146,
@@ -1543,6 +1456,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1559,36 +1473,7 @@
       ]
     },
     {
-      "rank": 48,
-      "score": 13,
-      "status": "not_found",
-      "id": 20635,
-      "name": "Markus E. Olsen",
-      "official_name": "Markus E",
-      "member_url": "https://www.ft.dk/medlemmer/mf/m/markus-e-olsen",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Markus%20E&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Markus%20E&sideIndex=0&size=10",
-      "candidate_count": 0,
-      "person_total": 0,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "candidate_names": [],
-      "candidate_urls": [],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Markus E",
-        "Markus E. Olsen"
-      ],
-      "next_step": "Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.",
-      "reasons": [
-        "officielt fuldnavn er mere specifikt end profilnavnet",
-        "officiel medlemsside findes",
-        "ingen kandidater og ingen virksomhedsspor"
-      ]
-    },
-    {
-      "rank": 49,
+      "rank": 44,
       "score": 13,
       "status": "not_found",
       "id": 219,
@@ -1601,6 +1486,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1617,7 +1503,7 @@
       ]
     },
     {
-      "rank": 50,
+      "rank": 45,
       "score": 13,
       "status": "not_found",
       "id": 18729,
@@ -1630,6 +1516,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1646,7 +1533,7 @@
       ]
     },
     {
-      "rank": 51,
+      "rank": 46,
       "score": 13,
       "status": "not_found",
       "id": 214,
@@ -1659,6 +1546,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1675,7 +1563,7 @@
       ]
     },
     {
-      "rank": 52,
+      "rank": 47,
       "score": 13,
       "status": "not_found",
       "id": 18707,
@@ -1688,6 +1576,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1704,7 +1593,7 @@
       ]
     },
     {
-      "rank": 53,
+      "rank": 48,
       "score": 13,
       "status": "not_found",
       "id": 18688,
@@ -1717,6 +1606,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1733,7 +1623,7 @@
       ]
     },
     {
-      "rank": 54,
+      "rank": 49,
       "score": -5,
       "status": "not_found",
       "id": 18694,
@@ -1746,6 +1636,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1761,7 +1652,7 @@
       ]
     },
     {
-      "rank": 55,
+      "rank": 50,
       "score": -5,
       "status": "not_found",
       "id": 21083,
@@ -1774,6 +1665,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1788,7 +1680,7 @@
       ]
     },
     {
-      "rank": 56,
+      "rank": 51,
       "score": -5,
       "status": "not_found",
       "id": 19000,
@@ -1801,6 +1693,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1815,7 +1708,7 @@
       ]
     },
     {
-      "rank": 57,
+      "rank": 52,
       "score": -5,
       "status": "not_found",
       "id": 20360,
@@ -1828,6 +1721,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1842,7 +1736,7 @@
       ]
     },
     {
-      "rank": 58,
+      "rank": 53,
       "score": -5,
       "status": "not_found",
       "id": 100,
@@ -1855,6 +1749,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1869,7 +1764,7 @@
       ]
     },
     {
-      "rank": 59,
+      "rank": 54,
       "score": -5,
       "status": "not_found",
       "id": 20779,
@@ -1882,6 +1777,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1896,7 +1792,7 @@
       ]
     },
     {
-      "rank": 60,
+      "rank": 55,
       "score": -5,
       "status": "not_found",
       "id": 20559,
@@ -1909,6 +1805,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1923,7 +1820,7 @@
       ]
     },
     {
-      "rank": 61,
+      "rank": 56,
       "score": -5,
       "status": "not_found",
       "id": 266,
@@ -1936,6 +1833,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1950,7 +1848,7 @@
       ]
     },
     {
-      "rank": 62,
+      "rank": 57,
       "score": -5,
       "status": "not_found",
       "id": 18722,
@@ -1963,6 +1861,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -1977,7 +1876,7 @@
       ]
     },
     {
-      "rank": 63,
+      "rank": 58,
       "score": -5,
       "status": "not_found",
       "id": 20350,
@@ -1990,6 +1889,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2004,7 +1904,35 @@
       ]
     },
     {
-      "rank": 64,
+      "rank": 59,
+      "score": -5,
+      "status": "not_found",
+      "id": 20384,
+      "name": "Nanna W. Gotfredsen",
+      "official_name": "Nanna W. Gotfredsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/n/nanna-w-gotfredsen",
+      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Nanna%20W.%20Gotfredsen&sf=mf",
+      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Nanna%20W.%20Gotfredsen&sideIndex=0&size=10",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "verified_company_count": 0,
+      "candidate_names": [],
+      "candidate_urls": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "search_names_tried": [
+        "Nanna W. Gotfredsen"
+      ],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 60,
       "score": -5,
       "status": "not_found",
       "id": 20527,
@@ -2017,6 +1945,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2031,7 +1960,7 @@
       ]
     },
     {
-      "rank": 65,
+      "rank": 61,
       "score": -5,
       "status": "not_found",
       "id": 21143,
@@ -2044,6 +1973,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2058,7 +1988,7 @@
       ]
     },
     {
-      "rank": 66,
+      "rank": 62,
       "score": -5,
       "status": "not_found",
       "id": 20380,
@@ -2071,6 +2001,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2085,7 +2016,7 @@
       ]
     },
     {
-      "rank": 67,
+      "rank": 63,
       "score": -5,
       "status": "not_found",
       "id": 197,
@@ -2098,6 +2029,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2112,7 +2044,35 @@
       ]
     },
     {
-      "rank": 68,
+      "rank": 64,
+      "score": -5,
+      "status": "not_found",
+      "id": 20635,
+      "name": "Markus E. Olsen",
+      "official_name": "Markus E. Olsen",
+      "member_url": "https://www.ft.dk/medlemmer/mf/m/markus-e-olsen",
+      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Markus%20E.%20Olsen&sf=mf",
+      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Markus%20E.%20Olsen&sideIndex=0&size=10",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 0,
+      "verified_company_count": 0,
+      "candidate_names": [],
+      "candidate_urls": [],
+      "company_name_samples": [],
+      "company_cvr_samples": [],
+      "search_names_tried": [
+        "Markus E. Olsen"
+      ],
+      "next_step": "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.",
+      "reasons": [
+        "officiel medlemsside findes",
+        "ingen kandidater og ingen virksomhedsspor"
+      ]
+    },
+    {
+      "rank": 65,
       "score": -5,
       "status": "not_found",
       "id": 18693,
@@ -2125,6 +2085,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2139,7 +2100,7 @@
       ]
     },
     {
-      "rank": 69,
+      "rank": 66,
       "score": -5,
       "status": "not_found",
       "id": 21186,
@@ -2152,6 +2113,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2166,7 +2128,7 @@
       ]
     },
     {
-      "rank": 70,
+      "rank": 67,
       "score": -5,
       "status": "not_found",
       "id": 20930,
@@ -2179,6 +2141,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2193,7 +2156,7 @@
       ]
     },
     {
-      "rank": 71,
+      "rank": 68,
       "score": -5,
       "status": "not_found",
       "id": 93,
@@ -2206,6 +2169,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2220,7 +2184,7 @@
       ]
     },
     {
-      "rank": 72,
+      "rank": 69,
       "score": -5,
       "status": "not_found",
       "id": 20371,
@@ -2233,6 +2197,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2247,7 +2212,7 @@
       ]
     },
     {
-      "rank": 73,
+      "rank": 70,
       "score": -5,
       "status": "not_found",
       "id": 21044,
@@ -2260,6 +2225,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2274,7 +2240,7 @@
       ]
     },
     {
-      "rank": 74,
+      "rank": 71,
       "score": -5,
       "status": "not_found",
       "id": 20367,
@@ -2287,6 +2253,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2301,7 +2268,7 @@
       ]
     },
     {
-      "rank": 75,
+      "rank": 72,
       "score": -5,
       "status": "not_found",
       "id": 20916,
@@ -2314,6 +2281,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2328,7 +2296,7 @@
       ]
     },
     {
-      "rank": 76,
+      "rank": 73,
       "score": -5,
       "status": "not_found",
       "id": 20747,
@@ -2341,6 +2309,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2355,7 +2324,7 @@
       ]
     },
     {
-      "rank": 77,
+      "rank": 74,
       "score": -5,
       "status": "not_found",
       "id": 20351,
@@ -2368,6 +2337,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2382,7 +2352,7 @@
       ]
     },
     {
-      "rank": 78,
+      "rank": 75,
       "score": -5,
       "status": "not_found",
       "id": 20361,
@@ -2395,6 +2365,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2409,7 +2380,7 @@
       ]
     },
     {
-      "rank": 79,
+      "rank": 76,
       "score": -5,
       "status": "not_found",
       "id": 21206,
@@ -2422,6 +2393,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2436,7 +2408,7 @@
       ]
     },
     {
-      "rank": 80,
+      "rank": 77,
       "score": -5,
       "status": "not_found",
       "id": 15762,
@@ -2449,6 +2421,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2463,7 +2436,7 @@
       ]
     },
     {
-      "rank": 81,
+      "rank": 78,
       "score": -5,
       "status": "not_found",
       "id": 18708,
@@ -2476,6 +2449,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2490,7 +2464,7 @@
       ]
     },
     {
-      "rank": 82,
+      "rank": 79,
       "score": -5,
       "status": "not_found",
       "id": 20976,
@@ -2503,6 +2477,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2517,7 +2492,7 @@
       ]
     },
     {
-      "rank": 83,
+      "rank": 80,
       "score": -5,
       "status": "not_found",
       "id": 17141,
@@ -2530,6 +2505,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2544,7 +2520,7 @@
       ]
     },
     {
-      "rank": 84,
+      "rank": 81,
       "score": -5,
       "status": "not_found",
       "id": 18717,
@@ -2557,6 +2533,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2571,7 +2548,7 @@
       ]
     },
     {
-      "rank": 85,
+      "rank": 82,
       "score": -5,
       "status": "not_found",
       "id": 19142,
@@ -2584,6 +2561,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2598,7 +2576,7 @@
       ]
     },
     {
-      "rank": 86,
+      "rank": 83,
       "score": -5,
       "status": "not_found",
       "id": 18706,
@@ -2611,6 +2589,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2625,7 +2604,42 @@
       ]
     },
     {
-      "rank": 87,
+      "rank": 84,
+      "score": -10,
+      "status": "not_found",
+      "id": 20394,
+      "name": "Steffen W. Frølund",
+      "official_name": "Steffen W. Frølund",
+      "member_url": "https://www.ft.dk/medlemmer/mf/s/steffen-w-froelund",
+      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Steffen%20W.%20Fr%C3%B8lund&sf=mf",
+      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Steffen%20W.%20Fr%C3%B8lund&sideIndex=0&size=10",
+      "candidate_count": 0,
+      "person_total": 0,
+      "company_cvr_count": 0,
+      "company_name_count": 28,
+      "verified_company_count": 12,
+      "candidate_names": [],
+      "candidate_urls": [],
+      "company_name_samples": [
+        "likeminded vc aps",
+        "likeminded vc management aps",
+        "likeminded vc gp i aps",
+        "likeminded vc fund i k s",
+        "likeminded vc civ i k s"
+      ],
+      "company_cvr_samples": [],
+      "search_names_tried": [
+        "Steffen W. Frølund"
+      ],
+      "next_step": "Søg de erklærede virksomhedsnavne direkte i Virk og match personrelationer mod officielle hverv.",
+      "reasons": [
+        "officielle virksomhedsnavne i hvervregisteret",
+        "officiel medlemsside findes",
+        "profilen har allerede verificerede virksomhedstræf"
+      ]
+    },
+    {
+      "rank": 85,
       "score": -18,
       "status": "not_found",
       "id": 1158,
@@ -2638,6 +2652,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2652,7 +2667,7 @@
       ]
     },
     {
-      "rank": 88,
+      "rank": 86,
       "score": -18,
       "status": "not_found",
       "id": 21285,
@@ -2665,6 +2680,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2679,7 +2695,7 @@
       ]
     },
     {
-      "rank": 89,
+      "rank": 87,
       "score": -18,
       "status": "not_found",
       "id": 19826,
@@ -2692,6 +2708,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],
@@ -2706,7 +2723,7 @@
       ]
     },
     {
-      "rank": 90,
+      "rank": 88,
       "score": -18,
       "status": "not_found",
       "id": 19548,
@@ -2719,6 +2736,7 @@
       "person_total": 0,
       "company_cvr_count": 0,
       "company_name_count": 0,
+      "verified_company_count": 0,
       "candidate_names": [],
       "candidate_urls": [],
       "company_name_samples": [],

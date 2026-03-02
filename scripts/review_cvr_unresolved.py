@@ -38,6 +38,7 @@ class ReviewEntry:
     person_total: int
     company_cvr_count: int
     company_name_count: int
+    verified_company_count: int
     candidate_names: list[str]
     candidate_urls: list[str]
     company_name_samples: list[str]
@@ -61,6 +62,7 @@ class ReviewEntry:
             "person_total": self.person_total,
             "company_cvr_count": self.company_cvr_count,
             "company_name_count": self.company_name_count,
+            "verified_company_count": self.verified_company_count,
             "candidate_names": self.candidate_names,
             "candidate_urls": self.candidate_urls,
             "company_name_samples": self.company_name_samples,
@@ -120,6 +122,7 @@ def score_entry(
     person_total: int,
     company_cvr_count: int,
     company_name_count: int,
+    verified_company_count: int,
     official_name_differs: bool,
     has_member_url: bool,
 ) -> tuple[int, list[str]]:
@@ -168,6 +171,10 @@ def score_entry(
         score -= 10
         reasons.append("ingen kandidater og ingen virksomhedsspor")
 
+    if verified_company_count:
+        score -= 35 + min(verified_company_count, 5) * 2
+        reasons.append("profilen har allerede verificerede virksomhedstræf")
+
     return score, reasons
 
 
@@ -189,6 +196,7 @@ def build_review_entries() -> tuple[dict[str, Any], list[ReviewEntry]]:
         company_clues = item.get("verification_clues") or {}
         company_names = company_clues.get("company_names") or []
         company_cvrs = company_clues.get("company_cvrs") or []
+        verified_companies = item.get("verified_companies") or []
         candidates = item.get("candidates") or []
         candidate_names = [candidate.get("name") for candidate in candidates if candidate.get("name")]
         candidate_urls = [candidate.get("person_url") for candidate in candidates if candidate.get("person_url")]
@@ -208,6 +216,7 @@ def build_review_entries() -> tuple[dict[str, Any], list[ReviewEntry]]:
             person_total=int(item.get("person_total") or 0),
             company_cvr_count=len(company_cvrs),
             company_name_count=len(company_names),
+            verified_company_count=len(verified_companies),
             official_name_differs=official_name_differs,
             has_member_url=bool(profile.get("member_url")),
         )
@@ -227,6 +236,7 @@ def build_review_entries() -> tuple[dict[str, Any], list[ReviewEntry]]:
                 person_total=int(item.get("person_total") or 0),
                 company_cvr_count=len(company_cvrs),
                 company_name_count=len(company_names),
+                verified_company_count=len(verified_companies),
                 candidate_names=candidate_names[:5],
                 candidate_urls=candidate_urls[:5],
                 company_name_samples=company_names[:5],
@@ -269,6 +279,7 @@ def build_review_entries() -> tuple[dict[str, Any], list[ReviewEntry]]:
             "ambiguous": unresolved_status_counts.get("ambiguous", 0),
             "with_company_cvrs": sum(1 for entry in entries if entry.company_cvr_count),
             "with_company_names": sum(1 for entry in entries if entry.company_name_count),
+            "with_verified_companies": sum(1 for entry in entries if entry.verified_company_count),
             "with_candidates": sum(1 for entry in entries if entry.candidate_count),
             "with_expanded_official_name": sum(
                 1 for entry in entries if entry.official_name and normalise(entry.official_name) != normalise(entry.name)
@@ -296,6 +307,7 @@ def write_reports(summary: dict[str, Any], entries: list[ReviewEntry]) -> None:
         f"- Tvetydige: {summary['counts']['ambiguous']}",
         f"- Med CVR-spor fra hverv: {summary['counts']['with_company_cvrs']}",
         f"- Med virksomhedsnavne fra hverv: {summary['counts']['with_company_names']}",
+        f"- Allerede beriget med verificerede virksomheder: {summary['counts']['with_verified_companies']}",
         f"- Med Virk-kandidater: {summary['counts']['with_candidates']}",
         f"- Med udvidet officielt navn: {summary['counts']['with_expanded_official_name']}",
         "",
@@ -323,6 +335,7 @@ def write_reports(summary: dict[str, Any], entries: list[ReviewEntry]) -> None:
                 f"- Kandidatlinks: {candidate_links}",
                 f"- Virksomhedsnavne: {', '.join(entry.company_name_samples) if entry.company_name_samples else '—'}",
                 f"- CVR-spor: {', '.join(entry.company_cvr_samples) if entry.company_cvr_samples else '—'}",
+                f"- Verificerede virksomheder: {entry.verified_company_count}",
                 f"- Kandidater: {', '.join(entry.candidate_names) if entry.candidate_names else '—'}",
                 f"- Næste skridt: {entry.next_step}",
                 f"- Hvorfor højt prioriteret: {', '.join(entry.reasons)}",
