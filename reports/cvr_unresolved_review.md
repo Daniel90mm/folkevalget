@@ -1,12 +1,12 @@
 # CVR review af uløste navne
 
-- Uløste sager: 87
+- Uløste sager: 80
 - Ikke fundet: 71
-- Tvetydige: 16
+- Tvetydige: 9
 - Med CVR-spor fra hverv: 2
 - Med virksomhedsnavne fra hverv: 3
 - Allerede beriget med verificerede virksomheder: 3
-- Med Virk-kandidater: 24
+- Med Virk-kandidater: 17
 - Med udvidet officielt navn: 17
 
 ## Top 25
@@ -26,22 +26,7 @@
 - Næste skridt: Brug flere officielle navnekilder til at afklare mellemnavn eller ekstra efternavn.
 - Hvorfor højt prioriteret: flere konkrete Virk-kandidater, to kandidater at afklare, officielt fuldnavn er mere specifikt end profilnavnet, officiel medlemsside findes
 
-### 2. Rosa Eriksen (ambiguous, score 64)
-- ID: `20378`
-- Officielt navn: Rosa Eriksen
-- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/r/rosa-eriksen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Rosa%20Eriksen&sf=mf)
-- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Rosa%20Eriksen&sideIndex=0&size=10)
-- Søgte navne: Rosa Eriksen
-- Virk-kandidater: 2 (personTotal: 3)
-- Kandidatlinks: [1](https://datacvr.virk.dk/enhed/person/4000664551/deltager), [2](https://datacvr.virk.dk/enhed/person/4003893113/deltager)
-- Virksomhedsnavne: —
-- CVR-spor: —
-- Verificerede virksomheder: 0
-- Kandidater: Rosa Zangenberg Eriksen, Rosa Anne-Lise Eriksen
-- Næste skridt: Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.
-- Hvorfor højt prioriteret: flere konkrete Virk-kandidater, to kandidater at afklare, officiel medlemsside findes
-
-### 3. Peter Skaarup (ambiguous, score 64)
+### 2. Peter Skaarup (ambiguous, score 64)
 - ID: `48`
 - Officielt navn: Peter Skaarup
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/p/peter-skaarup) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Peter%20Skaarup&sf=mf)
@@ -56,7 +41,7 @@
 - Næste skridt: Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.
 - Hvorfor højt prioriteret: flere konkrete Virk-kandidater, to kandidater at afklare, officiel medlemsside findes
 
-### 4. Lise Bertelsen (ambiguous, score 64)
+### 3. Lise Bertelsen (ambiguous, score 64)
 - ID: `20357`
 - Officielt navn: Lise Bertelsen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/l/lise-bertelsen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Lise%20Bertelsen&sf=mf)
@@ -71,52 +56,7 @@
 - Næste skridt: Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.
 - Hvorfor højt prioriteret: flere konkrete Virk-kandidater, to kandidater at afklare, officiel medlemsside findes
 
-### 5. Kim Aas (ambiguous, score 64)
-- ID: `19928`
-- Officielt navn: Kim Aas
-- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/k/kim-aas) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Kim%20Aas&sf=mf)
-- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Kim%20Aas&sideIndex=0&size=10)
-- Søgte navne: Kim Aas
-- Virk-kandidater: 2 (personTotal: 2)
-- Kandidatlinks: [1](https://datacvr.virk.dk/enhed/person/4004191722/deltager), [2](https://datacvr.virk.dk/enhed/person/4000233367/deltager)
-- Virksomhedsnavne: —
-- CVR-spor: —
-- Verificerede virksomheder: 0
-- Kandidater: Kim Aas Christensen, Kim Steen Aas Jensen
-- Næste skridt: Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.
-- Hvorfor højt prioriteret: flere konkrete Virk-kandidater, to kandidater at afklare, officiel medlemsside findes
-
-### 6. Karina Adsbøl (ambiguous, score 64)
-- ID: `162`
-- Officielt navn: Karina Adsbøl
-- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/k/karina-adsboel) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Karina%20Adsb%C3%B8l&sf=mf)
-- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Karina%20Adsb%C3%B8l&sideIndex=0&size=10)
-- Søgte navne: Karina Adsbøl
-- Virk-kandidater: 2 (personTotal: 3)
-- Kandidatlinks: [1](https://datacvr.virk.dk/enhed/person/4000501360/deltager), [2](https://datacvr.virk.dk/enhed/person/4009190334/deltager)
-- Virksomhedsnavne: —
-- CVR-spor: —
-- Verificerede virksomheder: 0
-- Kandidater: Karina Adsbøl Klovgaard, Karina Marie Adsbøl
-- Næste skridt: Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.
-- Hvorfor højt prioriteret: flere konkrete Virk-kandidater, to kandidater at afklare, officiel medlemsside findes
-
-### 7. Jeppe Søe (ambiguous, score 64)
-- ID: `20383`
-- Officielt navn: Jeppe Søe
-- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/j/jeppe-soee) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Jeppe%20S%C3%B8e&sf=mf)
-- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Jeppe%20S%C3%B8e&sideIndex=0&size=10)
-- Søgte navne: Jeppe Søe
-- Virk-kandidater: 2 (personTotal: 2)
-- Kandidatlinks: [1](https://datacvr.virk.dk/enhed/person/4000198046/deltager), [2](https://datacvr.virk.dk/enhed/person/4000322388/deltager)
-- Virksomhedsnavne: —
-- CVR-spor: —
-- Verificerede virksomheder: 0
-- Kandidater: Jeppe Søe, Jeppe Søe
-- Næste skridt: Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.
-- Hvorfor højt prioriteret: flere konkrete Virk-kandidater, to kandidater at afklare, officiel medlemsside findes
-
-### 8. Bjarne Laustsen (ambiguous, score 64)
+### 4. Bjarne Laustsen (ambiguous, score 64)
 - ID: `257`
 - Officielt navn: Bjarne Laustsen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/b/bjarne-laustsen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Bjarne%20Laustsen&sf=mf)
@@ -131,22 +71,7 @@
 - Næste skridt: Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.
 - Hvorfor højt prioriteret: flere konkrete Virk-kandidater, to kandidater at afklare, officiel medlemsside findes
 
-### 9. Birgitte Vind (ambiguous, score 64)
-- ID: `18719`
-- Officielt navn: Birgitte Vind
-- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/b/birgitte-vind) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Birgitte%20Vind&sf=mf)
-- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Birgitte%20Vind&sideIndex=0&size=10)
-- Søgte navne: Birgitte Vind
-- Virk-kandidater: 2 (personTotal: 5)
-- Kandidatlinks: [1](https://datacvr.virk.dk/enhed/person/AAIAZOGC3kLtfkiziuDokEW6vgI/liberal_udoever), [2](https://datacvr.virk.dk/enhed/person/4004192269/deltager)
-- Virksomhedsnavne: —
-- CVR-spor: —
-- Verificerede virksomheder: 0
-- Kandidater: Birgitte Vind, Birgitte Vind
-- Næste skridt: Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.
-- Hvorfor højt prioriteret: flere konkrete Virk-kandidater, to kandidater at afklare, officiel medlemsside findes
-
-### 10. Pia Kjærsgaard (not_found, score 55)
+### 5. Pia Kjærsgaard (not_found, score 55)
 - ID: `252`
 - Officielt navn: Pia Merete Kjærsgaard
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/p/pia-kjaersgaard) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Pia%20Merete%20Kj%C3%A6rsgaard&sf=mf)
@@ -161,7 +86,7 @@
 - Næste skridt: Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, få kandidater at afklare, officielt fuldnavn er mere specifikt end profilnavnet, officiel medlemsside findes
 
-### 11. Carl Valentin (not_found, score 55)
+### 6. Carl Valentin (not_found, score 55)
 - ID: `17628`
 - Officielt navn: Carl Valentin Lehrmann
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/c/carl-valentin) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Carl%20Valentin%20Lehrmann&sf=mf)
@@ -176,7 +101,7 @@
 - Næste skridt: Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, få kandidater at afklare, officielt fuldnavn er mere specifikt end profilnavnet, officiel medlemsside findes
 
-### 12. Peter Have (not_found, score 54)
+### 7. Peter Have (not_found, score 54)
 - ID: `20389`
 - Officielt navn: Peter Have
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/p/peter-have) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Peter%20Have&sf=mf)
@@ -191,22 +116,7 @@
 - Næste skridt: Søg virksomhederne direkte i Virk via CVR-numre og sammenhold personrelationer med medlemmet.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, kun én kandidat at afklare, officielle CVR-numre i hvervregisteret, officiel medlemsside findes, profilen har allerede verificerede virksomhedstræf
 
-### 13. Simon Kollerup (ambiguous, score 54)
-- ID: `208`
-- Officielt navn: Simon Kollerup
-- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/s/simon-kollerup) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Simon%20Kollerup&sf=mf)
-- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Simon%20Kollerup&sideIndex=0&size=10)
-- Søgte navne: Simon Kollerup
-- Virk-kandidater: 3 (personTotal: 3)
-- Kandidatlinks: [1](https://datacvr.virk.dk/enhed/person/4006080851/deltager), [2](https://datacvr.virk.dk/enhed/person/4008665340/deltager), [3](https://datacvr.virk.dk/enhed/person/4000552272/deltager)
-- Virksomhedsnavne: —
-- CVR-spor: —
-- Verificerede virksomheder: 0
-- Kandidater: Simon Kollerup Poulsen, Simon Kollerup Søe-Larsen, Simon Monrad Kollerup
-- Næste skridt: Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.
-- Hvorfor højt prioriteret: flere konkrete Virk-kandidater, få kandidater at afklare, officiel medlemsside findes
-
-### 14. Lars Arne Christensen (ambiguous, score 54)
+### 8. Lars Arne Christensen (ambiguous, score 54)
 - ID: `20841`
 - Officielt navn: Lars Arne Christensen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/l/lars-arne-christensen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Lars%20Arne%20Christensen&sf=mf)
@@ -221,7 +131,7 @@
 - Næste skridt: Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.
 - Hvorfor højt prioriteret: flere konkrete Virk-kandidater, få kandidater at afklare, officiel medlemsside findes
 
-### 15. Rosa Lund (ambiguous, score 54)
+### 9. Rosa Lund (ambiguous, score 54)
 - ID: `110`
 - Officielt navn: Rosa Lund
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/r/rosa-lund) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Rosa%20Lund&sf=mf)
@@ -236,7 +146,7 @@
 - Næste skridt: Indsaml flere officielle identitetsmarkører før der vælges en Virk-person.
 - Hvorfor højt prioriteret: flere konkrete Virk-kandidater, få kandidater at afklare, officiel medlemsside findes
 
-### 16. Ken Kristensen (ambiguous, score 54)
+### 10. Ken Kristensen (ambiguous, score 54)
 - ID: `20790`
 - Officielt navn: Ken Kristensen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/k/ken-kristensen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Ken%20Kristensen&sf=mf)
@@ -251,7 +161,7 @@
 - Næste skridt: Indsaml flere officielle identitetsmarkører før der vælges en Virk-person.
 - Hvorfor højt prioriteret: flere konkrete Virk-kandidater, få kandidater at afklare, officiel medlemsside findes
 
-### 17. Andreas Karlsen (ambiguous, score 54)
+### 11. Andreas Karlsen (ambiguous, score 54)
 - ID: `20767`
 - Officielt navn: Andreas Karlsen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/a/andreas-karlsen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Andreas%20Karlsen&sf=mf)
@@ -266,7 +176,7 @@
 - Næste skridt: Indsaml flere officielle identitetsmarkører før der vælges en Virk-person.
 - Hvorfor højt prioriteret: flere konkrete Virk-kandidater, få kandidater at afklare, officiel medlemsside findes
 
-### 18. Anders Kronborg (ambiguous, score 54)
+### 12. Anders Kronborg (ambiguous, score 54)
 - ID: `18718`
 - Officielt navn: Anders Kronborg
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/a/anders-kronborg) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Anders%20Kronborg&sf=mf)
@@ -281,7 +191,7 @@
 - Næste skridt: Indsaml flere officielle identitetsmarkører før der vælges en Virk-person.
 - Hvorfor højt prioriteret: flere konkrete Virk-kandidater, få kandidater at afklare, officiel medlemsside findes
 
-### 19. Sjúrður Skaale (not_found, score 53)
+### 13. Sjúrður Skaale (not_found, score 53)
 - ID: `262`
 - Officielt navn: Sjúrður Skaale
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/s/sjuroeur-skaale) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Sj%C3%BAr%C3%B0ur%20Skaale&sf=mf)
@@ -296,7 +206,7 @@
 - Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, kun én kandidat at afklare, officiel medlemsside findes
 
-### 20. Peter Hummelgaard (not_found, score 53)
+### 14. Peter Hummelgaard (not_found, score 53)
 - ID: `15776`
 - Officielt navn: Peter Hummelgaard
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/p/peter-hummelgaard) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Peter%20Hummelgaard&sf=mf)
@@ -311,7 +221,7 @@
 - Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, kun én kandidat at afklare, officiel medlemsside findes
 
-### 21. Pernille Vermund (not_found, score 53)
+### 15. Pernille Vermund (not_found, score 53)
 - ID: `18723`
 - Officielt navn: Pernille Vermund
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/p/pernille-vermund) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Pernille%20Vermund&sf=mf)
@@ -326,7 +236,7 @@
 - Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, kun én kandidat at afklare, officiel medlemsside findes
 
-### 22. Jacob Mark (not_found, score 47)
+### 16. Jacob Mark (not_found, score 47)
 - ID: `15788`
 - Officielt navn: Jacob Rene Mark
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/j/jacob-mark) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Jacob%20Rene%20Mark&sf=mf)
@@ -341,7 +251,7 @@
 - Næste skridt: Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, mange kandidater gør sagen tungere, officielt fuldnavn er mere specifikt end profilnavnet, officiel medlemsside findes
 
-### 23. Mikkel Bjørn (not_found, score 47)
+### 17. Mikkel Bjørn (not_found, score 47)
 - ID: `20356`
 - Officielt navn: Mikkel Bjørn Sørensen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/m/mikkel-bjoern) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Mikkel%20Bj%C3%B8rn%20S%C3%B8rensen&sf=mf)
@@ -356,22 +266,7 @@
 - Næste skridt: Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, mange kandidater gør sagen tungere, officielt fuldnavn er mere specifikt end profilnavnet, officiel medlemsside findes
 
-### 24. Camilla Fabricius (ambiguous, score 46)
-- ID: `18720`
-- Officielt navn: Camilla Fabricius
-- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/c/camilla-fabricius) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Camilla%20Fabricius&sf=mf)
-- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Camilla%20Fabricius&sideIndex=0&size=10)
-- Søgte navne: Camilla Fabricius
-- Virk-kandidater: 6 (personTotal: 6)
-- Kandidatlinks: [1](https://datacvr.virk.dk/enhed/person/4009028583/deltager), [2](https://datacvr.virk.dk/enhed/person/4000787188/deltager), [3](https://datacvr.virk.dk/enhed/person/4008725189/deltager), [4](https://datacvr.virk.dk/enhed/person/4000738331/deltager), [5](https://datacvr.virk.dk/enhed/person/4009951410/deltager)
-- Virksomhedsnavne: —
-- CVR-spor: —
-- Verificerede virksomheder: 0
-- Kandidater: Camilla Fabricius Mørk, Camilla Fabricius-Jensen, Camilla Fabricius Pedersen, Camilla Anina Fabricius, Camilla Stougaard Fabricius
-- Næste skridt: Indsaml flere officielle identitetsmarkører før der vælges en Virk-person.
-- Hvorfor højt prioriteret: flere konkrete Virk-kandidater, mange kandidater gør sagen tungere, officiel medlemsside findes
-
-### 25. Dan Jørgensen (not_found, score 41)
+### 18. Dan Jørgensen (not_found, score 41)
 - ID: `167`
 - Officielt navn: Dan Jannik Jørgensen
 - FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/d/dan-joergensen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Dan%20Jannik%20J%C3%B8rgensen&sf=mf)
@@ -385,3 +280,108 @@
 - Kandidater: —
 - Næste skridt: Prøv flere officielle navnevarianter og historiske medlemssider før manuel override.
 - Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officielt fuldnavn er mere specifikt end profilnavnet, officiel medlemsside findes
+
+### 19. Per Larsen (not_found, score 26)
+- ID: `11702`
+- Officielt navn: Per Larsen
+- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/p/per-larsen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Per%20Larsen&sf=mf)
+- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Per%20Larsen&sideIndex=0&size=10)
+- Søgte navne: Per Larsen
+- Virk-kandidater: 0 (personTotal: 413)
+- Kandidatlinks: —
+- Virksomhedsnavne: amgros i s, nordjyske jernbaner
+- CVR-spor: 1449880, 29818983
+- Verificerede virksomheder: 1
+- Kandidater: —
+- Næste skridt: Søg virksomhederne direkte i Virk via CVR-numre og sammenhold personrelationer med medlemmet.
+- Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officielle CVR-numre i hvervregisteret, officiel medlemsside findes, profilen har allerede verificerede virksomhedstræf
+
+### 20. Thomas Jensen (not_found, score 23)
+- ID: `201`
+- Officielt navn: Thomas Jensen
+- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/t/thomas-jensen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Thomas%20Jensen&sf=mf)
+- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Thomas%20Jensen&sideIndex=0&size=10)
+- Søgte navne: Thomas Jensen
+- Virk-kandidater: 0 (personTotal: 907)
+- Kandidatlinks: —
+- Virksomhedsnavne: —
+- CVR-spor: —
+- Verificerede virksomheder: 0
+- Kandidater: —
+- Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
+- Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officiel medlemsside findes
+
+### 21. Steffen Larsen (not_found, score 23)
+- ID: `20397`
+- Officielt navn: Steffen Larsen
+- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/s/steffen-larsen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Steffen%20Larsen&sf=mf)
+- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Steffen%20Larsen&sideIndex=0&size=10)
+- Søgte navne: Steffen Larsen
+- Virk-kandidater: 0 (personTotal: 70)
+- Kandidatlinks: —
+- Virksomhedsnavne: —
+- CVR-spor: —
+- Verificerede virksomheder: 0
+- Kandidater: —
+- Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
+- Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officiel medlemsside findes
+
+### 22. Søren Rasmussen (not_found, score 23)
+- ID: `20599`
+- Officielt navn: Søren Rasmussen
+- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/s/soeren-rasmussen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=S%C3%B8ren%20Rasmussen&sf=mf)
+- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=S%C3%B8ren%20Rasmussen&sideIndex=0&size=10)
+- Søgte navne: Søren Rasmussen
+- Virk-kandidater: 0 (personTotal: 457)
+- Kandidatlinks: —
+- Virksomhedsnavne: —
+- CVR-spor: —
+- Verificerede virksomheder: 0
+- Kandidater: —
+- Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
+- Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officiel medlemsside findes
+
+### 23. Mogens Jensen (not_found, score 23)
+- ID: `154`
+- Officielt navn: Mogens Jensen
+- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/m/mogens-jensen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Mogens%20Jensen&sf=mf)
+- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Mogens%20Jensen&sideIndex=0&size=10)
+- Søgte navne: Mogens Jensen
+- Virk-kandidater: 0 (personTotal: 461)
+- Kandidatlinks: —
+- Virksomhedsnavne: —
+- CVR-spor: —
+- Verificerede virksomheder: 0
+- Kandidater: —
+- Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
+- Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officiel medlemsside findes
+
+### 24. Mette Frederiksen (not_found, score 23)
+- ID: `138`
+- Officielt navn: Mette Frederiksen
+- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/m/mette-frederiksen) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Mette%20Frederiksen&sf=mf)
+- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Mette%20Frederiksen&sideIndex=0&size=10)
+- Søgte navne: Mette Frederiksen
+- Virk-kandidater: 0 (personTotal: 37)
+- Kandidatlinks: —
+- Virksomhedsnavne: —
+- CVR-spor: —
+- Verificerede virksomheder: 0
+- Kandidater: —
+- Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
+- Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officiel medlemsside findes
+
+### 25. Marie Bjerre (not_found, score 23)
+- ID: `18701`
+- Officielt navn: Marie Bjerre
+- FT.dk: [medlemsside](https://www.ft.dk/medlemmer/mf/m/marie-bjerre) / [ft-søgning](https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Marie%20Bjerre&sf=mf)
+- Virk: [søgning](https://datacvr.virk.dk/soegeresultater?fritekst=Marie%20Bjerre&sideIndex=0&size=10)
+- Søgte navne: Marie Bjerre
+- Virk-kandidater: 0 (personTotal: 19)
+- Kandidatlinks: —
+- Virksomhedsnavne: —
+- CVR-spor: —
+- Verificerede virksomheder: 0
+- Kandidater: —
+- Næste skridt: Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation.
+- Hvorfor højt prioriteret: Virk gav persontræf uden sikker identitet, officiel medlemsside findes

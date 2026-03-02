@@ -5,13 +5,13 @@
       "profiles_file": "data\\profiler.json"
     },
     "counts": {
-      "unresolved_total": 87,
+      "unresolved_total": 80,
       "not_found": 71,
-      "ambiguous": 16,
+      "ambiguous": 9,
       "with_company_cvrs": 2,
       "with_company_names": 3,
       "with_verified_companies": 3,
-      "with_candidates": 24,
+      "with_candidates": 17,
       "with_expanded_official_name": 17
     }
   },
@@ -57,41 +57,6 @@
       "rank": 2,
       "score": 64,
       "status": "ambiguous",
-      "id": 20378,
-      "name": "Rosa Eriksen",
-      "official_name": "Rosa Eriksen",
-      "member_url": "https://www.ft.dk/medlemmer/mf/r/rosa-eriksen",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Rosa%20Eriksen&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Rosa%20Eriksen&sideIndex=0&size=10",
-      "candidate_count": 2,
-      "person_total": 3,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "verified_company_count": 0,
-      "candidate_names": [
-        "Rosa Zangenberg Eriksen",
-        "Rosa Anne-Lise Eriksen"
-      ],
-      "candidate_urls": [
-        "https://datacvr.virk.dk/enhed/person/4000664551/deltager",
-        "https://datacvr.virk.dk/enhed/person/4003893113/deltager"
-      ],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Rosa Eriksen"
-      ],
-      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
-      "reasons": [
-        "flere konkrete Virk-kandidater",
-        "to kandidater at afklare",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 3,
-      "score": 64,
-      "status": "ambiguous",
       "id": 48,
       "name": "Peter Skaarup",
       "official_name": "Peter Skaarup",
@@ -124,7 +89,7 @@
       ]
     },
     {
-      "rank": 4,
+      "rank": 3,
       "score": 64,
       "status": "ambiguous",
       "id": 20357,
@@ -159,112 +124,7 @@
       ]
     },
     {
-      "rank": 5,
-      "score": 64,
-      "status": "ambiguous",
-      "id": 19928,
-      "name": "Kim Aas",
-      "official_name": "Kim Aas",
-      "member_url": "https://www.ft.dk/medlemmer/mf/k/kim-aas",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Kim%20Aas&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Kim%20Aas&sideIndex=0&size=10",
-      "candidate_count": 2,
-      "person_total": 2,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "verified_company_count": 0,
-      "candidate_names": [
-        "Kim Aas Christensen",
-        "Kim Steen Aas Jensen"
-      ],
-      "candidate_urls": [
-        "https://datacvr.virk.dk/enhed/person/4004191722/deltager",
-        "https://datacvr.virk.dk/enhed/person/4000233367/deltager"
-      ],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Kim Aas"
-      ],
-      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
-      "reasons": [
-        "flere konkrete Virk-kandidater",
-        "to kandidater at afklare",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 6,
-      "score": 64,
-      "status": "ambiguous",
-      "id": 162,
-      "name": "Karina Adsbøl",
-      "official_name": "Karina Adsbøl",
-      "member_url": "https://www.ft.dk/medlemmer/mf/k/karina-adsboel",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Karina%20Adsb%C3%B8l&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Karina%20Adsb%C3%B8l&sideIndex=0&size=10",
-      "candidate_count": 2,
-      "person_total": 3,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "verified_company_count": 0,
-      "candidate_names": [
-        "Karina Adsbøl Klovgaard",
-        "Karina Marie Adsbøl"
-      ],
-      "candidate_urls": [
-        "https://datacvr.virk.dk/enhed/person/4000501360/deltager",
-        "https://datacvr.virk.dk/enhed/person/4009190334/deltager"
-      ],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Karina Adsbøl"
-      ],
-      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
-      "reasons": [
-        "flere konkrete Virk-kandidater",
-        "to kandidater at afklare",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 7,
-      "score": 64,
-      "status": "ambiguous",
-      "id": 20383,
-      "name": "Jeppe Søe",
-      "official_name": "Jeppe Søe",
-      "member_url": "https://www.ft.dk/medlemmer/mf/j/jeppe-soee",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Jeppe%20S%C3%B8e&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jeppe%20S%C3%B8e&sideIndex=0&size=10",
-      "candidate_count": 2,
-      "person_total": 2,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "verified_company_count": 0,
-      "candidate_names": [
-        "Jeppe Søe",
-        "Jeppe Søe"
-      ],
-      "candidate_urls": [
-        "https://datacvr.virk.dk/enhed/person/4000198046/deltager",
-        "https://datacvr.virk.dk/enhed/person/4000322388/deltager"
-      ],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Jeppe Søe"
-      ],
-      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
-      "reasons": [
-        "flere konkrete Virk-kandidater",
-        "to kandidater at afklare",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 8,
+      "rank": 4,
       "score": 64,
       "status": "ambiguous",
       "id": 257,
@@ -299,42 +159,7 @@
       ]
     },
     {
-      "rank": 9,
-      "score": 64,
-      "status": "ambiguous",
-      "id": 18719,
-      "name": "Birgitte Vind",
-      "official_name": "Birgitte Vind",
-      "member_url": "https://www.ft.dk/medlemmer/mf/b/birgitte-vind",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Birgitte%20Vind&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Birgitte%20Vind&sideIndex=0&size=10",
-      "candidate_count": 2,
-      "person_total": 5,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "verified_company_count": 0,
-      "candidate_names": [
-        "Birgitte Vind",
-        "Birgitte Vind"
-      ],
-      "candidate_urls": [
-        "https://datacvr.virk.dk/enhed/person/AAIAZOGC3kLtfkiziuDokEW6vgI/liberal_udoever",
-        "https://datacvr.virk.dk/enhed/person/4004192269/deltager"
-      ],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Birgitte Vind"
-      ],
-      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
-      "reasons": [
-        "flere konkrete Virk-kandidater",
-        "to kandidater at afklare",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 10,
+      "rank": 5,
       "score": 55,
       "status": "not_found",
       "id": 252,
@@ -373,7 +198,7 @@
       ]
     },
     {
-      "rank": 11,
+      "rank": 6,
       "score": 55,
       "status": "not_found",
       "id": 17628,
@@ -416,7 +241,7 @@
       ]
     },
     {
-      "rank": 12,
+      "rank": 7,
       "score": 54,
       "status": "not_found",
       "id": 20389,
@@ -456,44 +281,7 @@
       ]
     },
     {
-      "rank": 13,
-      "score": 54,
-      "status": "ambiguous",
-      "id": 208,
-      "name": "Simon Kollerup",
-      "official_name": "Simon Kollerup",
-      "member_url": "https://www.ft.dk/medlemmer/mf/s/simon-kollerup",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Simon%20Kollerup&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Simon%20Kollerup&sideIndex=0&size=10",
-      "candidate_count": 3,
-      "person_total": 3,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "verified_company_count": 0,
-      "candidate_names": [
-        "Simon Kollerup Poulsen",
-        "Simon Kollerup Søe-Larsen",
-        "Simon Monrad Kollerup"
-      ],
-      "candidate_urls": [
-        "https://datacvr.virk.dk/enhed/person/4006080851/deltager",
-        "https://datacvr.virk.dk/enhed/person/4008665340/deltager",
-        "https://datacvr.virk.dk/enhed/person/4000552272/deltager"
-      ],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Simon Kollerup"
-      ],
-      "next_step": "Gennemgå de få Virk-kandidater manuelt mod officielle kilder som ft.dk og eventuelle ministerbiografier.",
-      "reasons": [
-        "flere konkrete Virk-kandidater",
-        "få kandidater at afklare",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 14,
+      "rank": 8,
       "score": 54,
       "status": "ambiguous",
       "id": 20841,
@@ -530,7 +318,7 @@
       ]
     },
     {
-      "rank": 15,
+      "rank": 9,
       "score": 54,
       "status": "ambiguous",
       "id": 110,
@@ -569,7 +357,7 @@
       ]
     },
     {
-      "rank": 16,
+      "rank": 10,
       "score": 54,
       "status": "ambiguous",
       "id": 20790,
@@ -608,7 +396,7 @@
       ]
     },
     {
-      "rank": 17,
+      "rank": 11,
       "score": 54,
       "status": "ambiguous",
       "id": 20767,
@@ -647,7 +435,7 @@
       ]
     },
     {
-      "rank": 18,
+      "rank": 12,
       "score": 54,
       "status": "ambiguous",
       "id": 18718,
@@ -686,7 +474,7 @@
       ]
     },
     {
-      "rank": 19,
+      "rank": 13,
       "score": 53,
       "status": "not_found",
       "id": 262,
@@ -719,7 +507,7 @@
       ]
     },
     {
-      "rank": 20,
+      "rank": 14,
       "score": 53,
       "status": "not_found",
       "id": 15776,
@@ -752,7 +540,7 @@
       ]
     },
     {
-      "rank": 21,
+      "rank": 15,
       "score": 53,
       "status": "not_found",
       "id": 18723,
@@ -785,7 +573,7 @@
       ]
     },
     {
-      "rank": 22,
+      "rank": 16,
       "score": 47,
       "status": "not_found",
       "id": 15788,
@@ -828,7 +616,7 @@
       ]
     },
     {
-      "rank": 23,
+      "rank": 17,
       "score": 47,
       "status": "not_found",
       "id": 20356,
@@ -871,48 +659,7 @@
       ]
     },
     {
-      "rank": 24,
-      "score": 46,
-      "status": "ambiguous",
-      "id": 18720,
-      "name": "Camilla Fabricius",
-      "official_name": "Camilla Fabricius",
-      "member_url": "https://www.ft.dk/medlemmer/mf/c/camilla-fabricius",
-      "ft_search_url": "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Camilla%20Fabricius&sf=mf",
-      "virk_search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Camilla%20Fabricius&sideIndex=0&size=10",
-      "candidate_count": 6,
-      "person_total": 6,
-      "company_cvr_count": 0,
-      "company_name_count": 0,
-      "verified_company_count": 0,
-      "candidate_names": [
-        "Camilla Fabricius Mørk",
-        "Camilla Fabricius-Jensen",
-        "Camilla Fabricius Pedersen",
-        "Camilla Anina Fabricius",
-        "Camilla Stougaard Fabricius"
-      ],
-      "candidate_urls": [
-        "https://datacvr.virk.dk/enhed/person/4009028583/deltager",
-        "https://datacvr.virk.dk/enhed/person/4000787188/deltager",
-        "https://datacvr.virk.dk/enhed/person/4008725189/deltager",
-        "https://datacvr.virk.dk/enhed/person/4000738331/deltager",
-        "https://datacvr.virk.dk/enhed/person/4009951410/deltager"
-      ],
-      "company_name_samples": [],
-      "company_cvr_samples": [],
-      "search_names_tried": [
-        "Camilla Fabricius"
-      ],
-      "next_step": "Indsaml flere officielle identitetsmarkører før der vælges en Virk-person.",
-      "reasons": [
-        "flere konkrete Virk-kandidater",
-        "mange kandidater gør sagen tungere",
-        "officiel medlemsside findes"
-      ]
-    },
-    {
-      "rank": 25,
+      "rank": 18,
       "score": 41,
       "status": "not_found",
       "id": 167,
@@ -942,7 +689,7 @@
       ]
     },
     {
-      "rank": 26,
+      "rank": 19,
       "score": 26,
       "status": "not_found",
       "id": 11702,
@@ -978,7 +725,7 @@
       ]
     },
     {
-      "rank": 27,
+      "rank": 20,
       "score": 23,
       "status": "not_found",
       "id": 201,
@@ -1006,7 +753,7 @@
       ]
     },
     {
-      "rank": 28,
+      "rank": 21,
       "score": 23,
       "status": "not_found",
       "id": 20397,
@@ -1034,7 +781,7 @@
       ]
     },
     {
-      "rank": 29,
+      "rank": 22,
       "score": 23,
       "status": "not_found",
       "id": 20599,
@@ -1062,7 +809,7 @@
       ]
     },
     {
-      "rank": 30,
+      "rank": 23,
       "score": 23,
       "status": "not_found",
       "id": 154,
@@ -1090,7 +837,7 @@
       ]
     },
     {
-      "rank": 31,
+      "rank": 24,
       "score": 23,
       "status": "not_found",
       "id": 138,
@@ -1118,7 +865,7 @@
       ]
     },
     {
-      "rank": 32,
+      "rank": 25,
       "score": 23,
       "status": "not_found",
       "id": 18701,
@@ -1146,7 +893,7 @@
       ]
     },
     {
-      "rank": 33,
+      "rank": 26,
       "score": 23,
       "status": "not_found",
       "id": 97,
@@ -1174,7 +921,7 @@
       ]
     },
     {
-      "rank": 34,
+      "rank": 27,
       "score": 23,
       "status": "not_found",
       "id": 173,
@@ -1202,7 +949,7 @@
       ]
     },
     {
-      "rank": 35,
+      "rank": 28,
       "score": 23,
       "status": "not_found",
       "id": 20962,
@@ -1230,7 +977,7 @@
       ]
     },
     {
-      "rank": 36,
+      "rank": 29,
       "score": 23,
       "status": "not_found",
       "id": 20820,
@@ -1258,7 +1005,7 @@
       ]
     },
     {
-      "rank": 37,
+      "rank": 30,
       "score": 13,
       "status": "not_found",
       "id": 191,
@@ -1288,7 +1035,7 @@
       ]
     },
     {
-      "rank": 38,
+      "rank": 31,
       "score": 13,
       "status": "not_found",
       "id": 20373,
@@ -1318,7 +1065,7 @@
       ]
     },
     {
-      "rank": 39,
+      "rank": 32,
       "score": 13,
       "status": "not_found",
       "id": 18716,
@@ -1348,7 +1095,7 @@
       ]
     },
     {
-      "rank": 40,
+      "rank": 33,
       "score": 13,
       "status": "not_found",
       "id": 17360,
@@ -1378,7 +1125,7 @@
       ]
     },
     {
-      "rank": 41,
+      "rank": 34,
       "score": 13,
       "status": "not_found",
       "id": 20365,
@@ -1408,7 +1155,7 @@
       ]
     },
     {
-      "rank": 42,
+      "rank": 35,
       "score": 13,
       "status": "not_found",
       "id": 1146,
@@ -1438,7 +1185,7 @@
       ]
     },
     {
-      "rank": 43,
+      "rank": 36,
       "score": 13,
       "status": "not_found",
       "id": 219,
@@ -1468,7 +1215,7 @@
       ]
     },
     {
-      "rank": 44,
+      "rank": 37,
       "score": 13,
       "status": "not_found",
       "id": 18729,
@@ -1498,7 +1245,7 @@
       ]
     },
     {
-      "rank": 45,
+      "rank": 38,
       "score": 13,
       "status": "not_found",
       "id": 214,
@@ -1528,7 +1275,7 @@
       ]
     },
     {
-      "rank": 46,
+      "rank": 39,
       "score": 13,
       "status": "not_found",
       "id": 18707,
@@ -1558,7 +1305,7 @@
       ]
     },
     {
-      "rank": 47,
+      "rank": 40,
       "score": 13,
       "status": "not_found",
       "id": 18688,
@@ -1588,7 +1335,7 @@
       ]
     },
     {
-      "rank": 48,
+      "rank": 41,
       "score": -5,
       "status": "not_found",
       "id": 18694,
@@ -1617,7 +1364,7 @@
       ]
     },
     {
-      "rank": 49,
+      "rank": 42,
       "score": -5,
       "status": "not_found",
       "id": 21083,
@@ -1645,7 +1392,7 @@
       ]
     },
     {
-      "rank": 50,
+      "rank": 43,
       "score": -5,
       "status": "not_found",
       "id": 19000,
@@ -1673,7 +1420,7 @@
       ]
     },
     {
-      "rank": 51,
+      "rank": 44,
       "score": -5,
       "status": "not_found",
       "id": 20360,
@@ -1701,7 +1448,7 @@
       ]
     },
     {
-      "rank": 52,
+      "rank": 45,
       "score": -5,
       "status": "not_found",
       "id": 100,
@@ -1729,7 +1476,7 @@
       ]
     },
     {
-      "rank": 53,
+      "rank": 46,
       "score": -5,
       "status": "not_found",
       "id": 20779,
@@ -1757,7 +1504,7 @@
       ]
     },
     {
-      "rank": 54,
+      "rank": 47,
       "score": -5,
       "status": "not_found",
       "id": 20559,
@@ -1785,7 +1532,7 @@
       ]
     },
     {
-      "rank": 55,
+      "rank": 48,
       "score": -5,
       "status": "not_found",
       "id": 266,
@@ -1813,7 +1560,7 @@
       ]
     },
     {
-      "rank": 56,
+      "rank": 49,
       "score": -5,
       "status": "not_found",
       "id": 18722,
@@ -1841,7 +1588,7 @@
       ]
     },
     {
-      "rank": 57,
+      "rank": 50,
       "score": -5,
       "status": "not_found",
       "id": 20350,
@@ -1869,7 +1616,7 @@
       ]
     },
     {
-      "rank": 58,
+      "rank": 51,
       "score": -5,
       "status": "not_found",
       "id": 20384,
@@ -1897,7 +1644,7 @@
       ]
     },
     {
-      "rank": 59,
+      "rank": 52,
       "score": -5,
       "status": "not_found",
       "id": 20527,
@@ -1925,7 +1672,7 @@
       ]
     },
     {
-      "rank": 60,
+      "rank": 53,
       "score": -5,
       "status": "not_found",
       "id": 21143,
@@ -1953,7 +1700,7 @@
       ]
     },
     {
-      "rank": 61,
+      "rank": 54,
       "score": -5,
       "status": "not_found",
       "id": 20380,
@@ -1981,7 +1728,7 @@
       ]
     },
     {
-      "rank": 62,
+      "rank": 55,
       "score": -5,
       "status": "not_found",
       "id": 197,
@@ -2009,7 +1756,7 @@
       ]
     },
     {
-      "rank": 63,
+      "rank": 56,
       "score": -5,
       "status": "not_found",
       "id": 20635,
@@ -2037,7 +1784,7 @@
       ]
     },
     {
-      "rank": 64,
+      "rank": 57,
       "score": -5,
       "status": "not_found",
       "id": 18693,
@@ -2065,7 +1812,7 @@
       ]
     },
     {
-      "rank": 65,
+      "rank": 58,
       "score": -5,
       "status": "not_found",
       "id": 21186,
@@ -2093,7 +1840,7 @@
       ]
     },
     {
-      "rank": 66,
+      "rank": 59,
       "score": -5,
       "status": "not_found",
       "id": 20930,
@@ -2121,7 +1868,7 @@
       ]
     },
     {
-      "rank": 67,
+      "rank": 60,
       "score": -5,
       "status": "not_found",
       "id": 93,
@@ -2149,7 +1896,7 @@
       ]
     },
     {
-      "rank": 68,
+      "rank": 61,
       "score": -5,
       "status": "not_found",
       "id": 20371,
@@ -2177,7 +1924,7 @@
       ]
     },
     {
-      "rank": 69,
+      "rank": 62,
       "score": -5,
       "status": "not_found",
       "id": 21044,
@@ -2205,7 +1952,7 @@
       ]
     },
     {
-      "rank": 70,
+      "rank": 63,
       "score": -5,
       "status": "not_found",
       "id": 20367,
@@ -2233,7 +1980,7 @@
       ]
     },
     {
-      "rank": 71,
+      "rank": 64,
       "score": -5,
       "status": "not_found",
       "id": 20916,
@@ -2261,7 +2008,7 @@
       ]
     },
     {
-      "rank": 72,
+      "rank": 65,
       "score": -5,
       "status": "not_found",
       "id": 20747,
@@ -2289,7 +2036,7 @@
       ]
     },
     {
-      "rank": 73,
+      "rank": 66,
       "score": -5,
       "status": "not_found",
       "id": 20351,
@@ -2317,7 +2064,7 @@
       ]
     },
     {
-      "rank": 74,
+      "rank": 67,
       "score": -5,
       "status": "not_found",
       "id": 20361,
@@ -2345,7 +2092,7 @@
       ]
     },
     {
-      "rank": 75,
+      "rank": 68,
       "score": -5,
       "status": "not_found",
       "id": 21206,
@@ -2373,7 +2120,7 @@
       ]
     },
     {
-      "rank": 76,
+      "rank": 69,
       "score": -5,
       "status": "not_found",
       "id": 15762,
@@ -2401,7 +2148,7 @@
       ]
     },
     {
-      "rank": 77,
+      "rank": 70,
       "score": -5,
       "status": "not_found",
       "id": 18708,
@@ -2429,7 +2176,7 @@
       ]
     },
     {
-      "rank": 78,
+      "rank": 71,
       "score": -5,
       "status": "not_found",
       "id": 20976,
@@ -2457,7 +2204,7 @@
       ]
     },
     {
-      "rank": 79,
+      "rank": 72,
       "score": -5,
       "status": "not_found",
       "id": 17141,
@@ -2485,7 +2232,7 @@
       ]
     },
     {
-      "rank": 80,
+      "rank": 73,
       "score": -5,
       "status": "not_found",
       "id": 18717,
@@ -2513,7 +2260,7 @@
       ]
     },
     {
-      "rank": 81,
+      "rank": 74,
       "score": -5,
       "status": "not_found",
       "id": 19142,
@@ -2541,7 +2288,7 @@
       ]
     },
     {
-      "rank": 82,
+      "rank": 75,
       "score": -5,
       "status": "not_found",
       "id": 18706,
@@ -2569,7 +2316,7 @@
       ]
     },
     {
-      "rank": 83,
+      "rank": 76,
       "score": -10,
       "status": "not_found",
       "id": 20394,
@@ -2604,7 +2351,7 @@
       ]
     },
     {
-      "rank": 84,
+      "rank": 77,
       "score": -18,
       "status": "not_found",
       "id": 1158,
@@ -2632,7 +2379,7 @@
       ]
     },
     {
-      "rank": 85,
+      "rank": 78,
       "score": -18,
       "status": "not_found",
       "id": 21285,
@@ -2660,7 +2407,7 @@
       ]
     },
     {
-      "rank": 86,
+      "rank": 79,
       "score": -18,
       "status": "not_found",
       "id": 19826,
@@ -2688,7 +2435,7 @@
       ]
     },
     {
-      "rank": 87,
+      "rank": 80,
       "score": -18,
       "status": "not_found",
       "id": 19548,

@@ -273,29 +273,28 @@
     "162": {
       "id": 162,
       "name": "Karina Adsbøl",
-      "status": "ambiguous",
-      "person_total": 3,
-      "exact_match_count": 2,
-      "candidates": [
-        {
-          "name": "Karina Adsbøl Klovgaard",
-          "person_enhedsnummer": "4000501360",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000501360/deltager"
-        },
-        {
-          "name": "Karina Marie Adsbøl",
-          "person_enhedsnummer": "4009190334",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4009190334/deltager"
-        }
-      ],
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Karina Marie Adsbøl",
+      "person_enhedsnummer": "4009190334",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4009190334/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Karina%20Adsb%C3%B8l&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 1,
       "official_name": "Karina Adsbøl",
-      "search_names_tried": [
-        "Karina Adsbøl"
-      ]
+      "search_name_used": "Karina Adsbøl",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet via offentlige kilder, hvor politikeren omtales som Karina Marie Adsbøl. Den valgte Virk-kandidat matcher fuldnavnet præcist, mens den alternative kandidat hedder Karina Adsbøl Klovgaard og derfor ikke matcher de offentlige navneformer om folketingsmedlemmet.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/k/karina-adsboel",
+          "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Karina%20Marie%20Adsb%C3%B8l&sf=all",
+          "https://datacvr.virk.dk/enhed/person/4009190334/deltager",
+          "https://datacvr.virk.dk/enhed/person/4000501360/deltager"
+        ]
+      }
     },
     "20355": {
       "id": 20355,
@@ -2838,29 +2837,29 @@
     "20378": {
       "id": 20378,
       "name": "Rosa Eriksen",
-      "status": "ambiguous",
-      "person_total": 3,
-      "exact_match_count": 2,
-      "candidates": [
-        {
-          "name": "Rosa Zangenberg Eriksen",
-          "person_enhedsnummer": "4000664551",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000664551/deltager"
-        },
-        {
-          "name": "Rosa Anne-Lise Eriksen",
-          "person_enhedsnummer": "4003893113",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4003893113/deltager"
-        }
-      ],
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Rosa Zangenberg Eriksen",
+      "person_enhedsnummer": "4000664551",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000664551/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Rosa%20Eriksen&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 2,
       "official_name": "Rosa Eriksen",
-      "search_names_tried": [
-        "Rosa Eriksen"
-      ]
+      "search_name_used": "Rosa Eriksen",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet ved udelukkelse. Folketingets officielle biografi beskriver en nutidig politikerprofil, mens den alternative Virk-kandidat har selskabsrelationer fra en klart tidligere periode og derfor ikke kan være det nuværende folketingsmedlem. Den resterende kandidat Rosa Zangenberg Eriksen er dermed den eneste mulige Virk-person.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/r/rosa-eriksen",
+          "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%2020378&$format=json",
+          "https://www.rosaeriksen.dk/",
+          "https://datacvr.virk.dk/enhed/person/4000664551/deltager",
+          "https://datacvr.virk.dk/enhed/person/4003893113/deltager"
+        ]
+      }
     },
     "20377": {
       "id": 20377,
@@ -3473,29 +3472,29 @@
     "19928": {
       "id": 19928,
       "name": "Kim Aas",
-      "status": "ambiguous",
-      "person_total": 2,
-      "exact_match_count": 2,
-      "candidates": [
-        {
-          "name": "Kim Aas Christensen",
-          "person_enhedsnummer": "4004191722",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004191722/deltager"
-        },
-        {
-          "name": "Kim Steen Aas Jensen",
-          "person_enhedsnummer": "4000233367",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000233367/deltager"
-        }
-      ],
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Kim Aas Christensen",
+      "person_enhedsnummer": "4004191722",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004191722/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Kim%20Aas&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 1,
       "official_name": "Kim Aas",
-      "search_names_tried": [
-        "Kim Aas"
-      ]
+      "search_name_used": "Kim Aas",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet via officielle og offentlige kilder, hvor folketingsmedlemmet omtales som Kim Aas Christensen. Den alternative Virk-kandidat hedder Kim Steen Aas Jensen og matcher derfor ikke Folketingets eller Faaborg-Midtfyn Kommunes navnebrug om politikeren.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/k/kim-aas",
+          "https://www.fmk.dk/politik/politikker-planer-og-strategier/klima-miljoe-og-natur/baeredygtige-initiativer-verdensmaal/",
+          "https://erhvervsrygsaek.fmk.dk/til-laerere/succeshistorier/",
+          "https://datacvr.virk.dk/enhed/person/4004191722/deltager",
+          "https://datacvr.virk.dk/enhed/person/4000233367/deltager"
+        ]
+      }
     },
     "1619": {
       "id": 1619,
@@ -3826,57 +3825,33 @@
     "18720": {
       "id": 18720,
       "name": "Camilla Fabricius",
-      "status": "ambiguous",
-      "person_total": 6,
-      "exact_match_count": 6,
-      "candidates": [
-        {
-          "name": "Camilla Fabricius Mørk",
-          "person_enhedsnummer": "4009028583",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4009028583/deltager"
-        },
-        {
-          "name": "Camilla Fabricius-Jensen",
-          "person_enhedsnummer": "4000787188",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000787188/deltager"
-        },
-        {
-          "name": "Camilla Fabricius Pedersen",
-          "person_enhedsnummer": "4008725189",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4008725189/deltager"
-        },
-        {
-          "name": "Camilla Anina Fabricius",
-          "person_enhedsnummer": "4000738331",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000738331/deltager"
-        },
-        {
-          "name": "Camilla Stougaard Fabricius",
-          "person_enhedsnummer": "4009951410",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4009951410/deltager"
-        },
-        {
-          "name": "Camilla Lee Fabricius",
-          "person_enhedsnummer": "4000657923",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000657923/deltager"
-        }
-      ],
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Camilla Fabricius-Jensen",
+      "person_enhedsnummer": "4000787188",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000787188/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Camilla%20Fabricius&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 2,
       "official_name": "Camilla Fabricius",
-      "search_names_tried": [
-        "Camilla Fabricius"
-      ]
+      "search_name_used": "Camilla Fabricius",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet via præcist sammenfald mellem Folketingets officielle biografi og Virk-historikken. Ft.dk angiver, at Camilla Fabricius var selvstændig adhd- og autismekonsulent fra 2014 og næstformand i Aarhus Vand 2014-2017. Den valgte Virk-kandidat har både virksomheden camillafabricius i 2014-2019 og en bestyrelsesrelation til Aarhus Vand A/S i 2015-2018. Samtidig matcher kandidatens offentligt brugte fuldnavn den navneform, som fremgår af officielle kilder om folketingsmedlemmet.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/c/camilla-fabricius",
+          "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%2018720&$format=json",
+          "https://www.paqle.dk/p/camilla-fabricius-jensen/1340974",
+          "https://datacvr.virk.dk/enhed/person/4000787188/deltager",
+          "https://datacvr.virk.dk/enhed/person/4009028583/deltager",
+          "https://datacvr.virk.dk/enhed/person/4008725189/deltager",
+          "https://datacvr.virk.dk/enhed/person/4000738331/deltager",
+          "https://datacvr.virk.dk/enhed/person/4009951410/deltager",
+          "https://datacvr.virk.dk/enhed/person/4000657923/deltager"
+        ]
+      }
     },
     "138": {
       "id": 138,
@@ -4338,36 +4313,30 @@
     "208": {
       "id": 208,
       "name": "Simon Kollerup",
-      "status": "ambiguous",
-      "person_total": 3,
-      "exact_match_count": 3,
-      "candidates": [
-        {
-          "name": "Simon Kollerup Poulsen",
-          "person_enhedsnummer": "4006080851",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4006080851/deltager"
-        },
-        {
-          "name": "Simon Kollerup Søe-Larsen",
-          "person_enhedsnummer": "4008665340",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4008665340/deltager"
-        },
-        {
-          "name": "Simon Monrad Kollerup",
-          "person_enhedsnummer": "4000552272",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000552272/deltager"
-        }
-      ],
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Simon Monrad Kollerup",
+      "person_enhedsnummer": "4000552272",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000552272/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Simon%20Kollerup&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 1,
       "official_name": "Simon Kollerup",
-      "search_names_tried": [
-        "Simon Kollerup"
-      ]
+      "search_name_used": "Simon Kollerup",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet via offentlige kilder, hvor politikeren omtales med fuldnavnet Simon Monrad Kollerup, kombineret med sammenfald mellem Virk-personens historiske relation til PR Creation 2006-2011 og Folketingets officielle biografi, hvor Simon Kollerup i samme periode havde presse- og politiske roller. De alternative Virk-kandidater er i stedet knyttet til nutidige holdingselskaber uden tilsvarende offentligt overlap.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/s/simon-kollerup",
+          "https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q=Simon%20Monrad%20Kollerup&sf=all",
+          "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%20208&$format=json",
+          "https://datacvr.virk.dk/enhed/person/4000552272/deltager",
+          "https://datacvr.virk.dk/enhed/person/4006080851/deltager",
+          "https://datacvr.virk.dk/enhed/person/4008665340/deltager"
+        ]
+      }
     },
     "38": {
       "id": 38,
@@ -4975,29 +4944,28 @@
     "18719": {
       "id": 18719,
       "name": "Birgitte Vind",
-      "status": "ambiguous",
-      "person_total": 5,
-      "exact_match_count": 2,
-      "candidates": [
-        {
-          "name": "Birgitte Vind",
-          "person_enhedsnummer": "AAIAZOGC3kLtfkiziuDokEW6vgI",
-          "person_type": "liberal_udoever",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/AAIAZOGC3kLtfkiziuDokEW6vgI/liberal_udoever"
-        },
-        {
-          "name": "Birgitte Vind",
-          "person_enhedsnummer": "4004192269",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004192269/deltager"
-        }
-      ],
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Birgitte Vind",
+      "person_enhedsnummer": "4004192269",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004192269/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Birgitte%20Vind&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 3,
       "official_name": "Birgitte Vind",
-      "search_names_tried": [
-        "Birgitte Vind"
-      ]
+      "search_name_used": "Birgitte Vind",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet via præcist sammenfald mellem Folketingets officielle biografi og Virk-personens historiske relationer. Ft.dk angiver, at Birgitte Vind sad i bestyrelsen for Syddanske Forskerparker 2014-2017 og Vejle Spildevand 2014-2019. Den samme Virk-person har netop de to bestyrelsesrelationer med samme perioder. Den alternative Virk-kandidat har ingen registrerede relationer.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/b/birgitte-vind",
+          "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%2018719&$format=json",
+          "https://datacvr.virk.dk/enhed/person/4004192269/deltager",
+          "https://datacvr.virk.dk/enhed/person/AAIAZOGC3kLtfkiziuDokEW6vgI/liberal_udoever"
+        ]
+      }
     },
     "12": {
       "id": 12,
@@ -6217,29 +6185,63 @@
     "20383": {
       "id": 20383,
       "name": "Jeppe Søe",
-      "status": "ambiguous",
-      "person_total": 2,
-      "exact_match_count": 2,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Jeppe Søe",
+      "person_enhedsnummer": "4000198046",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000198046/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jeppe%20S%C3%B8e&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Jeppe Søe",
-          "person_enhedsnummer": "4000198046",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000198046/deltager"
+          "company_name": "Frihed til forskellighed",
+          "company_enhedsnummer": "4001013829",
+          "company_cvr": "19880974",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001013829",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "10.09.2024"
+            }
+          ]
         },
         {
-          "name": "Jeppe Søe",
-          "person_enhedsnummer": "4000322388",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000322388/deltager"
+          "company_name": "THRANE ERHVERV A/S",
+          "company_enhedsnummer": "4001538530",
+          "company_cvr": "29179468",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001538530",
+          "status": "Normal",
+          "roles": [
+            "Bestyrelse"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "01.07.2018"
+            }
+          ]
         }
       ],
+      "historical_relation_count": 16,
       "official_name": "Jeppe Søe",
-      "search_names_tried": [
-        "Jeppe Søe"
-      ]
+      "search_name_used": "Jeppe Søe",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet via Thrane Erhvervs egen bestyrelsesside, hvor Jeppe Søe omtales som medlem af bestyrelsen, kombineret med den aktive Virk-persons relation til THRANE ERHVERV A/S. Samme Virk-person er også knyttet til Frihed til forskellighed og URL'en jeppe.dk, hvilket matcher folketingsmedlemmets offentlige identitet. Den alternative Virk-person er i stedet knyttet til andre virksomheder uden tilsvarende offentligt overlap.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/j/jeppe-soee",
+          "https://thrane-erhverv.dk/bestyrelsen/",
+          "https://ownr.dk/companies/public-profile/19880974",
+          "https://www.paqle.dk/p/frihed-til-forskellighed/2116842",
+          "https://datacvr.virk.dk/enhed/person/4000198046/deltager",
+          "https://datacvr.virk.dk/enhed/person/4000322388/deltager"
+        ]
+      }
     },
     "18698": {
       "id": 18698,
