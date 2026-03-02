@@ -551,12 +551,6 @@ const ProfileApp = (() => {
       }
 
       const verificationParts = ["Verificeret via officielt hverv"];
-      if (company.co_name) {
-        verificationParts.push(company.co_name);
-      }
-      if (company.city) {
-        verificationParts.push(company.city);
-      }
       const verificationLine = document.createElement("p");
       verificationLine.className = "cvr-relation-meta";
       verificationLine.textContent = verificationParts.join(" · ");

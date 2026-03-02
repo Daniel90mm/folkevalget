@@ -301,6 +301,12 @@ def strip_html_markup(value: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def strip_nonessential_name_annotations(value: str) -> str:
+    text = value or ""
+    text = re.sub(r"\s*\((?:f(?:ø|oe)dt)[^)]+\)", "", text, flags=re.IGNORECASE)
+    return re.sub(r"\s+", " ", text).strip(" ,.")
+
+
 def extract_official_full_name(biography: str | None, fallback_name: str | None = None) -> str | None:
     if not biography:
         return fallback_name
@@ -325,7 +331,8 @@ def extract_official_full_name(biography: str | None, fallback_name: str | None 
     candidate = name_match.group(1).strip(" ,.")
     if not candidate:
         return fallback_name
-    return candidate
+    candidate = strip_nonessential_name_annotations(candidate)
+    return candidate or fallback_name
 
 
 def load_official_name_map(profile_ids: set[int]) -> dict[int, str]:
@@ -632,16 +639,12 @@ def choose_verified_company_match(matches: list[dict[str, Any]], official_name: 
 
 
 def build_verified_company_entry(entry: dict[str, Any], verification: dict[str, Any]) -> dict[str, Any]:
-    address = re.sub(r"\s+", " ", str(entry.get("beliggenhedsadresse") or "")).strip()
     return {
         "company_name": entry.get("senesteNavn") or "Ukendt virksomhed",
         "company_enhedsnummer": entry.get("enhedsnummer") or "",
         "company_cvr": entry.get("cvr") or "",
         "company_url": build_company_url(entry.get("enhedsnummer")) if entry.get("enhedsnummer") else "",
         "status": format_status(entry.get("status")),
-        "co_name": entry.get("coNavn") or "",
-        "city": entry.get("by") or "",
-        "address": address,
         "branch": entry.get("hovedbranche") or "",
         "verification": verification,
     }

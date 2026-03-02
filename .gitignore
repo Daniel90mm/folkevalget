@@ -38,6 +38,7 @@ HANDOFF_PRIVATE.md
 LOCAL_NOTES.md
 CLAUDE.md
 folkevalget.dk.md
+LOCAL_CVR_OVERRIDES.json
 
 # Registrar, DNS, and deployment exports
 dns-export*

@@ -185,9 +185,6 @@ def cvr_opslag(session: requests.Session, virksomhedsnavn: str) -> dict | None:
             "virksomhedsnavn": d.get("name", ""),
             "type": d.get("companytype", ""),
             "branche": d.get("industrydesc", ""),
-            "adresse": ", ".join(
-                p for p in [d.get("address", ""), d.get("zipcode", ""), d.get("city", "")] if p
-            ),
             "aktiv": d.get("enddate") is None,
         }
     except Exception as exc:
