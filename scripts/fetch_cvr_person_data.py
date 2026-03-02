@@ -29,6 +29,8 @@ ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data"
 PROFILES_FILE = DATA_DIR / "profiler.json"
 OUTPUT_FILE = DATA_DIR / "cvr_personer.json"
+HVERV_FILE = DATA_DIR / "hverv.json"
+OVERRIDES_FILE = DATA_DIR / "cvr_person_overrides.json"
 
 CVR_BASE_URL = "https://datacvr.virk.dk"
 DEBUG_PORT = 9235
@@ -64,6 +66,31 @@ EXTRA_LABEL_FALLBACKS = {
     "ejerandel-aendringsdato-label": "Senest aendret",
 }
 
+CVR_NUMBER_PATTERN = re.compile(r"\bcvr(?:-nummer| nr\.?|nummer)?\s*[:.]?\s*(\d{6,8})\b", re.IGNORECASE)
+COMPANY_NAME_PATTERN = re.compile(
+    r"([A-ZÆØÅ][A-Za-zÆØÅæøå0-9&./,'’()\- ]{1,120}?\b"
+    r"(?:ApS|A/S|I/S|K/S|P/S|IVS|AMBA|FMBA|SMBA|Holding(?:\s+(?:ApS|A/S))?|"
+    r"Fonden?|Forening(?:en)?|Bank(?:\s+A/S)?|Jernbaner|Havn|Metroselskabet|"
+    r"Sciences|Inc\.?|Ltd\.?|AB|ehf\.?))",
+)
+FOUNDATION_NAME_PATTERN = re.compile(r"(Fonden\s+[A-ZÆØÅ0-9][^.;]{2,120})")
+ASSOCIATION_NAME_PATTERN = re.compile(r"(Foreningen\s+[A-ZÆØÅ0-9][^.;]{2,120})")
+COMPANY_PREFIXES = (
+    "bestyrelsesmedlem i ",
+    "bestyrelsesmedlem ",
+    "bestyrelsesformand i ",
+    "bestyrelsesformand ",
+    "formand for ",
+    "formand ",
+    "medlem af ",
+    "medlem af regionsrådet i ",
+    "delejer af ",
+    "ejer af ",
+    "selvstændig virksomhed ",
+    "konsulentvirksomhed ",
+    "virksomhed ",
+)
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -71,12 +98,23 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--delay", type=float, default=DEFAULT_DELAY, help="Delay between lookups in seconds.")
     parser.add_argument("--chrome-path", default="", help="Explicit path to chrome.exe.")
     parser.add_argument("--dry-run", action="store_true", help="Fetch only the first 5 profiles.")
+    parser.add_argument("--ids", default="", help="Comma-separated profile IDs to fetch.")
     parser.add_argument(
         "--retry-errors",
         action="store_true",
         help="Retry only profiles marked with an error in the existing output file.",
     )
     return parser.parse_args()
+
+
+def parse_selected_ids(raw_value: str) -> set[int]:
+    selected: set[int] = set()
+    for part in (raw_value or "").split(","):
+        part = part.strip()
+        if not part:
+            continue
+        selected.add(int(part))
+    return selected
 
 
 def find_chrome(explicit_path: str = "") -> str:
@@ -112,8 +150,32 @@ def normalise_name(value: str) -> str:
     return normalised
 
 
+def normalise_loose(value: str) -> str:
+    normalised = unicodedata.normalize("NFKD", value or "")
+    normalised = "".join(char for char in normalised if not unicodedata.combining(char))
+    normalised = re.sub(r"[^0-9a-zA-Z\u00C0-\u017F]+", " ", normalised).strip().lower()
+    return re.sub(r"\s+", " ", normalised)
+
+
 def name_tokens(value: str) -> list[str]:
     return re.findall(r"[0-9a-zA-Z\u00C0-\u017F-]+", normalise_name(value))
+
+
+def token_components(token: str) -> list[str]:
+    return [part for part in token.split("-") if part]
+
+
+def strip_company_prefixes(value: str) -> str:
+    cleaned = value.strip(" ,.;:")
+    lowered = cleaned.lower()
+    for prefix in COMPANY_PREFIXES:
+        if lowered.startswith(prefix):
+            return cleaned[len(prefix):].strip(" ,.;:")
+    return cleaned
+
+
+def normalise_company_name(value: str) -> str:
+    return normalise_loose(strip_company_prefixes(value))
 
 
 def slug_status(value: str | None) -> str | None:
@@ -167,6 +229,58 @@ def build_search_payload(name: str) -> dict[str, Any]:
             "sortering": "",
         }
     }
+
+
+def load_hverv_index() -> dict[str, Any]:
+    if not HVERV_FILE.exists():
+        return {}
+    try:
+        payload = json.loads(HVERV_FILE.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        return {}
+    return payload.get("medlemmer", {})
+
+
+def load_overrides() -> dict[str, Any]:
+    if not OVERRIDES_FILE.exists():
+        return {}
+    try:
+        payload = json.loads(OVERRIDES_FILE.read_text(encoding="utf-8"))
+    except Exception:  # noqa: BLE001
+        return {}
+    return payload.get("medlemmer", {})
+
+
+def extract_hverv_clues(hverv_entry: dict[str, Any] | None) -> dict[str, list[str]]:
+    company_names: list[str] = []
+    company_cvrs: list[str] = []
+    if not hverv_entry:
+        return {"company_names": company_names, "company_cvrs": company_cvrs}
+
+    for registration in hverv_entry.get("registreringer") or []:
+        description = registration.get("beskrivelse") or ""
+        for match in CVR_NUMBER_PATTERN.findall(description):
+            digits = re.sub(r"\D", "", match)
+            if digits and digits not in company_cvrs:
+                company_cvrs.append(digits)
+
+        raw_names: list[str] = []
+        raw_names.extend(FOUNDATION_NAME_PATTERN.findall(description))
+        raw_names.extend(ASSOCIATION_NAME_PATTERN.findall(description))
+        raw_names.extend(COMPANY_NAME_PATTERN.findall(description))
+
+        for match in raw_names:
+            candidate = normalise_company_name(match)
+            if len(candidate) < 4 or candidate in company_names:
+                continue
+            company_names.append(candidate)
+
+    company_names = [
+        name
+        for name in company_names
+        if name not in {"fonden", "foreningen", "holding", "bank"} and len(name.split()) > 1
+    ]
+    return {"company_names": company_names, "company_cvrs": company_cvrs}
 
 
 def fetch_json(page: Any, path: str, method: str = "GET", payload: Any = None, retries: int = 3) -> Any:
@@ -262,13 +376,62 @@ def merge_relations(relations: list[dict[str, Any]], text_lookup: dict[str, str]
     return sorted(grouped.values(), key=lambda item: normalise_name(item["company_name"]))
 
 
+def dedupe_person_entries(entries: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    deduped: dict[str, dict[str, Any]] = {}
+    for entry in entries:
+        key = str(entry.get("enhedsnummer") or "")
+        if not key:
+            deduped[f"__index_{len(deduped)}"] = entry
+            continue
+
+        existing = deduped.get(key)
+        if not existing:
+            deduped[key] = entry
+            continue
+
+        existing_type = str(existing.get("personType") or "")
+        current_type = str(entry.get("personType") or "")
+        if existing_type != "deltager" and current_type == "deltager":
+            deduped[key] = entry
+
+    return list(deduped.values())
+
+
 def find_exact_person_matches(results: dict[str, Any], name: str) -> list[dict[str, Any]]:
     expected = normalise_name(name)
-    return [
+    return dedupe_person_entries([
         entry
         for entry in results.get("enheder") or []
         if entry.get("enhedstype") == "person" and normalise_name(entry.get("senesteNavn", "")) == expected
-    ]
+    ])
+
+
+def find_variant_person_matches(results: dict[str, Any], name: str) -> list[dict[str, Any]]:
+    expected_tokens = name_tokens(name)
+    if len(expected_tokens) < 2:
+        return []
+
+    expected_first = expected_tokens[0]
+    expected_last = expected_tokens[-1]
+    matches: list[dict[str, Any]] = []
+
+    for entry in results.get("enheder") or []:
+        if entry.get("enhedstype") != "person":
+            continue
+        candidate_tokens = name_tokens(entry.get("senesteNavn", ""))
+        if len(candidate_tokens) < 2 or candidate_tokens[0] != expected_first:
+            continue
+
+        candidate_tail = candidate_tokens[1:]
+        last_token_matches = any(
+            expected_last == token or expected_last in token_components(token)
+            for token in candidate_tail
+        )
+        if not last_token_matches:
+            continue
+        matches.append(entry)
+
+    return dedupe_person_entries(matches)
 
 
 def find_single_extended_name_match(results: dict[str, Any], name: str) -> dict[str, Any] | None:
@@ -291,32 +454,163 @@ def find_single_extended_name_match(results: dict[str, Any], name: str) -> dict[
     return candidate if index == len(expected_tokens) else None
 
 
-def build_no_match_entry(profile: dict[str, Any], results: dict[str, Any]) -> dict[str, Any]:
-    person_candidates = [
-        {
-            "name": entry.get("senesteNavn") or "",
-            "person_enhedsnummer": entry.get("enhedsnummer") or "",
-            "person_type": entry.get("personType") or "",
-            "person_url": (
-                build_person_url(entry.get("enhedsnummer"), entry.get("personType"))
-                if entry.get("enhedsnummer") and entry.get("personType")
-                else ""
-            ),
-        }
-        for entry in results.get("enheder") or []
-        if entry.get("enhedstype") == "person"
-    ]
+def fetch_person_detail(page: Any, person_enhedsnummer: str, person_type: str) -> dict[str, Any]:
+    return fetch_json(
+        page,
+        f"/gateway/person/hentPerson?enhedsnummer={person_enhedsnummer}&persontype={person_type}&locale=da",
+    )
+
+
+def build_match_entry(
+    profile: dict[str, Any],
+    candidate: dict[str, Any],
+    text_lookup: dict[str, str],
+    page: Any,
+    match_quality: str,
+    verification: dict[str, Any] | None = None,
+    force_detail: bool = False,
+) -> dict[str, Any]:
+    person_enhedsnummer = str(candidate.get("enhedsnummer") or candidate.get("person_enhedsnummer") or "")
+    person_type = str(candidate.get("personType") or candidate.get("person_type") or "deltager")
+    person_name = candidate.get("senesteNavn") or candidate.get("person_name") or candidate.get("name") or profile["name"]
+    has_active_relations = bool(candidate.get("harAktiveRelationer") or candidate.get("has_active_relations"))
+    person_url = build_person_url(person_enhedsnummer, person_type)
+
+    entry: dict[str, Any] = {
+        "id": profile["id"],
+        "name": profile["name"],
+        "status": "exact_match",
+        "match_quality": match_quality,
+        "person_name": person_name,
+        "person_enhedsnummer": person_enhedsnummer,
+        "person_type": person_type,
+        "person_url": person_url,
+        "search_url": f"{CVR_BASE_URL}/soegeresultater?fritekst={quote(profile['name'])}&sideIndex=0&size=10",
+        "has_active_relations": has_active_relations,
+        "active_relations": [],
+        "historical_relation_count": 0,
+    }
+
+    if verification:
+        entry["verification"] = verification
+
+    if not has_active_relations and not force_detail:
+        return entry
+
+    detail = fetch_person_detail(page, person_enhedsnummer, person_type)
+    person_relations = detail.get("personRelationer") or {}
+    active_relations = person_relations.get("aktiveRelationer") or []
+    inactive_relations = person_relations.get("ophoerteRelationer") or []
+
+    entry["has_active_relations"] = bool(active_relations)
+    entry["active_relations"] = merge_relations(active_relations, text_lookup)
+    entry["historical_relation_count"] = len(inactive_relations)
+    return entry
+
+
+def score_candidate_against_clues(entry: dict[str, Any], clues: dict[str, list[str]]) -> dict[str, Any]:
+    relation_names = [normalise_company_name(relation.get("company_name") or "") for relation in entry.get("active_relations") or []]
+    relation_cvrs = {str(relation.get("company_cvr") or "") for relation in entry.get("active_relations") or [] if relation.get("company_cvr")}
+    matched_cvrs = sorted({cvr for cvr in clues["company_cvrs"] if cvr in relation_cvrs})
+    matched_names: list[str] = []
+
+    for clue in clues["company_names"]:
+        if len(clue) < 4:
+            continue
+        for relation_name in relation_names:
+            if not relation_name:
+                continue
+            if relation_name == clue:
+                matched_names.append(clue)
+                break
+
     return {
+        "score": (len(matched_cvrs) * 100) + (len(matched_names) * 30),
+        "matched_cvrs": matched_cvrs,
+        "matched_names": sorted(set(matched_names)),
+    }
+
+
+def choose_verified_candidate(
+    profile: dict[str, Any],
+    candidates: list[dict[str, Any]],
+    clues: dict[str, list[str]],
+    page: Any,
+    text_lookup: dict[str, str],
+) -> dict[str, Any] | None:
+    if not clues["company_names"] and not clues["company_cvrs"]:
+        return None
+
+    scored_candidates: list[tuple[dict[str, Any], dict[str, Any], dict[str, Any]]] = []
+    for candidate in candidates:
+        entry = build_match_entry(profile, candidate, text_lookup, page, match_quality="hverv_verified", force_detail=True)
+        score = score_candidate_against_clues(entry, clues)
+        scored_candidates.append((candidate, entry, score))
+
+    scored_candidates = [item for item in scored_candidates if item[2]["score"] > 0]
+    if not scored_candidates:
+        return None
+
+    scored_candidates.sort(
+        key=lambda item: (
+            item[2]["score"],
+            len(item[2]["matched_cvrs"]),
+            len(item[2]["matched_names"]),
+            normalise_name(item[1]["person_name"]),
+        ),
+        reverse=True,
+    )
+
+    _, best_entry, best_score = scored_candidates[0]
+    if len(scored_candidates) > 1 and scored_candidates[1][2]["score"] == best_score["score"]:
+        return None
+
+    if not best_score["matched_cvrs"] and not best_score["matched_names"]:
+        return None
+
+    best_entry["match_quality"] = "hverv_verified"
+    best_entry["verification"] = {
+        "method": "hverv_verified",
+        "matched_company_names": best_score["matched_names"],
+        "matched_company_cvrs": best_score["matched_cvrs"],
+    }
+    return best_entry
+
+
+def build_no_match_entry(profile: dict[str, Any], results: dict[str, Any], clues: dict[str, list[str]] | None = None) -> dict[str, Any]:
+    person_candidates = []
+    for person_entry in dedupe_person_entries([entry for entry in results.get("enheder") or [] if entry.get("enhedstype") == "person"]):
+        person_candidates.append(
+            {
+                "name": person_entry.get("senesteNavn") or "",
+                "person_enhedsnummer": person_entry.get("enhedsnummer") or "",
+                "person_type": person_entry.get("personType") or "",
+                "person_url": (
+                    build_person_url(person_entry.get("enhedsnummer"), person_entry.get("personType"))
+                    if person_entry.get("enhedsnummer") and person_entry.get("personType")
+                    else ""
+                ),
+            }
+        )
+    entry = {
         "id": profile["id"],
         "name": profile["name"],
         "status": "not_found",
         "person_total": int(results.get("personTotal") or len(person_candidates)),
         "candidates": person_candidates,
     }
+    if clues and (clues["company_names"] or clues["company_cvrs"]):
+        entry["verification_clues"] = clues
+    return entry
 
 
-def build_ambiguous_entry(profile: dict[str, Any], matches: list[dict[str, Any]], results: dict[str, Any]) -> dict[str, Any]:
-    return {
+def build_ambiguous_entry(
+    profile: dict[str, Any],
+    matches: list[dict[str, Any]],
+    results: dict[str, Any],
+    clues: dict[str, list[str]] | None = None,
+) -> dict[str, Any]:
+    entry = {
         "id": profile["id"],
         "name": profile["name"],
         "status": "ambiguous",
@@ -337,57 +631,62 @@ def build_ambiguous_entry(profile: dict[str, Any], matches: list[dict[str, Any]]
             for match in matches
         ],
     }
+    if clues and (clues["company_names"] or clues["company_cvrs"]):
+        entry["verification_clues"] = clues
+    return entry
 
 
-def fetch_profile_entry(page: Any, profile: dict[str, Any], text_lookup: dict[str, str]) -> dict[str, Any]:
+def fetch_profile_entry(
+    page: Any,
+    profile: dict[str, Any],
+    text_lookup: dict[str, str],
+    hverv_index: dict[str, Any],
+    overrides: dict[str, Any],
+) -> dict[str, Any]:
+    override = overrides.get(str(profile["id"]))
+    if override:
+        override_candidate = {
+            "person_enhedsnummer": override.get("person_enhedsnummer"),
+            "person_type": override.get("person_type") or "deltager",
+            "person_name": override.get("person_name") or profile["name"],
+            "has_active_relations": True,
+        }
+        verification = {
+            "method": "manual_override",
+            "note": override.get("note") or "Manuelt verificeret navn i Virk/CVR.",
+            "sources": override.get("sources") or [],
+        }
+        return build_match_entry(profile, override_candidate, text_lookup, page, "manual_override", verification)
+
     search_results = fetch_json(page, "/gateway/soeg/fritekst", method="POST", payload=build_search_payload(profile["name"]))
+    every_variant = find_variant_person_matches(search_results, profile["name"])
+    clues = extract_hverv_clues(hverv_index.get(str(profile["id"])))
+
     matches = find_exact_person_matches(search_results, profile["name"])
     match_quality = "exact"
 
     if len(matches) == 0:
+        verified_match = choose_verified_candidate(profile, every_variant, clues, page, text_lookup)
+        if verified_match:
+            return verified_match
+
         extended_match = find_single_extended_name_match(search_results, profile["name"])
-        if not extended_match:
-            return build_no_match_entry(profile, search_results)
-        matches = [extended_match]
-        match_quality = "extended_name"
+        if extended_match:
+            matches = [extended_match]
+            match_quality = "extended_name"
+        elif len(every_variant) == 1:
+            matches = every_variant
+            match_quality = "variant_name"
+        else:
+            return build_no_match_entry(profile, search_results, clues)
 
     if len(matches) > 1:
-        return build_ambiguous_entry(profile, matches, search_results)
+        verified_match = choose_verified_candidate(profile, matches, clues, page, text_lookup)
+        if verified_match:
+            return verified_match
+        return build_ambiguous_entry(profile, matches, search_results, clues)
 
-    match = matches[0]
-    person_enhedsnummer = str(match.get("enhedsnummer") or "")
-    person_type = str(match.get("personType") or "deltager")
-    person_url = build_person_url(person_enhedsnummer, person_type)
-
-    entry: dict[str, Any] = {
-        "id": profile["id"],
-        "name": profile["name"],
-        "status": "exact_match",
-        "match_quality": match_quality,
-        "person_name": match.get("senesteNavn") or profile["name"],
-        "person_enhedsnummer": person_enhedsnummer,
-        "person_type": person_type,
-        "person_url": person_url,
-        "search_url": f"{CVR_BASE_URL}/soegeresultater?fritekst={quote(profile['name'])}&sideIndex=0&size=10",
-        "has_active_relations": bool(match.get("harAktiveRelationer")),
-        "active_relations": [],
-        "historical_relation_count": 0,
-    }
-
-    if not match.get("harAktiveRelationer"):
-        return entry
-
-    detail = fetch_json(
-        page,
-        f"/gateway/person/hentPerson?enhedsnummer={person_enhedsnummer}&persontype={person_type}&locale=da",
-    )
-    person_relations = detail.get("personRelationer") or {}
-    active_relations = person_relations.get("aktiveRelationer") or []
-    inactive_relations = person_relations.get("ophoerteRelationer") or []
-
-    entry["active_relations"] = merge_relations(active_relations, text_lookup)
-    entry["historical_relation_count"] = len(inactive_relations)
-    return entry
+    return build_match_entry(profile, matches[0], text_lookup, page, match_quality)
 
 
 def write_json(path: Path, payload: Any) -> None:
@@ -396,6 +695,9 @@ def write_json(path: Path, payload: Any) -> None:
 
 def load_profiles(args: argparse.Namespace) -> list[dict[str, Any]]:
     profiles = json.loads(PROFILES_FILE.read_text(encoding="utf-8"))
+    selected_ids = parse_selected_ids(args.ids)
+    if selected_ids:
+        profiles = [profile for profile in profiles if int(profile["id"]) in selected_ids]
     if args.retry_errors and Path(args.output).exists():
         existing = json.loads(Path(args.output).read_text(encoding="utf-8")).get("medlemmer", {})
         retry_ids = {key for key, value in existing.items() if value.get("status") == "error"}
@@ -419,6 +721,8 @@ def main() -> None:
     output_path = Path(args.output)
     profiles = load_profiles(args)
     existing_output = load_existing_output(output_path)
+    hverv_index = load_hverv_index()
+    overrides = load_overrides()
 
     chrome_path = find_chrome(args.chrome_path)
     user_data_dir = (ROOT / "tmp_chrome_cvr_profile").resolve()
@@ -433,8 +737,8 @@ def main() -> None:
         "generated": str(date.today()),
         "note": (
             "Data bygger paa praecis navnesoegning i det offentlige CVR paa Virk. "
-            "Kun entydige persontraef gemmes. Navne med ekstra mellemnavne accepteres kun ved et enkelt persontraef. "
-            "Tvetydige eller usikre navnetraef skjules."
+            "Kun entydige persontraef gemmes. Navne med ekstra mellemnavne eller efternavne accepteres kun ved entydig identitet. "
+            "Tvetydige navnetraef kan kun vises hvis de bekræftes mod Folketingets hvervregister eller via en manuel officiel verifikation."
         ),
         "medlemmer": dict(existing_output.get("medlemmer", {})),
     }
@@ -456,7 +760,7 @@ def main() -> None:
             total = len(profiles)
             for index, profile in enumerate(profiles, start=1):
                 try:
-                    entry = fetch_profile_entry(page, profile, text_lookup)
+                    entry = fetch_profile_entry(page, profile, text_lookup, hverv_index, overrides)
                 except Exception as exc:  # noqa: BLE001
                     entry = {
                         "id": profile["id"],
