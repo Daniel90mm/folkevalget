@@ -10,6 +10,7 @@ from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -31,13 +32,17 @@ class ReviewEntry:
     name: str
     official_name: str | None
     member_url: str | None
+    ft_search_url: str
+    virk_search_url: str
     candidate_count: int
     person_total: int
     company_cvr_count: int
     company_name_count: int
     candidate_names: list[str]
+    candidate_urls: list[str]
     company_name_samples: list[str]
     company_cvr_samples: list[str]
+    search_names_tried: list[str]
     next_step: str
     reasons: list[str]
 
@@ -50,13 +55,17 @@ class ReviewEntry:
             "name": self.name,
             "official_name": self.official_name,
             "member_url": self.member_url,
+            "ft_search_url": self.ft_search_url,
+            "virk_search_url": self.virk_search_url,
             "candidate_count": self.candidate_count,
             "person_total": self.person_total,
             "company_cvr_count": self.company_cvr_count,
             "company_name_count": self.company_name_count,
             "candidate_names": self.candidate_names,
+            "candidate_urls": self.candidate_urls,
             "company_name_samples": self.company_name_samples,
             "company_cvr_samples": self.company_cvr_samples,
+            "search_names_tried": self.search_names_tried,
             "next_step": self.next_step,
             "reasons": self.reasons,
         }
@@ -73,7 +82,23 @@ def load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def pick_next_step(status: str, candidate_count: int, company_cvr_count: int, company_name_count: int, official_name_differs: bool) -> str:
+def build_ft_search_url(query: str) -> str:
+    encoded = quote(query or "", safe="")
+    return f"https://www.ft.dk/da/search?as=1&msf=mf&pageNr=1&pageSize=25&q={encoded}&sf=mf"
+
+
+def build_virk_search_url(query: str) -> str:
+    encoded = quote(query or "", safe="")
+    return f"https://datacvr.virk.dk/soegeresultater?fritekst={encoded}&sideIndex=0&size=10"
+
+
+def pick_next_step(
+    status: str,
+    candidate_count: int,
+    company_cvr_count: int,
+    company_name_count: int,
+    official_name_differs: bool,
+) -> str:
     if company_cvr_count:
         return "Søg virksomhederne direkte i Virk via CVR-numre og sammenhold personrelationer med medlemmet."
     if company_name_count:
@@ -89,7 +114,15 @@ def pick_next_step(status: str, candidate_count: int, company_cvr_count: int, co
     return "Ingen stærke spor endnu; kræver nye officielle kilder eller manuel verifikation."
 
 
-def score_entry(status: str, candidate_count: int, person_total: int, company_cvr_count: int, company_name_count: int, official_name_differs: bool, has_member_url: bool) -> tuple[int, list[str]]:
+def score_entry(
+    status: str,
+    candidate_count: int,
+    person_total: int,
+    company_cvr_count: int,
+    company_name_count: int,
+    official_name_differs: bool,
+    has_member_url: bool,
+) -> tuple[int, list[str]]:
     score = 0
     reasons: list[str] = []
 
@@ -158,6 +191,15 @@ def build_review_entries() -> tuple[dict[str, Any], list[ReviewEntry]]:
         company_cvrs = company_clues.get("company_cvrs") or []
         candidates = item.get("candidates") or []
         candidate_names = [candidate.get("name") for candidate in candidates if candidate.get("name")]
+        candidate_urls = [candidate.get("person_url") for candidate in candidates if candidate.get("person_url")]
+        search_names_tried = item.get("search_names_tried") or []
+        if not search_names_tried and item.get("search_name_used"):
+            search_names_tried = [item["search_name_used"]]
+        primary_lookup_name = (
+            search_names_tried[0]
+            if search_names_tried
+            else (official_name or item.get("name") or profile.get("name") or "")
+        )
         official_name_differs = bool(official_name and normalise(official_name) != normalise(item.get("name")))
 
         score, reasons = score_entry(
@@ -179,13 +221,17 @@ def build_review_entries() -> tuple[dict[str, Any], list[ReviewEntry]]:
                 name=item.get("name") or profile.get("name") or "",
                 official_name=official_name,
                 member_url=profile.get("member_url"),
+                ft_search_url=build_ft_search_url(official_name or item.get("name") or profile.get("name") or ""),
+                virk_search_url=build_virk_search_url(primary_lookup_name),
                 candidate_count=len(candidates),
                 person_total=int(item.get("person_total") or 0),
                 company_cvr_count=len(company_cvrs),
                 company_name_count=len(company_names),
                 candidate_names=candidate_names[:5],
+                candidate_urls=candidate_urls[:5],
                 company_name_samples=company_names[:5],
                 company_cvr_samples=company_cvrs[:5],
+                search_names_tried=search_names_tried,
                 next_step=pick_next_step(
                     status=status,
                     candidate_count=len(candidates),
@@ -258,12 +304,23 @@ def write_reports(summary: dict[str, Any], entries: list[ReviewEntry]) -> None:
     ]
 
     for entry in entries[:25]:
+        ft_links = []
+        if entry.member_url:
+            ft_links.append(f"[medlemsside]({entry.member_url})")
+        ft_links.append(f"[ft-søgning]({entry.ft_search_url})")
+        candidate_links = ", ".join(
+            f"[{index}]({url})" for index, url in enumerate(entry.candidate_urls, start=1)
+        ) or "—"
         lines.extend(
             [
                 f"### {entry.rank}. {entry.name} ({entry.status}, score {entry.score})",
                 f"- ID: `{entry.member_id}`",
                 f"- Officielt navn: {entry.official_name or '—'}",
+                f"- FT.dk: {' / '.join(ft_links)}",
+                f"- Virk: [søgning]({entry.virk_search_url})",
+                f"- Søgte navne: {', '.join(entry.search_names_tried) if entry.search_names_tried else '—'}",
                 f"- Virk-kandidater: {entry.candidate_count} (personTotal: {entry.person_total})",
+                f"- Kandidatlinks: {candidate_links}",
                 f"- Virksomhedsnavne: {', '.join(entry.company_name_samples) if entry.company_name_samples else '—'}",
                 f"- CVR-spor: {', '.join(entry.company_cvr_samples) if entry.company_cvr_samples else '—'}",
                 f"- Kandidater: {', '.join(entry.candidate_names) if entry.candidate_names else '—'}",

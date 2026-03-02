@@ -1,4 +1,42 @@
 {
   "note": "Manuelt verificerede CVR-personmatch. Bruges kun naar navnet ikke kan fastslaas sikkert gennem officielle standardkilder alene.",
-  "medlemmer": {}
+  "medlemmer": {
+    "15763": {
+      "person_enhedsnummer": "4000414959",
+      "person_type": "deltager",
+      "person_name": "Peter Kofod",
+      "note": "Bekræftet ved udelukkelse. Folketingets officielle kilder viser, at MF'en Peter Kofod Hristov er en anden offentlig profil end den alternative Virk-kandidat, som er knyttet til Nykredits bestyrelse og matcher den kendte Nykredit-profil Peter Kofod. Derfor er 4000414959 den korrekte Virk-person for MF'en.",
+      "sources": [
+        "https://www.ft.dk/medlemmer/mf/p/peter-kofod",
+        "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%2015763&$format=json",
+        "https://www.nykredit.com/en-gb/our-company/about-us/group-board-of-directors/",
+        "https://datacvr.virk.dk/enhed/person/4000414959/deltager",
+        "https://datacvr.virk.dk/enhed/person/4009213539/deltager"
+      ]
+    },
+    "20362": {
+      "person_enhedsnummer": "4004084941",
+      "person_type": "deltager",
+      "person_name": "Thomas Monberg",
+      "note": "Bekræftet via sammenfald mellem ft.dk-biografiens beskæftigelse hos Amcor Flexibles Denmark og Virk-kandidatens ophørte relation til AMCOR FLEXIBLES ApS. Den alternative Virk-person er advokat og serieiværksætter, hvilket ikke matcher Folketingets officielle biografi.",
+      "sources": [
+        "https://www.ft.dk/medlemmer/mf/t/thomas-monberg",
+        "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%2020362&$format=json",
+        "https://datacvr.virk.dk/enhed/person/4004084941/deltager",
+        "https://datacvr.virk.dk/enhed/person/4003885637/deltager"
+      ]
+    },
+    "20388": {
+      "person_enhedsnummer": "4000261072",
+      "person_type": "deltager",
+      "person_name": "Jon Læssøe Stephensen",
+      "note": "Bekræftet via sammenfald mellem Folketingets officielle biografi og hverv/opgaver omkring Aveny-T og Virk-kandidatens relationer til Aveny-T Fonden samt AVENY-T/TEATER PÅ TOPPEN ApS.",
+      "sources": [
+        "https://www.ft.dk/medlemmer/mf/j/jon-stephensen",
+        "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%2020388&$format=json",
+        "https://datacvr.virk.dk/enhed/person/4000261072/deltager",
+        "https://datacvr.virk.dk/enhed/person/4003884199/deltager"
+      ]
+    }
+  }
 }

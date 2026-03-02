@@ -785,30 +785,106 @@
     "15763": {
       "id": 15763,
       "name": "Peter Kofod",
-      "status": "ambiguous",
-      "person_total": 17,
-      "exact_match_count": 2,
-      "candidates": [
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Peter Kofod",
+      "person_enhedsnummer": "4000414959",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000414959/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Peter%20Kofod%20Hristov&sideIndex=0&size=10",
+      "has_active_relations": true,
+      "active_relations": [
         {
-          "name": "Peter Kofod",
-          "person_enhedsnummer": "4000414959",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000414959/deltager"
+          "company_name": "Cakevision I/S",
+          "company_enhedsnummer": "4001889687",
+          "company_cvr": "33896999",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4001889687",
+          "status": null,
+          "roles": [
+            "Fuldt ansvarlig deltager"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "01.10.2011"
+            }
+          ]
         },
         {
-          "name": "Peter Kofod",
-          "person_enhedsnummer": "4009213539",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4009213539/deltager"
+          "company_name": "P. Kofod ApS",
+          "company_enhedsnummer": "4009657470",
+          "company_cvr": "44032198",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4009657470",
+          "status": "Normal",
+          "roles": [
+            "Direktør",
+            "Stiftere",
+            "Legal ejer"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "02.05.2023"
+            },
+            {
+              "label": "Ejerandel:",
+              "value": "100% (02.05.2023 - )"
+            },
+            {
+              "label": "Stemmerettigheder:",
+              "value": "100% (02.05.2023 - )"
+            },
+            {
+              "label": "Ændringsdato:",
+              "value": "02.05.2023"
+            }
+          ]
+        },
+        {
+          "company_name": "Peter Kofod Holding ApS",
+          "company_enhedsnummer": "4008018234",
+          "company_cvr": "40361049",
+          "company_url": "https://datacvr.virk.dk/enhed/virksomhed/4008018234",
+          "status": "Normal",
+          "roles": [
+            "Direktør",
+            "Stiftere",
+            "Legal ejer"
+          ],
+          "facts": [
+            {
+              "label": "Tiltrædelsesdato",
+              "value": "19.03.2019"
+            },
+            {
+              "label": "Ejerandel:",
+              "value": "100% (19.03.2019 - )"
+            },
+            {
+              "label": "Stemmerettigheder:",
+              "value": "100% (19.03.2019 - )"
+            },
+            {
+              "label": "Ændringsdato:",
+              "value": "19.03.2019"
+            }
+          ]
         }
       ],
+      "historical_relation_count": 2,
       "official_name": "Peter Kofod Hristov",
-      "search_names_tried": [
-        "Peter Kofod Hristov",
-        "Peter Kofod"
-      ]
+      "search_name_used": "Peter Kofod Hristov",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet ved udelukkelse. Folketingets officielle kilder viser, at MF'en Peter Kofod Hristov er en anden offentlig profil end den alternative Virk-kandidat, som er knyttet til Nykredits bestyrelse og matcher den kendte Nykredit-profil Peter Kofod. Derfor er 4000414959 den korrekte Virk-person for MF'en.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/p/peter-kofod",
+          "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%2015763&$format=json",
+          "https://www.nykredit.com/en-gb/our-company/about-us/group-board-of-directors/",
+          "https://datacvr.virk.dk/enhed/person/4000414959/deltager",
+          "https://datacvr.virk.dk/enhed/person/4009213539/deltager"
+        ]
+      }
     },
     "238": {
       "id": 238,
@@ -4324,29 +4400,28 @@
     "20362": {
       "id": 20362,
       "name": "Thomas Monberg",
-      "status": "ambiguous",
-      "person_total": 5,
-      "exact_match_count": 2,
-      "candidates": [
-        {
-          "name": "Thomas Monberg",
-          "person_enhedsnummer": "4003885637",
-          "person_type": "deltager",
-          "has_active_relations": true,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4003885637/deltager"
-        },
-        {
-          "name": "Thomas Monberg",
-          "person_enhedsnummer": "4004084941",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4004084941/deltager"
-        }
-      ],
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Thomas Monberg",
+      "person_enhedsnummer": "4004084941",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4004084941/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Thomas%20Monberg&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 4,
       "official_name": "Thomas Monberg",
-      "search_names_tried": [
-        "Thomas Monberg"
-      ]
+      "search_name_used": "Thomas Monberg",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet via sammenfald mellem ft.dk-biografiens beskæftigelse hos Amcor Flexibles Denmark og Virk-kandidatens ophørte relation til AMCOR FLEXIBLES ApS. Den alternative Virk-person er advokat og serieiværksætter, hvilket ikke matcher Folketingets officielle biografi.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/t/thomas-monberg",
+          "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%2020362&$format=json",
+          "https://datacvr.virk.dk/enhed/person/4004084941/deltager",
+          "https://datacvr.virk.dk/enhed/person/4003885637/deltager"
+        ]
+      }
     },
     "224": {
       "id": 224,
@@ -5866,34 +5941,27 @@
     "20388": {
       "id": 20388,
       "name": "Jon Stephensen",
-      "status": "ambiguous",
-      "person_total": 2,
-      "exact_match_count": 2,
-      "candidates": [
-        {
-          "name": "Jon Læssøe Stephensen",
-          "person_enhedsnummer": "4000261072",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4000261072/deltager"
-        },
-        {
-          "name": "Jon Henrik Westy Stephensen",
-          "person_enhedsnummer": "4003884199",
-          "person_type": "deltager",
-          "has_active_relations": false,
-          "person_url": "https://datacvr.virk.dk/enhed/person/4003884199/deltager"
-        }
-      ],
+      "status": "exact_match",
+      "match_quality": "manual_override",
+      "person_name": "Jon Læssøe Stephensen",
+      "person_enhedsnummer": "4000261072",
+      "person_type": "deltager",
+      "person_url": "https://datacvr.virk.dk/enhed/person/4000261072/deltager",
+      "search_url": "https://datacvr.virk.dk/soegeresultater?fritekst=Jon%20Stephensen&sideIndex=0&size=10",
+      "has_active_relations": false,
+      "active_relations": [],
+      "historical_relation_count": 6,
       "official_name": "Jon Stephensen",
-      "search_names_tried": [
-        "Jon Stephensen"
-      ],
-      "verification_clues": {
-        "company_names": [
-          "mærsk vestas danske bank"
-        ],
-        "company_cvrs": []
+      "search_name_used": "Jon Stephensen",
+      "verification": {
+        "method": "manual_override",
+        "note": "Bekræftet via sammenfald mellem Folketingets officielle biografi og hverv/opgaver omkring Aveny-T og Virk-kandidatens relationer til Aveny-T Fonden samt AVENY-T/TEATER PÅ TOPPEN ApS.",
+        "sources": [
+          "https://www.ft.dk/medlemmer/mf/j/jon-stephensen",
+          "https://oda.ft.dk/api/Akt%C3%B8r?$filter=id%20eq%2020388&$format=json",
+          "https://datacvr.virk.dk/enhed/person/4000261072/deltager",
+          "https://datacvr.virk.dk/enhed/person/4003884199/deltager"
+        ]
       }
     },
     "20383": {
