@@ -684,16 +684,21 @@ window.Folkevalget = (() => {
       return;
     }
 
+    const previousFocus = globalSearchState.previousFocus;
     globalSearchState.open = false;
     globalSearchState.activeIndex = -1;
     globalSearchState.results = [];
     globalSearchState.resultNodes = [];
+    globalSearchState.previousFocus = null;
     document.body.classList.remove("global-search-open");
     root.hidden = true;
-    if (globalSearchState.previousFocus instanceof HTMLElement) {
-      globalSearchState.previousFocus = null;
-      trigger?.focus();
+
+    if (previousFocus instanceof HTMLElement && previousFocus.isConnected) {
+      previousFocus.focus();
+      return;
     }
+
+    trigger?.focus();
   }
 
   function warmGlobalSearchIndex() {
