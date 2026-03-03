@@ -1884,8 +1884,8 @@
     "votes_absent": 651,
     "attendance_pct": 60.6,
     "party_loyalty_pct": 99.8,
-    "party_loyalty_matches": 1000,
-    "party_loyalty_comparisons": 1002,
+    "party_loyalty_matches": 999,
+    "party_loyalty_comparisons": 1001,
     "recent_votes": [
       {
         "afstemning_id": 10570,
@@ -2383,9 +2383,9 @@
     "votes_neither": 40,
     "votes_absent": 971,
     "attendance_pct": 46.6,
-    "party_loyalty_pct": 99.8,
+    "party_loyalty_pct": 99.9,
     "party_loyalty_matches": 844,
-    "party_loyalty_comparisons": 846,
+    "party_loyalty_comparisons": 845,
     "recent_votes": [
       {
         "afstemning_id": 10570,
@@ -2775,8 +2775,8 @@
     "votes_absent": 539,
     "attendance_pct": 67.5,
     "party_loyalty_pct": 99.8,
-    "party_loyalty_matches": 1117,
-    "party_loyalty_comparisons": 1119,
+    "party_loyalty_matches": 1116,
+    "party_loyalty_comparisons": 1118,
     "recent_votes": [
       {
         "afstemning_id": 10570,
@@ -2926,7 +2926,7 @@
       {
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
-        "start_date": "2022-11-01",
+        "start_date": "2024-10-01",
         "end_date": null,
         "active": true
       },
@@ -2974,9 +2974,9 @@
     "votes_neither": 67,
     "votes_absent": 649,
     "attendance_pct": 62.2,
-    "party_loyalty_pct": 99.3,
-    "party_loyalty_matches": 1059,
-    "party_loyalty_comparisons": 1066,
+    "party_loyalty_pct": 99.2,
+    "party_loyalty_matches": 397,
+    "party_loyalty_comparisons": 400,
     "recent_votes": [
       {
         "afstemning_id": 10570,
@@ -3581,9 +3581,9 @@
     "votes_neither": 56,
     "votes_absent": 900,
     "attendance_pct": 49.4,
-    "party_loyalty_pct": 99.9,
+    "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 877,
-    "party_loyalty_comparisons": 878,
+    "party_loyalty_comparisons": 877,
     "recent_votes": [
       {
         "afstemning_id": 10570,
@@ -3718,9 +3718,16 @@
       {
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
-        "start_date": "2022-11-01",
+        "start_date": "2024-10-01",
         "end_date": null,
         "active": true
+      },
+      {
+        "party": "Danmarksdemokraterne – Inger Støjberg",
+        "party_short": "DD",
+        "start_date": "2022-11-01",
+        "end_date": "2023-10-03",
+        "active": false
       }
     ],
     "educations": [
@@ -3759,8 +3766,8 @@
     "votes_absent": 460,
     "attendance_pct": 1.5,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 7,
-    "party_loyalty_comparisons": 7,
+    "party_loyalty_matches": 3,
+    "party_loyalty_comparisons": 3,
     "recent_votes": [
       {
         "afstemning_id": 9912,
@@ -4640,9 +4647,16 @@
       {
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
-        "start_date": "2022-11-01",
+        "start_date": "2024-10-01",
         "end_date": null,
         "active": true
+      },
+      {
+        "party": "Danmarksdemokraterne – Inger Støjberg",
+        "party_short": "DD",
+        "start_date": "2022-11-01",
+        "end_date": "2023-10-03",
+        "active": false
       },
       {
         "party": "Danmarksdemokraterne - Inger Støjberg",
@@ -4684,9 +4698,9 @@
     "votes_neither": 74,
     "votes_absent": 606,
     "attendance_pct": 65.0,
-    "party_loyalty_pct": 99.6,
-    "party_loyalty_matches": 1118,
-    "party_loyalty_comparisons": 1123,
+    "party_loyalty_pct": 99.7,
+    "party_loyalty_matches": 778,
+    "party_loyalty_comparisons": 780,
     "recent_votes": [
       {
         "afstemning_id": 10570,
@@ -6124,11 +6138,6 @@
         "id": 21263,
         "name": "Børne- og Undervisningsudvalget",
         "short_name": "BUU"
-      },
-      {
-        "id": 21259,
-        "name": "Udvalget for Digitalisering og It",
-        "short_name": "DIU"
       },
       {
         "id": 21256,
@@ -11332,19 +11341,9 @@
         "short_name": "BUU"
       },
       {
-        "id": 21256,
-        "name": "Socialudvalget",
-        "short_name": "SOU"
-      },
-      {
         "id": 21253,
         "name": "Kulturudvalget",
         "short_name": "KUU"
-      },
-      {
-        "id": 21243,
-        "name": "Transportudvalget",
-        "short_name": "TRU"
       },
       {
         "id": 21240,
@@ -14198,11 +14197,6 @@
         "id": 21229,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
-      },
-      {
-        "id": 21250,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
       },
       {
         "id": 21230,
@@ -22880,9 +22874,16 @@
       {
         "party": "Socialdemokratiet",
         "party_short": "S",
-        "start_date": "2022-10-04",
+        "start_date": "2024-10-01",
         "end_date": null,
         "active": true
+      },
+      {
+        "party": "Socialdemokratiet",
+        "party_short": "S",
+        "start_date": "2022-10-04",
+        "end_date": "2023-10-03",
+        "active": false
       }
     ],
     "educations": [
@@ -22921,8 +22922,8 @@
     "votes_absent": 1060,
     "attendance_pct": 54.9,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 1290,
-    "party_loyalty_comparisons": 1290,
+    "party_loyalty_matches": 867,
+    "party_loyalty_comparisons": 867,
     "recent_votes": [
       {
         "afstemning_id": 10570,
@@ -24092,9 +24093,16 @@
       {
         "party": "Socialdemokratiet",
         "party_short": "S",
-        "start_date": "2022-10-04",
+        "start_date": "2024-10-01",
         "end_date": null,
         "active": true
+      },
+      {
+        "party": "Socialdemokratiet",
+        "party_short": "S",
+        "start_date": "2022-10-04",
+        "end_date": "2023-10-03",
+        "active": false
       }
     ],
     "educations": [
@@ -24131,8 +24139,8 @@
     "votes_absent": 1618,
     "attendance_pct": 36.8,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 942,
-    "party_loyalty_comparisons": 942,
+    "party_loyalty_matches": 596,
+    "party_loyalty_comparisons": 596,
     "recent_votes": [
       {
         "afstemning_id": 10570,
@@ -24247,6 +24255,16 @@
         "short_name": "UUI"
       },
       {
+        "id": 21258,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21243,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
         "id": 21243,
         "name": "Transportudvalget",
         "short_name": "TRU"
@@ -24255,6 +24273,16 @@
         "id": 21242,
         "name": "Skatteudvalget",
         "short_name": "SAU"
+      },
+      {
+        "id": 21242,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21239,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
       },
       {
         "id": 21239,
@@ -25751,16 +25779,6 @@
     "current_party_short": "S",
     "committees": [
       {
-        "id": 21258,
-        "name": "Udlændinge- og Integrationsudvalget",
-        "short_name": "UUI"
-      },
-      {
-        "id": 21253,
-        "name": "Kulturudvalget",
-        "short_name": "KUU"
-      },
-      {
         "id": 21252,
         "name": "Indfødsretsudvalget",
         "short_name": "IFU"
@@ -25774,11 +25792,6 @@
         "id": 21247,
         "name": "Udvalget for Småøer",
         "short_name": "UFS"
-      },
-      {
-        "id": 21246,
-        "name": "Udvalget for Landdistrikter og Øer",
-        "short_name": "ULØ"
       },
       {
         "id": 21242,
@@ -27465,6 +27478,16 @@
         "short_name": "KUU"
       },
       {
+        "id": 21253,
+        "name": "Kulturudvalget",
+        "short_name": "KUU"
+      },
+      {
+        "id": 21245,
+        "name": "Udenrigsudvalget",
+        "short_name": "URU"
+      },
+      {
         "id": 21245,
         "name": "Udenrigsudvalget",
         "short_name": "URU"
@@ -27473,6 +27496,16 @@
         "id": 21240,
         "name": "Kirkeudvalget",
         "short_name": "KIU"
+      },
+      {
+        "id": 21240,
+        "name": "Kirkeudvalget",
+        "short_name": "KIU"
+      },
+      {
+        "id": 21239,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
       },
       {
         "id": 21239,
@@ -38255,9 +38288,16 @@
       {
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
-        "start_date": "2022-10-04",
+        "start_date": "2024-10-01",
         "end_date": null,
         "active": true
+      },
+      {
+        "party": "Venstre, Danmarks Liberale Parti",
+        "party_short": "V",
+        "start_date": "2022-10-04",
+        "end_date": "2023-10-03",
+        "active": false
       }
     ],
     "educations": [
@@ -38293,8 +38333,8 @@
     "votes_absent": 1931,
     "attendance_pct": 25.6,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 664,
-    "party_loyalty_comparisons": 664,
+    "party_loyalty_matches": 460,
+    "party_loyalty_comparisons": 460,
     "recent_votes": [
       {
         "afstemning_id": 10570,
@@ -40045,9 +40085,16 @@
       {
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
-        "start_date": "2022-10-04",
+        "start_date": "2024-10-01",
         "end_date": null,
         "active": true
+      },
+      {
+        "party": "Venstre, Danmarks Liberale Parti",
+        "party_short": "V",
+        "start_date": "2022-10-04",
+        "end_date": "2023-10-03",
+        "active": false
       }
     ],
     "educations": [
@@ -40083,8 +40130,8 @@
     "votes_absent": 738,
     "attendance_pct": 67.6,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 1541,
-    "party_loyalty_comparisons": 1541,
+    "party_loyalty_matches": 1128,
+    "party_loyalty_comparisons": 1128,
     "recent_votes": [
       {
         "afstemning_id": 10570,
@@ -41252,11 +41299,11 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2025-12-10",
+    "member_since_date": "2025-12-01",
     "member_since_year": 2025,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 2,
+    "seniority_months": 3,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
