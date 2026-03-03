@@ -811,6 +811,25 @@ body.global-search-open {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.page-home .step-grid {
+  gap: 0 var(--space-xl);
+}
+
+.page-home .step-card {
+  padding: var(--space-md) 0 0;
+  border: none;
+  border-top: 1px solid var(--color-border);
+  background: transparent;
+}
+
+.page-home .step-card span {
+  border: none;
+  width: auto;
+  height: auto;
+  padding: 0;
+  justify-content: flex-start;
+}
+
 .step-card span {
   display: inline-flex;
   align-items: center;
