@@ -3,7 +3,9 @@ name: Refresh Data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "15 */6 * * *"
+    - cron: "45 5 * * 1-5"   # weekdays 05:45 UTC (07:45 CET / 08:45 CEST) — morning catch-up
+    - cron: "30 17 * * 1-5"  # weekdays 17:30 UTC (18:30 CET / 19:30 CEST) — after afternoon voting
+    - cron: "0 9 * * 6"      # Saturday 09:00 UTC (10:00 CET / 11:00 CEST) — catch Friday late votes
 
 permissions:
   contents: write
@@ -30,6 +32,16 @@ jobs:
       - name: Refresh static data
         run: |
           python scripts/fetch_data.py --start-date 2022-11-01
+
+      - name: Install Playwright for R/F document scraping
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Refresh R/F documents
+        run: |
+          python scripts/fetch_ft_rf_documents.py --headless --verbose
+        continue-on-error: true
 
       - name: Commit updated data
         run: |

@@ -409,6 +409,49 @@ window.Folkevalget = (() => {
     return notes;
   }
 
+  // Scheduled CI refresh times in UTC: { days: [weekday indices 0=Sun], hour, minute }
+  // Must stay in sync with .github/workflows/refresh-data.yml
+  const REFRESH_SCHEDULE_UTC = [
+    { days: [1, 2, 3, 4, 5], hour: 5, minute: 45 },   // weekdays 05:45 UTC
+    { days: [1, 2, 3, 4, 5], hour: 17, minute: 30 },  // weekdays 17:30 UTC
+    { days: [6], hour: 9, minute: 0 },                 // Saturday 09:00 UTC
+  ];
+
+  function computeNextRefresh() {
+    const now = new Date();
+    let best = null;
+    for (let dayOffset = 0; dayOffset <= 7; dayOffset++) {
+      for (const slot of REFRESH_SCHEDULE_UTC) {
+        const candidate = new Date(Date.UTC(
+          now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() + dayOffset,
+          slot.hour, slot.minute, 0, 0,
+        ));
+        if (candidate <= now) continue;
+        if (!slot.days.includes(candidate.getUTCDay())) continue;
+        if (!best || candidate < best) best = candidate;
+      }
+    }
+    return best;
+  }
+
+  function formatNextRefresh(date) {
+    if (!date) return "-";
+    const tz = "Europe/Copenhagen";
+    const now = new Date();
+    const nowDateStr = now.toLocaleDateString("da-DK", { timeZone: tz });
+    const tgtDateStr = date.toLocaleDateString("da-DK", { timeZone: tz });
+    const timeFmt = new Intl.DateTimeFormat("da-DK", { timeZone: tz, hour: "2-digit", minute: "2-digit" });
+    const timeStr = timeFmt.format(date);
+    if (nowDateStr === tgtDateStr) return `kl. ${timeStr}`;
+    const tomorrow = new Date(now);
+    tomorrow.setUTCDate(tomorrow.getUTCDate() + 1);
+    if (tgtDateStr === tomorrow.toLocaleDateString("da-DK", { timeZone: tz })) {
+      return `i morgen kl. ${timeStr}`;
+    }
+    const dayFmt = new Intl.DateTimeFormat("da-DK", { timeZone: tz, weekday: "short" });
+    return `${dayFmt.format(date)} kl. ${timeStr}`;
+  }
+
   function renderStats(root, stats) {
     if (!root || !stats) {
       return;
@@ -417,6 +460,7 @@ window.Folkevalget = (() => {
     const profileNode = root.querySelector("[data-stat='profiles']");
     const voteNode = root.querySelector("[data-stat='votes']");
     const updatedNode = root.querySelector("[data-stat='updated']");
+    const nextNode = root.querySelector("[data-stat='next-update']");
 
     if (profileNode) {
       profileNode.textContent = formatNumber(stats.counts?.profiles);
@@ -425,7 +469,18 @@ window.Folkevalget = (() => {
       voteNode.textContent = formatNumber(stats.counts?.votes);
     }
     if (updatedNode) {
-      updatedNode.textContent = formatDate(stats.generated_at);
+      const d = stats.generated_at ? new Date(stats.generated_at) : null;
+      if (d) {
+        const tz = "Europe/Copenhagen";
+        const datePart = new Intl.DateTimeFormat("da-DK", { timeZone: tz, day: "numeric", month: "short" }).format(d);
+        const timePart = new Intl.DateTimeFormat("da-DK", { timeZone: tz, hour: "2-digit", minute: "2-digit" }).format(d);
+        updatedNode.textContent = `${datePart} kl. ${timePart}`;
+      } else {
+        updatedNode.textContent = "-";
+      }
+    }
+    if (nextNode) {
+      nextNode.textContent = formatNextRefresh(computeNextRefresh());
     }
   }
 

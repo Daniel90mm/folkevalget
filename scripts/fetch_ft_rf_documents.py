@@ -104,6 +104,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--debug-port", type=int, default=DEBUG_PORT)
     parser.add_argument("--type", choices=["R", "F", "both"], default="both", help="Which document type to scrape")
     parser.add_argument("--dump-html", action="store_true", help="Dump raw page HTML for debugging")
+    parser.add_argument("--headless", action="store_true", help="Run in headless Playwright mode (no CDP, for CI)")
     parser.add_argument("--verbose", action="store_true")
     return parser.parse_args()
 
@@ -255,7 +256,6 @@ def scrape_document_type(
 def main() -> None:
     args = parse_args()
     output_path = Path(args.output)
-    chrome_path = discover_chrome_path(args.chrome_path)
 
     types_to_scrape: dict[str, str] = {}
     if args.type == "both":
@@ -263,29 +263,13 @@ def main() -> None:
     else:
         types_to_scrape = {args.type: FT_DOCUMENT_URLS[args.type]}
 
-    user_data_dir = Path("tmp_chrome_rf_profile").resolve()
-    if user_data_dir.exists():
-        shutil.rmtree(user_data_dir)
-    user_data_dir.mkdir(parents=True, exist_ok=True)
-
-    process = subprocess.Popen([
-        chrome_path,
-        f"--remote-debugging-port={args.debug_port}",
-        f"--user-data-dir={user_data_dir}",
-        "--no-first-run",
-        "--no-default-browser-check",
-        SEED_URL,
-    ])
-
     all_documents: list[dict[str, Any]] = []
 
-    try:
-        time.sleep(WAIT_AFTER_LAUNCH)
+    if args.headless:
+        # Headless mode: use Playwright's built-in Chromium (suitable for CI)
         with sync_playwright() as playwright:
-            browser = playwright.chromium.connect_over_cdp(f"http://127.0.0.1:{args.debug_port}")
-            context = browser.contexts[0]
-            page = context.pages[0] if context.pages else context.new_page()
-            page.wait_for_load_state("networkidle", timeout=60000)
+            browser = playwright.chromium.launch(headless=True)
+            page = browser.new_page()
 
             for doc_type, url in types_to_scrape.items():
                 docs = scrape_document_type(
@@ -297,15 +281,50 @@ def main() -> None:
                 print(f"[ft-rf] {doc_type}: {len(docs)} documents scraped", file=sys.stderr)
 
             browser.close()
-
-    finally:
-        process.terminate()
-        try:
-            process.wait(timeout=10)
-        except Exception:
-            process.kill()
+    else:
+        # CDP mode (default): connect to a locally launched Chrome instance
+        chrome_path = discover_chrome_path(args.chrome_path)
+        user_data_dir = Path("tmp_chrome_rf_profile").resolve()
         if user_data_dir.exists():
-            shutil.rmtree(user_data_dir, ignore_errors=True)
+            shutil.rmtree(user_data_dir)
+        user_data_dir.mkdir(parents=True, exist_ok=True)
+
+        process = subprocess.Popen([
+            chrome_path,
+            f"--remote-debugging-port={args.debug_port}",
+            f"--user-data-dir={user_data_dir}",
+            "--no-first-run",
+            "--no-default-browser-check",
+            SEED_URL,
+        ])
+
+        try:
+            time.sleep(WAIT_AFTER_LAUNCH)
+            with sync_playwright() as playwright:
+                browser = playwright.chromium.connect_over_cdp(f"http://127.0.0.1:{args.debug_port}")
+                context = browser.contexts[0]
+                page = context.pages[0] if context.pages else context.new_page()
+                page.wait_for_load_state("networkidle", timeout=60000)
+
+                for doc_type, url in types_to_scrape.items():
+                    docs = scrape_document_type(
+                        page, doc_type, url,
+                        dump_html=args.dump_html,
+                        verbose=args.verbose,
+                    )
+                    all_documents.extend(docs)
+                    print(f"[ft-rf] {doc_type}: {len(docs)} documents scraped", file=sys.stderr)
+
+                browser.close()
+
+        finally:
+            process.terminate()
+            try:
+                process.wait(timeout=10)
+            except Exception:
+                process.kill()
+            if user_data_dir.exists():
+                shutil.rmtree(user_data_dir, ignore_errors=True)
 
     # Sort: type → samling descending → nummer descending
     def sort_key(doc: dict[str, Any]) -> tuple:
