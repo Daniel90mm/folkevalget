@@ -30,6 +30,7 @@ const VotesApp = (() => {
     closeOnly: false,
     splitOnly: false,
     typeFilter: "",
+    rfDocs: [],
   };
 
   const statsRoot = document.querySelector("[data-site-stats]");
@@ -53,14 +54,18 @@ const VotesApp = (() => {
   async function boot() {
     hydrateStateFromQuery();
 
-    const [{ profiles, stats }, votes] = await Promise.all([
+    const [{ profiles, stats }, votes, rfDocs] = await Promise.all([
       window.Folkevalget.loadCatalogueData(),
       window.Folkevalget.loadVoteData(),
+      fetch(window.Folkevalget.toSiteUrl("data/ft_dokumenter_rf.json"))
+        .then((r) => r.ok ? r.json() : [])
+        .catch(() => []),
     ]);
 
     state.profiles = profiles;
     state.profilesById = new Map(profiles.map((profile) => [profile.id, profile]));
     state.votes = votes;
+    state.rfDocs = Array.isArray(rfDocs) ? rfDocs : [];
 
     window.Folkevalget.renderStats(statsRoot, stats);
     bindEvents();
@@ -617,11 +622,26 @@ const VotesApp = (() => {
     return (Math.abs(Number(vote.counts?.for || 0) - Number(vote.counts?.imod || 0)) / total) * 100;
   }
 
+  function normaliseTitleForMatch(text) {
+    return (text || "").toLowerCase().replace(/\.$/, "").replace(/\s+/g, " ").trim();
+  }
+
   function classifyVoteType(vote) {
     const prefix = (vote.sag_number || "").match(/^([A-ZÆØÅ]+)/u)?.[1] || "";
     if (prefix === "B") {
       const title = vote.sag_short_title || vote.sag_title || "";
       if (/\(borgerforslag\)/i.test(title)) return "B_borger";
+    }
+    if (prefix === "V" && state.rfDocs.length > 0) {
+      const vTitle = normaliseTitleForMatch(vote.sag_short_title || vote.sag_title || "");
+      if (vTitle.length >= 10) {
+        for (const doc of state.rfDocs) {
+          const rfTitle = normaliseTitleForMatch(doc.titel || "");
+          if (rfTitle.length >= 10 && (rfTitle.startsWith(vTitle) || vTitle.startsWith(rfTitle))) {
+            return doc.type;
+          }
+        }
+      }
     }
     return prefix;
   }
