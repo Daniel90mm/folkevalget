@@ -1817,13 +1817,13 @@ body.global-search-open {
 .page-votes .vote-timeline-step-date,
 .page-votes .vote-timeline-step-meta {
   color: var(--color-text-secondary);
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   overflow-wrap: anywhere;
 }
 
 .page-votes .vote-timeline-step-title {
   margin: 0;
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   overflow-wrap: anywhere;
 }
 
@@ -1839,7 +1839,7 @@ body.global-search-open {
 .vote-timeline-link {
   display: block;
   color: var(--color-accent);
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   width: 100%;
   max-width: 100%;
   overflow-wrap: anywhere;
