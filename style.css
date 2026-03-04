@@ -1587,7 +1587,7 @@ body.global-search-open {
 
 .votes-shell {
   display: grid;
-  grid-template-columns: minmax(260px, 0.62fr) minmax(0, 1.58fr);
+  grid-template-columns: 1fr;
   gap: var(--space-lg);
   align-items: start;
 }
@@ -1597,9 +1597,9 @@ body.global-search-open {
 }
 
 .votes-browser {
-  position: sticky;
-  top: var(--space-md);
-  max-width: 34rem;
+  position: static;
+  top: auto;
+  max-width: none;
   align-self: start;
 }
 
