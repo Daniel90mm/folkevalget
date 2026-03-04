@@ -66,3 +66,8 @@ Desktop.ini
 *.log
 *.tmp
 *.temp
+
+# Never commit local agent/runs
+AGENTS.md
+reports/
+
