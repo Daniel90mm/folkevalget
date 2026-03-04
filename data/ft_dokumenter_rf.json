@@ -1,242 +1,562 @@
 [
   {
-    "type": "R",
-    "nummer": "R 9",
-    "titel": "Om det nordiske forsvarssamarbejde i 2025.",
-    "afgivet_af": "Minister for samfundssikkerhed og beredskab Torsten Schack Pedersen (V)",
+    "nummer": "F 39",
+    "titel": "Om Kinas unfair handelspraksis.",
+    "afgivet_af": null,
     "forespoergere": null,
-    "status": "Anmeldt",
-    "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/redegoerelse/r9/index.htm"
+    "status": null,
+    "samling": "2023-24",
+    "href": "/samling/20231/forespoergsel/F39/index.htm",
+    "type": "F"
   },
   {
-    "type": "R",
-    "nummer": "R 8",
-    "titel": "Om det nordiske samfundssikkerheds- og beredskabssamarbejde i 2025.",
-    "afgivet_af": "Minister for samfundssikkerhed og beredskab Torsten Schack Pedersen (V)",
+    "nummer": "F 38",
+    "titel": "Om Danmarks omstilling til et digitalt samfund.",
+    "afgivet_af": null,
     "forespoergere": null,
-    "status": "Anmeldt",
-    "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/redegoerelse/r8/index.htm"
+    "status": null,
+    "samling": "2023-24",
+    "href": "/samling/20231/forespoergsel/F38/index.htm",
+    "type": "F"
   },
   {
-    "type": "R",
-    "nummer": "R 7",
-    "titel": "Om Danmarks Digitale Udvikling 2026",
-    "afgivet_af": "Christina Egelund ()",
+    "nummer": "F 37",
+    "titel": "Om regeringens prioritering af lønkroner til administration i staten.",
+    "afgivet_af": null,
     "forespoergere": null,
-    "status": "Anmeldt",
-    "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/redegoerelse/r7/index.htm"
+    "status": null,
+    "samling": "2023-24",
+    "href": "/samling/20231/forespoergsel/F37/index.htm",
+    "type": "F"
   },
   {
-    "type": "R",
-    "nummer": "R 6",
-    "titel": "Om klimaeffekter 2025.",
-    "afgivet_af": "Klima-, energi- og forsyningsminister Lars Aagaard ()",
+    "nummer": "F 36",
+    "titel": "Om regeringens fremtidige energi- og forsyningspolitiske initiativer.",
+    "afgivet_af": null,
     "forespoergere": null,
-    "status": "Forhandlet i Folketingssalen",
-    "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/redegoerelse/r6/index.htm"
+    "status": null,
+    "samling": "2023-24",
+    "href": "/samling/20231/forespoergsel/F36/index.htm",
+    "type": "F"
   },
   {
-    "type": "R",
-    "nummer": "R 5",
-    "titel": "Om det nordiske samarbejde.",
-    "afgivet_af": "Minister for nordisk samarbejde Morten Dahlin (V)",
+    "nummer": "F 35",
+    "titel": "Om velstand.",
+    "afgivet_af": null,
     "forespoergere": null,
-    "status": "Anmeldt",
-    "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/redegoerelse/r5/index.htm"
+    "status": null,
+    "samling": "2023-24",
+    "href": "/samling/20231/forespoergsel/F35/index.htm",
+    "type": "F"
   },
   {
-    "type": "R",
-    "nummer": "R 4",
-    "titel": "Om regional- og landdistriktspolitiske redegørelse 2025.",
-    "afgivet_af": "Minister for byer og landdistrikter Morten Dahlin (V)",
+    "nummer": "F 34",
+    "titel": "Om Israels intensiverede angreb i Gaza og den humanitære situation.",
+    "afgivet_af": null,
     "forespoergere": null,
-    "status": "Forhandlet i Folketingssalen",
-    "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/redegoerelse/r4/index.htm"
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F34/index.htm",
+    "type": "F"
   },
   {
-    "type": "R",
-    "nummer": "R 3",
-    "titel": "Om ligestilling og kønskrænkende adfærd.",
-    "afgivet_af": "Forsvarsminister Troels Lund Poulsen (V)",
+    "nummer": "F 33",
+    "titel": "Om rigsfællesskabet.",
+    "afgivet_af": null,
     "forespoergere": null,
-    "status": "Forhandlet i Folketingssalen",
-    "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/redegoerelse/r3/index.htm"
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F33/index.htm",
+    "type": "F"
   },
   {
-    "type": "R",
-    "nummer": "R 2",
-    "titel": "Om den arktiske redegørelse.",
-    "afgivet_af": "Udenrigsminister Lars Løkke Rasmussen (M)",
+    "nummer": "F 32",
+    "titel": "Om regeringens overordnede visioner for Danmarks fremtid.",
+    "afgivet_af": null,
     "forespoergere": null,
-    "status": "Forhandlet i Folketingssalen",
-    "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/redegoerelse/r2/index.htm"
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F32/index.htm",
+    "type": "F"
   },
   {
-    "type": "R",
-    "nummer": "R 1",
-    "titel": "Om statsministerens åbningsredegørelse.",
-    "afgivet_af": "Statsminister Mette Frederiksen (S)",
+    "nummer": "F 31",
+    "titel": "Om regeringens fremtidige energi- og forsyningspolitiske initiativer.",
+    "afgivet_af": null,
     "forespoergere": null,
-    "status": "Forhandlet i Folketingssalen",
-    "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/redegoerelse/r1/index.htm"
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F31/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
+    "nummer": "F 30",
+    "titel": "Om forbuddet mod atomkraft i dansk energiplanlægning.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F30/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 29",
+    "titel": "Om den indenrigs- og udenrigspolitiske situation.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F29/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 28",
+    "titel": "Om myndighedernes ansvar for, at det fejlbehæftede skib »Scandinavian Star« blev sat i fast rutefart med passagerer mellem Frederikshavn og Oslo.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F28/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 27",
+    "titel": "Om konsekvenserne af den manglende orientering af Folketinget i sagen om Energinets anlægsprojekter.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F27/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 26",
+    "titel": "Om det danske euroforbehold.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F26/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 25",
+    "titel": "Om det stigende antal ulve i Danmark.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F25/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 24",
+    "titel": "Om Danmarks rolle i adoptionssager.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F24/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 23",
+    "titel": "Om demokratiets tilstand og vigtigheden af civilsamfundets rolle i dansk udviklingspolitik.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F23/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 22",
+    "titel": "Om børn og unges trivsel.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F22/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 21",
+    "titel": "Om regeringens EU-formandskabsprioriteter.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F21/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 20",
+    "titel": "Om regeringens holdning til Kinas udenrigspolitik bl.a. over for Taiwan.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F20/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 19",
+    "titel": "Om behovet for en national handleplan for klimasikring af Danmark.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F19/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 18",
+    "titel": "Om Danmarks digitale udvikling.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F18/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 17",
+    "titel": "Om ytringsfriheden og satire.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F17/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "F 16",
+    "titel": "Om kriminalitet begået af EU-borgere.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/forespoergsel/F16/index.htm",
+    "type": "F"
+  },
+  {
     "nummer": "F 15",
     "titel": "Om en national strategi for forebyggelse og bekæmpelse af vold mod og drab på kvinder.",
-    "afgivet_af": "Justitsminister Peter Hummelgaard (S)",
-    "forespoergere": "Helene Brydensholt (ALT), Karin Liltorp (ALT), Christina Olumeko (ALT), Franciska Rosenkilde (ALT)",
-    "status": "Fremmet",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f15/index.htm"
+    "href": "/samling/20251/forespoergsel/F15/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 14",
     "titel": "Om at sikre, at alle valgkort kommer rettidigt frem, når der udskrives folketingsvalg.",
-    "afgivet_af": "Transportminister Thomas Danielsen (V)",
-    "forespoergere": "Leila Stockmarr (EL), Christina Olumeko (ALT)",
-    "status": "Foretaget",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f14/index.htm"
+    "href": "/samling/20251/forespoergsel/F14/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 13",
     "titel": "Om at løfte folkesundheden.",
-    "afgivet_af": "Indenrigs- og sundhedsminister Sophie Løhde (V)",
-    "forespoergere": "Karin Liltorp (ALT), Helene Brydensholt (ALT), Sascha Faxe (ALT), Torsten Gejl (ALT), Christina Olumeko (ALT), Franciska Rosenkilde (ALT)",
-    "status": "Fremmet",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f13/index.htm"
+    "href": "/samling/20251/forespoergsel/F13/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 12",
     "titel": "Om situationen i Syrien.",
-    "afgivet_af": "Udenrigsminister Lars Løkke Rasmussen (M)",
-    "forespoergere": "Søren Søndergaard (EL), Pelle Dragsted (EL), Peder Hvelplund (EL), Rosa Lund (EL), Trine Pertou Mach (EL), Søren Egge Rasmussen (EL), Leila Stockmarr (EL), Victoria Velasquez (EL), Mai Villadsen (EL)",
-    "status": "Fremmet",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f12/index.htm"
+    "href": "/samling/20251/forespoergsel/F12/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 11",
     "titel": "Om elfærger til de danske småøer.",
-    "afgivet_af": "Transportminister Thomas Danielsen (V)",
-    "forespoergere": "Susie Jessen (DD), Signe Munk (SF)",
-    "status": "Tilbagetaget",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f11/index.htm"
+    "href": "/samling/20251/forespoergsel/F11/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 10",
     "titel": "Om efterlevelse af det borgerlige ombud ved lokale valg.",
-    "afgivet_af": "Indenrigs- og sundhedsminister Sophie Løhde (V)",
-    "forespoergere": "Carl Andersen (LA), Ole Birk Olesen (LA), Alexander Ryle (LA)",
-    "status": "Foretaget",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f10/index.htm"
+    "href": "/samling/20251/forespoergsel/F10/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 9",
     "titel": "Om dansk udtræden af Europarådets konvention om statsborgerret.",
-    "afgivet_af": "Udlændinge- og integrationsminister Rasmus Stoklund (S)",
-    "forespoergere": "Kristian Bøgsted (DD), Sandra Elisabeth Skalvig (LA), Frederik Bloch Münster (KF), Mikkel Bjørn (DF)",
-    "status": "Fremmet",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f9/index.htm"
+    "href": "/samling/20251/forespoergsel/F9/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 8",
     "titel": "Om initiativer, der kan styrke forbrugerbeskyttelsen på parkeringsområdet.",
-    "afgivet_af": "Transportminister Thomas Danielsen (V)",
-    "forespoergere": "Kenneth Fredslund Petersen (DD), Betina Kastbjerg (DD), Peter Skaarup (DD)",
-    "status": "Foretaget",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f8/index.htm"
+    "href": "/samling/20251/forespoergsel/F8/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 7",
     "titel": "Om, hvorvidt udgifter til folkeskolen bør følge samfundets generelle velstandsudvikling.",
-    "afgivet_af": "Børne- og undervisningsminister Mattias Tesfaye (S)",
-    "forespoergere": "Sigurd Agersnap (SF), Theresa Berg Andersen (SF), Sofie Lippert (SF), Charlotte Broman Mølbæk (SF)",
-    "status": "Foretaget",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f7/index.htm"
+    "href": "/samling/20251/forespoergsel/F7/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 6",
     "titel": "Om regeringens fremtidige klimapolitiske initiativer.",
-    "afgivet_af": "Klima-, energi- og forsyningsminister Lars Aagaard ()",
-    "forespoergere": "Jesper Petersen (S), Linea Søgaard-Lidell (V), Mads Fuglede (DD), Signe Munk (SF), Steffen W. Frølund (LA), Henrik Frandsen (M), Frederik Bloch Münster (KF), Leila Stockmarr (EL), Samira Nawa (RV), Torsten Gejl (ALT)",
-    "status": "Foretaget",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f6/index.htm"
+    "href": "/samling/20251/forespoergsel/F6/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 5",
     "titel": "Om Tyrkiets tilnærmelser til EU.",
-    "afgivet_af": "Udenrigsminister Lars Løkke Rasmussen (M)",
-    "forespoergere": "Alex Ahrendtsen (DF), Mikkel Bjørn (DF), Pia Kjærsgaard (DF), Peter Kofod (DF), Morten Messerschmidt (DF), Mette Thiesen (DF), Nick Zimmermann (DF)",
-    "status": "Fremmet",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f5/index.htm"
+    "href": "/samling/20251/forespoergsel/F5/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 4",
     "titel": "Om tildeling af førtidspension.",
-    "afgivet_af": "Beskæftigelsesminister Kaare Dybvad Bek (S)",
-    "forespoergere": "Nick Zimmermann (DF), Alex Ahrendtsen (DF), Mikkel Bjørn (DF), Pia Kjærsgaard (DF), Peter Kofod (DF), Morten Messerschmidt (DF), Mette Thiesen (DF)",
-    "status": "Foretaget",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f4/index.htm"
+    "href": "/samling/20251/forespoergsel/F4/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 3",
     "titel": "Om dansk beslutningskompetence på udlændingeområdet.",
-    "afgivet_af": "Udlændinge- og integrationsminister Rasmus Stoklund (S)",
-    "forespoergere": "Mikkel Bjørn (DF), Morten Messerschmidt (DF), Mette Thiesen (DF)",
-    "status": "Foretaget",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f3/index.htm"
+    "href": "/samling/20251/forespoergsel/F3/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 2",
     "titel": "Om regeringens håndtering af sagen om de slettede sms’er.",
-    "afgivet_af": "Statsminister Mette Frederiksen (S), Justitsminister Peter Hummelgaard (S)",
-    "forespoergere": "Sólbjørg Jakobsen (LA), Susie Jessen (DD), Karina Lorentzen Dehnhardt (SF), Mette Abildgaard (KF), Rosa Lund (EL), Morten Messerschmidt (DF), Samira Nawa (RV), Torsten Gejl (ALT), Lars Boje Mathiesen (BP)",
-    "status": "Foretaget",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f2/index.htm"
+    "href": "/samling/20251/forespoergsel/F2/index.htm",
+    "type": "F"
   },
   {
-    "type": "F",
     "nummer": "F 1",
     "titel": "Om regeringens indsats for at sikre rent drikkevand.",
-    "afgivet_af": "Miljøminister Magnus Heunicke (S)",
-    "forespoergere": "Leila Stockmarr (EL), Søren Egge Rasmussen (EL), Mai Villadsen (EL)",
-    "status": "Foretaget",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
     "samling": "2025-26",
-    "href": "https://www.ft.dk/samling/20251/forespoergsel/f1/index.htm"
+    "href": "/samling/20251/forespoergsel/F1/index.htm",
+    "type": "F"
+  },
+  {
+    "nummer": "R 17",
+    "titel": "Om bedre regulering for erhvervslivet 2023.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2023-24",
+    "href": "/samling/20231/redegorelse/R17/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 16",
+    "titel": "Om bedre regulering for erhvervslivet 2024.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/redegorelse/R16/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 15",
+    "titel": "Om rigsfællesskabet 2025.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/redegorelse/R15/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 14",
+    "titel": "Om redegørelse for dansk udviklingssamarbejde 2024.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/redegorelse/R14/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 13",
+    "titel": "Om energi- og forsyningspolitisk redegørelse 2025.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/redegorelse/R13/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 12",
+    "titel": "Om ældreområdet 2025.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/redegorelse/R12/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 11",
+    "titel": "Om det nordiske forsvars- og beredskabssamarbejde 2024.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/redegorelse/R11/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 10",
+    "titel": "Om udvalgte internationale organisationer.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2024-25",
+    "href": "/samling/20241/redegorelse/R10/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 9",
+    "titel": "Om det nordiske forsvarssamarbejde i 2025.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2025-26",
+    "href": "/samling/20251/redegorelse/R9/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 8",
+    "titel": "Om det nordiske samfundssikkerheds- og beredskabssamarbejde i 2025.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2025-26",
+    "href": "/samling/20251/redegorelse/R8/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 7",
+    "titel": "Om Danmarks Digitale Udvikling 2026",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2025-26",
+    "href": "/samling/20251/redegorelse/R7/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 6",
+    "titel": "Om klimaeffekter 2025.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2025-26",
+    "href": "/samling/20251/redegorelse/R6/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 5",
+    "titel": "Om det nordiske samarbejde.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2025-26",
+    "href": "/samling/20251/redegorelse/R5/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 4",
+    "titel": "Om regional- og landdistriktspolitiske redegørelse 2025.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2025-26",
+    "href": "/samling/20251/redegorelse/R4/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 3",
+    "titel": "Om ligestilling og kønskrænkende adfærd.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2025-26",
+    "href": "/samling/20251/redegorelse/R3/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 2",
+    "titel": "Om den  arktiske redegørelse.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2025-26",
+    "href": "/samling/20251/redegorelse/R2/index.htm",
+    "type": "R"
+  },
+  {
+    "nummer": "R 1",
+    "titel": "Om statsministerens åbningsredegørelse.",
+    "afgivet_af": null,
+    "forespoergere": null,
+    "status": null,
+    "samling": "2025-26",
+    "href": "/samling/20251/redegorelse/R1/index.htm",
+    "type": "R"
   }
 ]

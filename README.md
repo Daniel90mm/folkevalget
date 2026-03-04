@@ -47,7 +47,7 @@ The current pipeline is tuned for the election-cycle use case:
 - actor relations: party and committee memberships
 - votes from `2022-11-01` onward
 - vote context via `Sagstrin` and `Sag`
-
-The scheduled build currently skips document-link enrichment because that part of ODA is much slower than the core vote pipeline. The static site still has official parliamentary context for each vote, and document linking can be added back later behind a more targeted fetch.
+- proposal timelines via `Sagstrin` + `Sagstrinstype` + `Sagstrinsstatus`
+- document links attached to proposal stages via `SagstrinDokument -> Dokument/Fil`
 
 This keeps the scheduled job practical while still covering the current parliamentary term leading into the March 24, 2026 election.

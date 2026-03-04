@@ -143,6 +143,123 @@ What it is not good for:
 - MP-level parliamentary behavior after the election.
 - Attendance, party loyalty, or vote-by-vote politician analysis.
 
+## Evaluated and accepted ideas
+
+### Proposal timeline per case (from idea to law)
+
+**Idea:** Build a timeline on each proposal/case page that shows the full
+legislative flow (e.g., fremsættelse, 1. behandling, udvalgstrin, 2. behandling,
+3. behandling, vedtaget/forkastet), with downloadable documents for each step.
+
+**Evaluation result:** Accepted (fits constraints).
+
+**Why it fits:**
+- Uses documented public ODA API endpoints only (no scraping).
+- Official and reliable source (Folketinget ODA).
+- Objective and verifiable event chain (dates, step types, statuses, linked docs).
+- Covers broad parliamentary process and is not limited to a small subset of MPs.
+- Works in static-site pipeline (prefetch to JSON during build).
+
+**Core ODA endpoints to combine:**
+- `Sag` (proposal metadata: number/title/type/status/result)
+- `Sagstrin` + `Sagstrinstype` + `Sagstrinsstatus` (ordered timeline steps)
+- `SagstrinDokument -> Dokument -> Fil` (documents attached to specific steps)
+- `SagDokument -> Dokument -> Fil` (case-level documents and attachments)
+- `Afstemning` via `Sagstrin` expansion (vote IDs tied to step events)
+
+**Implementation notes:**
+- Prefer a dedicated derived file, e.g. `data/sag_timeline.json`, keyed by `sag_id`.
+- Keep default UI compact: major milestones first, expandable details for all steps.
+- Show only official links (PDF/FT documents) and clear source attribution.
+- For performance, fetch timeline/docs targeted by relevant `sag_id` set instead of
+  broad full-history document expansion in every run.
+
+**References checked:** oda.ft.dk/api/,
+oda.ft.dk/api/$metadata,
+oda.ft.dk/api/Sag?$filter=nummer%20eq%20'L%2088',
+oda.ft.dk/api/Sagstrin?$filter=sagid%20eq%20104068&$expand=Sagstrinstype,Sagstrinsstatus,Afstemning,
+oda.ft.dk/api/SagstrinDokument?$filter=sagstrinid%20eq%20271190&$expand=Dokument/Fil,
+oda.ft.dk/api/SagDokument?$filter=sagid%20eq%20104068&$expand=Dokument/Fil,SagDokumentRolle
+
+---
+
+## Evaluated and rejected ideas
+
+### Politician popularity polls (Altinget/Epinion PDI-score)
+
+**Idea:** Show a net favorability score (PDI: % positive minus % negative) for each MP,
+sourced from the monthly Altinget/Epinion popularity barometer published on
+altinget.dk and dr.dk.
+
+**Rejected because:**
+- No public API. Data lives inside Flourish chart embeds (`flo.uri.sh`) inside
+  Altinget articles. Accessing it requires scraping, which violates the
+  no-scraping constraint.
+- Altinget is partially paywalled — scraping is also legally questionable.
+- Only ~20–30 top politicians are covered (ministers + party leaders).
+  The remaining ~150 MPs have no poll data at all.
+- PDI is a subjective approval metric, which conflicts with the neutral,
+  source-first presentation goal.
+- Epinion transparency reports exist as PDFs only — not machine-readable.
+
+**References checked:** altinget.dk/artikel/se-listen-her-er-de-mest-populaere-toppolitikere,
+dr.dk/nyheder/politik/her-er-regeringens-mest-populaere-minister,
+epinionglobal.com/da/transparensrapporter/
+
+---
+
+### Google Trends search interest
+
+**Idea:** Use Google Trends search interest as a proxy popularity signal for each MP,
+queryable per politician name.
+
+**Rejected because:**
+- The official Google Trends API (launched July 2025) is still alpha and
+  application-only — not publicly accessible.
+- The unofficial `pytrends` library reverse-engineers the Google Trends website,
+  violating Google's ToS and breaking regularly.
+- Data quality degrades sharply for lesser-known MPs (near-zero search volume,
+  meaningless signal for ~150 of 179 members).
+- Common Danish names create ambiguity (e.g., "Lars Jensen").
+- Trends scores (0–100) are normalized per query batch, making cross-politician
+  comparison across batches unreliable.
+- Measures media attention, not anything parliamentary — a scandal spike looks
+  identical to a popularity spike.
+
+**References checked:** developers.google.com/search/apis/trends,
+developers.google.com/search/blog/2025/07/trends-api
+
+---
+
+### Politikeres argument for egen afstemning (per stemme)
+
+**Idea:** Vis en kort begrundelse fra hver politiker for, hvorfor vedkommende
+stemte for/imod i en konkret afstemning.
+
+**Rejected as core feature because:**
+- ODA `Stemme` (individuel stemme) indeholder kun tekniske felter
+  (`id`, `typeid`, `afstemningid`, `aktørid`, `opdateringsdato`) og ingen
+  personlig begrundelse/argumenttekst.
+- ODA `Afstemning.kommentar` er en afstemningsnote på samlet niveau, ikke en
+  individuel forklaring per MF.
+- ODA `Sag.begrundelse` beskriver sagens/lovforslagets begrundelse, ikke hvorfor
+  en bestemt MF stemte, som vedkommende gjorde.
+- Der findes ikke en dokumenteret officiel API-kilde med fuld dækning af
+  individuelle stemmebegrundelser for alle 179 MF'er på tværs af afstemninger.
+- Man kan kun lave indirekte kontekst via taler/debatter, men det vil være
+  inferens (ikke objektivt "MF's begrundelse for denne stemme") og dækningen er
+  ikke stabil per afstemning.
+
+**Possible limited alternative (not the same feature):**
+- Link til relevant sag, ordførerindlæg eller mødetaler som kontekst, tydeligt
+  mærket som "relateret debat" og ikke som personlig stemmebegrundelse.
+
+**References checked:** oda.ft.dk/api/$metadata,
+oda.ft.dk/api/Afstemning?$filter=id%20eq%2010570&$expand=Sagstrin,Sagstrin/Sag,
+oda.ft.dk/api/Stemme?$filter=afstemningid%20eq%2010570
+
+---
+
 ## Sources to avoid as dependencies for MVP
 
 - Non-official aggregator sites.

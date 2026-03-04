@@ -21,6 +21,7 @@ const VotesApp = (() => {
   const state = {
     profiles: [],
     profilesById: new Map(),
+    timelinesBySagId: new Map(),
     votes: [],
     filteredVotes: [],
     selectedVoteId: null,
@@ -50,14 +51,22 @@ const VotesApp = (() => {
   const voteSourceLink = document.querySelector("#vote-source-link");
   const voteResume = document.querySelector("#vote-resume");
   const voteResumeBody = document.querySelector("#vote-resume-body");
+  const voteTimeline = document.querySelector("#vote-timeline");
+  const voteTimelineList = document.querySelector("#vote-timeline-list");
+  const voteTimelineDocuments = document.querySelector("#vote-timeline-documents");
+  const voteTimelineDocumentLinks = document.querySelector("#vote-timeline-document-links");
+  const voteTimelineSourceLink = document.querySelector("#vote-timeline-source-link");
 
   async function boot() {
     hydrateStateFromQuery();
 
-    const [{ profiles, stats }, votes, rfDocs] = await Promise.all([
+    const [{ profiles, stats }, votes, rfDocs, timelines] = await Promise.all([
       window.Folkevalget.loadCatalogueData(),
       window.Folkevalget.loadVoteData(),
       fetch(window.Folkevalget.toSiteUrl("data/ft_dokumenter_rf.json"))
+        .then((r) => r.ok ? r.json() : [])
+        .catch(() => []),
+      fetch(window.Folkevalget.toSiteUrl("data/sag_tidslinjer.json"))
         .then((r) => r.ok ? r.json() : [])
         .catch(() => []),
     ]);
@@ -66,6 +75,11 @@ const VotesApp = (() => {
     state.profilesById = new Map(profiles.map((profile) => [profile.id, profile]));
     state.votes = votes;
     state.rfDocs = Array.isArray(rfDocs) ? rfDocs : [];
+    state.timelinesBySagId = new Map(
+      (Array.isArray(timelines) ? timelines : [])
+        .filter((entry) => Number.isFinite(Number(entry?.sag_id)))
+        .map((entry) => [Number(entry.sag_id), entry])
+    );
 
     window.Folkevalget.renderStats(statsRoot, stats);
     bindEvents();
@@ -309,6 +323,7 @@ const VotesApp = (() => {
     renderVoteHeader(selectedVote);
     renderVoteSignalsSummary(selectedVote);
     renderVoteContext(selectedVote);
+    renderVoteTimeline(selectedVote);
     renderPartyFilter(selectedVote);
     renderVoteLists(selectedVote);
   }
@@ -457,6 +472,125 @@ const VotesApp = (() => {
         paragraph.className = note.className;
       }
       voteContext.append(paragraph);
+    }
+  }
+
+  function renderVoteTimeline(vote) {
+    if (!voteTimeline || !voteTimelineList || !voteTimelineSourceLink) {
+      return;
+    }
+
+    const timeline = state.timelinesBySagId.get(Number(vote.sag_id));
+    const steps = Array.isArray(timeline?.steps) ? timeline.steps : [];
+
+    if (steps.length === 0) {
+      voteTimeline.classList.add("hidden");
+      voteTimelineList.replaceChildren();
+      if (voteTimelineDocuments) {
+        voteTimelineDocuments.classList.add("hidden");
+      }
+      return;
+    }
+
+    voteTimeline.classList.remove("hidden");
+    const fragment = document.createDocumentFragment();
+
+    for (const step of steps) {
+      const item = document.createElement("li");
+      item.className = "timeline-item vote-timeline-item";
+
+      const meta = document.createElement("div");
+      meta.className = "timeline-meta";
+      meta.textContent = step.date ? window.Folkevalget.formatDate(step.date) : "Dato ikke angivet";
+
+      const body = document.createElement("div");
+      body.className = "timeline-body vote-timeline-body";
+
+      const title = document.createElement("strong");
+      title.textContent = step.title || step.type || "Sagstrin";
+      body.append(title);
+
+      const statusParts = [step.type, step.status].filter(Boolean);
+      if (statusParts.length > 0) {
+        const statusText = document.createElement("p");
+        statusText.className = "vote-timeline-meta";
+        statusText.textContent = statusParts.join(" · ");
+        body.append(statusText);
+      }
+
+      const voteIds = Array.isArray(step.vote_ids) ? step.vote_ids : [];
+      if (voteIds.length > 0) {
+        const voteLinks = document.createElement("div");
+        voteLinks.className = "vote-timeline-links";
+        for (const voteId of voteIds.slice(0, 3)) {
+          const link = document.createElement("a");
+          link.className = "vote-timeline-link";
+          link.href = window.Folkevalget.buildVoteUrl(voteId);
+          link.textContent = `Afstemning ${voteId}`;
+          voteLinks.append(link);
+        }
+        body.append(voteLinks);
+      }
+
+      const stepDocuments = Array.isArray(step.documents) ? step.documents : [];
+      if (stepDocuments.length > 0) {
+        const documentLinks = document.createElement("div");
+        documentLinks.className = "vote-timeline-links";
+        for (const doc of stepDocuments.slice(0, 3)) {
+          if (!doc?.url) {
+            continue;
+          }
+          const link = document.createElement("a");
+          link.className = "vote-timeline-link";
+          link.href = doc.url;
+          link.target = "_blank";
+          link.rel = "noreferrer";
+          link.textContent = doc.title || doc.number || `Dokument ${doc.document_id || ""}`.trim();
+          documentLinks.append(link);
+        }
+        if (documentLinks.childElementCount > 0) {
+          body.append(documentLinks);
+        }
+      }
+
+      item.append(meta, body);
+      fragment.append(item);
+    }
+
+    voteTimelineList.replaceChildren(fragment);
+
+    const caseDocuments = Array.isArray(timeline.documents) ? timeline.documents : [];
+    if (voteTimelineDocuments && voteTimelineDocumentLinks) {
+      voteTimelineDocumentLinks.replaceChildren();
+      if (caseDocuments.length === 0) {
+        voteTimelineDocuments.classList.add("hidden");
+      } else {
+        voteTimelineDocuments.classList.remove("hidden");
+        for (const doc of caseDocuments.slice(0, 8)) {
+          if (!doc?.url) {
+            continue;
+          }
+          const link = document.createElement("a");
+          link.className = "vote-timeline-link";
+          link.href = doc.url;
+          link.target = "_blank";
+          link.rel = "noreferrer";
+          link.textContent = doc.title || doc.number || `Dokument ${doc.document_id || ""}`.trim();
+          voteTimelineDocumentLinks.append(link);
+        }
+        if (voteTimelineDocumentLinks.childElementCount === 0) {
+          voteTimelineDocuments.classList.add("hidden");
+        }
+      }
+    }
+
+    const timelineSourceUrl = window.Folkevalget.buildSagUrl(timeline.sag_number || vote.sag_number, vote.date);
+    if (timelineSourceUrl) {
+      voteTimelineSourceLink.href = timelineSourceUrl;
+      voteTimelineSourceLink.classList.remove("hidden");
+    } else {
+      voteTimelineSourceLink.classList.add("hidden");
+      voteTimelineSourceLink.removeAttribute("href");
     }
   }
 

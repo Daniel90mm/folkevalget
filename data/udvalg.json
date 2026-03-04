@@ -726,7 +726,7 @@
     "id": 21266,
     "name": "Nordisk Råd",
     "short_name": "NOR",
-    "member_count": 32,
+    "member_count": 33,
     "member_ids": [
       49,
       93,
@@ -754,6 +754,7 @@
       20367,
       20374,
       20376,
+      20379,
       20391,
       20392,
       20395,

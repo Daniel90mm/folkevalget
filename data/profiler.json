@@ -12362,7 +12362,7 @@
         "short_name": "UFU"
       }
     ],
-    "role": "Student",
+    "role": "MF",
     "constituency": "Folketingsmedlem for Liberal Alliance i Sydjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Sydjyllands Storkreds",
     "constituency_history": [
@@ -15844,6 +15844,11 @@
         "id": 21276,
         "name": "Udvalget for Det Tyske Mindretal",
         "short_name": "UTM"
+      },
+      {
+        "id": 21266,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       },
       {
         "id": 21253,
@@ -19762,7 +19767,7 @@
     "email": "zenia.stampe@ft.dk",
     "phone": "+45 6162 5161",
     "website_url": null,
-    "address": "Folketinget, Christiansborg 1240 København K",
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/z/zenia-stampe",
     "photo_url": "photos/191.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/rv/zenia-stampe/zenia_stampe_500.jpg",
@@ -28851,7 +28856,7 @@
     "email": "mette.reissmann@ft.dk",
     "phone": "+45 3337 4119",
     "website_url": null,
-    "address": "Folketinget, Christiansborg 1240 København K",
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/m/mette-reissmann",
     "photo_url": "photos/74.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/s/mette-reissmann/mette_reissmann_500.jpg",
@@ -40543,7 +40548,7 @@
     "email": "hans.schmidt@ft.dk",
     "phone": "+45 3337 4572",
     "website_url": "http://www.venstre.dk/personer/hans-christian-schmidt",
-    "address": "Folketinget, Christiansborg 1240 København K",
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/h/hans-christian-schmidt",
     "photo_url": "photos/125.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/v/hans-christian-schmidt/hans_christian_schmidt_500.jpg",

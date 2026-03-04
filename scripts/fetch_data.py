@@ -668,7 +668,7 @@ def determine_vote_window(
         params={
             "$filter": filter_expr,
             "$orderby": "dato asc",
-            "$expand": "Afstemning,Afstemning/Stemme,Sag,Sagstrinstype",
+            "$expand": "Afstemning,Afstemning/Stemme,Sag,Sagstrinstype,Sagstrinsstatus",
         },
         label="sagstrin",
     )
@@ -689,23 +689,155 @@ def fetch_sag_documents(
     *,
     sag_ids: list[int],
 ) -> list[dict[str, Any]]:
+    if not sag_ids:
+        return []
+
+    max_documents_per_sag = 8
+    workers = 8
     rows: list[dict[str, Any]] = []
-    chunk_size = 20
-    for start in range(0, len(sag_ids), chunk_size):
-        chunk = sag_ids[start : start + chunk_size]
-        filter_expr = build_filter_for_ids("sagid", chunk)
+
+    def _fetch_one_sag(sag_id: int) -> list[dict[str, Any]]:
+        payload = client.get_json(
+            "SagDokument",
+            {
+                "$filter": f"sagid eq {sag_id}",
+                "$orderby": "id desc",
+                "$top": max_documents_per_sag,
+                "$expand": "Dokument/Fil,SagDokumentRolle",
+                "$format": "json",
+            },
+        )
+        return payload.get("value", [])
+
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = {executor.submit(_fetch_one_sag, sag_id): sag_id for sag_id in sag_ids}
+        completed = 0
+        for future in as_completed(futures):
+            rows.extend(future.result())
+            completed += 1
+            if client.options.verbose and (completed % 100 == 0 or completed == len(sag_ids)):
+                log(True, f"sagdokument: {completed}/{len(sag_ids)} sager")
+
+    return rows
+
+
+def fetch_sagstrin_documents(
+    client: OdaClient,
+    *,
+    sagstrin_ids: list[int],
+) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    chunk_size = 40
+    for start in range(0, len(sagstrin_ids), chunk_size):
+        chunk = sagstrin_ids[start : start + chunk_size]
+        filter_expr = build_filter_for_ids("sagstrinid", chunk)
         rows.extend(
             client.fetch_collection(
-                "SagDokument",
+                "SagstrinDokument",
                 params={
                     "$filter": filter_expr,
-                    "$expand": "Dokument/Fil,SagDokumentRolle",
+                    "$expand": "Dokument/Fil",
                 },
-                label="sagdokument",
+                label="sagstrin-dokument",
             )
         )
         time.sleep(client.options.delay)
     return rows
+
+
+def compute_min_period_kode(start_date: str) -> str:
+    """Return the minimum Periode kode that covers start_date.
+
+    Danish parliamentary years run Oct–Sep, so the kode for the session starting
+    in October YYYY is f"{YYYY}1" (first session of that year).
+    """
+    d = date.fromisoformat(start_date)
+    start_year = d.year if d.month >= 10 else d.year - 1
+    return f"{start_year}1"
+
+
+def fetch_rf_sager(
+    client: OdaClient,
+    *,
+    min_period_kode: str,
+) -> list[dict[str, Any]]:
+    """Fetch Forespørgsel (F, typeid=2) and Redegørelse (R, typeid=11) sager
+    from the ODA API for sessions with kode >= min_period_kode.
+
+    Returns a list in the same format as data/ft_dokumenter_rf.json.
+    """
+    log(client.options.verbose, f"fetching Periode records (kode >= {min_period_kode})")
+    periode_rows = client.fetch_collection(
+        "Periode",
+        params={
+            "$filter": f"type eq 'samling' and kode ge '{min_period_kode}'",
+            "$orderby": "kode desc",
+        },
+        label="periode",
+    )
+    if not periode_rows:
+        log(client.options.verbose, "no Periode records found; skipping RF sager")
+        return []
+
+    periode_by_id: dict[int, dict[str, Any]] = {int(row["id"]): row for row in periode_rows}
+    period_id_filter = build_filter_for_ids("periodeid", list(periode_by_id.keys()))
+
+    log(client.options.verbose, f"fetching F/R sager across {len(periode_rows)} sessions")
+    sag_rows = client.fetch_collection(
+        "Sag",
+        params={
+            "$filter": (
+                f"(typeid eq 2 or typeid eq 11)"
+                f" and ({period_id_filter})"
+                f" and nummernumerisk ne ''"
+            ),
+            "$orderby": "periodeid desc,id desc",
+        },
+        label="rf-sager",
+    )
+
+    type_map = {2: "F", 11: "R"}
+    type_path_map = {2: "forespoergsel", 11: "redegorelse"}
+    documents: list[dict[str, Any]] = []
+    seen: set[str] = set()
+
+    for row in sag_rows:
+        typeid = int(row.get("typeid") or 0)
+        doc_type = type_map.get(typeid)
+        nummer = (row.get("nummer") or "").strip() or None
+        if not nummer or not doc_type:
+            continue
+
+        key = f"{doc_type}|{nummer}"
+        if key in seen:
+            continue
+        seen.add(key)
+
+        periode = periode_by_id.get(int(row.get("periodeid") or 0)) or {}
+        periode_kode = (periode.get("kode") or "").strip()
+        samling = (periode.get("titel") or "").strip() or None
+        num_part = (row.get("nummernumerisk") or "").strip()
+        type_path = type_path_map[typeid]
+        href = (
+            f"/samling/{periode_kode}/{type_path}/{doc_type}{num_part}/index.htm"
+            if periode_kode and num_part
+            else None
+        )
+
+        titel = (row.get("titelkort") or row.get("titel") or "").strip() or None
+        documents.append({
+            "nummer": nummer,
+            "titel": titel,
+            "afgivet_af": None,
+            "forespoergere": None,
+            "status": None,
+            "samling": samling,
+            "href": href,
+            "type": doc_type,
+        })
+
+    log(client.options.verbose, f"RF sager: {len(documents)} unique documents")
+    return documents
 
 
 def fetch_actor_relations_for_sources(
@@ -868,26 +1000,50 @@ def build_memberships(
     return party_memberships, committee_memberships
 
 
+def select_primary_document_file(files: list[dict[str, Any]]) -> dict[str, Any] | None:
+    for file_row in files:
+        url = str(file_row.get("filurl") or "")
+        if url.lower().endswith(".pdf"):
+            return file_row
+
+    for file_row in files:
+        fmt = str(file_row.get("format") or "")
+        if "pdf" in fmt.lower() and file_row.get("filurl"):
+            return file_row
+
+    for file_row in files:
+        if file_row.get("filurl"):
+            return file_row
+
+    return None
+
+
 def make_document_links(sag_document_rows: list[dict[str, Any]]) -> dict[int, list[dict[str, Any]]]:
     links_by_sag: dict[int, list[dict[str, Any]]] = defaultdict(list)
 
     for row in sag_document_rows:
         sag_id = int(row["sagid"])
         document = row.get("Dokument") or {}
-        files = document.get("Fil") or []
-        for file_row in files:
-            url = file_row.get("filurl")
-            if not url:
-                continue
-            links_by_sag[sag_id].append(
-                {
-                    "document_id": int(document["id"]),
-                    "title": document.get("titel"),
-                    "url": url,
-                    "format": file_row.get("format"),
-                    "variant_code": file_row.get("variantkode"),
-                }
-            )
+        file_row = select_primary_document_file(document.get("Fil") or [])
+        if not file_row:
+            continue
+
+        url = file_row.get("filurl")
+        if not url:
+            continue
+
+        role = (row.get("SagDokumentRolle") or {}).get("rolle")
+        links_by_sag[sag_id].append(
+            {
+                "document_id": int(document["id"]),
+                "title": document.get("titel"),
+                "number": document.get("nummer"),
+                "role": role,
+                "url": url,
+                "format": file_row.get("format"),
+                "variant_code": file_row.get("variantkode"),
+            }
+        )
 
     deduped: dict[int, list[dict[str, Any]]] = {}
     for sag_id, links in links_by_sag.items():
@@ -903,6 +1059,76 @@ def make_document_links(sag_document_rows: list[dict[str, Any]]) -> dict[int, li
     return deduped
 
 
+def make_sagstrin_document_links(
+    sagstrin_document_rows: list[dict[str, Any]],
+) -> dict[int, list[dict[str, Any]]]:
+    links_by_sagstrin: dict[int, list[dict[str, Any]]] = defaultdict(list)
+
+    for row in sagstrin_document_rows:
+        sagstrin_id = int(row["sagstrinid"])
+        document = row.get("Dokument") or {}
+        file_row = select_primary_document_file(document.get("Fil") or [])
+        if not file_row:
+            continue
+
+        url = file_row.get("filurl")
+        if not url:
+            continue
+
+        links_by_sagstrin[sagstrin_id].append(
+            {
+                "document_id": int(document["id"]),
+                "title": document.get("titel"),
+                "number": document.get("nummer"),
+                "url": url,
+                "format": file_row.get("format"),
+                "variant_code": file_row.get("variantkode"),
+            }
+        )
+
+    deduped: dict[int, list[dict[str, Any]]] = {}
+    for sagstrin_id, links in links_by_sagstrin.items():
+        seen: set[str] = set()
+        unique_links: list[dict[str, Any]] = []
+        for link in links:
+            url = str(link["url"])
+            if url in seen:
+                continue
+            seen.add(url)
+            unique_links.append(link)
+        deduped[sagstrin_id] = unique_links
+    return deduped
+
+
+def make_case_document_links_from_sagstrin(
+    *,
+    sagstrin_rows: list[dict[str, Any]],
+    stage_document_links_by_sagstrin: dict[int, list[dict[str, Any]]],
+) -> dict[int, list[dict[str, Any]]]:
+    sag_by_stage = {int(row["id"]): int(row["sagid"]) for row in sagstrin_rows}
+    links_by_sag: dict[int, list[dict[str, Any]]] = defaultdict(list)
+
+    for sagstrin_id, links in stage_document_links_by_sagstrin.items():
+        sag_id = sag_by_stage.get(sagstrin_id)
+        if not sag_id:
+            continue
+        links_by_sag[sag_id].extend(links)
+
+    deduped: dict[int, list[dict[str, Any]]] = {}
+    for sag_id, links in links_by_sag.items():
+        seen: set[str] = set()
+        unique_links: list[dict[str, Any]] = []
+        for link in links:
+            url = str(link.get("url") or "")
+            if not url or url in seen:
+                continue
+            seen.add(url)
+            unique_links.append(link)
+        deduped[sag_id] = unique_links
+
+    return deduped
+
+
 def build_vote_context(
     sagstrin_rows: list[dict[str, Any]],
     document_links_by_sag: dict[int, list[dict[str, Any]]],
@@ -915,6 +1141,7 @@ def build_vote_context(
         sag_id = int(row["sagid"])
         sag_documents = document_links_by_sag.get(sag_id, [])
         sag_type = row.get("Sagstrinstype") or {}
+        sag_status = row.get("Sagstrinsstatus") or {}
         vote_rows = row.get("Afstemning") or []
 
         for vote_row in vote_rows:
@@ -932,6 +1159,7 @@ def build_vote_context(
                     "sagstrin_id": int(row["id"]),
                     "sagstrin_title": row.get("titel"),
                     "sagstrin_type": sag_type.get("type"),
+                    "sagstrin_status": sag_status.get("status"),
                     "sag_id": sag_id,
                     "sag_title": sag.get("titel"),
                     "sag_short_title": sag.get("titelkort"),
@@ -944,6 +1172,59 @@ def build_vote_context(
 
     votes.sort(key=lambda item: (item["date"], item["afstemning_id"]), reverse=True)
     return votes
+
+
+def build_case_timelines(
+    *,
+    sagstrin_rows: list[dict[str, Any]],
+    case_document_links_by_sag: dict[int, list[dict[str, Any]]],
+    stage_document_links_by_sagstrin: dict[int, list[dict[str, Any]]],
+) -> list[dict[str, Any]]:
+    rows_by_sag: dict[int, list[dict[str, Any]]] = defaultdict(list)
+    for row in sagstrin_rows:
+        rows_by_sag[int(row["sagid"])].append(row)
+
+    timelines: list[dict[str, Any]] = []
+    for sag_id, rows in rows_by_sag.items():
+        rows.sort(key=lambda item: (item.get("dato") or "", int(item["id"])))
+        sag = (rows[-1].get("Sag") or rows[0].get("Sag") or {})
+
+        steps: list[dict[str, Any]] = []
+        for row in rows:
+            sagstrin_id = int(row["id"])
+            vote_ids = sorted(
+                {
+                    int(vote_row["id"])
+                    for vote_row in (row.get("Afstemning") or [])
+                    if vote_row.get("id") is not None
+                }
+            )
+            steps.append(
+                {
+                    "sagstrin_id": sagstrin_id,
+                    "date": (row.get("dato") or "")[:10] or None,
+                    "title": row.get("titel"),
+                    "type": (row.get("Sagstrinstype") or {}).get("type"),
+                    "status": (row.get("Sagstrinsstatus") or {}).get("status"),
+                    "vote_ids": vote_ids,
+                    "documents": stage_document_links_by_sagstrin.get(sagstrin_id, [])[:5],
+                }
+            )
+
+        timelines.append(
+            {
+                "sag_id": sag_id,
+                "sag_number": sag.get("nummer"),
+                "sag_title": sag.get("titel"),
+                "sag_short_title": sag.get("titelkort"),
+                "sag_type_id": sag.get("typeid"),
+                "steps": steps,
+                "documents": case_document_links_by_sag.get(sag_id, [])[:12],
+            }
+        )
+
+    timelines.sort(key=lambda item: (item.get("sag_number") or "", item["sag_id"]))
+    return timelines
 
 
 def vote_group_key(vote_type_id: int) -> str | None:
@@ -1617,8 +1898,49 @@ def main() -> None:
 
     stemmetype_lookup = collect_lookup_map(stemmetyper)
     afstemningstype_lookup = collect_lookup_map(afstemningstyper)
+    sag_ids = sorted({int(row["sagid"]) for row in sagstrin_rows})
+    sagstrin_ids = sorted({int(row["id"]) for row in sagstrin_rows})
+
+    log(options.verbose, f"fetching case documents for {len(sag_ids)} sager")
+    sag_document_rows = fetch_sag_documents(client, sag_ids=sag_ids)
+    case_document_links_by_sag = make_document_links(sag_document_rows)
+
+    log(options.verbose, f"fetching stage documents for {len(sagstrin_ids)} sagstrin")
+    sagstrin_document_rows = fetch_sagstrin_documents(client, sagstrin_ids=sagstrin_ids)
+    document_links_by_sagstrin = make_sagstrin_document_links(sagstrin_document_rows)
+    stage_document_links_by_sag = make_case_document_links_from_sagstrin(
+        sagstrin_rows=sagstrin_rows,
+        stage_document_links_by_sagstrin=document_links_by_sagstrin,
+    )
+
     document_links_by_sag: dict[int, list[dict[str, Any]]] = {}
+    for sag_id in sorted(set(case_document_links_by_sag) | set(stage_document_links_by_sag)):
+        merged_links = (case_document_links_by_sag.get(sag_id) or []) + (stage_document_links_by_sag.get(sag_id) or [])
+        seen: set[str] = set()
+        unique_links: list[dict[str, Any]] = []
+        for link in merged_links:
+            url = str(link.get("url") or "")
+            if not url or url in seen:
+                continue
+            seen.add(url)
+            unique_links.append(link)
+        document_links_by_sag[sag_id] = unique_links
+
     vote_summaries = build_vote_context(sagstrin_rows, document_links_by_sag, afstemningstype_lookup)
+    case_timelines = build_case_timelines(
+        sagstrin_rows=sagstrin_rows,
+        case_document_links_by_sag=document_links_by_sag,
+        stage_document_links_by_sagstrin=document_links_by_sagstrin,
+    )
+
+    log(options.verbose, "fetching F/R sager from ODA API")
+    min_period_kode = compute_min_period_kode(start_date)
+    rf_docs = fetch_rf_sager(client, min_period_kode=min_period_kode)
+    rf_docs.sort(key=lambda d: (
+        d.get("type") or "",
+        d.get("samling") or "",
+        -(int(m.group()) if (m := re.search(r"\d+", d.get("nummer") or "")) else 0),
+    ))
 
     profiles, party_summaries, committee_summaries, summarized_votes, derived_meta = derive_profiles(
         people=people,
@@ -1655,7 +1977,9 @@ def main() -> None:
     write_json(output_dir / "partier.json", party_summaries)
     write_json(output_dir / "udvalg.json", committee_summaries)
     write_json(output_dir / "afstemninger.json", summarized_votes)
+    write_json(output_dir / "sag_tidslinjer.json", case_timelines)
     write_json(output_dir / "site_stats.json", site_stats)
+    write_json(output_dir / "ft_dokumenter_rf.json", rf_docs)
     write_javascript_payload(
         output_dir.parent / "catalog.js",
         "__FOLKEVALGET_BOOTSTRAP__",
@@ -1683,7 +2007,8 @@ def main() -> None:
         write_json(raw_dir / "aktor_aktor.json", actor_relations)
         write_json(raw_dir / "sagstrin.json", sagstrin_rows)
         write_json(raw_dir / "stemmer.json", stems)
-        write_json(raw_dir / "sag_dokumenter.json", [])
+        write_json(raw_dir / "sag_dokumenter.json", sag_document_rows)
+        write_json(raw_dir / "sagstrin_dokumenter.json", sagstrin_document_rows)
 
     print(
         json.dumps(
@@ -1693,6 +2018,7 @@ def main() -> None:
                 "start_date": start_date,
                 "profiles": len(profiles),
                 "votes": len(summarized_votes),
+                "timelines": len(case_timelines),
                 "individual_votes": len(stems),
             },
             ensure_ascii=False,

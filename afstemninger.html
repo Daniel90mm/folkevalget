@@ -77,40 +77,43 @@
               <input id="vote-search" type="search" placeholder="Sag, titel eller nummer" autofocus>
             </label>
 
-            <div class="votes-browser-controls">
-              <label class="field">
-                <span class="field-label">Forslagstype</span>
-                <select id="vote-type-select">
-                  <option value="">Alle typer</option>
-                  <option value="L">Lovforslag (L)</option>
-                  <option value="B">Beslutningsforslag (B)</option>
-                  <option value="B_borger">Borgerforslag (B)</option>
-                  <option value="V">Forslag til vedtagelse (V)</option>
-                  <option value="R">Redegørelse (R)</option>
-                  <option value="F">Forespørgsel (F)</option>
-                </select>
-              </label>
-              <label class="field">
-                <span class="field-label">Sortering</span>
-                <select id="vote-sort-select">
-                  <option value="date_desc">Nyeste først</option>
-                  <option value="passed_first">Vedtagne først</option>
-                  <option value="failed_first">Forkastede først</option>
-                  <option value="close_first">Tætteste først</option>
-                  <option value="split_first">Flest partisplits</option>
-                </select>
-              </label>
-              <div class="votes-filter-toggles">
-                <label class="toggle-check">
-                  <input id="vote-close-only" type="checkbox">
-                  <span>Kun tætte afstemninger</span>
+            <details class="vote-filter-details">
+              <summary>Filtre og sortering</summary>
+              <div class="votes-browser-controls">
+                <label class="field">
+                  <span class="field-label">Forslagstype</span>
+                  <select id="vote-type-select">
+                    <option value="">Alle typer</option>
+                    <option value="L">Lovforslag (L)</option>
+                    <option value="B">Beslutningsforslag (B)</option>
+                    <option value="B_borger">Borgerforslag (B)</option>
+                    <option value="V">Forslag til vedtagelse (V)</option>
+                    <option value="R">Redegørelse (R)</option>
+                    <option value="F">Forespørgsel (F)</option>
+                  </select>
                 </label>
-                <label class="toggle-check">
-                  <input id="vote-split-only" type="checkbox">
-                  <span>Kun partisplits</span>
+                <label class="field">
+                  <span class="field-label">Sortering</span>
+                  <select id="vote-sort-select">
+                    <option value="date_desc">Nyeste først</option>
+                    <option value="passed_first">Vedtagne først</option>
+                    <option value="failed_first">Forkastede først</option>
+                    <option value="close_first">Tætteste først</option>
+                    <option value="split_first">Flest partisplits</option>
+                  </select>
                 </label>
+                <div class="votes-filter-toggles">
+                  <label class="toggle-check">
+                    <input id="vote-close-only" type="checkbox">
+                    <span>Kun tætte afstemninger</span>
+                  </label>
+                  <label class="toggle-check">
+                    <input id="vote-split-only" type="checkbox">
+                    <span>Kun partisplits</span>
+                  </label>
+                </div>
               </div>
-            </div>
+            </details>
 
             <div class="vote-browser-list" id="vote-list" aria-live="polite"></div>
           </aside>
@@ -188,6 +191,21 @@
               </section>
 
               <section class="context-note hidden" id="vote-context"></section>
+
+              <section class="vote-timeline hidden" id="vote-timeline">
+                <div class="panel-heading panel-heading-inline">
+                  <div>
+                    <p class="eyebrow">Forslagsforløb</p>
+                    <h2>Fra fremsættelse til afgørelse</h2>
+                  </div>
+                  <a class="button-link button-link-secondary hidden" href="#" id="vote-timeline-source-link" target="_blank" rel="noreferrer">Åbn hele sagsforløbet</a>
+                </div>
+                <ol class="timeline-list vote-timeline-list" id="vote-timeline-list"></ol>
+                <div class="vote-timeline-documents hidden" id="vote-timeline-documents">
+                  <h3>Dokumenter på sagen</h3>
+                  <div class="vote-timeline-links" id="vote-timeline-document-links"></div>
+                </div>
+              </section>
 
               <div class="votes-toolbar">
                 <label class="field field-inline">
