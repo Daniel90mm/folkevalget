@@ -33,16 +33,6 @@ jobs:
         run: |
           python scripts/fetch_data.py --start-date 2022-11-01
 
-      - name: Install Playwright for R/F document scraping
-        run: |
-          pip install playwright
-          playwright install --with-deps chromium
-
-      - name: Refresh R/F documents
-        run: |
-          python scripts/fetch_ft_rf_documents.py --headless --verbose
-        continue-on-error: true
-
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"

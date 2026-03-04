@@ -50,7 +50,6 @@ const VotesApp = (() => {
   const votePartyFilter = document.querySelector("#vote-party-filter");
   const voteContext = document.querySelector("#vote-context");
   const voteSourceLink = document.querySelector("#vote-source-link");
-  const voteResume = document.querySelector("#vote-resume");
   const voteResumeBody = document.querySelector("#vote-resume-body");
   const voteTimeline = document.querySelector("#vote-timeline");
   const voteTimelineList = document.querySelector("#vote-timeline-list");
@@ -152,13 +151,6 @@ const VotesApp = (() => {
       syncQueryString();
     });
 
-    if (voteResume) {
-      voteResume.addEventListener("toggle", () => {
-        if (!voteResume.classList.contains("hidden") && !voteResume.open) {
-          voteResume.open = true;
-        }
-      });
-    }
   }
 
   function applyVoteFilter() {
@@ -427,10 +419,10 @@ const VotesApp = (() => {
 
     if (vote.sag_resume) {
       voteResumeBody.textContent = vote.sag_resume;
-      voteResume.open = true;
-      voteResume.classList.remove("hidden");
+      voteResumeBody.classList.remove("hidden");
     } else {
-      voteResume.classList.add("hidden");
+      voteResumeBody.classList.add("hidden");
+      voteResumeBody.textContent = "";
     }
 
     const sourceUrl = window.Folkevalget.buildSagUrl(vote.sag_number, vote.date);
