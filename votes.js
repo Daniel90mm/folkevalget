@@ -32,6 +32,7 @@ const VotesApp = (() => {
     splitOnly: false,
     typeFilter: "",
     rfDocs: [],
+    focusDetailRequested: false,
   };
 
   const statsRoot = document.querySelector("[data-site-stats]");
@@ -141,6 +142,7 @@ const VotesApp = (() => {
         return;
       }
       state.selectedVoteId = Number(button.dataset.voteId);
+      state.focusDetailRequested = true;
       renderVoteList();
       renderSelectedVote();
       syncQueryString();
@@ -154,10 +156,15 @@ const VotesApp = (() => {
   }
 
   function applyVoteFilter() {
-    const query = window.Folkevalget.normaliseText(state.query);
+    const normalisedQuery = window.Folkevalget.normaliseText(state.query);
+    const tokens = normalisedQuery.split(/\s+/).filter(Boolean);
 
     state.filteredVotes = state.votes
-      .filter((vote) => {
+      .map((vote) => ({
+        vote,
+        searchScore: scoreVoteSearch(vote, normalisedQuery, tokens),
+      }))
+      .filter(({ vote, searchScore }) => {
         if (state.closeOnly && !isCloseVote(vote)) {
           return false;
         }
@@ -167,27 +174,18 @@ const VotesApp = (() => {
         if (state.typeFilter && classifyVoteType(vote) !== state.typeFilter) {
           return false;
         }
-
-        if (!query) {
-          return true;
+        if (tokens.length > 0 && searchScore < 0) {
+          return false;
         }
-
-        const searchable = window.Folkevalget.normaliseText(
-          [
-            vote.sag_number,
-            vote.sag_short_title,
-            vote.sag_title,
-            vote.type,
-            vote.konklusion,
-            vote.date,
-          ]
-            .filter(Boolean)
-            .join(" ")
-        );
-
-        return searchable.includes(query);
+        return true;
       })
-      .sort(compareVotes);
+      .sort((left, right) => {
+        if (tokens.length > 0 && left.searchScore !== right.searchScore) {
+          return right.searchScore - left.searchScore;
+        }
+        return compareVotes(left.vote, right.vote);
+      })
+      .map((entry) => entry.vote);
 
     if (!state.filteredVotes.some((vote) => vote.afstemning_id === state.selectedVoteId)) {
       state.selectedVoteId = state.filteredVotes[0]?.afstemning_id ?? null;
@@ -326,6 +324,56 @@ const VotesApp = (() => {
     renderVoteTimeline(selectedVote);
     renderPartyFilter(selectedVote);
     renderVoteLists(selectedVote);
+
+    if (state.focusDetailRequested && voteDetailContent) {
+      voteDetailContent.scrollIntoView({ behavior: "smooth", block: "start" });
+      state.focusDetailRequested = false;
+    }
+  }
+
+  function scoreVoteSearch(vote, normalisedQuery, tokens) {
+    if (!tokens.length) {
+      return 0;
+    }
+
+    const sagNumber = window.Folkevalget.normaliseText(vote.sag_number || "");
+    const shortTitle = window.Folkevalget.normaliseText(vote.sag_short_title || "");
+    const title = window.Folkevalget.normaliseText(vote.sag_title || "");
+    const type = window.Folkevalget.normaliseText(vote.type || "");
+    const conclusion = window.Folkevalget.normaliseText(vote.konklusion || "");
+    const dateText = window.Folkevalget.normaliseText(vote.date || "");
+
+    const searchable = [sagNumber, shortTitle, title, type, conclusion, dateText].join(" ");
+    let score = 0;
+
+    for (const token of tokens) {
+      if (sagNumber === token) {
+        score += 220;
+        continue;
+      }
+      if (sagNumber.startsWith(token)) {
+        score += 120;
+        continue;
+      }
+      if (shortTitle.startsWith(token) || title.startsWith(token)) {
+        score += 50;
+        continue;
+      }
+      if (searchable.includes(token)) {
+        score += 20;
+        continue;
+      }
+      return -1;
+    }
+
+    if (normalisedQuery && (shortTitle.startsWith(normalisedQuery) || title.startsWith(normalisedQuery))) {
+      score += 70;
+    }
+    if (normalisedQuery && sagNumber === normalisedQuery) {
+      score += 300;
+    }
+
+    return score;
   }
 
   function buildKickerTooltipText(vote) {

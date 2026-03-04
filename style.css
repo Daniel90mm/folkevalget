@@ -1521,6 +1521,13 @@ body.global-search-open {
   overflow-y: auto;
 }
 
+.page-votes .vote-browser-list {
+  max-height: min(42vh, 24rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: var(--space-xs);
+}
+
 .vote-row {
   display: grid;
   grid-template-columns: 150px minmax(0, 1fr) auto auto;
