@@ -238,6 +238,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Print progress logs.",
     )
+    parser.add_argument(
+        "--timelines-only",
+        action="store_true",
+        help="Refresh only sag timelines from existing afstemninger.json.",
+    )
     return parser.parse_args()
 
 
@@ -725,24 +730,33 @@ def fetch_sagstrin_for_sager(
     client: OdaClient,
     *,
     sag_ids: list[int],
-    start_date: str,
-    today_iso: str,
+    start_date: str | None = None,
+    today_iso: str | None = None,
 ) -> list[dict[str, Any]]:
     if not sag_ids:
         return []
 
     rows: list[dict[str, Any]] = []
     chunk_size = 20
-    date_filter = f"dato ge datetime'{start_date}T00:00:00' and dato le datetime'{today_iso}T23:59:59'"
 
     for start in range(0, len(sag_ids), chunk_size):
         chunk = sag_ids[start : start + chunk_size]
         sag_filter = build_filter_for_ids("sagid", chunk)
+        filters = [f"({sag_filter})"]
+        if start_date and today_iso:
+            filters.append(
+                f"dato ge datetime'{start_date}T00:00:00' and dato le datetime'{today_iso}T23:59:59'"
+            )
+        elif start_date:
+            filters.append(f"dato ge datetime'{start_date}T00:00:00'")
+        elif today_iso:
+            filters.append(f"dato le datetime'{today_iso}T23:59:59'")
+
         rows.extend(
             client.fetch_collection(
                 "Sagstrin",
                 params={
-                    "$filter": f"({sag_filter}) and {date_filter}",
+                    "$filter": " and ".join(filters),
                     "$orderby": "dato asc,id asc",
                     "$expand": "Sag,Sagstrinstype,Sagstrinsstatus,Afstemning",
                 },
@@ -1072,6 +1086,7 @@ def make_document_links(sag_document_rows: list[dict[str, Any]]) -> dict[int, li
                 "document_id": int(document["id"]),
                 "title": document.get("titel"),
                 "number": document.get("nummer"),
+                "date": (document.get("dato") or document.get("frigivelsesdato") or row.get("frigivelsesdato") or "")[:10] or None,
                 "role": role,
                 "url": url,
                 "format": file_row.get("format"),
@@ -1114,6 +1129,7 @@ def make_sagstrin_document_links(
                 "document_id": int(document["id"]),
                 "title": document.get("titel"),
                 "number": document.get("nummer"),
+                "date": (document.get("dato") or document.get("frigivelsesdato") or "")[:10] or None,
                 "url": url,
                 "format": file_row.get("format"),
                 "variant_code": file_row.get("variantkode"),
@@ -1921,6 +1937,61 @@ def main() -> None:
     start_date = date.fromisoformat(args.start_date).isoformat()
     today_iso = datetime.now(timezone.utc).date().isoformat()
 
+    if args.timelines_only:
+        votes_path = output_dir / "afstemninger.json"
+        if not votes_path.exists():
+            raise RuntimeError(
+                f"{votes_path} is missing; run full fetch once before --timelines-only"
+            )
+        existing_votes = json.loads(votes_path.read_text(encoding="utf-8"))
+        sag_ids = sorted(
+            {
+                int(vote["sag_id"])
+                for vote in existing_votes
+                if vote.get("sag_id") is not None
+            }
+        )
+        if not sag_ids:
+            raise RuntimeError("No sag IDs found in existing afstemninger.json")
+
+        log(options.verbose, f"timeline-only: fetching full sagstrin for {len(sag_ids)} sager")
+        timeline_sagstrin_rows = fetch_sagstrin_for_sager(client, sag_ids=sag_ids)
+        sagstrin_ids = sorted({int(row["id"]) for row in timeline_sagstrin_rows})
+
+        log(options.verbose, f"timeline-only: fetching case documents for {len(sag_ids)} sager")
+        sag_document_rows = fetch_sag_documents(client, sag_ids=sag_ids)
+        case_document_links_by_sag = make_document_links(sag_document_rows)
+
+        log(options.verbose, f"timeline-only: fetching stage documents for {len(sagstrin_ids)} sagstrin")
+        sagstrin_document_rows = fetch_sagstrin_documents(client, sagstrin_ids=sagstrin_ids)
+        document_links_by_sagstrin = make_sagstrin_document_links(sagstrin_document_rows)
+        stage_document_links_by_sag = make_case_document_links_from_sagstrin(
+            sagstrin_rows=timeline_sagstrin_rows,
+            stage_document_links_by_sagstrin=document_links_by_sagstrin,
+        )
+
+        document_links_by_sag: dict[int, list[dict[str, Any]]] = {}
+        for sag_id in sorted(set(case_document_links_by_sag) | set(stage_document_links_by_sag)):
+            merged_links = (case_document_links_by_sag.get(sag_id) or []) + (stage_document_links_by_sag.get(sag_id) or [])
+            seen: set[str] = set()
+            unique_links: list[dict[str, Any]] = []
+            for link in merged_links:
+                url = str(link.get("url") or "")
+                if not url or url in seen:
+                    continue
+                seen.add(url)
+                unique_links.append(link)
+            document_links_by_sag[sag_id] = unique_links
+
+        case_timelines = build_case_timelines(
+            sagstrin_rows=timeline_sagstrin_rows,
+            case_document_links_by_sag=document_links_by_sag,
+            stage_document_links_by_sagstrin=document_links_by_sagstrin,
+        )
+        write_json(output_dir / "sag_tidslinjer.json", case_timelines)
+        log(options.verbose, f"timeline-only: wrote {len(case_timelines)} timelines")
+        return
+
     log(options.verbose, "fetching lookup tables")
     actor_types = client.fetch_collection("Akt%C3%B8rtype", label="aktortype")
     stemmetyper = client.fetch_collection("Stemmetype", label="stemmetype")
@@ -1977,12 +2048,7 @@ def main() -> None:
     afstemningstype_lookup = collect_lookup_map(afstemningstyper)
     sag_ids = sorted({int(row["sagid"]) for row in sagstrin_rows})
     log(options.verbose, f"fetching full timelines for {len(sag_ids)} sager")
-    timeline_sagstrin_rows = fetch_sagstrin_for_sager(
-        client,
-        sag_ids=sag_ids,
-        start_date=start_date,
-        today_iso=today_iso,
-    )
+    timeline_sagstrin_rows = fetch_sagstrin_for_sager(client, sag_ids=sag_ids)
     if not timeline_sagstrin_rows:
         timeline_sagstrin_rows = list(sagstrin_rows)
     sagstrin_ids = sorted({int(row["id"]) for row in timeline_sagstrin_rows})

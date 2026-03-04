@@ -151,6 +151,14 @@ const VotesApp = (() => {
       renderSelectedVote();
       syncQueryString();
     });
+
+    if (voteResume) {
+      voteResume.addEventListener("toggle", () => {
+        if (!voteResume.classList.contains("hidden") && !voteResume.open) {
+          voteResume.open = true;
+        }
+      });
+    }
   }
 
   function applyVoteFilter() {
@@ -419,7 +427,7 @@ const VotesApp = (() => {
 
     if (vote.sag_resume) {
       voteResumeBody.textContent = vote.sag_resume;
-      voteResume.open = false;
+      voteResume.open = true;
       voteResume.classList.remove("hidden");
     } else {
       voteResume.classList.add("hidden");
@@ -545,9 +553,14 @@ const VotesApp = (() => {
       return;
     }
 
+    const timelineItems = steps.map((step) => ({
+      ...step,
+      documents: Array.isArray(step.documents) ? [...step.documents] : [],
+    }));
+
     const seenStepDocumentUrls = new Set();
-    for (const step of steps) {
-      const stepDocuments = Array.isArray(step?.documents) ? step.documents : [];
+    for (const step of timelineItems) {
+      const stepDocuments = Array.isArray(step.documents) ? step.documents : [];
       for (const doc of stepDocuments) {
         if (doc?.url) {
           seenStepDocumentUrls.add(doc.url);
@@ -555,22 +568,59 @@ const VotesApp = (() => {
       }
     }
 
-    const trailingCaseDocuments = caseDocuments
-      .filter((doc) => doc?.url && !seenStepDocumentUrls.has(doc.url))
-      .slice(0, 8);
-    const timelineItems = [
-      ...steps,
-      ...(trailingCaseDocuments.length > 0
-        ? [{
-          date: null,
-          title: "Øvrige sagsdokumenter",
-          type: null,
-          status: null,
-          vote_ids: [],
-          documents: trailingCaseDocuments,
-        }]
-        : []),
-    ];
+    const extraDocsByDate = new Map();
+    const undatedExtraDocs = [];
+    for (const doc of caseDocuments) {
+      if (!doc?.url || seenStepDocumentUrls.has(doc.url)) {
+        continue;
+      }
+
+      if (isIsoDate(doc.date)) {
+        const dateKey = String(doc.date);
+        if (!extraDocsByDate.has(dateKey)) {
+          extraDocsByDate.set(dateKey, []);
+        }
+        extraDocsByDate.get(dateKey).push(doc);
+      } else {
+        undatedExtraDocs.push(doc);
+      }
+    }
+
+    for (const step of timelineItems) {
+      if (!isIsoDate(step.date) || !extraDocsByDate.has(step.date)) {
+        continue;
+      }
+      step.documents.push(...extraDocsByDate.get(step.date));
+      extraDocsByDate.delete(step.date);
+    }
+
+    if (undatedExtraDocs.length > 0 && timelineItems.length > 0) {
+      timelineItems[timelineItems.length - 1].documents.push(...undatedExtraDocs);
+    }
+
+    const supplementalItems = Array.from(extraDocsByDate.entries())
+      .sort(([left], [right]) => String(left).localeCompare(String(right)))
+      .map(([date, documents]) => ({
+        date,
+        title: "Dokumenter",
+        type: null,
+        status: null,
+        vote_ids: [],
+        documents,
+      }));
+
+    timelineItems.push(...supplementalItems);
+    timelineItems.sort((left, right) => {
+      const leftDate = isIsoDate(left.date) ? String(left.date) : "9999-12-31";
+      const rightDate = isIsoDate(right.date) ? String(right.date) : "9999-12-31";
+      const dateDelta = leftDate.localeCompare(rightDate);
+      if (dateDelta !== 0) {
+        return dateDelta;
+      }
+      const leftIsStep = Number((left.vote_ids || []).length) > 0 || Boolean(left.type);
+      const rightIsStep = Number((right.vote_ids || []).length) > 0 || Boolean(right.type);
+      return Number(rightIsStep) - Number(leftIsStep);
+    });
 
     voteTimeline.classList.remove("hidden");
     const fragment = document.createDocumentFragment();
@@ -630,7 +680,15 @@ const VotesApp = (() => {
           link.href = doc.url;
           link.target = "_blank";
           link.rel = "noreferrer";
-          link.textContent = doc.title || doc.number || `Dokument ${doc.document_id || ""}`.trim();
+          const docLabel = doc.title || doc.number || `Dokument ${doc.document_id || ""}`.trim();
+          const docMeta = [];
+          if (isIsoDate(doc.date)) {
+            docMeta.push(window.Folkevalget.formatDate(doc.date));
+          }
+          if (doc.variant_code) {
+            docMeta.push(`Tillæg ${doc.variant_code}`);
+          }
+          link.textContent = docMeta.length > 0 ? `${docLabel} (${docMeta.join(" · ")})` : docLabel;
           links.append(link);
         }
       }
@@ -1013,6 +1071,10 @@ const VotesApp = (() => {
       hverken: "Hverken",
     };
     return labels[key] || key;
+  }
+
+  function isIsoDate(value) {
+    return /^\d{4}-\d{2}-\d{2}$/.test(String(value || ""));
   }
 
   function formatShare(value) {
