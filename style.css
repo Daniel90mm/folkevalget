@@ -1522,10 +1522,10 @@ body.global-search-open {
 }
 
 .page-votes .vote-browser-list {
-  max-height: min(42vh, 24rem);
+  max-height: min(46vh, 22rem);
   overflow-y: auto;
-  overscroll-behavior: contain;
   padding-right: var(--space-xs);
+  scroll-padding-block: var(--space-sm);
 }
 
 .vote-row {
@@ -1775,49 +1775,85 @@ body.global-search-open {
   border-top: 1px solid var(--color-border);
 }
 
-.page-votes .vote-timeline-list {
-  display: grid;
-  gap: 0;
+.page-votes .vote-timeline-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: var(--space-sm);
 }
 
-.page-votes .vote-timeline-item {
-  padding: var(--space-md) 0;
+.page-votes .vote-timeline-list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(17rem, 22rem);
+  gap: var(--space-lg);
+  padding: 0 0 var(--space-sm);
+  margin: 0;
+  list-style: none;
+}
+
+.page-votes .vote-timeline-step {
+  position: relative;
+  padding-top: var(--space-md);
+}
+
+.page-votes .vote-timeline-step::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: calc(var(--space-lg) * -1);
+  top: 11px;
   border-top: 1px solid var(--color-border);
 }
 
-.page-votes .vote-timeline-item:first-child {
-  padding-top: 0;
-  border-top: none;
+.page-votes .vote-timeline-step:last-child::before {
+  right: 0;
 }
 
-.page-votes .vote-timeline-body {
+.page-votes .vote-timeline-step-point {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--color-text-secondary);
+  background: var(--color-bg);
+}
+
+.page-votes .vote-timeline-step.is-active .vote-timeline-step-point {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+}
+
+.page-votes .vote-timeline-step-card {
   display: grid;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
+  padding: 0;
 }
 
-.page-votes .vote-timeline-meta {
+.page-votes .vote-timeline-step-date,
+.page-votes .vote-timeline-step-meta {
   color: var(--color-text-secondary);
   font-size: var(--text-sm);
 }
 
-.vote-timeline-documents {
+.page-votes .vote-timeline-step-title {
+  margin: 0;
+  font-size: var(--text-lg);
+}
+
+.page-votes .vote-timeline-step.is-active .vote-timeline-step-title {
+  color: var(--color-accent);
+}
+
+.page-votes .vote-timeline-step-links {
   display: grid;
-  gap: var(--space-sm);
-}
-
-.vote-timeline-documents h3 {
-  font-size: var(--text-base);
-}
-
-.vote-timeline-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs) var(--space-md);
+  gap: var(--space-xs);
 }
 
 .vote-timeline-link {
   color: var(--color-accent);
   font-size: var(--text-sm);
+  width: fit-content;
 }
 
 .vote-timeline-link:hover,
@@ -2340,6 +2376,10 @@ html[data-theme="dark"] .party-code-badge[data-party="DF"] {
 
   .discover-grid {
     grid-template-columns: 1fr;
+  }
+
+  .page-votes .vote-timeline-list {
+    grid-auto-columns: minmax(15rem, 18rem);
   }
 
   .member-card-head,

@@ -721,6 +721,40 @@ def fetch_sag_documents(
     return rows
 
 
+def fetch_sagstrin_for_sager(
+    client: OdaClient,
+    *,
+    sag_ids: list[int],
+    start_date: str,
+    today_iso: str,
+) -> list[dict[str, Any]]:
+    if not sag_ids:
+        return []
+
+    rows: list[dict[str, Any]] = []
+    chunk_size = 20
+    date_filter = f"dato ge datetime'{start_date}T00:00:00' and dato le datetime'{today_iso}T23:59:59'"
+
+    for start in range(0, len(sag_ids), chunk_size):
+        chunk = sag_ids[start : start + chunk_size]
+        sag_filter = build_filter_for_ids("sagid", chunk)
+        rows.extend(
+            client.fetch_collection(
+                "Sagstrin",
+                params={
+                    "$filter": f"({sag_filter}) and {date_filter}",
+                    "$orderby": "dato asc,id asc",
+                    "$expand": "Sag,Sagstrinstype,Sagstrinsstatus,Afstemning",
+                },
+                label="sagstrin-timeline",
+            )
+        )
+        time.sleep(client.options.delay)
+
+    deduped = {int(row["id"]): row for row in rows}
+    return sorted(deduped.values(), key=lambda item: ((item.get("dato") or ""), int(item["id"])))
+
+
 def fetch_sagstrin_documents(
     client: OdaClient,
     *,
@@ -1239,6 +1273,33 @@ def vote_group_key(vote_type_id: int) -> str | None:
     return None
 
 
+def parse_counts_from_konklusion(konklusion: str | None) -> dict[str, int] | None:
+    if not konklusion:
+        return None
+
+    text = " ".join(str(konklusion).replace("\r", " ").replace("\n", " ").split())
+    if not text:
+        return None
+
+    patterns = {
+        "for": re.compile(r"\bfor stemte\s+(\d+)", flags=re.IGNORECASE),
+        "imod": re.compile(r"\bimod stemte\s+(\d+)", flags=re.IGNORECASE),
+        "hverken": re.compile(r"\bhverken for eller imod stemte\s+(\d+)", flags=re.IGNORECASE),
+        "fravaer": re.compile(r"\bfrav(?:æ|ae)r(?:ende)?(?:\s+var)?\s+(\d+)", flags=re.IGNORECASE),
+    }
+
+    parsed = {"for": 0, "imod": 0, "hverken": 0, "fravaer": 0}
+    matched_any = False
+    for key, pattern in patterns.items():
+        match = pattern.search(text)
+        if not match:
+            continue
+        parsed[key] = int(match.group(1))
+        matched_any = True
+
+    return parsed if matched_any else None
+
+
 def derive_profiles(
     *,
     people: list[dict[str, Any]],
@@ -1408,6 +1469,21 @@ def derive_profiles(
                 ) if party_actor else "Uden parti"
                 vote_groups_by_party[party_key][group_key].append(person_id)
 
+        counts_source = "stemme"
+        if counts.get(1, 0) == 0 and counts.get(2, 0) == 0:
+            parsed_counts = parse_counts_from_konklusion(vote.get("konklusion"))
+            if parsed_counts and (
+                parsed_counts["for"] > 0
+                or parsed_counts["imod"] > 0
+                or parsed_counts["hverken"] > 0
+                or parsed_counts["fravaer"] > 0
+            ):
+                counts[1] = parsed_counts["for"]
+                counts[2] = parsed_counts["imod"]
+                counts[3] = parsed_counts["fravaer"]
+                counts[4] = parsed_counts["hverken"]
+                counts_source = "konklusion"
+
         summarized_votes.append(
             {
                 **vote,
@@ -1421,6 +1497,7 @@ def derive_profiles(
                 "vote_groups_by_party": vote_groups_by_party,
                 "party_split_count": party_split_count,
                 "margin": abs(counts.get(1, 0) - counts.get(2, 0)),
+                "counts_source": counts_source,
             }
         )
 
@@ -1899,7 +1976,16 @@ def main() -> None:
     stemmetype_lookup = collect_lookup_map(stemmetyper)
     afstemningstype_lookup = collect_lookup_map(afstemningstyper)
     sag_ids = sorted({int(row["sagid"]) for row in sagstrin_rows})
-    sagstrin_ids = sorted({int(row["id"]) for row in sagstrin_rows})
+    log(options.verbose, f"fetching full timelines for {len(sag_ids)} sager")
+    timeline_sagstrin_rows = fetch_sagstrin_for_sager(
+        client,
+        sag_ids=sag_ids,
+        start_date=start_date,
+        today_iso=today_iso,
+    )
+    if not timeline_sagstrin_rows:
+        timeline_sagstrin_rows = list(sagstrin_rows)
+    sagstrin_ids = sorted({int(row["id"]) for row in timeline_sagstrin_rows})
 
     log(options.verbose, f"fetching case documents for {len(sag_ids)} sager")
     sag_document_rows = fetch_sag_documents(client, sag_ids=sag_ids)
@@ -1909,7 +1995,7 @@ def main() -> None:
     sagstrin_document_rows = fetch_sagstrin_documents(client, sagstrin_ids=sagstrin_ids)
     document_links_by_sagstrin = make_sagstrin_document_links(sagstrin_document_rows)
     stage_document_links_by_sag = make_case_document_links_from_sagstrin(
-        sagstrin_rows=sagstrin_rows,
+        sagstrin_rows=timeline_sagstrin_rows,
         stage_document_links_by_sagstrin=document_links_by_sagstrin,
     )
 
@@ -1928,7 +2014,7 @@ def main() -> None:
 
     vote_summaries = build_vote_context(sagstrin_rows, document_links_by_sag, afstemningstype_lookup)
     case_timelines = build_case_timelines(
-        sagstrin_rows=sagstrin_rows,
+        sagstrin_rows=timeline_sagstrin_rows,
         case_document_links_by_sag=document_links_by_sag,
         stage_document_links_by_sagstrin=document_links_by_sagstrin,
     )

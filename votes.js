@@ -54,8 +54,6 @@ const VotesApp = (() => {
   const voteResumeBody = document.querySelector("#vote-resume-body");
   const voteTimeline = document.querySelector("#vote-timeline");
   const voteTimelineList = document.querySelector("#vote-timeline-list");
-  const voteTimelineDocuments = document.querySelector("#vote-timeline-documents");
-  const voteTimelineDocumentLinks = document.querySelector("#vote-timeline-document-links");
   const voteTimelineSourceLink = document.querySelector("#vote-timeline-source-link");
 
   async function boot() {
@@ -288,6 +286,7 @@ const VotesApp = (() => {
 
     const fragment = document.createDocumentFragment();
     for (const vote of state.filteredVotes) {
+      const counts = effectiveCounts(vote);
       const item = voteListTemplate.content.firstElementChild.cloneNode(true);
       item.dataset.voteId = String(vote.afstemning_id);
       item.classList.toggle("active", vote.afstemning_id === state.selectedVoteId);
@@ -295,9 +294,9 @@ const VotesApp = (() => {
       item.querySelector("[data-cell='date']").textContent = window.Folkevalget.formatDate(vote.date);
       item.querySelector("[data-cell='title']").textContent = vote.sag_short_title || vote.sag_title || "Afstemning";
       item.querySelector("[data-cell='for-count']").textContent =
-        `${window.Folkevalget.formatNumber(vote.counts?.for)} for`;
+        `${window.Folkevalget.formatNumber(counts.for)} for`;
       item.querySelector("[data-cell='against-count']").textContent =
-        `${window.Folkevalget.formatNumber(vote.counts?.imod)} imod`;
+        `${window.Folkevalget.formatNumber(counts.imod)} imod`;
       renderVoteSignals(item.querySelector("[data-cell='signals']"), vote);
       fragment.append(item);
     }
@@ -409,8 +408,9 @@ const VotesApp = (() => {
 
     document.querySelector("#vote-title").textContent = vote.sag_short_title || vote.sag_title || "Afstemning";
 
-    const forCount = Number(vote.counts?.for || 0);
-    const againstCount = Number(vote.counts?.imod || 0);
+    const counts = effectiveCounts(vote);
+    const forCount = counts.for;
+    const againstCount = counts.imod;
     document.querySelector("#vote-meta").textContent = [
       window.Folkevalget.formatDate(vote.date),
       vote.vedtaget ? "Forslaget blev vedtaget" : "Forslaget blev forkastet",
@@ -442,7 +442,8 @@ const VotesApp = (() => {
     const splitNote = document.querySelector("#vote-split-note");
     const splitParties = splitPartyLabels(vote);
 
-    const marginVotes = Number(vote.margin || 0);
+    const counts = effectiveCounts(vote);
+    const marginVotes = Math.abs(counts.for - counts.imod);
     const marginShare = voteMarginSharePct(vote);
     if (voteDecisionTotal(vote) > 0) {
       marginValue.textContent = `${window.Folkevalget.formatNumber(marginVotes)} stemmer`;
@@ -497,6 +498,12 @@ const VotesApp = (() => {
       });
     }
 
+    if (effectiveCountSource(vote) === "konklusion") {
+      notes.push({
+        text: "Ja/nej-tallene kommer fra sagens konklusion. Individuelle stemmer er ikke registreret i ODA for denne afstemning.",
+      });
+    }
+
     if (vote.konklusion) {
       notes.push({
         text: vote.konklusion.trim(),
@@ -530,61 +537,91 @@ const VotesApp = (() => {
 
     const timeline = state.timelinesBySagId.get(Number(vote.sag_id));
     const steps = Array.isArray(timeline?.steps) ? timeline.steps : [];
+    const caseDocuments = Array.isArray(timeline?.documents) ? timeline.documents : [];
 
-    if (steps.length === 0) {
+    if (steps.length === 0 && caseDocuments.length === 0) {
       voteTimeline.classList.add("hidden");
       voteTimelineList.replaceChildren();
-      if (voteTimelineDocuments) {
-        voteTimelineDocuments.classList.add("hidden");
-      }
       return;
     }
+
+    const seenStepDocumentUrls = new Set();
+    for (const step of steps) {
+      const stepDocuments = Array.isArray(step?.documents) ? step.documents : [];
+      for (const doc of stepDocuments) {
+        if (doc?.url) {
+          seenStepDocumentUrls.add(doc.url);
+        }
+      }
+    }
+
+    const trailingCaseDocuments = caseDocuments
+      .filter((doc) => doc?.url && !seenStepDocumentUrls.has(doc.url))
+      .slice(0, 8);
+    const timelineItems = [
+      ...steps,
+      ...(trailingCaseDocuments.length > 0
+        ? [{
+          date: null,
+          title: "Øvrige sagsdokumenter",
+          type: null,
+          status: null,
+          vote_ids: [],
+          documents: trailingCaseDocuments,
+        }]
+        : []),
+    ];
 
     voteTimeline.classList.remove("hidden");
     const fragment = document.createDocumentFragment();
 
-    for (const step of steps) {
+    for (const step of timelineItems) {
       const item = document.createElement("li");
-      item.className = "timeline-item vote-timeline-item";
+      item.className = "vote-timeline-step";
+      const voteIds = Array.isArray(step.vote_ids) ? step.vote_ids : [];
+      if (voteIds.includes(Number(vote.afstemning_id))) {
+        item.classList.add("is-active");
+      }
 
-      const meta = document.createElement("div");
-      meta.className = "timeline-meta";
-      meta.textContent = step.date ? window.Folkevalget.formatDate(step.date) : "Dato ikke angivet";
+      const point = document.createElement("span");
+      point.className = "vote-timeline-step-point";
+      item.append(point);
 
-      const body = document.createElement("div");
-      body.className = "timeline-body vote-timeline-body";
+      const card = document.createElement("article");
+      card.className = "vote-timeline-step-card";
 
-      const title = document.createElement("strong");
+      const dateLabel = document.createElement("p");
+      dateLabel.className = "vote-timeline-step-date";
+      dateLabel.textContent = step.date ? window.Folkevalget.formatDate(step.date) : "Uden dato";
+
+      const title = document.createElement("h3");
+      title.className = "vote-timeline-step-title";
       title.textContent = step.title || step.type || "Sagstrin";
-      body.append(title);
+      card.append(dateLabel, title);
 
       const statusParts = [step.type, step.status].filter(Boolean);
       if (statusParts.length > 0) {
         const statusText = document.createElement("p");
-        statusText.className = "vote-timeline-meta";
+        statusText.className = "vote-timeline-step-meta";
         statusText.textContent = statusParts.join(" · ");
-        body.append(statusText);
+        card.append(statusText);
       }
 
-      const voteIds = Array.isArray(step.vote_ids) ? step.vote_ids : [];
+      const links = document.createElement("div");
+      links.className = "vote-timeline-step-links";
       if (voteIds.length > 0) {
-        const voteLinks = document.createElement("div");
-        voteLinks.className = "vote-timeline-links";
-        for (const voteId of voteIds.slice(0, 3)) {
+        for (const voteId of voteIds.slice(0, 4)) {
           const link = document.createElement("a");
           link.className = "vote-timeline-link";
           link.href = window.Folkevalget.buildVoteUrl(voteId);
           link.textContent = `Afstemning ${voteId}`;
-          voteLinks.append(link);
+          links.append(link);
         }
-        body.append(voteLinks);
       }
 
       const stepDocuments = Array.isArray(step.documents) ? step.documents : [];
       if (stepDocuments.length > 0) {
-        const documentLinks = document.createElement("div");
-        documentLinks.className = "vote-timeline-links";
-        for (const doc of stepDocuments.slice(0, 3)) {
+        for (const doc of stepDocuments.slice(0, 6)) {
           if (!doc?.url) {
             continue;
           }
@@ -594,43 +631,19 @@ const VotesApp = (() => {
           link.target = "_blank";
           link.rel = "noreferrer";
           link.textContent = doc.title || doc.number || `Dokument ${doc.document_id || ""}`.trim();
-          documentLinks.append(link);
-        }
-        if (documentLinks.childElementCount > 0) {
-          body.append(documentLinks);
+          links.append(link);
         }
       }
 
-      item.append(meta, body);
+      if (links.childElementCount > 0) {
+        card.append(links);
+      }
+
+      item.append(card);
       fragment.append(item);
     }
 
     voteTimelineList.replaceChildren(fragment);
-
-    const caseDocuments = Array.isArray(timeline.documents) ? timeline.documents : [];
-    if (voteTimelineDocuments && voteTimelineDocumentLinks) {
-      voteTimelineDocumentLinks.replaceChildren();
-      if (caseDocuments.length === 0) {
-        voteTimelineDocuments.classList.add("hidden");
-      } else {
-        voteTimelineDocuments.classList.remove("hidden");
-        for (const doc of caseDocuments.slice(0, 8)) {
-          if (!doc?.url) {
-            continue;
-          }
-          const link = document.createElement("a");
-          link.className = "vote-timeline-link";
-          link.href = doc.url;
-          link.target = "_blank";
-          link.rel = "noreferrer";
-          link.textContent = doc.title || doc.number || `Dokument ${doc.document_id || ""}`.trim();
-          voteTimelineDocumentLinks.append(link);
-        }
-        if (voteTimelineDocumentLinks.childElementCount === 0) {
-          voteTimelineDocuments.classList.add("hidden");
-        }
-      }
-    }
 
     const timelineSourceUrl = window.Folkevalget.buildSagUrl(timeline.sag_number || vote.sag_number, vote.date);
     if (timelineSourceUrl) {
@@ -667,25 +680,39 @@ const VotesApp = (() => {
 
   function renderVoteLists(vote) {
     const partyKeyByPersonId = buildPartyLookup(vote);
-    const visibleCounts = {
+    const counts = effectiveCounts(vote);
+    const hasIndividualVotes = hasIndividualVoteRows(vote);
+    const participantCounts = {
       for: participantIdsFor(vote, "for").length,
       imod: participantIdsFor(vote, "imod").length,
       fravaer: participantIdsFor(vote, "fravaer").length,
       hverken: participantIdsFor(vote, "hverken").length,
     };
+    const visibleCounts = hasIndividualVotes
+      ? participantCounts
+      : {
+        for: counts.for,
+        imod: counts.imod,
+        fravaer: counts.fravaer,
+        hverken: counts.hverken,
+      };
 
     const filteredYes = enrichParticipants(participantIdsFor(vote, "for"), partyKeyByPersonId);
     const filteredNo = enrichParticipants(participantIdsFor(vote, "imod"), partyKeyByPersonId);
+    const yesHeadlineCount = state.partyFilter || hasIndividualVotes ? filteredYes.length : counts.for;
+    const noHeadlineCount = state.partyFilter || hasIndividualVotes ? filteredNo.length : counts.imod;
 
     document.querySelector("#vote-yes-title").textContent =
-      `${window.Folkevalget.formatNumber(filteredYes.length)} stemte for`;
+      `${window.Folkevalget.formatNumber(yesHeadlineCount)} stemte for`;
     document.querySelector("#vote-no-title").textContent =
-      `${window.Folkevalget.formatNumber(filteredNo.length)} stemte imod`;
+      `${window.Folkevalget.formatNumber(noHeadlineCount)} stemte imod`;
 
     const filterSummary = document.querySelector("#vote-filter-summary");
     if (state.partyFilter) {
       filterSummary.textContent =
         `${formatPartyLabel(state.partyFilter)}: ${window.Folkevalget.formatNumber(filteredYes.length)} for og ${window.Folkevalget.formatNumber(filteredNo.length)} imod. Grafen viser det samme udsnit.`;
+    } else if (!hasIndividualVotes && effectiveCountSource(vote) === "konklusion") {
+      filterSummary.textContent = "Viser samlede ja- og nej-tal fra sagens konklusion. Individuelle stemmer er ikke registreret i ODA.";
     } else {
       filterSummary.textContent = "Viser alle registrerede ja- og nej-stemmer for denne afstemning.";
     }
@@ -792,16 +819,91 @@ const VotesApp = (() => {
     root.append(fragment);
   }
 
+  function parseKonklusionCounts(konklusion) {
+    const text = String(konklusion || "").replace(/\s+/g, " ").trim();
+    if (!text) {
+      return null;
+    }
+
+    const patterns = {
+      for: /\bfor stemte\s+(\d+)/i,
+      imod: /\bimod stemte\s+(\d+)/i,
+      hverken: /\bhverken for eller imod stemte\s+(\d+)/i,
+      fravaer: /\bfrav(?:æ|ae)r(?:ende)?(?:\s+var)?\s+(\d+)/i,
+    };
+
+    const parsed = { for: 0, imod: 0, hverken: 0, fravaer: 0 };
+    let matchedAny = false;
+    for (const [key, pattern] of Object.entries(patterns)) {
+      const match = pattern.exec(text);
+      if (!match) {
+        continue;
+      }
+      parsed[key] = Number(match[1] || 0);
+      matchedAny = true;
+    }
+
+    return matchedAny ? parsed : null;
+  }
+
+  function effectiveCountSource(vote) {
+    if (vote.counts_source === "konklusion") {
+      return "konklusion";
+    }
+    const forCount = Number(vote.counts?.for || 0);
+    const imodCount = Number(vote.counts?.imod || 0);
+    if (forCount > 0 || imodCount > 0) {
+      return "stemme";
+    }
+    const parsed = parseKonklusionCounts(vote.konklusion);
+    if (!parsed) {
+      return "stemme";
+    }
+    return parsed.for > 0 || parsed.imod > 0 || parsed.hverken > 0 || parsed.fravaer > 0
+      ? "konklusion"
+      : "stemme";
+  }
+
+  function effectiveCounts(vote) {
+    const base = {
+      for: Number(vote.counts?.for || 0),
+      imod: Number(vote.counts?.imod || 0),
+      fravaer: Number(vote.counts?.fravaer || 0),
+      hverken: Number(vote.counts?.hverken || 0),
+    };
+    if (effectiveCountSource(vote) !== "konklusion") {
+      return base;
+    }
+    const parsed = parseKonklusionCounts(vote.konklusion);
+    if (!parsed) {
+      return base;
+    }
+    return {
+      for: parsed.for,
+      imod: parsed.imod,
+      fravaer: parsed.fravaer,
+      hverken: parsed.hverken,
+    };
+  }
+
+  function hasIndividualVoteRows(vote) {
+    return ["for", "imod", "fravaer", "hverken"].some((key) =>
+      Number(vote.vote_groups?.[key]?.length || 0) > 0
+    );
+  }
+
   function voteDecisionTotal(vote) {
-    return Number(vote.counts?.for || 0) + Number(vote.counts?.imod || 0);
+    const counts = effectiveCounts(vote);
+    return counts.for + counts.imod;
   }
 
   function voteMarginSharePct(vote) {
+    const counts = effectiveCounts(vote);
     const total = voteDecisionTotal(vote);
     if (total === 0) {
       return Number.POSITIVE_INFINITY;
     }
-    return (Math.abs(Number(vote.counts?.for || 0) - Number(vote.counts?.imod || 0)) / total) * 100;
+    return (Math.abs(counts.for - counts.imod) / total) * 100;
   }
 
   function normaliseTitleForMatch(text) {
