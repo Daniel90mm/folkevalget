@@ -684,10 +684,11 @@ body.global-search-open {
 
 .vote-resume {
   margin: 0;
-  max-width: 68ch;
-  font-size: var(--text-sm);
+  max-width: min(100%, 108ch);
+  font-size: var(--text-base);
   color: var(--color-text-secondary);
-  line-height: 1.65;
+  line-height: 1.6;
+  white-space: pre-line;
 }
 
 .hero-actions,
@@ -1748,6 +1749,12 @@ body.global-search-open {
   padding: 0;
   border: none;
   background: transparent;
+}
+
+.page-votes .vote-lists-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl);
+  align-items: start;
 }
 
 .page-votes .vote-timeline {

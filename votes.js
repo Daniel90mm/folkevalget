@@ -417,8 +417,9 @@ const VotesApp = (() => {
       `${window.Folkevalget.formatNumber(forCount + againstCount)} ja/nej-stemmer`,
     ].join(" · ");
 
-    if (vote.sag_resume) {
-      voteResumeBody.textContent = vote.sag_resume;
+    const resumeText = formatResumeText(vote.sag_resume);
+    if (resumeText) {
+      voteResumeBody.textContent = resumeText;
       voteResumeBody.classList.remove("hidden");
     } else {
       voteResumeBody.classList.add("hidden");
@@ -1063,6 +1064,14 @@ const VotesApp = (() => {
       hverken: "Hverken",
     };
     return labels[key] || key;
+  }
+
+  function formatResumeText(value) {
+    return String(value || "")
+      .replace(/\r\n/g, "\n")
+      .replace(/[ \t]+\n/g, "\n")
+      .replace(/\n{3,}/g, "\n\n")
+      .trim();
   }
 
   function isIsoDate(value) {
