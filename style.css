@@ -683,37 +683,8 @@ body.global-search-open {
 }
 
 .vote-resume {
-  margin-top: var(--space-sm);
+  margin: 0;
   max-width: 68ch;
-}
-
-.vote-resume summary {
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-xs);
-  font-size: var(--text-sm);
-  color: var(--color-accent);
-  list-style: none;
-  user-select: none;
-}
-
-.vote-resume summary::-webkit-details-marker {
-  display: none;
-}
-
-.vote-resume summary::before {
-  content: "▸";
-  display: inline-block;
-  transition: transform 0.15s ease;
-}
-
-.vote-resume[open] summary::before {
-  transform: rotate(90deg);
-}
-
-.vote-resume p {
-  margin-top: var(--space-sm);
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
   line-height: 1.65;
@@ -1703,6 +1674,17 @@ body.global-search-open {
   justify-content: flex-start;
 }
 
+.page-votes .vote-detail-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: var(--space-md);
+}
+
+.page-votes .profile-hero-actions {
+  justify-self: end;
+}
+
 .page-votes .vote-list-item-footer {
   gap: var(--space-md);
 }
@@ -1794,6 +1776,7 @@ body.global-search-open {
 .page-votes .vote-timeline-step {
   position: relative;
   padding-top: var(--space-md);
+  min-width: 0;
 }
 
 .page-votes .vote-timeline-step::before {
@@ -1828,17 +1811,20 @@ body.global-search-open {
   display: grid;
   gap: var(--space-sm);
   padding: 0;
+  min-width: 0;
 }
 
 .page-votes .vote-timeline-step-date,
 .page-votes .vote-timeline-step-meta {
   color: var(--color-text-secondary);
   font-size: var(--text-sm);
+  overflow-wrap: anywhere;
 }
 
 .page-votes .vote-timeline-step-title {
   margin: 0;
   font-size: var(--text-lg);
+  overflow-wrap: anywhere;
 }
 
 .page-votes .vote-timeline-step.is-active .vote-timeline-step-title {
@@ -1851,9 +1837,12 @@ body.global-search-open {
 }
 
 .vote-timeline-link {
+  display: block;
   color: var(--color-accent);
   font-size: var(--text-sm);
-  width: fit-content;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .vote-timeline-link:hover,
