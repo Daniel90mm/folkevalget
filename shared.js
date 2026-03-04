@@ -365,6 +365,10 @@ window.Folkevalget = (() => {
       .trim();
   }
 
+  function compactNormalisedText(value) {
+    return (value || "").replace(/[\s-]+/g, "");
+  }
+
   function buildProfileUrl(profileId) {
     return `${toSiteUrl("profil.html")}?id=${encodeURIComponent(profileId)}`;
   }
@@ -935,6 +939,10 @@ window.Folkevalget = (() => {
     const titleText = normaliseText(title);
     const titleWords = titleText.split(" ").filter(Boolean);
     const searchWords = searchText.split(" ").filter(Boolean);
+    const titleCompact = compactNormalisedText(titleText);
+    const searchCompact = compactNormalisedText(searchText);
+    const normalisedExactTerms = (exactTerms || []).map((entry) => normaliseText(entry)).filter(Boolean);
+    const exactTermCompacts = normalisedExactTerms.map((entry) => compactNormalisedText(entry)).filter(Boolean);
 
     return {
       kind,
@@ -946,9 +954,12 @@ window.Folkevalget = (() => {
       priority,
       titleText,
       titleWords,
+      titleCompact,
       searchText,
       searchWords,
-      exactTerms: (exactTerms || []).map((entry) => normaliseText(entry)).filter(Boolean),
+      searchCompact,
+      exactTerms: normalisedExactTerms,
+      exactTermCompacts,
     };
   }
 
@@ -1071,25 +1082,42 @@ window.Folkevalget = (() => {
       return 0;
     }
 
+    const queryCompact = compactNormalisedText(query);
     let score = item.priority || 0;
     if (item.exactTerms.includes(query)) {
       score += 900;
     }
+    if (queryCompact && item.exactTermCompacts.includes(queryCompact)) {
+      score += 860;
+    }
     if (item.titleText === query) {
       score += 700;
+    }
+    if (queryCompact && item.titleCompact === queryCompact) {
+      score += 660;
     }
     if (item.titleText.startsWith(query)) {
       score += 420;
     }
+    if (queryCompact && item.titleCompact.startsWith(queryCompact)) {
+      score += 390;
+    }
     if (item.searchText.includes(query)) {
       score += 140;
+    }
+    if (queryCompact && queryCompact.length >= 3 && item.searchCompact.includes(queryCompact)) {
+      score += 130;
     }
 
     for (const token of tokens) {
       let matched = false;
+      const tokenCompact = compactNormalisedText(token);
 
       if (item.exactTerms.includes(token)) {
         score += 260;
+        matched = true;
+      } else if (tokenCompact && item.exactTermCompacts.includes(tokenCompact)) {
+        score += 230;
         matched = true;
       } else if (item.titleWords.some((word) => word === token)) {
         score += 120;
@@ -1105,6 +1133,9 @@ window.Folkevalget = (() => {
         matched = true;
       } else if (item.searchText.includes(token)) {
         score += 20;
+        matched = true;
+      } else if (tokenCompact && tokenCompact.length >= 3 && item.searchCompact.includes(tokenCompact)) {
+        score += 18;
         matched = true;
       }
 
