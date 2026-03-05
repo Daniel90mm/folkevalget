@@ -37,6 +37,9 @@ window.Folkevalget = (() => {
   const GLOBAL_SEARCH_RESULT_LIMIT = 12;
   const GLOBAL_SEARCH_PER_SECTION = 4;
   let catalogueDataPromise = null;
+  let voteDataPromise = null;
+  let voteOverviewPromise = null;
+  let voteDetailsPromise = null;
   let globalSearchIndexPromise = null;
   const globalSearchState = {
     open: false,
@@ -105,15 +108,76 @@ window.Folkevalget = (() => {
   }
 
   async function loadVoteData() {
-    const bootstrapVotes = Array.isArray(window.__FOLKEVALGET_VOTES__?.votes)
-      ? window.__FOLKEVALGET_VOTES__.votes
-      : null;
-
-    if (bootstrapVotes) {
-      return bootstrapVotes;
+    if (voteDataPromise) {
+      return voteDataPromise;
     }
 
-    return fetchJson("data/afstemninger.json");
+    voteDataPromise = (async () => {
+      const bootstrapVotes = Array.isArray(window.__FOLKEVALGET_VOTES__?.votes)
+        ? window.__FOLKEVALGET_VOTES__.votes
+        : null;
+
+      if (bootstrapVotes) {
+        return bootstrapVotes;
+      }
+
+      const votes = await fetchJson("data/afstemninger.json");
+      return Array.isArray(votes) ? votes : [];
+    })().catch((error) => {
+      voteDataPromise = null;
+      throw error;
+    });
+
+    return voteDataPromise;
+  }
+
+  async function loadVoteOverview() {
+    if (voteOverviewPromise) {
+      return voteOverviewPromise;
+    }
+
+    voteOverviewPromise = (async () => {
+      try {
+        const overview = await fetchJson("data/afstemninger_overblik.json");
+        if (Array.isArray(overview) && overview.length > 0) {
+          return overview;
+        }
+      } catch (error) {}
+
+      return loadVoteData();
+    })().catch((error) => {
+      voteOverviewPromise = null;
+      throw error;
+    });
+
+    return voteOverviewPromise;
+  }
+
+  async function loadVoteDetails() {
+    if (voteDetailsPromise) {
+      return voteDetailsPromise;
+    }
+
+    voteDetailsPromise = (async () => {
+      try {
+        const details = await fetchJson("data/afstemninger_detaljer.json");
+        if (Array.isArray(details) && details.length > 0) {
+          return details;
+        }
+      } catch (error) {}
+
+      const fullVotes = await loadVoteData();
+      return (Array.isArray(fullVotes) ? fullVotes : []).map((vote) => ({
+        afstemning_id: Number(vote.afstemning_id || 0),
+        vote_groups: vote.vote_groups || {},
+        vote_groups_by_party: vote.vote_groups_by_party || {},
+      }));
+    })().catch((error) => {
+      voteDetailsPromise = null;
+      throw error;
+    });
+
+    return voteDetailsPromise;
   }
 
   async function fetchJson(path) {
@@ -815,7 +879,7 @@ window.Folkevalget = (() => {
 
     globalSearchIndexPromise = Promise.all([
       loadCatalogueData(),
-      loadVoteData().catch(() => []),
+      loadVoteOverview().catch(() => []),
     ])
       .then(([{ profiles }, votes]) => {
         const index = buildGlobalSearchIndex(profiles, Array.isArray(votes) ? votes : []);
@@ -1362,6 +1426,8 @@ window.Folkevalget = (() => {
     isNorthAtlanticMandate,
     loadCatalogueData,
     loadVoteData,
+    loadVoteDetails,
+    loadVoteOverview,
     normaliseText,
     partyDisplayName,
     photoCreditText,

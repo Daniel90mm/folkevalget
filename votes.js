@@ -22,6 +22,9 @@ const VotesApp = (() => {
     profiles: [],
     profilesById: new Map(),
     timelinesBySagId: new Map(),
+    voteDetailsById: new Map(),
+    voteDetailsLoaded: false,
+    voteDetailsLoadingPromise: null,
     votes: [],
     filteredVotes: [],
     selectedVoteId: null,
@@ -68,9 +71,9 @@ const VotesApp = (() => {
   async function boot() {
     hydrateStateFromQuery();
 
-    const [{ profiles, stats }, votes, rfDocs, timelines] = await Promise.all([
+    const [{ profiles, stats }, voteOverview, rfDocs, timelines] = await Promise.all([
       window.Folkevalget.loadCatalogueData(),
-      window.Folkevalget.loadVoteData(),
+      window.Folkevalget.loadVoteOverview(),
       fetch(window.Folkevalget.toSiteUrl("data/ft_dokumenter_rf.json"))
         .then((r) => r.ok ? r.json() : [])
         .catch(() => []),
@@ -81,7 +84,7 @@ const VotesApp = (() => {
 
     state.profiles = profiles;
     state.profilesById = new Map(profiles.map((profile) => [profile.id, profile]));
-    state.votes = votes;
+    state.votes = Array.isArray(voteOverview) ? voteOverview : [];
     state.rfDocs = Array.isArray(rfDocs) ? rfDocs : [];
     state.timelinesBySagId = new Map(
       (Array.isArray(timelines) ? timelines : [])
@@ -93,6 +96,7 @@ const VotesApp = (() => {
     bindEvents();
     syncControls();
     applyVoteFilter();
+    scheduleVoteDetailsPreload();
   }
 
   function hydrateStateFromQuery() {
@@ -161,6 +165,73 @@ const VotesApp = (() => {
       syncQueryString();
     });
 
+  }
+
+  function scheduleVoteDetailsPreload() {
+    const preload = () => {
+      ensureVoteDetailsLoaded()
+        .then(() => {
+          renderSelectedVote();
+        })
+        .catch(() => {});
+    };
+
+    if (typeof window.requestIdleCallback === "function") {
+      window.requestIdleCallback(preload, { timeout: 2000 });
+      return;
+    }
+
+    window.setTimeout(preload, 300);
+  }
+
+  function ensureVoteDetailsLoaded() {
+    if (state.voteDetailsLoaded) {
+      return Promise.resolve();
+    }
+
+    if (state.voteDetailsLoadingPromise) {
+      return state.voteDetailsLoadingPromise;
+    }
+
+    state.voteDetailsLoadingPromise = window.Folkevalget.loadVoteDetails()
+      .then((details) => {
+        const detailRows = Array.isArray(details) ? details : [];
+        state.voteDetailsById = new Map(
+          detailRows
+            .filter((row) => Number.isFinite(Number(row?.afstemning_id)) && Number(row.afstemning_id) > 0)
+            .map((row) => [Number(row.afstemning_id), row])
+        );
+        state.voteDetailsLoaded = true;
+      })
+      .finally(() => {
+        state.voteDetailsLoadingPromise = null;
+      });
+
+    return state.voteDetailsLoadingPromise;
+  }
+
+  function mergeVoteWithDetails(vote) {
+    if (!vote || !Number.isFinite(Number(vote.afstemning_id))) {
+      return vote;
+    }
+
+    const details = state.voteDetailsById.get(Number(vote.afstemning_id));
+    if (!details) {
+      return vote;
+    }
+
+    return {
+      ...vote,
+      ...details,
+    };
+  }
+
+  function hasParticipantDetails(vote) {
+    const voteGroups = vote?.vote_groups;
+    const voteGroupsByParty = vote?.vote_groups_by_party;
+    const groupKeys = ["for", "imod", "fravaer", "hverken"];
+    const hasStructuredGroups = groupKeys.every((key) => Array.isArray(voteGroups?.[key]));
+    return hasStructuredGroups && Boolean(voteGroupsByParty && typeof voteGroupsByParty === "object");
   }
 
   function applyVoteFilter() {
@@ -315,13 +386,14 @@ const VotesApp = (() => {
   }
 
   function renderSelectedVote() {
-    const selectedVote = state.filteredVotes.find((vote) => vote.afstemning_id === state.selectedVoteId) || null;
+    const selectedOverviewVote = state.filteredVotes.find((vote) => vote.afstemning_id === state.selectedVoteId) || null;
 
-    if (!selectedVote) {
+    if (!selectedOverviewVote) {
       voteEmpty.classList.remove("hidden");
       voteDetailContent.classList.add("hidden");
       return;
     }
+    const selectedVote = mergeVoteWithDetails(selectedOverviewVote);
 
     voteEmpty.classList.add("hidden");
     voteDetailContent.classList.remove("hidden");
@@ -334,6 +406,16 @@ const VotesApp = (() => {
     renderVoteCaseMeta(selectedVote);
     renderPartyFilter(selectedVote);
     renderVoteLists(selectedVote);
+
+    if (!hasParticipantDetails(selectedVote)) {
+      ensureVoteDetailsLoaded()
+        .then(() => {
+          if (state.selectedVoteId === selectedOverviewVote.afstemning_id) {
+            renderSelectedVote();
+          }
+        })
+        .catch(() => {});
+    }
 
     if (state.focusDetailRequested && voteDetailContent) {
       voteDetailContent.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -871,6 +953,15 @@ const VotesApp = (() => {
   }
 
   function renderPartyFilter(vote) {
+    if (!hasParticipantDetails(vote)) {
+      votePartyFilter.innerHTML = '<option value="">Alle partier</option>';
+      votePartyFilter.value = "";
+      votePartyFilter.disabled = true;
+      state.partyFilter = "";
+      return;
+    }
+
+    votePartyFilter.disabled = false;
     const previousValue = state.partyFilter;
     votePartyFilter.innerHTML = '<option value="">Alle partier</option>';
 
@@ -896,6 +987,7 @@ const VotesApp = (() => {
   function renderVoteLists(vote) {
     const partyKeyByPersonId = buildPartyLookup(vote);
     const counts = effectiveCounts(vote);
+    const participantDetailsReady = hasParticipantDetails(vote);
     const hasIndividualVotes = hasIndividualVoteRows(vote);
     const noDecisionData = voteDecisionTotal(vote) === 0 && !hasIndividualVotes;
     const participantCounts = {
@@ -924,7 +1016,9 @@ const VotesApp = (() => {
       `${window.Folkevalget.formatNumber(noHeadlineCount)} stemte imod`;
 
     const filterSummary = document.querySelector("#vote-filter-summary");
-    if (state.partyFilter) {
+    if (!participantDetailsReady && !state.voteDetailsLoaded) {
+      filterSummary.textContent = "Indlæser individuelle stemmer fra ODA…";
+    } else if (state.partyFilter) {
       filterSummary.textContent =
         `${formatPartyLabel(state.partyFilter)}: ${window.Folkevalget.formatNumber(filteredYes.length)} for og ${window.Folkevalget.formatNumber(filteredNo.length)} imod. Grafen viser det samme udsnit.`;
     } else if (noDecisionData) {

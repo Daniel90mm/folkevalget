@@ -255,6 +255,11 @@ def write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def write_json_compact(path: Path, payload: Any) -> None:
+    ensure_dir(path.parent)
+    path.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+
 def write_javascript_payload(path: Path, variable_name: str, payload: Any) -> None:
     ensure_dir(path.parent)
     serialized = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
@@ -2337,6 +2342,59 @@ def download_all_photos(
             profile["photo_url"] = results[pid]
 
 
+def split_vote_payloads(votes: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    overview_votes: list[dict[str, Any]] = []
+    vote_details: list[dict[str, Any]] = []
+
+    def dedupe_ids(ids: list[Any]) -> list[int]:
+        seen: set[int] = set()
+        unique: list[int] = []
+        for raw in ids:
+            value = int(raw or 0)
+            if value <= 0 or value in seen:
+                continue
+            seen.add(value)
+            unique.append(value)
+        return unique
+
+    def dedupe_vote_groups(groups: dict[str, Any]) -> dict[str, list[int]]:
+        result: dict[str, list[int]] = {}
+        for key in ("for", "imod", "fravaer", "hverken"):
+            values = groups.get(key)
+            result[key] = dedupe_ids(values if isinstance(values, list) else [])
+        return result
+
+    def dedupe_vote_groups_by_party(groups_by_party: dict[str, Any]) -> dict[str, dict[str, list[int]]]:
+        result: dict[str, dict[str, list[int]]] = {}
+        for party_key, party_groups in groups_by_party.items():
+            if not isinstance(party_groups, dict):
+                continue
+            result[str(party_key)] = {
+                key: dedupe_ids(values if isinstance(values, list) else [])
+                for key, values in party_groups.items()
+            }
+        return result
+
+    for vote in votes:
+        vote_id = int(vote.get("afstemning_id") or 0)
+        overview = dict(vote)
+        overview.pop("vote_groups", None)
+        overview.pop("vote_groups_by_party", None)
+        overview_votes.append(overview)
+
+        vote_groups = dedupe_vote_groups(vote.get("vote_groups") or {})
+        vote_groups_by_party = dedupe_vote_groups_by_party(vote.get("vote_groups_by_party") or {})
+        vote_details.append(
+            {
+                "afstemning_id": vote_id,
+                "vote_groups": vote_groups,
+                "vote_groups_by_party": vote_groups_by_party,
+            }
+        )
+
+    return overview_votes, vote_details
+
+
 def main() -> None:
     args = parse_args()
     options = FetchOptions(
@@ -2718,6 +2776,7 @@ def main() -> None:
         stemmetyper=stemmetype_lookup,
         recent_vote_limit=max(args.recent_votes, 1),
     )
+    vote_overview, vote_details = split_vote_payloads(summarized_votes)
 
     site_stats = {
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
@@ -2743,6 +2802,8 @@ def main() -> None:
     write_json(output_dir / "partier.json", party_summaries)
     write_json(output_dir / "udvalg.json", committee_summaries)
     write_json(output_dir / "afstemninger.json", summarized_votes)
+    write_json_compact(output_dir / "afstemninger_overblik.json", vote_overview)
+    write_json_compact(output_dir / "afstemninger_detaljer.json", vote_details)
     write_json(output_dir / "sag_tidslinjer.json", case_timelines)
     write_json(output_dir / "site_stats.json", site_stats)
     write_json(output_dir / "ft_dokumenter_rf.json", rf_docs)
