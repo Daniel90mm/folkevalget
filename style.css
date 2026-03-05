@@ -2879,6 +2879,18 @@ html[data-theme="dark"] .page-votes .voter-row:focus-visible {
   color: var(--color-accent);
 }
 
+.page-profile #profile-hverv-panel .panel-empty {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.page-profile #profile-hverv-source-note {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
 .site-footer {
   display: flex;
   flex-wrap: wrap;
