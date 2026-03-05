@@ -3627,12 +3627,32 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
 }
 
 .page-votes .vote-list-item-footer {
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: end;
+  gap: var(--space-sm) var(--space-lg);
+}
+
+.page-votes .vote-list-item-meta {
+  min-width: 0;
+}
+
+.page-votes .vote-list-counts {
+  justify-content: flex-end;
+  justify-self: end;
+  min-width: 10rem;
+}
+
+.page-votes .vote-list-signals {
+  justify-content: flex-end;
+  justify-self: end;
 }
 
 .page-votes .vote-count-item {
+  min-width: 4.25rem;
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
+  text-align: right;
 }
 
 .page-votes .vote-list-sentinel {
@@ -4102,6 +4122,8 @@ html[data-theme="dark"] .page-votes .voter-row:focus-visible {
   }
 
   .page-votes .vote-list-item-footer {
+    display: flex;
+    justify-content: space-between;
     align-items: flex-start;
   }
 }
