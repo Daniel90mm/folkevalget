@@ -3656,11 +3656,9 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
 .page-votes .vote-outcome-card {
   display: grid;
   gap: var(--space-xs);
-  padding: var(--space-lg);
-  border: 1px solid var(--color-border);
-  background:
-    linear-gradient(180deg, rgba(27, 77, 110, 0.045), transparent 8rem),
-    var(--color-surface);
+  padding: 0;
+  border: 0;
+  background: none;
 }
 
 .page-votes .vote-outcome-card strong {
