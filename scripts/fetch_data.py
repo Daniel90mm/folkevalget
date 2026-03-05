@@ -559,6 +559,19 @@ def collect_lookup_map(rows: list[dict[str, Any]]) -> dict[int, dict[str, Any]]:
     return {int(row["id"]): row for row in rows}
 
 
+def row_value(row: dict[str, Any], *keys: str) -> Any:
+    for key in keys:
+        if key not in row:
+            continue
+        value = row.get(key)
+        if value is None:
+            continue
+        if isinstance(value, str) and not value.strip():
+            continue
+        return value
+    return None
+
+
 def membership_sort_key(membership: dict[str, Any]) -> tuple[date, int]:
     relation_start = membership.get("relation_start") or date.min
     actor_start = membership.get("actor_start") or date.min
@@ -731,6 +744,32 @@ def fetch_sag_documents(
     return rows
 
 
+def fetch_sag_actor_rows(
+    client: OdaClient,
+    *,
+    sag_ids: list[int],
+) -> list[dict[str, Any]]:
+    if not sag_ids:
+        return []
+
+    rows: list[dict[str, Any]] = []
+    chunk_size = 40
+    for start in range(0, len(sag_ids), chunk_size):
+        chunk = sag_ids[start : start + chunk_size]
+        filter_expr = build_filter_for_ids("sagid", chunk)
+        rows.extend(
+            client.fetch_collection(
+                "SagAkt%C3%B8r",
+                params={"$filter": filter_expr},
+                label="sag-aktorer",
+            )
+        )
+        time.sleep(client.options.delay)
+
+    deduped = {int(row["id"]): row for row in rows}
+    return list(deduped.values())
+
+
 def fetch_sagstrin_for_sager(
     client: OdaClient,
     *,
@@ -798,6 +837,32 @@ def fetch_sagstrin_documents(
     return rows
 
 
+def fetch_dokument_actor_rows(
+    client: OdaClient,
+    *,
+    document_ids: list[int],
+) -> list[dict[str, Any]]:
+    if not document_ids:
+        return []
+
+    rows: list[dict[str, Any]] = []
+    chunk_size = 40
+    for start in range(0, len(document_ids), chunk_size):
+        chunk = document_ids[start : start + chunk_size]
+        filter_expr = build_filter_for_ids("dokumentid", chunk)
+        rows.extend(
+            client.fetch_collection(
+                "DokumentAkt%C3%B8r",
+                params={"$filter": filter_expr},
+                label="dokument-aktorer",
+            )
+        )
+        time.sleep(client.options.delay)
+
+    deduped = {int(row["id"]): row for row in rows}
+    return list(deduped.values())
+
+
 def fetch_sager_by_ids(
     client: OdaClient,
     *,
@@ -819,6 +884,54 @@ def fetch_sager_by_ids(
                     "$top": len(chunk),
                 },
                 label="sag",
+            )
+        )
+        time.sleep(client.options.delay)
+
+    deduped = {int(row["id"]): row for row in rows}
+    return list(deduped.values())
+
+
+def fetch_dagsordenspunkt_rows(
+    client: OdaClient,
+    *,
+    sagstrin_ids: list[int],
+) -> list[dict[str, Any]]:
+    if not sagstrin_ids:
+        return []
+
+    rows: list[dict[str, Any]] = []
+    chunk_size = 40
+    for start in range(0, len(sagstrin_ids), chunk_size):
+        chunk = sagstrin_ids[start : start + chunk_size]
+        filter_expr = build_filter_for_ids("sagstrinid", chunk)
+        rows.extend(
+            client.fetch_collection(
+                "Dagsordenspunkt",
+                params={"$filter": filter_expr},
+                label="dagsordenspunkter",
+            )
+        )
+        time.sleep(client.options.delay)
+
+    deduped = {int(row["id"]): row for row in rows}
+    return list(deduped.values())
+
+
+def fetch_moeder_by_ids(client: OdaClient, *, moede_ids: list[int]) -> list[dict[str, Any]]:
+    if not moede_ids:
+        return []
+
+    rows: list[dict[str, Any]] = []
+    chunk_size = 40
+    for start in range(0, len(moede_ids), chunk_size):
+        chunk = moede_ids[start : start + chunk_size]
+        filter_expr = build_filter_for_ids("id", chunk)
+        rows.extend(
+            client.fetch_collection(
+                "M%C3%B8de",
+                params={"$filter": filter_expr},
+                label="moeder",
             )
         )
         time.sleep(client.options.delay)
@@ -1119,6 +1232,28 @@ def fetch_people_by_ids(client: OdaClient, *, person_ids: list[int]) -> list[dic
                 "Akt%C3%B8r",
                 params={"$filter": f"typeid eq 5 and ({id_filter})"},
                 label="people",
+            )
+        )
+        time.sleep(client.options.delay)
+
+    deduped = {int(row["id"]): row for row in rows}
+    return list(deduped.values())
+
+
+def fetch_actors_by_ids(client: OdaClient, *, actor_ids: list[int]) -> list[dict[str, Any]]:
+    if not actor_ids:
+        return []
+
+    rows: list[dict[str, Any]] = []
+    chunk_size = 50
+    for start in range(0, len(actor_ids), chunk_size):
+        chunk = actor_ids[start : start + chunk_size]
+        id_filter = build_filter_for_ids("id", chunk)
+        rows.extend(
+            client.fetch_collection(
+                "Akt%C3%B8r",
+                params={"$filter": id_filter},
+                label="actors",
             )
         )
         time.sleep(client.options.delay)
@@ -1551,6 +1686,283 @@ def build_related_cases_by_sag(
     return result
 
 
+def collect_document_records(
+    *,
+    sag_document_rows: list[dict[str, Any]],
+    sagstrin_document_rows: list[dict[str, Any]],
+) -> dict[int, dict[str, Any]]:
+    by_id: dict[int, dict[str, Any]] = {}
+    for row in sag_document_rows + sagstrin_document_rows:
+        document = row.get("Dokument") or {}
+        document_id = int(document.get("id") or 0)
+        if document_id <= 0 or document_id in by_id:
+            continue
+        by_id[document_id] = document
+    return by_id
+
+
+def build_id_label_lookup(rows: list[dict[str, Any]], value_key: str) -> dict[int, str]:
+    lookup: dict[int, str] = {}
+    for row in rows:
+        row_id = int(row.get("id") or 0)
+        if row_id <= 0:
+            continue
+        value = str(row.get(value_key) or "").strip()
+        if value:
+            lookup[row_id] = value
+    return lookup
+
+
+def build_sag_actor_roles_by_sag(
+    *,
+    sag_actor_rows: list[dict[str, Any]],
+    sag_actor_role_lookup: dict[int, str],
+    actors_by_id: dict[int, dict[str, Any]],
+    actor_type_lookup: dict[int, str],
+) -> dict[int, list[dict[str, Any]]]:
+    by_sag: dict[int, dict[tuple[int, int], dict[str, Any]]] = defaultdict(dict)
+    for row in sag_actor_rows:
+        sag_id = int(row.get("sagid") or 0)
+        if sag_id <= 0:
+            continue
+        role_id = int(row.get("rolleid") or 0)
+        actor_id = int(
+            row_value(
+                row,
+                "aktørid",
+                "akt\u00f8rid",
+                "aktør_id",
+                "akt\u00f8r_id",
+                "aktoerid",
+                "aktoer_id",
+            )
+            or 0
+        )
+        actor = actors_by_id.get(actor_id) or {}
+        actor_type_id = int(actor.get("typeid") or 0)
+        dedupe_key = (actor_id, role_id)
+        by_sag[sag_id][dedupe_key] = {
+            "actor_id": actor_id or None,
+            "name": actor.get("navn"),
+            "short_name": actor.get("gruppenavnkort"),
+            "type_id": actor_type_id or None,
+            "type": actor_type_lookup.get(actor_type_id),
+            "role_id": role_id or None,
+            "role": sag_actor_role_lookup.get(role_id),
+        }
+
+    result: dict[int, list[dict[str, Any]]] = {}
+    for sag_id, entries in by_sag.items():
+        result[sag_id] = sorted(
+            entries.values(),
+            key=lambda item: (
+                item.get("role") or "",
+                item.get("name") or "",
+                item.get("actor_id") or 0,
+            ),
+        )
+    return result
+
+
+def collect_document_actor_ids(document_actor_rows: list[dict[str, Any]]) -> list[int]:
+    actor_ids: set[int] = set()
+    for row in document_actor_rows:
+        actor_id = int(
+            row_value(
+                row,
+                "aktørid",
+                "akt\u00f8rid",
+                "aktør_id",
+                "akt\u00f8r_id",
+                "aktoerid",
+                "aktoer_id",
+            )
+            or 0
+        )
+        if actor_id > 0:
+            actor_ids.add(actor_id)
+    return sorted(actor_ids)
+
+
+def dedupe_strings(values: list[str]) -> list[str]:
+    seen: set[str] = set()
+    result: list[str] = []
+    for value in values:
+        cleaned = str(value or "").strip()
+        if not cleaned:
+            continue
+        key = cleaned.casefold()
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(cleaned)
+    return result
+
+
+def build_document_question_chain(actor_entries: list[dict[str, Any]]) -> dict[str, list[str]]:
+    askers: list[str] = []
+    responders: list[str] = []
+    for entry in actor_entries:
+        role_text = str(entry.get("role") or "").lower()
+        actor_name = str(entry.get("name") or "").strip()
+        if not actor_name:
+            continue
+        if ("spørg" in role_text) or ("spoerg" in role_text) or ("spm" in role_text):
+            askers.append(actor_name)
+        if ("svar" in role_text) or ("besvar" in role_text):
+            responders.append(actor_name)
+    return {
+        "askers": dedupe_strings(askers),
+        "responders": dedupe_strings(responders),
+    }
+
+
+def build_document_provenance_map(
+    *,
+    document_actor_rows: list[dict[str, Any]],
+    document_actor_role_lookup: dict[int, str],
+    actors_by_id: dict[int, dict[str, Any]],
+    actor_type_lookup: dict[int, str],
+    document_rows_by_id: dict[int, dict[str, Any]],
+    document_type_lookup: dict[int, str],
+    document_status_lookup: dict[int, str],
+    document_category_lookup: dict[int, str],
+) -> dict[int, dict[str, Any]]:
+    actors_by_document: dict[int, dict[tuple[int, int], dict[str, Any]]] = defaultdict(dict)
+    for row in document_actor_rows:
+        document_id = int(row.get("dokumentid") or 0)
+        if document_id <= 0:
+            continue
+        role_id = int(row.get("rolleid") or 0)
+        actor_id = int(
+            row_value(
+                row,
+                "aktørid",
+                "akt\u00f8rid",
+                "aktør_id",
+                "akt\u00f8r_id",
+                "aktoerid",
+                "aktoer_id",
+            )
+            or 0
+        )
+        actor = actors_by_id.get(actor_id) or {}
+        actor_type_id = int(actor.get("typeid") or 0)
+        dedupe_key = (actor_id, role_id)
+        actors_by_document[document_id][dedupe_key] = {
+            "actor_id": actor_id or None,
+            "name": actor.get("navn"),
+            "short_name": actor.get("gruppenavnkort"),
+            "type_id": actor_type_id or None,
+            "type": actor_type_lookup.get(actor_type_id),
+            "role_id": role_id or None,
+            "role": document_actor_role_lookup.get(role_id),
+        }
+
+    provenance_by_document: dict[int, dict[str, Any]] = {}
+    for document_id, document in document_rows_by_id.items():
+        doc_type_id = int(document.get("typeid") or 0)
+        doc_status_id = int(document.get("statusid") or 0)
+        doc_category_id = int(document.get("kategoriid") or 0)
+        actors = sorted(
+            actors_by_document.get(document_id, {}).values(),
+            key=lambda item: (
+                item.get("role") or "",
+                item.get("name") or "",
+                item.get("actor_id") or 0,
+            ),
+        )
+        provenance_by_document[document_id] = {
+            "document_type_id": doc_type_id or None,
+            "document_type": document_type_lookup.get(doc_type_id),
+            "document_status_id": doc_status_id or None,
+            "document_status": document_status_lookup.get(doc_status_id),
+            "document_category_id": doc_category_id or None,
+            "document_category": document_category_lookup.get(doc_category_id),
+            "document_actors": actors,
+            "question_chain": build_document_question_chain(actors),
+        }
+
+    return provenance_by_document
+
+
+def enrich_document_links_with_provenance(
+    links_by_group: dict[int, list[dict[str, Any]]],
+    document_provenance_by_document_id: dict[int, dict[str, Any]],
+) -> dict[int, list[dict[str, Any]]]:
+    enriched: dict[int, list[dict[str, Any]]] = {}
+    for group_id, links in links_by_group.items():
+        enriched_links: list[dict[str, Any]] = []
+        for link in links:
+            document_id = int(link.get("document_id") or 0)
+            provenance = document_provenance_by_document_id.get(document_id, {})
+            enriched_links.append(
+                {
+                    **link,
+                    **provenance,
+                }
+            )
+        enriched[group_id] = enriched_links
+    return enriched
+
+
+def build_meeting_context_by_sagstrin(
+    *,
+    dagsordenspunkt_rows: list[dict[str, Any]],
+    moede_rows_by_id: dict[int, dict[str, Any]],
+    moede_type_lookup: dict[int, str],
+    moede_status_lookup: dict[int, str],
+) -> dict[int, list[dict[str, Any]]]:
+    by_sagstrin: dict[int, list[dict[str, Any]]] = defaultdict(list)
+    for row in dagsordenspunkt_rows:
+        sagstrin_id = int(row.get("sagstrinid") or 0)
+        if sagstrin_id <= 0:
+            continue
+        moede_id = int(
+            row_value(
+                row,
+                "mødeid",
+                "m\u00f8deid",
+                "moedeid",
+            )
+            or 0
+        )
+        moede = moede_rows_by_id.get(moede_id) or {}
+        moede_type_id = int(moede.get("typeid") or 0)
+        moede_status_id = int(moede.get("statusid") or 0)
+        by_sagstrin[sagstrin_id].append(
+            {
+                "dagsordenspunkt_id": int(row.get("id") or 0),
+                "agenda_number": row.get("nummer"),
+                "agenda_title": row.get("titel"),
+                "forhandling": row.get("forhandling") or row.get("forhandlingskode"),
+                "meeting": {
+                    "id": moede_id or None,
+                    "date": (moede.get("dato") or "")[:10] or None,
+                    "number": moede.get("nummer"),
+                    "title": moede.get("titel"),
+                    "type": moede_type_lookup.get(moede_type_id),
+                    "status": moede_status_lookup.get(moede_status_id),
+                    "start_note": moede.get("starttidsbemærkning"),
+                    "agenda_url": moede.get("dagsordenurl"),
+                },
+            }
+        )
+
+    for sagstrin_id, agenda_items in by_sagstrin.items():
+        agenda_items.sort(
+            key=lambda item: (
+                (item.get("meeting") or {}).get("date") or "",
+                int((item.get("meeting") or {}).get("number") or 0),
+                int(item.get("agenda_number") or 0),
+                item.get("dagsordenspunkt_id") or 0,
+            )
+        )
+        by_sagstrin[sagstrin_id] = agenda_items
+
+    return dict(by_sagstrin)
+
+
 def build_vote_context(
     sagstrin_rows: list[dict[str, Any]],
     document_links_by_sag: dict[int, list[dict[str, Any]]],
@@ -1605,11 +2017,21 @@ def build_case_timelines(
     related_cases_by_sag: dict[int, list[dict[str, Any]]] | None = None,
     sag_emneord_by_sag: dict[int, list[dict[str, Any]]] | None = None,
     document_emneord_by_document_id: dict[int, list[dict[str, Any]]] | None = None,
+    sag_actor_roles_by_sag: dict[int, list[dict[str, Any]]] | None = None,
+    sag_type_lookup: dict[int, str] | None = None,
+    sag_status_lookup: dict[int, str] | None = None,
+    sag_category_lookup: dict[int, str] | None = None,
+    meeting_context_by_sagstrin: dict[int, list[dict[str, Any]]] | None = None,
 ) -> list[dict[str, Any]]:
     sag_rows_by_id = sag_rows_by_id or {}
     related_cases_by_sag = related_cases_by_sag or {}
     sag_emneord_by_sag = sag_emneord_by_sag or {}
     document_emneord_by_document_id = document_emneord_by_document_id or {}
+    sag_actor_roles_by_sag = sag_actor_roles_by_sag or {}
+    sag_type_lookup = sag_type_lookup or {}
+    sag_status_lookup = sag_status_lookup or {}
+    sag_category_lookup = sag_category_lookup or {}
+    meeting_context_by_sagstrin = meeting_context_by_sagstrin or {}
 
     rows_by_sag: dict[int, list[dict[str, Any]]] = defaultdict(list)
     for row in sagstrin_rows:
@@ -1639,6 +2061,7 @@ def build_case_timelines(
                     "status": (row.get("Sagstrinsstatus") or {}).get("status"),
                     "vote_ids": vote_ids,
                     "documents": stage_document_links_by_sagstrin.get(sagstrin_id, [])[:5],
+                    "agenda_items": meeting_context_by_sagstrin.get(sagstrin_id, [])[:5],
                 }
             )
 
@@ -1674,15 +2097,33 @@ def build_case_timelines(
             key=lambda item: ((item.get("type") or ""), (item.get("emneord") or "")),
         )
 
+        sag_type_id = int(sag.get("typeid") or 0)
+        sag_status_id = int(sag.get("statusid") or 0)
+        sag_category_id = int(sag.get("kategoriid") or 0)
+
         timelines.append(
             {
                 "sag_id": sag_id,
                 "sag_number": sag.get("nummer"),
                 "sag_title": sag.get("titel"),
                 "sag_short_title": sag.get("titelkort"),
-                "sag_type_id": sag.get("typeid"),
+                "sag_type_id": sag_type_id or None,
+                "sag_type": sag_type_lookup.get(sag_type_id),
+                "sag_status_id": sag_status_id or None,
+                "sag_status": sag_status_lookup.get(sag_status_id),
+                "sag_category_id": sag_category_id or None,
+                "sag_category": sag_category_lookup.get(sag_category_id),
                 "fremsatundersagid": sag.get("fremsatundersagid"),
                 "deltundersagid": sag.get("deltundersagid"),
+                "actors": sag_actor_roles_by_sag.get(sag_id, []),
+                "law_followup": {
+                    "law_number": sag.get("lovnummer"),
+                    "law_number_date": (sag.get("lovnummerdato") or "")[:10] or None,
+                    "decision_date": (sag.get("afgørelsesdato") or "")[:10] or None,
+                    "decision_result_code": sag.get("afgørelsesresultatkode"),
+                    "decision_text": sag.get("afgørelse"),
+                    "retsinformation_url": sag.get("retsinformationsurl"),
+                },
                 "steps": steps,
                 "documents": case_documents,
                 "related_cases": related_cases_by_sag.get(sag_id, []),
@@ -2433,6 +2874,18 @@ def main() -> None:
         sag_rows = fetch_sager_by_ids(client, sag_ids=sag_ids)
         sag_rows_by_id = {int(row["id"]): row for row in sag_rows}
         sagstrin_ids = sorted({int(row["id"]) for row in timeline_sagstrin_rows})
+        log(options.verbose, "timeline-only: fetching lookup tables for metadata")
+        actor_types = client.fetch_collection("Akt%C3%B8rtype", label="aktortype")
+        sag_actor_role_rows = client.fetch_collection("SagAkt%C3%B8rRolle", label="sag-aktor-rolle")
+        sagstype_rows = client.fetch_collection("Sagstype", label="sagstype")
+        sagsstatus_rows = client.fetch_collection("Sagsstatus", label="sagsstatus")
+        sagskategori_rows = client.fetch_collection("Sagskategori", label="sagskategori")
+        dokument_actor_role_rows = client.fetch_collection("DokumentAkt%C3%B8rRolle", label="dokument-aktor-rolle")
+        dokument_type_rows = client.fetch_collection("Dokumenttype", label="dokumenttype")
+        dokument_status_rows = client.fetch_collection("Dokumentstatus", label="dokumentstatus")
+        dokumentkategori_rows = client.fetch_collection("Dokumentkategori", label="dokumentkategori")
+        moedetype_rows = client.fetch_collection("M%C3%B8detype", label="moedetype")
+        moedestatus_rows = client.fetch_collection("M%C3%B8destatus", label="moedestatus")
 
         log(options.verbose, f"timeline-only: fetching sambehandlinger for {len(sagstrin_ids)} sagstrin")
         sambehandling_rows = fetch_sambehandling_rows(client, sagstrin_ids=sagstrin_ids)
@@ -2495,6 +2948,38 @@ def main() -> None:
             sagstrin_rows=relation_sagstrin_rows,
             sambehandling_rows=sambehandling_rows,
         )
+        log(options.verbose, f"timeline-only: fetching case actor roles for {len(sag_ids)} sager")
+        sag_actor_rows = fetch_sag_actor_rows(client, sag_ids=sag_ids)
+        sag_actor_ids = sorted(
+            {
+                int(
+                    row_value(
+                        row,
+                        "aktørid",
+                        "akt\u00f8rid",
+                        "aktør_id",
+                        "akt\u00f8r_id",
+                        "aktoerid",
+                        "aktoer_id",
+                    )
+                    or 0
+                )
+                for row in sag_actor_rows
+            }
+            - {0}
+        )
+        sag_actor_rows_by_id = {int(row["id"]): row for row in fetch_actors_by_ids(client, actor_ids=sag_actor_ids)}
+        actor_type_lookup = build_id_label_lookup(actor_types, "type")
+        sag_actor_role_lookup = build_id_label_lookup(sag_actor_role_rows, "rolle")
+        sag_actor_roles_by_sag = build_sag_actor_roles_by_sag(
+            sag_actor_rows=sag_actor_rows,
+            sag_actor_role_lookup=sag_actor_role_lookup,
+            actors_by_id=sag_actor_rows_by_id,
+            actor_type_lookup=actor_type_lookup,
+        )
+        sag_type_lookup = build_id_label_lookup(sagstype_rows, "type")
+        sag_status_lookup = build_id_label_lookup(sagsstatus_rows, "status")
+        sag_category_lookup = build_id_label_lookup(sagskategori_rows, "kategori")
 
         log(options.verbose, f"timeline-only: fetching case documents for {len(sag_ids)} sager")
         sag_document_rows = fetch_sag_documents(client, sag_ids=sag_ids)
@@ -2504,6 +2989,31 @@ def main() -> None:
         document_ids = collect_document_ids(
             sag_document_rows=sag_document_rows,
             sagstrin_document_rows=sagstrin_document_rows,
+        )
+        log(options.verbose, f"timeline-only: fetching document provenance for {len(document_ids)} dokumenter")
+        document_actor_rows = fetch_dokument_actor_rows(client, document_ids=document_ids)
+        document_actor_ids = collect_document_actor_ids(document_actor_rows)
+        document_actor_rows_by_id = {
+            int(row["id"]): row
+            for row in fetch_actors_by_ids(client, actor_ids=document_actor_ids)
+        }
+        document_actor_role_lookup = build_id_label_lookup(dokument_actor_role_rows, "rolle")
+        document_type_lookup = build_id_label_lookup(dokument_type_rows, "type")
+        document_status_lookup = build_id_label_lookup(dokument_status_rows, "status")
+        document_category_lookup = build_id_label_lookup(dokumentkategori_rows, "kategori")
+        document_rows_by_id = collect_document_records(
+            sag_document_rows=sag_document_rows,
+            sagstrin_document_rows=sagstrin_document_rows,
+        )
+        document_provenance_by_document_id = build_document_provenance_map(
+            document_actor_rows=document_actor_rows,
+            document_actor_role_lookup=document_actor_role_lookup,
+            actors_by_id=document_actor_rows_by_id,
+            actor_type_lookup=actor_type_lookup,
+            document_rows_by_id=document_rows_by_id,
+            document_type_lookup=document_type_lookup,
+            document_status_lookup=document_status_lookup,
+            document_category_lookup=document_category_lookup,
         )
 
         log(options.verbose, f"timeline-only: fetching omtryk for {len(document_ids)} dokumenter")
@@ -2518,9 +3028,43 @@ def main() -> None:
             sagstrin_document_rows,
             omtryk_by_document_id=omtryk_by_document_id,
         )
+        case_document_links_by_sag = enrich_document_links_with_provenance(
+            case_document_links_by_sag,
+            document_provenance_by_document_id,
+        )
+        document_links_by_sagstrin = enrich_document_links_with_provenance(
+            document_links_by_sagstrin,
+            document_provenance_by_document_id,
+        )
         stage_document_links_by_sag = make_case_document_links_from_sagstrin(
             sagstrin_rows=timeline_sagstrin_rows,
             stage_document_links_by_sagstrin=document_links_by_sagstrin,
+        )
+        log(options.verbose, f"timeline-only: fetching meeting context for {len(sagstrin_ids)} sagstrin")
+        dagsordenspunkt_rows = fetch_dagsordenspunkt_rows(client, sagstrin_ids=sagstrin_ids)
+        moede_ids = sorted(
+            {
+                int(
+                    row_value(
+                        row,
+                        "mødeid",
+                        "m\u00f8deid",
+                        "moedeid",
+                    )
+                    or 0
+                )
+                for row in dagsordenspunkt_rows
+            }
+            - {0}
+        )
+        moede_rows_by_id = {int(row["id"]): row for row in fetch_moeder_by_ids(client, moede_ids=moede_ids)}
+        moede_type_lookup = build_id_label_lookup(moedetype_rows, "type")
+        moede_status_lookup = build_id_label_lookup(moedestatus_rows, "status")
+        meeting_context_by_sagstrin = build_meeting_context_by_sagstrin(
+            dagsordenspunkt_rows=dagsordenspunkt_rows,
+            moede_rows_by_id=moede_rows_by_id,
+            moede_type_lookup=moede_type_lookup,
+            moede_status_lookup=moede_status_lookup,
         )
 
         log(options.verbose, f"timeline-only: fetching emneord for {len(sag_ids)} sager")
@@ -2560,6 +3104,11 @@ def main() -> None:
             related_cases_by_sag=related_cases_by_sag,
             sag_emneord_by_sag=sag_emneord_by_sag,
             document_emneord_by_document_id=document_emneord_by_document_id,
+            sag_actor_roles_by_sag=sag_actor_roles_by_sag,
+            sag_type_lookup=sag_type_lookup,
+            sag_status_lookup=sag_status_lookup,
+            sag_category_lookup=sag_category_lookup,
+            meeting_context_by_sagstrin=meeting_context_by_sagstrin,
         )
         write_json(output_dir / "sag_tidslinjer.json", case_timelines)
         log(options.verbose, f"timeline-only: wrote {len(case_timelines)} timelines")
@@ -2627,6 +3176,17 @@ def main() -> None:
     sag_rows = fetch_sager_by_ids(client, sag_ids=sag_ids)
     sag_rows_by_id = {int(row["id"]): row for row in sag_rows}
     sagstrin_ids = sorted({int(row["id"]) for row in timeline_sagstrin_rows})
+    log(options.verbose, "fetching lookup tables for timeline metadata")
+    sag_actor_role_rows = client.fetch_collection("SagAkt%C3%B8rRolle", label="sag-aktor-rolle")
+    sagstype_rows = client.fetch_collection("Sagstype", label="sagstype")
+    sagsstatus_rows = client.fetch_collection("Sagsstatus", label="sagsstatus")
+    sagskategori_rows = client.fetch_collection("Sagskategori", label="sagskategori")
+    dokument_actor_role_rows = client.fetch_collection("DokumentAkt%C3%B8rRolle", label="dokument-aktor-rolle")
+    dokument_type_rows = client.fetch_collection("Dokumenttype", label="dokumenttype")
+    dokument_status_rows = client.fetch_collection("Dokumentstatus", label="dokumentstatus")
+    dokumentkategori_rows = client.fetch_collection("Dokumentkategori", label="dokumentkategori")
+    moedetype_rows = client.fetch_collection("M%C3%B8detype", label="moedetype")
+    moedestatus_rows = client.fetch_collection("M%C3%B8destatus", label="moedestatus")
 
     log(options.verbose, f"fetching sambehandlinger for {len(sagstrin_ids)} sagstrin")
     sambehandling_rows = fetch_sambehandling_rows(client, sagstrin_ids=sagstrin_ids)
@@ -2689,6 +3249,38 @@ def main() -> None:
         sagstrin_rows=relation_sagstrin_rows,
         sambehandling_rows=sambehandling_rows,
     )
+    log(options.verbose, f"fetching case actor roles for {len(sag_ids)} sager")
+    sag_actor_rows = fetch_sag_actor_rows(client, sag_ids=sag_ids)
+    sag_actor_ids = sorted(
+        {
+            int(
+                row_value(
+                    row,
+                    "aktørid",
+                    "akt\u00f8rid",
+                    "aktør_id",
+                    "akt\u00f8r_id",
+                    "aktoerid",
+                    "aktoer_id",
+                )
+                or 0
+            )
+            for row in sag_actor_rows
+        }
+        - {0}
+    )
+    sag_actor_rows_by_id = {int(row["id"]): row for row in fetch_actors_by_ids(client, actor_ids=sag_actor_ids)}
+    actor_type_lookup = build_id_label_lookup(actor_types, "type")
+    sag_actor_role_lookup = build_id_label_lookup(sag_actor_role_rows, "rolle")
+    sag_actor_roles_by_sag = build_sag_actor_roles_by_sag(
+        sag_actor_rows=sag_actor_rows,
+        sag_actor_role_lookup=sag_actor_role_lookup,
+        actors_by_id=sag_actor_rows_by_id,
+        actor_type_lookup=actor_type_lookup,
+    )
+    sag_type_lookup = build_id_label_lookup(sagstype_rows, "type")
+    sag_status_lookup = build_id_label_lookup(sagsstatus_rows, "status")
+    sag_category_lookup = build_id_label_lookup(sagskategori_rows, "kategori")
 
     log(options.verbose, f"fetching case documents for {len(sag_ids)} sager")
     sag_document_rows = fetch_sag_documents(client, sag_ids=sag_ids)
@@ -2698,6 +3290,31 @@ def main() -> None:
     document_ids = collect_document_ids(
         sag_document_rows=sag_document_rows,
         sagstrin_document_rows=sagstrin_document_rows,
+    )
+    log(options.verbose, f"fetching document provenance for {len(document_ids)} dokumenter")
+    document_actor_rows = fetch_dokument_actor_rows(client, document_ids=document_ids)
+    document_actor_ids = collect_document_actor_ids(document_actor_rows)
+    document_actor_rows_by_id = {
+        int(row["id"]): row
+        for row in fetch_actors_by_ids(client, actor_ids=document_actor_ids)
+    }
+    document_actor_role_lookup = build_id_label_lookup(dokument_actor_role_rows, "rolle")
+    document_type_lookup = build_id_label_lookup(dokument_type_rows, "type")
+    document_status_lookup = build_id_label_lookup(dokument_status_rows, "status")
+    document_category_lookup = build_id_label_lookup(dokumentkategori_rows, "kategori")
+    document_rows_by_id = collect_document_records(
+        sag_document_rows=sag_document_rows,
+        sagstrin_document_rows=sagstrin_document_rows,
+    )
+    document_provenance_by_document_id = build_document_provenance_map(
+        document_actor_rows=document_actor_rows,
+        document_actor_role_lookup=document_actor_role_lookup,
+        actors_by_id=document_actor_rows_by_id,
+        actor_type_lookup=actor_type_lookup,
+        document_rows_by_id=document_rows_by_id,
+        document_type_lookup=document_type_lookup,
+        document_status_lookup=document_status_lookup,
+        document_category_lookup=document_category_lookup,
     )
 
     log(options.verbose, f"fetching omtryk for {len(document_ids)} dokumenter")
@@ -2712,9 +3329,43 @@ def main() -> None:
         sagstrin_document_rows,
         omtryk_by_document_id=omtryk_by_document_id,
     )
+    case_document_links_by_sag = enrich_document_links_with_provenance(
+        case_document_links_by_sag,
+        document_provenance_by_document_id,
+    )
+    document_links_by_sagstrin = enrich_document_links_with_provenance(
+        document_links_by_sagstrin,
+        document_provenance_by_document_id,
+    )
     stage_document_links_by_sag = make_case_document_links_from_sagstrin(
         sagstrin_rows=timeline_sagstrin_rows,
         stage_document_links_by_sagstrin=document_links_by_sagstrin,
+    )
+    log(options.verbose, f"fetching meeting context for {len(sagstrin_ids)} sagstrin")
+    dagsordenspunkt_rows = fetch_dagsordenspunkt_rows(client, sagstrin_ids=sagstrin_ids)
+    moede_ids = sorted(
+        {
+            int(
+                row_value(
+                    row,
+                    "mødeid",
+                    "m\u00f8deid",
+                    "moedeid",
+                )
+                or 0
+            )
+            for row in dagsordenspunkt_rows
+        }
+        - {0}
+    )
+    moede_rows_by_id = {int(row["id"]): row for row in fetch_moeder_by_ids(client, moede_ids=moede_ids)}
+    moede_type_lookup = build_id_label_lookup(moedetype_rows, "type")
+    moede_status_lookup = build_id_label_lookup(moedestatus_rows, "status")
+    meeting_context_by_sagstrin = build_meeting_context_by_sagstrin(
+        dagsordenspunkt_rows=dagsordenspunkt_rows,
+        moede_rows_by_id=moede_rows_by_id,
+        moede_type_lookup=moede_type_lookup,
+        moede_status_lookup=moede_status_lookup,
     )
 
     log(options.verbose, f"fetching emneord for {len(sag_ids)} sager")
@@ -2755,6 +3406,11 @@ def main() -> None:
         related_cases_by_sag=related_cases_by_sag,
         sag_emneord_by_sag=sag_emneord_by_sag,
         document_emneord_by_document_id=document_emneord_by_document_id,
+        sag_actor_roles_by_sag=sag_actor_roles_by_sag,
+        sag_type_lookup=sag_type_lookup,
+        sag_status_lookup=sag_status_lookup,
+        sag_category_lookup=sag_category_lookup,
+        meeting_context_by_sagstrin=meeting_context_by_sagstrin,
     )
 
     log(options.verbose, "fetching F/R sager from ODA API")

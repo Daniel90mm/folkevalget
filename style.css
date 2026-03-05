@@ -1737,8 +1737,37 @@ body.global-search-open {
   gap: var(--space-md);
 }
 
+.page-votes .votes-browser-controls {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.page-votes .votes-filter-toggles {
+  grid-column: 1 / -1;
+}
+
 .page-votes .votes-filter-toggles {
   gap: var(--space-sm);
+}
+
+.page-votes .close-threshold-control {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.page-votes .close-threshold-field {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 5.5rem;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.page-votes .close-threshold-field .field-label {
+  margin: 0;
+}
+
+.page-votes .close-threshold-field input {
+  min-height: 44px;
+  padding: 10px 12px;
 }
 
 .page-votes .toggle-check {
@@ -1898,6 +1927,11 @@ body.global-search-open {
   gap: var(--space-xs);
 }
 
+.page-votes .vote-timeline-link-group {
+  display: grid;
+  gap: 2px;
+}
+
 .vote-timeline-link {
   display: block;
   color: var(--color-accent);
@@ -1923,7 +1957,7 @@ body.global-search-open {
 
 .page-votes .vote-case-meta-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-lg);
 }
 
@@ -2464,6 +2498,10 @@ html[data-theme="dark"] .party-code-badge[data-party="DF"] {
   .votes-browser {
     position: static;
     max-width: none;
+  }
+
+  .page-votes .votes-browser-controls {
+    grid-template-columns: 1fr;
   }
 
   .page-votes .vote-case-meta-grid {

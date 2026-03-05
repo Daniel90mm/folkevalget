@@ -1,4 +1,6 @@
-const CLOSE_VOTE_THRESHOLD_PCT = 10;
+const DEFAULT_CLOSE_VOTE_THRESHOLD_PCT = 10;
+const MIN_CLOSE_VOTE_THRESHOLD_PCT = 0;
+const MAX_CLOSE_VOTE_THRESHOLD_PCT = 100;
 
 const SAG_TYPE_TEKST = {
   L:  "Lovforslag — forslag til en ny lov eller ændring af gældende lovgivning. Behandles normalt tre gange i Folketinget.",
@@ -32,8 +34,12 @@ const VotesApp = (() => {
     partyFilter: "",
     sortMode: "date_desc",
     closeOnly: false,
+    closeThresholdPct: DEFAULT_CLOSE_VOTE_THRESHOLD_PCT,
     splitOnly: false,
     typeFilter: "",
+    officialSagstype: "",
+    officialSagsstatus: "",
+    officialSagskategori: "",
     rfDocs: [],
     focusDetailRequested: false,
   };
@@ -42,7 +48,11 @@ const VotesApp = (() => {
   const voteSearch = document.querySelector("#vote-search");
   const voteSortSelect = document.querySelector("#vote-sort-select");
   const voteTypeSelect = document.querySelector("#vote-type-select");
+  const voteSagstypeSelect = document.querySelector("#vote-sagstype-select");
+  const voteSagsstatusSelect = document.querySelector("#vote-sagsstatus-select");
+  const voteSagskategoriSelect = document.querySelector("#vote-sagskategori-select");
   const voteCloseOnly = document.querySelector("#vote-close-only");
+  const voteCloseThreshold = document.querySelector("#vote-close-threshold");
   const voteSplitOnly = document.querySelector("#vote-split-only");
   const voteList = document.querySelector("#vote-list");
   const voteListTemplate = document.querySelector("#vote-list-item-template");
@@ -64,6 +74,12 @@ const VotesApp = (() => {
   const voteCaseMeta = document.querySelector("#vote-case-meta");
   const voteRelatedCasesBlock = document.querySelector("#vote-related-cases-block");
   const voteRelatedCasesList = document.querySelector("#vote-related-cases-list");
+  const voteCaseActorsBlock = document.querySelector("#vote-case-actors-block");
+  const voteCaseActorsList = document.querySelector("#vote-case-actors-list");
+  const voteTaxonomyBlock = document.querySelector("#vote-taxonomy-block");
+  const voteTaxonomyList = document.querySelector("#vote-taxonomy-list");
+  const voteLawFollowupBlock = document.querySelector("#vote-law-followup-block");
+  const voteLawFollowupList = document.querySelector("#vote-law-followup-list");
 
   async function boot() {
     hydrateStateFromQuery();
@@ -90,6 +106,7 @@ const VotesApp = (() => {
     );
 
     window.Folkevalget.renderStats(statsRoot, stats);
+    populateOfficialTaxonomyFilters();
     bindEvents();
     syncControls();
     applyVoteFilter();
@@ -103,8 +120,12 @@ const VotesApp = (() => {
     const sortMode = params.get("sort") || "date_desc";
     state.sortMode = VALID_SORTS.has(sortMode) ? sortMode : "date_desc";
     state.closeOnly = params.get("close") === "1";
+    state.closeThresholdPct = sanitiseCloseThresholdPct(params.get("close_margin"));
     state.splitOnly = params.get("split") === "1";
     state.typeFilter = params.get("type") || "";
+    state.officialSagstype = params.get("sagstype") || "";
+    state.officialSagsstatus = params.get("sagsstatus") || "";
+    state.officialSagskategori = params.get("sagskategori") || "";
 
     const rawVoteId = Number(params.get("id"));
     state.selectedVoteId = Number.isFinite(rawVoteId) && rawVoteId > 0 ? rawVoteId : null;
@@ -113,8 +134,32 @@ const VotesApp = (() => {
   function syncControls() {
     voteSearch.value = state.query;
     voteTypeSelect.value = state.typeFilter;
+    if (voteSagstypeSelect) {
+      const hasValue = optionExists(voteSagstypeSelect, state.officialSagstype);
+      voteSagstypeSelect.value = hasValue ? state.officialSagstype : "";
+      if (!hasValue) {
+        state.officialSagstype = "";
+      }
+    }
+    if (voteSagsstatusSelect) {
+      const hasValue = optionExists(voteSagsstatusSelect, state.officialSagsstatus);
+      voteSagsstatusSelect.value = hasValue ? state.officialSagsstatus : "";
+      if (!hasValue) {
+        state.officialSagsstatus = "";
+      }
+    }
+    if (voteSagskategoriSelect) {
+      const hasValue = optionExists(voteSagskategoriSelect, state.officialSagskategori);
+      voteSagskategoriSelect.value = hasValue ? state.officialSagskategori : "";
+      if (!hasValue) {
+        state.officialSagskategori = "";
+      }
+    }
     voteSortSelect.value = state.sortMode;
     voteCloseOnly.checked = state.closeOnly;
+    if (voteCloseThreshold) {
+      voteCloseThreshold.value = String(state.closeThresholdPct);
+    }
     voteSplitOnly.checked = state.splitOnly;
   }
 
@@ -129,6 +174,27 @@ const VotesApp = (() => {
       applyVoteFilter();
     });
 
+    if (voteSagstypeSelect) {
+      voteSagstypeSelect.addEventListener("change", (event) => {
+        state.officialSagstype = event.target.value;
+        applyVoteFilter();
+      });
+    }
+
+    if (voteSagsstatusSelect) {
+      voteSagsstatusSelect.addEventListener("change", (event) => {
+        state.officialSagsstatus = event.target.value;
+        applyVoteFilter();
+      });
+    }
+
+    if (voteSagskategoriSelect) {
+      voteSagskategoriSelect.addEventListener("change", (event) => {
+        state.officialSagskategori = event.target.value;
+        applyVoteFilter();
+      });
+    }
+
     voteSortSelect.addEventListener("change", (event) => {
       state.sortMode = event.target.value;
       applyVoteFilter();
@@ -138,6 +204,22 @@ const VotesApp = (() => {
       state.closeOnly = event.target.checked;
       applyVoteFilter();
     });
+
+    if (voteCloseThreshold) {
+      const syncThresholdFromInput = () => {
+        state.closeThresholdPct = sanitiseCloseThresholdPct(voteCloseThreshold.value);
+        voteCloseThreshold.value = String(state.closeThresholdPct);
+      };
+
+      voteCloseThreshold.addEventListener("change", () => {
+        syncThresholdFromInput();
+        applyVoteFilter();
+      });
+
+      voteCloseThreshold.addEventListener("blur", () => {
+        syncThresholdFromInput();
+      });
+    }
 
     voteSplitOnly.addEventListener("change", (event) => {
       state.splitOnly = event.target.checked;
@@ -241,13 +323,23 @@ const VotesApp = (() => {
         searchScore: scoreVoteSearch(vote, normalisedQuery, tokens),
       }))
       .filter(({ vote, searchScore }) => {
-        if (state.closeOnly && !isCloseVote(vote)) {
+        if (state.closeOnly && !isCloseVote(vote, state.closeThresholdPct)) {
           return false;
         }
         if (state.splitOnly && !hasPartySplit(vote)) {
           return false;
         }
         if (state.typeFilter && classifyVoteType(vote) !== state.typeFilter) {
+          return false;
+        }
+        const timeline = state.timelinesBySagId.get(Number(vote.sag_id)) || null;
+        if (state.officialSagstype && !matchesTaxonomyFilter(state.officialSagstype, timeline?.sag_type)) {
+          return false;
+        }
+        if (state.officialSagsstatus && !matchesTaxonomyFilter(state.officialSagsstatus, timeline?.sag_status)) {
+          return false;
+        }
+        if (state.officialSagskategori && !matchesTaxonomyFilter(state.officialSagskategori, timeline?.sag_category)) {
           return false;
         }
         if (tokens.length > 0 && searchScore < 0) {
@@ -356,6 +448,70 @@ const VotesApp = (() => {
     return 0;
   }
 
+  function optionExists(select, value) {
+    if (!select || !value) {
+      return false;
+    }
+    return Array.from(select.options).some((option) => option.value === value);
+  }
+
+  function matchesTaxonomyFilter(expected, actual) {
+    return String(actual || "").trim() === String(expected || "").trim();
+  }
+
+  function populateOfficialTaxonomyFilters() {
+    if (!voteSagstypeSelect && !voteSagsstatusSelect && !voteSagskategoriSelect) {
+      return;
+    }
+
+    const typeValues = new Set();
+    const statusValues = new Set();
+    const categoryValues = new Set();
+
+    for (const timeline of state.timelinesBySagId.values()) {
+      const sagType = String(timeline?.sag_type || "").trim();
+      const sagStatus = String(timeline?.sag_status || "").trim();
+      const sagCategory = String(timeline?.sag_category || "").trim();
+      if (sagType) {
+        typeValues.add(sagType);
+      }
+      if (sagStatus) {
+        statusValues.add(sagStatus);
+      }
+      if (sagCategory) {
+        categoryValues.add(sagCategory);
+      }
+    }
+
+    if (voteSagstypeSelect) {
+      fillSimpleSelect(voteSagstypeSelect, "Alle", [...typeValues].sort((a, b) => a.localeCompare(b, "da")));
+    }
+    if (voteSagsstatusSelect) {
+      fillSimpleSelect(voteSagsstatusSelect, "Alle", [...statusValues].sort((a, b) => a.localeCompare(b, "da")));
+    }
+    if (voteSagskategoriSelect) {
+      fillSimpleSelect(voteSagskategoriSelect, "Alle", [...categoryValues].sort((a, b) => a.localeCompare(b, "da")));
+    }
+  }
+
+  function fillSimpleSelect(select, allLabel, values) {
+    const selected = select.value;
+    select.innerHTML = "";
+    const allOption = document.createElement("option");
+    allOption.value = "";
+    allOption.textContent = allLabel;
+    select.append(allOption);
+    for (const value of values) {
+      const option = document.createElement("option");
+      option.value = value;
+      option.textContent = value;
+      select.append(option);
+    }
+    if (selected && optionExists(select, selected)) {
+      select.value = selected;
+    }
+  }
+
   function syncQueryString() {
     const params = new URLSearchParams();
     if (state.query.trim()) {
@@ -373,11 +529,23 @@ const VotesApp = (() => {
     if (state.closeOnly) {
       params.set("close", "1");
     }
+    if (state.closeThresholdPct !== DEFAULT_CLOSE_VOTE_THRESHOLD_PCT) {
+      params.set("close_margin", String(state.closeThresholdPct));
+    }
     if (state.splitOnly) {
       params.set("split", "1");
     }
     if (state.typeFilter) {
       params.set("type", state.typeFilter);
+    }
+    if (state.officialSagstype) {
+      params.set("sagstype", state.officialSagstype);
+    }
+    if (state.officialSagsstatus) {
+      params.set("sagsstatus", state.officialSagsstatus);
+    }
+    if (state.officialSagskategori) {
+      params.set("sagskategori", state.officialSagskategori);
     }
     const next = params.toString() ? `?${params.toString()}` : window.location.pathname;
     window.history.replaceState({}, "", next);
@@ -644,7 +812,7 @@ const VotesApp = (() => {
     const marginShare = voteMarginSharePct(vote);
     if (voteDecisionTotal(vote) > 0) {
       marginValue.textContent = `${window.Folkevalget.formatNumber(marginVotes)} stemmer`;
-      marginNote.textContent = isCloseVote(vote)
+      marginNote.textContent = isCloseVote(vote, state.closeThresholdPct)
         ? `Tæt afstemning med ${formatShare(marginShare)} mellem ja og nej.`
         : `${formatShare(marginShare)} mellem ja og nej.`;
     } else {
@@ -683,9 +851,9 @@ const VotesApp = (() => {
       });
     }
 
-    if (isCloseVote(vote)) {
+    if (isCloseVote(vote, state.closeThresholdPct)) {
       notes.push({
-        text: "Afstemningen er markeret som tæt, fordi ja/nej-marginen er højst 10 procentpoint.",
+        text: `Afstemningen er markeret som tæt, fordi ja/nej-marginen er højst ${state.closeThresholdPct} procentpoint.`,
       });
     }
 
@@ -746,6 +914,7 @@ const VotesApp = (() => {
     const timelineItems = steps.map((step) => ({
       ...step,
       documents: Array.isArray(step.documents) ? [...step.documents] : [],
+      agenda_items: Array.isArray(step.agenda_items) ? [...step.agenda_items] : [],
     }));
 
     const originCase = findFremsatUnderRelatedCase(relatedCases);
@@ -805,6 +974,7 @@ const VotesApp = (() => {
         status: null,
         vote_ids: [],
         documents,
+        agenda_items: [],
       }));
 
     timelineItems.push(...supplementalItems);
@@ -857,6 +1027,17 @@ const VotesApp = (() => {
         card.append(statusText);
       }
 
+      const agendaItems = Array.isArray(step.agenda_items) ? step.agenda_items : [];
+      if (agendaItems.length > 0) {
+        const agendaSummary = buildAgendaSummaryLine(agendaItems[0]);
+        if (agendaSummary) {
+          const agendaText = document.createElement("p");
+          agendaText.className = "vote-timeline-step-meta";
+          agendaText.textContent = agendaSummary;
+          card.append(agendaText);
+        }
+      }
+
       const links = document.createElement("div");
       links.className = "vote-timeline-step-links";
       if (step.origin_case?.sag_number) {
@@ -881,12 +1062,25 @@ const VotesApp = (() => {
         }
       }
 
+      const meetingAgendaUrl = agendaItems[0]?.meeting?.agenda_url || null;
+      if (meetingAgendaUrl) {
+        const agendaLink = document.createElement("a");
+        agendaLink.className = "vote-timeline-link";
+        agendaLink.href = meetingAgendaUrl;
+        agendaLink.target = "_blank";
+        agendaLink.rel = "noreferrer";
+        agendaLink.textContent = "Åbn mødedagsorden";
+        links.append(agendaLink);
+      }
+
       const stepDocuments = Array.isArray(step.documents) ? step.documents : [];
       if (stepDocuments.length > 0) {
         for (const doc of stepDocuments.slice(0, 6)) {
           if (!doc?.url) {
             continue;
           }
+          const docWrap = document.createElement("div");
+          docWrap.className = "vote-timeline-link-group";
           const link = document.createElement("a");
           link.className = "vote-timeline-link";
           link.href = doc.url;
@@ -909,7 +1103,33 @@ const VotesApp = (() => {
             link.title = `Omtryk: ${omtrykReason}`;
           }
           link.textContent = docMeta.length > 0 ? `${docLabel} (${docMeta.join(" · ")})` : docLabel;
-          links.append(link);
+          docWrap.append(link);
+
+          const docTaxonomyLine = buildDocumentTaxonomyLine(doc);
+          if (docTaxonomyLine) {
+            const taxonomyLine = document.createElement("p");
+            taxonomyLine.className = "vote-meta-subline";
+            taxonomyLine.textContent = docTaxonomyLine;
+            docWrap.append(taxonomyLine);
+          }
+
+          const questionChainLine = buildDocumentQuestionChainLine(doc);
+          if (questionChainLine) {
+            const questionLine = document.createElement("p");
+            questionLine.className = "vote-meta-subline";
+            questionLine.textContent = questionChainLine;
+            docWrap.append(questionLine);
+          }
+
+          const docActorsLine = buildDocumentActorsLine(doc);
+          if (docActorsLine) {
+            const actorLine = document.createElement("p");
+            actorLine.className = "vote-meta-subline";
+            actorLine.textContent = docActorsLine;
+            docWrap.append(actorLine);
+          }
+
+          links.append(docWrap);
         }
       }
 
@@ -940,7 +1160,17 @@ const VotesApp = (() => {
   }
 
   function renderVoteCaseMeta(vote) {
-    if (!voteCaseMeta || !voteRelatedCasesBlock || !voteRelatedCasesList) {
+    if (
+      !voteCaseMeta ||
+      !voteRelatedCasesBlock ||
+      !voteRelatedCasesList ||
+      !voteCaseActorsBlock ||
+      !voteCaseActorsList ||
+      !voteTaxonomyBlock ||
+      !voteTaxonomyList ||
+      !voteLawFollowupBlock ||
+      !voteLawFollowupList
+    ) {
       return;
     }
 
@@ -976,8 +1206,189 @@ const VotesApp = (() => {
     }
     voteRelatedCasesList.replaceChildren(relatedFragment);
     voteRelatedCasesBlock.classList.toggle("hidden", visibleRelatedCases.length === 0);
-    const hasMeta = visibleRelatedCases.length > 0;
+
+    const caseActors = Array.isArray(timeline?.actors) ? timeline.actors : [];
+    const caseActorItems = caseActors.filter((entry) => String(entry?.role || "").trim() || String(entry?.name || "").trim());
+    const caseActorFragment = document.createDocumentFragment();
+    for (const actor of caseActorItems) {
+      const item = document.createElement("li");
+      const primary = document.createElement("span");
+      const roleText = String(actor.role || "").trim();
+      const actorText = String(actor.name || "").trim();
+      const actorType = String(actor.type || "").trim();
+      if (roleText && actorText) {
+        primary.textContent = `${roleText}: ${actorText}`;
+      } else {
+        primary.textContent = roleText || actorText || "Ukendt aktør";
+      }
+      item.append(primary);
+      if (actorType && actorType.toLowerCase() !== "person") {
+        const meta = document.createElement("p");
+        meta.className = "vote-meta-subline";
+        meta.textContent = actorType;
+        item.append(meta);
+      }
+      caseActorFragment.append(item);
+    }
+    voteCaseActorsList.replaceChildren(caseActorFragment);
+    voteCaseActorsBlock.classList.toggle("hidden", caseActorItems.length === 0);
+
+    const taxonomyEntries = [
+      { label: "Sagstype", value: timeline?.sag_type || null },
+      { label: "Sagsstatus", value: timeline?.sag_status || null },
+      { label: "Sagskategori", value: timeline?.sag_category || null },
+    ].filter((entry) => String(entry.value || "").trim());
+    const taxonomyFragment = document.createDocumentFragment();
+    for (const entry of taxonomyEntries) {
+      const item = document.createElement("li");
+      const value = document.createElement("span");
+      value.textContent = `${entry.label}: ${entry.value}`;
+      item.append(value);
+      taxonomyFragment.append(item);
+    }
+    voteTaxonomyList.replaceChildren(taxonomyFragment);
+    voteTaxonomyBlock.classList.toggle("hidden", taxonomyEntries.length === 0);
+
+    const lawFollowup = timeline?.law_followup || {};
+    const lawEntries = [];
+    if (lawFollowup.law_number) {
+      lawEntries.push({
+        label: "Lovnummer",
+        value: String(lawFollowup.law_number),
+      });
+    }
+    if (lawFollowup.law_number_date) {
+      lawEntries.push({
+        label: "Lovnummerdato",
+        value: window.Folkevalget.formatDate(lawFollowup.law_number_date),
+      });
+    }
+    if (lawFollowup.decision_date) {
+      lawEntries.push({
+        label: "Afgørelsesdato",
+        value: window.Folkevalget.formatDate(lawFollowup.decision_date),
+      });
+    }
+    if (lawFollowup.decision_text) {
+      lawEntries.push({
+        label: "Afgørelse",
+        value: String(lawFollowup.decision_text),
+      });
+    }
+    if (lawFollowup.retsinformation_url) {
+      lawEntries.push({
+        label: "Retsinformation",
+        value: String(lawFollowup.retsinformation_url),
+        isLink: true,
+      });
+    }
+    const lawFragment = document.createDocumentFragment();
+    for (const entry of lawEntries) {
+      const item = document.createElement("li");
+      if (entry.isLink) {
+        const link = document.createElement("a");
+        link.href = entry.value;
+        link.target = "_blank";
+        link.rel = "noreferrer";
+        link.textContent = `${entry.label}: Åbn`;
+        item.append(link);
+      } else {
+        const value = document.createElement("span");
+        value.textContent = `${entry.label}: ${entry.value}`;
+        item.append(value);
+      }
+      lawFragment.append(item);
+    }
+    voteLawFollowupList.replaceChildren(lawFragment);
+    voteLawFollowupBlock.classList.toggle("hidden", lawEntries.length === 0);
+
+    const hasMeta =
+      visibleRelatedCases.length > 0 ||
+      caseActorItems.length > 0 ||
+      taxonomyEntries.length > 0 ||
+      lawEntries.length > 0;
     voteCaseMeta.classList.toggle("hidden", !hasMeta);
+  }
+
+  function buildAgendaSummaryLine(agendaItem) {
+    if (!agendaItem || typeof agendaItem !== "object") {
+      return "";
+    }
+    const meeting = agendaItem.meeting || {};
+    const parts = [];
+    const meetingLabel = meeting.number ? `Møde ${meeting.number}` : "Møde";
+    if (meeting.date) {
+      parts.push(`${meetingLabel} ${window.Folkevalget.formatDate(meeting.date)}`);
+    } else if (meeting.number) {
+      parts.push(meetingLabel);
+    }
+    if (meeting.type) {
+      parts.push(meeting.type);
+    }
+    if (meeting.status) {
+      parts.push(meeting.status);
+    }
+    if (agendaItem.agenda_number) {
+      parts.push(`Punkt ${agendaItem.agenda_number}`);
+    }
+    return parts.join(" · ");
+  }
+
+  function buildDocumentTaxonomyLine(doc) {
+    const parts = [];
+    if (doc.document_type) {
+      parts.push(`Type: ${doc.document_type}`);
+    }
+    if (doc.document_status) {
+      parts.push(`Status: ${doc.document_status}`);
+    }
+    if (doc.document_category) {
+      parts.push(`Kategori: ${doc.document_category}`);
+    }
+    return parts.join(" · ");
+  }
+
+  function buildDocumentQuestionChainLine(doc) {
+    const chain = doc?.question_chain || {};
+    const askers = Array.isArray(chain.askers) ? chain.askers : [];
+    const responders = Array.isArray(chain.responders) ? chain.responders : [];
+    const parts = [];
+    if (askers.length > 0) {
+      parts.push(`Spørger: ${formatNamesCompact(askers)}`);
+    }
+    if (responders.length > 0) {
+      parts.push(`Svarer: ${formatNamesCompact(responders)}`);
+    }
+    return parts.join(" · ");
+  }
+
+  function buildDocumentActorsLine(doc) {
+    const actors = Array.isArray(doc?.document_actors) ? doc.document_actors : [];
+    const labels = actors
+      .map((entry) => {
+        const role = String(entry?.role || "").trim();
+        const name = String(entry?.name || "").trim();
+        if (role && name) {
+          return `${role}: ${name}`;
+        }
+        return role || name;
+      })
+      .filter(Boolean);
+    if (labels.length === 0) {
+      return "";
+    }
+    return `Aktører: ${formatNamesCompact(labels)}`;
+  }
+
+  function formatNamesCompact(items) {
+    const list = Array.isArray(items) ? items.filter(Boolean) : [];
+    if (list.length === 0) {
+      return "";
+    }
+    if (list.length <= 2) {
+      return list.join(" og ");
+    }
+    return `${list.slice(0, 2).join(", ")} (+${list.length - 2})`;
   }
 
   function renderPartyFilter(vote) {
@@ -1091,7 +1502,7 @@ const VotesApp = (() => {
 
   function renderVoteSignals(root, vote) {
     root.innerHTML = "";
-    if (isCloseVote(vote)) {
+    if (isCloseVote(vote, state.closeThresholdPct)) {
       root.append(buildSignalBadge("Tæt", "close"));
     }
     if (hasPartySplit(vote)) {
@@ -1301,8 +1712,17 @@ const VotesApp = (() => {
     return prefix;
   }
 
-  function isCloseVote(vote) {
-    return voteDecisionTotal(vote) > 0 && voteMarginSharePct(vote) <= CLOSE_VOTE_THRESHOLD_PCT;
+  function sanitiseCloseThresholdPct(value) {
+    const numeric = Number(value);
+    if (!Number.isFinite(numeric)) {
+      return DEFAULT_CLOSE_VOTE_THRESHOLD_PCT;
+    }
+    const rounded = Math.round(numeric);
+    return Math.min(MAX_CLOSE_VOTE_THRESHOLD_PCT, Math.max(MIN_CLOSE_VOTE_THRESHOLD_PCT, rounded));
+  }
+
+  function isCloseVote(vote, maxMarginPct = DEFAULT_CLOSE_VOTE_THRESHOLD_PCT) {
+    return voteDecisionTotal(vote) > 0 && voteMarginSharePct(vote) <= sanitiseCloseThresholdPct(maxMarginPct);
   }
 
   function hasPartySplit(vote) {

@@ -23,7 +23,7 @@
         } catch (error) {}
       })();
     </script>
-    <link rel="stylesheet" href="style.css?v=20260305g">
+    <link rel="stylesheet" href="style.css?v=20260305i">
   </head>
   <body class="page-votes">
     <div class="site-shell">
@@ -84,6 +84,24 @@
                   </select>
                 </label>
                 <label class="field">
+                  <span class="field-label">Officiel sagstype</span>
+                  <select id="vote-sagstype-select">
+                    <option value="">Alle</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span class="field-label">Sagsstatus</span>
+                  <select id="vote-sagsstatus-select">
+                    <option value="">Alle</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span class="field-label">Sagskategori</span>
+                  <select id="vote-sagskategori-select">
+                    <option value="">Alle</option>
+                  </select>
+                </label>
+                <label class="field">
                   <span class="field-label">Sortering</span>
                   <select id="vote-sort-select">
                     <option value="date_desc">Nyeste først</option>
@@ -95,10 +113,16 @@
                   </select>
                 </label>
                 <div class="votes-filter-toggles">
-                  <label class="toggle-check">
-                    <input id="vote-close-only" type="checkbox">
-                    <span>Kun tætte afstemninger</span>
-                  </label>
+                  <div class="close-threshold-control">
+                    <label class="toggle-check">
+                      <input id="vote-close-only" type="checkbox">
+                      <span>Kun tætte afstemninger</span>
+                    </label>
+                    <label class="field close-threshold-field" for="vote-close-threshold">
+                      <span class="field-label">Maks ja/nej-margin (%)</span>
+                      <input id="vote-close-threshold" type="number" min="0" max="100" step="1" inputmode="numeric" value="10">
+                    </label>
+                  </div>
                   <label class="toggle-check">
                     <input id="vote-split-only" type="checkbox">
                     <span>Kun partisplits</span>
@@ -207,6 +231,24 @@
                     </div>
                     <ul class="vote-meta-list" id="vote-related-cases-list"></ul>
                   </article>
+                  <article class="vote-case-meta-block hidden" id="vote-case-actors-block">
+                    <div class="panel-heading">
+                      <h2>Sagsaktører</h2>
+                    </div>
+                    <ul class="vote-meta-list" id="vote-case-actors-list"></ul>
+                  </article>
+                  <article class="vote-case-meta-block hidden" id="vote-taxonomy-block">
+                    <div class="panel-heading">
+                      <h2>Officiel klassifikation</h2>
+                    </div>
+                    <ul class="vote-meta-list" id="vote-taxonomy-list"></ul>
+                  </article>
+                  <article class="vote-case-meta-block hidden" id="vote-law-followup-block">
+                    <div class="panel-heading">
+                      <h2>Fra forslag til lov</h2>
+                    </div>
+                    <ul class="vote-meta-list" id="vote-law-followup-list"></ul>
+                  </article>
                 </div>
               </section>
 
@@ -287,6 +329,6 @@
 
     <script src="catalog.js" defer></script>
     <script src="shared.js?v=20260305e" defer></script>
-    <script src="votes.js?v=20260305e" defer></script>
+    <script src="votes.js?v=20260305g" defer></script>
   </body>
 </html>

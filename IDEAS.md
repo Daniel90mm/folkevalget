@@ -260,6 +260,157 @@ oda.ft.dk/api/Stemme?$filter=afstemningid%20eq%2010570
 
 ---
 
+### EUsag as a core module right now
+
+**Idea:** Build a dedicated EU case module from `EUsag`.
+
+**Rejected for now because:**
+- Live endpoint currently returns zero rows, so there is no usable coverage.
+- A core module with no records would create empty UX and maintenance overhead.
+- Better to keep this as a future toggle once data appears.
+
+**References checked (2026-03-05):**
+- `https://oda.ft.dk/api/` (service document lists `EUsag`)
+- `https://oda.ft.dk/api/EUsag?$top=5` (live result count: 0)
+
+---
+
+### MødeAktør as an MP attendance metric
+
+**Idea:** Use `MødeAktør` to compute individual attendance/participation scores.
+
+**Rejected as a core metric because:**
+- Sampled rows mostly attach meetings to institutional actors (e.g., Folketinget, udvalg), not complete person attendance.
+- This makes it easy to misinterpret as person attendance and would conflict with neutral/accurate presentation.
+- Can still be used as contextual metadata, but not as a ranking KPI.
+
+**References checked (2026-03-05):**
+- `https://oda.ft.dk/api/M%C3%B8deAkt%C3%B8r?$top=20`
+- `https://oda.ft.dk/api/Akt%C3%B8r` (type mapping on sampled actor ids)
+
+---
+
+## Evaluated and accepted ideas (second pass, 2026-03-05)
+
+### Case actor roles on each proposal (forslagsstillere, relevant udvalg, minister)
+
+**Idea:** Show official actor roles on each case so users can see who tabled the proposal and which actors are attached to it.
+
+**Evaluation result:** Accepted.
+
+**Why it fits:**
+- Official documented ODA entities only.
+- Objective and verifiable role data.
+- High user value for case context with no subjective scoring.
+- Works in static prefetch pipeline.
+
+**Key endpoints:**
+- `SagAktør`
+- `SagAktørRolle`
+- `Aktør`
+
+**References checked (2026-03-05):**
+- `https://oda.ft.dk/api/SagAkt%C3%B8r?$filter=sagid%20eq%20104847`
+- `https://oda.ft.dk/api/SagAkt%C3%B8rRolle`
+- `https://oda.ft.dk/api/Akt%C3%B8r`
+
+---
+
+### Document provenance for question/answer chains
+
+**Idea:** For case documents, show who asked a question and who answered (where present), and include document type/status metadata.
+
+**Evaluation result:** Accepted.
+
+**Why it fits:**
+- Official documented ODA entities only.
+- Objective attribution of document actors and roles.
+- Broadly applicable across many cases with committee/material flow.
+- Strong transparency value without editorial interpretation.
+
+**Key endpoints:**
+- `DokumentAktør`
+- `DokumentAktørRolle`
+- `Dokumenttype`
+- `Dokumentstatus`
+- `Dokumentkategori`
+- `SagDokument` / `SagstrinDokument`
+
+**References checked (2026-03-05):**
+- `https://oda.ft.dk/api/DokumentAkt%C3%B8r?$filter=dokumentid%20eq%201153623`
+- `https://oda.ft.dk/api/DokumentAkt%C3%B8rRolle`
+- `https://oda.ft.dk/api/Dokumenttype`
+
+---
+
+### Meeting and agenda context on timeline steps
+
+**Idea:** Enrich proposal timeline steps with meeting context: agenda item number, meeting type/status, and timestamp.
+
+**Evaluation result:** Accepted.
+
+**Why it fits:**
+- Official documented ODA entities only.
+- Objective procedural metadata.
+- Helps users understand where in parliamentary process a step happened.
+- Can be prefetched and linked by `sagstrinid`.
+
+**Key endpoints:**
+- `Dagsordenspunkt`
+- `DagsordenspunktSag`
+- `Møde`
+- `Mødetype`
+- `Mødestatus`
+
+**References checked (2026-03-05):**
+- `https://oda.ft.dk/api/Dagsordenspunkt?$filter=sagstrinid%20eq%20271200`
+- `https://oda.ft.dk/api/DagsordenspunktSag?$filter=dagsordenspunktid%20eq%20100510`
+- `https://oda.ft.dk/api/M%C3%B8de?$filter=id%20eq%2015496`
+
+---
+
+### Official taxonomy filters (case type/status/category)
+
+**Idea:** Add filters and labels based on official lookup tables instead of only inferred prefixes.
+
+**Evaluation result:** Accepted.
+
+**Why it fits:**
+- Official documented ODA lookups.
+- Objective and stable coding of procedural state.
+- Improves precision of filtering and UI wording.
+
+**Key endpoints:**
+- `Sagstype`
+- `Sagsstatus`
+- `Sagskategori`
+
+**References checked (2026-03-05):**
+- `https://oda.ft.dk/api/Sagstype`
+- `https://oda.ft.dk/api/Sagsstatus`
+- `https://oda.ft.dk/api/Sagskategori`
+
+---
+
+### Law follow-through fields on adopted cases
+
+**Idea:** Show legal follow-through fields when available (`lovnummer`, `lovnummerdato`, `retsinformationsurl`, `afgørelsesdato`).
+
+**Evaluation result:** Accepted.
+
+**Why it fits:**
+- Comes from official ODA `Sag` fields.
+- Objective and highly relevant for "from proposal to law" storyline.
+- No credentials or scraping required.
+
+**Key endpoint:**
+- `Sag`
+
+**References checked (2026-03-05):**
+- `https://oda.ft.dk/api/Sag?$top=1`
+
+---
+
 ## Sources to avoid as dependencies for MVP
 
 - Non-official aggregator sites.
