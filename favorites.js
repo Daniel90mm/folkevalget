@@ -3,7 +3,6 @@ const FavoritesApp = (() => {
     profilesById: new Map(),
     timelineBySagId: new Map(),
     votesByCaseNumber: new Map(),
-    latestVoteBySagId: new Map(),
     votes: [],
     favorites: { profiles: [], cases: [] },
   };
@@ -12,10 +11,6 @@ const FavoritesApp = (() => {
   const summaryRoot = document.querySelector("#favorites-summary");
   const favoriteCasesRoot = document.querySelector("#favorite-cases");
   const favoriteProfilesRoot = document.querySelector("#favorite-profiles");
-  const newVotesFeedRoot = document.querySelector("#feed-new-votes");
-  const omtrykFeedRoot = document.querySelector("#feed-omtryk");
-  const partySplitsFeedRoot = document.querySelector("#feed-party-splits");
-  const activeStatusFeedRoot = document.querySelector("#feed-active-status");
 
   async function boot() {
     const [{ profiles, stats }, votes, timelineIndex] = await Promise.all([
@@ -42,21 +37,17 @@ const FavoritesApp = (() => {
 
   function hydrateVoteMaps() {
     state.votesByCaseNumber = new Map();
-    state.latestVoteBySagId = new Map();
 
     for (const vote of state.votes) {
       const caseNumber = normaliseCaseNumber(vote?.sag_number);
-      if (caseNumber) {
-        if (!state.votesByCaseNumber.has(caseNumber)) {
-          state.votesByCaseNumber.set(caseNumber, []);
-        }
-        state.votesByCaseNumber.get(caseNumber).push(vote);
+      if (!caseNumber) {
+        continue;
       }
 
-      const sagId = Number(vote?.sag_id || 0);
-      if (sagId > 0 && !state.latestVoteBySagId.has(sagId)) {
-        state.latestVoteBySagId.set(sagId, vote);
+      if (!state.votesByCaseNumber.has(caseNumber)) {
+        state.votesByCaseNumber.set(caseNumber, []);
       }
+      state.votesByCaseNumber.get(caseNumber).push(vote);
     }
   }
 
@@ -101,7 +92,6 @@ const FavoritesApp = (() => {
     renderSummary();
     renderFavoriteCases();
     renderFavoriteProfiles();
-    renderDailyFeed();
   }
 
   function renderSummary() {
@@ -289,161 +279,6 @@ const FavoritesApp = (() => {
     return item;
   }
 
-  function renderDailyFeed() {
-    renderNewVotesFeed();
-    renderOmtrykFeed();
-    renderPartySplitsFeed();
-    renderActiveStatusFeed();
-  }
-
-  function renderNewVotesFeed() {
-    if (!newVotesFeedRoot) {
-      return;
-    }
-
-    const cutoff = isoDateDaysAgo(7);
-    let rows = state.votes.filter((vote) => String(vote?.date || "") >= cutoff).slice(0, 8);
-    if (rows.length === 0) {
-      rows = state.votes.slice(0, 8);
-    }
-
-    renderFeedList(
-      newVotesFeedRoot,
-      rows.map((vote) => ({
-        title: `${vote.sag_number || "Sag"} · ${vote.sag_short_title || vote.sag_title || "Afstemning"}`,
-        meta: `${window.Folkevalget.formatDate(vote.date)} · ${vote.vedtaget ? "Vedtaget" : "Forkastet"}`,
-        href: window.Folkevalget.buildVoteUrl(vote.afstemning_id),
-      })),
-      "Ingen nye afstemninger i den valgte periode."
-    );
-  }
-
-  function renderOmtrykFeed() {
-    if (!omtrykFeedRoot) {
-      return;
-    }
-
-    const rows = [];
-    const seenDocumentIds = new Set();
-    for (const vote of state.votes) {
-      const documents = Array.isArray(vote?.source_documents) ? vote.source_documents : [];
-      for (const document of documents) {
-        const documentId = Number(document?.document_id || 0);
-        if (documentId > 0 && seenDocumentIds.has(documentId)) {
-          continue;
-        }
-
-        const title = String(document?.title || "").trim();
-        const variantCode = String(document?.variant_code || "").toUpperCase();
-        if (!/omtryk/i.test(title) && !/omtryk/i.test(variantCode)) {
-          continue;
-        }
-
-        if (documentId > 0) {
-          seenDocumentIds.add(documentId);
-        }
-
-        rows.push({
-          title: `${vote.sag_number || "Sag"} · ${title || "Dokument"}`,
-          meta: `${window.Folkevalget.formatDate(document?.date || vote?.date)} · ${document?.format || "Dokument"}`,
-          href: String(document?.url || "").trim() || window.Folkevalget.buildVoteUrl(vote.afstemning_id),
-        });
-      }
-      if (rows.length >= 8) {
-        break;
-      }
-    }
-
-    renderFeedList(omtrykFeedRoot, rows.slice(0, 8), "Ingen omtryk fundet i de registrerede dokumenter.");
-  }
-
-  function renderPartySplitsFeed() {
-    if (!partySplitsFeedRoot) {
-      return;
-    }
-
-    const rows = state.votes
-      .filter((vote) => Number(vote?.party_split_count || 0) > 0)
-      .slice(0, 8)
-      .map((vote) => ({
-        title: `${vote.sag_number || "Sag"} · ${vote.sag_short_title || vote.sag_title || "Afstemning"}`,
-        meta:
-          `${window.Folkevalget.formatDate(vote.date)} · ` +
-          `${window.Folkevalget.formatNumber(vote.party_split_count)} partisplit`,
-        href: window.Folkevalget.buildVoteUrl(vote.afstemning_id),
-      }));
-
-    renderFeedList(partySplitsFeedRoot, rows, "Ingen partisplit i de seneste registrerede afstemninger.");
-  }
-
-  function renderActiveStatusFeed() {
-    if (!activeStatusFeedRoot) {
-      return;
-    }
-
-    const rows = [];
-    for (const timeline of state.timelineBySagId.values()) {
-      if (!isActiveStatus(timeline?.sag_status)) {
-        continue;
-      }
-
-      const sagId = Number(timeline?.sag_id || 0);
-      const latestVote = state.latestVoteBySagId.get(sagId) || null;
-      const caseNumber = inferCaseNumberFromTimelineAndVote(timeline, latestVote);
-      if (!caseNumber) {
-        continue;
-      }
-
-      rows.push({
-        title: `${caseNumber} · ${timeline?.sag_type || "Sag"}`,
-        meta: `${timeline?.sag_status || "Status ikke registreret"}`,
-        sortDate: String(latestVote?.date || ""),
-        href: `${window.Folkevalget.toSiteUrl("afstemninger.html")}?q=${encodeURIComponent(caseNumber)}`,
-      });
-    }
-
-    rows.sort((left, right) => String(right.sortDate || "").localeCompare(String(left.sortDate || "")));
-    renderFeedList(
-      activeStatusFeedRoot,
-      rows.slice(0, 8).map(({ title, meta, href }) => ({ title, meta, href })),
-      "Ingen aktive sager fundet i den aktuelle statusoversigt."
-    );
-  }
-
-  function renderFeedList(root, rows, emptyText) {
-    root.innerHTML = "";
-    if (!Array.isArray(rows) || rows.length === 0) {
-      root.innerHTML = `<div class="panel-empty">${emptyText}</div>`;
-      return;
-    }
-
-    const list = document.createElement("ul");
-    list.className = "favorite-list";
-
-    for (const row of rows) {
-      const item = document.createElement("li");
-      item.className = "favorite-item";
-
-      const link = document.createElement("a");
-      link.className = "favorite-item-title";
-      link.href = row.href || "#";
-      if (String(row.href || "").startsWith("http")) {
-        link.target = "_blank";
-        link.rel = "noreferrer";
-      }
-      link.textContent = row.title || "Uden titel";
-
-      const meta = document.createElement("p");
-      meta.className = "favorite-item-meta";
-      meta.textContent = row.meta || "";
-
-      item.append(link, meta);
-      list.append(item);
-    }
-
-    root.append(list);
-  }
-
   function timelineForCase(favoriteCase, latestVote) {
     const favoriteSagId = Number(favoriteCase?.sag_id || 0);
     if (favoriteSagId > 0 && state.timelineBySagId.has(favoriteSagId)) {
@@ -564,31 +399,6 @@ const FavoritesApp = (() => {
     }
 
     return buildUpdateLine(text);
-  }
-
-  function inferCaseNumberFromTimelineAndVote(timeline, vote) {
-    const voteNumber = normaliseCaseNumber(vote?.sag_number);
-    if (voteNumber) {
-      return voteNumber;
-    }
-    const under = normaliseCaseNumber(timeline?.fremsat_under?.sag_number);
-    return under || "";
-  }
-
-  function isActiveStatus(statusText) {
-    const normalized = String(statusText || "").toLowerCase();
-    if (!normalized) {
-      return false;
-    }
-    const finalKeywords = ["stadfæstet", "vedtaget", "forkastet", "bortfaldet"];
-    return finalKeywords.every((keyword) => !normalized.includes(keyword));
-  }
-
-  function isoDateDaysAgo(days) {
-    const anchor = new Date();
-    anchor.setHours(0, 0, 0, 0);
-    anchor.setDate(anchor.getDate() - Math.max(0, Number(days || 0)));
-    return anchor.toLocaleDateString("sv-SE", { timeZone: "Europe/Copenhagen" });
   }
 
   function normaliseCaseNumber(value) {

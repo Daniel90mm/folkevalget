@@ -6,7 +6,7 @@
     <title>Favoritter | Folkevalget</title>
     <meta
       name="description"
-      content="Følg favoritsager og politikere, og se de seneste registrerede ændringer i datasættet."
+      content="Følg favoritsager og politikere, og hold dine gemte profiler og forslag samlet ét sted."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
         } catch (error) {}
       })();
     </script>
-    <link rel="stylesheet" href="style.css?v=20260305x">
+    <link rel="stylesheet" href="style.css?v=20260305y">
   </head>
   <body class="page-favorites">
     <div class="site-shell">
@@ -70,30 +70,8 @@
 
         <section class="content-section">
           <div class="section-heading">
-            <h2>Daily Change Feed</h2>
-            <p class="table-note">Bygget på officielle registreringer i det aktuelle datasæt.</p>
+            <h2>Dine favoritter</h2>
           </div>
-          <div class="change-feed-grid">
-            <article class="panel">
-              <h3>Nye afstemninger</h3>
-              <div class="change-feed-list" id="feed-new-votes"></div>
-            </article>
-            <article class="panel">
-              <h3>Korrigerede dokumenter / omtryk</h3>
-              <div class="change-feed-list" id="feed-omtryk"></div>
-            </article>
-            <article class="panel">
-              <h3>Partisplit i afstemninger</h3>
-              <div class="change-feed-list" id="feed-party-splits"></div>
-            </article>
-            <article class="panel">
-              <h3>Status på aktive sager</h3>
-              <div class="change-feed-list" id="feed-active-status"></div>
-            </article>
-          </div>
-        </section>
-
-        <section class="content-section">
           <div class="favorites-columns">
             <article class="panel">
               <div class="panel-heading">
@@ -124,6 +102,6 @@
 
     <script src="catalog.js" defer></script>
     <script src="shared.js?v=20260305h" defer></script>
-    <script src="favorites.js?v=20260305b" defer></script>
+    <script src="favorites.js?v=20260305c" defer></script>
   </body>
 </html>
