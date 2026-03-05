@@ -131,6 +131,8 @@ img {
   gap: var(--space-xl);
   align-items: start;
   padding: var(--space-md) var(--space-lg);
+  background: transparent;
+  border: 0;
 }
 
 .site-brand-row {
