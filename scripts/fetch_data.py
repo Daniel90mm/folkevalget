@@ -1913,6 +1913,17 @@ def build_meeting_context_by_sagstrin(
     moede_type_lookup: dict[int, str],
     moede_status_lookup: dict[int, str],
 ) -> dict[int, list[dict[str, Any]]]:
+    def agenda_number_sort_value(raw_value: Any) -> tuple[int, int, str]:
+        value = str(raw_value or "").strip()
+        if not value:
+            return (0, 0, "")
+        if value.isdigit():
+            return (0, int(value), value)
+        numeric_prefix = re.match(r"^(\d+)", value)
+        if numeric_prefix:
+            return (1, int(numeric_prefix.group(1)), value.lower())
+        return (2, 0, value.lower())
+
     by_sagstrin: dict[int, list[dict[str, Any]]] = defaultdict(list)
     for row in dagsordenspunkt_rows:
         sagstrin_id = int(row.get("sagstrinid") or 0)
@@ -1954,7 +1965,7 @@ def build_meeting_context_by_sagstrin(
             key=lambda item: (
                 (item.get("meeting") or {}).get("date") or "",
                 int((item.get("meeting") or {}).get("number") or 0),
-                int(item.get("agenda_number") or 0),
+                agenda_number_sort_value(item.get("agenda_number")),
                 item.get("dagsordenspunkt_id") or 0,
             )
         )
