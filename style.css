@@ -3470,8 +3470,8 @@ html[data-theme="dark"] .page-votes .votes-layout {
 }
 
 .page-votes .votes-intro {
-  width: min(100%, 56rem);
-  padding: var(--space-lg) var(--space-xl);
+  width: min(100%, 44rem);
+  padding: var(--space-md) var(--space-lg);
   gap: var(--space-xs);
   background:
     linear-gradient(180deg, rgba(27, 77, 110, 0.04), transparent 12rem),
@@ -3479,12 +3479,14 @@ html[data-theme="dark"] .page-votes .votes-layout {
 }
 
 .page-votes .votes-intro h1 {
-  max-width: 18ch;
-  font-size: clamp(2.1rem, 4vw, 3.15rem);
+  max-width: 13ch;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+  line-height: 1.02;
 }
 
 .page-votes .votes-intro p:last-child {
-  max-width: 46ch;
+  max-width: 40ch;
+  font-size: var(--text-base);
 }
 
 .page-votes .votes-browser-panel,
