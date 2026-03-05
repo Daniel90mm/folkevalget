@@ -1572,6 +1572,32 @@ body.global-search-open {
   align-self: end;
 }
 
+.profile-vote-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.profile-vote-control-button {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--color-accent);
+  font: inherit;
+  font-weight: 600;
+  padding: 0;
+  cursor: pointer;
+}
+
+.profile-vote-control-button:hover,
+.profile-vote-control-button:focus-visible {
+  color: var(--color-accent-hover);
+  outline: none;
+}
+
 .page-profile .vote-row {
   padding: var(--space-md) 0;
   border: none;

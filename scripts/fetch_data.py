@@ -270,6 +270,38 @@ def write_json_shards(directory: Path, shards: dict[str, list[dict[str, Any]]]) 
         write_json_compact(directory / f"{shard_key}.json", payload)
 
 
+def write_profile_vote_id_files(
+    directory: Path,
+    *,
+    profiles: list[dict[str, Any]],
+    vote_ids_by_person: dict[int, dict[str, list[int]]],
+) -> None:
+    ensure_dir(directory)
+    valid_profile_ids: set[int] = set()
+    for profile in profiles:
+        person_id = int(profile.get("id") or 0)
+        if person_id <= 0:
+            continue
+        valid_profile_ids.add(person_id)
+        write_json_compact(
+            directory / f"{person_id}.json",
+            vote_ids_by_person.get(
+                person_id,
+                {
+                    "for": [],
+                    "imod": [],
+                    "fravaer": [],
+                    "hverken": [],
+                },
+            ),
+        )
+
+    for existing_file in directory.glob("*.json"):
+        stem = existing_file.stem
+        if stem.isdigit() and int(stem) not in valid_profile_ids:
+            existing_file.unlink()
+
+
 def write_javascript_payload(path: Path, variable_name: str, payload: Any) -> None:
     ensure_dir(path.parent)
     serialized = json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
@@ -2863,6 +2895,77 @@ def split_vote_payloads(votes: list[dict[str, Any]]) -> tuple[list[dict[str, Any
     return overview_votes, vote_details
 
 
+def build_vote_meta_rows(vote_overview: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    meta_rows: list[dict[str, Any]] = []
+    for vote in vote_overview:
+        vote_id = int(vote.get("afstemning_id") or 0)
+        if vote_id <= 0:
+            continue
+        meta_rows.append(
+            {
+                "afstemning_id": vote_id,
+                "date": vote.get("date"),
+                "sag_number": vote.get("sag_number"),
+                "sag_title": vote.get("sag_short_title") or vote.get("sag_title"),
+                "vedtaget": vote.get("vedtaget"),
+            }
+        )
+    return meta_rows
+
+
+def build_profile_vote_id_groups(
+    votes: list[dict[str, Any]],
+    *,
+    profile_ids: set[int],
+) -> dict[int, dict[str, list[int]]]:
+    groups_by_person: dict[int, dict[str, list[int]]] = {
+        int(profile_id): {
+            "for": [],
+            "imod": [],
+            "fravaer": [],
+            "hverken": [],
+        }
+        for profile_id in profile_ids
+        if int(profile_id) > 0
+    }
+
+    for vote in votes:
+        vote_id = int(vote.get("afstemning_id") or 0)
+        if vote_id <= 0:
+            continue
+        vote_groups = vote.get("vote_groups") if isinstance(vote.get("vote_groups"), dict) else {}
+        for group_key in ("for", "imod", "fravaer", "hverken"):
+            person_ids = vote_groups.get(group_key)
+            if not isinstance(person_ids, list):
+                continue
+            normalized_person_ids: set[int] = set()
+            for raw in person_ids:
+                try:
+                    person_id = int(raw or 0)
+                except (TypeError, ValueError):
+                    continue
+                if person_id > 0:
+                    normalized_person_ids.add(person_id)
+            for person_id in normalized_person_ids:
+                if person_id not in groups_by_person:
+                    continue
+                groups_by_person[person_id][group_key].append(vote_id)
+
+    for person_id, grouped_votes in groups_by_person.items():
+        for group_key in ("for", "imod", "fravaer", "hverken"):
+            deduped_vote_ids: list[int] = []
+            seen_vote_ids: set[int] = set()
+            for vote_id in grouped_votes[group_key]:
+                if vote_id in seen_vote_ids:
+                    continue
+                seen_vote_ids.add(vote_id)
+                deduped_vote_ids.append(vote_id)
+            grouped_votes[group_key] = deduped_vote_ids
+        groups_by_person[person_id] = grouped_votes
+
+    return groups_by_person
+
+
 def shard_key_for_id(value: int, shard_count: int) -> str:
     safe_count = max(1, int(shard_count))
     return f"{int(value or 0) % safe_count:02d}"
@@ -3585,6 +3688,11 @@ def main() -> None:
         recent_vote_limit=max(args.recent_votes, 1),
     )
     vote_overview, vote_details = split_vote_payloads(summarized_votes)
+    vote_meta = build_vote_meta_rows(vote_overview)
+    vote_ids_by_person = build_profile_vote_id_groups(
+        summarized_votes,
+        profile_ids={int(profile["id"]) for profile in profiles if int(profile.get("id") or 0) > 0},
+    )
     vote_detail_index, vote_detail_shards = build_vote_detail_index_and_shards(vote_details)
     timeline_index, timeline_shards = build_timeline_index_and_shards(case_timelines)
 
@@ -3612,10 +3720,16 @@ def main() -> None:
     write_json(output_dir / "partier.json", party_summaries)
     write_json(output_dir / "udvalg.json", committee_summaries)
     write_json(output_dir / "afstemninger.json", summarized_votes)
+    write_json_compact(output_dir / "afstemninger_meta.json", vote_meta)
     write_json_compact(output_dir / "afstemninger_overblik.json", vote_overview)
     write_json_compact(output_dir / "afstemninger_detaljer.json", vote_details)
     write_json_compact(output_dir / "afstemninger_detaljer_index.json", vote_detail_index)
     write_json_shards(output_dir / "afstemninger_detaljer_shards", vote_detail_shards)
+    write_profile_vote_id_files(
+        output_dir / "profile_vote_ids",
+        profiles=profiles,
+        vote_ids_by_person=vote_ids_by_person,
+    )
     write_json(output_dir / "sag_tidslinjer.json", case_timelines)
     write_json_compact(output_dir / "sag_tidslinjer_index.json", timeline_index)
     write_json_shards(output_dir / "sag_tidslinjer_shards", timeline_shards)

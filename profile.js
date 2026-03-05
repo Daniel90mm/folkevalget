@@ -1,4 +1,7 @@
 const ProfileApp = (() => {
+  const INITIAL_RECENT_VOTES_LIMIT = 10;
+  const RECENT_VOTES_EXPAND_STEP = 25;
+
   const statsRoot = document.querySelector("[data-site-stats]");
   const emptyState = document.querySelector("#profile-empty");
   const pageContent = document.querySelector("#profile-page");
@@ -23,9 +26,19 @@ const ProfileApp = (() => {
   const hvervSourceNote = document.querySelector("#profile-hverv-source-note");
   const sectionGrids = Array.from(document.querySelectorAll(".profile-section-grid"));
   const recentVoteFilter = document.querySelector("#profile-vote-filter");
+  const recentVotesControls = document.querySelector("#profile-vote-controls");
+  const recentVotesMoreButton = document.querySelector("#profile-vote-more");
+  const recentVotesResetButton = document.querySelector("#profile-vote-reset");
   const state = {
     recentVotes: [],
     recentVoteFilter: "",
+    recentVoteLimit: INITIAL_RECENT_VOTES_LIMIT,
+  };
+  const VOTE_GROUP_META = {
+    for: { voteTypeId: 1, voteTypeLabel: "For" },
+    imod: { voteTypeId: 2, voteTypeLabel: "Imod" },
+    fravaer: { voteTypeId: 3, voteTypeLabel: "Fravær" },
+    hverken: { voteTypeId: 4, voteTypeLabel: "Hverken" },
   };
 
   async function boot() {
@@ -43,8 +56,13 @@ const ProfileApp = (() => {
       return;
     }
 
+    const [voteMetaRows, profileVoteIdGroups] = await Promise.all([
+      window.Folkevalget.fetchJson("data/afstemninger_meta.json").catch(() => []),
+      window.Folkevalget.fetchJson(`data/profile_vote_ids/${profileId}.json`).catch(() => null),
+    ]);
+
     bindEvents();
-    renderProfile(profile, hvervData, cvrData);
+    renderProfile(profile, hvervData, cvrData, voteMetaRows, profileVoteIdGroups);
   }
 
   function renderEmpty() {
@@ -52,7 +70,7 @@ const ProfileApp = (() => {
     pageContent.classList.add("hidden");
   }
 
-  function renderProfile(profile, hvervData, cvrData) {
+  function renderProfile(profile, hvervData, cvrData, voteMetaRows, profileVoteIdGroups) {
     emptyState.classList.add("hidden");
     pageContent.classList.remove("hidden");
 
@@ -102,7 +120,16 @@ const ProfileApp = (() => {
     renderHistory(profile);
     renderCommittees(profile.committees || []);
     renderHverv(profile, hvervData, cvrData);
-    state.recentVotes = Array.isArray(profile.recent_votes) ? profile.recent_votes : [];
+    const profileVotes = buildProfileVotesFromIds(profileVoteIdGroups, voteMetaRows);
+    const fallbackVotes = Array.isArray(profile.recent_votes) ? profile.recent_votes : [];
+    state.recentVotes = [...profileVotes].sort((left, right) =>
+      String(right.date || "").localeCompare(String(left.date || "")) ||
+      Number(right.afstemning_id || 0) - Number(left.afstemning_id || 0)
+    );
+    if (state.recentVotes.length === 0 && fallbackVotes.length > 0) {
+      state.recentVotes = [...fallbackVotes];
+    }
+    state.recentVoteLimit = INITIAL_RECENT_VOTES_LIMIT;
     if (recentVoteFilter) {
       recentVoteFilter.value = state.recentVoteFilter;
     }
@@ -111,16 +138,31 @@ const ProfileApp = (() => {
   }
 
   function bindEvents() {
-    if (!recentVoteFilter || recentVoteFilter.dataset.bound === "true") {
-      return;
+    if (recentVoteFilter && recentVoteFilter.dataset.bound !== "true") {
+      recentVoteFilter.addEventListener("change", (event) => {
+        state.recentVoteFilter = event.target.value;
+        state.recentVoteLimit = INITIAL_RECENT_VOTES_LIMIT;
+        renderRecentVotes();
+      });
+
+      recentVoteFilter.dataset.bound = "true";
     }
 
-    recentVoteFilter.addEventListener("change", (event) => {
-      state.recentVoteFilter = event.target.value;
-      renderRecentVotes();
-    });
+    if (recentVotesMoreButton && recentVotesMoreButton.dataset.bound !== "true") {
+      recentVotesMoreButton.addEventListener("click", () => {
+        state.recentVoteLimit += RECENT_VOTES_EXPAND_STEP;
+        renderRecentVotes();
+      });
+      recentVotesMoreButton.dataset.bound = "true";
+    }
 
-    recentVoteFilter.dataset.bound = "true";
+    if (recentVotesResetButton && recentVotesResetButton.dataset.bound !== "true") {
+      recentVotesResetButton.addEventListener("click", () => {
+        state.recentVoteLimit = INITIAL_RECENT_VOTES_LIMIT;
+        renderRecentVotes();
+      });
+      recentVotesResetButton.dataset.bound = "true";
+    }
   }
 
   function buildSummary(profile) {
@@ -706,21 +748,23 @@ const ProfileApp = (() => {
   function renderRecentVotes() {
     const root = document.querySelector("#vote-feed");
     root.innerHTML = "";
-    const votes = state.recentVotes
+    const filteredVotes = state.recentVotes
       .filter((vote) => matchesRecentVoteFilter(vote, state.recentVoteFilter))
-      .slice(0, 10);
+    const visibleVotes = filteredVotes.slice(0, state.recentVoteLimit);
 
-    if (votes.length === 0 && state.recentVotes.length > 0) {
+    if (visibleVotes.length === 0 && state.recentVotes.length > 0) {
       root.innerHTML = '<div class="panel-empty">Ingen registrerede afstemninger matcher den valgte stemme.</div>';
+      updateRecentVoteControls(0, 0);
       return;
     }
 
-    if (votes.length === 0) {
+    if (visibleVotes.length === 0) {
       root.innerHTML = '<div class="panel-empty">Ingen registrerede afstemninger i datasættet.</div>';
+      updateRecentVoteControls(0, 0);
       return;
     }
 
-    for (const vote of votes.slice(0, 10)) {
+    for (const vote of visibleVotes) {
       const voteUrl = window.Folkevalget.buildVoteUrl(vote.afstemning_id);
       const row = document.createElement("a");
       row.className = "vote-row vote-row-linkable";
@@ -758,6 +802,84 @@ const ProfileApp = (() => {
       row.append(meta, body, badge, action);
       root.append(row);
     }
+
+    updateRecentVoteControls(visibleVotes.length, filteredVotes.length);
+  }
+
+  function buildProfileVotesFromIds(profileVoteIdGroups, voteMetaRows) {
+    if (!profileVoteIdGroups || typeof profileVoteIdGroups !== "object") {
+      return [];
+    }
+
+    const metaById = new Map(
+      (Array.isArray(voteMetaRows) ? voteMetaRows : [])
+        .filter((row) => Number.isFinite(Number(row?.afstemning_id)) && Number(row.afstemning_id) > 0)
+        .map((row) => [Number(row.afstemning_id), row])
+    );
+    if (metaById.size === 0) {
+      return [];
+    }
+
+    const entries = [];
+    const seen = new Set();
+    for (const [groupKey, groupMeta] of Object.entries(VOTE_GROUP_META)) {
+      const voteIds = profileVoteIdGroups[groupKey];
+      if (!Array.isArray(voteIds)) {
+        continue;
+      }
+
+      for (const rawVoteId of voteIds) {
+        const voteId = Number(rawVoteId || 0);
+        if (!Number.isFinite(voteId) || voteId <= 0) {
+          continue;
+        }
+        const dedupeKey = `${voteId}:${groupKey}`;
+        if (seen.has(dedupeKey)) {
+          continue;
+        }
+        seen.add(dedupeKey);
+
+        const voteMeta = metaById.get(voteId);
+        if (!voteMeta) {
+          continue;
+        }
+        entries.push({
+          afstemning_id: voteId,
+          date: voteMeta.date,
+          vote_type_id: groupMeta.voteTypeId,
+          vote_type: groupMeta.voteTypeLabel,
+          sag_number: voteMeta.sag_number,
+          sag_title: voteMeta.sag_title,
+          vedtaget: voteMeta.vedtaget,
+        });
+      }
+    }
+
+    entries.sort((left, right) =>
+      String(right.date || "").localeCompare(String(left.date || "")) ||
+      Number(right.afstemning_id || 0) - Number(left.afstemning_id || 0)
+    );
+    return entries;
+  }
+
+  function updateRecentVoteControls(visibleCount, totalCount) {
+    if (!recentVotesControls || !recentVotesMoreButton || !recentVotesResetButton) {
+      return;
+    }
+
+    const hasMore = totalCount > visibleCount;
+    const hasExpanded = visibleCount > INITIAL_RECENT_VOTES_LIMIT && totalCount > 0;
+    recentVotesControls.classList.toggle("hidden", !hasMore && !hasExpanded);
+
+    if (hasMore) {
+      const nextChunk = Math.min(RECENT_VOTES_EXPAND_STEP, totalCount - visibleCount);
+      recentVotesMoreButton.textContent = `Vis ${nextChunk} flere`;
+      recentVotesMoreButton.classList.remove("hidden");
+    } else {
+      recentVotesMoreButton.classList.add("hidden");
+    }
+
+    recentVotesResetButton.classList.toggle("hidden", !hasExpanded);
   }
 
   function matchesRecentVoteFilter(vote, filterValue) {
