@@ -608,8 +608,7 @@ body.global-search-open {
 .votes-layout {
   display: grid;
   gap: var(--space-lg);
-  width: min(100%, 1100px);
-  margin: var(--space-lg) auto 0;
+  margin-top: var(--space-lg);
 }
 
 .hero-panel,
@@ -682,6 +681,12 @@ body.global-search-open {
 .member-role,
 .profile-role,
 .photo-credit {
+  color: var(--color-text-secondary);
+}
+
+.vote-row-note {
+  font-size: var(--text-xs);
+  line-height: 1.45;
   color: var(--color-text-secondary);
 }
 

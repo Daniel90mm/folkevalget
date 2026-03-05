@@ -748,6 +748,7 @@ const ProfileApp = (() => {
   function renderRecentVotes() {
     const root = document.querySelector("#vote-feed");
     root.innerHTML = "";
+    const proposalSeriesLabelByVoteId = buildProposalSeriesLabels(state.recentVotes);
     const filteredVotes = state.recentVotes
       .filter((vote) => matchesRecentVoteFilter(vote, state.recentVoteFilter))
     const visibleVotes = filteredVotes.slice(0, state.recentVoteLimit);
@@ -791,6 +792,14 @@ const ProfileApp = (() => {
       outcome.textContent = vote.vedtaget ? "Forslaget blev vedtaget." : "Forslaget blev forkastet.";
       body.append(title, outcome);
 
+      const voteOccasion = proposalSeriesLabelByVoteId.get(Number(vote.afstemning_id || 0)) || "";
+      if (voteOccasion) {
+        const occasion = document.createElement("p");
+        occasion.className = "vote-row-note";
+        occasion.textContent = voteOccasion;
+        body.append(occasion);
+      }
+
       const badge = document.createElement("span");
       badge.className = `vote-chip ${window.Folkevalget.voteBadgeClass(vote.vote_type)}`;
       badge.textContent = vote.vote_type || "Ukendt";
@@ -804,6 +813,54 @@ const ProfileApp = (() => {
     }
 
     updateRecentVoteControls(visibleVotes.length, filteredVotes.length);
+  }
+
+  function buildProposalSeriesLabels(votes) {
+    const labelsByVoteId = new Map();
+    const groups = new Map();
+    for (const vote of Array.isArray(votes) ? votes : []) {
+      const key = proposalSeriesKey(vote);
+      if (!key) {
+        continue;
+      }
+      if (!groups.has(key)) {
+        groups.set(key, []);
+      }
+      groups.get(key).push(vote);
+    }
+
+    for (const groupVotes of groups.values()) {
+      const orderedVotes = [...groupVotes].sort((left, right) =>
+        String(left.date || "").localeCompare(String(right.date || "")) ||
+        Number(left.afstemning_id || 0) - Number(right.afstemning_id || 0)
+      );
+      const totalInSeries = orderedVotes.length;
+      for (let index = 0; index < orderedVotes.length; index += 1) {
+        const vote = orderedVotes[index];
+        const voteId = Number(vote.afstemning_id || 0);
+        if (!Number.isFinite(voteId) || voteId <= 0) {
+          continue;
+        }
+
+        const position = index + 1;
+        const base = `Afstemning ${window.Folkevalget.formatNumber(voteId)}`;
+        const label = totalInSeries > 1
+          ? `${base} · ${position} af ${totalInSeries} i samme forslag`
+          : base;
+        labelsByVoteId.set(voteId, label);
+      }
+    }
+
+    return labelsByVoteId;
+  }
+
+  function proposalSeriesKey(vote) {
+    const number = String(vote?.sag_number || "").trim();
+    const title = String(vote?.sag_title || "").replace(/\s+/g, " ").trim().toLowerCase();
+    if (!number && !title) {
+      return "";
+    }
+    return `${number}||${title}`;
   }
 
   function buildProfileVotesFromIds(profileVoteIdGroups, voteMetaRows) {
