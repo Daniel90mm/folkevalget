@@ -1,6 +1,7 @@
 const DEFAULT_CLOSE_VOTE_THRESHOLD_PCT = 10;
 const MIN_CLOSE_VOTE_THRESHOLD_PCT = 0;
 const MAX_CLOSE_VOTE_THRESHOLD_PCT = 100;
+const VOTE_LIST_CHUNK_SIZE = 50;
 
 const SAG_TYPE_TEKST = {
   L:  "Lovforslag — forslag til en ny lov eller ændring af gældende lovgivning. Behandles normalt tre gange i Folketinget.",
@@ -17,6 +18,27 @@ const STEMME_TYPE_TEKST = {
   "Forslag til vedtagelse": "Afstemning om en parlamentarisk hensigtserklæring.",
 };
 
+const PARTY_ACCENT_COLORS = {
+  S: "#b51428",
+  V: "#005da6",
+  M: "#6f5493",
+  SF: "#b60063",
+  EL: "#ae5f0d",
+  KF: "#00583c",
+  LA: "#0086ab",
+  RV: "#733280",
+  ALT: "#218a4d",
+  DD: "#004450",
+  DF: "#003b6f",
+  IA: "#266a91",
+  JF: "#6d3149",
+  N: "#915a0f",
+  SP: "#6f5a16",
+  SIU: "#7c3b3b",
+  BP: "#4f5f75",
+  UFG: "#707b75",
+};
+
 const VotesApp = (() => {
   const VALID_SORTS = new Set(["date_desc", "passed_first", "failed_first", "close_first", "split_first", "emneord_asc"]);
 
@@ -30,8 +52,12 @@ const VotesApp = (() => {
     timelineShardLoadingPromises: new Map(),
     voteDetailsById: new Map(),
     voteDetailLoadingById: new Map(),
+    dataChunkCacheByPath: new Map(),
+    dataChunkLoadingByPath: new Map(),
     votes: [],
     filteredVotes: [],
+    visibleVoteCount: 0,
+    voteListObserver: null,
     selectedVoteId: null,
     query: "",
     partyFilter: "",
@@ -119,6 +145,7 @@ const VotesApp = (() => {
     window.Folkevalget.renderStats(statsRoot, stats);
     populateOfficialTaxonomyFilters();
     bindEvents();
+    prepareVoteListObserver();
     syncControls();
     applyVoteFilter();
     scheduleVoteDetailsPreload();
@@ -344,8 +371,7 @@ const VotesApp = (() => {
       );
     }
 
-    const shardPromise = fetch(window.Folkevalget.toSiteUrl(`data/sag_tidslinjer_shards/${encodeURIComponent(shardKey)}.json`))
-      .then((response) => (response.ok ? response.json() : []))
+    const shardPromise = loadDataChunk(`data/sag_tidslinjer_shards/${encodeURIComponent(shardKey)}.json`)
       .then((rows) => {
         for (const row of (Array.isArray(rows) ? rows : [])) {
           const rowSagId = Number(row?.sag_id || 0);
@@ -365,6 +391,34 @@ const VotesApp = (() => {
 
     state.timelineShardLoadingPromises.set(shardKey, shardPromise);
     return shardPromise;
+  }
+
+  function loadDataChunk(path) {
+    const chunkPath = String(path || "").trim();
+    if (!chunkPath) {
+      return Promise.resolve([]);
+    }
+    if (state.dataChunkCacheByPath.has(chunkPath)) {
+      return Promise.resolve(state.dataChunkCacheByPath.get(chunkPath));
+    }
+    if (state.dataChunkLoadingByPath.has(chunkPath)) {
+      return state.dataChunkLoadingByPath.get(chunkPath);
+    }
+
+    const loadingPromise = fetch(window.Folkevalget.toSiteUrl(chunkPath))
+      .then((response) => (response.ok ? response.json() : []))
+      .then((payload) => {
+        state.dataChunkCacheByPath.set(chunkPath, payload);
+        state.dataChunkLoadingByPath.delete(chunkPath);
+        return payload;
+      })
+      .catch((error) => {
+        state.dataChunkLoadingByPath.delete(chunkPath);
+        throw error;
+      });
+
+    state.dataChunkLoadingByPath.set(chunkPath, loadingPromise);
+    return loadingPromise;
   }
 
   function mergeVoteWithDetails(vote) {
@@ -438,9 +492,50 @@ const VotesApp = (() => {
       state.partyFilter = "";
     }
 
+    resetVisibleVoteCount();
     renderVoteList();
     renderSelectedVote();
     syncQueryString();
+  }
+
+  function prepareVoteListObserver() {
+    if (typeof window.IntersectionObserver !== "function" || state.voteListObserver) {
+      return;
+    }
+
+    state.voteListObserver = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) {
+          return;
+        }
+        if (state.visibleVoteCount >= state.filteredVotes.length) {
+          return;
+        }
+        state.visibleVoteCount = Math.min(
+          state.filteredVotes.length,
+          state.visibleVoteCount + VOTE_LIST_CHUNK_SIZE
+        );
+        renderVoteList();
+      },
+      {
+        root: null,
+        rootMargin: "320px 0px",
+        threshold: 0.01,
+      }
+    );
+  }
+
+  function resetVisibleVoteCount() {
+    if (typeof window.IntersectionObserver !== "function") {
+      state.visibleVoteCount = state.filteredVotes.length;
+      return;
+    }
+
+    const selectedIndex = state.filteredVotes.findIndex((vote) => vote.afstemning_id === state.selectedVoteId);
+    const minimumVisible = selectedIndex >= 0
+      ? Math.max(VOTE_LIST_CHUNK_SIZE, selectedIndex + 1)
+      : VOTE_LIST_CHUNK_SIZE;
+    state.visibleVoteCount = Math.min(state.filteredVotes.length, minimumVisible);
   }
 
   function compareVotes(left, right) {
@@ -634,11 +729,19 @@ const VotesApp = (() => {
     voteResultCount.textContent = `${window.Folkevalget.formatNumber(state.filteredVotes.length)} forslag`;
 
     if (state.filteredVotes.length === 0) {
+      if (state.voteListObserver) {
+        state.voteListObserver.disconnect();
+      }
       return;
     }
 
+    if (state.visibleVoteCount <= 0) {
+      state.visibleVoteCount = Math.min(state.filteredVotes.length, VOTE_LIST_CHUNK_SIZE);
+    }
+
+    const visibleVotes = state.filteredVotes.slice(0, state.visibleVoteCount);
     const fragment = document.createDocumentFragment();
-    for (const vote of state.filteredVotes) {
+    for (const vote of visibleVotes) {
       const counts = effectiveCounts(vote);
       const item = voteListTemplate.content.firstElementChild.cloneNode(true);
       item.dataset.voteId = String(vote.afstemning_id);
@@ -655,6 +758,19 @@ const VotesApp = (() => {
     }
 
     voteList.append(fragment);
+
+    if (state.visibleVoteCount < state.filteredVotes.length) {
+      const sentinel = document.createElement("div");
+      sentinel.className = "vote-list-sentinel";
+      sentinel.setAttribute("aria-hidden", "true");
+      voteList.append(sentinel);
+      if (state.voteListObserver) {
+        state.voteListObserver.disconnect();
+        state.voteListObserver.observe(sentinel);
+      }
+    } else if (state.voteListObserver) {
+      state.voteListObserver.disconnect();
+    }
   }
 
   function renderSelectedVote() {
@@ -1091,6 +1207,10 @@ const VotesApp = (() => {
       const voteIds = Array.isArray(step.vote_ids) ? step.vote_ids : [];
       if (index === activeStepIndex) {
         item.classList.add("is-active");
+      } else if (index < activeStepIndex) {
+        item.classList.add("is-complete");
+      } else {
+        item.classList.add("is-future");
       }
 
       const point = document.createElement("span");
@@ -1236,7 +1356,7 @@ const VotesApp = (() => {
     if (voteTimelineScroll && activeStepIndex >= 0) {
       const activeNode = voteTimelineList.children[activeStepIndex];
       if (activeNode && typeof activeNode.scrollIntoView === "function") {
-        activeNode.scrollIntoView({ block: "nearest", inline: "center" });
+        activeNode.scrollIntoView({ block: "nearest", inline: "nearest" });
       }
     }
 
@@ -1580,8 +1700,14 @@ const VotesApp = (() => {
       const stat = document.querySelector(`[data-distribution='${key}']`);
 
       if (segment) {
-        segment.style.width = `${share}%`;
-        segment.title = `${labelForGroup(key)}: ${window.Folkevalget.formatNumber(value)} (${formatShare(share)})`;
+        const tooltip = `${labelForGroup(key)}: ${window.Folkevalget.formatNumber(value)} stemmer (${formatShare(share)})`;
+        segment.style.flexGrow = String(Math.max(value, 0));
+        segment.style.flexBasis = "0";
+        segment.dataset.empty = value > 0 ? "false" : "true";
+        segment.dataset.tooltip = tooltip;
+        segment.title = tooltip;
+        segment.setAttribute("aria-label", tooltip);
+        segment.tabIndex = value > 0 ? 0 : -1;
       }
 
       if (stat) {
@@ -1671,6 +1797,8 @@ const VotesApp = (() => {
       const partyCode = shortPartyValue(participant.partyKey);
 
       row.href = window.Folkevalget.buildProfileUrl(participant.id);
+      row.dataset.party = partyCode || "";
+      row.style.setProperty("--row-party-color", partyAccentColor(partyCode));
       row.querySelector("[data-cell='party-code']").textContent = partyCode || "-";
       row.querySelector("[data-cell='party-code']").dataset.party = partyCode;
       row.querySelector("[data-cell='party-name']").textContent = fullPartyName(participant.partyKey);
@@ -1894,6 +2022,10 @@ const VotesApp = (() => {
       return window.Folkevalget.PARTY_NAMES[partyKey] || partyKey;
     }
     return partyKey;
+  }
+
+  function partyAccentColor(partyKey) {
+    return PARTY_ACCENT_COLORS[partyKey] || "var(--color-accent)";
   }
 
   function labelForGroup(key) {

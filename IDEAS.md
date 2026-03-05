@@ -611,3 +611,223 @@ Only after that:
 
 1. add StatBank context widgets
 2. add optional Retsinformation enrichment
+
+---
+
+## 2026-03-05 feature evaluation: "sycophancy ratio"
+
+### Proposal
+
+Show whether a politician "regularly votes with proposals that already succeed/fail"
+as a ratio.
+
+### Checklist evaluation
+
+1. Documented public API:
+- Yes, possible with existing ODA entities already in use (`Afstemning`, `Stemme`,
+  `Sagstrin`, `Sag`).
+
+2. Scraping or unstable reverse-engineered endpoints:
+- No scraping required.
+
+3. Coverage across MPs:
+- Yes, full coverage where recorded votes exist.
+
+4. Official/reliable source:
+- Yes, Folketinget ODA.
+
+5. Objective and verifiable:
+- Raw counts are objective; the label "sycophancy" is not neutral and is editorial.
+
+6. Credentials/contracts/gated access:
+- No, open API.
+
+7. Documentation outcome:
+- Logged here (accepted neutral variant + rejected framing).
+
+### Decision
+
+Accepted as a neutral metric, rejected as a "sycophancy" score.
+
+### Accepted implementation variant
+
+Use neutral naming such as:
+- `Votede med udfald`
+- `Votede mod udfald`
+- split by vote type (`For`, `Imod`, optionally `Hverken`)
+
+Rules:
+- Exclude `Fravær` from the ratio denominator.
+- Only include votes with clear `vedtaget/forkastet` outcome.
+- Show raw counts + percentage and link to underlying votes.
+- Add context text to avoid normative interpretation.
+
+### Rejected framing
+
+"Sycophancy ratio" is rejected as a core label because it violates neutral,
+source-first wording and implies intent/motivation not present in the data.
+
+### Sources checked
+
+- https://www.ft.dk/dokumenter/aabne_data
+- https://oda.ft.dk/api/
+- https://oda.ft.dk/api/$metadata
+- https://oda.ft.dk/api/Afstemning
+- https://oda.ft.dk/api/Stemme
+
+---
+
+## 2026-03-05 benchmark evaluation against politikdata.dk
+
+Scope: identify features worth copying while preserving Folkevalget's neutral, source-first ethos.
+
+### Sources checked
+
+- https://politikdata.dk/
+- https://politikdata.dk/guide
+- https://politikdata.dk/medloberi/personer
+- https://politikdata.dk/medloberi/partier
+- https://politikdata.dk/for-stemmende-politikere
+- https://politikdata.dk/modsat-flertal-politikere
+- https://politikdata.dk/partier/konformitet
+- https://politikdata.dk/partier/dissens
+- https://politikdata.dk/kandidattest
+- https://oda.ft.dk/api/
+- https://oda.ft.dk/api/$metadata
+- https://oda.ft.dk/api/M%C3%B8de?$top=1
+
+### Evaluated and accepted ideas
+
+### A. Party agreement matrix ("how often party A and B vote the same")
+
+Proposal:
+- Add a neutral compare view for parties based on shared votes and vote-type overlap.
+
+Checklist:
+- Public documented API: Yes (ODA `Afstemning`, `Stemme`, party memberships).
+- Scraping/reverse engineering: No.
+- Coverage across MPs: Yes.
+- Official/reliable source: Yes (ODA).
+- Objective/verifiable: Yes (counts, percentages, denominators).
+- Credentials/contracts: No.
+
+Decision:
+- Accepted.
+
+Neutral naming:
+- `Stemmesammenfald mellem partier`.
+
+### B. MP-vs-MP comparison view
+
+Proposal:
+- Select two MPs and compare vote overlap, divergence, attendance and party-line breaks.
+
+Checklist:
+- Public documented API: Yes.
+- Scraping/reverse engineering: No.
+- Coverage across MPs: Yes (all MPs with recorded votes).
+- Official/reliable source: Yes.
+- Objective/verifiable: Yes.
+- Credentials/contracts: No.
+
+Decision:
+- Accepted.
+
+Neutral naming:
+- `Sammenlign profiler`.
+
+### C. "Votede med udfald" / "votede mod udfald" tables
+
+Proposal:
+- Add sortable lists showing how often a member/party vote matched final outcome.
+
+Checklist:
+- Public documented API: Yes.
+- Scraping/reverse engineering: No.
+- Coverage across MPs: Yes.
+- Official/reliable source: Yes.
+- Objective/verifiable: Yes, if method is fully documented.
+- Credentials/contracts: No.
+
+Decision:
+- Accepted, with neutral framing only.
+
+Required context copy:
+- Exclude `Fravaer` from denominator.
+- Show raw counts + percentage + vote links.
+- Explain that "with outcome" does not imply motivation.
+
+### D. Candidate-test style "find nearest vote profile"
+
+Proposal:
+- Guided questionnaire where users pick positions on real recorded votes, then see similarity % to MPs/parties.
+
+Checklist:
+- Public documented API: Yes.
+- Scraping/reverse engineering: No.
+- Coverage across MPs: Yes.
+- Official/reliable source: Yes.
+- Objective/verifiable: Yes (deterministic scoring against recorded votes).
+- Credentials/contracts: No.
+
+Decision:
+- Accepted.
+
+Guardrails:
+- Use real vote text + source links.
+- No AI-generated issue summaries.
+- Label as `stemme-match`, not endorsement.
+
+### E. Meeting and agenda overview page
+
+Proposal:
+- Add "kommende/moedehistorik" overview using ODA meeting entities.
+
+Checklist:
+- Public documented API: Yes (`M%C3%B8de`, `M%C3%B8deAkt%C3%B8r`, `M%C3%B8destatus`, `M%C3%B8detype`).
+- Scraping/reverse engineering: No.
+- Coverage across MPs: Broad parliamentary coverage.
+- Official/reliable source: Yes.
+- Objective/verifiable: Yes.
+- Credentials/contracts: No.
+
+Decision:
+- Accepted.
+
+### F. Download center for predefined neutral CSV extracts
+
+Proposal:
+- Provide downloadable slices (e.g. all votes this session, all votes for one MP, party splits).
+
+Checklist:
+- Public documented API: Yes (derived from existing ODA pipeline).
+- Scraping/reverse engineering: No.
+- Coverage across MPs: Yes.
+- Official/reliable source: Yes.
+- Objective/verifiable: Yes.
+- Credentials/contracts: No.
+
+Decision:
+- Accepted.
+
+---
+
+## Evaluated and rejected ideas
+
+### Normative ranking labels (medlober, kontraer, status quo) as primary UX
+
+Proposal:
+- Copy value-loaded labels and default top/bottom ranking framing.
+
+Rejected because:
+- Violates neutral wording goal and implies motives/virtue judgments.
+- Encourages editorial interpretation over source-first exploration.
+- Can be replaced by objective labels already accepted above.
+
+Alternative:
+- Keep equivalent math but present as neutral metrics (`med udfald`, `mod udfald`, `partisammenfald`, `dissens`).
+
+Sources checked:
+- https://politikdata.dk/guide
+- https://politikdata.dk/medloberi/personer
+- https://politikdata.dk/medloberi/partier
