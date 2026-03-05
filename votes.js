@@ -1624,13 +1624,24 @@ const VotesApp = (() => {
 
     const caseActors = Array.isArray(timeline?.actors) ? timeline.actors : [];
     const caseActorItems = caseActors.filter((entry) => String(entry?.role || "").trim() || String(entry?.name || "").trim());
+    const personActorItems = caseActorItems.filter((entry) => {
+      const actorType = String(entry?.type || "").trim().toLowerCase();
+      return !actorType || actorType === "person";
+    });
+    const contextualActorItems = caseActorItems.filter((entry) => {
+      const actorType = String(entry?.type || "").trim().toLowerCase();
+      return Boolean(actorType) && actorType !== "person";
+    });
     const caseActorFragment = document.createDocumentFragment();
-    for (const actor of caseActorItems) {
+    for (const actor of [...personActorItems, ...contextualActorItems]) {
       const item = document.createElement("li");
       const primary = document.createElement("span");
       const roleText = String(actor.role || "").trim();
       const actorText = String(actor.name || "").trim();
       const actorType = String(actor.type || "").trim();
+      if (actorType && actorType.toLowerCase() !== "person") {
+        item.classList.add("vote-meta-secondary-item");
+      }
       if (roleText && actorText) {
         primary.textContent = `${roleText}: ${actorText}`;
       } else {
@@ -1646,7 +1657,7 @@ const VotesApp = (() => {
       caseActorFragment.append(item);
     }
     voteCaseActorsList.replaceChildren(caseActorFragment);
-    voteCaseActorsList.classList.toggle("vote-meta-list-columns", caseActorItems.length >= 6);
+    voteCaseActorsList.classList.toggle("vote-meta-list-columns", personActorItems.length >= 6);
     voteCaseActorsBlock.classList.toggle("hidden", caseActorItems.length === 0);
 
     const taxonomyEntries = [

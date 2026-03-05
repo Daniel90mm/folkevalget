@@ -4068,6 +4068,15 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
   align-content: start;
 }
 
+.page-votes #vote-case-actors-list .vote-meta-secondary-item {
+  grid-column: 1 / -1;
+  padding-top: var(--space-sm);
+}
+
+.page-votes #vote-case-actors-list.vote-meta-list-columns .vote-meta-secondary-item {
+  border-top: 1px solid var(--color-border);
+}
+
 .page-votes .vote-meta-list a,
 .page-votes .vote-meta-list span {
   overflow-wrap: anywhere;
