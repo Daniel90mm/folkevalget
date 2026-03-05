@@ -1450,6 +1450,7 @@ body.global-search-open {
 .toolbar-panel {
   display: grid;
   gap: var(--space-md);
+  border: 0;
 }
 
 .toolbar-grid {
