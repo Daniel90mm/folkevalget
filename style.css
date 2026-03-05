@@ -1729,6 +1729,13 @@ body.global-search-open {
   border-top: 1px solid var(--color-border);
 }
 
+.page-discover .page-intro,
+.page-discover .toolbar-panel {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
 .page-discover .mini-metric {
   padding: 0 var(--space-md);
   border: none;
