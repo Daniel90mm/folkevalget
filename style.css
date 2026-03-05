@@ -672,6 +672,7 @@ body.global-search-open {
 .profile-summary,
 .vote-row-body p,
 .vote-detail-meta,
+.vote-emneord-inline-list,
 .vote-origin-case,
 .vote-signal-card p,
 .table-note,
@@ -689,8 +690,29 @@ body.global-search-open {
 .footer-note,
 .profile-summary,
 .vote-detail-meta,
+.vote-emneord-inline-list,
 .vote-origin-case {
   max-width: 68ch;
+}
+
+.vote-emneord-inline {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.vote-emneord-inline-label {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.vote-emneord-inline-list {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.45;
 }
 
 .vote-origin-case {
@@ -1901,8 +1923,8 @@ body.global-search-open {
 
 .page-votes .vote-case-meta-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-xl);
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-lg);
 }
 
 .page-votes .vote-case-meta-block {

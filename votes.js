@@ -16,7 +16,7 @@ const STEMME_TYPE_TEKST = {
 };
 
 const VotesApp = (() => {
-  const VALID_SORTS = new Set(["date_desc", "passed_first", "failed_first", "close_first", "split_first"]);
+  const VALID_SORTS = new Set(["date_desc", "passed_first", "failed_first", "close_first", "split_first", "emneord_asc"]);
 
   const state = {
     profiles: [],
@@ -53,6 +53,8 @@ const VotesApp = (() => {
   const votePartyFilter = document.querySelector("#vote-party-filter");
   const voteContext = document.querySelector("#vote-context");
   const voteSourceLink = document.querySelector("#vote-source-link");
+  const voteEmneordInline = document.querySelector("#vote-emneord-inline");
+  const voteEmneordInlineList = document.querySelector("#vote-emneord-inline-list");
   const voteOriginCase = document.querySelector("#vote-origin-case");
   const voteResumeBody = document.querySelector("#vote-resume-body");
   const voteTimeline = document.querySelector("#vote-timeline");
@@ -62,11 +64,6 @@ const VotesApp = (() => {
   const voteCaseMeta = document.querySelector("#vote-case-meta");
   const voteRelatedCasesBlock = document.querySelector("#vote-related-cases-block");
   const voteRelatedCasesList = document.querySelector("#vote-related-cases-list");
-  const voteEmneordBlock = document.querySelector("#vote-emneord-block");
-  const voteEmneordSagGroup = document.querySelector("#vote-emneord-sag-group");
-  const voteEmneordSagList = document.querySelector("#vote-emneord-sag-list");
-  const voteEmneordDokumentGroup = document.querySelector("#vote-emneord-dokument-group");
-  const voteEmneordDokumentList = document.querySelector("#vote-emneord-dokument-list");
 
   async function boot() {
     hydrateStateFromQuery();
@@ -313,6 +310,14 @@ const VotesApp = (() => {
       return compareVotesByDate(left, right);
     }
 
+    if (state.sortMode === "emneord_asc") {
+      const emneordDelta = compareVotesByEmneord(left, right);
+      if (emneordDelta !== 0) {
+        return emneordDelta;
+      }
+      return compareVotesByDate(left, right);
+    }
+
     return compareVotesByDate(left, right);
   }
 
@@ -328,6 +333,27 @@ const VotesApp = (() => {
       return dateDelta;
     }
     return Number(right.afstemning_id || 0) - Number(left.afstemning_id || 0);
+  }
+
+  function compareVotesByEmneord(left, right) {
+    const leftLabel = votePrimaryEmneordLabel(left);
+    const rightLabel = votePrimaryEmneordLabel(right);
+    const leftHasLabel = Boolean(leftLabel);
+    const rightHasLabel = Boolean(rightLabel);
+    if (leftHasLabel && rightHasLabel) {
+      const labelDelta = leftLabel.localeCompare(rightLabel, "da");
+      if (labelDelta !== 0) {
+        return labelDelta;
+      }
+      return String(left.sag_number || "").localeCompare(String(right.sag_number || ""), "da");
+    }
+    if (leftHasLabel) {
+      return -1;
+    }
+    if (rightHasLabel) {
+      return 1;
+    }
+    return 0;
   }
 
   function syncQueryString() {
@@ -400,6 +426,7 @@ const VotesApp = (() => {
 
     document.title = `${selectedVote.sag_number || "Afstemning"} | Folkevalget`;
     renderVoteHeader(selectedVote);
+    renderVoteEmneordInline(selectedVote);
     renderVoteSignalsSummary(selectedVote);
     renderVoteContext(selectedVote);
     renderVoteTimeline(selectedVote);
@@ -584,6 +611,25 @@ const VotesApp = (() => {
       voteSourceLink.classList.add("hidden");
       voteSourceLink.removeAttribute("href");
     }
+  }
+
+  function renderVoteEmneordInline(vote) {
+    if (!voteEmneordInline || !voteEmneordInlineList) {
+      return;
+    }
+
+    const entries = emneordEntriesForVote(vote);
+    if (entries.length === 0) {
+      voteEmneordInline.classList.add("hidden");
+      voteEmneordInlineList.textContent = "";
+      return;
+    }
+
+    const visibleLabels = entries.slice(0, 4).map((entry) => formatEmneordEntry(entry));
+    const hiddenCount = Math.max(0, entries.length - visibleLabels.length);
+    const suffix = hiddenCount > 0 ? ` Â· +${hiddenCount} flere` : "";
+    voteEmneordInlineList.textContent = `${visibleLabels.join(" Â· ")}${suffix}`;
+    voteEmneordInline.classList.remove("hidden");
   }
 
   function renderVoteSignalsSummary(vote) {
@@ -894,25 +940,13 @@ const VotesApp = (() => {
   }
 
   function renderVoteCaseMeta(vote) {
-    if (
-      !voteCaseMeta ||
-      !voteRelatedCasesBlock ||
-      !voteRelatedCasesList ||
-      !voteEmneordBlock ||
-      !voteEmneordSagGroup ||
-      !voteEmneordSagList ||
-      !voteEmneordDokumentGroup ||
-      !voteEmneordDokumentList
-    ) {
+    if (!voteCaseMeta || !voteRelatedCasesBlock || !voteRelatedCasesList) {
       return;
     }
 
     const timeline = state.timelinesBySagId.get(Number(vote.sag_id)) || null;
     const relatedCases = Array.isArray(timeline?.related_cases) ? timeline.related_cases : [];
     const visibleRelatedCases = relatedCases.filter((relatedCase) => !isFremsatUnderRelatedCase(relatedCase));
-    const emneord = timeline?.emneord || {};
-    const sagEmneord = Array.isArray(emneord.sag) ? emneord.sag : [];
-    const dokumentEmneord = Array.isArray(emneord.dokumenter) ? emneord.dokumenter : [];
 
     const relatedFragment = document.createDocumentFragment();
     for (const relatedCase of visibleRelatedCases) {
@@ -942,33 +976,8 @@ const VotesApp = (() => {
     }
     voteRelatedCasesList.replaceChildren(relatedFragment);
     voteRelatedCasesBlock.classList.toggle("hidden", visibleRelatedCases.length === 0);
-
-    const renderedSagEmneord = renderEmneordList(voteEmneordSagList, sagEmneord);
-    const renderedDokumentEmneord = renderEmneordList(voteEmneordDokumentList, dokumentEmneord);
-    voteEmneordSagGroup.classList.toggle("hidden", renderedSagEmneord === 0);
-    voteEmneordDokumentGroup.classList.toggle("hidden", renderedDokumentEmneord === 0);
-    voteEmneordBlock.classList.toggle("hidden", renderedSagEmneord === 0 && renderedDokumentEmneord === 0);
-
-    const hasMeta = visibleRelatedCases.length > 0 || renderedSagEmneord > 0 || renderedDokumentEmneord > 0;
+    const hasMeta = visibleRelatedCases.length > 0;
     voteCaseMeta.classList.toggle("hidden", !hasMeta);
-  }
-
-  function renderEmneordList(root, emneordItems) {
-    const fragment = document.createDocumentFragment();
-    let count = 0;
-    for (const emneord of emneordItems) {
-      const item = document.createElement("li");
-      const label = String(emneord?.emneord || "").trim();
-      if (!label) {
-        continue;
-      }
-      const type = String(emneord?.type || "").trim();
-      item.textContent = type ? `${label} (${type})` : label;
-      fragment.append(item);
-      count += 1;
-    }
-    root.replaceChildren(fragment);
-    return count;
   }
 
   function renderPartyFilter(vote) {
@@ -1375,6 +1384,63 @@ const VotesApp = (() => {
       hverken: "Hverken",
     };
     return labels[key] || key;
+  }
+
+  function votePrimaryEmneordLabel(vote) {
+    const entries = emneordEntriesForVote(vote);
+    if (entries.length === 0) {
+      return "";
+    }
+    const labels = entries
+      .map((entry) => String(entry?.emneord || "").trim())
+      .filter(Boolean)
+      .sort((left, right) => left.localeCompare(right, "da"));
+    return labels[0] || "";
+  }
+
+  function emneordEntriesForVote(vote) {
+    const timeline = state.timelinesBySagId.get(Number(vote?.sag_id)) || null;
+    const emneord = timeline?.emneord || {};
+    const sagEntries = Array.isArray(emneord.sag) ? emneord.sag : [];
+    const dokumentEntries = Array.isArray(emneord.dokumenter) ? emneord.dokumenter : [];
+    const fallbackEntries = Array.isArray(emneord.samlet) ? emneord.samlet : [];
+
+    const entries = [];
+    const seen = new Set();
+    const sourceLists =
+      sagEntries.length > 0 || dokumentEntries.length > 0
+        ? [sagEntries, dokumentEntries]
+        : [fallbackEntries];
+
+    for (const source of sourceLists) {
+      for (const entry of source) {
+        const label = String(entry?.emneord || "").trim();
+        if (!label) {
+          continue;
+        }
+        const type = String(entry?.type || "").trim();
+        const key = `${label.toLowerCase()}||${type.toLowerCase()}`;
+        if (seen.has(key)) {
+          continue;
+        }
+        seen.add(key);
+        entries.push({
+          emneord: label,
+          type,
+        });
+      }
+    }
+
+    return entries;
+  }
+
+  function formatEmneordEntry(entry) {
+    const label = String(entry?.emneord || "").trim();
+    const type = String(entry?.type || "").trim();
+    if (!label) {
+      return "";
+    }
+    return type ? `${label} (${type})` : label;
   }
 
   function formatResumeText(value) {

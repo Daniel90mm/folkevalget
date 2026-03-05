@@ -23,7 +23,7 @@
         } catch (error) {}
       })();
     </script>
-    <link rel="stylesheet" href="style.css?v=20260305f">
+    <link rel="stylesheet" href="style.css?v=20260305g">
   </head>
   <body class="page-votes">
     <div class="site-shell">
@@ -91,6 +91,7 @@
                     <option value="failed_first">Forkastede først</option>
                     <option value="close_first">Tætteste først</option>
                     <option value="split_first">Flest partisplits</option>
+                    <option value="emneord_asc">Emneord (A-Å)</option>
                   </select>
                 </label>
                 <div class="votes-filter-toggles">
@@ -115,11 +116,15 @@
             </div>
 
             <div class="vote-detail-content hidden" id="vote-detail-content">
-              <div class="vote-detail-head">
+                <div class="vote-detail-head">
                 <div class="vote-detail-copy">
                   <p class="eyebrow" id="vote-detail-kicker">Forslag</p>
                   <h2 id="vote-title">-</h2>
                   <p class="vote-detail-meta" id="vote-meta">-</p>
+                  <div class="vote-emneord-inline hidden" id="vote-emneord-inline">
+                    <p class="vote-emneord-inline-label">Emneord</p>
+                    <p class="vote-emneord-inline-list" id="vote-emneord-inline-list"></p>
+                  </div>
                   <p class="vote-origin-case hidden" id="vote-origin-case"></p>
                   <p class="vote-resume hidden" id="vote-resume-body"></p>
                 </div>
@@ -201,22 +206,6 @@
                       <h2>Relaterede sager</h2>
                     </div>
                     <ul class="vote-meta-list" id="vote-related-cases-list"></ul>
-                  </article>
-
-                  <article class="vote-case-meta-block hidden" id="vote-emneord-block">
-                    <div class="panel-heading">
-                      <h2>Emneord</h2>
-                    </div>
-                    <div class="vote-meta-groups">
-                      <section class="vote-meta-group hidden" id="vote-emneord-sag-group">
-                        <h3 class="vote-meta-heading">På sag</h3>
-                        <ul class="vote-meta-list" id="vote-emneord-sag-list"></ul>
-                      </section>
-                      <section class="vote-meta-group hidden" id="vote-emneord-dokument-group">
-                        <h3 class="vote-meta-heading">På dokumenter</h3>
-                        <ul class="vote-meta-list" id="vote-emneord-dokument-list"></ul>
-                      </section>
-                    </div>
                   </article>
                 </div>
               </section>
