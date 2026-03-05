@@ -71,6 +71,7 @@ const VotesApp = (() => {
     officialSagskategori: "",
     rfDocs: [],
     focusDetailRequested: false,
+    mobileFiltersOpen: false,
   };
 
   const statsRoot = document.querySelector("[data-site-stats]");
@@ -87,9 +88,14 @@ const VotesApp = (() => {
   const voteListTemplate = document.querySelector("#vote-list-item-template");
   const voterRowTemplate = document.querySelector("#voter-row-template");
   const voteResultCount = document.querySelector("#vote-result-count");
+  const voteBrowserSummary = document.querySelector("#vote-browser-summary");
   const voteEmpty = document.querySelector("#vote-empty");
   const voteDetailContent = document.querySelector("#vote-detail-content");
   const votePartyFilter = document.querySelector("#vote-party-filter");
+  const voteFiltersToggle = document.querySelector("#vote-filters-toggle");
+  const voteFiltersPanel = document.querySelector("#vote-filters-panel");
+  const voteFiltersClose = document.querySelector("#vote-filters-close");
+  const voteActiveFilters = document.querySelector("#vote-active-filters");
   const voteContext = document.querySelector("#vote-context");
   const voteFavoriteToggle = document.querySelector("#vote-favorite-toggle");
   const voteSourceLink = document.querySelector("#vote-source-link");
@@ -148,6 +154,7 @@ const VotesApp = (() => {
     bindEvents();
     prepareVoteListObserver();
     syncControls();
+    syncFilterPanel();
     applyVoteFilter();
     scheduleVoteDetailsPreload();
   }
@@ -265,6 +272,20 @@ const VotesApp = (() => {
       applyVoteFilter();
     });
 
+    if (voteFiltersToggle) {
+      voteFiltersToggle.addEventListener("click", () => {
+        state.mobileFiltersOpen = !state.mobileFiltersOpen;
+        syncFilterPanel();
+      });
+    }
+
+    if (voteFiltersClose) {
+      voteFiltersClose.addEventListener("click", () => {
+        state.mobileFiltersOpen = false;
+        syncFilterPanel();
+      });
+    }
+
     voteList.addEventListener("click", (event) => {
       const button = event.target.closest("[data-vote-id]");
       if (!button) {
@@ -298,6 +319,49 @@ const VotesApp = (() => {
       const vote = getSelectedOverviewVote();
       if (vote) {
         updateVoteFavoriteToggle(vote);
+      }
+    });
+
+    if (voteActiveFilters) {
+      voteActiveFilters.addEventListener("click", (event) => {
+        const button = event.target.closest("[data-clear-filter]");
+        if (!button) {
+          return;
+        }
+
+        const filterKey = button.dataset.clearFilter;
+        if (filterKey === "query") {
+          state.query = "";
+        }
+        if (filterKey === "type") {
+          state.typeFilter = "";
+        }
+        if (filterKey === "sagstype") {
+          state.officialSagstype = "";
+        }
+        if (filterKey === "sagsstatus") {
+          state.officialSagsstatus = "";
+        }
+        if (filterKey === "sagskategori") {
+          state.officialSagskategori = "";
+        }
+        if (filterKey === "close") {
+          state.closeOnly = false;
+          state.closeThresholdPct = DEFAULT_CLOSE_VOTE_THRESHOLD_PCT;
+        }
+        if (filterKey === "split") {
+          state.splitOnly = false;
+        }
+
+        syncControls();
+        applyVoteFilter();
+      });
+    }
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && state.mobileFiltersOpen) {
+        state.mobileFiltersOpen = false;
+        syncFilterPanel();
       }
     });
 
@@ -512,6 +576,8 @@ const VotesApp = (() => {
     }
 
     resetVisibleVoteCount();
+    renderActiveFilters();
+    renderVoteBrowserSummary();
     renderVoteList();
     renderSelectedVote();
     syncQueryString();
@@ -743,6 +809,73 @@ const VotesApp = (() => {
     window.history.replaceState({}, "", next);
   }
 
+  function syncFilterPanel() {
+    if (!voteFiltersToggle || !voteFiltersPanel) {
+      document.body.classList.remove("filters-open");
+      return;
+    }
+
+    voteFiltersToggle.setAttribute("aria-expanded", String(state.mobileFiltersOpen));
+    voteFiltersPanel.dataset.open = String(state.mobileFiltersOpen);
+    document.body.classList.toggle("filters-open", state.mobileFiltersOpen);
+  }
+
+  function renderActiveFilters() {
+    if (!voteActiveFilters) {
+      return;
+    }
+
+    voteActiveFilters.innerHTML = "";
+
+    const filters = [
+      state.query.trim() ? { key: "query", label: `Søg: ${state.query.trim()}` } : null,
+      state.typeFilter ? { key: "type", label: findSelectOptionLabel(voteTypeSelect, state.typeFilter) } : null,
+      state.officialSagstype ? { key: "sagstype", label: state.officialSagstype } : null,
+      state.officialSagsstatus ? { key: "sagsstatus", label: state.officialSagsstatus } : null,
+      state.officialSagskategori ? { key: "sagskategori", label: state.officialSagskategori } : null,
+      state.closeOnly ? { key: "close", label: `Tæt afstemning (${state.closeThresholdPct} %)` } : null,
+      state.splitOnly ? { key: "split", label: "Partisplits" } : null,
+    ].filter(Boolean);
+
+    voteActiveFilters.classList.toggle("hidden", filters.length === 0);
+
+    for (const filter of filters) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "active-filter";
+      button.dataset.clearFilter = filter.key;
+      button.textContent = `${filter.label} ×`;
+      voteActiveFilters.append(button);
+    }
+  }
+
+  function renderVoteBrowserSummary() {
+    if (!voteBrowserSummary) {
+      return;
+    }
+
+    const shown = Number(state.filteredVotes.length || 0);
+    const total = Number(state.votes.length || 0);
+    const sortLabel = findSelectOptionLabel(voteSortSelect, state.sortMode) || "Nyeste først";
+
+    if (shown === total) {
+      voteBrowserSummary.textContent = `${window.Folkevalget.formatNumber(total)} forslag i visningen. Sortering: ${sortLabel}.`;
+      return;
+    }
+
+    voteBrowserSummary.textContent =
+      `Viser ${window.Folkevalget.formatNumber(shown)} af ${window.Folkevalget.formatNumber(total)} forslag. Sortering: ${sortLabel}.`;
+  }
+
+  function findSelectOptionLabel(select, value) {
+    if (!select) {
+      return value || "";
+    }
+
+    const option = Array.from(select.options).find((entry) => entry.value === value);
+    return option?.textContent || value || "";
+  }
+
   function renderVoteList() {
     voteList.innerHTML = "";
     voteResultCount.textContent = `${window.Folkevalget.formatNumber(state.filteredVotes.length)} forslag`;
@@ -766,8 +899,10 @@ const VotesApp = (() => {
       item.dataset.voteId = String(vote.afstemning_id);
       item.classList.toggle("active", vote.afstemning_id === state.selectedVoteId);
       item.querySelector("[data-cell='number']").textContent = vote.sag_number || `Afstemning ${vote.nummer || ""}`.trim();
-      item.querySelector("[data-cell='date']").textContent = window.Folkevalget.formatDate(vote.date);
+      item.querySelector("[data-cell='type']").textContent = vote.type || vote.sagstrin_type || "Afstemning";
       item.querySelector("[data-cell='title']").textContent = vote.sag_short_title || vote.sag_title || "Afstemning";
+      item.querySelector("[data-cell='date']").textContent = window.Folkevalget.formatDate(vote.date);
+      item.querySelector("[data-cell='status']").textContent = vote.vedtaget ? "Vedtaget" : "Forkastet";
       item.querySelector("[data-cell='for-count']").textContent =
         `${window.Folkevalget.formatNumber(counts.for)} for`;
       item.querySelector("[data-cell='against-count']").textContent =
@@ -951,6 +1086,8 @@ const VotesApp = (() => {
     const kickerLabel = [vote.type || "Afstemning", vote.sag_number || null].filter(Boolean).join(" · ");
     const tooltipText = buildKickerTooltipText(vote);
     const kicker = document.querySelector("#vote-detail-kicker");
+    const outcomeValue = document.querySelector("#vote-outcome-value");
+    const outcomeNote = document.querySelector("#vote-outcome-note");
 
     if (tooltipText) {
       const wrap = document.createElement("span");
@@ -980,6 +1117,16 @@ const VotesApp = (() => {
       vote.vedtaget ? "Forslaget blev vedtaget" : "Forslaget blev forkastet",
       `${window.Folkevalget.formatNumber(forCount + againstCount)} ja/nej-stemmer`,
     ].join(" · ");
+
+    if (outcomeValue) {
+      outcomeValue.textContent = vote.vedtaget ? "Vedtaget" : "Forkastet";
+    }
+    if (outcomeNote) {
+      outcomeNote.textContent =
+        voteDecisionTotal(vote) > 0
+          ? `${window.Folkevalget.formatNumber(forCount)} for og ${window.Folkevalget.formatNumber(againstCount)} imod.`
+          : "Ingen registrerede ja/nej-stemmer i datasættet.";
+    }
 
     if (voteOriginCase) {
       const timeline = timelineBySagId(vote.sag_id);
