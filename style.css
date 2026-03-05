@@ -3647,7 +3647,6 @@ html[data-theme="dark"] .page-votes .votes-layout {
   align-items: center;
   gap: var(--space-md);
   padding-top: var(--space-xs);
-  border-top: 1px solid var(--color-border);
 }
 
 .page-votes .toggle-check {
@@ -3788,7 +3787,9 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
 }
 
 .page-votes .votes-detail-panel {
-  padding: clamp(1.5rem, 2vw, 2rem);
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 .page-votes .vote-detail-hero {
@@ -3796,6 +3797,13 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
   grid-template-columns: minmax(0, 1fr) minmax(18rem, 22rem);
   gap: var(--space-xl);
   align-items: stretch;
+}
+
+.page-votes .vote-detail-content,
+.page-votes .vote-detail-rail,
+.page-votes .vote-records {
+  background: transparent;
+  border: 0;
 }
 
 .page-votes .vote-detail-copy h2 {

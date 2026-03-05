@@ -2,6 +2,7 @@ const DEFAULT_CLOSE_VOTE_THRESHOLD_PCT = 10;
 const MIN_CLOSE_VOTE_THRESHOLD_PCT = 0;
 const MAX_CLOSE_VOTE_THRESHOLD_PCT = 100;
 const VOTE_LIST_CHUNK_SIZE = 50;
+const COMMON_EMNEORD_MIN_OCCURRENCES = 10;
 
 const SAG_TYPE_TEKST = {
   L:  "Lovforslag — forslag til en ny lov eller ændring af gældende lovgivning. Behandles normalt tre gange i Folketinget.",
@@ -65,6 +66,8 @@ const VotesApp = (() => {
     closeOnly: false,
     closeThresholdPct: DEFAULT_CLOSE_VOTE_THRESHOLD_PCT,
     splitOnly: false,
+    exactEmneord: "",
+    commonEmneordOptions: [],
     typeFilter: "",
     officialSagstype: "",
     officialSagsstatus: "",
@@ -85,6 +88,8 @@ const VotesApp = (() => {
   const voteCloseThreshold = document.querySelector("#vote-close-threshold");
   const voteCloseThresholdField = document.querySelector("#vote-close-threshold-field");
   const voteSplitOnly = document.querySelector("#vote-split-only");
+  const voteEmneordField = document.querySelector("#vote-emneord-field");
+  const voteEmneordSelect = document.querySelector("#vote-emneord-select");
   const voteList = document.querySelector("#vote-list");
   const voteListTemplate = document.querySelector("#vote-list-item-template");
   const voteResultCount = document.querySelector("#vote-result-count");
@@ -151,6 +156,7 @@ const VotesApp = (() => {
 
     window.Folkevalget.renderStats(statsRoot, stats);
     populateOfficialTaxonomyFilters();
+    populateCommonEmneordFilter();
     bindEvents();
     prepareVoteListObserver();
     syncControls();
@@ -168,6 +174,7 @@ const VotesApp = (() => {
     state.closeOnly = params.get("close") === "1";
     state.closeThresholdPct = sanitiseCloseThresholdPct(params.get("close_margin"));
     state.splitOnly = params.get("split") === "1";
+    state.exactEmneord = params.get("emneord") || "";
     state.typeFilter = params.get("type") || "";
     state.officialSagstype = params.get("sagstype") || "";
     state.officialSagsstatus = params.get("sagsstatus") || "";
@@ -207,7 +214,15 @@ const VotesApp = (() => {
       voteCloseThreshold.value = String(state.closeThresholdPct);
     }
     voteSplitOnly.checked = state.splitOnly;
+    if (voteEmneordSelect) {
+      const hasValue = optionExists(voteEmneordSelect, state.exactEmneord);
+      voteEmneordSelect.value = hasValue ? state.exactEmneord : "";
+      if (!hasValue) {
+        state.exactEmneord = "";
+      }
+    }
     syncCloseThresholdVisibility();
+    syncEmneordFilterVisibility();
   }
 
   function bindEvents() {
@@ -244,6 +259,10 @@ const VotesApp = (() => {
 
     voteSortSelect.addEventListener("change", (event) => {
       state.sortMode = event.target.value;
+      if (!isExactEmneordMode()) {
+        state.exactEmneord = "";
+      }
+      syncEmneordFilterVisibility();
       applyVoteFilter();
     });
 
@@ -273,6 +292,13 @@ const VotesApp = (() => {
       state.splitOnly = event.target.checked;
       applyVoteFilter();
     });
+
+    if (voteEmneordSelect) {
+      voteEmneordSelect.addEventListener("change", (event) => {
+        state.exactEmneord = event.target.value;
+        applyVoteFilter();
+      });
+    }
 
     if (voteFiltersToggle) {
       voteFiltersToggle.addEventListener("click", () => {
@@ -353,6 +379,9 @@ const VotesApp = (() => {
         }
         if (filterKey === "split") {
           state.splitOnly = false;
+        }
+        if (filterKey === "emneord") {
+          state.exactEmneord = "";
         }
 
         syncControls();
@@ -559,6 +588,9 @@ const VotesApp = (() => {
         if (state.officialSagskategori && !matchesTaxonomyFilter(state.officialSagskategori, timeline?.sag_category)) {
           return false;
         }
+        if (isExactEmneordMode() && state.exactEmneord && !voteHasExactEmneord(vote, state.exactEmneord)) {
+          return false;
+        }
         if (tokens.length > 0 && searchScore < 0) {
           return false;
         }
@@ -754,6 +786,43 @@ const VotesApp = (() => {
     }
   }
 
+  function populateCommonEmneordFilter() {
+    if (!voteEmneordSelect) {
+      return;
+    }
+
+    const counts = new Map();
+    for (const vote of state.votes) {
+      for (const label of voteEmneordLabels(vote)) {
+        counts.set(label, (counts.get(label) || 0) + 1);
+      }
+    }
+
+    state.commonEmneordOptions = [...counts.entries()]
+      .filter(([, count]) => count >= COMMON_EMNEORD_MIN_OCCURRENCES)
+      .sort((left, right) => left[0].localeCompare(right[0], "da"))
+      .map(([label, count]) => ({ label, count }));
+
+    const selected = state.exactEmneord;
+    voteEmneordSelect.innerHTML = "";
+
+    const allOption = document.createElement("option");
+    allOption.value = "";
+    allOption.textContent = "Alle emneord";
+    voteEmneordSelect.append(allOption);
+
+    for (const optionData of state.commonEmneordOptions) {
+      const option = document.createElement("option");
+      option.value = optionData.label;
+      option.textContent = `${optionData.label} (${window.Folkevalget.formatNumber(optionData.count)})`;
+      voteEmneordSelect.append(option);
+    }
+
+    if (selected && optionExists(voteEmneordSelect, selected)) {
+      voteEmneordSelect.value = selected;
+    }
+  }
+
   function fillSimpleSelect(select, allLabel, values) {
     const selected = select.value;
     select.innerHTML = "";
@@ -770,6 +839,10 @@ const VotesApp = (() => {
     if (selected && optionExists(select, selected)) {
       select.value = selected;
     }
+  }
+
+  function isExactEmneordMode() {
+    return state.sortMode === "emneord_asc";
   }
 
   function syncQueryString() {
@@ -794,6 +867,9 @@ const VotesApp = (() => {
     }
     if (state.splitOnly) {
       params.set("split", "1");
+    }
+    if (isExactEmneordMode() && state.exactEmneord) {
+      params.set("emneord", state.exactEmneord);
     }
     if (state.typeFilter) {
       params.set("type", state.typeFilter);
@@ -831,6 +907,21 @@ const VotesApp = (() => {
     voteCloseThreshold.disabled = !state.closeOnly;
   }
 
+  function syncEmneordFilterVisibility() {
+    if (!voteEmneordField || !voteEmneordSelect) {
+      return;
+    }
+
+    const hasCommonOptions = state.commonEmneordOptions.length > 0;
+    const shouldShow = isExactEmneordMode() && hasCommonOptions;
+    voteEmneordField.classList.toggle("hidden", !shouldShow);
+    voteEmneordSelect.disabled = !shouldShow;
+
+    if (!shouldShow) {
+      voteEmneordSelect.value = "";
+    }
+  }
+
   function renderActiveFilters() {
     if (!voteActiveFilters) {
       return;
@@ -844,6 +935,7 @@ const VotesApp = (() => {
       state.officialSagstype ? { key: "sagstype", label: state.officialSagstype } : null,
       state.officialSagsstatus ? { key: "sagsstatus", label: state.officialSagsstatus } : null,
       state.officialSagskategori ? { key: "sagskategori", label: state.officialSagskategori } : null,
+      isExactEmneordMode() && state.exactEmneord ? { key: "emneord", label: `Emneord: ${state.exactEmneord}` } : null,
       state.closeOnly ? { key: "close", label: `Tæt afstemning (${state.closeThresholdPct} %)` } : null,
       state.splitOnly ? { key: "split", label: "Partisplits" } : null,
     ].filter(Boolean);
@@ -868,14 +960,23 @@ const VotesApp = (() => {
     const shown = Number(state.filteredVotes.length || 0);
     const total = Number(state.votes.length || 0);
     const sortLabel = findSelectOptionLabel(voteSortSelect, state.sortMode) || "Nyeste først";
+    const emneordSuffix =
+      isExactEmneordMode() && state.exactEmneord
+        ? ` Præcist emneord: ${state.exactEmneord}.`
+        : "";
+    const missingCommonEmneordSuffix =
+      isExactEmneordMode() && state.commonEmneordOptions.length === 0
+        ? ` Der er ingen ofte gentagne emneord i datasættet.`
+        : "";
 
     if (shown === total) {
-      voteBrowserSummary.textContent = `${window.Folkevalget.formatNumber(total)} forslag i visningen. Sortering: ${sortLabel}.`;
+      voteBrowserSummary.textContent =
+        `${window.Folkevalget.formatNumber(total)} forslag i visningen. Sortering: ${sortLabel}.${emneordSuffix}${missingCommonEmneordSuffix}`;
       return;
     }
 
     voteBrowserSummary.textContent =
-      `Viser ${window.Folkevalget.formatNumber(shown)} af ${window.Folkevalget.formatNumber(total)} forslag. Sortering: ${sortLabel}.`;
+      `Viser ${window.Folkevalget.formatNumber(shown)} af ${window.Folkevalget.formatNumber(total)} forslag. Sortering: ${sortLabel}.${emneordSuffix}${missingCommonEmneordSuffix}`;
   }
 
   function findSelectOptionLabel(select, value) {
@@ -2304,15 +2405,31 @@ const VotesApp = (() => {
   }
 
   function votePrimaryEmneordLabel(vote) {
+    const labels = voteEmneordLabels(vote);
+    if (labels.length === 0) {
+      return "";
+    }
+    return labels[0] || "";
+  }
+
+  function voteEmneordLabels(vote) {
     const entries = emneordEntriesForVote(vote);
     if (entries.length === 0) {
-      return "";
+      return [];
     }
     const labels = entries
       .map((entry) => String(entry?.emneord || "").trim())
       .filter(Boolean)
       .sort((left, right) => left.localeCompare(right, "da"));
-    return labels[0] || "";
+    return [...new Set(labels)];
+  }
+
+  function voteHasExactEmneord(vote, label) {
+    const expected = String(label || "").trim();
+    if (!expected) {
+      return true;
+    }
+    return voteEmneordLabels(vote).includes(expected);
   }
 
   function emneordEntriesForVote(vote) {
