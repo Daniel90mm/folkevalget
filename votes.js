@@ -87,7 +87,6 @@ const VotesApp = (() => {
   const voteSplitOnly = document.querySelector("#vote-split-only");
   const voteList = document.querySelector("#vote-list");
   const voteListTemplate = document.querySelector("#vote-list-item-template");
-  const voterRowTemplate = document.querySelector("#voter-row-template");
   const voteResultCount = document.querySelector("#vote-result-count");
   const voteBrowserSummary = document.querySelector("#vote-browser-summary");
   const voteEmpty = document.querySelector("#vote-empty");
@@ -1988,6 +1987,21 @@ const VotesApp = (() => {
       .sort((left, right) => left.name.localeCompare(right.name, "da"));
   }
 
+  function groupParticipantsByParty(participants) {
+    const groups = new Map();
+    for (const participant of participants) {
+      const key = participant.partyKey || "Uden parti";
+      if (!groups.has(key)) {
+        groups.set(key, []);
+      }
+      groups.get(key).push(participant);
+    }
+
+    return [...groups.entries()]
+      .map(([partyKey, members]) => ({ partyKey, members }))
+      .sort((left, right) => fullPartyName(left.partyKey).localeCompare(fullPartyName(right.partyKey), "da"));
+  }
+
   function renderParticipantList(root, participants, emptyMessage = "Ingen registrerede medlemmer i denne visning.") {
     root.innerHTML = "";
 
@@ -1997,20 +2011,54 @@ const VotesApp = (() => {
       return;
     }
 
+    const partyGroups = groupParticipantsByParty(participants);
     const fragment = document.createDocumentFragment();
-    for (const participant of participants) {
-      const row = voterRowTemplate.content.firstElementChild.cloneNode(true);
-      const partyCode = shortPartyValue(participant.partyKey);
+    for (const group of partyGroups) {
+      const partyCode = shortPartyValue(group.partyKey);
+      const partyName = fullPartyName(group.partyKey);
+      const groupCard = document.createElement("section");
+      groupCard.className = "vote-party-group";
+      groupCard.dataset.party = partyCode || "";
+      groupCard.style.setProperty("--row-party-color", partyAccentColor(partyCode));
 
-      row.href = window.Folkevalget.buildProfileUrl(participant.id);
-      row.dataset.party = partyCode || "";
-      row.style.setProperty("--row-party-color", partyAccentColor(partyCode));
-      row.querySelector("[data-cell='party-code']").textContent = partyCode || "-";
-      row.querySelector("[data-cell='party-code']").dataset.party = partyCode;
-      row.querySelector("[data-cell='party-name']").textContent = fullPartyName(participant.partyKey);
-      row.querySelector("[data-cell='name']").textContent = participant.name;
-      row.querySelector("[data-cell='role']").textContent = participant.role;
-      fragment.append(row);
+      const head = document.createElement("div");
+      head.className = "vote-party-group-head";
+
+      const badge = document.createElement("span");
+      badge.className = "party-code-badge";
+      badge.dataset.party = partyCode;
+      badge.textContent = partyCode || "?";
+
+      const copy = document.createElement("div");
+      copy.className = "vote-party-group-copy";
+
+      const title = document.createElement("strong");
+      title.textContent = partyName;
+
+      const count = document.createElement("span");
+      count.textContent = `${window.Folkevalget.formatNumber(group.members.length)} ${group.members.length === 1 ? "medlem" : "medlemmer"}`;
+
+      copy.append(title, count);
+      head.append(badge, copy);
+
+      const members = document.createElement("div");
+      members.className = "vote-member-grid";
+
+      for (const participant of group.members) {
+        const chip = document.createElement("a");
+        const label = [participant.name, partyName, participant.role].filter(Boolean).join(" — ");
+        chip.className = "vote-member-chip";
+        chip.href = window.Folkevalget.buildProfileUrl(participant.id);
+        chip.dataset.party = partyCode || "";
+        chip.style.setProperty("--row-party-color", partyAccentColor(partyCode));
+        chip.textContent = participant.name;
+        chip.title = label;
+        chip.setAttribute("aria-label", label);
+        members.append(chip);
+      }
+
+      groupCard.append(head, members);
+      fragment.append(groupCard);
     }
 
     root.append(fragment);
