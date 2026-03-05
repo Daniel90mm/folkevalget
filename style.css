@@ -663,6 +663,7 @@ body.global-search-open {
 .profile-summary,
 .vote-row-body p,
 .vote-detail-meta,
+.vote-origin-case,
 .vote-signal-card p,
 .table-note,
 .voter-row-party,
@@ -678,8 +679,23 @@ body.global-search-open {
 .table-note,
 .footer-note,
 .profile-summary,
-.vote-detail-meta {
+.vote-detail-meta,
+.vote-origin-case {
   max-width: 68ch;
+}
+
+.vote-origin-case {
+  margin: 0;
+  font-size: var(--text-sm);
+}
+
+.vote-origin-case a {
+  color: var(--color-accent);
+}
+
+.vote-origin-case a:hover,
+.vote-origin-case a:focus-visible {
+  color: var(--color-accent-hover);
 }
 
 .vote-resume {

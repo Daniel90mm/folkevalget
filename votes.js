@@ -50,6 +50,7 @@ const VotesApp = (() => {
   const votePartyFilter = document.querySelector("#vote-party-filter");
   const voteContext = document.querySelector("#vote-context");
   const voteSourceLink = document.querySelector("#vote-source-link");
+  const voteOriginCase = document.querySelector("#vote-origin-case");
   const voteResumeBody = document.querySelector("#vote-resume-body");
   const voteTimeline = document.querySelector("#vote-timeline");
   const voteTimelineList = document.querySelector("#vote-timeline-list");
@@ -425,6 +426,37 @@ const VotesApp = (() => {
       vote.vedtaget ? "Forslaget blev vedtaget" : "Forslaget blev forkastet",
       `${window.Folkevalget.formatNumber(forCount + againstCount)} ja/nej-stemmer`,
     ].join(" · ");
+
+    if (voteOriginCase) {
+      const timeline = state.timelinesBySagId.get(Number(vote.sag_id)) || null;
+      const relatedCases = Array.isArray(timeline?.related_cases) ? timeline.related_cases : [];
+      const originCase = relatedCases.find((relatedCase) =>
+        Array.isArray(relatedCase?.relations) && relatedCase.relations.includes("Fremsat under")
+      ) || null;
+      if (originCase?.sag_number) {
+        const originLink = window.Folkevalget.buildSagUrl(originCase.sag_number, vote.date);
+        voteOriginCase.textContent = "";
+        const label = document.createElement("span");
+        label.textContent = "Fremsat under: ";
+        voteOriginCase.append(label);
+        if (originLink) {
+          const link = document.createElement("a");
+          link.href = originLink;
+          link.target = "_blank";
+          link.rel = "noreferrer";
+          link.textContent = `${originCase.sag_number} ${originCase.sag_short_title || originCase.sag_title || ""}`.trim();
+          voteOriginCase.append(link);
+        } else {
+          const text = document.createElement("span");
+          text.textContent = `${originCase.sag_number} ${originCase.sag_short_title || originCase.sag_title || ""}`.trim();
+          voteOriginCase.append(text);
+        }
+        voteOriginCase.classList.remove("hidden");
+      } else {
+        voteOriginCase.classList.add("hidden");
+        voteOriginCase.textContent = "";
+      }
+    }
 
     const resumeText = formatResumeText(vote.sag_resume);
     if (resumeText) {
@@ -910,10 +942,24 @@ const VotesApp = (() => {
   }
 
   function participantIdsFor(vote, groupKey) {
-    if (state.partyFilter) {
-      return vote.vote_groups_by_party?.[state.partyFilter]?.[groupKey] || [];
+    const ids = state.partyFilter
+      ? vote.vote_groups_by_party?.[state.partyFilter]?.[groupKey] || []
+      : vote.vote_groups?.[groupKey] || [];
+    return dedupeNumericIds(ids);
+  }
+
+  function dedupeNumericIds(ids) {
+    const seen = new Set();
+    const unique = [];
+    for (const rawId of ids || []) {
+      const id = Number(rawId);
+      if (!Number.isFinite(id) || seen.has(id)) {
+        continue;
+      }
+      seen.add(id);
+      unique.push(id);
     }
-    return vote.vote_groups?.[groupKey] || [];
+    return unique;
   }
 
   function buildPartyLookup(vote) {
