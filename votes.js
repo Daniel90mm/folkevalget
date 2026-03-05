@@ -541,9 +541,7 @@ const VotesApp = (() => {
     if (voteOriginCase) {
       const timeline = state.timelinesBySagId.get(Number(vote.sag_id)) || null;
       const relatedCases = Array.isArray(timeline?.related_cases) ? timeline.related_cases : [];
-      const originCase = relatedCases.find((relatedCase) =>
-        Array.isArray(relatedCase?.relations) && relatedCase.relations.includes("Fremsat under")
-      ) || null;
+      const originCase = findFremsatUnderRelatedCase(relatedCases);
       if (originCase?.sag_number) {
         const originLink = window.Folkevalget.buildSagUrl(originCase.sag_number, vote.date);
         voteOriginCase.textContent = "";
@@ -691,6 +689,7 @@ const VotesApp = (() => {
     const timeline = state.timelinesBySagId.get(Number(vote.sag_id));
     const steps = Array.isArray(timeline?.steps) ? timeline.steps : [];
     const caseDocuments = Array.isArray(timeline?.documents) ? timeline.documents : [];
+    const relatedCases = Array.isArray(timeline?.related_cases) ? timeline.related_cases : [];
 
     if (steps.length === 0 && caseDocuments.length === 0) {
       voteTimeline.classList.add("hidden");
@@ -702,6 +701,14 @@ const VotesApp = (() => {
       ...step,
       documents: Array.isArray(step.documents) ? [...step.documents] : [],
     }));
+
+    const originCase = findFremsatUnderRelatedCase(relatedCases);
+    if (originCase) {
+      const fremsaettelseIndex = timelineItems.findIndex((item) => isFremsaettelseStep(item));
+      if (fremsaettelseIndex >= 0) {
+        timelineItems[fremsaettelseIndex].origin_case = originCase;
+      }
+    }
 
     const seenStepDocumentUrls = new Set();
     for (const step of timelineItems) {
@@ -790,12 +797,13 @@ const VotesApp = (() => {
       dateLabel.className = "vote-timeline-step-date";
       dateLabel.textContent = step.date ? window.Folkevalget.formatDate(step.date) : "Uden dato";
 
+      const titleText = step.title || step.type || "Sagstrin";
       const title = document.createElement("h3");
       title.className = "vote-timeline-step-title";
-      title.textContent = step.title || step.type || "Sagstrin";
+      title.textContent = titleText;
       card.append(dateLabel, title);
 
-      const statusParts = [step.type, step.status].filter(Boolean);
+      const statusParts = buildTimelineStatusParts(step, titleText);
       if (statusParts.length > 0) {
         const statusText = document.createElement("p");
         statusText.className = "vote-timeline-step-meta";
@@ -805,6 +813,18 @@ const VotesApp = (() => {
 
       const links = document.createElement("div");
       links.className = "vote-timeline-step-links";
+      if (step.origin_case?.sag_number) {
+        const link = document.createElement("a");
+        link.className = "vote-timeline-link";
+        link.textContent = `Fremsat under ${buildRelatedCaseLabel(step.origin_case)}`;
+        const originCaseUrl = window.Folkevalget.buildSagUrl(step.origin_case.sag_number, step.date || vote.date);
+        if (originCaseUrl) {
+          link.href = originCaseUrl;
+          link.target = "_blank";
+          link.rel = "noreferrer";
+        }
+        links.append(link);
+      }
       if (voteIds.length > 0) {
         for (const voteId of voteIds.slice(0, 4)) {
           const link = document.createElement("a");
@@ -889,17 +909,16 @@ const VotesApp = (() => {
 
     const timeline = state.timelinesBySagId.get(Number(vote.sag_id)) || null;
     const relatedCases = Array.isArray(timeline?.related_cases) ? timeline.related_cases : [];
+    const visibleRelatedCases = relatedCases.filter((relatedCase) => !isFremsatUnderRelatedCase(relatedCase));
     const emneord = timeline?.emneord || {};
     const sagEmneord = Array.isArray(emneord.sag) ? emneord.sag : [];
     const dokumentEmneord = Array.isArray(emneord.dokumenter) ? emneord.dokumenter : [];
 
     const relatedFragment = document.createDocumentFragment();
-    for (const relatedCase of relatedCases) {
+    for (const relatedCase of visibleRelatedCases) {
       const item = document.createElement("li");
       const relationText = Array.isArray(relatedCase.relations) ? relatedCase.relations.join(", ") : "";
-      const caseLabel = relatedCase.sag_number || `Sag ${relatedCase.sag_id || ""}`.trim();
-      const title = relatedCase.sag_short_title || relatedCase.sag_title || "Relateret sag";
-      const caseText = `${caseLabel}: ${title}`;
+      const caseText = buildRelatedCaseLabel(relatedCase);
       const caseUrl = window.Folkevalget.buildSagUrl(relatedCase.sag_number, vote.date);
       if (caseUrl) {
         const link = document.createElement("a");
@@ -922,7 +941,7 @@ const VotesApp = (() => {
       relatedFragment.append(item);
     }
     voteRelatedCasesList.replaceChildren(relatedFragment);
-    voteRelatedCasesBlock.classList.toggle("hidden", relatedCases.length === 0);
+    voteRelatedCasesBlock.classList.toggle("hidden", visibleRelatedCases.length === 0);
 
     const renderedSagEmneord = renderEmneordList(voteEmneordSagList, sagEmneord);
     const renderedDokumentEmneord = renderEmneordList(voteEmneordDokumentList, dokumentEmneord);
@@ -930,7 +949,7 @@ const VotesApp = (() => {
     voteEmneordDokumentGroup.classList.toggle("hidden", renderedDokumentEmneord === 0);
     voteEmneordBlock.classList.toggle("hidden", renderedSagEmneord === 0 && renderedDokumentEmneord === 0);
 
-    const hasMeta = relatedCases.length > 0 || renderedSagEmneord > 0 || renderedDokumentEmneord > 0;
+    const hasMeta = visibleRelatedCases.length > 0 || renderedSagEmneord > 0 || renderedDokumentEmneord > 0;
     voteCaseMeta.classList.toggle("hidden", !hasMeta);
   }
 
@@ -1364,6 +1383,57 @@ const VotesApp = (() => {
       .replace(/[ \t]+\n/g, "\n")
       .replace(/\n{3,}/g, "\n\n")
       .trim();
+  }
+
+  function findFremsatUnderRelatedCase(relatedCases) {
+    const list = Array.isArray(relatedCases) ? relatedCases : [];
+    for (const relatedCase of list) {
+      if (isFremsatUnderRelatedCase(relatedCase)) {
+        return relatedCase;
+      }
+    }
+    return null;
+  }
+
+  function isFremsatUnderRelatedCase(relatedCase) {
+    const relations = Array.isArray(relatedCase?.relations) ? relatedCase.relations : [];
+    return relations.some((relation) => compactTimelineText(relation) === "fremsatunder");
+  }
+
+  function buildRelatedCaseLabel(relatedCase) {
+    const caseLabel = relatedCase?.sag_number || `Sag ${relatedCase?.sag_id || ""}`.trim();
+    const title = relatedCase?.sag_short_title || relatedCase?.sag_title || "Relateret sag";
+    return `${caseLabel}: ${title}`;
+  }
+
+  function buildTimelineStatusParts(step, titleText) {
+    const parts = [];
+    const compactTitle = compactTimelineText(titleText);
+    const compactType = compactTimelineText(step?.type);
+    const compactStatus = compactTimelineText(step?.status);
+    if (step?.type && compactType && compactType !== compactTitle) {
+      parts.push(step.type);
+    }
+    if (step?.status && compactStatus && compactStatus !== compactTitle && compactStatus !== compactType) {
+      parts.push(step.status);
+    }
+    return parts;
+  }
+
+  function isFremsaettelseStep(step) {
+    const titleText = compactTimelineText(step?.title);
+    const typeText = compactTimelineText(step?.type);
+    return titleText.includes("fremsaettelse") || typeText.includes("fremsaettelse");
+  }
+
+  function compactTimelineText(value) {
+    return String(value || "")
+      .trim()
+      .toLowerCase()
+      .replaceAll("æ", "ae")
+      .replaceAll("ø", "oe")
+      .replaceAll("å", "aa")
+      .replace(/[^a-z0-9]+/g, "");
   }
 
   function findLatestTimelineIndex(items) {
