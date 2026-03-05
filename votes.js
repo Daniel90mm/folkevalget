@@ -54,6 +54,14 @@ const VotesApp = (() => {
   const voteTimeline = document.querySelector("#vote-timeline");
   const voteTimelineList = document.querySelector("#vote-timeline-list");
   const voteTimelineSourceLink = document.querySelector("#vote-timeline-source-link");
+  const voteCaseMeta = document.querySelector("#vote-case-meta");
+  const voteRelatedCasesBlock = document.querySelector("#vote-related-cases-block");
+  const voteRelatedCasesList = document.querySelector("#vote-related-cases-list");
+  const voteEmneordBlock = document.querySelector("#vote-emneord-block");
+  const voteEmneordSagGroup = document.querySelector("#vote-emneord-sag-group");
+  const voteEmneordSagList = document.querySelector("#vote-emneord-sag-list");
+  const voteEmneordDokumentGroup = document.querySelector("#vote-emneord-dokument-group");
+  const voteEmneordDokumentList = document.querySelector("#vote-emneord-dokument-list");
 
   async function boot() {
     hydrateStateFromQuery();
@@ -321,6 +329,7 @@ const VotesApp = (() => {
     renderVoteSignalsSummary(selectedVote);
     renderVoteContext(selectedVote);
     renderVoteTimeline(selectedVote);
+    renderVoteCaseMeta(selectedVote);
     renderPartyFilter(selectedVote);
     renderVoteLists(selectedVote);
 
@@ -614,15 +623,16 @@ const VotesApp = (() => {
       const rightIsStep = Number((right.vote_ids || []).length) > 0 || Boolean(right.type);
       return Number(rightIsStep) - Number(leftIsStep);
     });
+    const activeStepIndex = findLatestTimelineIndex(timelineItems);
 
     voteTimeline.classList.remove("hidden");
     const fragment = document.createDocumentFragment();
 
-    for (const step of timelineItems) {
+    for (const [index, step] of timelineItems.entries()) {
       const item = document.createElement("li");
       item.className = "vote-timeline-step";
       const voteIds = Array.isArray(step.vote_ids) ? step.vote_ids : [];
-      if (voteIds.includes(Number(vote.afstemning_id))) {
+      if (index === activeStepIndex) {
         item.classList.add("is-active");
       }
 
@@ -681,6 +691,14 @@ const VotesApp = (() => {
           if (doc.variant_code) {
             docMeta.push(`Tillæg ${doc.variant_code}`);
           }
+          if (doc.is_omtryk) {
+            const omtrykLabel = formatOmtrykLabel(doc.omtryk);
+            docMeta.push(omtrykLabel || "Omtryk");
+          }
+          const omtrykReason = formatOmtrykReason(doc.omtryk);
+          if (omtrykReason) {
+            link.title = `Omtryk: ${omtrykReason}`;
+          }
           link.textContent = docMeta.length > 0 ? `${docLabel} (${docMeta.join(" · ")})` : docLabel;
           links.append(link);
         }
@@ -704,6 +722,85 @@ const VotesApp = (() => {
       voteTimelineSourceLink.classList.add("hidden");
       voteTimelineSourceLink.removeAttribute("href");
     }
+  }
+
+  function renderVoteCaseMeta(vote) {
+    if (
+      !voteCaseMeta ||
+      !voteRelatedCasesBlock ||
+      !voteRelatedCasesList ||
+      !voteEmneordBlock ||
+      !voteEmneordSagGroup ||
+      !voteEmneordSagList ||
+      !voteEmneordDokumentGroup ||
+      !voteEmneordDokumentList
+    ) {
+      return;
+    }
+
+    const timeline = state.timelinesBySagId.get(Number(vote.sag_id)) || null;
+    const relatedCases = Array.isArray(timeline?.related_cases) ? timeline.related_cases : [];
+    const emneord = timeline?.emneord || {};
+    const sagEmneord = Array.isArray(emneord.sag) ? emneord.sag : [];
+    const dokumentEmneord = Array.isArray(emneord.dokumenter) ? emneord.dokumenter : [];
+
+    const relatedFragment = document.createDocumentFragment();
+    for (const relatedCase of relatedCases) {
+      const item = document.createElement("li");
+      const relationText = Array.isArray(relatedCase.relations) ? relatedCase.relations.join(", ") : "";
+      const caseLabel = relatedCase.sag_number || `Sag ${relatedCase.sag_id || ""}`.trim();
+      const title = relatedCase.sag_short_title || relatedCase.sag_title || "Relateret sag";
+      const caseText = `${caseLabel}: ${title}`;
+      const caseUrl = window.Folkevalget.buildSagUrl(relatedCase.sag_number, vote.date);
+      if (caseUrl) {
+        const link = document.createElement("a");
+        link.textContent = caseText;
+        link.href = caseUrl;
+        link.target = "_blank";
+        link.rel = "noreferrer";
+        item.append(link);
+      } else {
+        const text = document.createElement("span");
+        text.textContent = caseText;
+        item.append(text);
+      }
+      if (relationText) {
+        const meta = document.createElement("p");
+        meta.className = "vote-meta-subline";
+        meta.textContent = relationText;
+        item.append(meta);
+      }
+      relatedFragment.append(item);
+    }
+    voteRelatedCasesList.replaceChildren(relatedFragment);
+    voteRelatedCasesBlock.classList.toggle("hidden", relatedCases.length === 0);
+
+    const renderedSagEmneord = renderEmneordList(voteEmneordSagList, sagEmneord);
+    const renderedDokumentEmneord = renderEmneordList(voteEmneordDokumentList, dokumentEmneord);
+    voteEmneordSagGroup.classList.toggle("hidden", renderedSagEmneord === 0);
+    voteEmneordDokumentGroup.classList.toggle("hidden", renderedDokumentEmneord === 0);
+    voteEmneordBlock.classList.toggle("hidden", renderedSagEmneord === 0 && renderedDokumentEmneord === 0);
+
+    const hasMeta = relatedCases.length > 0 || renderedSagEmneord > 0 || renderedDokumentEmneord > 0;
+    voteCaseMeta.classList.toggle("hidden", !hasMeta);
+  }
+
+  function renderEmneordList(root, emneordItems) {
+    const fragment = document.createDocumentFragment();
+    let count = 0;
+    for (const emneord of emneordItems) {
+      const item = document.createElement("li");
+      const label = String(emneord?.emneord || "").trim();
+      if (!label) {
+        continue;
+      }
+      const type = String(emneord?.type || "").trim();
+      item.textContent = type ? `${label} (${type})` : label;
+      fragment.append(item);
+      count += 1;
+    }
+    root.replaceChildren(fragment);
+    return count;
   }
 
   function renderPartyFilter(vote) {
@@ -1072,6 +1169,51 @@ const VotesApp = (() => {
       .replace(/[ \t]+\n/g, "\n")
       .replace(/\n{3,}/g, "\n\n")
       .trim();
+  }
+
+  function findLatestTimelineIndex(items) {
+    let latestDate = "";
+    let latestIndex = -1;
+    for (let index = 0; index < items.length; index += 1) {
+      const dateValue = isIsoDate(items[index]?.date) ? String(items[index].date) : "";
+      if (!dateValue) {
+        continue;
+      }
+      if (dateValue > latestDate || (dateValue === latestDate && index > latestIndex)) {
+        latestDate = dateValue;
+        latestIndex = index;
+      }
+    }
+    if (latestIndex >= 0) {
+      return latestIndex;
+    }
+    return items.length > 0 ? items.length - 1 : -1;
+  }
+
+  function formatOmtrykLabel(omtrykEntries) {
+    const entries = Array.isArray(omtrykEntries) ? omtrykEntries : [];
+    if (entries.length === 0) {
+      return "";
+    }
+    const dated = entries
+      .map((entry) => (isIsoDate(entry?.date) ? String(entry.date) : ""))
+      .filter(Boolean)
+      .sort();
+    if (dated.length === 0) {
+      return "Omtryk";
+    }
+    return `Omtryk ${window.Folkevalget.formatDate(dated[dated.length - 1])}`;
+  }
+
+  function formatOmtrykReason(omtrykEntries) {
+    const entries = Array.isArray(omtrykEntries) ? omtrykEntries : [];
+    for (const entry of entries) {
+      const reason = String(entry?.reason || "").trim();
+      if (reason) {
+        return reason;
+      }
+    }
+    return "";
   }
 
   function isIsoDate(value) {

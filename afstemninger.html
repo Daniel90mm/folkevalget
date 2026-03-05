@@ -23,7 +23,7 @@
         } catch (error) {}
       })();
     </script>
-    <link rel="stylesheet" href="style.css?v=20260304b">
+    <link rel="stylesheet" href="style.css?v=20260305a">
   </head>
   <body class="page-votes">
     <div class="site-shell">
@@ -193,6 +193,33 @@
                 </div>
               </section>
 
+              <section class="vote-case-meta hidden" id="vote-case-meta">
+                <div class="vote-case-meta-grid">
+                  <article class="vote-case-meta-block hidden" id="vote-related-cases-block">
+                    <div class="panel-heading">
+                      <h2>Relaterede sager</h2>
+                    </div>
+                    <ul class="vote-meta-list" id="vote-related-cases-list"></ul>
+                  </article>
+
+                  <article class="vote-case-meta-block hidden" id="vote-emneord-block">
+                    <div class="panel-heading">
+                      <h2>Emneord</h2>
+                    </div>
+                    <div class="vote-meta-groups">
+                      <section class="vote-meta-group hidden" id="vote-emneord-sag-group">
+                        <h3 class="vote-meta-heading">På sag</h3>
+                        <ul class="vote-meta-list" id="vote-emneord-sag-list"></ul>
+                      </section>
+                      <section class="vote-meta-group hidden" id="vote-emneord-dokument-group">
+                        <h3 class="vote-meta-heading">På dokumenter</h3>
+                        <ul class="vote-meta-list" id="vote-emneord-dokument-list"></ul>
+                      </section>
+                    </div>
+                  </article>
+                </div>
+              </section>
+
               <div class="votes-toolbar">
                 <label class="field field-inline">
                   <span class="field-label">Partifilter</span>
@@ -270,7 +297,7 @@
 
     <script src="catalog.js" defer></script>
     <script src="vote-catalog.js" defer></script>
-    <script src="shared.js?v=20260304b" defer></script>
-    <script src="votes.js?v=20260304b" defer></script>
+    <script src="shared.js?v=20260305a" defer></script>
+    <script src="votes.js?v=20260305a" defer></script>
   </body>
 </html>

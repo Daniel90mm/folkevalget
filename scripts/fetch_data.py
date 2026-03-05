@@ -793,6 +793,192 @@ def fetch_sagstrin_documents(
     return rows
 
 
+def fetch_sager_by_ids(
+    client: OdaClient,
+    *,
+    sag_ids: list[int],
+) -> list[dict[str, Any]]:
+    if not sag_ids:
+        return []
+
+    rows: list[dict[str, Any]] = []
+    chunk_size = 40
+    for start in range(0, len(sag_ids), chunk_size):
+        chunk = sag_ids[start : start + chunk_size]
+        filter_expr = build_filter_for_ids("id", chunk)
+        rows.extend(
+            client.fetch_collection(
+                "Sag",
+                params={
+                    "$filter": filter_expr,
+                    "$top": len(chunk),
+                },
+                label="sag",
+            )
+        )
+        time.sleep(client.options.delay)
+
+    deduped = {int(row["id"]): row for row in rows}
+    return list(deduped.values())
+
+
+def fetch_sagstrin_by_ids(
+    client: OdaClient,
+    *,
+    sagstrin_ids: list[int],
+) -> list[dict[str, Any]]:
+    if not sagstrin_ids:
+        return []
+
+    rows: list[dict[str, Any]] = []
+    chunk_size = 40
+    for start in range(0, len(sagstrin_ids), chunk_size):
+        chunk = sagstrin_ids[start : start + chunk_size]
+        filter_expr = build_filter_for_ids("id", chunk)
+        rows.extend(
+            client.fetch_collection(
+                "Sagstrin",
+                params={
+                    "$filter": filter_expr,
+                    "$expand": "Sag,Sagstrinstype,Sagstrinsstatus,Afstemning",
+                    "$top": len(chunk),
+                },
+                label="sagstrin-lookup",
+            )
+        )
+        time.sleep(client.options.delay)
+
+    deduped = {int(row["id"]): row for row in rows}
+    return list(deduped.values())
+
+
+def fetch_sambehandling_rows(
+    client: OdaClient,
+    *,
+    sagstrin_ids: list[int],
+) -> list[dict[str, Any]]:
+    if not sagstrin_ids:
+        return []
+
+    rows: list[dict[str, Any]] = []
+    chunk_size = 20
+    for start in range(0, len(sagstrin_ids), chunk_size):
+        chunk = sagstrin_ids[start : start + chunk_size]
+        first_filter = build_filter_for_ids("førstesagstrinid", chunk)
+        second_filter = build_filter_for_ids("andetsagstrinid", chunk)
+        rows.extend(
+            client.fetch_collection(
+                "Sambehandlinger",
+                params={
+                    "$filter": f"({first_filter}) or ({second_filter})",
+                },
+                label="sambehandlinger",
+            )
+        )
+        time.sleep(client.options.delay)
+
+    deduped = {int(row["id"]): row for row in rows}
+    return list(deduped.values())
+
+
+def fetch_omtryk_rows(
+    client: OdaClient,
+    *,
+    document_ids: list[int],
+) -> list[dict[str, Any]]:
+    if not document_ids:
+        return []
+
+    rows: list[dict[str, Any]] = []
+    chunk_size = 40
+    for start in range(0, len(document_ids), chunk_size):
+        chunk = document_ids[start : start + chunk_size]
+        filter_expr = build_filter_for_ids("dokumentid", chunk)
+        rows.extend(
+            client.fetch_collection(
+                "Omtryk",
+                params={"$filter": filter_expr},
+                label="omtryk",
+            )
+        )
+        time.sleep(client.options.delay)
+    return rows
+
+
+def fetch_emneordsag_rows(
+    client: OdaClient,
+    *,
+    sag_ids: list[int],
+) -> list[dict[str, Any]]:
+    if not sag_ids:
+        return []
+
+    rows: list[dict[str, Any]] = []
+    chunk_size = 40
+    for start in range(0, len(sag_ids), chunk_size):
+        chunk = sag_ids[start : start + chunk_size]
+        filter_expr = build_filter_for_ids("sagid", chunk)
+        rows.extend(
+            client.fetch_collection(
+                "EmneordSag",
+                params={"$filter": filter_expr},
+                label="emneord-sag",
+            )
+        )
+        time.sleep(client.options.delay)
+    return rows
+
+
+def fetch_emneorddokument_rows(
+    client: OdaClient,
+    *,
+    document_ids: list[int],
+) -> list[dict[str, Any]]:
+    if not document_ids:
+        return []
+
+    rows: list[dict[str, Any]] = []
+    chunk_size = 40
+    for start in range(0, len(document_ids), chunk_size):
+        chunk = document_ids[start : start + chunk_size]
+        filter_expr = build_filter_for_ids("dokumentid", chunk)
+        rows.extend(
+            client.fetch_collection(
+                "EmneordDokument",
+                params={"$filter": filter_expr},
+                label="emneord-dokument",
+            )
+        )
+        time.sleep(client.options.delay)
+    return rows
+
+
+def fetch_emneord_rows(
+    client: OdaClient,
+    *,
+    emneord_ids: list[int],
+) -> list[dict[str, Any]]:
+    if not emneord_ids:
+        return []
+
+    rows: list[dict[str, Any]] = []
+    chunk_size = 60
+    for start in range(0, len(emneord_ids), chunk_size):
+        chunk = emneord_ids[start : start + chunk_size]
+        filter_expr = build_filter_for_ids("id", chunk)
+        rows.extend(
+            client.fetch_collection(
+                "Emneord",
+                params={"$filter": filter_expr, "$top": len(chunk)},
+                label="emneord",
+            )
+        )
+        time.sleep(client.options.delay)
+
+    deduped = {int(row["id"]): row for row in rows}
+    return list(deduped.values())
+
+
 def compute_min_period_kode(start_date: str) -> str:
     """Return the minimum Periode kode that covers start_date.
 
@@ -1066,7 +1252,12 @@ def select_primary_document_file(files: list[dict[str, Any]]) -> dict[str, Any] 
     return None
 
 
-def make_document_links(sag_document_rows: list[dict[str, Any]]) -> dict[int, list[dict[str, Any]]]:
+def make_document_links(
+    sag_document_rows: list[dict[str, Any]],
+    *,
+    omtryk_by_document_id: dict[int, list[dict[str, Any]]] | None = None,
+) -> dict[int, list[dict[str, Any]]]:
+    omtryk_by_document_id = omtryk_by_document_id or {}
     links_by_sag: dict[int, list[dict[str, Any]]] = defaultdict(list)
 
     for row in sag_document_rows:
@@ -1081,9 +1272,13 @@ def make_document_links(sag_document_rows: list[dict[str, Any]]) -> dict[int, li
             continue
 
         role = (row.get("SagDokumentRolle") or {}).get("rolle")
+        document_id = int(document["id"])
+        omtryk_entries = omtryk_by_document_id.get(document_id, [])
+        title_text = str(document.get("titel") or "")
+        is_omtryk = bool(omtryk_entries) or ("omtryk" in title_text.lower()) or ("omtryk" in str(url).lower())
         links_by_sag[sag_id].append(
             {
-                "document_id": int(document["id"]),
+                "document_id": document_id,
                 "title": document.get("titel"),
                 "number": document.get("nummer"),
                 "date": (document.get("dato") or document.get("frigivelsesdato") or row.get("frigivelsesdato") or "")[:10] or None,
@@ -1091,6 +1286,8 @@ def make_document_links(sag_document_rows: list[dict[str, Any]]) -> dict[int, li
                 "url": url,
                 "format": file_row.get("format"),
                 "variant_code": file_row.get("variantkode"),
+                "is_omtryk": is_omtryk,
+                "omtryk": omtryk_entries[:3],
             }
         )
 
@@ -1110,7 +1307,10 @@ def make_document_links(sag_document_rows: list[dict[str, Any]]) -> dict[int, li
 
 def make_sagstrin_document_links(
     sagstrin_document_rows: list[dict[str, Any]],
+    *,
+    omtryk_by_document_id: dict[int, list[dict[str, Any]]] | None = None,
 ) -> dict[int, list[dict[str, Any]]]:
+    omtryk_by_document_id = omtryk_by_document_id or {}
     links_by_sagstrin: dict[int, list[dict[str, Any]]] = defaultdict(list)
 
     for row in sagstrin_document_rows:
@@ -1124,15 +1324,21 @@ def make_sagstrin_document_links(
         if not url:
             continue
 
+        document_id = int(document["id"])
+        omtryk_entries = omtryk_by_document_id.get(document_id, [])
+        title_text = str(document.get("titel") or "")
+        is_omtryk = bool(omtryk_entries) or ("omtryk" in title_text.lower()) or ("omtryk" in str(url).lower())
         links_by_sagstrin[sagstrin_id].append(
             {
-                "document_id": int(document["id"]),
+                "document_id": document_id,
                 "title": document.get("titel"),
                 "number": document.get("nummer"),
                 "date": (document.get("dato") or document.get("frigivelsesdato") or "")[:10] or None,
                 "url": url,
                 "format": file_row.get("format"),
                 "variant_code": file_row.get("variantkode"),
+                "is_omtryk": is_omtryk,
+                "omtryk": omtryk_entries[:3],
             }
         )
 
@@ -1177,6 +1383,167 @@ def make_case_document_links_from_sagstrin(
         deduped[sag_id] = unique_links
 
     return deduped
+
+
+def collect_document_ids(
+    *,
+    sag_document_rows: list[dict[str, Any]],
+    sagstrin_document_rows: list[dict[str, Any]],
+) -> list[int]:
+    ids: set[int] = set()
+    for row in sag_document_rows:
+        document = row.get("Dokument") or {}
+        if document.get("id") is not None:
+            ids.add(int(document["id"]))
+    for row in sagstrin_document_rows:
+        document = row.get("Dokument") or {}
+        if document.get("id") is not None:
+            ids.add(int(document["id"]))
+    return sorted(ids)
+
+
+def build_omtryk_map(omtryk_rows: list[dict[str, Any]]) -> dict[int, list[dict[str, Any]]]:
+    by_document: dict[int, list[dict[str, Any]]] = defaultdict(list)
+    for row in omtryk_rows:
+        document_id = int(row.get("dokumentid") or 0)
+        if document_id <= 0:
+            continue
+        by_document[document_id].append(
+            {
+                "id": int(row.get("id") or 0),
+                "date": (row.get("dato") or "")[:10] or None,
+                "reason": row.get("begrundelse") or None,
+            }
+        )
+
+    for document_id, entries in by_document.items():
+        entries.sort(key=lambda item: ((item.get("date") or ""), item.get("id") or 0))
+        by_document[document_id] = entries
+    return dict(by_document)
+
+
+def build_emneord_lookup(
+    emneord_rows: list[dict[str, Any]],
+    emneordstype_rows: list[dict[str, Any]],
+) -> dict[int, dict[str, Any]]:
+    type_lookup = {int(row["id"]): row.get("type") for row in emneordstype_rows if row.get("id") is not None}
+    emneord_lookup: dict[int, dict[str, Any]] = {}
+    for row in emneord_rows:
+        emneord_id = int(row["id"])
+        type_id = int(row.get("typeid") or 0)
+        emneord_lookup[emneord_id] = {
+            "id": emneord_id,
+            "emneord": row.get("emneord"),
+            "type_id": type_id or None,
+            "type": type_lookup.get(type_id),
+        }
+    return emneord_lookup
+
+
+def build_sag_emneord_map(
+    emneordsag_rows: list[dict[str, Any]],
+    emneord_lookup: dict[int, dict[str, Any]],
+) -> dict[int, list[dict[str, Any]]]:
+    by_sag: dict[int, dict[int, dict[str, Any]]] = defaultdict(dict)
+    for row in emneordsag_rows:
+        sag_id = int(row.get("sagid") or 0)
+        emneord_id = int(row.get("emneordid") or 0)
+        if sag_id <= 0 or emneord_id <= 0:
+            continue
+        emneord = emneord_lookup.get(emneord_id)
+        if not emneord:
+            continue
+        by_sag[sag_id][emneord_id] = emneord
+
+    result: dict[int, list[dict[str, Any]]] = {}
+    for sag_id, emneord_items in by_sag.items():
+        result[sag_id] = sorted(
+            emneord_items.values(),
+            key=lambda item: ((item.get("type") or ""), (item.get("emneord") or "")),
+        )
+    return result
+
+
+def build_document_emneord_map(
+    emneorddokument_rows: list[dict[str, Any]],
+    emneord_lookup: dict[int, dict[str, Any]],
+) -> dict[int, list[dict[str, Any]]]:
+    by_document: dict[int, dict[int, dict[str, Any]]] = defaultdict(dict)
+    for row in emneorddokument_rows:
+        document_id = int(row.get("dokumentid") or 0)
+        emneord_id = int(row.get("emneordid") or 0)
+        if document_id <= 0 or emneord_id <= 0:
+            continue
+        emneord = emneord_lookup.get(emneord_id)
+        if not emneord:
+            continue
+        by_document[document_id][emneord_id] = emneord
+
+    result: dict[int, list[dict[str, Any]]] = {}
+    for document_id, emneord_items in by_document.items():
+        result[document_id] = sorted(
+            emneord_items.values(),
+            key=lambda item: ((item.get("type") or ""), (item.get("emneord") or "")),
+        )
+    return result
+
+
+def build_related_cases_by_sag(
+    *,
+    primary_sag_ids: list[int],
+    sag_rows_by_id: dict[int, dict[str, Any]],
+    sagstrin_rows: list[dict[str, Any]],
+    sambehandling_rows: list[dict[str, Any]],
+) -> dict[int, list[dict[str, Any]]]:
+    relations: dict[int, dict[int, set[str]]] = defaultdict(lambda: defaultdict(set))
+
+    for sag_id in primary_sag_ids:
+        sag = sag_rows_by_id.get(sag_id) or {}
+        fremsat_under_sag_id = int(sag.get("fremsatundersagid") or 0)
+        delt_under_sag_id = int(sag.get("deltundersagid") or 0)
+
+        if fremsat_under_sag_id > 0 and fremsat_under_sag_id != sag_id:
+            relations[sag_id][fremsat_under_sag_id].add("Fremsat under")
+            relations[fremsat_under_sag_id][sag_id].add("Har undersag")
+
+        if delt_under_sag_id > 0 and delt_under_sag_id != sag_id:
+            relations[sag_id][delt_under_sag_id].add("Delt under")
+            relations[delt_under_sag_id][sag_id].add("Har delsag")
+
+    sag_by_sagstrin = {int(row["id"]): int(row["sagid"]) for row in sagstrin_rows if row.get("id") is not None}
+    for row in sambehandling_rows:
+        first_id = int(row.get("førstesagstrinid") or 0)
+        second_id = int(row.get("andetsagstrinid") or 0)
+        first_sag_id = sag_by_sagstrin.get(first_id)
+        second_sag_id = sag_by_sagstrin.get(second_id)
+        if not first_sag_id or not second_sag_id or first_sag_id == second_sag_id:
+            continue
+        relations[first_sag_id][second_sag_id].add("Sambehandlet")
+        relations[second_sag_id][first_sag_id].add("Sambehandlet")
+
+    result: dict[int, list[dict[str, Any]]] = {}
+    for sag_id in primary_sag_ids:
+        related_entries: list[dict[str, Any]] = []
+        for related_sag_id, relation_types in relations.get(sag_id, {}).items():
+            related_sag = sag_rows_by_id.get(related_sag_id) or {}
+            related_entries.append(
+                {
+                    "sag_id": related_sag_id,
+                    "sag_number": related_sag.get("nummer"),
+                    "sag_title": related_sag.get("titel"),
+                    "sag_short_title": related_sag.get("titelkort"),
+                    "relations": sorted(relation_types),
+                }
+            )
+        related_entries.sort(
+            key=lambda item: (
+                item.get("sag_number") or "",
+                item.get("sag_short_title") or item.get("sag_title") or "",
+                item.get("sag_id") or 0,
+            )
+        )
+        result[sag_id] = related_entries
+    return result
 
 
 def build_vote_context(
@@ -1229,7 +1596,16 @@ def build_case_timelines(
     sagstrin_rows: list[dict[str, Any]],
     case_document_links_by_sag: dict[int, list[dict[str, Any]]],
     stage_document_links_by_sagstrin: dict[int, list[dict[str, Any]]],
+    sag_rows_by_id: dict[int, dict[str, Any]] | None = None,
+    related_cases_by_sag: dict[int, list[dict[str, Any]]] | None = None,
+    sag_emneord_by_sag: dict[int, list[dict[str, Any]]] | None = None,
+    document_emneord_by_document_id: dict[int, list[dict[str, Any]]] | None = None,
 ) -> list[dict[str, Any]]:
+    sag_rows_by_id = sag_rows_by_id or {}
+    related_cases_by_sag = related_cases_by_sag or {}
+    sag_emneord_by_sag = sag_emneord_by_sag or {}
+    document_emneord_by_document_id = document_emneord_by_document_id or {}
+
     rows_by_sag: dict[int, list[dict[str, Any]]] = defaultdict(list)
     for row in sagstrin_rows:
         rows_by_sag[int(row["sagid"])].append(row)
@@ -1237,7 +1613,7 @@ def build_case_timelines(
     timelines: list[dict[str, Any]] = []
     for sag_id, rows in rows_by_sag.items():
         rows.sort(key=lambda item: (item.get("dato") or "", int(item["id"])))
-        sag = (rows[-1].get("Sag") or rows[0].get("Sag") or {})
+        sag = sag_rows_by_id.get(sag_id) or (rows[-1].get("Sag") or rows[0].get("Sag") or {})
 
         steps: list[dict[str, Any]] = []
         for row in rows:
@@ -1261,6 +1637,38 @@ def build_case_timelines(
                 }
             )
 
+        case_documents = case_document_links_by_sag.get(sag_id, [])[:12]
+        document_emneord_map: dict[int, dict[str, Any]] = {}
+        for document in case_documents:
+            document_id = int(document.get("document_id") or 0)
+            if document_id <= 0:
+                continue
+            for emneord in document_emneord_by_document_id.get(document_id, []):
+                document_emneord_map[int(emneord["id"])] = emneord
+        for step in steps:
+            for document in step.get("documents") or []:
+                document_id = int(document.get("document_id") or 0)
+                if document_id <= 0:
+                    continue
+                for emneord in document_emneord_by_document_id.get(document_id, []):
+                    document_emneord_map[int(emneord["id"])] = emneord
+
+        document_emneord = sorted(
+            document_emneord_map.values(),
+            key=lambda item: ((item.get("type") or ""), (item.get("emneord") or "")),
+        )
+        sag_emneord = list(sag_emneord_by_sag.get(sag_id, []))
+        samlet_emneord_map: dict[int, dict[str, Any]] = {
+            int(item["id"]): item
+            for item in sag_emneord
+        }
+        for item in document_emneord:
+            samlet_emneord_map[int(item["id"])] = item
+        samlet_emneord = sorted(
+            samlet_emneord_map.values(),
+            key=lambda item: ((item.get("type") or ""), (item.get("emneord") or "")),
+        )
+
         timelines.append(
             {
                 "sag_id": sag_id,
@@ -1268,8 +1676,16 @@ def build_case_timelines(
                 "sag_title": sag.get("titel"),
                 "sag_short_title": sag.get("titelkort"),
                 "sag_type_id": sag.get("typeid"),
+                "fremsatundersagid": sag.get("fremsatundersagid"),
+                "deltundersagid": sag.get("deltundersagid"),
                 "steps": steps,
-                "documents": case_document_links_by_sag.get(sag_id, [])[:12],
+                "documents": case_documents,
+                "related_cases": related_cases_by_sag.get(sag_id, []),
+                "emneord": {
+                    "sag": sag_emneord,
+                    "dokumenter": document_emneord,
+                    "samlet": samlet_emneord,
+                },
             }
         )
 
@@ -1956,19 +2372,114 @@ def main() -> None:
 
         log(options.verbose, f"timeline-only: fetching full sagstrin for {len(sag_ids)} sager")
         timeline_sagstrin_rows = fetch_sagstrin_for_sager(client, sag_ids=sag_ids)
+        sag_rows = fetch_sager_by_ids(client, sag_ids=sag_ids)
+        sag_rows_by_id = {int(row["id"]): row for row in sag_rows}
         sagstrin_ids = sorted({int(row["id"]) for row in timeline_sagstrin_rows})
+
+        log(options.verbose, f"timeline-only: fetching sambehandlinger for {len(sagstrin_ids)} sagstrin")
+        sambehandling_rows = fetch_sambehandling_rows(client, sagstrin_ids=sagstrin_ids)
+        first_stage_field = "førstesagstrinid"
+        second_stage_field = "andetsagstrinid"
+        stage_ids_from_sambehandling = {
+            int(row.get(first_stage_field) or 0)
+            for row in sambehandling_rows
+        } | {
+            int(row.get(second_stage_field) or 0)
+            for row in sambehandling_rows
+        }
+        stage_ids_from_sambehandling = {item for item in stage_ids_from_sambehandling if item > 0}
+        missing_relation_stage_ids = sorted(stage_ids_from_sambehandling - set(sagstrin_ids))
+        relation_sagstrin_rows = list(timeline_sagstrin_rows)
+        if missing_relation_stage_ids:
+            log(
+                options.verbose,
+                f"timeline-only: fetching {len(missing_relation_stage_ids)} ekstra sagstrin til sambehandling",
+            )
+            relation_sagstrin_rows.extend(
+                fetch_sagstrin_by_ids(client, sagstrin_ids=missing_relation_stage_ids)
+            )
+        relation_sagstrin_rows_by_id = {int(row["id"]): row for row in relation_sagstrin_rows}
+        relation_sagstrin_rows = list(relation_sagstrin_rows_by_id.values())
+
+        related_sag_ids: set[int] = set()
+        for sag in sag_rows_by_id.values():
+            fremsat_under_sag_id = int(sag.get("fremsatundersagid") or 0)
+            delt_under_sag_id = int(sag.get("deltundersagid") or 0)
+            if fremsat_under_sag_id > 0:
+                related_sag_ids.add(fremsat_under_sag_id)
+            if delt_under_sag_id > 0:
+                related_sag_ids.add(delt_under_sag_id)
+
+        relation_stage_to_sag = {
+            int(row["id"]): int(row["sagid"])
+            for row in relation_sagstrin_rows
+            if row.get("id") is not None and row.get("sagid") is not None
+        }
+        for row in sambehandling_rows:
+            first_stage_id = int(row.get(first_stage_field) or 0)
+            second_stage_id = int(row.get(second_stage_field) or 0)
+            first_sag_id = relation_stage_to_sag.get(first_stage_id)
+            second_sag_id = relation_stage_to_sag.get(second_stage_id)
+            if first_sag_id:
+                related_sag_ids.add(first_sag_id)
+            if second_sag_id:
+                related_sag_ids.add(second_sag_id)
+
+        extra_related_sag_ids = sorted(related_sag_ids - set(sag_rows_by_id))
+        if extra_related_sag_ids:
+            log(options.verbose, f"timeline-only: fetching {len(extra_related_sag_ids)} relaterede sager")
+            extra_sag_rows = fetch_sager_by_ids(client, sag_ids=extra_related_sag_ids)
+            sag_rows_by_id.update({int(row["id"]): row for row in extra_sag_rows})
+
+        related_cases_by_sag = build_related_cases_by_sag(
+            primary_sag_ids=sag_ids,
+            sag_rows_by_id=sag_rows_by_id,
+            sagstrin_rows=relation_sagstrin_rows,
+            sambehandling_rows=sambehandling_rows,
+        )
 
         log(options.verbose, f"timeline-only: fetching case documents for {len(sag_ids)} sager")
         sag_document_rows = fetch_sag_documents(client, sag_ids=sag_ids)
-        case_document_links_by_sag = make_document_links(sag_document_rows)
 
         log(options.verbose, f"timeline-only: fetching stage documents for {len(sagstrin_ids)} sagstrin")
         sagstrin_document_rows = fetch_sagstrin_documents(client, sagstrin_ids=sagstrin_ids)
-        document_links_by_sagstrin = make_sagstrin_document_links(sagstrin_document_rows)
+        document_ids = collect_document_ids(
+            sag_document_rows=sag_document_rows,
+            sagstrin_document_rows=sagstrin_document_rows,
+        )
+
+        log(options.verbose, f"timeline-only: fetching omtryk for {len(document_ids)} dokumenter")
+        omtryk_rows = fetch_omtryk_rows(client, document_ids=document_ids)
+        omtryk_by_document_id = build_omtryk_map(omtryk_rows)
+
+        case_document_links_by_sag = make_document_links(
+            sag_document_rows,
+            omtryk_by_document_id=omtryk_by_document_id,
+        )
+        document_links_by_sagstrin = make_sagstrin_document_links(
+            sagstrin_document_rows,
+            omtryk_by_document_id=omtryk_by_document_id,
+        )
         stage_document_links_by_sag = make_case_document_links_from_sagstrin(
             sagstrin_rows=timeline_sagstrin_rows,
             stage_document_links_by_sagstrin=document_links_by_sagstrin,
         )
+
+        log(options.verbose, f"timeline-only: fetching emneord for {len(sag_ids)} sager")
+        emneordsag_rows = fetch_emneordsag_rows(client, sag_ids=sag_ids)
+        emneorddokument_rows = fetch_emneorddokument_rows(client, document_ids=document_ids)
+        emneord_ids = sorted(
+            {
+                int(row["emneordid"])
+                for row in emneordsag_rows + emneorddokument_rows
+                if row.get("emneordid") is not None
+            }
+        )
+        emneord_rows = fetch_emneord_rows(client, emneord_ids=emneord_ids)
+        emneordstype_rows = client.fetch_collection("Emneordstype", label="emneordstype")
+        emneord_lookup = build_emneord_lookup(emneord_rows, emneordstype_rows)
+        sag_emneord_by_sag = build_sag_emneord_map(emneordsag_rows, emneord_lookup)
+        document_emneord_by_document_id = build_document_emneord_map(emneorddokument_rows, emneord_lookup)
 
         document_links_by_sag: dict[int, list[dict[str, Any]]] = {}
         for sag_id in sorted(set(case_document_links_by_sag) | set(stage_document_links_by_sag)):
@@ -1987,6 +2498,10 @@ def main() -> None:
             sagstrin_rows=timeline_sagstrin_rows,
             case_document_links_by_sag=document_links_by_sag,
             stage_document_links_by_sagstrin=document_links_by_sagstrin,
+            sag_rows_by_id=sag_rows_by_id,
+            related_cases_by_sag=related_cases_by_sag,
+            sag_emneord_by_sag=sag_emneord_by_sag,
+            document_emneord_by_document_id=document_emneord_by_document_id,
         )
         write_json(output_dir / "sag_tidslinjer.json", case_timelines)
         log(options.verbose, f"timeline-only: wrote {len(case_timelines)} timelines")
@@ -2051,19 +2566,114 @@ def main() -> None:
     timeline_sagstrin_rows = fetch_sagstrin_for_sager(client, sag_ids=sag_ids)
     if not timeline_sagstrin_rows:
         timeline_sagstrin_rows = list(sagstrin_rows)
+    sag_rows = fetch_sager_by_ids(client, sag_ids=sag_ids)
+    sag_rows_by_id = {int(row["id"]): row for row in sag_rows}
     sagstrin_ids = sorted({int(row["id"]) for row in timeline_sagstrin_rows})
+
+    log(options.verbose, f"fetching sambehandlinger for {len(sagstrin_ids)} sagstrin")
+    sambehandling_rows = fetch_sambehandling_rows(client, sagstrin_ids=sagstrin_ids)
+    first_stage_field = "førstesagstrinid"
+    second_stage_field = "andetsagstrinid"
+    stage_ids_from_sambehandling = {
+        int(row.get(first_stage_field) or 0)
+        for row in sambehandling_rows
+    } | {
+        int(row.get(second_stage_field) or 0)
+        for row in sambehandling_rows
+    }
+    stage_ids_from_sambehandling = {item for item in stage_ids_from_sambehandling if item > 0}
+    missing_relation_stage_ids = sorted(stage_ids_from_sambehandling - set(sagstrin_ids))
+    relation_sagstrin_rows = list(timeline_sagstrin_rows)
+    if missing_relation_stage_ids:
+        log(
+            options.verbose,
+            f"fetching {len(missing_relation_stage_ids)} ekstra sagstrin til sambehandling",
+        )
+        relation_sagstrin_rows.extend(
+            fetch_sagstrin_by_ids(client, sagstrin_ids=missing_relation_stage_ids)
+        )
+    relation_sagstrin_rows_by_id = {int(row["id"]): row for row in relation_sagstrin_rows}
+    relation_sagstrin_rows = list(relation_sagstrin_rows_by_id.values())
+
+    related_sag_ids: set[int] = set()
+    for sag in sag_rows_by_id.values():
+        fremsat_under_sag_id = int(sag.get("fremsatundersagid") or 0)
+        delt_under_sag_id = int(sag.get("deltundersagid") or 0)
+        if fremsat_under_sag_id > 0:
+            related_sag_ids.add(fremsat_under_sag_id)
+        if delt_under_sag_id > 0:
+            related_sag_ids.add(delt_under_sag_id)
+
+    relation_stage_to_sag = {
+        int(row["id"]): int(row["sagid"])
+        for row in relation_sagstrin_rows
+        if row.get("id") is not None and row.get("sagid") is not None
+    }
+    for row in sambehandling_rows:
+        first_stage_id = int(row.get(first_stage_field) or 0)
+        second_stage_id = int(row.get(second_stage_field) or 0)
+        first_sag_id = relation_stage_to_sag.get(first_stage_id)
+        second_sag_id = relation_stage_to_sag.get(second_stage_id)
+        if first_sag_id:
+            related_sag_ids.add(first_sag_id)
+        if second_sag_id:
+            related_sag_ids.add(second_sag_id)
+
+    extra_related_sag_ids = sorted(related_sag_ids - set(sag_rows_by_id))
+    if extra_related_sag_ids:
+        log(options.verbose, f"fetching {len(extra_related_sag_ids)} relaterede sager")
+        extra_sag_rows = fetch_sager_by_ids(client, sag_ids=extra_related_sag_ids)
+        sag_rows_by_id.update({int(row["id"]): row for row in extra_sag_rows})
+
+    related_cases_by_sag = build_related_cases_by_sag(
+        primary_sag_ids=sag_ids,
+        sag_rows_by_id=sag_rows_by_id,
+        sagstrin_rows=relation_sagstrin_rows,
+        sambehandling_rows=sambehandling_rows,
+    )
 
     log(options.verbose, f"fetching case documents for {len(sag_ids)} sager")
     sag_document_rows = fetch_sag_documents(client, sag_ids=sag_ids)
-    case_document_links_by_sag = make_document_links(sag_document_rows)
 
     log(options.verbose, f"fetching stage documents for {len(sagstrin_ids)} sagstrin")
     sagstrin_document_rows = fetch_sagstrin_documents(client, sagstrin_ids=sagstrin_ids)
-    document_links_by_sagstrin = make_sagstrin_document_links(sagstrin_document_rows)
+    document_ids = collect_document_ids(
+        sag_document_rows=sag_document_rows,
+        sagstrin_document_rows=sagstrin_document_rows,
+    )
+
+    log(options.verbose, f"fetching omtryk for {len(document_ids)} dokumenter")
+    omtryk_rows = fetch_omtryk_rows(client, document_ids=document_ids)
+    omtryk_by_document_id = build_omtryk_map(omtryk_rows)
+
+    case_document_links_by_sag = make_document_links(
+        sag_document_rows,
+        omtryk_by_document_id=omtryk_by_document_id,
+    )
+    document_links_by_sagstrin = make_sagstrin_document_links(
+        sagstrin_document_rows,
+        omtryk_by_document_id=omtryk_by_document_id,
+    )
     stage_document_links_by_sag = make_case_document_links_from_sagstrin(
         sagstrin_rows=timeline_sagstrin_rows,
         stage_document_links_by_sagstrin=document_links_by_sagstrin,
     )
+
+    log(options.verbose, f"fetching emneord for {len(sag_ids)} sager")
+    emneordsag_rows = fetch_emneordsag_rows(client, sag_ids=sag_ids)
+    emneorddokument_rows = fetch_emneorddokument_rows(client, document_ids=document_ids)
+    emneord_ids = sorted(
+        {
+            int(row["emneordid"])
+            for row in emneordsag_rows + emneorddokument_rows
+            if row.get("emneordid") is not None
+        }
+    )
+    emneord_rows = fetch_emneord_rows(client, emneord_ids=emneord_ids)
+    emneordstype_rows = client.fetch_collection("Emneordstype", label="emneordstype")
+    emneord_lookup = build_emneord_lookup(emneord_rows, emneordstype_rows)
+    sag_emneord_by_sag = build_sag_emneord_map(emneordsag_rows, emneord_lookup)
+    document_emneord_by_document_id = build_document_emneord_map(emneorddokument_rows, emneord_lookup)
 
     document_links_by_sag: dict[int, list[dict[str, Any]]] = {}
     for sag_id in sorted(set(case_document_links_by_sag) | set(stage_document_links_by_sag)):
@@ -2083,6 +2693,10 @@ def main() -> None:
         sagstrin_rows=timeline_sagstrin_rows,
         case_document_links_by_sag=document_links_by_sag,
         stage_document_links_by_sagstrin=document_links_by_sagstrin,
+        sag_rows_by_id=sag_rows_by_id,
+        related_cases_by_sag=related_cases_by_sag,
+        sag_emneord_by_sag=sag_emneord_by_sag,
+        document_emneord_by_document_id=document_emneord_by_document_id,
     )
 
     log(options.verbose, "fetching F/R sager from ODA API")
