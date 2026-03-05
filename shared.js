@@ -65,6 +65,7 @@ window.Folkevalget = (() => {
   initNavigation();
   initGlobalSiteStats();
   initGlobalSearch();
+  initHeaderFavoritesLink();
   initFooterFavoritesLink();
 
   async function loadCatalogueData() {
@@ -600,6 +601,42 @@ window.Folkevalget = (() => {
     }
 
     footerLinks.append(link);
+  }
+
+  function initHeaderFavoritesLink() {
+    const nav = document.querySelector(".site-nav");
+    if (!nav) {
+      return;
+    }
+
+    const sync = () => {
+      const favorites = getFavorites();
+      const hasFavorites = favorites.profiles.length > 0 || favorites.cases.length > 0;
+      const isFavoritesPage = window.location.pathname.endsWith("/favoritter.html") || window.location.pathname.endsWith("favoritter.html");
+      let link = nav.querySelector("[data-nav-link='favorites']");
+
+      if (!hasFavorites && !isFavoritesPage) {
+        link?.remove();
+        return;
+      }
+
+      if (!link) {
+        link = document.createElement("a");
+        link.href = toSiteUrl("favoritter.html");
+        link.dataset.navLink = "favorites";
+        link.textContent = "Favoritter";
+        nav.append(link);
+      }
+
+      if (isFavoritesPage) {
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    };
+
+    sync();
+    window.addEventListener(FAVORITES_EVENT_NAME, sync);
   }
 
   function buildCaseNumberVariants(value) {
