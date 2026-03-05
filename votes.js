@@ -83,6 +83,7 @@ const VotesApp = (() => {
   const voteSagskategoriSelect = document.querySelector("#vote-sagskategori-select");
   const voteCloseOnly = document.querySelector("#vote-close-only");
   const voteCloseThreshold = document.querySelector("#vote-close-threshold");
+  const voteCloseThresholdField = document.querySelector("#vote-close-threshold-field");
   const voteSplitOnly = document.querySelector("#vote-split-only");
   const voteList = document.querySelector("#vote-list");
   const voteListTemplate = document.querySelector("#vote-list-item-template");
@@ -207,6 +208,7 @@ const VotesApp = (() => {
       voteCloseThreshold.value = String(state.closeThresholdPct);
     }
     voteSplitOnly.checked = state.splitOnly;
+    syncCloseThresholdVisibility();
   }
 
   function bindEvents() {
@@ -248,6 +250,7 @@ const VotesApp = (() => {
 
     voteCloseOnly.addEventListener("change", (event) => {
       state.closeOnly = event.target.checked;
+      syncCloseThresholdVisibility();
       applyVoteFilter();
     });
 
@@ -787,7 +790,7 @@ const VotesApp = (() => {
     if (state.closeOnly) {
       params.set("close", "1");
     }
-    if (state.closeThresholdPct !== DEFAULT_CLOSE_VOTE_THRESHOLD_PCT) {
+    if (state.closeOnly && state.closeThresholdPct !== DEFAULT_CLOSE_VOTE_THRESHOLD_PCT) {
       params.set("close_margin", String(state.closeThresholdPct));
     }
     if (state.splitOnly) {
@@ -818,6 +821,15 @@ const VotesApp = (() => {
     voteFiltersToggle.setAttribute("aria-expanded", String(state.mobileFiltersOpen));
     voteFiltersPanel.dataset.open = String(state.mobileFiltersOpen);
     document.body.classList.toggle("filters-open", state.mobileFiltersOpen);
+  }
+
+  function syncCloseThresholdVisibility() {
+    if (!voteCloseThresholdField || !voteCloseThreshold) {
+      return;
+    }
+
+    voteCloseThresholdField.classList.toggle("hidden", !state.closeOnly);
+    voteCloseThreshold.disabled = !state.closeOnly;
   }
 
   function renderActiveFilters() {

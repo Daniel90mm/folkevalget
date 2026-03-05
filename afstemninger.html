@@ -23,7 +23,7 @@
         } catch (error) {}
       })();
     </script>
-    <link rel="stylesheet" href="style.css?v=20260305m">
+    <link rel="stylesheet" href="style.css?v=20260305n">
   </head>
   <body class="page-votes">
     <div class="site-shell">
@@ -136,7 +136,7 @@
                 <input id="vote-close-only" type="checkbox">
                 <span>Kun t&aelig;tte afstemninger</span>
               </label>
-              <label class="field close-threshold-field" for="vote-close-threshold">
+              <label class="field close-threshold-field hidden" id="vote-close-threshold-field" for="vote-close-threshold">
                 <span class="field-label">Maks ja/nej-margin (%)</span>
                 <input id="vote-close-threshold" type="number" min="0" max="100" step="1" inputmode="numeric" value="10">
               </label>
@@ -316,7 +316,6 @@
 
                 <article class="vote-list-panel">
                   <div class="panel-heading">
-                    <p class="eyebrow">Stemte imod</p>
                     <h2 id="vote-no-title">-</h2>
                   </div>
                   <div class="voter-list" id="vote-no-list"></div>
@@ -374,6 +373,6 @@
 
     <script src="catalog.js" defer></script>
     <script src="shared.js?v=20260305g" defer></script>
-    <script src="votes.js?v=20260305i" defer></script>
+    <script src="votes.js?v=20260305j" defer></script>
   </body>
 </html>
