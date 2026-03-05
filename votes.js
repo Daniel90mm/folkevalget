@@ -1010,6 +1010,8 @@ const VotesApp = (() => {
     const isFavorite = window.Folkevalget.isFavoriteCase(caseNumber);
     voteFavoriteToggle.textContent = isFavorite ? "Fjern favorit" : "Føj til favoritter";
     voteFavoriteToggle.setAttribute("aria-pressed", String(isFavorite));
+    voteFavoriteToggle.setAttribute("aria-label", voteFavoriteToggle.textContent);
+    voteFavoriteToggle.setAttribute("title", voteFavoriteToggle.textContent);
     voteFavoriteToggle.classList.remove("hidden");
   }
 

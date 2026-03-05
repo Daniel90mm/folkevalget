@@ -3669,11 +3669,20 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(18rem, 22rem);
   gap: var(--space-xl);
-  align-items: start;
+  align-items: stretch;
 }
 
 .page-votes .vote-detail-copy h2 {
   max-width: 20ch;
+}
+
+.page-votes .vote-detail-rail {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  justify-items: end;
+  align-self: stretch;
+  align-content: start;
+  gap: var(--space-sm);
 }
 
 .page-votes .vote-outcome-card {
@@ -3682,6 +3691,9 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
   padding: 0;
   border: 0;
   background: none;
+  justify-items: end;
+  text-align: right;
+  max-width: 16rem;
 }
 
 .page-votes .vote-outcome-card strong {
@@ -3695,10 +3707,47 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
   color: var(--color-text-secondary);
 }
 
-.page-votes .profile-hero-actions {
-  display: grid;
-  gap: var(--space-sm);
-  justify-items: stretch;
+.page-votes .vote-favorite-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: transparent;
+  color: var(--color-accent);
+  font-size: 0;
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.page-votes .vote-favorite-toggle::before {
+  content: "\2606";
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.page-votes .vote-favorite-toggle[aria-pressed="true"]::before {
+  content: "\2605";
+}
+
+.page-votes .vote-favorite-toggle:hover,
+.page-votes .vote-favorite-toggle:focus-visible {
+  border-color: var(--color-border);
+  color: var(--color-accent-hover);
+  background: rgba(27, 77, 110, 0.035);
+}
+
+.page-votes .vote-source-link {
+  min-height: 2.25rem;
+  padding: 0.45rem 0.85rem;
+  border-width: 1px;
+  font-size: var(--text-xs);
+  letter-spacing: 0.03em;
+  justify-self: end;
+  align-self: end;
 }
 
 .page-votes .vote-signal-strip {
