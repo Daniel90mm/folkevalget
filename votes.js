@@ -53,6 +53,7 @@ const VotesApp = (() => {
   const voteOriginCase = document.querySelector("#vote-origin-case");
   const voteResumeBody = document.querySelector("#vote-resume-body");
   const voteTimeline = document.querySelector("#vote-timeline");
+  const voteTimelineScroll = document.querySelector("#vote-timeline-scroll");
   const voteTimelineList = document.querySelector("#vote-timeline-list");
   const voteTimelineSourceLink = document.querySelector("#vote-timeline-source-link");
   const voteCaseMeta = document.querySelector("#vote-case-meta");
@@ -346,30 +347,52 @@ const VotesApp = (() => {
     }
 
     const sagNumber = window.Folkevalget.normaliseText(vote.sag_number || "");
+    const sagNumberCompact = compactVoteSearchText(sagNumber);
     const shortTitle = window.Folkevalget.normaliseText(vote.sag_short_title || "");
+    const shortTitleCompact = compactVoteSearchText(shortTitle);
     const title = window.Folkevalget.normaliseText(vote.sag_title || "");
+    const titleCompact = compactVoteSearchText(title);
     const type = window.Folkevalget.normaliseText(vote.type || "");
     const conclusion = window.Folkevalget.normaliseText(vote.konklusion || "");
     const dateText = window.Folkevalget.normaliseText(vote.date || "");
+    const queryCompact = compactVoteSearchText(normalisedQuery);
 
     const searchable = [sagNumber, shortTitle, title, type, conclusion, dateText].join(" ");
+    const searchableCompact = compactVoteSearchText(searchable);
     let score = 0;
 
     for (const token of tokens) {
+      const tokenCompact = compactVoteSearchText(token);
       if (sagNumber === token) {
         score += 220;
+        continue;
+      }
+      if (tokenCompact && sagNumberCompact === tokenCompact) {
+        score += 215;
         continue;
       }
       if (sagNumber.startsWith(token)) {
         score += 120;
         continue;
       }
+      if (tokenCompact && sagNumberCompact.startsWith(tokenCompact)) {
+        score += 115;
+        continue;
+      }
       if (shortTitle.startsWith(token) || title.startsWith(token)) {
         score += 50;
         continue;
       }
+      if (tokenCompact && (shortTitleCompact.startsWith(tokenCompact) || titleCompact.startsWith(tokenCompact))) {
+        score += 46;
+        continue;
+      }
       if (searchable.includes(token)) {
         score += 20;
+        continue;
+      }
+      if (tokenCompact.length >= 3 && searchableCompact.includes(tokenCompact)) {
+        score += 18;
         continue;
       }
       return -1;
@@ -378,8 +401,14 @@ const VotesApp = (() => {
     if (normalisedQuery && (shortTitle.startsWith(normalisedQuery) || title.startsWith(normalisedQuery))) {
       score += 70;
     }
+    if (queryCompact && (shortTitleCompact.startsWith(queryCompact) || titleCompact.startsWith(queryCompact))) {
+      score += 64;
+    }
     if (normalisedQuery && sagNumber === normalisedQuery) {
       score += 300;
+    }
+    if (queryCompact && sagNumberCompact === queryCompact) {
+      score += 280;
     }
 
     return score;
@@ -745,6 +774,12 @@ const VotesApp = (() => {
     }
 
     voteTimelineList.replaceChildren(fragment);
+    if (voteTimelineScroll && activeStepIndex >= 0) {
+      const activeNode = voteTimelineList.children[activeStepIndex];
+      if (activeNode && typeof activeNode.scrollIntoView === "function") {
+        activeNode.scrollIntoView({ block: "nearest", inline: "center" });
+      }
+    }
 
     const timelineSourceUrl = window.Folkevalget.buildSagUrl(timeline.sag_number || vote.sag_number, vote.date);
     if (timelineSourceUrl) {
@@ -862,6 +897,7 @@ const VotesApp = (() => {
     const partyKeyByPersonId = buildPartyLookup(vote);
     const counts = effectiveCounts(vote);
     const hasIndividualVotes = hasIndividualVoteRows(vote);
+    const noDecisionData = voteDecisionTotal(vote) === 0 && !hasIndividualVotes;
     const participantCounts = {
       for: participantIdsFor(vote, "for").length,
       imod: participantIdsFor(vote, "imod").length,
@@ -891,6 +927,8 @@ const VotesApp = (() => {
     if (state.partyFilter) {
       filterSummary.textContent =
         `${formatPartyLabel(state.partyFilter)}: ${window.Folkevalget.formatNumber(filteredYes.length)} for og ${window.Folkevalget.formatNumber(filteredNo.length)} imod. Grafen viser det samme udsnit.`;
+    } else if (noDecisionData) {
+      filterSummary.textContent = "Ingen registrerede ja- eller nej-stemmer for denne afstemning i ODA. Se konklusionen nedenfor for den parlamentariske kontekst.";
     } else if (!hasIndividualVotes && effectiveCountSource(vote) === "konklusion") {
       filterSummary.textContent = "Viser samlede ja- og nej-tal fra sagens konklusion. Individuelle stemmer er ikke registreret i ODA.";
     } else {
@@ -898,8 +936,14 @@ const VotesApp = (() => {
     }
 
     renderVoteDistribution(visibleCounts);
-    renderParticipantList(document.querySelector("#vote-yes-list"), filteredYes);
-    renderParticipantList(document.querySelector("#vote-no-list"), filteredNo);
+    const yesEmptyMessage = noDecisionData
+      ? "Ingen registrerede medlemmer stemte for i ODA for denne afstemning."
+      : "Ingen registrerede medlemmer i denne visning.";
+    const noEmptyMessage = noDecisionData
+      ? "Ingen registrerede medlemmer stemte imod i ODA for denne afstemning."
+      : "Ingen registrerede medlemmer i denne visning.";
+    renderParticipantList(document.querySelector("#vote-yes-list"), filteredYes, yesEmptyMessage);
+    renderParticipantList(document.querySelector("#vote-no-list"), filteredNo, noEmptyMessage);
   }
 
   function renderVoteDistribution(counts) {
@@ -988,11 +1032,12 @@ const VotesApp = (() => {
       .sort((left, right) => left.name.localeCompare(right.name, "da"));
   }
 
-  function renderParticipantList(root, participants) {
+  function renderParticipantList(root, participants, emptyMessage = "Ingen registrerede medlemmer i denne visning.") {
     root.innerHTML = "";
 
     if (participants.length === 0) {
-      root.innerHTML = '<div class="panel-empty">Ingen registrerede medlemmer i denne visning.</div>';
+      const safeMessage = String(emptyMessage || "Ingen registrerede medlemmer i denne visning.");
+      root.innerHTML = `<div class="panel-empty">${safeMessage}</div>`;
       return;
     }
 
@@ -1270,6 +1315,10 @@ const VotesApp = (() => {
       }
     }
     return "";
+  }
+
+  function compactVoteSearchText(value) {
+    return String(value || "").replace(/[\s-]+/g, "");
   }
 
   function isIsoDate(value) {

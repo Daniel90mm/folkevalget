@@ -1784,6 +1784,8 @@ body.global-search-open {
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: var(--space-sm);
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
 }
 
 .page-votes .vote-timeline-list {
@@ -1800,6 +1802,7 @@ body.global-search-open {
   position: relative;
   padding-top: var(--space-md);
   min-width: 0;
+  scroll-snap-align: start;
 }
 
 .page-votes .vote-timeline-step::before {
@@ -1835,6 +1838,7 @@ body.global-search-open {
   gap: var(--space-sm);
   padding: 0;
   min-width: 0;
+  overflow: hidden;
 }
 
 .page-votes .vote-timeline-step-date,
@@ -1842,12 +1846,16 @@ body.global-search-open {
   color: var(--color-text-secondary);
   font-size: var(--text-xs);
   overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.5;
 }
 
 .page-votes .vote-timeline-step-title {
   margin: 0;
   font-size: var(--text-base);
   overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.35;
 }
 
 .page-votes .vote-timeline-step.is-active .vote-timeline-step-title {
@@ -1866,6 +1874,8 @@ body.global-search-open {
   width: 100%;
   max-width: 100%;
   overflow-wrap: anywhere;
+  word-break: break-word;
+  line-height: 1.5;
 }
 
 .vote-timeline-link:hover,

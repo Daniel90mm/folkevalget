@@ -377,6 +377,27 @@ window.Folkevalget = (() => {
     return (value || "").replace(/[\s-]+/g, "");
   }
 
+  function buildCaseNumberVariants(value) {
+    const normalised = normaliseText(value);
+    if (!normalised) {
+      return [];
+    }
+
+    const variants = new Set([normalised, compactNormalisedText(normalised)]);
+    const match = normalised.match(/^([a-zæøå]+)\s*(\d+)\s*([a-z]?)$/u);
+    if (match) {
+      const [, prefix, number, suffix] = match;
+      const suffixPart = suffix || "";
+      variants.add(`${prefix} ${number}${suffixPart}`.trim());
+      variants.add(`${prefix}${number}${suffixPart}`);
+      if (suffixPart) {
+        variants.add(`${prefix} ${number} ${suffixPart}`);
+      }
+    }
+
+    return Array.from(variants).filter(Boolean);
+  }
+
   function buildProfileUrl(profileId) {
     return `${toSiteUrl("profil.html")}?id=${encodeURIComponent(profileId)}`;
   }
@@ -857,11 +878,13 @@ window.Folkevalget = (() => {
   function buildVoteSearchItems(votes) {
     return (votes || []).map((vote) => {
       const title = vote.sag_short_title || vote.sag_title || vote.sag_number || "Afstemning";
+      const caseNumberVariants = buildCaseNumberVariants(vote.sag_number);
       const meta = [vote.sag_number || `Afstemning ${vote.nummer || ""}`, formatDate(vote.date), vote.vedtaget ? "Vedtaget" : "Forkastet"]
         .filter(Boolean)
         .join(" · ");
       const searchParts = [
         vote.sag_number,
+        ...caseNumberVariants,
         vote.sag_short_title,
         vote.sag_title,
         vote.sag_resume,
@@ -878,7 +901,7 @@ window.Folkevalget = (() => {
         trailing: vote.sag_number || "",
         href: buildVoteUrl(vote.afstemning_id),
         searchParts,
-        exactTerms: [vote.sag_number, String(vote.afstemning_id || "")],
+        exactTerms: [vote.sag_number, ...caseNumberVariants, String(vote.afstemning_id || "")],
         priority: 220,
         date: vote.date,
       });
