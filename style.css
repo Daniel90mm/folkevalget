@@ -3786,6 +3786,12 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
   gap: 0 var(--space-xl);
 }
 
+.page-votes .context-note {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
 .page-votes .distribution-stat {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto auto;
