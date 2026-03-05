@@ -1647,6 +1647,7 @@ const VotesApp = (() => {
       caseActorFragment.append(item);
     }
     voteCaseActorsList.replaceChildren(caseActorFragment);
+    voteCaseActorsList.classList.toggle("vote-meta-list-columns", caseActorItems.length >= 6);
     voteCaseActorsBlock.classList.toggle("hidden", caseActorItems.length === 0);
 
     const taxonomyEntries = [

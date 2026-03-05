@@ -4051,6 +4051,16 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
   padding: 0;
 }
 
+.page-votes #vote-case-actors-list.vote-meta-list-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-sm) var(--space-lg);
+  align-items: start;
+}
+
+.page-votes #vote-case-actors-list.vote-meta-list-columns li {
+  align-content: start;
+}
+
 .page-votes .vote-meta-list a,
 .page-votes .vote-meta-list span {
   overflow-wrap: anywhere;
@@ -4154,6 +4164,10 @@ html[data-theme="dark"] .page-votes .voter-row:focus-visible {
   .page-votes .vote-detail-hero,
   .page-votes .vote-lists-grid,
   .page-votes .vote-case-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-votes #vote-case-actors-list.vote-meta-list-columns {
     grid-template-columns: 1fr;
   }
 }
