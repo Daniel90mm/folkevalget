@@ -2151,6 +2151,14 @@ html[data-theme="dark"] .page-votes .votes-layout {
   align-items: start;
 }
 
+.page-profile .profile-hero,
+.page-profile .panel,
+.page-profile .profile-empty,
+.page-profile .context-note {
+  background: transparent;
+  border: 0;
+}
+
 .page-profile .profile-section-grid > .panel {
   align-content: start;
 }
