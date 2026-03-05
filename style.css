@@ -2144,6 +2144,19 @@ html[data-theme="dark"] .page-votes .votes-layout {
   grid-template-columns: 1fr;
 }
 
+.page-profile .profile-section-grid {
+  gap: 0;
+  align-items: start;
+}
+
+.page-profile .profile-section-grid > .panel {
+  align-content: start;
+}
+
+.page-profile .profile-section-grid > .panel + .panel {
+  border-left: 0;
+}
+
 .votes-browser {
   position: static;
   top: auto;
@@ -3137,6 +3150,14 @@ html[data-theme="dark"] .party-code-badge[data-party="DF"] {
   .change-feed-grid,
   .favorites-columns {
     grid-template-columns: 1fr;
+  }
+
+  .page-profile .profile-section-grid {
+    gap: var(--space-md);
+  }
+
+  .page-profile .profile-section-grid > .panel + .panel {
+    border-left: 1px solid var(--color-border);
   }
 
   .page-civics .civics-definition-list,
