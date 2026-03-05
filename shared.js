@@ -189,20 +189,28 @@ window.Folkevalget = (() => {
   }
 
   function buildSagUrl(sagNumber, dateStr) {
-    const match = (sagNumber || "").match(/^([A-Z]+)\s+(\d+)$/);
+    const normalizedNumber = String(sagNumber || "")
+      .toUpperCase()
+      .replace(/\s+/g, " ")
+      .trim();
+    const match = normalizedNumber.match(/^([A-ZÆØÅ]+)\s+(\d+)\s*([A-Z]?)$/u);
     if (!match) {
       return null;
     }
 
-    const [, prefix, number] = match;
+    const [, prefix, number, suffix] = match;
     const type = SAG_TYPES[prefix];
     if (!type) {
       return null;
     }
 
     const date = new Date(dateStr);
+    if (Number.isNaN(date.getTime())) {
+      return null;
+    }
     const sessionYear = date.getMonth() >= 9 ? date.getFullYear() : date.getFullYear() - 1;
-    return `https://www.folketingstidende.dk/samling/${sessionYear}1/${type}/${prefix}${number}/index.htm`;
+    const sagPathNumber = `${prefix.toLowerCase()}${number}${(suffix || "").toLowerCase()}`;
+    return `https://www.ft.dk/samling/${sessionYear}1/${type}/${sagPathNumber}/index.htm`;
   }
 
   function voteBadgeClass(label) {

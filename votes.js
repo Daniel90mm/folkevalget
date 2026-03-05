@@ -1064,6 +1064,16 @@ const VotesApp = (() => {
       const title = vote.sag_short_title || vote.sag_title || "";
       if (/\(borgerforslag\)/i.test(title)) return "B_borger";
     }
+    if (prefix === "V") {
+      const timeline = state.timelinesBySagId.get(Number(vote.sag_id)) || null;
+      const relatedCases = Array.isArray(timeline?.related_cases) ? timeline.related_cases : [];
+      for (const relatedCase of relatedCases) {
+        const relatedPrefix = String(relatedCase?.sag_number || "").match(/^([A-ZÆØÅ]+)/u)?.[1] || "";
+        if (relatedPrefix === "F" || relatedPrefix === "R") {
+          return relatedPrefix;
+        }
+      }
+    }
     if (prefix === "V" && state.rfDocs.length > 0) {
       const vTitle = normaliseTitleForMatch(vote.sag_short_title || vote.sag_title || "");
       if (vTitle.length >= 10) {
