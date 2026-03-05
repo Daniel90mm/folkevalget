@@ -31,6 +31,8 @@ DEFAULT_RECENT_VOTES = 10
 REQUEST_TIMEOUT = 60
 MAX_RETRIES = 3
 PHOTO_CREDITS_FILENAME = "credits.json"
+TIMELINE_SHARD_COUNT = 32
+VOTE_DETAIL_SHARD_COUNT = 32
 
 DA_MONTHS = {
     "januar": 1,
@@ -258,6 +260,14 @@ def write_json(path: Path, payload: Any) -> None:
 def write_json_compact(path: Path, payload: Any) -> None:
     ensure_dir(path.parent)
     path.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+
+def write_json_shards(directory: Path, shards: dict[str, list[dict[str, Any]]]) -> None:
+    ensure_dir(directory)
+    for existing_file in directory.glob("*.json"):
+        existing_file.unlink()
+    for shard_key, payload in sorted(shards.items(), key=lambda item: item[0]):
+        write_json_compact(directory / f"{shard_key}.json", payload)
 
 
 def write_javascript_payload(path: Path, variable_name: str, payload: Any) -> None:
@@ -2832,6 +2842,9 @@ def split_vote_payloads(votes: list[dict[str, Any]]) -> tuple[list[dict[str, Any
         overview = dict(vote)
         overview.pop("vote_groups", None)
         overview.pop("vote_groups_by_party", None)
+        overview.pop("sag_resume", None)
+        overview.pop("konklusion", None)
+        overview.pop("kommentar", None)
         overview_votes.append(overview)
 
         vote_groups = dedupe_vote_groups(vote.get("vote_groups") or {})
@@ -2841,10 +2854,135 @@ def split_vote_payloads(votes: list[dict[str, Any]]) -> tuple[list[dict[str, Any
                 "afstemning_id": vote_id,
                 "vote_groups": vote_groups,
                 "vote_groups_by_party": vote_groups_by_party,
+                "sag_resume": vote.get("sag_resume"),
+                "konklusion": vote.get("konklusion"),
+                "kommentar": vote.get("kommentar"),
             }
         )
 
     return overview_votes, vote_details
+
+
+def shard_key_for_id(value: int, shard_count: int) -> str:
+    safe_count = max(1, int(shard_count))
+    return f"{int(value or 0) % safe_count:02d}"
+
+
+def build_vote_detail_index_and_shards(
+    vote_details: list[dict[str, Any]],
+    *,
+    shard_count: int = VOTE_DETAIL_SHARD_COUNT,
+) -> tuple[list[dict[str, Any]], dict[str, list[dict[str, Any]]]]:
+    index_rows: list[dict[str, Any]] = []
+    shard_rows: dict[str, list[dict[str, Any]]] = defaultdict(list)
+
+    for row in vote_details:
+        vote_id = int(row.get("afstemning_id") or 0)
+        if vote_id <= 0:
+            continue
+        shard_key = shard_key_for_id(vote_id, shard_count)
+        index_rows.append(
+            {
+                "afstemning_id": vote_id,
+                "shard": shard_key,
+            }
+        )
+        shard_rows[shard_key].append(row)
+
+    for key in shard_rows:
+        shard_rows[key].sort(key=lambda item: int(item.get("afstemning_id") or 0), reverse=True)
+    index_rows.sort(key=lambda item: int(item.get("afstemning_id") or 0), reverse=True)
+    return index_rows, dict(shard_rows)
+
+
+def compact_relation_text(value: Any) -> str:
+    return re.sub(r"[^a-z0-9]", "", str(value or "").strip().lower())
+
+
+def extract_case_prefix(sag_number: Any) -> str:
+    match = re.match(r"^\s*([A-Za-z]+)", str(sag_number or ""))
+    return match.group(1).upper() if match else ""
+
+
+def summarize_timeline_emneord(emneord: Any) -> dict[str, Any]:
+    source = emneord if isinstance(emneord, dict) else {}
+    labels: set[str] = set()
+
+    def collect(entries: Any) -> None:
+        if not isinstance(entries, list):
+            return
+        for entry in entries:
+            label = str((entry or {}).get("emneord") or "").strip()
+            if not label:
+                continue
+            emneord_type = str((entry or {}).get("type") or "").strip()
+            labels.add(f"{label} ({emneord_type})" if emneord_type else label)
+
+    collect(source.get("sag"))
+    collect(source.get("dokumenter"))
+    collect(source.get("samlet"))
+
+    sorted_labels = sorted(labels, key=lambda value: value.lower())
+    return {
+        "primary": sorted_labels[0] if sorted_labels else None,
+        "labels": sorted_labels[:12],
+        "count": len(sorted_labels),
+    }
+
+
+def build_timeline_index_and_shards(
+    case_timelines: list[dict[str, Any]],
+    *,
+    shard_count: int = TIMELINE_SHARD_COUNT,
+) -> tuple[list[dict[str, Any]], dict[str, list[dict[str, Any]]]]:
+    index_rows: list[dict[str, Any]] = []
+    shard_rows: dict[str, list[dict[str, Any]]] = defaultdict(list)
+
+    for timeline in case_timelines:
+        sag_id = int(timeline.get("sag_id") or 0)
+        if sag_id <= 0:
+            continue
+
+        shard_key = shard_key_for_id(sag_id, shard_count)
+        related_cases = timeline.get("related_cases") if isinstance(timeline.get("related_cases"), list) else []
+        related_case_prefixes = sorted(
+            {
+                prefix
+                for prefix in (extract_case_prefix(case.get("sag_number")) for case in related_cases)
+                if prefix
+            }
+        )
+
+        fremsat_under = None
+        for related_case in related_cases:
+            relations = related_case.get("relations") if isinstance(related_case.get("relations"), list) else []
+            if any(compact_relation_text(relation) == "fremsatunder" for relation in relations):
+                fremsat_under = {
+                    "sag_id": int(related_case.get("sag_id") or 0) or None,
+                    "sag_number": related_case.get("sag_number"),
+                    "sag_short_title": related_case.get("sag_short_title"),
+                    "sag_title": related_case.get("sag_title"),
+                }
+                break
+
+        index_rows.append(
+            {
+                "sag_id": sag_id,
+                "shard": shard_key,
+                "sag_type": timeline.get("sag_type"),
+                "sag_status": timeline.get("sag_status"),
+                "sag_category": timeline.get("sag_category"),
+                "related_case_prefixes": related_case_prefixes,
+                "fremsat_under": fremsat_under,
+                "emneord": summarize_timeline_emneord(timeline.get("emneord")),
+            }
+        )
+        shard_rows[shard_key].append(timeline)
+
+    for key in shard_rows:
+        shard_rows[key].sort(key=lambda item: int(item.get("sag_id") or 0))
+    index_rows.sort(key=lambda item: int(item.get("sag_id") or 0))
+    return index_rows, dict(shard_rows)
 
 
 def main() -> None:
@@ -3121,7 +3259,10 @@ def main() -> None:
             sag_category_lookup=sag_category_lookup,
             meeting_context_by_sagstrin=meeting_context_by_sagstrin,
         )
+        timeline_index, timeline_shards = build_timeline_index_and_shards(case_timelines)
         write_json(output_dir / "sag_tidslinjer.json", case_timelines)
+        write_json_compact(output_dir / "sag_tidslinjer_index.json", timeline_index)
+        write_json_shards(output_dir / "sag_tidslinjer_shards", timeline_shards)
         log(options.verbose, f"timeline-only: wrote {len(case_timelines)} timelines")
         return
 
@@ -3444,6 +3585,8 @@ def main() -> None:
         recent_vote_limit=max(args.recent_votes, 1),
     )
     vote_overview, vote_details = split_vote_payloads(summarized_votes)
+    vote_detail_index, vote_detail_shards = build_vote_detail_index_and_shards(vote_details)
+    timeline_index, timeline_shards = build_timeline_index_and_shards(case_timelines)
 
     site_stats = {
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
@@ -3471,7 +3614,11 @@ def main() -> None:
     write_json(output_dir / "afstemninger.json", summarized_votes)
     write_json_compact(output_dir / "afstemninger_overblik.json", vote_overview)
     write_json_compact(output_dir / "afstemninger_detaljer.json", vote_details)
+    write_json_compact(output_dir / "afstemninger_detaljer_index.json", vote_detail_index)
+    write_json_shards(output_dir / "afstemninger_detaljer_shards", vote_detail_shards)
     write_json(output_dir / "sag_tidslinjer.json", case_timelines)
+    write_json_compact(output_dir / "sag_tidslinjer_index.json", timeline_index)
+    write_json_shards(output_dir / "sag_tidslinjer_shards", timeline_shards)
     write_json(output_dir / "site_stats.json", site_stats)
     write_json(output_dir / "ft_dokumenter_rf.json", rf_docs)
     write_javascript_payload(

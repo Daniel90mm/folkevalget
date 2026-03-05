@@ -40,6 +40,11 @@ window.Folkevalget = (() => {
   let voteDataPromise = null;
   let voteOverviewPromise = null;
   let voteDetailsPromise = null;
+  let voteDetailsIndexPromise = null;
+  const voteDetailIndexById = new Map();
+  const voteDetailByIdCache = new Map();
+  const voteDetailShardCache = new Map();
+  const voteDetailShardPromises = new Map();
   let globalSearchIndexPromise = null;
   const globalSearchState = {
     open: false,
@@ -162,22 +167,151 @@ window.Folkevalget = (() => {
       try {
         const details = await fetchJson("data/afstemninger_detaljer.json");
         if (Array.isArray(details) && details.length > 0) {
+          for (const row of details) {
+            const voteId = Number(row?.afstemning_id || 0);
+            if (voteId > 0) {
+              voteDetailByIdCache.set(voteId, row);
+            }
+          }
           return details;
         }
       } catch (error) {}
 
       const fullVotes = await loadVoteData();
-      return (Array.isArray(fullVotes) ? fullVotes : []).map((vote) => ({
+      const fallbackDetails = (Array.isArray(fullVotes) ? fullVotes : []).map((vote) => ({
         afstemning_id: Number(vote.afstemning_id || 0),
         vote_groups: vote.vote_groups || {},
         vote_groups_by_party: vote.vote_groups_by_party || {},
+        sag_resume: vote.sag_resume || null,
+        konklusion: vote.konklusion || null,
+        kommentar: vote.kommentar || null,
       }));
+      for (const row of fallbackDetails) {
+        const voteId = Number(row?.afstemning_id || 0);
+        if (voteId > 0) {
+          voteDetailByIdCache.set(voteId, row);
+        }
+      }
+      return fallbackDetails;
     })().catch((error) => {
       voteDetailsPromise = null;
       throw error;
     });
 
     return voteDetailsPromise;
+  }
+
+  async function loadVoteDetailsIndex() {
+    if (voteDetailIndexById.size > 0) {
+      return voteDetailIndexById;
+    }
+
+    if (voteDetailsIndexPromise) {
+      return voteDetailsIndexPromise;
+    }
+
+    voteDetailsIndexPromise = (async () => {
+      try {
+        const indexRows = await fetchJson("data/afstemninger_detaljer_index.json");
+        if (Array.isArray(indexRows) && indexRows.length > 0) {
+          for (const row of indexRows) {
+            const voteId = Number(row?.afstemning_id || 0);
+            const shard = String(row?.shard || "");
+            if (voteId > 0 && shard) {
+              voteDetailIndexById.set(voteId, shard);
+            }
+          }
+          if (voteDetailIndexById.size > 0) {
+            return voteDetailIndexById;
+          }
+        }
+      } catch (error) {}
+
+      const details = await loadVoteDetails();
+      for (const row of details) {
+        const voteId = Number(row?.afstemning_id || 0);
+        if (voteId > 0) {
+          voteDetailIndexById.set(voteId, "__full__");
+        }
+      }
+      return voteDetailIndexById;
+    })().catch((error) => {
+      voteDetailsIndexPromise = null;
+      throw error;
+    });
+
+    return voteDetailsIndexPromise;
+  }
+
+  async function loadVoteDetailsShard(shardKey) {
+    const normalizedShard = String(shardKey || "").trim();
+    if (!normalizedShard) {
+      return [];
+    }
+
+    if (voteDetailShardCache.has(normalizedShard)) {
+      return voteDetailShardCache.get(normalizedShard);
+    }
+
+    if (voteDetailShardPromises.has(normalizedShard)) {
+      return voteDetailShardPromises.get(normalizedShard);
+    }
+
+    const shardPromise = fetchJson(`data/afstemninger_detaljer_shards/${encodeURIComponent(normalizedShard)}.json`)
+      .then((rows) => {
+        const shardRows = Array.isArray(rows) ? rows : [];
+        voteDetailShardCache.set(normalizedShard, shardRows);
+        for (const row of shardRows) {
+          const voteId = Number(row?.afstemning_id || 0);
+          if (voteId > 0) {
+            voteDetailByIdCache.set(voteId, row);
+          }
+        }
+        voteDetailShardPromises.delete(normalizedShard);
+        return shardRows;
+      })
+      .catch((error) => {
+        voteDetailShardPromises.delete(normalizedShard);
+        throw error;
+      });
+
+    voteDetailShardPromises.set(normalizedShard, shardPromise);
+    return shardPromise;
+  }
+
+  async function loadVoteDetailById(voteId) {
+    const normalizedId = Number(voteId || 0);
+    if (!Number.isFinite(normalizedId) || normalizedId <= 0) {
+      return null;
+    }
+
+    if (voteDetailByIdCache.has(normalizedId)) {
+      return voteDetailByIdCache.get(normalizedId);
+    }
+
+    try {
+      const index = await loadVoteDetailsIndex();
+      const shard = String(index.get(normalizedId) || "");
+      if (shard === "__full__") {
+        const details = await loadVoteDetails();
+        const match = details.find((row) => Number(row?.afstemning_id || 0) === normalizedId) || null;
+        if (match) {
+          voteDetailByIdCache.set(normalizedId, match);
+        }
+        return match;
+      }
+      if (shard) {
+        await loadVoteDetailsShard(shard);
+        return voteDetailByIdCache.get(normalizedId) || null;
+      }
+    } catch (error) {}
+
+    const details = await loadVoteDetails();
+    const match = details.find((row) => Number(row?.afstemning_id || 0) === normalizedId) || null;
+    if (match) {
+      voteDetailByIdCache.set(normalizedId, match);
+    }
+    return match;
   }
 
   async function fetchJson(path) {
@@ -1430,6 +1564,7 @@ window.Folkevalget = (() => {
     isNorthAtlanticMandate,
     loadCatalogueData,
     loadVoteData,
+    loadVoteDetailById,
     loadVoteDetails,
     loadVoteOverview,
     normaliseText,

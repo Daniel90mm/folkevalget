@@ -23,10 +23,13 @@ const VotesApp = (() => {
   const state = {
     profiles: [],
     profilesById: new Map(),
+    timelineSummariesBySagId: new Map(),
+    timelineShardBySagId: new Map(),
     timelinesBySagId: new Map(),
+    loadedTimelineShards: new Set(),
+    timelineShardLoadingPromises: new Map(),
     voteDetailsById: new Map(),
-    voteDetailsLoaded: false,
-    voteDetailsLoadingPromise: null,
+    voteDetailLoadingById: new Map(),
     votes: [],
     filteredVotes: [],
     selectedVoteId: null,
@@ -84,13 +87,13 @@ const VotesApp = (() => {
   async function boot() {
     hydrateStateFromQuery();
 
-    const [{ profiles, stats }, voteOverview, rfDocs, timelines] = await Promise.all([
+    const [{ profiles, stats }, voteOverview, rfDocs, timelineIndex] = await Promise.all([
       window.Folkevalget.loadCatalogueData(),
       window.Folkevalget.loadVoteOverview(),
       fetch(window.Folkevalget.toSiteUrl("data/ft_dokumenter_rf.json"))
         .then((r) => r.ok ? r.json() : [])
         .catch(() => []),
-      fetch(window.Folkevalget.toSiteUrl("data/sag_tidslinjer.json"))
+      fetch(window.Folkevalget.toSiteUrl("data/sag_tidslinjer_index.json"))
         .then((r) => r.ok ? r.json() : [])
         .catch(() => []),
     ]);
@@ -99,11 +102,19 @@ const VotesApp = (() => {
     state.profilesById = new Map(profiles.map((profile) => [profile.id, profile]));
     state.votes = Array.isArray(voteOverview) ? voteOverview : [];
     state.rfDocs = Array.isArray(rfDocs) ? rfDocs : [];
-    state.timelinesBySagId = new Map(
-      (Array.isArray(timelines) ? timelines : [])
-        .filter((entry) => Number.isFinite(Number(entry?.sag_id)))
-        .map((entry) => [Number(entry.sag_id), entry])
-    );
+    state.timelineSummariesBySagId = new Map();
+    state.timelineShardBySagId = new Map();
+    for (const entry of (Array.isArray(timelineIndex) ? timelineIndex : [])) {
+      const sagId = Number(entry?.sag_id || 0);
+      if (!Number.isFinite(sagId) || sagId <= 0) {
+        continue;
+      }
+      state.timelineSummariesBySagId.set(sagId, entry);
+      const shardKey = String(entry?.shard || "");
+      if (shardKey) {
+        state.timelineShardBySagId.set(sagId, shardKey);
+      }
+    }
 
     window.Folkevalget.renderStats(statsRoot, stats);
     populateOfficialTaxonomyFilters();
@@ -248,9 +259,14 @@ const VotesApp = (() => {
 
   function scheduleVoteDetailsPreload() {
     const preload = () => {
-      ensureVoteDetailsLoaded()
-        .then(() => {
-          renderSelectedVote();
+      if (!state.selectedVoteId) {
+        return;
+      }
+      ensureVoteDetailLoaded(state.selectedVoteId)
+        .then((detail) => {
+          if (detail) {
+            renderSelectedVote();
+          }
         })
         .catch(() => {});
     };
@@ -263,30 +279,92 @@ const VotesApp = (() => {
     window.setTimeout(preload, 300);
   }
 
-  function ensureVoteDetailsLoaded() {
-    if (state.voteDetailsLoaded) {
-      return Promise.resolve();
+  function ensureVoteDetailLoaded(voteId) {
+    const normalizedVoteId = Number(voteId || 0);
+    if (!Number.isFinite(normalizedVoteId) || normalizedVoteId <= 0) {
+      return Promise.resolve(null);
     }
 
-    if (state.voteDetailsLoadingPromise) {
-      return state.voteDetailsLoadingPromise;
+    if (state.voteDetailsById.has(normalizedVoteId)) {
+      return Promise.resolve(state.voteDetailsById.get(normalizedVoteId));
     }
 
-    state.voteDetailsLoadingPromise = window.Folkevalget.loadVoteDetails()
-      .then((details) => {
-        const detailRows = Array.isArray(details) ? details : [];
-        state.voteDetailsById = new Map(
-          detailRows
-            .filter((row) => Number.isFinite(Number(row?.afstemning_id)) && Number(row.afstemning_id) > 0)
-            .map((row) => [Number(row.afstemning_id), row])
-        );
-        state.voteDetailsLoaded = true;
+    if (state.voteDetailLoadingById.has(normalizedVoteId)) {
+      return state.voteDetailLoadingById.get(normalizedVoteId);
+    }
+
+    const detailPromise = window.Folkevalget.loadVoteDetailById(normalizedVoteId)
+      .then((detail) => {
+        if (detail && Number(detail?.afstemning_id || 0) > 0) {
+          state.voteDetailsById.set(Number(detail.afstemning_id), detail);
+        }
+        state.voteDetailLoadingById.delete(normalizedVoteId);
+        return detail || null;
       })
-      .finally(() => {
-        state.voteDetailsLoadingPromise = null;
+      .catch((error) => {
+        state.voteDetailLoadingById.delete(normalizedVoteId);
+        throw error;
       });
 
-    return state.voteDetailsLoadingPromise;
+    state.voteDetailLoadingById.set(normalizedVoteId, detailPromise);
+    return detailPromise;
+  }
+
+  function timelineSummaryBySagId(sagId) {
+    return state.timelineSummariesBySagId.get(Number(sagId)) || null;
+  }
+
+  function timelineBySagId(sagId) {
+    const normalizedSagId = Number(sagId || 0);
+    return state.timelinesBySagId.get(normalizedSagId) || timelineSummaryBySagId(normalizedSagId);
+  }
+
+  function ensureTimelineLoaded(sagId) {
+    const normalizedSagId = Number(sagId || 0);
+    if (!Number.isFinite(normalizedSagId) || normalizedSagId <= 0) {
+      return Promise.resolve(null);
+    }
+
+    if (state.timelinesBySagId.has(normalizedSagId)) {
+      return Promise.resolve(state.timelinesBySagId.get(normalizedSagId));
+    }
+
+    const shardKey = String(state.timelineShardBySagId.get(normalizedSagId) || "");
+    if (!shardKey) {
+      return Promise.resolve(null);
+    }
+
+    if (state.loadedTimelineShards.has(shardKey)) {
+      return Promise.resolve(state.timelinesBySagId.get(normalizedSagId) || null);
+    }
+
+    if (state.timelineShardLoadingPromises.has(shardKey)) {
+      return state.timelineShardLoadingPromises.get(shardKey).then(() =>
+        state.timelinesBySagId.get(normalizedSagId) || null
+      );
+    }
+
+    const shardPromise = fetch(window.Folkevalget.toSiteUrl(`data/sag_tidslinjer_shards/${encodeURIComponent(shardKey)}.json`))
+      .then((response) => (response.ok ? response.json() : []))
+      .then((rows) => {
+        for (const row of (Array.isArray(rows) ? rows : [])) {
+          const rowSagId = Number(row?.sag_id || 0);
+          if (!Number.isFinite(rowSagId) || rowSagId <= 0) {
+            continue;
+          }
+          state.timelinesBySagId.set(rowSagId, row);
+        }
+        state.loadedTimelineShards.add(shardKey);
+        state.timelineShardLoadingPromises.delete(shardKey);
+        return state.timelinesBySagId.get(normalizedSagId) || null;
+      })
+      .catch((error) => {
+        state.timelineShardLoadingPromises.delete(shardKey);
+        throw error;
+      });
+
+    state.timelineShardLoadingPromises.set(shardKey, shardPromise);
+    return shardPromise;
   }
 
   function mergeVoteWithDetails(vote) {
@@ -332,7 +410,7 @@ const VotesApp = (() => {
         if (state.typeFilter && classifyVoteType(vote) !== state.typeFilter) {
           return false;
         }
-        const timeline = state.timelinesBySagId.get(Number(vote.sag_id)) || null;
+        const timeline = timelineBySagId(vote.sag_id);
         if (state.officialSagstype && !matchesTaxonomyFilter(state.officialSagstype, timeline?.sag_type)) {
           return false;
         }
@@ -468,7 +546,7 @@ const VotesApp = (() => {
     const statusValues = new Set();
     const categoryValues = new Set();
 
-    for (const timeline of state.timelinesBySagId.values()) {
+    for (const timeline of state.timelineSummariesBySagId.values()) {
       const sagType = String(timeline?.sag_type || "").trim();
       const sagStatus = String(timeline?.sag_status || "").trim();
       const sagCategory = String(timeline?.sag_category || "").trim();
@@ -602,10 +680,20 @@ const VotesApp = (() => {
     renderPartyFilter(selectedVote);
     renderVoteLists(selectedVote);
 
-    if (!hasParticipantDetails(selectedVote)) {
-      ensureVoteDetailsLoaded()
-        .then(() => {
-          if (state.selectedVoteId === selectedOverviewVote.afstemning_id) {
+    if (!state.voteDetailsById.has(Number(selectedOverviewVote.afstemning_id || 0))) {
+      ensureVoteDetailLoaded(selectedOverviewVote.afstemning_id)
+        .then((detail) => {
+          if (detail && state.selectedVoteId === selectedOverviewVote.afstemning_id) {
+            renderSelectedVote();
+          }
+        })
+        .catch(() => {});
+    }
+
+    if (!state.timelinesBySagId.has(Number(selectedVote.sag_id || 0))) {
+      ensureTimelineLoaded(selectedVote.sag_id)
+        .then((timeline) => {
+          if (timeline && state.selectedVoteId === selectedOverviewVote.afstemning_id) {
             renderSelectedVote();
           }
         })
@@ -734,9 +822,12 @@ const VotesApp = (() => {
     ].join(" · ");
 
     if (voteOriginCase) {
-      const timeline = state.timelinesBySagId.get(Number(vote.sag_id)) || null;
+      const timeline = timelineBySagId(vote.sag_id);
       const relatedCases = Array.isArray(timeline?.related_cases) ? timeline.related_cases : [];
-      const originCase = findFremsatUnderRelatedCase(relatedCases);
+      const originCase =
+        timeline?.fremsat_under?.sag_number
+          ? timeline.fremsat_under
+          : findFremsatUnderRelatedCase(relatedCases);
       if (originCase?.sag_number) {
         const originLink = window.Folkevalget.buildSagUrl(originCase.sag_number, vote.date);
         voteOriginCase.textContent = "";
@@ -1455,7 +1546,7 @@ const VotesApp = (() => {
       `${window.Folkevalget.formatNumber(noHeadlineCount)} stemte imod`;
 
     const filterSummary = document.querySelector("#vote-filter-summary");
-    if (!participantDetailsReady && !state.voteDetailsLoaded) {
+    if (!participantDetailsReady && state.voteDetailLoadingById.has(Number(vote?.afstemning_id || 0))) {
       filterSummary.textContent = "Indlæser individuelle stemmer fra ODA…";
     } else if (state.partyFilter) {
       filterSummary.textContent =
@@ -1689,7 +1780,16 @@ const VotesApp = (() => {
       if (/\(borgerforslag\)/i.test(title)) return "B_borger";
     }
     if (prefix === "V") {
-      const timeline = state.timelinesBySagId.get(Number(vote.sag_id)) || null;
+      const timeline = timelineBySagId(vote.sag_id);
+      const relatedCasePrefixes = Array.isArray(timeline?.related_case_prefixes)
+        ? timeline.related_case_prefixes
+        : [];
+      for (const relatedPrefix of relatedCasePrefixes) {
+        if (relatedPrefix === "F" || relatedPrefix === "R") {
+          return relatedPrefix;
+        }
+      }
+
       const relatedCases = Array.isArray(timeline?.related_cases) ? timeline.related_cases : [];
       for (const relatedCase of relatedCases) {
         const relatedPrefix = String(relatedCase?.sag_number || "").match(/^([A-ZÆØÅ]+)/u)?.[1] || "";
@@ -1819,11 +1919,12 @@ const VotesApp = (() => {
   }
 
   function emneordEntriesForVote(vote) {
-    const timeline = state.timelinesBySagId.get(Number(vote?.sag_id)) || null;
+    const timeline = timelineBySagId(vote?.sag_id);
     const emneord = timeline?.emneord || {};
     const sagEntries = Array.isArray(emneord.sag) ? emneord.sag : [];
     const dokumentEntries = Array.isArray(emneord.dokumenter) ? emneord.dokumenter : [];
     const fallbackEntries = Array.isArray(emneord.samlet) ? emneord.samlet : [];
+    const summaryLabels = Array.isArray(emneord.labels) ? emneord.labels : [];
 
     const entries = [];
     const seen = new Set();
@@ -1847,6 +1948,24 @@ const VotesApp = (() => {
         entries.push({
           emneord: label,
           type,
+        });
+      }
+    }
+
+    if (entries.length === 0 && summaryLabels.length > 0) {
+      for (const label of summaryLabels) {
+        const value = String(label || "").trim();
+        if (!value) {
+          continue;
+        }
+        const key = value.toLowerCase();
+        if (seen.has(key)) {
+          continue;
+        }
+        seen.add(key);
+        entries.push({
+          emneord: value,
+          type: "",
         });
       }
     }
