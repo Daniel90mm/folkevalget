@@ -2016,6 +2016,144 @@ def build_meeting_context_by_sagstrin(
     return dict(by_sagstrin)
 
 
+def build_meeting_overview(case_timelines: list[dict[str, Any]]) -> dict[str, Any]:
+    def agenda_number_sort_value(raw_value: Any) -> tuple[int, int, str]:
+        value = str(raw_value or "").strip()
+        if not value:
+            return (0, 0, "")
+        if value.isdigit():
+            return (0, int(value), value)
+        numeric_prefix = re.match(r"^(\d+)", value)
+        if numeric_prefix:
+            return (1, int(numeric_prefix.group(1)), value.lower())
+        return (2, 0, value.lower())
+
+    def parse_numeric_prefix(raw_value: Any) -> int:
+        value = str(raw_value or "").strip()
+        if not value:
+            return 0
+        if value.isdigit():
+            return int(value)
+        numeric_prefix = re.match(r"^(\d+)", value)
+        if numeric_prefix:
+            return int(numeric_prefix.group(1))
+        return 0
+
+    meetings_by_id: dict[int, dict[str, Any]] = {}
+    seen_agenda_keys_by_meeting: dict[int, set[str]] = defaultdict(set)
+    agenda_point_count = 0
+
+    for timeline in case_timelines:
+        sag_id = int(timeline.get("sag_id") or 0)
+        sag_number = timeline.get("sag_number")
+        sag_title = timeline.get("sag_short_title") or timeline.get("sag_title")
+        steps = timeline.get("steps") if isinstance(timeline.get("steps"), list) else []
+
+        for step in steps:
+            sagstrin_id = int(step.get("sagstrin_id") or 0)
+            vote_ids = [int(vote_id) for vote_id in (step.get("vote_ids") or []) if int(vote_id or 0) > 0]
+            agenda_items = step.get("agenda_items") if isinstance(step.get("agenda_items"), list) else []
+
+            for agenda_item in agenda_items:
+                meeting = agenda_item.get("meeting") or {}
+                meeting_id = int(meeting.get("id") or 0)
+                if meeting_id <= 0:
+                    continue
+
+                meeting_entry = meetings_by_id.get(meeting_id)
+                if not meeting_entry:
+                    meeting_entry = {
+                        "meeting_id": meeting_id,
+                        "date": meeting.get("date"),
+                        "number": meeting.get("number"),
+                        "title": meeting.get("title"),
+                        "type": meeting.get("type"),
+                        "status": meeting.get("status"),
+                        "start_note": meeting.get("start_note"),
+                        "agenda_url": meeting.get("agenda_url"),
+                        "agenda_points": [],
+                    }
+                    meetings_by_id[meeting_id] = meeting_entry
+                else:
+                    for field in (
+                        "date",
+                        "number",
+                        "title",
+                        "type",
+                        "status",
+                        "start_note",
+                        "agenda_url",
+                    ):
+                        if not meeting_entry.get(field) and meeting.get(field):
+                            meeting_entry[field] = meeting.get(field)
+
+                agenda_point_id = int(agenda_item.get("dagsordenspunkt_id") or 0)
+                dedupe_key_parts = [
+                    str(agenda_point_id or ""),
+                    str(agenda_item.get("agenda_number") or ""),
+                    str(agenda_item.get("agenda_title") or ""),
+                    str(sagstrin_id or ""),
+                    str(sag_id or ""),
+                ]
+                dedupe_key = "||".join(dedupe_key_parts)
+                if dedupe_key in seen_agenda_keys_by_meeting[meeting_id]:
+                    continue
+                seen_agenda_keys_by_meeting[meeting_id].add(dedupe_key)
+
+                meeting_entry["agenda_points"].append(
+                    {
+                        "agenda_point_id": agenda_point_id or None,
+                        "agenda_number": agenda_item.get("agenda_number"),
+                        "agenda_title": agenda_item.get("agenda_title"),
+                        "forhandling": agenda_item.get("forhandling"),
+                        "sag_id": sag_id or None,
+                        "sag_number": sag_number,
+                        "sag_title": sag_title,
+                        "sagstrin_id": sagstrin_id or None,
+                        "sagstrin_date": step.get("date"),
+                        "sagstrin_title": step.get("title"),
+                        "sagstrin_type": step.get("type"),
+                        "sagstrin_status": step.get("status"),
+                        "vote_ids": vote_ids,
+                    }
+                )
+                agenda_point_count += 1
+
+    meetings: list[dict[str, Any]] = []
+    for meeting in meetings_by_id.values():
+        points = meeting.get("agenda_points") if isinstance(meeting.get("agenda_points"), list) else []
+        points.sort(
+            key=lambda item: (
+                agenda_number_sort_value(item.get("agenda_number")),
+                item.get("sagstrin_date") or "",
+                item.get("agenda_point_id") or 0,
+                item.get("sagstrin_id") or 0,
+            )
+        )
+        meeting["agenda_points"] = points
+        meeting["agenda_point_count"] = len(points)
+        meetings.append(meeting)
+
+    meetings.sort(
+        key=lambda item: (
+            item.get("date") or "",
+            parse_numeric_prefix(item.get("number")),
+            item.get("meeting_id") or 0,
+        ),
+        reverse=True,
+    )
+
+    return {
+        "scope": "case-linked-meetings",
+        "scope_note": "Moeder og dagsordenspunkter koblet til sager i det aktuelle datasaet.",
+        "counts": {
+            "meetings": len(meetings),
+            "agenda_points": agenda_point_count,
+        },
+        "meetings": meetings,
+    }
+
+
 def build_vote_context(
     sagstrin_rows: list[dict[str, Any]],
     document_links_by_sag: dict[int, list[dict[str, Any]]],
@@ -3362,7 +3500,10 @@ def main() -> None:
             sag_category_lookup=sag_category_lookup,
             meeting_context_by_sagstrin=meeting_context_by_sagstrin,
         )
+        meeting_overview = build_meeting_overview(case_timelines)
+        meeting_overview["generated_at"] = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
         timeline_index, timeline_shards = build_timeline_index_and_shards(case_timelines)
+        write_json(output_dir / "moeder.json", meeting_overview)
         write_json(output_dir / "sag_tidslinjer.json", case_timelines)
         write_json_compact(output_dir / "sag_tidslinjer_index.json", timeline_index)
         write_json_shards(output_dir / "sag_tidslinjer_shards", timeline_shards)
@@ -3695,6 +3836,7 @@ def main() -> None:
     )
     vote_detail_index, vote_detail_shards = build_vote_detail_index_and_shards(vote_details)
     timeline_index, timeline_shards = build_timeline_index_and_shards(case_timelines)
+    meeting_overview = build_meeting_overview(case_timelines)
 
     site_stats = {
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
@@ -3711,6 +3853,7 @@ def main() -> None:
             "profiles": derived_meta["profile_count"],
         },
     }
+    meeting_overview["generated_at"] = site_stats["generated_at"]
 
     photos_dir = Path(args.output_dir).parent / "photos"
     if not args.skip_photos:
@@ -3730,6 +3873,7 @@ def main() -> None:
         profiles=profiles,
         vote_ids_by_person=vote_ids_by_person,
     )
+    write_json(output_dir / "moeder.json", meeting_overview)
     write_json(output_dir / "sag_tidslinjer.json", case_timelines)
     write_json_compact(output_dir / "sag_tidslinjer_index.json", timeline_index)
     write_json_shards(output_dir / "sag_tidslinjer_shards", timeline_shards)
