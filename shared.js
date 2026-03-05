@@ -628,6 +628,8 @@ window.Folkevalget = (() => {
 
     const tools = document.createElement("div");
     tools.className = "site-header-tools";
+    const utility = document.createElement("div");
+    utility.className = "site-header-utility";
 
     const toggle = document.createElement("button");
     toggle.type = "button";
@@ -648,7 +650,8 @@ window.Folkevalget = (() => {
     });
 
     stats.parentNode.insertBefore(tools, stats);
-    tools.append(stats, toggle);
+    tools.append(utility, stats);
+    utility.append(toggle);
   }
 
   function initGlobalSiteStats() {
@@ -671,12 +674,13 @@ window.Folkevalget = (() => {
     if (!tools) {
       return;
     }
+    const utility = tools.querySelector(".site-header-utility") || tools;
 
     const trigger = buildGlobalSearchTrigger();
     const overlay = buildGlobalSearchOverlay();
     globalSearchState.elements = { trigger, ...overlay };
 
-    tools.insertBefore(trigger, tools.firstChild);
+    utility.insertBefore(trigger, utility.firstChild);
     document.body.append(overlay.root);
 
     trigger.addEventListener("click", () => {
