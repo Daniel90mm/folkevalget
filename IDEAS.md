@@ -890,3 +890,36 @@ Sources checked:
 - https://politikdata.dk/guide
 - https://politikdata.dk/medloberi/personer
 - https://politikdata.dk/medloberi/partier
+
+---
+
+### Paragraph lookup in global search
+
+Proposal:
+- Let users search for Danish legal paragraphs directly from the global search bar,
+  for example `straffeloven § 266 b` or `forvaltningsloven § 19`, using an official
+  public API.
+
+Rejected because:
+- No documented public paragraph-lookup API was found that fits the project's
+  constraints.
+- Retsinformation's official open REST API is documented as a harvest/update feed,
+  not as a broad public paragraph lookup or text-search API.
+- Retsinformation's public ELI channels are also documented as update channels for
+  legal documents, not as a paragraph query endpoint.
+- The official `Generisk webservice til søgning af afgørelser` is gated and requires
+  an agreement with Civilstyrelsen, so it cannot be used in the static-site pipeline.
+- A useful paragraph-search feature would therefore require building and maintaining
+  our own derived legal-text index from official materials, which is much larger in
+  scope than simply tethering an external API into global search.
+
+Possible later alternative:
+- Support official law/document lookup by title or identifier first.
+- Revisit paragraph search only if the project explicitly expands into build-time
+  legal text indexing from official sources.
+
+Sources checked:
+- https://www.retsinformation.dk/static/api.html
+- https://api.retsinformation.dk/swagger/v1/swagger.json
+- https://www.retsinformation.dk/offentlig/vejledning/Retsinformation%20REST%20API%20vejledning.pdf
+- https://www.retsinformation.dk/offentlig/vejledning/Generisk_webservice_til_s%C3%B8gning_af_afg%C3%B8relser-Vejledning.pdf

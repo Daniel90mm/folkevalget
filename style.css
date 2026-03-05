@@ -768,6 +768,13 @@ body.global-search-open {
   gap: 0;
 }
 
+.page-home .hero-panel,
+.page-home .content-section {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
 .page-home .hero-metrics .signal-card {
   padding: var(--space-md) 0;
   border: none;
@@ -1538,7 +1545,7 @@ body.global-search-open {
 .discover-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-md);
+  gap: var(--space-xl) var(--space-lg);
 }
 
 .member-card {
@@ -1766,21 +1773,32 @@ body.global-search-open {
   background: transparent;
 }
 
-.page-discover .mini-metric {
-  padding: 0 var(--space-md);
+.page-discover .member-card {
+  gap: var(--space-lg);
+  padding: var(--space-lg) var(--space-sm) var(--space-md) calc(var(--space-md) + 3px);
   border: none;
-  border-left: 1px solid var(--color-border);
+  background: transparent;
+}
+
+.page-discover .mini-metric {
+  padding: 0;
+  border: none;
   background: transparent;
 }
 
 .page-discover .mini-metric:first-child {
   padding-left: 0;
-  border-left: none;
 }
 
 .page-discover .member-card-footer {
-  padding-top: var(--space-sm);
-  border-top: 1px solid var(--color-border);
+  padding-top: 0;
+  border-top: none;
+}
+
+.page-discover .member-metrics {
+  gap: var(--space-lg);
+  padding-top: 0;
+  border-top: none;
 }
 
 .member-card-footer,
@@ -2824,6 +2842,22 @@ html[data-theme="dark"] .page-votes .voter-row:focus-visible {
   align-items: center;
 }
 
+.page-parties .parties-intro,
+.page-parties .summary-card,
+.page-parties .panel {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.page-parties .party-summary-strip {
+  gap: var(--space-lg) var(--space-xl);
+}
+
+.page-parties .summary-card {
+  gap: var(--space-xs);
+}
+
 .party-overview {
   flex-direction: column;
   align-items: flex-start;
@@ -3319,14 +3353,12 @@ html[data-theme="dark"] .party-code-badge[data-party="DF"] {
     grid-template-columns: 1fr;
   }
 
-  .page-discover .mini-metric,
   .page-votes .vote-signal-card {
     padding: var(--space-sm) 0 0;
     border-top: 1px solid var(--color-border);
     border-left: none;
   }
 
-  .page-discover .mini-metric:first-child,
   .page-votes .vote-signal-card:first-child {
     padding-top: 0;
     border-top: none;
@@ -3512,8 +3544,9 @@ html[data-theme="dark"] .party-code-badge[data-party="DF"] {
 
   .party-table tr {
     margin-bottom: var(--space-md);
-    padding: var(--space-md);
-    border: 1px solid var(--color-border);
+    padding: var(--space-md) 0;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
   }
 
   .party-table td {
@@ -3582,6 +3615,12 @@ html[data-theme="dark"] .page-votes .votes-layout {
   gap: var(--space-lg);
 }
 
+.page-votes .votes-browser-panel {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
 .page-votes .votes-browser-head {
   align-items: start;
 }
@@ -3590,6 +3629,11 @@ html[data-theme="dark"] .page-votes .votes-layout {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-md);
   align-items: end;
+}
+
+.page-votes .votes-browser-panel .field input,
+.page-votes .votes-browser-panel .field select {
+  background: transparent;
 }
 
 .page-votes .vote-search-field,

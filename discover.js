@@ -29,11 +29,11 @@ const DiscoverApp = (() => {
   async function boot() {
     hydrateStateFromQuery();
     const { profiles, stats } = await window.Folkevalget.loadCatalogueData();
-    state.profiles = profiles;
+    state.profiles = (profiles || []).filter(isCurrentProfile);
 
-    populateConstituencyFilter(profiles);
-    populatePartyFilter(profiles);
-    populateCommitteeFilter(profiles);
+    populateConstituencyFilter(state.profiles);
+    populatePartyFilter(state.profiles);
+    populateCommitteeFilter(state.profiles);
     syncControls();
     syncFilterPanel();
     window.Folkevalget.renderStats(statsRoot, stats);
@@ -134,10 +134,11 @@ const DiscoverApp = (() => {
   function populateConstituencyFilter(profiles) {
     const options = new Map();
     for (const profile of profiles) {
-      if (!profile.storkreds || options.has(profile.storkreds)) {
+      const constituencyLabel = window.Folkevalget.profileConstituencyLabel(profile);
+      if (!constituencyLabel || options.has(constituencyLabel)) {
         continue;
       }
-      options.set(profile.storkreds, profile.storkreds);
+      options.set(constituencyLabel, constituencyLabel);
     }
 
     for (const [value, label] of [...options.entries()].sort((left, right) => left[1].localeCompare(right[1], "da"))) {
@@ -190,12 +191,15 @@ const DiscoverApp = (() => {
     const query = window.Folkevalget.normaliseText(state.query);
 
     state.filteredProfiles = state.profiles.filter((profile) => {
+      const constituencyLabel = window.Folkevalget.profileConstituencyLabel(profile);
       const rawSearchable = [
         profile.name,
         profile.party,
         profile.party_short,
         profile.role,
+        constituencyLabel,
         profile.storkreds,
+        profile.constituency,
         ...(profile.educations || []),
         ...(profile.occupations || []),
         ...(profile.constituency_history || []),
@@ -208,8 +212,7 @@ const DiscoverApp = (() => {
 
       const partyValue = profile.party_short || profile.party || "";
       const matchesQuery = !rawQuery || searchable.includes(query) || rawSearchable.includes(rawQuery);
-      const matchesConstituency =
-        !state.constituencyFilter || (profile.storkreds || "") === state.constituencyFilter;
+      const matchesConstituency = !state.constituencyFilter || constituencyLabel === state.constituencyFilter;
       const matchesParty = !state.partyFilter || partyValue === state.partyFilter;
       const matchesCommittee =
         !state.committeeFilter ||
@@ -268,7 +271,8 @@ const DiscoverApp = (() => {
 
       card.dataset.party = profile.party_short || "";
       card.querySelector("[data-card='role']").textContent = profile.role || "Folketingsmedlem";
-      card.querySelector("[data-card='constituency']").textContent = profile.storkreds || "Storkreds ikke angivet";
+      card.querySelector("[data-card='constituency']").textContent =
+        window.Folkevalget.profileConstituencyLabel(profile) || "Storkreds ikke angivet";
       card.querySelector("[data-card='attendance-value']").textContent = window.Folkevalget.formatPercent(profile.attendance_pct);
       card.querySelector("[data-card='votes-for']").textContent = window.Folkevalget.formatNumber(profile.votes_for);
       card.querySelector("[data-card='votes-against']").textContent = window.Folkevalget.formatNumber(profile.votes_against);
@@ -334,6 +338,10 @@ const DiscoverApp = (() => {
   function findOptionLabel(select, value) {
     const option = [...select.options].find((entry) => entry.value === value);
     return option?.textContent || value;
+  }
+
+  function isCurrentProfile(profile) {
+    return Boolean(profile?.current_party) && Boolean(profile?.constituency);
   }
 
   function syncFilterPanel() {

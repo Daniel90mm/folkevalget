@@ -549,6 +549,45 @@ window.Folkevalget = (() => {
     return left.name.localeCompare(right.name, "da");
   }
 
+  const CONSTITUENCY_LABELS = [
+    "Bornholms Storkreds",
+    "Fyns Storkreds",
+    "Københavns Omegns Storkreds",
+    "Københavns Storkreds",
+    "Nordjyllands Storkreds",
+    "Nordsjællands Storkreds",
+    "Sjællands Storkreds",
+    "Sydjyllands Storkreds",
+    "Vestjyllands Storkreds",
+    "Østjyllands Storkreds",
+    "Færøerne",
+    "Grønland",
+  ];
+
+  function profileConstituencyLabel(profile) {
+    const direct = String(profile?.storkreds || "").trim();
+    if (CONSTITUENCY_LABELS.includes(direct)) {
+      return direct;
+    }
+
+    const candidates = [
+      profile?.constituency,
+      ...(Array.isArray(profile?.constituency_history) ? profile.constituency_history : []),
+      direct,
+    ]
+      .filter(Boolean)
+      .map((value) => String(value).trim());
+
+    for (const candidate of candidates) {
+      const match = CONSTITUENCY_LABELS.find((label) => candidate.includes(label));
+      if (match) {
+        return match;
+      }
+    }
+
+    return direct;
+  }
+
   function isCurrentProfile(profile) {
     return Boolean(profile?.current_party) && Boolean(profile?.constituency);
   }
@@ -1108,11 +1147,12 @@ window.Folkevalget = (() => {
   function buildProfileSearchItems(profiles) {
     return (profiles || []).map((profile) => {
       const current = isCurrentProfile(profile);
+      const constituencyLabel = profileConstituencyLabel(profile);
       const partyName = partyDisplayName(
         profile.current_party || profile.party,
         profile.current_party_short || profile.party_short
       );
-      const meta = [partyName, profile.storkreds || (current ? profile.constituency : "Tidligere medlem")]
+      const meta = [partyName, constituencyLabel || (current ? profile.constituency : "Tidligere medlem")]
         .filter(Boolean)
         .join(" · ");
       const searchParts = [
@@ -1124,7 +1164,9 @@ window.Folkevalget = (() => {
         profile.party,
         profile.party_short,
         profile.role,
+        constituencyLabel,
         profile.storkreds,
+        profile.constituency,
         ...(profile.committees || []).map((committee) => `${committee.short_name || ""} ${committee.name || ""}`),
       ];
 
@@ -1210,11 +1252,12 @@ window.Folkevalget = (() => {
     const groups = new Map();
 
     for (const profile of (profiles || []).filter(isCurrentProfile)) {
-      if (!profile.storkreds) {
+      const constituencyLabel = profileConstituencyLabel(profile);
+      if (!constituencyLabel) {
         continue;
       }
 
-      groups.set(profile.storkreds, (groups.get(profile.storkreds) || 0) + 1);
+      groups.set(constituencyLabel, (groups.get(constituencyLabel) || 0) + 1);
     }
 
     return [...groups.entries()].map(([storkreds, memberCount]) =>
@@ -1806,6 +1849,7 @@ window.Folkevalget = (() => {
     FAVORITES_EVENT_NAME,
     partyDisplayName,
     photoCreditText,
+    profileConstituencyLabel,
     profileContextFlags,
     profileContextNotes,
     readBootstrapPayload,
