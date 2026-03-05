@@ -6,7 +6,7 @@
     <title>Møder og dagsordener | Folkevalget</title>
     <meta
       name="description"
-      content="Se kommende og seneste møder med dagsordenspunkter fra Folketingets officielle ODA-data."
+      content="Se mødetidslinje, dagsordenspunkter og sagskoblinger fra Folketingets officielle ODA-data."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
         } catch (error) {}
       })();
     </script>
-    <link rel="stylesheet" href="style.css?v=20260305i">
+    <link rel="stylesheet" href="style.css?v=20260305j">
   </head>
   <body class="page-civics page-moeder">
     <div class="site-shell">
@@ -53,54 +53,50 @@
       </header>
 
       <main class="home-layout">
-        <section class="page-intro">
-          <p class="eyebrow">Folketinget · Møder</p>
-          <h1>Møder og dagsordener i datasættet</h1>
-          <p>
-            Her vises møder og dagsordenspunkter fra ODA, koblet til de forslag og behandlingstrin som
-            Folkevalget allerede følger i afstemningsdatasættet.
-          </p>
+        <section class="meeting-page-head">
+          <div class="meeting-page-head-copy">
+            <h1>Møder og dagsordener</h1>
+            <p>ODA-møder koblet til de sager og behandlingstrin, som Folkevalget allerede viser.</p>
+          </div>
+          <p class="table-note" id="meeting-updated-note">Opdateret: -</p>
         </section>
 
-        <section class="content-section">
-          <div class="meeting-toolbar">
-            <label class="field">
-              <span class="field-label">Søg i møder og dagsordenspunkter</span>
-              <input id="meeting-search" type="search" placeholder="Møde, forslag, nummer eller emne">
-            </label>
-            <p class="table-note" id="meeting-updated-note">Opdateret: -</p>
-          </div>
-          <p class="table-note" id="meeting-scope-note">
-            -
-          </p>
+        <section class="meeting-controls-row" aria-label="Filtre for møder">
+          <label class="field meeting-search-field">
+            <span class="field-label">Søg</span>
+            <input id="meeting-search" type="search" placeholder="Møde, forslag, nummer eller emne">
+          </label>
+          <label class="field meeting-filter-field">
+            <span class="field-label">Periode</span>
+            <select id="meeting-range">
+              <option value="90">Seneste 90 dage</option>
+              <option value="365" selected>Seneste 12 måneder</option>
+              <option value="all">Hele datasættet</option>
+            </select>
+          </label>
+          <label class="field meeting-filter-field">
+            <span class="field-label">Status</span>
+            <select id="meeting-status">
+              <option value="all" selected>Alle møder</option>
+              <option value="upcoming">Kommende</option>
+              <option value="held">Afholdte</option>
+            </select>
+          </label>
         </section>
 
-        <section class="content-section">
-          <div class="meeting-columns">
-            <section class="meeting-column">
-              <div class="section-heading meeting-column-head">
-                <p class="eyebrow">Kalender</p>
-                <h2>Kommende møder</h2>
-                <p class="table-note" id="meeting-upcoming-summary">-</p>
-              </div>
-              <div class="meeting-list" id="meeting-upcoming-list" aria-live="polite"></div>
-              <button class="button-link button-link-secondary hidden" id="meeting-upcoming-more" type="button">
-                Vis 25 mere
-              </button>
-            </section>
-
-            <section class="meeting-column">
-              <div class="section-heading meeting-column-head">
-                <p class="eyebrow">Historik</p>
-                <h2>Seneste møder</h2>
-                <p class="table-note" id="meeting-recent-summary">-</p>
-              </div>
-              <div class="meeting-list" id="meeting-recent-list" aria-live="polite"></div>
-              <button class="button-link button-link-secondary hidden" id="meeting-recent-more" type="button">
-                Vis 25 mere
-              </button>
-            </section>
+        <section class="meeting-timeline-section">
+          <div class="meeting-timeline-head">
+            <h2>Mødetidslinje</h2>
+            <p class="table-note" id="meeting-scope-note">-</p>
+            <p class="table-note" id="meeting-summary-note">-</p>
           </div>
+          <div class="meeting-timeline-scroll">
+            <div class="meeting-timeline" id="meeting-timeline" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="meeting-detail-section">
+          <div id="meeting-detail" aria-live="polite"></div>
         </section>
       </main>
 
@@ -117,6 +113,6 @@
 
     <script src="catalog.js" defer></script>
     <script src="shared.js?v=20260305e" defer></script>
-    <script src="moeder.js?v=20260305a" defer></script>
+    <script src="moeder.js?v=20260305b" defer></script>
   </body>
 </html>

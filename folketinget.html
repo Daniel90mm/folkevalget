@@ -23,9 +23,9 @@
         } catch (error) {}
       })();
     </script>
-    <link rel="stylesheet" href="style.css?v=20260305i">
+    <link rel="stylesheet" href="style.css?v=20260305j">
   </head>
-  <body class="page-civics">
+  <body class="page-civics page-civics-overview">
     <div class="site-shell">
       <header class="site-header">
         <div class="site-brand-row">
@@ -53,20 +53,22 @@
       </header>
 
       <main class="home-layout">
-        <section class="page-intro">
-          <p class="eyebrow">Folketinget</p>
-          <h1>Forstå tallene, kilderne og arbejdsformen bag Folketinget.</h1>
+        <section class="civics-intro">
+          <h1>Forstå Folketingets data</h1>
           <p>
-            Folkevalget viser officielle data. Denne side forklarer de vigtigste begreber, hvordan et
-            forslag bevæger sig gennem Folketinget, og hvorfor nøgletal som fremmøde skal læses med kontekst.
+            Folkevalget viser officielle tal med kildehenvisninger. Her kan du hurtigt få overblik over processen,
+            nøglebegreberne og hvad tallene faktisk måler.
           </p>
+          <nav class="civics-quick-links" aria-label="Hurtige links">
+            <a class="civics-quick-link" href="./moeder.html">Møder og dagsordener</a>
+            <a class="civics-quick-link" href="./afstemninger.html">Afstemninger</a>
+            <a class="civics-quick-link" href="./discover.html">Profiler</a>
+            <a class="civics-quick-link" href="./om.html">Om Folkevalget</a>
+          </nav>
         </section>
 
-        <section class="content-section">
-          <div class="section-heading">
-            <p class="eyebrow">Lovgivningsproces</p>
-            <h2>Fra forslag til afgørelse</h2>
-          </div>
+        <section class="civics-block">
+          <h2>Fra forslag til afgørelse</h2>
           <ol class="civics-process-list">
             <li class="civics-process-item">
               <span class="civics-process-step">1</span>
@@ -106,11 +108,8 @@
           </ol>
         </section>
 
-        <section class="content-section">
-          <div class="section-heading">
-            <p class="eyebrow">Nøgletal</p>
-            <h2>Hvad måler Folkevalget?</h2>
-          </div>
+        <section class="civics-block">
+          <h2>Hvad måler Folkevalget?</h2>
           <dl class="civics-definition-list">
             <div class="civics-definition-item">
               <dt>Fremmøde</dt>
@@ -131,11 +130,8 @@
           </dl>
         </section>
 
-        <section class="content-section">
-          <div class="section-heading">
-            <p class="eyebrow">Kontekst</p>
-            <h2>Hvorfor nogle tal skal læses med ekstra forklaring</h2>
-          </div>
+        <section class="civics-block">
+          <h2>Kontekst til tallene</h2>
           <div class="civics-context-list">
             <article class="civics-context-item">
               <h3>Ministre</h3>
@@ -152,11 +148,8 @@
           </div>
         </section>
 
-        <section class="content-section">
-          <div class="section-heading">
-            <p class="eyebrow">Begreber</p>
-            <h2>De mest brugte ord i Folkevalget</h2>
-          </div>
+        <section class="civics-block">
+          <h2>Begreber</h2>
           <dl class="civics-definition-list">
             <div class="civics-definition-item">
               <dt>Betænkning</dt>
@@ -177,11 +170,8 @@
           </dl>
         </section>
 
-        <section class="content-section content-section-cta">
-          <div class="section-heading">
-            <p class="eyebrow">Kilder</p>
-            <h2>Officielle steder at gå videre</h2>
-          </div>
+        <section class="civics-block civics-block-links">
+          <h2>Kilder</h2>
           <div class="civics-source-columns">
             <section class="civics-source-group">
               <h3>Officielle kilder</h3>
@@ -194,8 +184,8 @@
             <section class="civics-source-group">
               <h3>Videre på Folkevalget</h3>
               <ul class="civics-source-list">
-                <li><a class="civics-source-link" href="./afstemninger.html">Se afstemninger</a></li>
                 <li><a class="civics-source-link" href="./moeder.html">Se møder og dagsordener</a></li>
+                <li><a class="civics-source-link" href="./afstemninger.html">Se afstemninger</a></li>
                 <li><a class="civics-source-link" href="./discover.html">Se profiler</a></li>
                 <li><a class="civics-source-link" href="./om.html">Om Folkevalget</a></li>
               </ul>

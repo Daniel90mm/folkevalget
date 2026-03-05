@@ -1,6 +1,5 @@
-const MEETING_INITIAL_VISIBLE = 12;
-const MEETING_INCREMENT = 25;
-const AGENDA_PREVIEW_LIMIT = 6;
+const DEFAULT_RANGE = "365";
+const AGENDA_PREVIEW_LIMIT = 12;
 
 const MeetingsApp = (() => {
   const state = {
@@ -8,20 +7,20 @@ const MeetingsApp = (() => {
     scopeNote: "",
     generatedAt: null,
     query: "",
-    upcomingVisible: MEETING_INITIAL_VISIBLE,
-    recentVisible: MEETING_INITIAL_VISIBLE,
+    range: DEFAULT_RANGE,
+    status: "all",
+    selectedMeetingId: null,
   };
 
   const statsRoot = document.querySelector("[data-site-stats]");
   const searchInput = document.querySelector("#meeting-search");
+  const rangeSelect = document.querySelector("#meeting-range");
+  const statusSelect = document.querySelector("#meeting-status");
   const scopeNote = document.querySelector("#meeting-scope-note");
+  const summaryNote = document.querySelector("#meeting-summary-note");
   const updatedNote = document.querySelector("#meeting-updated-note");
-  const upcomingSummary = document.querySelector("#meeting-upcoming-summary");
-  const recentSummary = document.querySelector("#meeting-recent-summary");
-  const upcomingList = document.querySelector("#meeting-upcoming-list");
-  const recentList = document.querySelector("#meeting-recent-list");
-  const upcomingMoreButton = document.querySelector("#meeting-upcoming-more");
-  const recentMoreButton = document.querySelector("#meeting-recent-more");
+  const timelineRoot = document.querySelector("#meeting-timeline");
+  const detailRoot = document.querySelector("#meeting-detail");
 
   async function boot() {
     const [{ stats }, meetingsPayload] = await Promise.all([
@@ -30,11 +29,11 @@ const MeetingsApp = (() => {
     ]);
 
     window.Folkevalget.renderStats(statsRoot, stats);
-    state.meetings = Array.isArray(meetingsPayload?.meetings) ? meetingsPayload.meetings : [];
+    state.meetings = Array.isArray(meetingsPayload?.meetings) ? meetingsPayload.meetings.slice().sort(compareMeetingsAscending) : [];
     state.scopeNote = String(meetingsPayload?.scope_note || "").trim();
     state.generatedAt = meetingsPayload?.generated_at || null;
     bindEvents();
-    render();
+    render(true);
   }
 
   async function loadMeetingsPayload() {
@@ -130,7 +129,7 @@ const MeetingsApp = (() => {
         agenda_points: meeting.agenda_points.sort(compareAgendaPoints),
         agenda_point_count: meeting.agenda_points.length,
       }))
-      .sort(compareMeetingsRecentFirst);
+      .sort(compareMeetingsAscending);
 
     return {
       generated_at: nowIso,
@@ -142,97 +141,176 @@ const MeetingsApp = (() => {
   function bindEvents() {
     searchInput?.addEventListener("input", () => {
       state.query = searchInput.value || "";
-      state.upcomingVisible = MEETING_INITIAL_VISIBLE;
-      state.recentVisible = MEETING_INITIAL_VISIBLE;
-      render();
+      state.selectedMeetingId = null;
+      render(true);
     });
 
-    upcomingMoreButton?.addEventListener("click", () => {
-      state.upcomingVisible += MEETING_INCREMENT;
-      render();
+    rangeSelect?.addEventListener("change", () => {
+      state.range = String(rangeSelect.value || DEFAULT_RANGE);
+      state.selectedMeetingId = null;
+      render(true);
     });
 
-    recentMoreButton?.addEventListener("click", () => {
-      state.recentVisible += MEETING_INCREMENT;
-      render();
+    statusSelect?.addEventListener("change", () => {
+      state.status = String(statusSelect.value || "all");
+      state.selectedMeetingId = null;
+      render(true);
+    });
+
+    timelineRoot?.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-meeting-id]");
+      if (!button) {
+        return;
+      }
+      const meetingId = Number(button.getAttribute("data-meeting-id") || 0);
+      if (!Number.isFinite(meetingId) || meetingId <= 0) {
+        return;
+      }
+      state.selectedMeetingId = meetingId;
+      render(false);
     });
   }
 
-  function render() {
-    const filtered = filterMeetings(state.meetings, state.query);
-    const { upcoming, recent } = splitMeetings(filtered);
-
-    renderScope();
-    renderUpcoming(upcoming);
-    renderRecent(recent);
+  function render(shouldCenterSelection) {
+    const filtered = filterMeetings(state.meetings, {
+      query: state.query,
+      range: state.range,
+      status: state.status,
+    });
+    const selectedMeeting = ensureSelectedMeeting(filtered);
+    renderScope(filtered);
+    renderTimeline(filtered, selectedMeeting, shouldCenterSelection);
+    renderDetail(selectedMeeting);
   }
 
-  function renderScope() {
+  function renderScope(filteredMeetings) {
     if (scopeNote) {
       scopeNote.textContent =
-        state.scopeNote ||
-        "Viser møder og dagsordenspunkter fra Folketingets ODA-data i det aktuelle datasæt.";
+        state.scopeNote || "Viser møder og dagsordenspunkter fra Folketingets ODA-data i det aktuelle datasæt.";
     }
 
     if (updatedNote) {
       updatedNote.textContent = `Opdateret: ${window.Folkevalget.formatDate(state.generatedAt)}`;
     }
-  }
 
-  function renderUpcoming(meetings) {
-    const rendered = renderMeetingList(
-      upcomingList,
-      meetings,
-      state.upcomingVisible,
-      "Ingen kommende møder matcher den aktuelle søgning."
-    );
-    renderCountSummary(upcomingSummary, meetings.length, "kommende møder");
-    toggleMoreButton(upcomingMoreButton, rendered, meetings.length);
-  }
-
-  function renderRecent(meetings) {
-    const rendered = renderMeetingList(
-      recentList,
-      meetings,
-      state.recentVisible,
-      "Ingen tidligere møder matcher den aktuelle søgning."
-    );
-    renderCountSummary(recentSummary, meetings.length, "seneste møder");
-    toggleMoreButton(recentMoreButton, rendered, meetings.length);
-  }
-
-  function renderMeetingList(root, meetings, visibleLimit, emptyMessage) {
-    if (!root) {
-      return 0;
+    if (!summaryNote) {
+      return;
     }
+    const meetingCount = filteredMeetings.length;
+    let agendaCount = 0;
+    let upcomingCount = 0;
+    for (const meeting of filteredMeetings) {
+      agendaCount += Number(meeting?.agenda_point_count || meeting?.agenda_points?.length || 0);
+      if (isUpcomingMeeting(meeting)) {
+        upcomingCount += 1;
+      }
+    }
+    const heldCount = Math.max(0, meetingCount - upcomingCount);
+    summaryNote.textContent =
+      `${window.Folkevalget.formatNumber(meetingCount)} møder · ` +
+      `${window.Folkevalget.formatNumber(agendaCount)} dagsordenspunkter · ` +
+      `${window.Folkevalget.formatNumber(upcomingCount)} kommende · ` +
+      `${window.Folkevalget.formatNumber(heldCount)} afholdte`;
+  }
 
-    root.innerHTML = "";
+  function renderTimeline(meetings, selectedMeeting, shouldCenterSelection) {
+    if (!timelineRoot) {
+      return;
+    }
+    timelineRoot.innerHTML = "";
 
     if (meetings.length === 0) {
-      root.innerHTML = `<div class="panel-empty">${emptyMessage}</div>`;
-      return 0;
+      timelineRoot.innerHTML = '<div class="panel-empty">Ingen møder matcher den aktuelle søgning.</div>';
+      return;
     }
 
-    const visible = meetings.slice(0, Math.max(0, visibleLimit));
+    const selectedId = Number(selectedMeeting?.meeting_id || 0);
     const fragment = document.createDocumentFragment();
-    for (const meeting of visible) {
-      fragment.append(buildMeetingRow(meeting));
+    for (const meeting of meetings) {
+      const node = buildTimelineMeeting(meeting, selectedId);
+      fragment.append(node);
     }
-    root.append(fragment);
-    return visible.length;
+    timelineRoot.append(fragment);
+
+    if (shouldCenterSelection && selectedId > 0) {
+      const selectedNode = timelineRoot.querySelector(`.meeting-timeline-item[data-meeting-id="${selectedId}"]`);
+      selectedNode?.scrollIntoView({ block: "nearest", inline: "center" });
+    }
   }
 
-  function buildMeetingRow(meeting) {
-    const article = document.createElement("article");
-    article.className = "meeting-item";
+  function buildTimelineMeeting(meeting, selectedMeetingId) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "meeting-timeline-item";
 
-    const head = document.createElement("div");
-    head.className = "meeting-item-head";
+    const meetingId = Number(meeting?.meeting_id || 0);
+    if (meetingId > 0) {
+      button.setAttribute("data-meeting-id", String(meetingId));
+    }
+
+    if (meetingId === selectedMeetingId) {
+      button.classList.add("is-selected");
+      button.setAttribute("aria-current", "true");
+    }
+
+    const date = document.createElement("p");
+    date.className = "meeting-timeline-date";
+    date.textContent = window.Folkevalget.formatDate(meeting?.date);
+
+    const title = document.createElement("p");
+    title.className = "meeting-timeline-title";
+    title.textContent = String(meeting?.number || "").trim() ? `Møde ${meeting.number}` : "Møde";
+
+    const meta = document.createElement("p");
+    meta.className = "meeting-timeline-meta";
+    const agendaCount = Number(meeting?.agenda_point_count || meeting?.agenda_points?.length || 0);
+    const metaParts = [];
+    if (meeting?.status) {
+      metaParts.push(String(meeting.status));
+    }
+    metaParts.push(`${window.Folkevalget.formatNumber(agendaCount)} punkter`);
+    meta.textContent = metaParts.join(" · ");
+
+    button.append(date, title, meta);
+    return button;
+  }
+
+  function renderDetail(meeting) {
+    if (!detailRoot) {
+      return;
+    }
+    detailRoot.innerHTML = "";
+
+    if (!meeting) {
+      detailRoot.innerHTML = '<div class="panel-empty">Vælg et møde for at se dagsordenspunkter.</div>';
+      return;
+    }
+
+    const detail = document.createElement("article");
+    detail.className = "meeting-detail";
+
+    const head = document.createElement("header");
+    head.className = "meeting-detail-head";
+
+    const headCopy = document.createElement("div");
+    headCopy.className = "meeting-detail-copy";
 
     const meta = document.createElement("p");
     meta.className = "meeting-item-meta";
     meta.textContent = formatMeetingMeta(meeting);
-    head.append(meta);
+
+    const title = document.createElement("h3");
+    title.className = "meeting-item-title";
+    title.textContent = String(meeting?.title || "Møde i Folketinget");
+
+    const detailParts = dedupeStrings([meeting?.type, meeting?.status, meeting?.start_note]);
+    const detailText = document.createElement("p");
+    detailText.className = "meeting-item-detail";
+    detailText.textContent =
+      detailParts.length > 0 ? detailParts.join(" · ") : "Ingen supplerende mødeinformation registreret.";
+
+    headCopy.append(meta, title, detailText);
+    head.append(headCopy);
 
     const agendaUrl = String(meeting?.agenda_url || "").trim();
     if (agendaUrl) {
@@ -245,53 +323,50 @@ const MeetingsApp = (() => {
       head.append(sourceLink);
     }
 
-    const title = document.createElement("h3");
-    title.className = "meeting-item-title";
-    title.textContent = String(meeting?.title || "Møde i Folketinget");
+    const agendaSection = document.createElement("section");
+    agendaSection.className = "meeting-agenda";
 
-    const detailParts = dedupeStrings([
-      meeting?.type,
-      meeting?.status,
-      meeting?.start_note,
-    ]);
-    const detail = document.createElement("p");
-    detail.className = "meeting-item-detail";
-    detail.textContent =
-      detailParts.length > 0 ? detailParts.join(" · ") : "Ingen supplerende mødeinformation registreret.";
+    const agendaHead = document.createElement("div");
+    agendaHead.className = "meeting-agenda-head";
 
-    const agendaList = buildAgendaList(meeting);
-    article.append(head, title, detail, agendaList);
-    return article;
-  }
-
-  function buildAgendaList(meeting) {
-    const wrapper = document.createElement("div");
-    wrapper.className = "meeting-agenda";
+    const agendaTitle = document.createElement("h4");
+    agendaTitle.textContent = "Dagsordenspunkter";
+    agendaHead.append(agendaTitle);
 
     const points = Array.isArray(meeting?.agenda_points) ? meeting.agenda_points : [];
+    const agendaCount = Number(meeting?.agenda_point_count || points.length || 0);
+    const agendaCountNote = document.createElement("p");
+    agendaCountNote.className = "table-note";
+    agendaCountNote.textContent = `${window.Folkevalget.formatNumber(agendaCount)} punkter`;
+    agendaHead.append(agendaCountNote);
+
+    agendaSection.append(agendaHead);
+
     if (points.length === 0) {
-      wrapper.innerHTML = '<p class="meeting-agenda-empty">Ingen registrerede dagsordenspunkter i dette datasæt.</p>';
-      return wrapper;
+      const empty = document.createElement("p");
+      empty.className = "meeting-agenda-empty";
+      empty.textContent = "Ingen registrerede dagsordenspunkter i dette datasæt.";
+      agendaSection.append(empty);
+    } else {
+      const list = document.createElement("ul");
+      list.className = "meeting-agenda-list";
+
+      const visiblePoints = points.slice(0, AGENDA_PREVIEW_LIMIT);
+      for (const point of visiblePoints) {
+        list.append(buildAgendaRow(point, meeting));
+      }
+      agendaSection.append(list);
+
+      if (points.length > visiblePoints.length) {
+        const more = document.createElement("p");
+        more.className = "meeting-agenda-more";
+        more.textContent = `+${window.Folkevalget.formatNumber(points.length - visiblePoints.length)} yderligere dagsordenspunkter i mødet.`;
+        agendaSection.append(more);
+      }
     }
 
-    const list = document.createElement("ul");
-    list.className = "meeting-agenda-list";
-
-    const visiblePoints = points.slice(0, AGENDA_PREVIEW_LIMIT);
-    for (const point of visiblePoints) {
-      list.append(buildAgendaRow(point, meeting));
-    }
-
-    wrapper.append(list);
-
-    if (points.length > visiblePoints.length) {
-      const more = document.createElement("p");
-      more.className = "meeting-agenda-more";
-      more.textContent = `+${window.Folkevalget.formatNumber(points.length - visiblePoints.length)} yderligere dagsordenspunkter.`;
-      wrapper.append(more);
-    }
-
-    return wrapper;
+    detail.append(head, agendaSection);
+    detailRoot.append(detail);
   }
 
   function buildAgendaRow(point, meeting) {
@@ -307,57 +382,24 @@ const MeetingsApp = (() => {
 
     const title = document.createElement("p");
     title.className = "meeting-agenda-title";
-    title.textContent =
-      String(point?.agenda_title || point?.sagstrin_title || "Dagsordenspunkt");
+    title.textContent = String(point?.agenda_title || point?.sagstrin_title || "Dagsordenspunkt");
 
     const meta = document.createElement("p");
     meta.className = "meeting-agenda-meta";
     const metaParts = [];
     const caseNumber = String(point?.sag_number || "").trim();
+    const caseTitle = String(point?.sag_title || "").trim();
     if (caseNumber) {
       metaParts.push(caseNumber);
     }
-    const caseTitle = String(point?.sag_title || "").trim();
     if (caseTitle) {
       metaParts.push(caseTitle);
     }
-    if (metaParts.length > 0) {
-      meta.textContent = metaParts.join(" · ");
-    } else {
-      meta.textContent = "Ingen koblet sag registreret.";
-    }
-
+    meta.textContent = metaParts.length > 0 ? metaParts.join(" · ") : "Ingen koblet sag registreret.";
     copy.append(title, meta);
 
-    const links = document.createElement("p");
-    links.className = "meeting-agenda-links";
-
-    if (caseNumber) {
-      const localLink = document.createElement("a");
-      localLink.className = "meeting-inline-link";
-      localLink.href = `${window.Folkevalget.toSiteUrl("afstemninger.html")}?q=${encodeURIComponent(caseNumber)}`;
-      localLink.textContent = "Se i afstemninger";
-      links.append(localLink);
-
-      const caseDate = String(point?.sagstrin_date || meeting?.date || "").trim();
-      const officialCaseUrl = window.Folkevalget.buildSagUrl(caseNumber, caseDate);
-      if (officialCaseUrl) {
-        const separator = document.createElement("span");
-        separator.className = "meeting-inline-separator";
-        separator.textContent = "·";
-        links.append(separator);
-
-        const officialLink = document.createElement("a");
-        officialLink.className = "meeting-inline-link";
-        officialLink.href = officialCaseUrl;
-        officialLink.target = "_blank";
-        officialLink.rel = "noreferrer";
-        officialLink.textContent = "Åbn sag på ft.dk";
-        links.append(officialLink);
-      }
-    }
-
-    if (links.childElementCount > 0) {
+    const links = buildAgendaLinks(point, meeting);
+    if (links) {
       copy.append(links);
     }
 
@@ -365,18 +407,65 @@ const MeetingsApp = (() => {
     return item;
   }
 
-  function filterMeetings(meetings, rawQuery) {
-    const query = window.Folkevalget.normaliseText(rawQuery);
-    if (!query) {
-      return meetings;
+  function buildAgendaLinks(point, meeting) {
+    const caseNumber = String(point?.sag_number || "").trim();
+    if (!caseNumber) {
+      return null;
     }
 
-    const tokens = query.split(/\s+/).filter(Boolean);
-    if (tokens.length === 0) {
-      return meetings;
+    const links = document.createElement("p");
+    links.className = "meeting-agenda-links";
+
+    const localLink = document.createElement("a");
+    localLink.className = "meeting-inline-link";
+    localLink.href = `${window.Folkevalget.toSiteUrl("afstemninger.html")}?q=${encodeURIComponent(caseNumber)}`;
+    localLink.textContent = "Se i afstemninger";
+    links.append(localLink);
+
+    const caseDate = String(point?.sagstrin_date || meeting?.date || "").trim();
+    const officialCaseUrl = window.Folkevalget.buildSagUrl(caseNumber, caseDate);
+    if (officialCaseUrl) {
+      const separator = document.createElement("span");
+      separator.className = "meeting-inline-separator";
+      separator.textContent = "·";
+      links.append(separator);
+
+      const officialLink = document.createElement("a");
+      officialLink.className = "meeting-inline-link";
+      officialLink.href = officialCaseUrl;
+      officialLink.target = "_blank";
+      officialLink.rel = "noreferrer";
+      officialLink.textContent = "Åbn sag på ft.dk";
+      links.append(officialLink);
     }
+
+    return links;
+  }
+
+  function filterMeetings(meetings, filters) {
+    const query = window.Folkevalget.normaliseText(filters?.query || "");
+    const tokens = query ? query.split(/\s+/).filter(Boolean) : [];
+    const cutoffIso = resolveCutoffIso(filters?.range);
+    const status = String(filters?.status || "all");
 
     return meetings.filter((meeting) => {
+      const meetingDate = String(meeting?.date || "").trim();
+
+      if (status === "upcoming" && !isUpcomingMeeting(meeting)) {
+        return false;
+      }
+      if (status === "held" && isUpcomingMeeting(meeting)) {
+        return false;
+      }
+
+      if (cutoffIso && meetingDate && meetingDate < cutoffIso) {
+        return false;
+      }
+
+      if (tokens.length === 0) {
+        return true;
+      }
+
       const points = Array.isArray(meeting?.agenda_points) ? meeting.agenda_points : [];
       const pointSearchText = points
         .map((point) =>
@@ -387,6 +476,7 @@ const MeetingsApp = (() => {
             point?.sag_number,
             point?.sag_title,
             point?.sagstrin_title,
+            point?.sagstrin_type,
           ]
             .filter(Boolean)
             .join(" ")
@@ -409,41 +499,62 @@ const MeetingsApp = (() => {
     });
   }
 
-  function splitMeetings(meetings) {
-    const todayIso = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Copenhagen" });
-    const upcoming = [];
-    const recent = [];
+  function ensureSelectedMeeting(filteredMeetings) {
+    if (filteredMeetings.length === 0) {
+      state.selectedMeetingId = null;
+      return null;
+    }
 
-    for (const meeting of meetings) {
-      const meetingDate = String(meeting?.date || "").trim();
-      if (meetingDate && meetingDate >= todayIso) {
-        upcoming.push(meeting);
-      } else {
-        recent.push(meeting);
+    if (state.selectedMeetingId) {
+      const existing = filteredMeetings.find(
+        (meeting) => Number(meeting?.meeting_id || 0) === Number(state.selectedMeetingId)
+      );
+      if (existing) {
+        return existing;
       }
     }
 
-    upcoming.sort(compareMeetingsUpcomingFirst);
-    recent.sort(compareMeetingsRecentFirst);
-    return { upcoming, recent };
+    const fallback = filteredMeetings[filteredMeetings.length - 1];
+    state.selectedMeetingId = Number(fallback?.meeting_id || 0) || null;
+    return fallback;
   }
 
-  function compareMeetingsUpcomingFirst(left, right) {
+  function resolveCutoffIso(rangeValue) {
+    const value = String(rangeValue || DEFAULT_RANGE).trim().toLowerCase();
+    if (!value || value === "all") {
+      return null;
+    }
+
+    const days = Number(value);
+    if (!Number.isFinite(days) || days <= 0) {
+      return null;
+    }
+
+    const cutoff = new Date();
+    cutoff.setHours(0, 0, 0, 0);
+    cutoff.setDate(cutoff.getDate() - days);
+    return cutoff.toLocaleDateString("sv-SE", { timeZone: "Europe/Copenhagen" });
+  }
+
+  function isUpcomingMeeting(meeting) {
+    const meetingDate = String(meeting?.date || "").trim();
+    if (!meetingDate) {
+      return false;
+    }
+    return meetingDate >= getTodayIso();
+  }
+
+  function getTodayIso() {
+    return new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Copenhagen" });
+  }
+
+  function compareMeetingsAscending(left, right) {
     const leftDate = String(left?.date || "");
     const rightDate = String(right?.date || "");
     if (leftDate !== rightDate) {
       return leftDate.localeCompare(rightDate);
     }
     return compareMeetingNumbers(left?.number, right?.number);
-  }
-
-  function compareMeetingsRecentFirst(left, right) {
-    const leftDate = String(left?.date || "");
-    const rightDate = String(right?.date || "");
-    if (leftDate !== rightDate) {
-      return rightDate.localeCompare(leftDate);
-    }
-    return compareMeetingNumbers(right?.number, left?.number);
   }
 
   function compareMeetingNumbers(leftNumber, rightNumber) {
@@ -507,20 +618,6 @@ const MeetingsApp = (() => {
     return [2, 0, value.toLowerCase()];
   }
 
-  function renderCountSummary(root, count, label) {
-    if (!root) {
-      return;
-    }
-    root.textContent = `${window.Folkevalget.formatNumber(count)} ${label}`;
-  }
-
-  function toggleMoreButton(button, rendered, total) {
-    if (!button) {
-      return;
-    }
-    button.classList.toggle("hidden", rendered >= total);
-  }
-
   function formatMeetingMeta(meeting) {
     const parts = [];
     if (meeting?.date) {
@@ -555,12 +652,12 @@ const MeetingsApp = (() => {
 
 MeetingsApp.boot().catch((error) => {
   console.error(error);
-  const upcomingList = document.querySelector("#meeting-upcoming-list");
-  const recentList = document.querySelector("#meeting-recent-list");
-  if (upcomingList) {
-    upcomingList.innerHTML = '<div class="panel-empty">Mødedata kunne ikke indlæses.</div>';
+  const timelineRoot = document.querySelector("#meeting-timeline");
+  const detailRoot = document.querySelector("#meeting-detail");
+  if (timelineRoot) {
+    timelineRoot.innerHTML = '<div class="panel-empty">Mødedata kunne ikke indlæses.</div>';
   }
-  if (recentList) {
-    recentList.innerHTML = '<div class="panel-empty">Mødedata kunne ikke indlæses.</div>';
+  if (detailRoot) {
+    detailRoot.innerHTML = '<div class="panel-empty">Mødedata kunne ikke indlæses.</div>';
   }
 });
