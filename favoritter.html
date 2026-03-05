@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Møder og dagsordener | Folkevalget</title>
+    <title>Favoritter | Folkevalget</title>
     <meta
       name="description"
-      content="Se mødetidslinje, dagsordenspunkter og sagskoblinger fra Folketingets officielle ODA-data."
+      content="Følg favoritsager og politikere, og se de seneste registrerede ændringer i datasættet."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
     </script>
     <link rel="stylesheet" href="style.css?v=20260305l">
   </head>
-  <body class="page-civics page-moeder">
+  <body class="page-favorites">
     <div class="site-shell">
       <header class="site-header">
         <div class="site-brand-row">
@@ -38,7 +38,7 @@
           <nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Primær navigation">
             <a href="./discover.html">Profiler</a>
             <a href="./afstemninger.html">Afstemninger</a>
-            <a aria-current="page" href="./folketinget.html">Folketinget</a>
+            <a href="./folketinget.html">Folketinget</a>
           </nav>
           <div class="site-stats" data-site-stats aria-live="polite">
             <span><strong data-stat="profiles">-</strong> profiler</span>
@@ -52,51 +52,63 @@
         </div>
       </header>
 
-      <main class="home-layout">
-        <section class="meeting-page-head">
-          <div class="meeting-page-head-copy">
-            <h1>Møder og dagsordener</h1>
-            <p>ODA-møder koblet til de sager og behandlingstrin, som Folkevalget allerede viser.</p>
-          </div>
-          <p class="table-note" id="meeting-updated-note">Opdateret: -</p>
+      <main class="home-layout favorites-layout">
+        <section class="page-intro">
+          <p class="eyebrow">Favoritter</p>
+          <h1>Følg de sager og politikere, du vil holde øje med.</h1>
+          <p>
+            Stjernemarkér en sag på afstemningssiden eller en politiker på profilsiden. Her ser du dine favoritter
+            samlet med de seneste registrerede aktiviteter.
+          </p>
         </section>
 
-        <section class="meeting-controls-row" aria-label="Filtre for møder">
-          <label class="field meeting-search-field">
-            <span class="field-label">Søg</span>
-            <input id="meeting-search" type="search" placeholder="Møde, forslag, nummer eller emne">
-          </label>
-          <label class="field meeting-filter-field">
-            <span class="field-label">Periode</span>
-            <select id="meeting-range">
-              <option value="90">Seneste 90 dage</option>
-              <option value="365" selected>Seneste 12 måneder</option>
-              <option value="all">Hele datasættet</option>
-            </select>
-          </label>
-          <label class="field meeting-filter-field">
-            <span class="field-label">Status</span>
-            <select id="meeting-status">
-              <option value="all" selected>Alle møder</option>
-              <option value="upcoming">Kommende</option>
-              <option value="held">Afholdte</option>
-            </select>
-          </label>
+        <section class="content-section">
+          <div class="section-heading">
+            <h2>Overblik</h2>
+          </div>
+          <div class="favorites-summary" id="favorites-summary">Indlæser favoritter…</div>
         </section>
 
-        <section class="meeting-timeline-section">
-          <div class="meeting-timeline-head">
-            <h2>Mødetidslinje</h2>
-            <p class="table-note" id="meeting-scope-note">-</p>
-            <p class="table-note" id="meeting-summary-note">-</p>
+        <section class="content-section">
+          <div class="section-heading">
+            <h2>Daily Change Feed</h2>
+            <p class="table-note">Bygget på officielle registreringer i det aktuelle datasæt.</p>
           </div>
-          <div class="meeting-timeline-scroll">
-            <div class="meeting-timeline" id="meeting-timeline" aria-live="polite"></div>
+          <div class="change-feed-grid">
+            <article class="panel">
+              <h3>Nye afstemninger</h3>
+              <div class="change-feed-list" id="feed-new-votes"></div>
+            </article>
+            <article class="panel">
+              <h3>Korrigerede dokumenter / omtryk</h3>
+              <div class="change-feed-list" id="feed-omtryk"></div>
+            </article>
+            <article class="panel">
+              <h3>Partisplit i afstemninger</h3>
+              <div class="change-feed-list" id="feed-party-splits"></div>
+            </article>
+            <article class="panel">
+              <h3>Status på aktive sager</h3>
+              <div class="change-feed-list" id="feed-active-status"></div>
+            </article>
           </div>
         </section>
 
-        <section class="meeting-detail-section">
-          <div id="meeting-detail" aria-live="polite"></div>
+        <section class="content-section">
+          <div class="favorites-columns">
+            <article class="panel">
+              <div class="panel-heading">
+                <h2>Favoritsager</h2>
+              </div>
+              <div class="favorite-list" id="favorite-cases"></div>
+            </article>
+            <article class="panel">
+              <div class="panel-heading">
+                <h2>Favoritpolitikere</h2>
+              </div>
+              <div class="favorite-list" id="favorite-profiles"></div>
+            </article>
+          </div>
         </section>
       </main>
 
@@ -113,6 +125,6 @@
 
     <script src="catalog.js" defer></script>
     <script src="shared.js?v=20260305g" defer></script>
-    <script src="moeder.js?v=20260305b" defer></script>
+    <script src="favorites.js?v=20260305b" defer></script>
   </body>
 </html>

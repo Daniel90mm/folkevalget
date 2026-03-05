@@ -27,6 +27,8 @@ window.Folkevalget = (() => {
     V: "vedtagelse",
   };
   const THEME_STORAGE_KEY = "folkevalget-theme";
+  const FAVORITES_STORAGE_KEY = "folkevalget-favorites-v1";
+  const FAVORITES_EVENT_NAME = "folkevalget:favorites-changed";
   const GLOBAL_SEARCH_SECTION_ORDER = ["profile", "vote", "party", "constituency"];
   const GLOBAL_SEARCH_SECTION_LABELS = {
     profile: "Politikere",
@@ -63,6 +65,7 @@ window.Folkevalget = (() => {
   initNavigation();
   initGlobalSiteStats();
   initGlobalSearch();
+  initFooterFavoritesLink();
 
   async function loadCatalogueData() {
     if (catalogueDataPromise) {
@@ -573,6 +576,30 @@ window.Folkevalget = (() => {
 
   function compactNormalisedText(value) {
     return (value || "").replace(/[\s-]+/g, "");
+  }
+
+  function initFooterFavoritesLink() {
+    const footerLinks = document.querySelector(".footer-links");
+    if (!footerLinks) {
+      return;
+    }
+
+    if (footerLinks.querySelector("[data-footer-link='favorites']")) {
+      return;
+    }
+
+    const link = document.createElement("a");
+    link.href = toSiteUrl("favoritter.html");
+    link.dataset.footerLink = "favorites";
+    link.textContent = "Favoritter";
+
+    const firstLink = footerLinks.querySelector("a");
+    if (firstLink) {
+      footerLinks.insertBefore(link, firstLink.nextSibling);
+      return;
+    }
+
+    footerLinks.append(link);
   }
 
   function buildCaseNumberVariants(value) {
@@ -1545,6 +1572,170 @@ window.Folkevalget = (() => {
     }
   }
 
+  function readFavoritesStore() {
+    const fallback = { profiles: {}, cases: {} };
+    try {
+      const raw = window.localStorage.getItem(FAVORITES_STORAGE_KEY);
+      if (!raw) {
+        return fallback;
+      }
+
+      const parsed = JSON.parse(raw);
+      const profiles = parsed?.profiles && typeof parsed.profiles === "object" ? parsed.profiles : {};
+      const cases = parsed?.cases && typeof parsed.cases === "object" ? parsed.cases : {};
+      return { profiles, cases };
+    } catch (error) {
+      return fallback;
+    }
+  }
+
+  function writeFavoritesStore(store) {
+    try {
+      window.localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(store));
+    } catch (error) {}
+  }
+
+  function normaliseCaseNumber(caseNumber) {
+    return String(caseNumber || "")
+      .toUpperCase()
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function normaliseIsoDate(value) {
+    const text = String(value || "").trim();
+    if (!text) {
+      return null;
+    }
+
+    if (/^\d{4}-\d{2}-\d{2}$/.test(text)) {
+      return text;
+    }
+
+    const parsed = new Date(text);
+    if (Number.isNaN(parsed.getTime())) {
+      return null;
+    }
+
+    return parsed.toISOString().slice(0, 10);
+  }
+
+  function buildFavoritesSnapshot(store) {
+    const profiles = Object.values(store?.profiles || {}).sort((left, right) =>
+      String(right?.saved_at || "").localeCompare(String(left?.saved_at || ""))
+    );
+    const cases = Object.values(store?.cases || {}).sort((left, right) =>
+      String(right?.saved_at || "").localeCompare(String(left?.saved_at || ""))
+    );
+    return { profiles, cases };
+  }
+
+  function emitFavoritesChanged(store) {
+    window.dispatchEvent(
+      new CustomEvent(FAVORITES_EVENT_NAME, {
+        detail: buildFavoritesSnapshot(store),
+      })
+    );
+  }
+
+  function getFavorites() {
+    return buildFavoritesSnapshot(readFavoritesStore());
+  }
+
+  function isFavoriteProfile(profileId) {
+    const id = Number(profileId || 0);
+    if (!Number.isFinite(id) || id <= 0) {
+      return false;
+    }
+    const store = readFavoritesStore();
+    return Boolean(store.profiles[String(id)]);
+  }
+
+  function isFavoriteCase(caseNumber) {
+    const key = normaliseCaseNumber(caseNumber);
+    if (!key) {
+      return false;
+    }
+    const store = readFavoritesStore();
+    return Boolean(store.cases[key]);
+  }
+
+  function setFavoriteProfile(profile, shouldFavorite = true) {
+    const id = Number(profile?.id || 0);
+    if (!Number.isFinite(id) || id <= 0) {
+      return false;
+    }
+
+    const store = readFavoritesStore();
+    const key = String(id);
+
+    if (shouldFavorite) {
+      store.profiles[key] = {
+        id,
+        name: String(profile?.name || "").trim() || `Profil ${id}`,
+        party_short: String(profile?.party_short || "").trim() || null,
+        party: String(profile?.party || "").trim() || null,
+        saved_at: new Date().toISOString(),
+      };
+    } else {
+      delete store.profiles[key];
+    }
+
+    writeFavoritesStore(store);
+    emitFavoritesChanged(store);
+    return Boolean(store.profiles[key]);
+  }
+
+  function toggleFavoriteProfile(profile) {
+    const id = Number(profile?.id || 0);
+    if (!Number.isFinite(id) || id <= 0) {
+      return false;
+    }
+    const active = isFavoriteProfile(id);
+    return setFavoriteProfile(profile, !active);
+  }
+
+  function setFavoriteCase(caseData, shouldFavorite = true) {
+    const caseNumber = normaliseCaseNumber(caseData?.sag_number || caseData?.case_number);
+    if (!caseNumber) {
+      return false;
+    }
+
+    const store = readFavoritesStore();
+    const existing = store.cases[caseNumber] || null;
+
+    if (shouldFavorite) {
+      const statusSnapshot =
+        String(caseData?.sag_status || caseData?.sagstrin_status || existing?.saved_status || "").trim() || null;
+      store.cases[caseNumber] = {
+        sag_number: caseNumber,
+        sag_id: Number(caseData?.sag_id || 0) || null,
+        title: String(caseData?.sag_short_title || caseData?.sag_title || "").trim() || caseNumber,
+        type: String(caseData?.type || caseData?.sag_type || "").trim() || null,
+        saved_status: statusSnapshot,
+        saved_latest_vote_id: Number(caseData?.afstemning_id || existing?.saved_latest_vote_id || 0) || null,
+        saved_latest_vote_date:
+          normaliseIsoDate(caseData?.date || existing?.saved_latest_vote_date) || null,
+        saved_at: String(existing?.saved_at || "") || new Date().toISOString(),
+      };
+    } else {
+      delete store.cases[caseNumber];
+    }
+
+    writeFavoritesStore(store);
+    emitFavoritesChanged(store);
+    return Boolean(store.cases[caseNumber]);
+  }
+
+  function toggleFavoriteCase(caseData) {
+    const caseNumber = normaliseCaseNumber(caseData?.sag_number || caseData?.case_number);
+    if (!caseNumber) {
+      return false;
+    }
+    const active = isFavoriteCase(caseNumber);
+    return setFavoriteCase(caseData, !active);
+  }
+
   return {
     PARTY_NAMES,
     applyPhoto,
@@ -1568,6 +1759,14 @@ window.Folkevalget = (() => {
     loadVoteDetails,
     loadVoteOverview,
     normaliseText,
+    getFavorites,
+    isFavoriteProfile,
+    isFavoriteCase,
+    setFavoriteProfile,
+    toggleFavoriteProfile,
+    setFavoriteCase,
+    toggleFavoriteCase,
+    FAVORITES_EVENT_NAME,
     partyDisplayName,
     photoCreditText,
     profileContextFlags,

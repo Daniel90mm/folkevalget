@@ -6,6 +6,7 @@ const ProfileApp = (() => {
   const emptyState = document.querySelector("#profile-empty");
   const pageContent = document.querySelector("#profile-page");
   const sourceLink = document.querySelector("#profile-source");
+  const profileFavoriteToggle = document.querySelector("#profile-favorite-toggle");
   const breadcrumbName = document.querySelector("#breadcrumb-name");
   const profileTags = document.querySelector("#profile-tags");
   const contextNote = document.querySelector("#profile-context-note");
@@ -33,6 +34,7 @@ const ProfileApp = (() => {
     recentVotes: [],
     recentVoteFilter: "",
     recentVoteLimit: INITIAL_RECENT_VOTES_LIMIT,
+    currentProfile: null,
   };
   const VOTE_GROUP_META = {
     for: { voteTypeId: 1, voteTypeLabel: "For" },
@@ -74,6 +76,7 @@ const ProfileApp = (() => {
     emptyState.classList.add("hidden");
     pageContent.classList.remove("hidden");
 
+    state.currentProfile = profile;
     document.title = `${profile.name} | Folkevalget`;
     breadcrumbName.textContent = profile.name;
 
@@ -129,6 +132,7 @@ const ProfileApp = (() => {
     if (state.recentVotes.length === 0 && fallbackVotes.length > 0) {
       state.recentVotes = [...fallbackVotes];
     }
+    updateProfileFavoriteButton();
     state.recentVoteLimit = INITIAL_RECENT_VOTES_LIMIT;
     if (recentVoteFilter) {
       recentVoteFilter.value = state.recentVoteFilter;
@@ -163,6 +167,34 @@ const ProfileApp = (() => {
       });
       recentVotesResetButton.dataset.bound = "true";
     }
+
+    if (profileFavoriteToggle && profileFavoriteToggle.dataset.bound !== "true") {
+      profileFavoriteToggle.addEventListener("click", () => {
+        if (!state.currentProfile) {
+          return;
+        }
+        window.Folkevalget.toggleFavoriteProfile(state.currentProfile);
+        updateProfileFavoriteButton();
+      });
+      profileFavoriteToggle.dataset.bound = "true";
+    }
+
+    if (window && !window.__FOLKEVALGET_PROFILE_FAVORITES_BOUND__) {
+      window.addEventListener(window.Folkevalget.FAVORITES_EVENT_NAME, () => {
+        updateProfileFavoriteButton();
+      });
+      window.__FOLKEVALGET_PROFILE_FAVORITES_BOUND__ = true;
+    }
+  }
+
+  function updateProfileFavoriteButton() {
+    if (!profileFavoriteToggle || !state.currentProfile) {
+      return;
+    }
+
+    const isFavorite = window.Folkevalget.isFavoriteProfile(state.currentProfile.id);
+    profileFavoriteToggle.textContent = isFavorite ? "Fjern favorit" : "Føj til favoritter";
+    profileFavoriteToggle.setAttribute("aria-pressed", String(isFavorite));
   }
 
   function buildSummary(profile) {

@@ -91,6 +91,7 @@ const VotesApp = (() => {
   const voteDetailContent = document.querySelector("#vote-detail-content");
   const votePartyFilter = document.querySelector("#vote-party-filter");
   const voteContext = document.querySelector("#vote-context");
+  const voteFavoriteToggle = document.querySelector("#vote-favorite-toggle");
   const voteSourceLink = document.querySelector("#vote-source-link");
   const voteEmneordInline = document.querySelector("#vote-emneord-inline");
   const voteEmneordInlineList = document.querySelector("#vote-emneord-inline-list");
@@ -280,6 +281,24 @@ const VotesApp = (() => {
       state.partyFilter = event.target.value;
       renderSelectedVote();
       syncQueryString();
+    });
+
+    if (voteFavoriteToggle) {
+      voteFavoriteToggle.addEventListener("click", () => {
+        const vote = getSelectedOverviewVote();
+        if (!vote || !vote.sag_number) {
+          return;
+        }
+        window.Folkevalget.toggleFavoriteCase(vote);
+        updateVoteFavoriteToggle(vote);
+      });
+    }
+
+    window.addEventListener(window.Folkevalget.FAVORITES_EVENT_NAME, () => {
+      const vote = getSelectedOverviewVote();
+      if (vote) {
+        updateVoteFavoriteToggle(vote);
+      }
     });
 
   }
@@ -773,12 +792,19 @@ const VotesApp = (() => {
     }
   }
 
+  function getSelectedOverviewVote() {
+    return state.filteredVotes.find((vote) => vote.afstemning_id === state.selectedVoteId) || null;
+  }
+
   function renderSelectedVote() {
-    const selectedOverviewVote = state.filteredVotes.find((vote) => vote.afstemning_id === state.selectedVoteId) || null;
+    const selectedOverviewVote = getSelectedOverviewVote();
 
     if (!selectedOverviewVote) {
       voteEmpty.classList.remove("hidden");
       voteDetailContent.classList.add("hidden");
+      if (voteFavoriteToggle) {
+        voteFavoriteToggle.classList.add("hidden");
+      }
       return;
     }
     const selectedVote = mergeVoteWithDetails(selectedOverviewVote);
@@ -788,6 +814,7 @@ const VotesApp = (() => {
 
     document.title = `${selectedVote.sag_number || "Afstemning"} | Folkevalget`;
     renderVoteHeader(selectedVote);
+    updateVoteFavoriteToggle(selectedVote);
     renderVoteEmneordInline(selectedVote);
     renderVoteSignalsSummary(selectedVote);
     renderVoteContext(selectedVote);
@@ -820,6 +847,23 @@ const VotesApp = (() => {
       voteDetailContent.scrollIntoView({ behavior: "smooth", block: "start" });
       state.focusDetailRequested = false;
     }
+  }
+
+  function updateVoteFavoriteToggle(vote) {
+    if (!voteFavoriteToggle) {
+      return;
+    }
+
+    const caseNumber = String(vote?.sag_number || "").trim();
+    if (!caseNumber) {
+      voteFavoriteToggle.classList.add("hidden");
+      return;
+    }
+
+    const isFavorite = window.Folkevalget.isFavoriteCase(caseNumber);
+    voteFavoriteToggle.textContent = isFavorite ? "Fjern favorit" : "Føj til favoritter";
+    voteFavoriteToggle.setAttribute("aria-pressed", String(isFavorite));
+    voteFavoriteToggle.classList.remove("hidden");
   }
 
   function scoreVoteSearch(vote, normalisedQuery, tokens) {

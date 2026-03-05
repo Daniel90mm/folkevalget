@@ -812,6 +812,65 @@ Decision:
 
 ---
 
+## 2026-03-05 feature evaluation: Daily Change Feed + favorites/watchlist
+
+### Proposal
+
+- Add a `Daily Change Feed` showing:
+  - new votes
+  - corrected documents (`omtryk`)
+  - party-split changes
+  - status on active cases
+- Let users favorite/follow:
+  - cases (active or archived)
+  - politicians
+- Show update indicators when followed items get new activity.
+
+### Checklist evaluation
+
+1. Documented public API:
+- Yes, based on existing ODA entities already used in pipeline (`Afstemning`, `Sag`, `Sagstrin`, `Dokument` links and timeline index outputs).
+
+2. Scraping or unstable reverse-engineered endpoints:
+- No.
+
+3. Coverage across MPs:
+- Yes, full MP/case coverage within the fetched dataset.
+
+4. Official/reliable source:
+- Yes, Folketinget ODA-derived dataset.
+
+5. Objective and verifiable:
+- Yes, feed events are concrete registry changes (dates/status/documents/vote records), no subjective scoring.
+
+6. Credentials/contracts/gated access:
+- No.
+
+7. Documentation outcome:
+- Logged here as accepted.
+
+### Decision
+
+Accepted.
+
+### Implementation guardrails
+
+- Keep it neutral and source-first:
+  - no intent labels
+  - no popularity/approval framing
+- Keep watchlist local (client-side localStorage) to preserve static-site architecture.
+- Link every feed row and favorite item back to a concrete case/profile/vote page and official source where possible.
+
+### Sources checked
+
+- https://oda.ft.dk/api/
+- https://oda.ft.dk/api/$metadata
+- Existing generated files in repo:
+  - `data/afstemninger_overblik.json`
+  - `data/sag_tidslinjer_index.json`
+
+---
+
 ## Evaluated and rejected ideas
 
 ### Normative ranking labels (medlober, kontraer, status quo) as primary UX
