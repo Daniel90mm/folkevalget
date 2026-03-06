@@ -1093,6 +1093,418 @@ body.global-search-open {
   padding-bottom: var(--space-lg);
 }
 
+.page-parliament .home-layout {
+  gap: 0;
+}
+
+.page-parliament .parliament-section {
+  display: grid;
+  gap: var(--space-lg);
+  padding: var(--space-xl) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.page-parliament .parliament-overview-section {
+  padding-top: 0;
+  border-top: none;
+}
+
+.page-parliament .parliament-section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-md);
+  align-items: end;
+}
+
+.page-parliament .parliament-overview-head {
+  align-items: start;
+}
+
+.page-parliament .parliament-section-copy {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.page-parliament .parliament-section-copy h1,
+.page-parliament .parliament-section-copy h2,
+.page-parliament .parliament-list-head h3,
+.page-parliament .parliament-note-item h3,
+.page-parliament .parliament-source-group h3 {
+  font-family: var(--font-heading);
+  line-height: 1.08;
+}
+
+.page-parliament .parliament-section-copy h1 {
+  font-size: clamp(2rem, 3.6vw, 2.8rem);
+}
+
+.page-parliament .parliament-section-copy h2 {
+  font-size: clamp(1.65rem, 2.6vw, 2.1rem);
+}
+
+.page-parliament .parliament-section-copy p,
+.page-parliament .parliament-note-item p,
+.page-parliament .parliament-source-group p {
+  margin: 0;
+}
+
+.page-parliament .parliament-entry-links,
+.page-parliament .parliament-source-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+}
+
+.page-parliament .parliament-entry-links a,
+.page-parliament .parliament-section-link,
+.page-parliament .parliament-inline-link,
+.page-parliament .parliament-source-list a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.page-parliament .parliament-entry-links a:hover,
+.page-parliament .parliament-entry-links a:focus-visible,
+.page-parliament .parliament-section-link:hover,
+.page-parliament .parliament-section-link:focus-visible,
+.page-parliament .parliament-inline-link:hover,
+.page-parliament .parliament-inline-link:focus-visible,
+.page-parliament .parliament-source-list a:hover,
+.page-parliament .parliament-source-list a:focus-visible {
+  color: var(--color-accent-hover);
+}
+
+.page-parliament .parliament-overview-strip,
+.page-parliament .parliament-activity-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.page-parliament .parliament-key-stat {
+  display: grid;
+  gap: 0.35rem;
+  padding-left: var(--space-md);
+  border-left: 1px solid var(--color-border);
+}
+
+.page-parliament .parliament-key-stat:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.page-parliament .parliament-stat-label,
+.page-parliament .parliament-committee-code {
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.page-parliament .parliament-key-stat strong {
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 2.8vw, 2.25rem);
+  line-height: 1;
+}
+
+.page-parliament .parliament-key-stat p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.page-parliament .parliament-seat-distribution {
+  display: flex;
+  gap: 2px;
+  min-height: 1rem;
+}
+
+.page-parliament .parliament-seat-segment {
+  display: block;
+  min-width: 0;
+  background: var(--party-color, var(--color-accent));
+}
+
+.page-parliament .parliament-seat-segment:hover,
+.page-parliament .parliament-seat-segment:focus-visible {
+  opacity: 0.78;
+}
+
+.page-parliament .parliament-seat-legend {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.page-parliament .parliament-seat-row {
+  display: grid;
+  grid-template-columns: minmax(0, 17rem) minmax(0, 1fr) auto auto;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.page-parliament .parliament-seat-party {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  min-width: 0;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.page-parliament .parliament-seat-party-name {
+  min-width: 0;
+}
+
+.page-parliament .parliament-seat-meter {
+  height: 0.4rem;
+  background: color-mix(in srgb, var(--color-text-muted) 18%, transparent);
+}
+
+.page-parliament .parliament-seat-meter-fill {
+  display: block;
+  height: 100%;
+  background: var(--party-color, var(--color-accent));
+}
+
+.page-parliament .parliament-seat-count {
+  font-variant-numeric: tabular-nums;
+}
+
+.page-parliament .parliament-seat-share {
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.page-parliament .parliament-activity-grid,
+.page-parliament .parliament-source-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl);
+}
+
+.page-parliament .parliament-list-block {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.page-parliament .parliament-list-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+.page-parliament .parliament-list-head h3 {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+}
+
+.page-parliament .parliament-activity-list,
+.page-parliament .parliament-process-strip,
+.page-parliament .parliament-source-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-parliament .parliament-activity-item,
+.page-parliament .parliament-source-group,
+.page-parliament .parliament-note-item {
+  display: grid;
+  gap: 0.45rem;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.page-parliament .parliament-activity-item:first-child,
+.page-parliament .parliament-source-group:first-child,
+.page-parliament .parliament-note-item:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.page-parliament .parliament-note-item:nth-child(-n + 2) {
+  padding-top: 0;
+  border-top: none;
+}
+
+.page-parliament .parliament-activity-link {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.14;
+}
+
+.page-parliament .parliament-activity-link:hover,
+.page-parliament .parliament-activity-link:focus-visible,
+.page-parliament .parliament-seat-party:hover,
+.page-parliament .parliament-seat-party:focus-visible,
+.page-parliament .parliament-committee-link:hover,
+.page-parliament .parliament-committee-link:focus-visible {
+  color: var(--color-accent);
+}
+
+.page-parliament .parliament-activity-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem var(--space-md);
+  color: var(--color-text-muted);
+}
+
+.page-parliament .parliament-activity-note,
+.page-parliament .parliament-empty,
+.page-parliament .parliament-committee-meta {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.page-parliament .parliament-committee-directory,
+.page-parliament .parliament-notes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 var(--space-xl);
+}
+
+.page-parliament .parliament-committee-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-md);
+  align-items: end;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.page-parliament .parliament-committee-item:nth-child(-n + 2) {
+  padding-top: 0;
+  border-top: none;
+}
+
+.page-parliament .parliament-committee-main {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.page-parliament .parliament-committee-link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: baseline;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.page-parliament .parliament-process-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-lg);
+}
+
+.page-parliament .parliament-process-item {
+  display: grid;
+  gap: 0.45rem;
+  padding-top: var(--space-sm);
+  border-top: 2px solid var(--color-border);
+}
+
+.page-parliament .parliament-process-item strong,
+.page-parliament .parliament-note-item h3,
+.page-parliament .parliament-source-group h3 {
+  font-size: 1.05rem;
+}
+
+.page-parliament .parliament-process-item p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.page-parliament .parliament-source-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.page-parliament .parliament-source-group {
+  padding-top: 0;
+  border-top: none;
+}
+
+@media (max-width: 1000px) {
+  .page-parliament .parliament-overview-strip,
+  .page-parliament .parliament-activity-strip,
+  .page-parliament .parliament-process-strip,
+  .page-parliament .parliament-source-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-parliament .parliament-activity-grid,
+  .page-parliament .parliament-committee-directory,
+  .page-parliament .parliament-notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-parliament .parliament-committee-item:nth-child(-n + 2) {
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .page-parliament .parliament-committee-item:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
+@media (max-width: 820px) {
+  .page-parliament .parliament-section-head {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .page-parliament .parliament-seat-row {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+  }
+
+  .page-parliament .parliament-seat-meter {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-parliament .parliament-overview-strip,
+  .page-parliament .parliament-activity-strip,
+  .page-parliament .parliament-process-strip,
+  .page-parliament .parliament-source-columns,
+  .page-parliament .parliament-notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-parliament .parliament-key-stat {
+    padding-left: 0;
+    padding-top: var(--space-sm);
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .page-parliament .parliament-key-stat:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .page-parliament .parliament-seat-row,
+  .page-parliament .parliament-committee-item {
+    grid-template-columns: 1fr;
+  }
+
+  .page-parliament .parliament-note-item:nth-child(-n + 2) {
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .page-parliament .parliament-note-item:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
 .page-moeder .home-layout {
   gap: 0;
 }
@@ -2988,6 +3400,326 @@ html[data-theme="dark"] .page-votes .voter-row:focus-visible {
 
 .table-metric span {
   color: var(--color-text-secondary);
+}
+
+.page-parties .parties-layout {
+  gap: 0;
+}
+
+.page-parties .party-page-head,
+.page-parties .party-section {
+  display: grid;
+  gap: var(--space-lg);
+  padding: var(--space-xl) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.page-parties .party-page-head {
+  padding-top: 0;
+  border-top: none;
+}
+
+.page-parties .party-page-headline,
+.page-parties .party-section-copy {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.page-parties .party-page-headline h1,
+.page-parties .party-section-copy h2,
+.page-parties .party-source-group h3,
+.page-parties .party-row-name strong,
+.page-parties .party-highlight strong {
+  font-family: var(--font-heading);
+  line-height: 1.08;
+}
+
+.page-parties .party-page-headline h1 {
+  font-size: clamp(2rem, 3.6vw, 2.7rem);
+}
+
+.page-parties .party-section-copy h2 {
+  font-size: clamp(1.6rem, 2.7vw, 2.05rem);
+}
+
+.page-parties .party-page-headline p,
+.page-parties .party-section-copy p,
+.page-parties .party-highlight p,
+.page-parties .party-footnote,
+.page-parties .party-row-kicker,
+.page-parties .party-row-note,
+.page-parties .party-empty,
+.page-parties .party-source-group p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.page-parties .party-page-links,
+.page-parties .party-source-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+}
+
+.page-parties .party-page-links a,
+.page-parties .party-section-link,
+.page-parties .party-source-list a {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.page-parties .party-page-links a:hover,
+.page-parties .party-page-links a:focus-visible,
+.page-parties .party-section-link:hover,
+.page-parties .party-section-link:focus-visible,
+.page-parties .party-source-list a:hover,
+.page-parties .party-source-list a:focus-visible {
+  color: var(--color-accent-hover);
+}
+
+.page-parties .party-overview-note {
+  max-width: 72ch;
+}
+
+.page-parties .party-section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-md);
+  align-items: end;
+}
+
+.page-parties .party-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-lg);
+}
+
+.page-parties .party-highlight {
+  display: grid;
+  gap: 0.45rem;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.page-parties .party-highlight strong {
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+}
+
+.page-parties .party-footnote {
+  font-size: var(--text-sm);
+}
+
+.page-parties .party-seat-distribution {
+  display: flex;
+  gap: 2px;
+  min-height: 1rem;
+}
+
+.page-parties .party-seat-segment {
+  display: block;
+  min-width: 0;
+  background: var(--party-color, var(--color-accent));
+}
+
+.page-parties .party-seat-segment:hover,
+.page-parties .party-seat-segment:focus-visible {
+  opacity: 0.8;
+}
+
+.page-parties .party-seat-legend {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.page-parties .party-seat-row {
+  display: grid;
+  grid-template-columns: minmax(0, 17rem) minmax(0, 1fr) auto auto;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.page-parties .party-seat-party {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.page-parties .party-seat-party:hover,
+.page-parties .party-seat-party:focus-visible,
+.page-parties .party-row-name:hover,
+.page-parties .party-row-name:focus-visible {
+  color: var(--color-accent);
+}
+
+.page-parties .party-seat-meter {
+  height: 0.4rem;
+  background: color-mix(in srgb, var(--color-text-muted) 18%, transparent);
+}
+
+.page-parties .party-seat-meter-fill {
+  display: block;
+  height: 100%;
+  background: var(--party-color, var(--color-accent));
+}
+
+.page-parties .party-seat-count,
+.page-parties .party-seat-share {
+  font-variant-numeric: tabular-nums;
+}
+
+.page-parties .party-seat-share {
+  color: var(--color-text-secondary);
+}
+
+.page-parties .party-directory {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.page-parties .party-row {
+  display: grid;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.page-parties .party-row:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.page-parties .party-row-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-md);
+  align-items: start;
+}
+
+.page-parties .party-row-identity {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.page-parties .party-row-name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--color-text);
+}
+
+.page-parties .party-row-name strong {
+  font-size: clamp(1.3rem, 2vw, 1.55rem);
+}
+
+.page-parties .party-row-metrics {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.page-parties .party-row-metric {
+  display: grid;
+  gap: 0.35rem;
+  padding-left: var(--space-md);
+  border-left: 1px solid var(--color-border);
+}
+
+.page-parties .party-row-metric:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.page-parties .party-row-metric strong {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 1.9vw, 1.45rem);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.page-parties .party-source-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl);
+}
+
+.page-parties .party-source-group {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.page-parties .party-source-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.page-parties .party-empty {
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 1000px) {
+  .page-parties .party-highlight-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page-parties .party-row-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .page-parties .party-source-columns {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 820px) {
+  .page-parties .party-section-head,
+  .page-parties .party-row-head {
+    grid-template-columns: 1fr;
+  }
+
+  .page-parties .party-seat-row {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: start;
+  }
+
+  .page-parties .party-seat-meter {
+    grid-column: 1 / -1;
+    margin-top: calc(var(--space-xs) * -0.1);
+  }
+}
+
+@media (max-width: 640px) {
+  .page-parties .party-highlight-grid,
+  .page-parties .party-row-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .page-parties .party-row-metric {
+    padding-left: 0;
+    padding-top: var(--space-sm);
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .page-parties .party-row-metric:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .page-parties .party-seat-row {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .page-parties .party-seat-share {
+    justify-self: end;
+  }
 }
 
 .panel-empty,
