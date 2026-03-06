@@ -191,7 +191,7 @@
 
     renderActivityList(
       elements.latestVotes,
-      insights.recentActivity.latestVotes,
+      insights.recentActivity.latestVotes.slice(0, 6),
       (vote) => ({
         title: `${vote.caseNumber || `Afstemning ${vote.number}`} · ${vote.caseTitle}`,
         href: vote.voteUrl,
@@ -210,7 +210,7 @@
 
     renderActivityList(
       elements.latestMeetings,
-      insights.recentActivity.latestMeetings,
+      insights.recentActivity.latestMeetings.slice(0, 6),
       (meeting) => ({
         title: meetingTitle(meeting),
         href: meeting.href,
@@ -261,7 +261,7 @@
 
     renderActivityList(
       elements.recentCases,
-      insights.process.recentCases,
+      insights.process.recentCases.slice(0, 6),
       (row) => ({
         title: `${row.caseNumber ? `${row.caseNumber} · ` : ""}${row.caseTitle}`,
         href: row.href,
@@ -280,7 +280,7 @@
     if (hasActiveCases) {
       renderActivityList(
         elements.activeCases,
-        insights.process.openCases,
+        insights.process.openCases.slice(0, 5),
         (row) => ({
           title: `${row.caseNumber ? `${row.caseNumber} · ` : ""}${row.caseTitle}`,
           href: row.href,
@@ -302,17 +302,16 @@
       `Udvalgene summeres på de seneste 180 dage, og emnerne bygger på officielle sagsområder koblet til afstemningerne i de seneste 90 dage.`
     );
 
-    renderActivityList(
+    renderBarList(
       elements.hotCommittees,
-      insights.committees.topRecent,
+      insights.committees.topRecent.slice(0, 6),
       (committee) => ({
-        title: `${committee.shortName} · ${committee.name}`,
+        code: committee.shortName,
+        title: committee.name,
         href: committee.membersUrl,
-        meta: [
-          `${api.formatNumber(committee.recentMeetingCount180)} møder`,
-          `${api.formatNumber(committee.recentAgendaPointCount180)} dagsordenspunkter`,
-          `${api.formatNumber(committee.memberCount)} medlemmer`,
-        ],
+        barValue: committee.recentMeetingCount180,
+        valueText: `${api.formatNumber(committee.recentMeetingCount180)} ${pluralize(committee.recentMeetingCount180, "møde", "møder")}`,
+        metaText: `${api.formatNumber(committee.recentAgendaPointCount180)} dagsordenspunkter · ${api.formatNumber(committee.memberCount)} medlemmer`,
         note: committee.latestMeeting
           ? `Senest ${api.formatDate(committee.latestMeeting.date)}`
           : null,
@@ -320,16 +319,15 @@
       "Ingen udvalg med registreret aktivitet i den aktuelle periode."
     );
 
-    renderActivityList(
+    renderBarList(
       elements.topicsList,
-      insights.topics.recentTopics,
+      insights.topics.recentTopics.slice(0, 8),
       (topic) => ({
         title: topic.displayLabel,
         href: topic.href,
-        meta: [
-          `${api.formatNumber(topic.voteCount)} afstemninger`,
-          `${api.formatNumber(topic.caseCount)} sager`,
-        ],
+        barValue: topic.voteCount,
+        valueText: `${api.formatNumber(topic.voteCount)} ${pluralize(topic.voteCount, "afstemning", "afstemninger")}`,
+        metaText: `${api.formatNumber(topic.caseCount)} ${pluralize(topic.caseCount, "sag", "sager")}`,
         note: topic.latestDate ? `Senest ${api.formatDate(topic.latestDate)}` : null,
       }),
       "Ingen emneord i den aktuelle periode."
@@ -350,52 +348,66 @@
     }
 
     const activeCommitteeCount = committees.filter((committee) => committee.recentMeetingCount180 > 0).length;
+    const maxRecentMeetings = Math.max(1, ...committees.map((committee) => committee.recentMeetingCount180));
     setText(
       elements.committeeSummary,
       `${api.formatNumber(committees.length)} udvalg med nuværende medlemmer, heraf ${api.formatNumber(activeCommitteeCount)} med registreret mødeaktivitet de seneste 180 dage.`
     );
 
     for (const committee of committees) {
-      const item = document.createElement("article");
-      item.className = "parliament-committee-item";
+      const row = document.createElement("article");
+      row.className = "parliament-committee-row";
 
       const main = document.createElement("div");
-      main.className = "parliament-committee-main";
+      main.className = "parliament-committee-cell parliament-committee-main";
 
       const link = document.createElement("a");
       link.className = "parliament-committee-link";
       link.href = committee.membersUrl;
       link.append(
         buildTextNode("span", "parliament-committee-code", committee.shortName),
-        document.createTextNode(committee.name)
+        buildTextNode("span", "parliament-committee-name", committee.name)
+      );
+      main.append(link);
+
+      const members = buildTextNode(
+        "div",
+        "parliament-committee-cell parliament-committee-members",
+        api.formatNumber(committee.memberCount)
       );
 
-      const meta = document.createElement("p");
-      meta.className = "parliament-committee-meta";
-      meta.textContent =
-        `${api.formatNumber(committee.memberCount)} ${pluralize(committee.memberCount, "medlem", "medlemmer")}` +
-        ` · ${api.formatNumber(committee.recentMeetingCount180)} ${pluralize(committee.recentMeetingCount180, "møde", "møder")} / 180 dage`;
+      const activity = document.createElement("div");
+      activity.className = "parliament-committee-cell parliament-committee-activity";
+      const activityTrack = document.createElement("div");
+      activityTrack.className = "parliament-committee-activity-track";
+      const activityFill = document.createElement("span");
+      activityFill.className = "parliament-committee-activity-fill";
+      activityFill.style.width = `${maxRecentMeetings > 0 ? (committee.recentMeetingCount180 / maxRecentMeetings) * 100 : 0}%`;
+      activityTrack.appendChild(activityFill);
+      const activityLabel = buildTextNode(
+        "span",
+        "parliament-committee-activity-label",
+        `${api.formatNumber(committee.recentMeetingCount180)} ${pluralize(committee.recentMeetingCount180, "møde", "møder")} / 180 dage`
+      );
+      activity.append(activityTrack, activityLabel);
 
-      main.append(link, meta);
-
-      if (committee.latestMeeting) {
-        const note = document.createElement("p");
-        note.className = "parliament-activity-note";
-        note.textContent = committee.latestAgendaPoint?.sag_number
-          ? `Senest ${api.formatDate(committee.latestMeeting.date)} · ${committee.latestAgendaPoint.sag_number}`
-          : `Senest ${api.formatDate(committee.latestMeeting.date)}`;
-        main.append(note);
-      }
+      const latest = document.createElement("div");
+      latest.className = "parliament-committee-cell parliament-committee-latest";
+      latest.textContent = committee.latestMeeting
+        ? (committee.latestAgendaPoint?.sag_number
+            ? `${api.formatDate(committee.latestMeeting.date)} · ${committee.latestAgendaPoint.sag_number}`
+            : api.formatDate(committee.latestMeeting.date))
+        : "Ingen registreret aktivitet";
 
       const source = document.createElement("a");
-      source.className = "parliament-inline-link";
+      source.className = "parliament-inline-link parliament-committee-source";
       source.href = committee.officialUrl || "#";
       source.textContent = "ft.dk";
       source.target = "_blank";
       source.rel = "noreferrer";
 
-      item.append(main, source);
-      elements.committeeDirectory.appendChild(item);
+      row.append(main, members, activity, latest, source);
+      elements.committeeDirectory.appendChild(row);
     }
   }
 
@@ -422,21 +434,57 @@
     if (!root) {
       return;
     }
-    root.innerHTML = "";
+    root.replaceChildren();
 
     if (!Array.isArray(rows) || rows.length === 0) {
       root.append(buildEmptyNode(emptyText));
       return;
     }
 
+    const total = rows.reduce((sum, row) => sum + Number(row.count || 0), 0) || 1;
+
     for (const row of rows) {
       const item = document.createElement("div");
       item.className = "status-mix-item";
-      item.append(
-        buildTextNode("span", "", row.label),
-        buildTextNode("strong", "", api.formatNumber(row.count))
+
+      const head = document.createElement("div");
+      head.className = "status-mix-head";
+      const values = document.createElement("div");
+      values.className = "status-mix-values";
+      values.append(
+        buildTextNode("strong", "", api.formatNumber(row.count)),
+        buildTextNode("span", "", api.formatPercent(((Number(row.count || 0) / total) * 100).toFixed(1)))
       );
+      head.append(buildTextNode("span", "status-mix-label", row.label), values);
+
+      const track = document.createElement("div");
+      track.className = "status-mix-track";
+      const fill = document.createElement("span");
+      fill.className = "status-mix-fill";
+      fill.style.width = `${(Number(row.count || 0) / total) * 100}%`;
+      track.append(fill);
+
+      item.append(head, track);
       root.append(item);
+    }
+  }
+
+  function renderBarList(root, rows, mapRow, emptyText) {
+    if (!root) {
+      return;
+    }
+    root.replaceChildren();
+
+    if (!Array.isArray(rows) || rows.length === 0) {
+      root.appendChild(buildEmptyNode(emptyText, "li"));
+      return;
+    }
+
+    const items = rows.map((row) => mapRow(row));
+    const maxValue = Math.max(1, ...items.map((item) => Number(item.barValue || 0)));
+
+    for (const item of items) {
+      root.appendChild(buildBarItem(item, maxValue));
     }
   }
 
@@ -493,6 +541,55 @@
     return item;
   }
 
+  function buildBarItem(config, maxValue) {
+    const item = document.createElement("li");
+    item.className = "parliament-bar-item";
+
+    const head = document.createElement("div");
+    head.className = "parliament-bar-head";
+
+    let titleNode;
+    if (config.href) {
+      titleNode = document.createElement("a");
+      titleNode.className = "parliament-bar-link";
+      titleNode.href = config.href;
+      if (String(config.href).startsWith("http")) {
+        titleNode.rel = "noreferrer";
+        titleNode.target = "_blank";
+      }
+    } else {
+      titleNode = document.createElement("div");
+      titleNode.className = "parliament-bar-link";
+    }
+
+    if (config.code) {
+      titleNode.append(buildTextNode("span", "parliament-bar-code", config.code));
+    }
+    titleNode.append(buildTextNode("span", "parliament-bar-title", config.title || "Uden titel"));
+
+    const value = buildTextNode("span", "parliament-bar-value", config.valueText || "");
+    head.append(titleNode, value);
+
+    const track = document.createElement("div");
+    track.className = "parliament-bar-track";
+    const fill = document.createElement("span");
+    fill.className = "parliament-bar-fill";
+    fill.style.width = `${maxValue > 0 ? (Number(config.barValue || 0) / maxValue) * 100 : 0}%`;
+    track.appendChild(fill);
+
+    item.append(head, track);
+
+    if (config.metaText) {
+      item.appendChild(buildTextNode("p", "parliament-bar-meta", config.metaText));
+    }
+
+    if (config.note) {
+      item.appendChild(buildTextNode("p", "parliament-bar-note", config.note));
+    }
+
+    return item;
+  }
+
   function buildPartyBadge(shortName) {
     const badge = document.createElement("span");
     badge.className = "party-code-badge";
@@ -543,10 +640,10 @@
 
     const caseNumber = String(firstAgendaPoint.sag_number || "").trim();
     const title = String(firstAgendaPoint.sag_title || "").trim();
-    if (caseNumber && title) {
-      return `${caseNumber} · ${title}`;
+    if (caseNumber) {
+      return `Første sag: ${caseNumber}`;
     }
-    return caseNumber || title;
+    return title ? "Første punkt på dagsordenen" : "";
   }
 
   function agendaPointLabel(count) {

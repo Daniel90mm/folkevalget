@@ -55,7 +55,9 @@ test("parliament page renders live overview", async ({ page }) => {
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Folketinget lige nu");
   await expect(page.locator("#parliament-member-count")).toHaveText("179");
   await expect.poll(async () => page.locator("#parliament-seat-legend .parliament-seat-row").count()).toBeGreaterThan(10);
-  await expect.poll(async () => page.locator("#parliament-committee-directory .parliament-committee-item").count()).toBeGreaterThan(20);
+  await expect.poll(async () => page.locator("#parliament-status-mix .status-mix-track").count()).toBeGreaterThan(3);
+  await expect.poll(async () => page.locator("#parliament-hot-committees .parliament-bar-item").count()).toBeGreaterThan(3);
+  await expect.poll(async () => page.locator("#parliament-committee-directory .parliament-committee-row").count()).toBeGreaterThan(20);
 });
 
 test("parties page renders party overview", async ({ page }) => {
