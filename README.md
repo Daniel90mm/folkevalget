@@ -2,6 +2,26 @@
 
 Static political transparency site for `folkevalget.dk`.
 
+## Local development
+
+Install tooling once:
+
+```bash
+npm install
+npx playwright install chromium
+```
+
+Useful commands:
+
+```bash
+npm run dev
+npm run check
+npm run test:smoke
+npm run refresh:data
+```
+
+See [DEVELOPMENT.md](./DEVELOPMENT.md) for the working rules used in this repo.
+
 ## Data flow
 
 The site should not call Folketinget's API in the browser for every visitor.

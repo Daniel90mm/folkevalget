@@ -1,0 +1,23 @@
+{
+  "name": "folkevalget",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static political transparency site for folkevalget.dk.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs --host 127.0.0.1 --port 4173",
+    "dev:open": "node scripts/dev-server.mjs --host 127.0.0.1 --port 4173 --open",
+    "check": "npm run check:js && npm run check:data",
+    "check:js": "node scripts/check-js.mjs",
+    "check:data": "node scripts/check-data.mjs",
+    "test:smoke": "playwright test",
+    "test:smoke:headed": "playwright test --headed",
+    "refresh:data": "python scripts/fetch_data.py --incremental-from-existing --incremental-buffer-days 45 --verbose",
+    "refresh:data:full": "python scripts/fetch_data.py --start-date 2022-11-01 --verbose"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}
