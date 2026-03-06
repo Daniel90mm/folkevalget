@@ -18,6 +18,20 @@ test("home page renders live site stats", async ({ page }) => {
   await expect(page.locator('[data-stat="votes"]')).not.toHaveText("-");
 });
 
+test("header parliament dropdown reveals reachable subpages", async ({ page }) => {
+  await page.goto("/");
+
+  const parent = page.locator('[data-nav-parent="parliament"]');
+  const submenu = page.locator('[data-nav-dropdown="parliament"] .site-nav-submenu');
+  const meetingsLink = submenu.getByRole("link", { name: "Møder" });
+
+  await parent.hover();
+  await expect(submenu).toBeVisible();
+  await meetingsLink.click();
+
+  await expect(page.locator("body")).toHaveClass(/page-moeder/);
+});
+
 test("discover page renders member cards", async ({ page }) => {
   await page.goto("/discover.html");
 

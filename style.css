@@ -271,6 +271,15 @@ img {
   min-width: 0;
 }
 
+.site-nav-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max(100%, 11.5rem);
+  height: 0.8rem;
+}
+
 .site-nav-dropdown-link {
   z-index: 1;
 }
@@ -1166,14 +1175,33 @@ body.global-search-open {
 
 .page-parliament .parliament-section {
   display: grid;
-  gap: var(--space-lg);
-  padding: var(--space-xl) 0;
+  gap: var(--space-md);
+  padding: var(--space-lg) 0;
   border-top: 1px solid var(--color-border);
 }
 
 .page-parliament .parliament-overview-section {
   padding-top: 0;
   border-top: none;
+}
+
+.page-parliament .parliament-jump-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem var(--space-lg);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.page-parliament .parliament-jump-nav a {
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.page-parliament .parliament-jump-nav a:hover,
+.page-parliament .parliament-jump-nav a:focus-visible {
+  color: var(--color-accent-hover);
 }
 
 .page-parliament .parliament-section-head {
@@ -1495,6 +1523,25 @@ body.global-search-open {
   border-top: none;
 }
 
+@media (min-width: 1180px) {
+  .page-parliament .parliament-committee-directory,
+  .page-parliament .parliament-notes-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 var(--space-lg);
+  }
+
+  .page-parliament .parliament-committee-item,
+  .page-parliament .parliament-note-item {
+    padding-top: 0.8rem;
+  }
+
+  .page-parliament .parliament-committee-item:nth-child(-n + 3),
+  .page-parliament .parliament-note-item:nth-child(-n + 3) {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
 @media (max-width: 1000px) {
   .page-parliament .parliament-overview-strip,
   .page-parliament .parliament-activity-strip,
@@ -1554,6 +1601,10 @@ body.global-search-open {
   .page-parliament .parliament-key-stat:first-child {
     padding-top: 0;
     border-top: none;
+  }
+
+  .page-parliament .parliament-jump-nav {
+    gap: 0.35rem var(--space-md);
   }
 
   .page-parliament .parliament-seat-row,
