@@ -264,6 +264,73 @@ img {
   background: var(--color-accent);
 }
 
+.site-nav-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.site-nav-dropdown-link {
+  z-index: 1;
+}
+
+.site-nav-dropdown[data-nav-current="true"] > .site-nav-dropdown-link {
+  color: var(--color-accent);
+}
+
+.site-nav-dropdown[data-nav-current="true"] > .site-nav-dropdown-link::after {
+  background: var(--color-accent);
+}
+
+.site-nav-submenu {
+  position: absolute;
+  top: calc(100% + 0.7rem);
+  left: 0;
+  z-index: 12;
+  min-width: 11.5rem;
+  display: grid;
+  gap: 0;
+  padding-top: var(--space-xs);
+  background: var(--color-bg);
+  border-top: 2px solid var(--color-accent);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.25rem);
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.site-nav-submenu a {
+  min-height: 0;
+  padding: 0.45rem 0;
+  white-space: nowrap;
+}
+
+.site-nav-submenu a::after {
+  display: none;
+}
+
+.site-nav-submenu a + a {
+  border-top: 1px solid var(--color-border);
+}
+
+.site-nav-submenu a[aria-current="page"] {
+  color: var(--color-accent);
+}
+
+.site-nav-submenu a[aria-current="page"]::after {
+  display: none;
+}
+
+.site-nav-dropdown:hover .site-nav-submenu,
+.site-nav-dropdown:focus-within .site-nav-submenu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
 .site-nav-toggle {
   display: none;
   align-items: center;
@@ -4411,6 +4478,36 @@ html[data-theme="dark"] .party-code-badge[data-party="DF"] {
     gap: var(--space-sm);
   }
 
+  .site-nav-dropdown {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav-dropdown-link {
+    width: 100%;
+  }
+
+  .site-nav-submenu {
+    position: static;
+    min-width: 0;
+    width: 100%;
+    padding: 0 0 0 var(--space-md);
+    margin-top: var(--space-xs);
+    background: transparent;
+    border-top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .site-nav-submenu a {
+    width: 100%;
+    min-height: 2rem;
+    padding: 0.2rem 0;
+    font-size: var(--text-sm);
+  }
+
   .site-header-tools {
     gap: var(--space-sm);
   }
@@ -4814,6 +4911,7 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
   padding: 0;
   border: 0;
   background: transparent;
+  margin-top: var(--space-xl);
 }
 
 .page-votes .vote-detail-hero {

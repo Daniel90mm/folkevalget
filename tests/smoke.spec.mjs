@@ -49,6 +49,7 @@ test("parties page renders party overview", async ({ page }) => {
 
   await expect(page.locator("body")).toHaveClass(/page-parties/);
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Partierne lige nu");
+  await expect(page.locator('[data-nav-dropdown="parliament"] [aria-current="page"]')).toHaveText("Partier");
   await expect.poll(async () => page.locator("#party-seat-legend .party-seat-row").count()).toBeGreaterThan(10);
   await expect.poll(async () => page.locator("#party-directory .party-row").count()).toBeGreaterThan(10);
 });

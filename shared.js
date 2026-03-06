@@ -61,6 +61,7 @@ window.Folkevalget = (() => {
   };
 
   const siteBasePath = detectSiteBasePath();
+  initHeaderParliamentMenu();
   initThemeToggle();
   initNavigation();
   initGlobalSiteStats();
@@ -640,6 +641,75 @@ window.Folkevalget = (() => {
     }
 
     footerLinks.append(link);
+  }
+
+  function isCurrentSitePage(filename) {
+    const pathname = (window.location.pathname || "").replace(/\/+$/, "");
+    return pathname.endsWith(`/${filename}`) || pathname.endsWith(filename);
+  }
+
+  function initHeaderParliamentMenu() {
+    const nav = document.querySelector(".site-nav");
+    if (!nav || nav.querySelector("[data-nav-dropdown='parliament']")) {
+      return;
+    }
+
+    const parentLink = Array.from(nav.querySelectorAll("a")).find((link) => {
+      try {
+        return new URL(link.getAttribute("href") || "", window.location.href).pathname.endsWith("/folketinget.html");
+      } catch (error) {
+        return false;
+      }
+    });
+
+    if (!parentLink) {
+      return;
+    }
+
+    const dropdown = document.createElement("div");
+    dropdown.className = "site-nav-dropdown";
+    dropdown.dataset.navDropdown = "parliament";
+
+    const parentHref = parentLink.getAttribute("href") || toSiteUrl("folketinget.html");
+    const parentIsCurrent = isCurrentSitePage("folketinget.html");
+    const childPages = [
+      { href: toSiteUrl("folketinget.html"), label: "Overblik", current: false },
+      { href: toSiteUrl("moeder.html"), label: "Møder", current: isCurrentSitePage("moeder.html") },
+      { href: toSiteUrl("partier.html"), label: "Partier", current: isCurrentSitePage("partier.html") },
+    ];
+    const sectionIsCurrent = parentIsCurrent || childPages.some((item) => item.current);
+
+    if (sectionIsCurrent) {
+      dropdown.dataset.navCurrent = "true";
+    }
+
+    const nextParentLink = document.createElement("a");
+    nextParentLink.href = parentHref;
+    nextParentLink.className = "site-nav-dropdown-link";
+    nextParentLink.dataset.navParent = "parliament";
+    nextParentLink.textContent = "Folketinget";
+
+    if (parentIsCurrent) {
+      nextParentLink.setAttribute("aria-current", "page");
+    }
+
+    const submenu = document.createElement("div");
+    submenu.className = "site-nav-submenu";
+    submenu.setAttribute("aria-label", "Undersider under Folketinget");
+
+    childPages.forEach((item) => {
+      const link = document.createElement("a");
+      link.href = item.href;
+      link.textContent = item.label;
+      link.dataset.navSublink = item.label.toLowerCase();
+      if (item.current) {
+        link.setAttribute("aria-current", "page");
+      }
+      submenu.append(link);
+    });
+
+    dropdown.append(nextParentLink, submenu);
+    parentLink.replaceWith(dropdown);
   }
 
   function initHeaderFavoritesLink() {
