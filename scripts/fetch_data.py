@@ -15,7 +15,7 @@ import unicodedata
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from dataclasses import dataclass
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
@@ -28,6 +28,7 @@ PAGE_SIZE = 100
 DEFAULT_DELAY = 0.2
 DEFAULT_START_DATE = "2022-11-01"
 DEFAULT_RECENT_VOTES = 10
+DEFAULT_INCREMENTAL_BUFFER_DAYS = 45
 REQUEST_TIMEOUT = 60
 MAX_RETRIES = 3
 PHOTO_CREDITS_FILENAME = "credits.json"
@@ -196,6 +197,17 @@ def parse_args() -> argparse.Namespace:
         help="Fetch votes and case context from this date (YYYY-MM-DD).",
     )
     parser.add_argument(
+        "--incremental-from-existing",
+        action="store_true",
+        help="Infer start-date from existing afstemninger.json with a safety lookback buffer.",
+    )
+    parser.add_argument(
+        "--incremental-buffer-days",
+        type=int,
+        default=DEFAULT_INCREMENTAL_BUFFER_DAYS,
+        help="Lookback window in days when --incremental-from-existing is enabled.",
+    )
+    parser.add_argument(
         "--delay",
         type=float,
         default=DEFAULT_DELAY,
@@ -250,6 +262,59 @@ def parse_args() -> argparse.Namespace:
 
 def ensure_dir(path: Path) -> None:
     path.mkdir(parents=True, exist_ok=True)
+
+
+def resolve_effective_start_date(
+    *,
+    explicit_start_date: str,
+    output_dir: Path,
+    incremental_from_existing: bool,
+    incremental_buffer_days: int,
+    verbose: bool,
+) -> str:
+    configured_start = date.fromisoformat(explicit_start_date)
+    if not incremental_from_existing:
+        return configured_start.isoformat()
+
+    votes_path = output_dir / "afstemninger.json"
+    if not votes_path.exists():
+        log(verbose, f"incremental refresh requested, but {votes_path} is missing; using {configured_start.isoformat()}")
+        return configured_start.isoformat()
+
+    try:
+        existing_votes = json.loads(votes_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        log(verbose, f"incremental refresh fallback: could not read {votes_path}: {exc}")
+        return configured_start.isoformat()
+
+    latest_vote_date: date | None = None
+    for vote in existing_votes if isinstance(existing_votes, list) else []:
+        raw_date = str(vote.get("date") or "").strip()
+        if not raw_date:
+            continue
+        try:
+            vote_date = date.fromisoformat(raw_date)
+        except ValueError:
+            continue
+        if latest_vote_date is None or vote_date > latest_vote_date:
+            latest_vote_date = vote_date
+
+    if latest_vote_date is None:
+        log(verbose, f"incremental refresh fallback: no usable vote dates found in {votes_path}")
+        return configured_start.isoformat()
+
+    buffer_days = max(int(incremental_buffer_days), 0)
+    inferred_start = latest_vote_date - timedelta(days=buffer_days)
+    effective_start = max(configured_start, inferred_start)
+    log(
+        verbose,
+        (
+            "incremental refresh window: "
+            f"latest existing vote {latest_vote_date.isoformat()}, "
+            f"buffer {buffer_days} days, start-date {effective_start.isoformat()}"
+        ),
+    )
+    return effective_start.isoformat()
 
 
 def write_json(path: Path, payload: Any) -> None:
@@ -3239,7 +3304,13 @@ def main() -> None:
     raw_dir = Path(args.raw_dir)
     ensure_dir(output_dir)
 
-    start_date = date.fromisoformat(args.start_date).isoformat()
+    start_date = resolve_effective_start_date(
+        explicit_start_date=args.start_date,
+        output_dir=output_dir,
+        incremental_from_existing=bool(args.incremental_from_existing),
+        incremental_buffer_days=args.incremental_buffer_days,
+        verbose=options.verbose,
+    )
     today_iso = datetime.now(timezone.utc).date().isoformat()
 
     if args.timelines_only:

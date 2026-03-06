@@ -2,6 +2,16 @@ name: Refresh Data
 
 on:
   workflow_dispatch:
+    inputs:
+      full_refresh:
+        description: "Ignore existing data and rebuild from the configured historical start date"
+        required: false
+        default: false
+        type: boolean
+      start_date:
+        description: "Optional YYYY-MM-DD override"
+        required: false
+        type: string
   schedule:
     - cron: "45 5 * * 1-5"   # weekdays 05:45 UTC (07:45 CET / 08:45 CEST) — morning catch-up
     - cron: "30 17 * * 1-5"  # weekdays 17:30 UTC (18:30 CET / 19:30 CEST) — after afternoon voting
@@ -17,6 +27,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
 
     steps:
       - name: Check out repository
@@ -29,18 +40,40 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Determine refresh arguments
+        run: |
+          REFRESH_ARGS="--verbose"
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.full_refresh }}" = "true" ]; then
+            if [ -n "${{ inputs.start_date }}" ]; then
+              REFRESH_ARGS="$REFRESH_ARGS --start-date ${{ inputs.start_date }}"
+            fi
+          else
+            REFRESH_ARGS="$REFRESH_ARGS --incremental-from-existing --incremental-buffer-days 45"
+            if [ -n "${{ inputs.start_date }}" ]; then
+              REFRESH_ARGS="$REFRESH_ARGS --start-date ${{ inputs.start_date }}"
+            fi
+          fi
+
+          echo "REFRESH_ARGS=$REFRESH_ARGS" >> "$GITHUB_ENV"
+          echo "Using refresh args: $REFRESH_ARGS"
+
       - name: Refresh static data
         run: |
-          python scripts/fetch_data.py --start-date 2022-11-01
+          python scripts/fetch_data.py $REFRESH_ARGS
 
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/*.json catalog.js vote-catalog.js photos/
+          git add data catalog.js vote-catalog.js
+          if [ -d photos ]; then
+            git add photos
+          fi
           if git diff --cached --quiet; then
             echo "No data changes to commit."
             exit 0
           fi
           git commit -m "chore: refresh parliamentary data"
+          git pull --rebase origin main
           git push
