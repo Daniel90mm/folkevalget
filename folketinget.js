@@ -1,54 +1,12 @@
 (() => {
   const api = window.Folkevalget;
-  if (!api) {
+  const insightsApi = window.FolkevalgetInsights;
+  if (!api || !insightsApi) {
     return;
   }
 
-  const PARTY_COLORS = {
-    ALT: "#218a4d",
-    BP: "#4f5f75",
-    DD: "#004450",
-    DF: "#4f8fc2",
-    EL: "#ae5f0d",
-    IA: "#266a91",
-    JF: "#6d3149",
-    KF: "#00583c",
-    LA: "#0086ab",
-    M: "#6f5493",
-    N: "#915a0f",
-    RV: "#733280",
-    S: "#b51428",
-    SF: "#b60063",
-    SP: "#6f5a16",
-    UFG: "#707b75",
-    V: "#005da6",
-  };
-
-  const PARTY_NAMES = {
-    ALT: "Alternativet",
-    BP: "Borgernes Parti",
-    DD: "Danmarksdemokraterne",
-    DF: "Dansk Folkeparti",
-    EL: "Enhedslisten",
-    IA: "Inuit Ataqatigiit",
-    JF: "Javnaðarflokkurin",
-    KF: "Det Konservative Folkeparti",
-    LA: "Liberal Alliance",
-    M: "Moderaterne",
-    N: "Naleraq",
-    RV: "Radikale Venstre",
-    S: "Socialdemokratiet",
-    SF: "Socialistisk Folkeparti",
-    SP: "Sambandsflokkurin",
-    UFG: "Uden for grupperne",
-    V: "Venstre",
-  };
-
-  const collator = new Intl.Collator("da-DK");
-  const latestVotesLimit = 8;
-  const latestMeetingsLimit = 6;
-
   const elements = {
+    statsRoot: document.querySelector("[data-site-stats]"),
     memberCount: document.querySelector("#parliament-member-count"),
     memberMeta: document.querySelector("#parliament-member-meta"),
     groupCount: document.querySelector("#parliament-group-count"),
@@ -70,185 +28,57 @@
     latestCommitteeMeta: document.querySelector("#parliament-latest-committee-meta"),
     latestVotes: document.querySelector("#parliament-latest-votes"),
     latestMeetings: document.querySelector("#parliament-latest-meetings"),
+    processOverviewSummary: document.querySelector("#parliament-process-overview-summary"),
+    processStrip: document.querySelector("#parliament-process-strip"),
+    statusMix: document.querySelector("#parliament-status-mix"),
+    recentCases: document.querySelector("#parliament-recent-cases"),
+    activeCaseBlock: document.querySelector("#parliament-active-case-block"),
+    activeCases: document.querySelector("#parliament-active-cases"),
+    topicSummary: document.querySelector("#parliament-topic-summary"),
+    hotCommittees: document.querySelector("#parliament-hot-committees"),
+    topicsList: document.querySelector("#parliament-topics-list"),
     committeeSummary: document.querySelector("#parliament-committee-summary"),
     committeeDirectory: document.querySelector("#parliament-committee-directory"),
   };
 
-  init();
+  init().catch((error) => {
+    console.error(error);
+    setText(elements.memberMeta, "Folketingets overblik kunne ikke indlæses lige nu.");
+    if (elements.latestVotes) {
+      elements.latestVotes.innerHTML = '<li class="parliament-empty">Afstemninger kunne ikke indlæses.</li>';
+    }
+    if (elements.latestMeetings) {
+      elements.latestMeetings.innerHTML = '<li class="parliament-empty">Møder kunne ikke indlæses.</li>';
+    }
+    if (elements.recentCases) {
+      elements.recentCases.innerHTML = '<li class="parliament-empty">Sagsforløb kunne ikke indlæses.</li>';
+    }
+    if (elements.topicsList) {
+      elements.topicsList.innerHTML = '<li class="parliament-empty">Emneord kunne ikke indlæses.</li>';
+    }
+  });
 
   async function init() {
-    const catalogue = await api.loadCatalogueData().catch(() => ({ profiles: [], stats: null }));
-    const [voteRows, committeeRows, meetingsPayload] = await Promise.all([
-      api.loadVoteOverview().catch(() => []),
-      api.fetchJson("data/udvalg.json").catch(() => []),
-      api.fetchJson("data/moeder.json").catch(() => ({ meetings: [] })),
-    ]);
-
-    const profiles = Array.isArray(catalogue?.profiles) ? catalogue.profiles : [];
-    const currentProfiles = profiles.filter(isCurrentProfile);
-    const currentProfileIds = new Set(
-      currentProfiles
-        .map((profile) => Number(profile?.id || 0))
-        .filter((profileId) => profileId > 0)
-    );
-
-    const parties = summariseParties(currentProfiles);
-    const committees = summariseCommittees(committeeRows, currentProfileIds);
-    const meetings = normaliseMeetings(meetingsPayload?.meetings, committees);
-    const votes = normaliseVotes(voteRows);
-
-    renderOverview(currentProfiles, parties, votes, meetings);
-    renderComposition(currentProfiles.length, parties);
-    renderActivity(votes, meetings);
-    renderCommittees(committees);
+    const insights = await insightsApi.load();
+    api.renderStats(elements.statsRoot, insights.stats);
+    renderOverview(insights);
+    renderComposition(insights.partyRows);
+    renderActivity(insights);
+    renderProcess(insights);
+    renderTopicSection(insights);
+    renderCommittees(insights);
   }
 
-  function isCurrentProfile(profile) {
-    return Boolean(profile?.current_party) && Boolean(profile?.storkreds);
-  }
-
-  function summariseParties(profiles) {
-    const partyMap = new Map();
-
-    for (const profile of profiles) {
-      const shortName = String(profile?.current_party_short || profile?.party_short || "").trim();
-      const name = String(
-        PARTY_NAMES[shortName] ||
-          profile?.current_party ||
-          profile?.party ||
-          shortName ||
-          "Uden for grupperne"
-      ).trim();
-      const key = shortName || name;
-      if (!key) {
-        continue;
-      }
-
-      const existing = partyMap.get(key);
-      if (existing) {
-        existing.count += 1;
-        continue;
-      }
-
-      partyMap.set(key, {
-        shortName,
-        name,
-        count: 1,
-        color: PARTY_COLORS[shortName] || "var(--color-accent)",
-        href: `${api.toSiteUrl("discover.html")}?party=${encodeURIComponent(shortName || name)}`,
-      });
-    }
-
-    return [...partyMap.values()].sort((left, right) => collator.compare(left.name, right.name));
-  }
-
-  function summariseCommittees(rows, currentProfileIds) {
-    if (!Array.isArray(rows)) {
-      return [];
-    }
-
-    return rows
-      .map((committee) => {
-        const memberIds = Array.isArray(committee?.member_ids) ? committee.member_ids : [];
-        const currentCount = memberIds.reduce((count, memberId) => {
-          return count + (currentProfileIds.has(Number(memberId || 0)) ? 1 : 0);
-        }, 0);
-
-        return {
-          id: Number(committee?.id || 0) || null,
-          name: String(committee?.name || "").trim(),
-          shortName: String(committee?.short_name || "").trim(),
-          memberCount: currentCount,
-          membersUrl: `${api.toSiteUrl("discover.html")}?committee=${encodeURIComponent(committee?.short_name || "")}`,
-          officialUrl: api.buildCommitteeUrl(committee?.short_name || ""),
-        };
-      })
-      .filter((committee) => committee.name && committee.shortName && committee.memberCount > 0)
-      .sort((left, right) => collator.compare(left.name, right.name));
-  }
-
-  function normaliseMeetings(rows, committees) {
-    if (!Array.isArray(rows)) {
-      return [];
-    }
-
-    const committeeByName = new Map();
-    for (const committee of committees) {
-      committeeByName.set(api.normaliseText(committee.name), committee);
-    }
-
-    return rows
-      .map((meeting) => {
-        const title = String(meeting?.title || "").trim();
-        const type = String(meeting?.type || "").trim();
-        const agendaPointCount = Number(
-          meeting?.agenda_point_count ||
-            (Array.isArray(meeting?.agenda_points) ? meeting.agenda_points.length : 0) ||
-            0
-        );
-        const normalizedType = api.normaliseText(type);
-        const relatedCommittee = committeeByName.get(api.normaliseText(title)) || null;
-
-        return {
-          ...meeting,
-          title,
-          type,
-          agendaPointCount,
-          isPlenary: normalizedType.includes("salen"),
-          isCommittee: normalizedType.includes("udvalg"),
-          relatedCommittee,
-        };
-      })
-      .filter((meeting) => meeting?.date && String(meeting?.status || "").trim() === "Afholdt")
-      .sort(compareMeetingsDesc);
-  }
-
-  function normaliseVotes(rows) {
-    if (!Array.isArray(rows)) {
-      return [];
-    }
-
-    return rows
-      .filter((vote) => vote?.date && vote?.afstemning_id)
-      .slice()
-      .sort((left, right) => {
-        const byDate = String(right.date).localeCompare(String(left.date));
-        if (byDate !== 0) {
-          return byDate;
-        }
-        const byNumber = Number(right.nummer || 0) - Number(left.nummer || 0);
-        if (byNumber !== 0) {
-          return byNumber;
-        }
-        return Number(right.afstemning_id || 0) - Number(left.afstemning_id || 0);
-      });
-  }
-
-  function compareMeetingsDesc(left, right) {
-    const byDate = String(right?.date || "").localeCompare(String(left?.date || ""));
-    if (byDate !== 0) {
-      return byDate;
-    }
-
-    const leftNumber = Number(left?.number || 0);
-    const rightNumber = Number(right?.number || 0);
-    if (leftNumber !== rightNumber) {
-      return rightNumber - leftNumber;
-    }
-
-    return Number(right?.meeting_id || 0) - Number(left?.meeting_id || 0);
-  }
-
-  function renderOverview(currentProfiles, parties, votes, meetings) {
-    const latestVoteDate = votes.length > 0 ? votes[0].date : null;
+  function renderOverview(insights) {
+    const latestVoteDate = insights.recentActivity.latestVoteDay;
     const latestVoteCount = latestVoteDate
-      ? votes.filter((vote) => vote.date === latestVoteDate).length
+      ? insights.votes.filter((vote) => vote.date === latestVoteDate).length
       : 0;
-    const latestMeeting = meetings[0] || null;
+    const latestMeeting = insights.recentActivity.latestMeeting;
 
-    setText(elements.memberCount, api.formatNumber(currentProfiles.length));
+    setText(elements.memberCount, api.formatNumber(insights.currentProfiles.length));
     setText(elements.memberMeta, "Aktuelle profiler med registreret parti og storkreds.");
-    setText(elements.groupCount, api.formatNumber(parties.length));
+    setText(elements.groupCount, api.formatNumber(insights.partyRows.length));
     setText(elements.groupMeta, "Partier, løsgængere og nordatlantiske mandater med mindst ét medlem.");
     setText(elements.latestVoteDay, latestVoteDate ? api.formatDate(latestVoteDate) : "Ingen data");
     setText(
@@ -266,7 +96,7 @@
     );
   }
 
-  function renderComposition(totalMembers, parties) {
+  function renderComposition(parties) {
     if (!elements.seatDistribution || !elements.seatLegend) {
       return;
     }
@@ -274,6 +104,7 @@
     elements.seatDistribution.replaceChildren();
     elements.seatLegend.replaceChildren();
 
+    const totalMembers = parties.reduce((total, party) => total + party.memberCount, 0);
     if (!totalMembers || parties.length === 0) {
       setText(elements.compositionSummary, "Ingen aktuelle medlemsdata i datasættet.");
       elements.seatDistribution.appendChild(buildEmptyNode("Ingen sammensætning at vise."));
@@ -288,13 +119,13 @@
     for (const party of parties) {
       const segment = document.createElement("a");
       segment.className = "parliament-seat-segment";
-      segment.href = party.href;
-      segment.title = `${party.name}: ${api.formatNumber(party.count)} ${pluralize(party.count, "medlem", "medlemmer")}`;
+      segment.href = party.discoverUrl;
+      segment.title = `${party.partyName}: ${api.formatNumber(party.memberCount)} ${pluralize(party.memberCount, "medlem", "medlemmer")}`;
       segment.setAttribute(
         "aria-label",
-        `${party.name}: ${api.formatNumber(party.count)} ${pluralize(party.count, "medlem", "medlemmer")}`
+        `${party.partyName}: ${api.formatNumber(party.memberCount)} ${pluralize(party.memberCount, "medlem", "medlemmer")}`
       );
-      segment.style.flex = `${party.count} 0 0`;
+      segment.style.flex = `${party.memberCount} 0 0`;
       segment.style.setProperty("--party-color", party.color);
       elements.seatDistribution.appendChild(segment);
 
@@ -304,54 +135,44 @@
 
       const partyLink = document.createElement("a");
       partyLink.className = "parliament-seat-party";
-      partyLink.href = party.href;
-
-      const badge = document.createElement("span");
-      badge.className = "party-code-badge";
-      badge.textContent = party.shortName || "UFG";
-      if (party.shortName) {
-        badge.dataset.party = party.shortName;
-      }
-
-      const name = document.createElement("span");
-      name.className = "parliament-seat-party-name";
-      name.textContent = party.name;
-
-      partyLink.append(badge, name);
+      partyLink.href = party.discoverUrl;
+      partyLink.append(buildPartyBadge(party.shortName), buildTextNode("span", "parliament-seat-party-name", party.partyName));
 
       const meter = document.createElement("div");
       meter.className = "parliament-seat-meter";
-
       const meterFill = document.createElement("span");
       meterFill.className = "parliament-seat-meter-fill";
-      meterFill.style.width = `${(party.count / totalMembers) * 100}%`;
-
+      meterFill.style.width = `${(party.memberCount / totalMembers) * 100}%`;
       meter.appendChild(meterFill);
 
-      const count = document.createElement("strong");
-      count.className = "parliament-seat-count";
-      count.textContent = api.formatNumber(party.count);
-
-      const share = document.createElement("span");
-      share.className = "parliament-seat-share";
-      share.textContent = api.formatPercent(((party.count / totalMembers) * 100).toFixed(1));
+      const count = buildTextNode("strong", "parliament-seat-count", api.formatNumber(party.memberCount));
+      const share = buildTextNode(
+        "span",
+        "parliament-seat-share",
+        api.formatPercent(((party.memberCount / totalMembers) * 100).toFixed(1))
+      );
 
       row.append(partyLink, meter, count, share);
       elements.seatLegend.appendChild(row);
     }
   }
 
-  function renderActivity(votes, meetings) {
-    const latestDate = latestActivityDate(votes, meetings);
-    const latestPlenary = meetings.find((meeting) => meeting.isPlenary) || null;
-    const latestCommittee = meetings.find((meeting) => meeting.isCommittee) || null;
-    const thirtyDay = summariseActivityWindow(votes, meetings, latestDate, 30);
-    const ninetyDay = summariseActivityWindow(votes, meetings, latestDate, 90);
+  function renderActivity(insights) {
+    const window30 = insights.recentActivity.windows[30];
+    const window90 = insights.recentActivity.windows[90];
+    const latestPlenary = insights.recentActivity.latestPlenaryMeeting;
+    const latestCommittee = insights.recentActivity.latestCommitteeMeeting;
 
-    setText(elements.activity30Votes, `${api.formatNumber(thirtyDay.votes)} ${pluralize(thirtyDay.votes, "afstemning", "afstemninger")}`);
-    setText(elements.activity30Meetings, `${api.formatNumber(thirtyDay.meetings)} ${pluralize(thirtyDay.meetings, "møde", "møder")} registreret.`);
-    setText(elements.activity90Votes, `${api.formatNumber(ninetyDay.votes)} ${pluralize(ninetyDay.votes, "afstemning", "afstemninger")}`);
-    setText(elements.activity90Meetings, `${api.formatNumber(ninetyDay.meetings)} ${pluralize(ninetyDay.meetings, "møde", "møder")} registreret.`);
+    setText(elements.activity30Votes, `${api.formatNumber(window30.votes)} ${pluralize(window30.votes, "afstemning", "afstemninger")}`);
+    setText(
+      elements.activity30Meetings,
+      `${api.formatNumber(window30.meetings)} ${pluralize(window30.meetings, "møde", "møder")} · ${api.formatNumber(window30.casesTouched)} sager`
+    );
+    setText(elements.activity90Votes, `${api.formatNumber(window90.votes)} ${pluralize(window90.votes, "afstemning", "afstemninger")}`);
+    setText(
+      elements.activity90Meetings,
+      `${api.formatNumber(window90.meetings)} ${pluralize(window90.meetings, "møde", "møder")} · ${api.formatNumber(window90.committeeMeetings)} udvalgsmøder`
+    );
 
     setText(elements.latestPlenaryDay, latestPlenary ? api.formatDate(latestPlenary.date) : "Ingen data");
     setText(
@@ -368,104 +189,170 @@
         : "Ingen udvalgsmøder i datasættet."
     );
 
-    renderLatestVotes(votes.slice(0, latestVotesLimit));
-    renderLatestMeetings(meetings.slice(0, latestMeetingsLimit));
+    renderActivityList(
+      elements.latestVotes,
+      insights.recentActivity.latestVotes,
+      (vote) => ({
+        title: `${vote.caseNumber || `Afstemning ${vote.number}`} · ${vote.caseTitle}`,
+        href: vote.voteUrl,
+        meta: [
+          api.formatDate(vote.date),
+          vote.type || null,
+          vote.passed ? "Vedtaget" : "Forkastet",
+        ],
+        note:
+          vote.partySplitCount > 0
+            ? `${api.formatNumber(vote.partySplitCount)} ${pluralize(vote.partySplitCount, "partisplit", "partisplits")}${vote.topicDisplay ? ` · ${vote.topicDisplay}` : ""}`
+            : vote.topicDisplay,
+      }),
+      "Ingen registrerede afstemninger i datasættet."
+    );
+
+    renderActivityList(
+      elements.latestMeetings,
+      insights.recentActivity.latestMeetings,
+      (meeting) => ({
+        title: meetingTitle(meeting),
+        href: meeting.href,
+        meta: [
+          api.formatDate(meeting.date),
+          meeting.type || null,
+          agendaPointLabel(meeting.agendaPointCount),
+        ],
+        note: meeting.relatedCommittee
+          ? `${meeting.relatedCommittee.name}`
+          : meetingAgendaSummary(meeting),
+      }),
+      "Ingen registrerede møder i datasættet."
+    );
   }
 
-  function renderLatestVotes(votes) {
-    if (!elements.latestVotes) {
-      return;
-    }
+  function renderProcess(insights) {
+    const summary30 = insights.process.summary30;
+    setText(
+      elements.processOverviewSummary,
+      `Statuslaget bygger på sagsindekset, mens bevægelserne nedenfor viser sager berørt inden for de seneste 30 dage frem til ${api.formatDate(insights.anchorDate)}.`
+    );
 
-    elements.latestVotes.replaceChildren();
+    renderParliamentStatStrip(elements.processStrip, [
+      {
+        label: "Sager berørt, 30 dage",
+        value: api.formatNumber(summary30.casesTouched),
+        meta: "Unikke sager i møder eller afstemninger",
+      },
+      {
+        label: "Henvist til udvalg",
+        value: api.formatNumber(summary30.referredToCommittee),
+        meta: "Registrerede udvalgshenvisninger",
+      },
+      {
+        label: "Direkte til 3. beh.",
+        value: api.formatNumber(summary30.directToThird),
+        meta: "Sager ført videre i processen",
+      },
+      {
+        label: "Åbne eller delte",
+        value: api.formatNumber(summary30.openCases),
+        meta: "Få sager står som ikke-afsluttede i statuslaget",
+      },
+    ]);
 
-    if (votes.length === 0) {
-      elements.latestVotes.appendChild(buildEmptyNode("Ingen registrerede afstemninger i datasættet.", "li"));
-      return;
-    }
+    renderStatusMix(elements.statusMix, insights.process.statusMix, "Ingen statusfordeling i datasættet.");
 
-    for (const vote of votes) {
-      const item = document.createElement("li");
-      item.className = "parliament-activity-item";
+    renderActivityList(
+      elements.recentCases,
+      insights.process.recentCases,
+      (row) => ({
+        title: `${row.caseNumber ? `${row.caseNumber} · ` : ""}${row.caseTitle}`,
+        href: row.href,
+        meta: [
+          row.latestDate ? api.formatDate(row.latestDate) : null,
+          row.latestEventType || null,
+          row.caseStatus || null,
+        ],
+        note: row.topicDisplay || null,
+      }),
+      "Ingen sagsbevægelser i den aktuelle periode."
+    );
 
-      const link = document.createElement("a");
-      link.className = "parliament-activity-link";
-      link.href = api.buildVoteUrl(vote.afstemning_id);
-      link.textContent = `${vote.sag_number || `Afstemning ${vote.nummer || ""}`}`.trim() + ` · ${vote.sag_short_title || vote.sag_title || "Uden titel"}`;
-
-      const meta = document.createElement("div");
-      meta.className = "parliament-activity-meta";
-      appendMetaPart(meta, api.formatDate(vote.date));
-      appendMetaPart(meta, vote.type || "Afstemning");
-      appendMetaPart(meta, vote.vedtaget ? "Vedtaget" : "Forkastet");
-      if (Number(vote.party_split_count || 0) > 0) {
-        appendMetaPart(
-          meta,
-          `${api.formatNumber(vote.party_split_count)} ${pluralize(Number(vote.party_split_count || 0), "partisplit", "partisplits")}`
-        );
-      }
-
-      item.append(link, meta);
-      elements.latestVotes.appendChild(item);
-    }
-  }
-
-  function renderLatestMeetings(meetings) {
-    if (!elements.latestMeetings) {
-      return;
-    }
-
-    elements.latestMeetings.replaceChildren();
-
-    if (meetings.length === 0) {
-      elements.latestMeetings.appendChild(buildEmptyNode("Ingen registrerede møder i datasættet.", "li"));
-      return;
-    }
-
-    for (const meeting of meetings) {
-      const item = document.createElement("li");
-      item.className = "parliament-activity-item";
-
-      const link = document.createElement("a");
-      link.className = "parliament-activity-link";
-      link.href = meeting.agenda_url || meeting.relatedCommittee?.membersUrl || api.toSiteUrl("moeder.html");
-      link.textContent = meetingTitle(meeting);
-
-      const meta = document.createElement("div");
-      meta.className = "parliament-activity-meta";
-      appendMetaPart(meta, api.formatDate(meeting.date));
-      appendMetaPart(meta, meeting.type || "Møde");
-      appendMetaPart(meta, agendaPointLabel(meeting.agendaPointCount));
-
-      const noteText = meetingAgendaSummary(meeting);
-      item.append(link, meta);
-      if (noteText) {
-        const note = document.createElement("p");
-        note.className = "parliament-activity-note";
-        note.textContent = noteText;
-        item.appendChild(note);
-      }
-
-      elements.latestMeetings.appendChild(item);
+    const hasActiveCases = insights.process.openCases.length > 0;
+    elements.activeCaseBlock?.classList.toggle("hidden", !hasActiveCases);
+    if (hasActiveCases) {
+      renderActivityList(
+        elements.activeCases,
+        insights.process.openCases,
+        (row) => ({
+          title: `${row.caseNumber ? `${row.caseNumber} · ` : ""}${row.caseTitle}`,
+          href: row.href,
+          meta: [
+            row.latestDate ? api.formatDate(row.latestDate) : null,
+            row.latestEventType || null,
+            row.caseStatus || null,
+          ],
+          note: row.topicDisplay || null,
+        }),
+        "Ingen åbne eller delte sager i statuslaget."
+      );
     }
   }
 
-  function renderCommittees(committees) {
+  function renderTopicSection(insights) {
+    setText(
+      elements.topicSummary,
+      `Udvalgene summeres på de seneste 180 dage, og emnerne bygger på officielle sagsområder koblet til afstemningerne i de seneste 90 dage.`
+    );
+
+    renderActivityList(
+      elements.hotCommittees,
+      insights.committees.topRecent,
+      (committee) => ({
+        title: `${committee.shortName} · ${committee.name}`,
+        href: committee.membersUrl,
+        meta: [
+          `${api.formatNumber(committee.recentMeetingCount180)} møder`,
+          `${api.formatNumber(committee.recentAgendaPointCount180)} dagsordenspunkter`,
+          `${api.formatNumber(committee.memberCount)} medlemmer`,
+        ],
+        note: committee.latestMeeting
+          ? `Senest ${api.formatDate(committee.latestMeeting.date)}`
+          : null,
+      }),
+      "Ingen udvalg med registreret aktivitet i den aktuelle periode."
+    );
+
+    renderActivityList(
+      elements.topicsList,
+      insights.topics.recentTopics,
+      (topic) => ({
+        title: topic.displayLabel,
+        href: topic.href,
+        meta: [
+          `${api.formatNumber(topic.voteCount)} afstemninger`,
+          `${api.formatNumber(topic.caseCount)} sager`,
+        ],
+        note: topic.latestDate ? `Senest ${api.formatDate(topic.latestDate)}` : null,
+      }),
+      "Ingen emneord i den aktuelle periode."
+    );
+  }
+
+  function renderCommittees(insights) {
     if (!elements.committeeDirectory) {
       return;
     }
 
     elements.committeeDirectory.replaceChildren();
-
+    const committees = insights.committees.directory;
     if (committees.length === 0) {
       setText(elements.committeeSummary, "Ingen udvalg med nuværende medlemmer i datasættet.");
       elements.committeeDirectory.appendChild(buildEmptyNode("Ingen udvalg at vise."));
       return;
     }
 
+    const activeCommitteeCount = committees.filter((committee) => committee.recentMeetingCount180 > 0).length;
     setText(
       elements.committeeSummary,
-      `${api.formatNumber(committees.length)} udvalg og arbejdsgrupper med nuværende medlemmer i datasættet.`
+      `${api.formatNumber(committees.length)} udvalg med nuværende medlemmer, heraf ${api.formatNumber(activeCommitteeCount)} med registreret mødeaktivitet de seneste 180 dage.`
     );
 
     for (const committee of committees) {
@@ -478,21 +365,27 @@
       const link = document.createElement("a");
       link.className = "parliament-committee-link";
       link.href = committee.membersUrl;
-
-      const code = document.createElement("span");
-      code.className = "parliament-committee-code";
-      code.textContent = committee.shortName;
-
-      const name = document.createElement("span");
-      name.textContent = committee.name;
-
-      link.append(code, name);
+      link.append(
+        buildTextNode("span", "parliament-committee-code", committee.shortName),
+        document.createTextNode(committee.name)
+      );
 
       const meta = document.createElement("p");
       meta.className = "parliament-committee-meta";
-      meta.textContent = `${api.formatNumber(committee.memberCount)} ${pluralize(committee.memberCount, "medlem", "medlemmer")}`;
+      meta.textContent =
+        `${api.formatNumber(committee.memberCount)} ${pluralize(committee.memberCount, "medlem", "medlemmer")}` +
+        ` · ${api.formatNumber(committee.recentMeetingCount180)} ${pluralize(committee.recentMeetingCount180, "møde", "møder")} / 180 dage`;
 
       main.append(link, meta);
+
+      if (committee.latestMeeting) {
+        const note = document.createElement("p");
+        note.className = "parliament-activity-note";
+        note.textContent = committee.latestAgendaPoint?.sag_number
+          ? `Senest ${api.formatDate(committee.latestMeeting.date)} · ${committee.latestAgendaPoint.sag_number}`
+          : `Senest ${api.formatDate(committee.latestMeeting.date)}`;
+        main.append(note);
+      }
 
       const source = document.createElement("a");
       source.className = "parliament-inline-link";
@@ -506,72 +399,117 @@
     }
   }
 
-  function latestActivityDate(votes, meetings) {
-    const latestVoteDate = votes.length > 0 ? String(votes[0].date) : "";
-    const latestMeetingDate = meetings.length > 0 ? String(meetings[0].date) : "";
-    return latestVoteDate >= latestMeetingDate ? latestVoteDate : latestMeetingDate;
-  }
-
-  function summariseActivityWindow(votes, meetings, anchorDate, days) {
-    if (!anchorDate) {
-      return { votes: 0, meetings: 0 };
-    }
-
-    const start = startDateForWindow(anchorDate, days);
-    return {
-      votes: votes.filter((vote) => vote.date >= start && vote.date <= anchorDate).length,
-      meetings: meetings.filter((meeting) => meeting.date >= start && meeting.date <= anchorDate).length,
-    };
-  }
-
-  function startDateForWindow(anchorDate, days) {
-    const date = new Date(`${anchorDate}T00:00:00`);
-    date.setDate(date.getDate() - (days - 1));
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0");
-    const day = String(date.getDate()).padStart(2, "0");
-    return `${year}-${month}-${day}`;
-  }
-
-  function meetingTitle(meeting) {
-    if (!meeting) {
-      return "Ukendt møde";
-    }
-    if (meeting.isPlenary && meeting.number) {
-      return `Møde i salen nr. ${meeting.number}`;
-    }
-    return meeting.title || meeting.type || "Møde";
-  }
-
-  function meetingAgendaSummary(meeting) {
-    const firstAgendaPoint = Array.isArray(meeting?.agenda_points) ? meeting.agenda_points[0] : null;
-    if (!firstAgendaPoint?.sag_number && !firstAgendaPoint?.sag_title) {
-      return "";
-    }
-
-    const caseNumber = String(firstAgendaPoint.sag_number || "").trim();
-    const title = String(firstAgendaPoint.sag_title || "").trim();
-    if (caseNumber && title) {
-      return `${caseNumber} · ${truncate(title, 132)}`;
-    }
-    return caseNumber || truncate(title, 132);
-  }
-
-  function agendaPointLabel(count) {
-    return `${api.formatNumber(count)} ${pluralize(count, "dagsordenpunkt", "dagsordenspunkter")}`;
-  }
-
-  function pluralize(count, singular, plural) {
-    return Number(count) === 1 ? singular : plural;
-  }
-
-  function appendMetaPart(container, text) {
-    if (!text) {
+  function renderParliamentStatStrip(root, items) {
+    if (!root) {
       return;
     }
-    const part = document.createElement("span");
-    part.textContent = text;
-    container.appendChild(part);
+    root.innerHTML = "";
+
+    for (const item of items) {
+      const article = document.createElement("article");
+      article.className = "parliament-key-stat";
+
+      article.append(
+        buildTextNode("span", "parliament-stat-label", item.label),
+        buildTextNode("strong", "", item.value),
+        buildTextNode("p", "", item.meta)
+      );
+      root.append(article);
+    }
+  }
+
+  function renderStatusMix(root, rows, emptyText) {
+    if (!root) {
+      return;
+    }
+    root.innerHTML = "";
+
+    if (!Array.isArray(rows) || rows.length === 0) {
+      root.append(buildEmptyNode(emptyText));
+      return;
+    }
+
+    for (const row of rows) {
+      const item = document.createElement("div");
+      item.className = "status-mix-item";
+      item.append(
+        buildTextNode("span", "", row.label),
+        buildTextNode("strong", "", api.formatNumber(row.count))
+      );
+      root.append(item);
+    }
+  }
+
+  function renderActivityList(root, rows, mapRow, emptyText) {
+    if (!root) {
+      return;
+    }
+    root.replaceChildren();
+
+    if (!Array.isArray(rows) || rows.length === 0) {
+      root.appendChild(buildEmptyNode(emptyText, "li"));
+      return;
+    }
+
+    for (const row of rows) {
+      const config = mapRow(row);
+      root.appendChild(buildActivityItem(config));
+    }
+  }
+
+  function buildActivityItem(config) {
+    const item = document.createElement("li");
+    item.className = "parliament-activity-item";
+
+    const link = document.createElement("a");
+    link.className = "parliament-activity-link";
+    link.href = config.href || "#";
+    link.textContent = config.title || "Uden titel";
+    if (String(config.href || "").startsWith("http")) {
+      link.target = "_blank";
+      link.rel = "noreferrer";
+    }
+    item.appendChild(link);
+
+    const metaParts = Array.isArray(config.meta) ? config.meta.filter(Boolean) : [];
+    if (metaParts.length > 0) {
+      const meta = document.createElement("div");
+      meta.className = "parliament-activity-meta";
+      for (const part of metaParts) {
+        const span = document.createElement("span");
+        span.textContent = part;
+        meta.appendChild(span);
+      }
+      item.appendChild(meta);
+    }
+
+    if (config.note) {
+      const note = document.createElement("p");
+      note.className = "parliament-activity-note";
+      note.textContent = config.note;
+      item.appendChild(note);
+    }
+
+    return item;
+  }
+
+  function buildPartyBadge(shortName) {
+    const badge = document.createElement("span");
+    badge.className = "party-code-badge";
+    badge.textContent = shortName || "UFG";
+    if (shortName) {
+      badge.dataset.party = shortName;
+    }
+    return badge;
+  }
+
+  function buildTextNode(tagName, className, text) {
+    const node = document.createElement(tagName);
+    if (className) {
+      node.className = className;
+    }
+    node.textContent = text;
+    return node;
   }
 
   function buildEmptyNode(text, tagName = "p") {
@@ -587,11 +525,35 @@
     }
   }
 
-  function truncate(text, maxLength) {
-    const normalized = String(text || "").trim();
-    if (normalized.length <= maxLength) {
-      return normalized;
+  function meetingTitle(meeting) {
+    if (!meeting) {
+      return "Ukendt møde";
     }
-    return `${normalized.slice(0, Math.max(0, maxLength - 1)).trimEnd()}…`;
+    if (meeting.isPlenary && meeting.number) {
+      return `Møde i salen nr. ${meeting.number}`;
+    }
+    return meeting.title || meeting.type || "Møde";
+  }
+
+  function meetingAgendaSummary(meeting) {
+    const firstAgendaPoint = Array.isArray(meeting?.agendaPoints) ? meeting.agendaPoints[0] : null;
+    if (!firstAgendaPoint?.sag_number && !firstAgendaPoint?.sag_title) {
+      return "";
+    }
+
+    const caseNumber = String(firstAgendaPoint.sag_number || "").trim();
+    const title = String(firstAgendaPoint.sag_title || "").trim();
+    if (caseNumber && title) {
+      return `${caseNumber} · ${title}`;
+    }
+    return caseNumber || title;
+  }
+
+  function agendaPointLabel(count) {
+    return `${api.formatNumber(count)} ${pluralize(count, "dagsordenpunkt", "dagsordenspunkter")}`;
+  }
+
+  function pluralize(count, singular, plural) {
+    return Number(count) === 1 ? singular : plural;
   }
 })();

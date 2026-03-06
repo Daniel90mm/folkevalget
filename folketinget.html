@@ -23,7 +23,7 @@
         } catch (error) {}
       })();
     </script>
-    <link rel="stylesheet" href="style.css?v=20260306d">
+    <link rel="stylesheet" href="style.css?v=20260306g">
   </head>
   <body class="page-parliament">
     <div class="site-shell">
@@ -161,11 +161,84 @@
           </div>
         </section>
 
+        <section class="parliament-section" aria-labelledby="parliament-process-overview-title">
+          <div class="parliament-section-head">
+            <div class="parliament-section-copy">
+              <h2 id="parliament-process-overview-title">Forslag i bevægelse</h2>
+              <p id="parliament-process-overview-summary">
+                Henter de nyeste sagsbevægelser og statuslaget på tværs af de registrerede forslag.
+              </p>
+            </div>
+            <a class="parliament-section-link" href="./afstemninger.html">Se forslag</a>
+          </div>
+
+          <div class="parliament-overview-strip" id="parliament-process-strip"></div>
+
+          <div class="parliament-activity-grid">
+            <section class="parliament-list-block" aria-labelledby="parliament-status-mix-title">
+              <div class="parliament-list-head">
+                <h3 id="parliament-status-mix-title">Status i sagerne</h3>
+              </div>
+              <div id="parliament-status-mix" class="status-mix-list"></div>
+            </section>
+
+            <section class="parliament-list-block" aria-labelledby="parliament-recent-cases-title">
+              <div class="parliament-list-head">
+                <h3 id="parliament-recent-cases-title">Seneste sagsbevægelser</h3>
+              </div>
+              <ol id="parliament-recent-cases" class="parliament-activity-list">
+                <li class="parliament-empty">Ingen sagsbevægelser indlæst endnu.</li>
+              </ol>
+            </section>
+          </div>
+
+          <section class="parliament-list-block" id="parliament-active-case-block" aria-labelledby="parliament-active-cases-title">
+            <div class="parliament-list-head">
+              <h3 id="parliament-active-cases-title">Åbne eller delte sager</h3>
+            </div>
+            <ol id="parliament-active-cases" class="parliament-activity-list">
+              <li class="parliament-empty">Ingen åbne eller delte sager indlæst endnu.</li>
+            </ol>
+          </section>
+        </section>
+
+        <section class="parliament-section" aria-labelledby="parliament-topics-title">
+          <div class="parliament-section-head">
+            <div class="parliament-section-copy">
+              <h2 id="parliament-topics-title">Emner og udvalg lige nu</h2>
+              <p id="parliament-topic-summary">
+                Henter officielle emneord fra sagerne og peger på de udvalg med mest registreret aktivitet.
+              </p>
+            </div>
+            <a class="parliament-section-link" href="./partier.html">Se partier</a>
+          </div>
+
+          <div class="parliament-activity-grid">
+            <section class="parliament-list-block" aria-labelledby="parliament-hot-committees-title">
+              <div class="parliament-list-head">
+                <h3 id="parliament-hot-committees-title">Mest aktive udvalg</h3>
+              </div>
+              <ol id="parliament-hot-committees" class="parliament-activity-list">
+                <li class="parliament-empty">Ingen udvalg indlæst endnu.</li>
+              </ol>
+            </section>
+
+            <section class="parliament-list-block" aria-labelledby="parliament-topics-list-title">
+              <div class="parliament-list-head">
+                <h3 id="parliament-topics-list-title">Emner i afstemningerne</h3>
+              </div>
+              <ol id="parliament-topics-list" class="parliament-activity-list">
+                <li class="parliament-empty">Ingen emneord indlæst endnu.</li>
+              </ol>
+            </section>
+          </div>
+        </section>
+
         <section class="parliament-section" aria-labelledby="parliament-committees-title">
           <div class="parliament-section-head">
             <div class="parliament-section-copy">
               <h2 id="parliament-committees-title">Udvalgene</h2>
-              <p id="parliament-committee-summary">Udvalgsoversigten indlæses fra det aktuelle medlemsdatasæt.</p>
+              <p id="parliament-committee-summary">Udvalgsoversigten indlæses fra det aktuelle medlemsdatasæt og de nyeste udvalgsmøder.</p>
             </div>
             <a class="parliament-section-link" href="./discover.html">Gå til profiler</a>
           </div>
@@ -285,6 +358,7 @@
 
     <script src="catalog.js" defer></script>
     <script src="shared.js?v=20260305i" defer></script>
-    <script src="folketinget.js?v=20260306b" defer></script>
+    <script src="insights.js?v=20260306b" defer></script>
+    <script src="folketinget.js?v=20260306d" defer></script>
   </body>
 </html>

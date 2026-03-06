@@ -1,4 +1,5 @@
 const PartiesApp = (() => {
+  const insightsApi = window.FolkevalgetInsights;
   const VALID_SORTS = new Set([
     "name",
     "members_desc",
@@ -19,6 +20,7 @@ const PartiesApp = (() => {
     rows: [],
     sortMode: "name",
     constituencyCount: 0,
+    insights: null,
   };
 
   const collator = new Intl.Collator("da-DK");
@@ -26,6 +28,10 @@ const PartiesApp = (() => {
   const sortSelect = document.querySelector("#party-sort");
   const overviewNote = document.querySelector("#party-overview-note");
   const highlightGrid = document.querySelector("#party-highlight-grid");
+  const activitySummary = document.querySelector("#party-activity-summary");
+  const activityHighlights = document.querySelector("#party-activity-highlights");
+  const splitFeed = document.querySelector("#party-split-feed");
+  const topicFeed = document.querySelector("#party-topic-feed");
   const compositionSummary = document.querySelector("#party-composition-summary");
   const seatDistribution = document.querySelector("#party-seat-distribution");
   const seatLegend = document.querySelector("#party-seat-legend");
@@ -34,15 +40,17 @@ const PartiesApp = (() => {
   async function boot() {
     hydrateStateFromQuery();
 
-    const { profiles, stats } = await window.Folkevalget.loadCatalogueData();
-    state.rows = buildPartyRows(profiles);
-    state.constituencyCount = countDistinctConstituencies(profiles);
+    const insights = await insightsApi.load();
+    state.insights = insights;
+    state.rows = insights.partyRows.slice();
+    state.constituencyCount = countDistinctConstituencies(insights.currentProfiles);
 
-    window.Folkevalget.renderStats(statsRoot, stats);
+    window.Folkevalget.renderStats(statsRoot, insights.stats);
     syncControls();
     bindEvents();
     renderOverview();
     renderHighlights();
+    renderActivity();
     renderComposition();
     renderDirectory();
   }
@@ -241,6 +249,96 @@ const PartiesApp = (() => {
       article.append(label, value, text);
       highlightGrid.append(article);
     }
+  }
+
+  function renderActivity() {
+    if (!activitySummary || !activityHighlights || !state.insights) {
+      return;
+    }
+
+    const recent30 = state.insights.recentActivity.windows[30];
+    const topCommittee = state.insights.committees.topRecent[0] || null;
+    const topTopic = state.insights.topics.leadingTopic || null;
+
+    activitySummary.textContent =
+      `Seneste registrerede aktivitet går til ${window.Folkevalget.formatDate(state.insights.anchorDate)}. Her er de signaler, der mest påvirker partiernes arbejde lige nu.`;
+
+    activityHighlights.innerHTML = "";
+    const highlights = [
+      {
+        label: "Afstemninger, 30 dage",
+        value: `${window.Folkevalget.formatNumber(recent30.votes)} afstemninger`,
+        text: `${window.Folkevalget.formatNumber(recent30.casesTouched)} sager berørt i salen eller via møder.`,
+      },
+      {
+        label: "Partisplits, 30 dage",
+        value: `${window.Folkevalget.formatNumber(recent30.splitVotes)} partisplits`,
+        text: "Afstemninger hvor mindst ét parti stemte forskelligt internt.",
+      },
+      {
+        label: "Tætte afstemninger",
+        value: `${window.Folkevalget.formatNumber(recent30.closeVotes)} tætte`,
+        text: "Ja/nej-margin på højst 10 % i den aktuelle periode.",
+      },
+      {
+        label: "Mest aktive udvalg",
+        value: topCommittee ? topCommittee.shortName : "–",
+        text: topCommittee
+          ? `${topCommittee.name} · ${window.Folkevalget.formatNumber(topCommittee.recentMeetingCount180)} møder på 180 dage`
+          : "Ingen udvalgsmøder i den aktuelle periode.",
+      },
+    ];
+
+    for (const highlight of highlights) {
+      const article = document.createElement("article");
+      article.className = "party-highlight";
+
+      const label = document.createElement("span");
+      label.className = "signal-label";
+      label.textContent = highlight.label;
+
+      const value = document.createElement("strong");
+      value.textContent = highlight.value;
+
+      const text = document.createElement("p");
+      text.textContent = highlight.text;
+
+      article.append(label, value, text);
+      activityHighlights.append(article);
+    }
+
+    renderInsightList(
+      splitFeed,
+      state.insights.recentActivity.splitVotes,
+      (vote) => ({
+        title: `${vote.caseNumber || `Afstemning ${vote.number}`} · ${vote.caseTitle}`,
+        href: vote.voteUrl,
+        meta: [
+          window.Folkevalget.formatDate(vote.date),
+          `${window.Folkevalget.formatNumber(vote.partySplitCount)} partisplits`,
+          vote.passed ? "Vedtaget" : "Forkastet",
+        ],
+        note: vote.topicDisplay || null,
+      }),
+      "Ingen partisplits i den aktuelle periode."
+    );
+
+    renderInsightList(
+      topicFeed,
+      state.insights.topics.recentTopics,
+      (topic) => ({
+        title: topic.displayLabel,
+        href: topic.href,
+        meta: [
+          `${window.Folkevalget.formatNumber(topic.voteCount)} afstemninger`,
+          `${window.Folkevalget.formatNumber(topic.caseCount)} sager`,
+        ],
+        note: topTopic && topTopic.label === topic.label
+          ? "Hyppigste sagsområde i den aktuelle periode."
+          : (topic.latestDate ? `Senest ${window.Folkevalget.formatDate(topic.latestDate)}` : null),
+      }),
+      "Ingen gentagne emneord i den aktuelle periode."
+    );
   }
 
   function renderComposition() {
@@ -509,10 +607,67 @@ const PartiesApp = (() => {
   function countDistinctConstituencies(profiles) {
     return new Set(
       (Array.isArray(profiles) ? profiles : [])
-        .filter((profile) => Boolean(profile?.current_party) && Boolean(profile?.storkreds))
-        .map((profile) => profile.storkreds)
+        .filter((profile) => Boolean(profile?.current_party) && Boolean(window.Folkevalget.profileConstituencyLabel(profile)))
+        .map((profile) => window.Folkevalget.profileConstituencyLabel(profile))
         .filter(Boolean)
     ).size;
+  }
+
+  function renderInsightList(root, rows, mapRow, emptyText) {
+    if (!root) {
+      return;
+    }
+    root.innerHTML = "";
+
+    if (!Array.isArray(rows) || rows.length === 0) {
+      root.innerHTML = `<div class="panel-empty">${emptyText}</div>`;
+      return;
+    }
+
+    for (const row of rows) {
+      const item = mapRow(row);
+      root.append(buildInsightItem(item));
+    }
+  }
+
+  function buildInsightItem(item) {
+    const article = document.createElement("article");
+    article.className = "insight-item";
+
+    const head = document.createElement("div");
+    head.className = "insight-item-head";
+
+    const link = document.createElement("a");
+    link.className = "insight-item-title";
+    link.href = item.href || "#";
+    link.textContent = item.title || "Uden titel";
+    if (String(item.href || "").startsWith("http")) {
+      link.target = "_blank";
+      link.rel = "noreferrer";
+    }
+    head.append(link);
+    article.append(head);
+
+    const metaParts = Array.isArray(item.meta) ? item.meta.filter(Boolean) : [];
+    if (metaParts.length > 0) {
+      const meta = document.createElement("div");
+      meta.className = "insight-item-meta";
+      for (const part of metaParts) {
+        const span = document.createElement("span");
+        span.textContent = part;
+        meta.append(span);
+      }
+      article.append(meta);
+    }
+
+    if (item.note) {
+      const note = document.createElement("p");
+      note.className = "insight-item-note";
+      note.textContent = item.note;
+      article.append(note);
+    }
+
+    return article;
   }
 
   return { boot };
@@ -522,9 +677,21 @@ PartiesApp.boot().catch((error) => {
   console.error(error);
   const directory = document.querySelector("#party-directory");
   const highlights = document.querySelector("#party-highlight-grid");
+  const activityHighlights = document.querySelector("#party-activity-highlights");
+  const splitFeed = document.querySelector("#party-split-feed");
+  const topicFeed = document.querySelector("#party-topic-feed");
   const composition = document.querySelector("#party-seat-distribution");
   if (highlights) {
     highlights.innerHTML = '<p class="party-empty">Partioversigten kunne ikke indlæses.</p>';
+  }
+  if (activityHighlights) {
+    activityHighlights.innerHTML = '<p class="party-empty">Aktivitetslaget kunne ikke indlæses.</p>';
+  }
+  if (splitFeed) {
+    splitFeed.innerHTML = '<div class="panel-empty">Partisplits kunne ikke indlæses.</div>';
+  }
+  if (topicFeed) {
+    topicFeed.innerHTML = '<div class="panel-empty">Emneord kunne ikke indlæses.</div>';
   }
   if (composition) {
     composition.innerHTML = '<p class="party-empty">Mandatfordelingen kunne ikke indlæses.</p>';

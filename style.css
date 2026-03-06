@@ -1831,6 +1831,166 @@ body.global-search-open {
   gap: var(--space-xl);
 }
 
+.insight-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.insight-stat {
+  display: grid;
+  gap: 0.35rem;
+  padding-left: var(--space-md);
+  border-left: 1px solid var(--color-border);
+}
+
+.insight-stat:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.insight-stat-label {
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.insight-stat strong {
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 2.8vw, 2.25rem);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.insight-stat p,
+.insight-item-note {
+  color: var(--color-text-secondary);
+}
+
+.insight-feed-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.insight-panel {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.insight-panel h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.12;
+}
+
+.insight-list,
+.status-mix-list {
+  display: grid;
+  gap: 0;
+}
+
+.insight-item {
+  display: grid;
+  gap: 0.45rem;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.insight-item:first-child,
+.status-mix-item:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.insight-item-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-sm);
+}
+
+.insight-item-title {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.insight-item-title:hover,
+.insight-item-title:focus-visible,
+.insight-item-aux:hover,
+.insight-item-aux:focus-visible {
+  color: var(--color-accent);
+}
+
+.insight-item-aux {
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.insight-item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem var(--space-md);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.insight-item-note {
+  margin: 0;
+  font-size: var(--text-sm);
+}
+
+.status-mix-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}
+
+.status-mix-item strong {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 1000px) {
+  .insight-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .insight-feed-grid,
+  .change-feed-grid,
+  .favorites-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-stat {
+    padding-left: 0;
+    padding-top: var(--space-sm);
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .insight-stat:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+}
+
 .page-favorites .favorites-columns {
   align-items: start;
   gap: var(--space-2xl);
@@ -1860,7 +2020,8 @@ body.global-search-open {
   align-items: start;
 }
 
-.page-home .change-feed-grid .panel {
+.page-home .change-feed-grid .panel,
+.page-home .insight-panel {
   border: none;
   background: transparent;
   padding: 0;
@@ -1870,6 +2031,11 @@ body.global-search-open {
   font-family: var(--font-heading);
   font-size: var(--text-xl);
   line-height: 1.2;
+}
+
+.page-home #home-active-cases-wrap {
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
 }
 
 .page-home .change-feed-grid .favorite-item {
@@ -3494,6 +3660,20 @@ html[data-theme="dark"] .page-votes .voter-row:focus-visible {
   gap: var(--space-lg);
 }
 
+.page-parties .party-context-grid {
+  margin-top: var(--space-sm);
+}
+
+.page-parties .insight-panel {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.page-parties .insight-panel h3 {
+  font-family: var(--font-heading);
+}
+
 .page-parties .party-highlight {
   display: grid;
   gap: 0.45rem;
@@ -3728,6 +3908,13 @@ html[data-theme="dark"] .page-votes .voter-row:focus-visible {
   border: 1px solid var(--color-border);
   color: var(--color-text-secondary);
   background: var(--color-surface);
+}
+
+.status-mix-list .panel-empty,
+.insight-list .panel-empty {
+  padding: 0;
+  border: none;
+  background: transparent;
 }
 
 .interest-block {

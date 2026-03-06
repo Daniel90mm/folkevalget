@@ -23,7 +23,7 @@
         } catch (error) {}
       })();
     </script>
-    <link rel="stylesheet" href="style.css?v=20260306c">
+    <link rel="stylesheet" href="style.css?v=20260306g">
   </head>
   <body class="page-home">
     <div class="site-shell">
@@ -112,19 +112,59 @@
           </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" aria-labelledby="home-activity-title">
           <div class="section-heading">
-            <h2>Daily Change Feed</h2>
-            <p class="table-note">Bygget på officielle registreringer i det aktuelle datasæt.</p>
+            <h2 id="home-activity-title">Arbejdet lige nu</h2>
+            <p class="table-note" id="home-activity-summary">Henter de seneste registrerede afstemninger og møder.</p>
           </div>
-          <div class="change-feed-grid">
-            <article class="panel">
-              <h3>Nye afstemninger</h3>
-              <div class="change-feed-list" id="feed-new-votes"></div>
+          <div class="insight-strip" id="home-activity-strip"></div>
+          <div class="insight-feed-grid">
+            <article class="insight-panel">
+              <h3>Seneste afstemninger</h3>
+              <div class="insight-list" id="home-latest-votes"></div>
             </article>
-            <article class="panel">
-              <h3>Korrigerede dokumenter / omtryk</h3>
-              <div class="change-feed-list" id="feed-omtryk"></div>
+            <article class="insight-panel">
+              <h3>Seneste møder</h3>
+              <div class="insight-list" id="home-latest-meetings"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="content-section" aria-labelledby="home-process-title">
+          <div class="section-heading">
+            <h2 id="home-process-title">Forslag i bevægelse</h2>
+            <p class="table-note" id="home-process-summary">Henter de nyeste sagsforløb og statusfordelingen i datasættet.</p>
+          </div>
+          <div class="insight-strip" id="home-process-strip"></div>
+          <div class="insight-feed-grid">
+            <article class="insight-panel">
+              <h3>Status i sagerne</h3>
+              <div class="status-mix-list" id="home-status-mix"></div>
+            </article>
+            <article class="insight-panel">
+              <h3>Seneste sagsbevægelser</h3>
+              <div class="insight-list" id="home-recent-cases"></div>
+            </article>
+          </div>
+          <article class="insight-panel" id="home-active-cases-wrap">
+            <h3>Åbne eller delte sager</h3>
+            <div class="insight-list" id="home-active-cases"></div>
+          </article>
+        </section>
+
+        <section class="content-section" aria-labelledby="home-committee-topic-title">
+          <div class="section-heading">
+            <h2 id="home-committee-topic-title">Udvalg og emner</h2>
+            <p class="table-note" id="home-committee-topic-summary">Henter udvalgsmøder og de mest brugte officielle emneord.</p>
+          </div>
+          <div class="insight-feed-grid">
+            <article class="insight-panel">
+              <h3>Mest aktive udvalg</h3>
+              <div class="insight-list" id="home-committee-activity"></div>
+            </article>
+            <article class="insight-panel">
+              <h3>Emner i afstemningerne</h3>
+              <div class="insight-list" id="home-topic-layer"></div>
             </article>
           </div>
         </section>
@@ -143,6 +183,7 @@
 
     <script src="catalog.js" defer></script>
     <script src="shared.js?v=20260305i" defer></script>
-    <script src="home.js?v=20260305a" defer></script>
+    <script src="insights.js?v=20260306b" defer></script>
+    <script src="home.js?v=20260306b" defer></script>
   </body>
 </html>

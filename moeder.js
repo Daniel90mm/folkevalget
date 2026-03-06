@@ -32,8 +32,31 @@ const MeetingsApp = (() => {
     state.meetings = Array.isArray(meetingsPayload?.meetings) ? meetingsPayload.meetings.slice().sort(compareMeetingsAscending) : [];
     state.scopeNote = String(meetingsPayload?.scope_note || "").trim();
     state.generatedAt = meetingsPayload?.generated_at || null;
+    hydrateStateFromQuery();
+    syncControls();
     bindEvents();
     render(true);
+  }
+
+  function hydrateStateFromQuery() {
+    const params = new URLSearchParams(window.location.search);
+    state.query = params.get("q") || "";
+    state.range = params.get("range") || DEFAULT_RANGE;
+    state.status = params.get("status") || "all";
+    const selectedMeetingId = Number(params.get("meeting") || 0);
+    state.selectedMeetingId = Number.isFinite(selectedMeetingId) && selectedMeetingId > 0 ? selectedMeetingId : null;
+  }
+
+  function syncControls() {
+    if (searchInput) {
+      searchInput.value = state.query;
+    }
+    if (rangeSelect) {
+      rangeSelect.value = state.range;
+    }
+    if (statusSelect) {
+      statusSelect.value = state.status;
+    }
   }
 
   async function loadMeetingsPayload() {
@@ -181,6 +204,28 @@ const MeetingsApp = (() => {
     renderScope(filtered);
     renderTimeline(filtered, selectedMeeting, shouldCenterSelection);
     renderDetail(selectedMeeting);
+    syncQueryString(selectedMeeting);
+  }
+
+  function syncQueryString(selectedMeeting) {
+    const params = new URLSearchParams();
+    if (state.query) {
+      params.set("q", state.query);
+    }
+    if (state.range !== DEFAULT_RANGE) {
+      params.set("range", state.range);
+    }
+    if (state.status !== "all") {
+      params.set("status", state.status);
+    }
+
+    const meetingId = Number(selectedMeeting?.meeting_id || 0);
+    if (meetingId > 0) {
+      params.set("meeting", String(meetingId));
+    }
+
+    const next = params.toString() ? `${window.location.pathname}?${params.toString()}` : window.location.pathname;
+    window.history.replaceState({}, "", next);
   }
 
   function renderScope(filteredMeetings) {
