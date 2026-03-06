@@ -2424,10 +2424,12 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
 
 .page-votes .votes-browser-controls {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow-anchor: none;
 }
 
 .page-votes .votes-filter-toggles {
   grid-column: 1 / -1;
+  overflow-anchor: none;
 }
 
 .page-votes .votes-filter-toggles {
@@ -2438,6 +2440,7 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
   display: grid;
   gap: var(--space-xs);
   align-items: start;
+  overflow-anchor: none;
 }
 
 .page-votes .close-threshold-field {
