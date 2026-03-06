@@ -8,7 +8,10 @@ const FavoritesApp = (() => {
   };
 
   const statsRoot = document.querySelector("[data-site-stats]");
+  const favoritesEmptyIntro = document.querySelector("#favorites-empty-intro");
   const summaryRoot = document.querySelector("#favorites-summary");
+  const favoriteCasesHeading = document.querySelector("#favorite-cases-heading");
+  const favoriteProfilesHeading = document.querySelector("#favorite-profiles-heading");
   const favoriteCasesRoot = document.querySelector("#favorite-cases");
   const favoriteProfilesRoot = document.querySelector("#favorite-profiles");
 
@@ -89,9 +92,22 @@ const FavoritesApp = (() => {
 
   function render() {
     state.favorites = window.Folkevalget.getFavorites();
+    syncEmptyState();
     renderSummary();
+    renderSectionHeadings();
     renderFavoriteCases();
     renderFavoriteProfiles();
+  }
+
+  function syncEmptyState() {
+    if (!favoritesEmptyIntro) {
+      return;
+    }
+
+    const isEmpty =
+      state.favorites.profiles.length === 0 &&
+      state.favorites.cases.length === 0;
+    favoritesEmptyIntro.classList.toggle("hidden", !isEmpty);
   }
 
   function renderSummary() {
@@ -103,14 +119,24 @@ const FavoritesApp = (() => {
     const caseCount = state.favorites.cases.length;
 
     if (profileCount === 0 && caseCount === 0) {
-      summaryRoot.textContent =
-        "Ingen favoritter endnu. Stjernemarkér en sag i Afstemninger eller en politiker på profilsiden.";
+      summaryRoot.textContent = "Ingen favoritter endnu.";
       return;
     }
 
     summaryRoot.textContent =
       `Du følger ${window.Folkevalget.formatNumber(caseCount)} sager og ` +
       `${window.Folkevalget.formatNumber(profileCount)} politikere.`;
+  }
+
+  function renderSectionHeadings() {
+    if (favoriteCasesHeading) {
+      favoriteCasesHeading.textContent =
+        `Favoritforslag (${window.Folkevalget.formatNumber(state.favorites.cases.length)})`;
+    }
+    if (favoriteProfilesHeading) {
+      favoriteProfilesHeading.textContent =
+        `Favoritprofiler (${window.Folkevalget.formatNumber(state.favorites.profiles.length)})`;
+    }
   }
 
   function renderFavoriteCases() {

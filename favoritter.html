@@ -23,13 +23,16 @@
         } catch (error) {}
       })();
     </script>
-    <link rel="stylesheet" href="style.css?v=20260305y">
+    <link rel="stylesheet" href="style.css?v=20260306c">
   </head>
   <body class="page-favorites">
     <div class="site-shell">
       <header class="site-header">
         <div class="site-brand-row">
-          <a class="site-brand" href="./index.html">folkevalget.dk</a>
+          <a class="site-brand" href="./index.html" aria-label="Folkevalget.dk">
+            <span class="site-brand-wordmark">Folkevalget</span>
+            <span class="site-brand-domain">.dk</span>
+          </a>
           <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
             Menu
           </button>
@@ -53,32 +56,38 @@
       </header>
 
       <main class="home-layout favorites-layout">
-        <section class="page-intro">
+        <section class="page-intro favorites-empty-intro hidden" id="favorites-empty-intro">
           <h1>Følg de sager og politikere, du vil holde øje med.</h1>
           <p>
             Stjernemarkér en sag på afstemningssiden eller en politiker på profilsiden. Her ser du dine favoritter
             samlet med de seneste registrerede aktiviteter.
           </p>
+          <div class="hero-actions">
+            <a class="button-link button-link-secondary" href="./afstemninger.html">Gå til afstemninger</a>
+            <a class="button-link button-link-secondary" href="./discover.html">Gå til profiler</a>
+          </div>
         </section>
 
-        <section class="content-section">
-          <div class="section-heading">
-            <h2>Overblik</h2>
+        <section class="content-section favorites-head">
+          <div class="favorites-head-copy">
+            <h1>Favoritter</h1>
           </div>
-          <div class="favorites-summary" id="favorites-summary">Indlæser favoritter…</div>
+          <div class="favorites-summary-wrap">
+            <p class="favorites-summary" id="favorites-summary">Indlæser favoritter…</p>
+          </div>
         </section>
 
         <section class="content-section">
           <div class="favorites-columns">
             <article class="panel">
               <div class="panel-heading">
-                <h2>Favoritforslag</h2>
+                <h2 id="favorite-cases-heading">Favoritforslag</h2>
               </div>
               <div class="favorite-list" id="favorite-cases"></div>
             </article>
             <article class="panel">
               <div class="panel-heading">
-                <h2>Favoritprofiler</h2>
+                <h2 id="favorite-profiles-heading">Favoritprofiler</h2>
               </div>
               <div class="favorite-list" id="favorite-profiles"></div>
             </article>
@@ -99,6 +108,6 @@
 
     <script src="catalog.js" defer></script>
     <script src="shared.js?v=20260305i" defer></script>
-    <script src="favorites.js?v=20260305c" defer></script>
+    <script src="favorites.js?v=20260306a" defer></script>
   </body>
 </html>

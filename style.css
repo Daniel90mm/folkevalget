@@ -142,15 +142,58 @@ img {
 }
 
 .site-brand {
-  display: inline-flex;
-  align-items: center;
-  min-height: 2.25rem;
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  align-items: end;
+  column-gap: 0.45rem;
+  min-height: 2.5rem;
   color: var(--color-accent);
-  font-size: var(--text-sm);
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.site-brand::before {
+  content: "";
+  width: 1.7rem;
+  height: 1.35rem;
+  align-self: center;
+  border-bottom: 2px solid currentColor;
+  background:
+    linear-gradient(currentColor, currentColor) 0.08rem 0.28rem / 0.2rem 0.78rem no-repeat,
+    linear-gradient(currentColor, currentColor) 0.72rem 0.06rem / 0.2rem 1rem no-repeat,
+    linear-gradient(currentColor, currentColor) 1.36rem 0.42rem / 0.2rem 0.64rem no-repeat;
+  opacity: 0.95;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.site-brand-wordmark {
+  font-family: var(--font-heading);
+  font-size: clamp(1.12rem, 0.96rem + 0.45vw, 1.4rem);
   font-weight: 700;
-  line-height: 1;
+  line-height: 0.94;
+  letter-spacing: 0.03em;
+}
+
+.site-brand-domain {
+  align-self: center;
+  padding-top: 0.12rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  opacity: 0.82;
+}
+
+.site-brand:hover,
+.site-brand:focus-visible {
+  color: var(--color-accent-hover);
+}
+
+.site-brand:hover::before,
+.site-brand:focus-visible::before {
+  transform: translateY(-1px);
+  opacity: 1;
 }
 
 .site-header-meta {
@@ -1338,6 +1381,29 @@ body.global-search-open {
   padding-top: 0;
 }
 
+.page-favorites .favorites-empty-intro {
+  max-width: 68ch;
+}
+
+.page-favorites .favorites-head {
+  gap: var(--space-sm);
+  padding-top: 0;
+  border-top: none;
+}
+
+.page-favorites .favorites-empty-intro:not(.hidden) + .favorites-head {
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.page-favorites .favorites-head-copy h1 {
+  font-size: clamp(1.8rem, 3vw, var(--text-2xl));
+}
+
+.page-favorites .favorites-summary-wrap {
+  max-width: 72ch;
+}
+
 .favorites-summary {
   color: var(--color-text-secondary);
   max-width: 72ch;
@@ -1348,6 +1414,11 @@ body.global-search-open {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-xl);
+}
+
+.page-favorites .favorites-columns {
+  align-items: start;
+  gap: var(--space-2xl);
 }
 
 .page-favorites .panel {
