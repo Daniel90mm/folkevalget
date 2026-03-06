@@ -1932,9 +1932,14 @@ const VotesApp = (() => {
     const previousValue = state.partyFilter;
     votePartyFilter.innerHTML = '<option value="">Alle partier</option>';
 
-    const partyKeys = Object.keys(vote.vote_groups_by_party || {}).sort((left, right) =>
-      formatPartyLabel(left).localeCompare(formatPartyLabel(right), "da")
-    );
+    const partyKeys = Object.entries(vote.vote_groups_by_party || {})
+      .filter(([, groups]) => {
+        const forCount = dedupeNumericIds(groups?.for || []).length;
+        const againstCount = dedupeNumericIds(groups?.imod || []).length;
+        return forCount > 0 || againstCount > 0;
+      })
+      .map(([partyKey]) => partyKey)
+      .sort((left, right) => formatPartyLabel(left).localeCompare(formatPartyLabel(right), "da"));
 
     for (const key of partyKeys) {
       const option = document.createElement("option");
