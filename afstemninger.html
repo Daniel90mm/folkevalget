@@ -131,14 +131,19 @@
             </label>
 
             <div class="votes-filter-toggles">
-              <label class="toggle-check">
-                <input id="vote-close-only" type="checkbox">
-                <span>Kun t&aelig;tte afstemninger</span>
-              </label>
-              <label class="field close-threshold-field hidden" id="vote-close-threshold-field" for="vote-close-threshold">
-                <span class="field-label">Maks ja/nej-margin (%)</span>
-                <input id="vote-close-threshold" type="number" min="0" max="100" step="1" inputmode="numeric" value="10">
-              </label>
+              <div class="close-threshold-control">
+                <label class="toggle-check">
+                  <input id="vote-close-only" type="checkbox">
+                  <span>Kun t&aelig;tte afstemninger</span>
+                </label>
+                <div class="field close-threshold-field hidden" id="vote-close-threshold-field">
+                  <span class="field-label">Maks ja/nej-margin (%)</span>
+                  <div class="close-threshold-input-row">
+                    <input id="vote-close-threshold" type="number" min="0" max="100" step="1" inputmode="numeric" value="10">
+                    <button class="button-link button-link-secondary close-threshold-apply" id="vote-close-threshold-apply" type="button">Anvend</button>
+                  </div>
+                </div>
+              </div>
               <label class="toggle-check">
                 <input id="vote-split-only" type="checkbox">
                 <span>Kun partisplits</span>

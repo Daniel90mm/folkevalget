@@ -64,7 +64,9 @@ const VotesApp = (() => {
     partyFilter: "",
     sortMode: "date_desc",
     closeOnly: false,
+    closeControlsOpen: false,
     closeThresholdPct: DEFAULT_CLOSE_VOTE_THRESHOLD_PCT,
+    closeThresholdInput: String(DEFAULT_CLOSE_VOTE_THRESHOLD_PCT),
     splitOnly: false,
     exactEmneord: "",
     commonEmneordOptions: [],
@@ -87,6 +89,7 @@ const VotesApp = (() => {
   const voteCloseOnly = document.querySelector("#vote-close-only");
   const voteCloseThreshold = document.querySelector("#vote-close-threshold");
   const voteCloseThresholdField = document.querySelector("#vote-close-threshold-field");
+  const voteCloseThresholdApply = document.querySelector("#vote-close-threshold-apply");
   const voteSplitOnly = document.querySelector("#vote-split-only");
   const voteEmneordField = document.querySelector("#vote-emneord-field");
   const voteEmneordSelect = document.querySelector("#vote-emneord-select");
@@ -173,6 +176,8 @@ const VotesApp = (() => {
     state.sortMode = VALID_SORTS.has(sortMode) ? sortMode : "date_desc";
     state.closeOnly = params.get("close") === "1";
     state.closeThresholdPct = sanitiseCloseThresholdPct(params.get("close_margin"));
+    state.closeControlsOpen = state.closeOnly;
+    state.closeThresholdInput = String(state.closeThresholdPct);
     state.splitOnly = params.get("split") === "1";
     state.exactEmneord = params.get("emneord") || "";
     state.typeFilter = params.get("type") || "";
@@ -209,9 +214,9 @@ const VotesApp = (() => {
       }
     }
     voteSortSelect.value = state.sortMode;
-    voteCloseOnly.checked = state.closeOnly;
+    voteCloseOnly.checked = state.closeControlsOpen;
     if (voteCloseThreshold) {
-      voteCloseThreshold.value = String(state.closeThresholdPct);
+      voteCloseThreshold.value = state.closeThresholdInput;
     }
     voteSplitOnly.checked = state.splitOnly;
     if (voteEmneordSelect) {
@@ -267,24 +272,42 @@ const VotesApp = (() => {
     });
 
     voteCloseOnly.addEventListener("change", (event) => {
-      state.closeOnly = event.target.checked;
-      syncCloseThresholdVisibility();
-      applyVoteFilter();
+      state.closeControlsOpen = event.target.checked;
+      if (!state.closeControlsOpen) {
+        clearCloseVoteFilter({ preserveInput: true });
+        syncControls();
+        applyVoteFilter();
+        return;
+      }
+      syncControls();
     });
 
-    if (voteCloseThreshold) {
-      const syncThresholdFromInput = () => {
-        state.closeThresholdPct = sanitiseCloseThresholdPct(voteCloseThreshold.value);
-        voteCloseThreshold.value = String(state.closeThresholdPct);
-      };
+    const applyCloseThresholdFilter = () => {
+      state.closeControlsOpen = true;
+      state.closeThresholdPct = sanitiseCloseThresholdPct(state.closeThresholdInput);
+      state.closeThresholdInput = String(state.closeThresholdPct);
+      state.closeOnly = true;
+      syncControls();
+      applyVoteFilter();
+    };
 
-      voteCloseThreshold.addEventListener("change", () => {
-        syncThresholdFromInput();
-        applyVoteFilter();
+    if (voteCloseThreshold) {
+      voteCloseThreshold.addEventListener("input", (event) => {
+        state.closeThresholdInput = event.target.value;
       });
 
-      voteCloseThreshold.addEventListener("blur", () => {
-        syncThresholdFromInput();
+      voteCloseThreshold.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter") {
+          return;
+        }
+        event.preventDefault();
+        applyCloseThresholdFilter();
+      });
+    }
+
+    if (voteCloseThresholdApply) {
+      voteCloseThresholdApply.addEventListener("click", () => {
+        applyCloseThresholdFilter();
       });
     }
 
@@ -374,8 +397,7 @@ const VotesApp = (() => {
           state.officialSagskategori = "";
         }
         if (filterKey === "close") {
-          state.closeOnly = false;
-          state.closeThresholdPct = DEFAULT_CLOSE_VOTE_THRESHOLD_PCT;
+          clearCloseVoteFilter({ preserveInput: true });
         }
         if (filterKey === "split") {
           state.splitOnly = false;
@@ -903,8 +925,22 @@ const VotesApp = (() => {
       return;
     }
 
-    voteCloseThresholdField.classList.toggle("hidden", !state.closeOnly);
-    voteCloseThreshold.disabled = !state.closeOnly;
+    voteCloseThresholdField.classList.toggle("hidden", !state.closeControlsOpen);
+    voteCloseThreshold.disabled = !state.closeControlsOpen;
+    if (voteCloseThresholdApply) {
+      voteCloseThresholdApply.disabled = !state.closeControlsOpen;
+    }
+  }
+
+  function clearCloseVoteFilter({ preserveInput = false } = {}) {
+    const lastValue = preserveInput
+      ? String(state.closeThresholdInput || state.closeThresholdPct || DEFAULT_CLOSE_VOTE_THRESHOLD_PCT)
+      : String(DEFAULT_CLOSE_VOTE_THRESHOLD_PCT);
+
+    state.closeOnly = false;
+    state.closeControlsOpen = false;
+    state.closeThresholdPct = DEFAULT_CLOSE_VOTE_THRESHOLD_PCT;
+    state.closeThresholdInput = lastValue;
   }
 
   function syncEmneordFilterVisibility() {
