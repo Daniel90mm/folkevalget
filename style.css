@@ -633,16 +633,25 @@ body.global-search-open {
 }
 
 .global-search-result-meta,
+.global-search-result-summary,
 .global-search-result-trailing {
   color: var(--color-text-secondary);
   font-size: var(--text-sm);
 }
 
+.global-search-result-summary {
+  line-height: 1.45;
+  max-width: 66ch;
+}
+
 .global-search-result.is-active .global-search-result-meta,
+.global-search-result.is-active .global-search-result-summary,
 .global-search-result.is-active .global-search-result-trailing,
 .global-search-result:hover .global-search-result-meta,
+.global-search-result:hover .global-search-result-summary,
 .global-search-result:hover .global-search-result-trailing,
 .global-search-result:focus-visible .global-search-result-meta,
+.global-search-result:focus-visible .global-search-result-summary,
 .global-search-result:focus-visible .global-search-result-trailing {
   color: var(--color-text);
 }

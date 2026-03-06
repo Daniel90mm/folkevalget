@@ -29,18 +29,22 @@ window.Folkevalget = (() => {
   const THEME_STORAGE_KEY = "folkevalget-theme";
   const FAVORITES_STORAGE_KEY = "folkevalget-favorites-v1";
   const FAVORITES_EVENT_NAME = "folkevalget:favorites-changed";
-  const GLOBAL_SEARCH_SECTION_ORDER = ["profile", "vote", "party", "constituency"];
+  const GLOBAL_SEARCH_SECTION_ORDER = ["glossary", "law", "profile", "vote", "party", "constituency"];
   const GLOBAL_SEARCH_SECTION_LABELS = {
+    glossary: "Begreber",
+    law: "Love og regler",
     profile: "Politikere",
     vote: "Afstemninger",
     party: "Partier",
     constituency: "Storkredse",
   };
-  const GLOBAL_SEARCH_RESULT_LIMIT = 12;
+  const GLOBAL_SEARCH_RESULT_LIMIT = 16;
   const GLOBAL_SEARCH_PER_SECTION = 4;
   let catalogueDataPromise = null;
   let voteDataPromise = null;
   let voteOverviewPromise = null;
+  let glossaryDataPromise = null;
+  let lawLookupPromise = null;
   let voteDetailsPromise = null;
   let voteDetailsIndexPromise = null;
   const voteDetailIndexById = new Map();
@@ -161,6 +165,38 @@ window.Folkevalget = (() => {
     });
 
     return voteOverviewPromise;
+  }
+
+  async function loadGlossaryData() {
+    if (glossaryDataPromise) {
+      return glossaryDataPromise;
+    }
+
+    glossaryDataPromise = (async () => {
+      const glossary = await fetchJson("data/begreber.json");
+      return Array.isArray(glossary) ? glossary : [];
+    })().catch((error) => {
+      glossaryDataPromise = null;
+      throw error;
+    });
+
+    return glossaryDataPromise;
+  }
+
+  async function loadLawLookupData() {
+    if (lawLookupPromise) {
+      return lawLookupPromise;
+    }
+
+    lawLookupPromise = (async () => {
+      const laws = await fetchJson("data/love_og_regler.json");
+      return Array.isArray(laws) ? laws : [];
+    })().catch((error) => {
+      lawLookupPromise = null;
+      throw error;
+    });
+
+    return lawLookupPromise;
   }
 
   async function loadVoteDetails() {
@@ -355,6 +391,10 @@ window.Folkevalget = (() => {
   function toSiteUrl(path) {
     const normalizedPath = path.replace(/^\/+/, "");
     return `${siteBasePath}${normalizedPath}`;
+  }
+
+  function isExternalUrl(value) {
+    return /^https?:\/\//i.test(String(value || "").trim());
   }
 
   function readBootstrapPayload() {
@@ -1093,7 +1133,7 @@ window.Folkevalget = (() => {
     input.type = "search";
     input.autocomplete = "off";
     input.spellcheck = false;
-    input.placeholder = "Navn, parti, storkreds eller sagsnummer";
+    input.placeholder = "Navn, lov nr., storkreds eller begreb";
 
     const close = document.createElement("button");
     close.type = "button";
@@ -1191,9 +1231,16 @@ window.Folkevalget = (() => {
     globalSearchIndexPromise = Promise.all([
       loadCatalogueData(),
       loadVoteOverview().catch(() => []),
+      loadGlossaryData().catch(() => []),
+      loadLawLookupData().catch(() => []),
     ])
-      .then(([{ profiles }, votes]) => {
-        const index = buildGlobalSearchIndex(profiles, Array.isArray(votes) ? votes : []);
+      .then(([{ profiles }, votes, glossary, laws]) => {
+        const index = buildGlobalSearchIndex(
+          profiles,
+          Array.isArray(votes) ? votes : [],
+          Array.isArray(glossary) ? glossary : [],
+          Array.isArray(laws) ? laws : []
+        );
         globalSearchState.index = index;
         return index;
       })
@@ -1205,13 +1252,87 @@ window.Folkevalget = (() => {
     return globalSearchIndexPromise;
   }
 
-  function buildGlobalSearchIndex(profiles, votes) {
+  function buildGlobalSearchIndex(profiles, votes, glossary, laws) {
     return [
+      ...buildGlossarySearchItems(glossary),
+      ...buildLawSearchItems(laws),
       ...buildProfileSearchItems(profiles),
       ...buildVoteSearchItems(votes),
       ...buildPartySearchItems(profiles),
       ...buildConstituencySearchItems(profiles),
     ];
+  }
+
+  function buildGlossarySearchItems(entries) {
+    return (entries || []).map((entry) => {
+      const category = String(entry?.category || "").trim();
+      const sourceLabel = String(entry?.source_label || "").trim();
+      const definition = String(entry?.definition || "").trim();
+      const usage = String(entry?.usage || "").trim();
+      const summary = [definition, usage].filter(Boolean).join(" Bruges når: ");
+      const title = String(entry?.term || "").trim() || "Begreb";
+      const aliases = Array.isArray(entry?.aliases) ? entry.aliases : [];
+      const searchParts = [title, ...aliases, category, definition, usage, sourceLabel];
+      const exactTerms = [title, ...aliases];
+      const meta = [category, sourceLabel].filter(Boolean).join(" · ");
+
+      return createSearchItem({
+        kind: "glossary",
+        title,
+        meta,
+        trailing: sourceLabel || "ft.dk",
+        href: entry?.source_url || toSiteUrl("folketinget.html"),
+        searchParts,
+        exactTerms,
+        priority: 310,
+        description: summary,
+        external: isExternalUrl(entry?.source_url),
+      });
+    });
+  }
+
+  function buildLawSearchItems(entries) {
+    return (entries || []).map((entry) => {
+      const title = String(entry?.title || "").trim() || `Lov nr. ${entry?.law_number || ""}`.trim();
+      const lawNumber = String(entry?.law_number || "").trim();
+      const lawDate = String(entry?.law_number_date || "").trim();
+      const lawYear = String(entry?.law_year || "").trim() || (lawDate ? lawDate.slice(0, 4) : "");
+      const caseNumber = String(entry?.sag_number || "").trim();
+      const caseNumberVariants = buildCaseNumberVariants(caseNumber);
+      const lawLabel = lawNumber ? `Lov nr. ${lawNumber}` : "Lov";
+      const meta = [lawLabel, formatDate(lawDate), caseNumber ? `fra ${caseNumber}` : null].filter(Boolean).join(" · ");
+      const summary = [entry?.sag_status, "Officiel lovtekst på retsinformation.dk."].filter(Boolean).join(" · ");
+      const exactTerms = [
+        lawNumber ? `Lov nr. ${lawNumber}` : null,
+        lawNumber ? `Lov nr ${lawNumber}` : null,
+        lawNumber ? `nr ${lawNumber}` : null,
+        lawNumber,
+        lawNumber && lawYear ? `${lawNumber}/${lawYear}` : null,
+      ].filter(Boolean);
+      const searchParts = [
+        title,
+        lawLabel,
+        lawNumber,
+        lawYear,
+        caseNumber,
+        ...caseNumberVariants,
+        entry?.sag_status,
+      ];
+
+      return createSearchItem({
+        kind: "law",
+        title,
+        meta,
+        trailing: "Retsinfo",
+        href: entry?.url || toSiteUrl("folketinget.html"),
+        searchParts,
+        exactTerms,
+        priority: 280,
+        date: lawDate,
+        description: summary,
+        external: isExternalUrl(entry?.url),
+      });
+    });
   }
 
   function buildProfileSearchItems(profiles) {
@@ -1344,7 +1465,19 @@ window.Folkevalget = (() => {
     );
   }
 
-  function createSearchItem({ kind, title, meta, trailing, href, searchParts, exactTerms, priority, date = null }) {
+  function createSearchItem({
+    kind,
+    title,
+    meta,
+    trailing,
+    href,
+    searchParts,
+    exactTerms,
+    priority,
+    date = null,
+    description = "",
+    external = false,
+  }) {
     const searchText = normaliseText((searchParts || []).filter(Boolean).join(" "));
     const titleText = normaliseText(title);
     const titleWords = titleText.split(" ").filter(Boolean);
@@ -1362,6 +1495,8 @@ window.Folkevalget = (() => {
       href,
       date,
       priority,
+      description,
+      external,
       titleText,
       titleWords,
       titleCompact,
@@ -1383,11 +1518,11 @@ window.Folkevalget = (() => {
     if (!query) {
       globalSearchState.results = [];
       globalSearchState.activeIndex = -1;
-      status.textContent = "Søg i profiler, afstemninger, partier og storkredse.";
+      status.textContent = "Søg i begreber, love og regler, profiler, afstemninger, partier og storkredse.";
       results.innerHTML = `
         <div class="global-search-empty">
-          <p>Skriv et navn, et parti, en storkreds eller et sagsnummer.</p>
-          <p>Eksempler: "Mette Frederiksen", "L 92", "Venstre", "Københavns Storkreds".</p>
+          <p>Skriv et navn, et parti, en storkreds, et sagsnummer eller et begreb.</p>
+          <p>Eksempler: "Mette Frederiksen", "L 92", "lov nr. 741", "betænkning".</p>
         </div>
       `;
       globalSearchState.resultNodes = [];
@@ -1396,7 +1531,7 @@ window.Folkevalget = (() => {
 
     if (!globalSearchState.index) {
       status.textContent = "Indlæser søgning...";
-      results.innerHTML = '<div class="global-search-empty"><p>Indlæser profiler og afstemninger...</p></div>';
+      results.innerHTML = '<div class="global-search-empty"><p>Indlæser profiler, afstemninger, begreber og love...</p></div>';
       loadGlobalSearchIndex()
         .then(() => {
           if (globalSearchState.open) {
@@ -1580,6 +1715,10 @@ window.Folkevalget = (() => {
       link.className = "global-search-result";
       link.href = item.href;
       link.dataset.searchIndex = String(globalIndex);
+      if (item.external) {
+        link.target = "_blank";
+        link.rel = "noreferrer noopener";
+      }
 
       const copy = document.createElement("div");
       copy.className = "global-search-result-copy";
@@ -1595,6 +1734,12 @@ window.Folkevalget = (() => {
       copy.append(title);
       if (item.meta) {
         copy.append(meta);
+      }
+      if (item.description) {
+        const summary = document.createElement("span");
+        summary.className = "global-search-result-summary";
+        summary.textContent = item.description;
+        copy.append(summary);
       }
 
       const trailing = document.createElement("span");
@@ -1674,7 +1819,7 @@ window.Folkevalget = (() => {
     }
 
     closeGlobalSearch();
-    if (inNewTab) {
+    if (inNewTab || result.external) {
       window.open(result.href, "_blank", "noopener");
       return;
     }

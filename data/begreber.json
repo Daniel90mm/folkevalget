@@ -1,0 +1,262 @@
+[
+  {
+    "slug": "afstemning",
+    "term": "Afstemning",
+    "aliases": ["stemmeafgivelse"],
+    "definition": "En registreret afgivelse af stemmer i salen, hvor medlemmer stemmer for, imod, hverken eller registreres som fravær.",
+    "usage": "Bruges på Folkevalget som grundlag for stemmetal, fremmøde og partisammenfald.",
+    "category": "Stemmearbejde",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/arbejdet-i-folketinget/lovgivningsprocessen"
+  },
+  {
+    "slug": "fremsaettelse",
+    "term": "Fremsættelse",
+    "aliases": ["fremsaettelse", "fremsat"],
+    "definition": "Det tidspunkt hvor et forslag formelt bliver lagt frem for Folketinget.",
+    "usage": "Markerer begyndelsen på et forslag i sagsforløbet.",
+    "category": "Lovbehandling",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/arbejdet-i-folketinget/lovgivningsprocessen"
+  },
+  {
+    "slug": "1-behandling",
+    "term": "1. behandling",
+    "aliases": ["1 behandling", "foerste behandling", "første behandling"],
+    "definition": "Første debat i salen om et forslag, hvor hovedlinjerne drøftes, før sagen typisk sendes videre til udvalg.",
+    "usage": "Bruges tidligt i et forslag, før det detaljerede udvalgsarbejde går i gang.",
+    "category": "Lovbehandling",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/arbejdet-i-folketinget/lovgivningsprocessen"
+  },
+  {
+    "slug": "2-behandling",
+    "term": "2. behandling",
+    "aliases": ["2 behandling", "anden behandling"],
+    "definition": "Anden behandling i salen, hvor ændringsforslag og udvalgsarbejde indgår i den videre behandling.",
+    "usage": "Her kan et forslag ændres, opdeles eller sendes tilbage til udvalg.",
+    "category": "Lovbehandling",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/arbejdet-i-folketinget/lovgivningsprocessen"
+  },
+  {
+    "slug": "3-behandling",
+    "term": "3. behandling",
+    "aliases": ["3 behandling", "tredje behandling"],
+    "definition": "Den afsluttende behandling i salen, hvor Folketinget normalt træffer endelig beslutning om et forslag.",
+    "usage": "Resultatet vil ofte være vedtaget eller forkastet.",
+    "category": "Lovbehandling",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/arbejdet-i-folketinget/lovgivningsprocessen"
+  },
+  {
+    "slug": "udvalg",
+    "term": "Udvalg",
+    "aliases": ["stående udvalg", "staende udvalg", "fagudvalg"],
+    "definition": "En gruppe medlemmer som behandler forslag, spørgsmål og høringer inden sagerne vender tilbage til salen.",
+    "usage": "Det meste detaljerede sagsarbejde foregår i udvalgene.",
+    "category": "Parlamentarisk arbejde",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "henvist-til-udvalg",
+    "term": "Henvist til udvalg",
+    "aliases": ["henvisning til udvalg"],
+    "definition": "Status som viser at et forslag er sendt videre til et udvalg til nærmere behandling.",
+    "usage": "Bruges efter 1. behandling eller efter en senere behandling, hvis sagen skal undersøges nærmere.",
+    "category": "Lovbehandling",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/arbejdet-i-folketinget/lovgivningsprocessen"
+  },
+  {
+    "slug": "betaenkning",
+    "term": "Betænkning",
+    "aliases": ["betaenkning"],
+    "definition": "Udvalgets skriftlige vurdering og indstilling om et forslag før den videre behandling i salen.",
+    "usage": "En betænkning samler ofte politiske bemærkninger, ændringsforslag og anbefalinger.",
+    "category": "Udvalgsarbejde",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "tillaegsbetaenkning",
+    "term": "Tillægsbetænkning",
+    "aliases": ["tillaegsbetaenkning"],
+    "definition": "En supplerende betænkning fra et udvalg efter en ny runde behandling eller nye ændringer i sagen.",
+    "usage": "Bruges når en sag vender tilbage til udvalg efter 2. behandling eller får nyt materiale.",
+    "category": "Udvalgsarbejde",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "samraad",
+    "term": "Samråd",
+    "aliases": ["samraad"],
+    "definition": "Et møde hvor et udvalg beder en minister svare mundtligt om en sag eller et politisk spørgsmål.",
+    "usage": "Bruges som en del af udvalgenes kontrol med ministre og ministerier.",
+    "category": "Udvalgsarbejde",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "samraadsspoergsmaal",
+    "term": "Samrådsspørgsmål",
+    "aliases": ["samraadsspoergsmaal", "samrådsspørgsmål"],
+    "definition": "Det konkrete spørgsmål som et udvalg stiller til en minister forud for et samråd.",
+    "usage": "Det danner rammen for den mundtlige besvarelse under samrådet.",
+    "category": "Udvalgsarbejde",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "paragraf-20-spoergsmaal",
+    "term": "§ 20-spørgsmål",
+    "aliases": ["paragraf 20 spørgsmål", "paragraf 20 spoergsmaal", "20 spørgsmål", "§20-spørgsmål", "§20 spørgsmål"],
+    "definition": "Et skriftligt spørgsmål fra et folketingsmedlem til en minister efter reglerne i Folketingets forretningsorden.",
+    "usage": "Bruges til at få ministre til at forklare, oplyse eller tage stilling til konkrete forhold.",
+    "category": "Kontrol",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "ordfoerer",
+    "term": "Ordfører",
+    "aliases": ["ordfoerer", "partiets ordfører", "partiets ordfoerer"],
+    "definition": "Det medlem der taler på sit partis vegne på et bestemt politikområde eller i en konkret sag.",
+    "usage": "På en sag kan flere partier have hver sin ordfører i debatten.",
+    "category": "Roller",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "lovforslag",
+    "term": "Lovforslag",
+    "aliases": ["lovforslag l", "l-forslag"],
+    "definition": "Et forslag til ny lov eller ændring af gældende lovgivning, som kan ende med at blive vedtaget og stadfæstet.",
+    "usage": "Lovforslag har normalt et nummer som begynder med L.",
+    "category": "Sagstyper",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "beslutningsforslag",
+    "term": "Beslutningsforslag",
+    "aliases": ["b-forslag"],
+    "definition": "Et forslag til en politisk beslutning fra Folketinget, uden at der vedtages en egentlig lovtekst.",
+    "usage": "Beslutningsforslag har normalt et nummer som begynder med B.",
+    "category": "Sagstyper",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "forespoergsel",
+    "term": "Forespørgsel",
+    "aliases": ["forespoergsel", "f-sag"],
+    "definition": "Et spørgsmål som fører til en debat i Folketingssalen, ofte afsluttet med et vedtagelsesforslag.",
+    "usage": "Forespørgsler har normalt et nummer som begynder med F.",
+    "category": "Sagstyper",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "redegoerelse",
+    "term": "Redegørelse",
+    "aliases": ["redegoerelse", "r-sag"],
+    "definition": "En redegørelse fra regeringen eller en minister, som Folketinget kan behandle og debattere.",
+    "usage": "Redegørelser har normalt et nummer som begynder med R.",
+    "category": "Sagstyper",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "omtryk",
+    "term": "Omtryk",
+    "aliases": ["genoptryk"],
+    "definition": "En ny udgave af et dokument, typisk fordi der er rettet fejl eller tilføjet oplysninger.",
+    "usage": "Et dokument kan være markeret som omtryk uden at sagens indhold er ændret politisk.",
+    "category": "Dokumenter",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "dagsordenspunkt",
+    "term": "Dagsordenspunkt",
+    "aliases": ["punkt på dagsordenen"],
+    "definition": "Et enkelt punkt på dagsordenen for et møde i salen eller i et udvalg.",
+    "usage": "Et møde kan have flere dagsordenspunkter, der hver knyttes til sager eller behandlinger.",
+    "category": "Møder",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "deputation",
+    "term": "Deputation",
+    "aliases": ["foretræde", "foretraede"],
+    "definition": "Et møde hvor personer eller organisationer møder op i et udvalg for at fremlægge synspunkter i en sag.",
+    "usage": "Vises i sagsforløb når et udvalg tager imod eksterne input.",
+    "category": "Udvalgsarbejde",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "stadfaestet",
+    "term": "Stadfæstet",
+    "aliases": ["stadfaestet"],
+    "definition": "Status som viser at et vedtaget lovforslag er underskrevet og dermed blevet til gældende lov.",
+    "usage": "Bruges som endelig status for gennemførte lovforslag.",
+    "category": "Lovstatus",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/arbejdet-i-folketinget/lovgivningsprocessen"
+  },
+  {
+    "slug": "ministeromraade",
+    "term": "Ministerområde",
+    "aliases": ["ministerområde", "ministeromraade"],
+    "definition": "Det ministerium eller ansvarsområde som en minister repræsenterer i en sag.",
+    "usage": "Vises på sager for at gøre det tydeligt hvilket ressortområde sagen hører under.",
+    "category": "Roller",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "folketingsgruppe",
+    "term": "Folketingsgruppe",
+    "aliases": ["gruppe", "partigruppe"],
+    "definition": "Den gruppe i Folketinget som et parti eller en gruppe af medlemmer arbejder og stemmer sammen i.",
+    "usage": "På Folkevalget svarer det typisk til et parti i salen, men enkelte medlemmer kan stå uden for grupperne.",
+    "category": "Roller",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "sagstrin",
+    "term": "Sagstrin",
+    "aliases": ["trin i sagen", "sagsforløb"],
+    "definition": "Et enkelt trin i et forslags eller en sags officielle behandling, som for eksempel fremsættelse, betænkning eller afstemning.",
+    "usage": "Folkevalget viser sagstrin som tidslinje for at gøre processen lettere at følge.",
+    "category": "Lovbehandling",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/arbejdet-i-folketinget/lovgivningsprocessen"
+  },
+  {
+    "slug": "stillingtagen",
+    "term": "Vedtagelse",
+    "aliases": ["vedtaget", "vedtagelsesforslag", "vedtagelse v"],
+    "definition": "En beslutningstekst som Folketinget stemmer om, ofte efter en debat eller forespørgsel.",
+    "usage": "Vedtagelser har normalt et nummer som begynder med V.",
+    "category": "Sagstyper",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  },
+  {
+    "slug": "storkreds",
+    "term": "Storkreds",
+    "aliases": ["valgkreds", "opstillingskreds"],
+    "definition": "Den større geografiske valgkreds som et folketingsmedlem er valgt i.",
+    "usage": "Folkevalget bruger storkredse til at gruppere og filtrere medlemmer.",
+    "category": "Valg",
+    "source_label": "Folketinget",
+    "source_url": "https://www.ft.dk/da/folkestyret/leksikon"
+  }
+]

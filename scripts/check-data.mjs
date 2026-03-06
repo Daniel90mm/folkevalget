@@ -9,12 +9,16 @@ const votes = await loadJson("data/afstemninger_overblik.json");
 const committees = await loadJson("data/udvalg.json");
 const meetingsPayload = await loadJson("data/moeder.json");
 const parties = await loadJson("data/partier.json");
+const glossary = await loadJson("data/begreber.json");
+const laws = await loadJson("data/love_og_regler.json");
 
 validateProfiles(profiles);
 validateVotes(votes);
 validateCommittees(committees);
 validateMeetings(meetingsPayload);
 validateParties(parties);
+validateGlossary(glossary);
+validateLaws(laws);
 
 if (errors.length > 0) {
   console.error("Data validation failed:");
@@ -33,6 +37,8 @@ console.log(
     `${committees.length} committees`,
     `${meetingsPayload.meetings.length} meetings`,
     `${parties.length} party rows`,
+    `${glossary.length} glossary entries`,
+    `${laws.length} laws`,
   ].join(" ")
 );
 
@@ -140,6 +146,34 @@ function validateParties(value) {
     requireObjectKeys(party, ["id", "name", "short_name", "member_count", "member_ids"], "Party item");
     if (!Array.isArray(party?.member_ids)) {
       errors.push(`Party ${party?.short_name || party?.name || "unknown"} is missing member_ids array.`);
+    }
+  }
+}
+
+function validateGlossary(value) {
+  if (!Array.isArray(value) || value.length < 10) {
+    errors.push(`data/begreber.json looks too small: ${Array.isArray(value) ? value.length : "not-an-array"}.`);
+    return;
+  }
+
+  for (const entry of value) {
+    requireObjectKeys(entry, ["slug", "term", "definition", "usage", "source_url"], "Glossary item");
+  }
+}
+
+function validateLaws(value) {
+  if (!Array.isArray(value) || value.length < 100) {
+    errors.push(`data/love_og_regler.json looks too small: ${Array.isArray(value) ? value.length : "not-an-array"}.`);
+    return;
+  }
+
+  for (const entry of value) {
+    requireObjectKeys(entry, ["title", "law_number", "law_number_date", "law_year", "url"], "Law lookup item");
+    if (!isIsoDate(entry?.law_number_date)) {
+      errors.push(`Law lookup item ${entry?.law_number || "unknown"} has invalid law_number_date: ${entry?.law_number_date}`);
+    }
+    if (!/^https?:\/\//.test(String(entry?.url || ""))) {
+      errors.push(`Law lookup item ${entry?.law_number || "unknown"} is missing official url.`);
     }
   }
 }

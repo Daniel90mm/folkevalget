@@ -183,6 +183,71 @@ oda.ft.dk/api/SagDokument?$filter=sagid%20eq%20104068&$expand=Dokument/Fil,SagDo
 
 ---
 
+### Local glossary section in global search
+
+**Idea:** Add a `Begreber` section to the global `Ctrl + K` search so users can
+look up short definitions of the parliamentary and legal terms they actually
+meet on Folkevalget, such as `betaenkning`, `ordfoerer`, `sambehandling`,
+`1. behandling`, and `paragraf 20-spoergsmaal`.
+
+**Evaluation result:** Accepted as a local curated glossary, not as a live API feature.
+
+**Why it fits:**
+- Can be shipped as static JSON inside the current local-only search model.
+- Improves accessibility and comprehension for the primary user without adding
+  editorial interpretation.
+- Terms can link back to official source material per entry.
+- Keeps scope honest: explain the terms used on the site instead of pretending
+  to be a full Danish legal dictionary.
+
+**Implementation notes:**
+- Keep entries short: `term`, `kort definition`, `typisk brug`, `kilde`.
+- Prioritise terms already visible across profiles, votes, meetings, and case pages.
+- Render glossary hits as a separate `Begreber` search section in `Ctrl + K`.
+- If broader legal terminology is later needed, add it gradually only where a
+  stable official source exists per term.
+
+**Sources checked:** https://www.ft.dk/da/folkestyret/leksikon,
+https://www.ft.dk/da/folkestyret/arbejdet-i-folketinget/lovgivningsprocessen
+
+---
+
+### Retsinformation document lookup in global search
+
+**Idea:** Use Retsinformation's official API as a build-time source for a small
+`Love og regler` section in global search, focused on exact identifiers or
+document titles such as `LBK nr 123`, `BEK 456`, or a specific law title.
+
+**Evaluation result:** Accepted only as narrow document enrichment, not as general legal search.
+
+**Why it fits:**
+- Uses an official documented public API.
+- Objective and source-first: results are official documents with official links.
+- Good fit for post-parliamentary follow-through, where a proposal can later be
+  tied to enacted legal material.
+
+**Important limits:**
+- Retsinformation's REST API is a harvest/update service, not a public search API.
+- The API is intended for daily syncing and exposes changed documents, not broad
+  ad hoc querying by term.
+- A useful search feature would therefore require a local derived index built at
+  fetch time.
+- This is suitable for exact law/document lookup, not for dictionary definitions
+  or broad full-text legal search.
+
+**Implementation notes:**
+- Keep it to exact or near-exact document matching first: short names, accessionsnummer,
+  document ids, and official titles.
+- Do the work at build time, never per-query from `Ctrl + K`.
+- Prefer an enrichment layer that links from proposals to resulting legal material
+  before adding any standalone legal search UI.
+
+**Sources checked:** https://www.retsinformation.dk/static/api.html,
+https://api.retsinformation.dk/swagger/v1/swagger.json,
+https://www.retsinformation.dk/offentlig/vejledning/Retsinformation%20REST%20API%20vejledning.pdf
+
+---
+
 ## Evaluated and rejected ideas
 
 ### Politician popularity polls (Altinget/Epinion PDI-score)
@@ -923,3 +988,154 @@ Sources checked:
 - https://api.retsinformation.dk/swagger/v1/swagger.json
 - https://www.retsinformation.dk/offentlig/vejledning/Retsinformation%20REST%20API%20vejledning.pdf
 - https://www.retsinformation.dk/offentlig/vejledning/Generisk_webservice_til_s%C3%B8gning_af_afg%C3%B8relser-Vejledning.pdf
+
+---
+
+### API-backed Danish legal dictionary in global search
+
+Proposal:
+- Let users type a legal or parliamentary term into `Ctrl + K` and fetch a live
+  definition and usage example from a public Danish legal dictionary API.
+
+Rejected because:
+- No documented public Danish legal dictionary API was found from an official
+  source that fits the project's constraints.
+- Folketinget's public leksikon is useful as a glossary source, but I did not
+  find a documented API for it.
+- Retsinformation's official API is for legal document harvesting/updates, not
+  a term-definition service.
+- The current global search is local-first and static; introducing a per-query
+  remote dependency would add latency and failure modes to one of the site's
+  fastest interactions.
+- A live API would also create unclear coverage boundaries between parliamentary
+  terminology, general Danish vocabulary, and legal doctrine.
+
+Possible later alternative:
+- Add a local `Begreber` section in global search backed by a curated static JSON
+  glossary with per-term source links.
+
+Sources checked:
+- https://www.ft.dk/da/folkestyret/leksikon
+- https://www.retsinformation.dk/static/api.html
+- https://api.retsinformation.dk/swagger/v1/swagger.json
+
+---
+
+### Find dine medlemmer via adresseopslag (DAWA)
+
+Proposal:
+- Let users enter a Danish address and map it to their geography so Folkevalget
+  can show `dine medlemmer`, local context, or a faster route into the correct
+  storkreds and profiles.
+
+Rejected for now because:
+- DAWA is official and public, but the official docs also state that DAWA
+  shuts down on `1. juli 2026`, which makes it a poor new dependency for a
+  feature we would want to maintain.
+- The project should avoid investing in a user-facing runtime feature that is
+  already on a short deprecation clock.
+- This is a useful product idea, but the API choice is not durable enough.
+
+Possible later alternative:
+- Revisit when the stable successor service is documented, or when an ungated
+  official geodata source for the same address-to-area flow is confirmed.
+
+Sources checked:
+- https://dawadocs.dataforsyningen.dk/dok/api/generelt
+- https://korttjenester.dataforsyningen.dk/
+
+---
+
+### Official constituency and geography map layers via Datafordeler
+
+Proposal:
+- Use official geodata to add map layers for areas such as municipalities,
+  regions, constituencies, or other public area divisions, either on
+  `folketinget.html` or as contextual map views elsewhere.
+
+Rejected for current pipeline because:
+- Datafordeleren requires user setup and API access management; the official
+  site explicitly states that you fetch data after creating a user, an IT system,
+  and an API key.
+- Under the project constraints, gated access should not become part of the
+  static-site pipeline.
+- Even where the data may be free, the access model is still operationally gated.
+
+Possible later alternative:
+- Revisit only if a stable ungated download/service exists for the exact
+  geography layers we need.
+
+Sources checked:
+- https://datafordeler.dk/
+- https://datafordeler.dk/vejledning/
+- https://datafordeler.dk/vejledning/tjenester/geodata/
+
+---
+
+### Official CVR API for company links and side-interest cross-checks
+
+Proposal:
+- Use official CVR API access to strengthen transparency features around company
+  roles, side interests, ministerområder, or external affiliations linked to MPs.
+
+Rejected for current pipeline because:
+- The official CVR access model is gated.
+- The official guidance states that access requires request/approval, user setup,
+  IP whitelisting, and authentication.
+- Under the project constraints, credentialed or approved access cannot be
+  relied on for a public static-site pipeline.
+
+Why it remains attractive conceptually:
+- It is highly relevant to Folkevalget's transparency mission.
+- It could materially improve verification of business roles and links where
+  official public parliamentary declarations are incomplete.
+
+Possible later alternative:
+- Keep using open, explicit public declarations first.
+- Revisit official CVR only if the access model changes to a truly open public API.
+
+Sources checked:
+- https://datafordeler.dk/vejledning/brugeradgang/anmodning-om-adgang/det-centrale-virksomhedsregister-cvr/
+
+---
+
+### Domsdatabasen API for legal follow-through and court context
+
+Proposal:
+- Add a layer that links parliamentary work to later court decisions or legal
+  case law context, especially for justice-related topics.
+
+Rejected for current pipeline because:
+- The official Domsdatabasen API requires application and approval.
+- The official access terms say API access is for applicants with an
+  `anerkendelsesværdigt formål`, so it is not an open public API.
+- The database is also selective rather than complete, which makes it a poor
+  backbone for broad site-wide legal follow-through.
+
+Possible later alternative:
+- Use the public RSS feeds only as a monitoring aid for editorial research.
+- Do not integrate court-case feeds into core user-facing product flows unless
+  access and coverage become clearly suitable.
+
+Sources checked:
+- https://domsdatabasen.dk/spoergsmaal-og-svar/api-adgang-til-domsdatabasen/
+- https://domsdatabasen.dk/abonner-paa-domme/
+- https://domsdatabasen.dk/nyheder/afgoerelserne-i-domsdatabasen/
+
+---
+
+### HvemStemmerHvad API as shortcut source
+
+Proposal:
+- Use `HvemStemmerHvad` as an easier shortcut source for politician and vote data
+  instead of relying only on Folketingets own open data.
+
+Rejected because:
+- It is not an official source.
+- It duplicates a domain we already cover directly from Folketinget ODA.
+- Using a third-party intermediary would weaken source transparency and add an
+  unnecessary dependency where an official source already exists.
+
+Sources checked:
+- http://www.hvemstemmerhvad.dk/api/api.php
+- https://www.ft.dk/da/dokumenter/aabne_data

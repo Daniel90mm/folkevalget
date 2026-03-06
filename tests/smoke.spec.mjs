@@ -32,6 +32,33 @@ test("header parliament dropdown reveals reachable subpages", async ({ page }) =
   await expect(page.locator("body")).toHaveClass(/page-moeder/);
 });
 
+test("global search shows glossary definitions", async ({ page }) => {
+  await page.goto("/");
+
+  await page.keyboard.press("Control+K");
+  await page.locator("#global-search-input").fill("betænkning");
+
+  const glossarySection = page.getByRole("heading", { level: 2, name: "Begreber" });
+  await expect(glossarySection).toBeVisible();
+  await expect(page.locator(".global-search-result-title").first()).toContainText("Betænkning");
+  await expect(page.locator(".global-search-result-summary").first()).toContainText("Udvalgets skriftlige vurdering");
+});
+
+test("global search shows enacted laws from retsinformation", async ({ page }) => {
+  await page.goto("/");
+
+  await page.keyboard.press("Control+K");
+  await page.locator("#global-search-input").fill("lov nr. 741");
+
+  const lawSection = page.getByRole("heading", { level: 2, name: "Love og regler" });
+  const lawResults = page.locator(".global-search-section").filter({ has: lawSection });
+  const lawResult = lawResults.locator(".global-search-result").filter({ hasText: "Lov nr. 741" }).first();
+  await expect(lawSection).toBeVisible();
+  await expect(lawResult).toBeVisible();
+  await expect(lawResult.locator(".global-search-result-meta")).toContainText("Lov nr. 741");
+  await expect(lawResult).toHaveAttribute("href", /retsinformation\.dk\/eli\/lta\/\d{4}\/741/);
+});
+
 test("discover page renders member cards", async ({ page }) => {
   await page.goto("/discover.html");
 

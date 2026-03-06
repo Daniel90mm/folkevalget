@@ -2434,6 +2434,74 @@ def parse_counts_from_konklusion(konklusion: str | None) -> dict[str, int] | Non
     return parsed if matched_any else None
 
 
+def build_retsinformation_law_url(
+    law_number: str | None,
+    law_number_date: str | None,
+) -> str | None:
+    number = str(law_number or "").strip()
+    date_value = str(law_number_date or "").strip()
+    if not number or not date_value:
+        return None
+    if not re.fullmatch(r"\d+", number):
+        return None
+    try:
+        year = date.fromisoformat(date_value).year
+    except ValueError:
+        return None
+    return f"https://www.retsinformation.dk/eli/lta/{year}/{number}"
+
+
+def build_law_lookup_rows(case_timelines: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+
+    for timeline in case_timelines:
+        law_followup = timeline.get("law_followup") or {}
+        law_number = str(law_followup.get("law_number") or "").strip()
+        law_number_date = str(law_followup.get("law_number_date") or "").strip()
+        if not law_number or not law_number_date:
+            continue
+
+        official_url = str(law_followup.get("retsinformation_url") or "").strip() or build_retsinformation_law_url(
+            law_number,
+            law_number_date,
+        )
+        if not official_url:
+            continue
+
+        try:
+            law_year = date.fromisoformat(law_number_date).year
+        except ValueError:
+            continue
+
+        title = str(timeline.get("sag_short_title") or timeline.get("sag_title") or "").strip()
+        if not title:
+            title = f"Lov nr. {law_number}"
+
+        rows.append(
+            {
+                "sag_id": int(timeline.get("sag_id") or 0) or None,
+                "sag_number": timeline.get("sag_number"),
+                "title": title,
+                "law_number": law_number,
+                "law_number_date": law_number_date,
+                "law_year": law_year,
+                "sag_status": timeline.get("sag_status"),
+                "url": official_url,
+                "source_label": "Retsinformation",
+            }
+        )
+
+    rows.sort(
+        key=lambda item: (
+            item.get("law_number_date") or "",
+            int(item.get("law_number") or 0),
+            item.get("title") or "",
+        ),
+        reverse=True,
+    )
+    return rows
+
+
 def derive_profiles(
     *,
     people: list[dict[str, Any]],
@@ -3908,6 +3976,7 @@ def main() -> None:
     vote_detail_index, vote_detail_shards = build_vote_detail_index_and_shards(vote_details)
     timeline_index, timeline_shards = build_timeline_index_and_shards(case_timelines)
     meeting_overview = build_meeting_overview(case_timelines)
+    law_lookup_rows = build_law_lookup_rows(case_timelines)
 
     site_stats = {
         "generated_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
@@ -3948,6 +4017,7 @@ def main() -> None:
     write_json(output_dir / "sag_tidslinjer.json", case_timelines)
     write_json_compact(output_dir / "sag_tidslinjer_index.json", timeline_index)
     write_json_shards(output_dir / "sag_tidslinjer_shards", timeline_shards)
+    write_json_compact(output_dir / "love_og_regler.json", law_lookup_rows)
     write_json(output_dir / "site_stats.json", site_stats)
     write_json(output_dir / "ft_dokumenter_rf.json", rf_docs)
     write_javascript_payload(
