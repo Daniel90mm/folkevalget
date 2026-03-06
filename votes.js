@@ -2131,6 +2131,11 @@ const VotesApp = (() => {
       const groupCard = document.createElement("section");
       groupCard.className = "vote-party-group";
       groupCard.dataset.party = partyCode || "";
+      groupCard.tabIndex = 0;
+      groupCard.setAttribute(
+        "aria-label",
+        `${partyName}, ${window.Folkevalget.formatNumber(group.members.length)} ${group.members.length === 1 ? "medlem" : "medlemmer"}`
+      );
       groupCard.style.setProperty("--row-party-color", partyAccentColor(partyCode));
 
       const head = document.createElement("div");

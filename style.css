@@ -3689,6 +3689,12 @@ html[data-theme="dark"] .page-votes .votes-layout {
   max-width: none;
 }
 
+.page-votes .vote-browser-list {
+  padding: var(--space-sm) var(--space-lg) 0;
+  border: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-bg) 78%, var(--color-surface) 22%);
+}
+
 .page-votes .vote-list-item {
   width: 100%;
   display: grid;
@@ -4233,30 +4239,44 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
 
 .page-votes .vote-list-panel {
   padding: 0;
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
+  border: none;
+  background: transparent;
 }
 
 .page-votes .vote-list-panel > .panel-heading {
-  padding: var(--space-lg) var(--space-lg) var(--space-md);
-  border-bottom: 1px solid var(--color-border);
+  padding: 0 0 var(--space-md);
+  border-bottom: none;
 }
 
 .page-votes .voter-list {
   max-height: none;
   overflow: visible;
-  padding: 0 var(--space-lg) var(--space-lg);
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  gap: var(--space-lg);
+  padding: 0;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
   align-items: start;
 }
 
 .page-votes .vote-party-group {
   display: grid;
-  gap: var(--space-sm);
+  grid-template-columns: minmax(13rem, 14.5rem) minmax(0, 1fr);
+  gap: var(--space-md);
   align-content: start;
   padding-top: var(--space-sm);
   border-top: 3px solid var(--row-party-color, var(--color-border));
+  outline: none;
+  transition: background var(--transition-fast);
+}
+
+.page-votes .vote-party-group:hover,
+.page-votes .vote-party-group:focus-within,
+.page-votes .vote-party-group:focus-visible {
+  background: color-mix(in srgb, var(--row-party-color) 8%, transparent);
+}
+
+.page-votes .vote-party-group:focus-visible {
+  outline: 2px solid var(--row-party-color, var(--color-accent));
+  outline-offset: 3px;
 }
 
 .page-votes .vote-party-group-head {
@@ -4287,6 +4307,23 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
   gap: var(--space-xs) var(--space-sm);
+  align-content: start;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-fast), max-height var(--transition-default);
+}
+
+.page-votes .vote-party-group:hover .vote-member-grid,
+.page-votes .vote-party-group:focus-within .vote-member-grid,
+.page-votes .vote-party-group:focus-visible .vote-member-grid {
+  max-height: 24rem;
+  opacity: 1;
+  overflow: visible;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .page-votes .vote-member-chip {
@@ -4323,6 +4360,18 @@ html[data-theme="dark"] .page-votes .vote-list-item:focus-visible {
 
   .page-votes .voter-list {
     grid-template-columns: 1fr;
+  }
+
+  .page-votes .vote-party-group {
+    grid-template-columns: 1fr;
+  }
+
+  .page-votes .vote-member-grid {
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+    visibility: visible;
+    pointer-events: auto;
   }
 }
 
