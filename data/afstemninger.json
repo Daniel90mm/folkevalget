@@ -2695,6 +2695,39 @@
     "sag_type_id": 3,
     "source_documents": [
       {
+        "document_id": 1204118,
+        "title": "Høringssvar og høringsnotat fra ministeren for byer og landdistrikter",
+        "number": null,
+        "date": "2026-01-15",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l93/bilag/1/3121276.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 15,
+        "document_category": "Notat",
+        "document_actors": [
+          {
+            "actor_id": 20807,
+            "name": "ministeren for byer og landdistrikter",
+            "short_name": "minister for byer og landdistrikter",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 1,
+            "role": "Afsender"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
         "document_id": 1211938,
         "title": "Vedtaget af Folketinget ved 3. behandling den 26. februar 2026",
         "number": null,
@@ -2730,29 +2763,6 @@
         "omtryk": [],
         "document_type_id": 12,
         "document_type": "Bilag",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1209741,
-        "title": "Betænkning afgivet af Udvalget for Landdistrikter og Øer den 17. februar 2026",
-        "number": null,
-        "date": "2026-02-17",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l93/20251_l93_betaenkning.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
         "document_status_id": 1,
         "document_status": "Endeligt",
         "document_category_id": 55,
