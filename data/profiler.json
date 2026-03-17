@@ -1352,6 +1352,11 @@
         "id": 21244,
         "name": "Uddannelses- og Forskningsudvalget",
         "short_name": "UFU"
+      },
+      {
+        "id": 21154,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
       }
     ],
     "role": "Arbejdsmiljøkonsulent",
@@ -3186,6 +3191,11 @@
         "id": 21237,
         "name": "Forsvars-, Samfundssikkerheds- og Beredskabsudvalget",
         "short_name": "FOU"
+      },
+      {
+        "id": 21154,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
       }
     ],
     "role": "Forlægger",
@@ -14528,10 +14538,10 @@
     "name": "Ane Halsboe-Jørgensen",
     "first_name": "Ane",
     "last_name": "Halsboe-Jørgensen",
-    "party": null,
+    "party": "Socialdemokratiet",
     "party_short": "S",
-    "current_party": null,
-    "current_party_short": null,
+    "current_party": "Socialdemokratiet",
+    "current_party_short": "S",
     "committees": [],
     "role": "Skatteminister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Nordjyllands Storkreds fra 15. september 2011.",
@@ -14539,7 +14549,15 @@
     "constituency_history": [
       "Folketingsmedlem for Socialdemokratiet i Nordjyllands Storkreds fra 15. september 2011."
     ],
-    "party_history": [],
+    "party_history": [
+      {
+        "party": "Socialdemokratiet",
+        "party_short": "S",
+        "start_date": "2025-10-07",
+        "end_date": "2026-03-24",
+        "active": true
+      }
+    ],
     "educations": [
       "Cand.scient.pol., Københavns Universitet, 2004-2009.",
       "Sproglig student, Fjerritslev Gymnasium, 1999-2002."
@@ -14569,9 +14587,9 @@
     "votes_neither": 0,
     "votes_absent": 2,
     "attendance_pct": 95.5,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 42,
+    "party_loyalty_comparisons": 42,
     "recent_votes": [
       {
         "afstemning_id": 10570,
