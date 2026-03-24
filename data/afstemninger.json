@@ -9440,23 +9440,42 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1208112,
-        "title": "Vedtaget af Folketinget ved 3. behandling den 5. februar 2026",
+        "document_id": 1204926,
+        "title": "Spm. om at redegøre for de sidste 3 års domme på naturbeskyttelsesområdet",
         "number": null,
-        "date": "2026-02-05",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l83/20251_l83_som_vedtaget.pdf",
+        "date": "2026-01-21",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l83/spm/15/3123239.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
         "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
         "document_status_id": 1,
         "document_status": "Endeligt",
-        "document_category_id": 23,
-        "document_category": "Forslag som vedtaget",
-        "document_actors": [],
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 45,
+            "name": "justitsministeren",
+            "short_name": "justitsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 127,
+            "name": "Preben Bang Henriksen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
         "question_chain": {
           "askers": [],
           "responders": []
@@ -9464,7 +9483,7 @@
       },
       {
         "document_id": 1206971,
-        "title": "L 83 - svar på spm. 14 om at kommentere specifikt på konklusionerne i analysen ”STRAFREFORM Er der balance mellem stigningen i antallet af indsatte ift. antal fængselsbetjente og fængselspladser?”",
+        "title": "L 83 - svar på spm. 14 om konklusioner i analysen ‘STRAFREFORM’ i forlængelse af svar på spm. 5",
         "number": null,
         "date": "2026-01-30",
         "role": "Hovedtilknytning",
@@ -9507,22 +9526,22 @@
         }
       },
       {
-        "document_id": 1206972,
-        "title": "L 83 - svar på spm. 13 om ministeren vil oplyse, om det fremtidige anslåede gennemsnitlige antal indsatte på 2,6 per fængselsbetjent svarer til andre lande i Norden",
+        "document_id": 1204924,
+        "title": "Spm. om konklusioner i analysen ‘STRAFREFORM’ i forlængelse af svar på spm. 5",
         "number": null,
-        "date": "2026-01-30",
+        "date": "2026-01-21",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l83/spm/13/svar/2198045/3128119.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l83/spm/14/3123235.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
         "omtryk": [],
-        "document_type_id": 17,
-        "document_type": "Svar",
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
         "document_status_id": 1,
         "document_status": "Endeligt",
-        "document_category_id": 22,
-        "document_category": "Endeligt svar",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
         "document_actors": [
           {
             "actor_id": 45,
@@ -9532,31 +9551,11 @@
             "type": "Ministertitel",
             "role_id": 10,
             "role": "Adressat"
-          },
-          {
-            "actor_id": 45,
-            "name": "justitsministeren",
-            "short_name": "justitsminister",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 4,
-            "role": "Besvaret af"
-          },
-          {
-            "actor_id": 110,
-            "name": "Rosa Lund",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 12,
-            "role": "Stiller"
           }
         ],
         "question_chain": {
           "askers": [],
-          "responders": [
-            "justitsministeren"
-          ]
+          "responders": []
         }
       }
     ],
