@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "id": 21323,
+    "name": "Danmarksdemokraterne – Inger Støjberg",
+    "short_name": "DD",
+    "member_count": 3,
+    "member_ids": [
+      48,
+      82,
+      182
+    ]
+  },
+  {
+    "id": 21326,
+    "name": "Moderaterne",
+    "short_name": "M",
+    "member_count": 1,
+    "member_ids": [
+      145
+    ]
+  },
+  {
+    "id": 21330,
+    "name": "Radikale Venstre",
+    "short_name": "RV",
+    "member_count": 1,
+    "member_ids": [
+      141
+    ]
+  },
+  {
+    "id": 21322,
+    "name": "Venstre, Danmarks Liberale Parti",
+    "short_name": "V",
+    "member_count": 3,
+    "member_ids": [
+      164,
+      206,
+      1845
+    ]
+  }
+]

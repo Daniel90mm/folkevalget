@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T06:43:25+00:00",
+  "generated_at": "2026-03-25T18:15:30+00:00",
   "source": "Folketinget ODA API",
   "start_date": "2026-01-12",
   "vote_window": {
@@ -11,9 +11,9 @@
   },
   "counts": {
     "people": 127,
-    "parties": 0,
+    "parties": 4,
     "committees": 1,
-    "actor_relations": 1283,
+    "actor_relations": 1292,
     "votes": 27,
     "individual_votes": 3938,
     "profiles": 127
