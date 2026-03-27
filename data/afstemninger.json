@@ -2119,35 +2119,12 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1211940,
-        "title": "Vedtaget af Folketinget ved 3. behandling den 26. februar 2026",
+        "document_id": 1209705,
+        "title": "Ændringsforslag nr. 6-10 stillet uden for betænkning 17/2-26 af Theresa Scavenius (UFG)",
         "number": null,
-        "date": "2026-02-26",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l88/20251_l88_som_vedtaget.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 23,
-        "document_category": "Forslag som vedtaget",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1211643,
-        "title": "Ændringsforslag til 3. behandling",
-        "number": null,
-        "date": "2026-02-25",
+        "date": "2026-02-17",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l88/bilag/16/3140079.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l88/bilag/13/3135341.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -2156,8 +2133,8 @@
         "document_type": "Bilag",
         "document_status_id": 1,
         "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
+        "document_category_id": 15,
+        "document_category": "Notat",
         "document_actors": [],
         "question_chain": {
           "askers": [],
@@ -2165,23 +2142,95 @@
         }
       },
       {
-        "document_id": 1211635,
-        "title": "Ændringsforslag nr. 5-9 af justitsministeren stillet den 24.02.2026",
+        "document_id": 1211045,
+        "title": "L 88 - svar på MFU spm. 25 om teknisk bistand til ændringsforslag om at fjerne automatisk tildeling af generel karantæne fra idrætsarrangementer ved registrering i hooliganregisteret",
         "number": null,
-        "date": "2026-02-25",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l88/20251_l88_aendringsforslag_beh33140063.pdf",
+        "date": "2026-02-23",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l88/spm/25/svar/2204583/3138534.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
         "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
+        "document_type_id": 17,
+        "document_type": "Svar",
         "document_status_id": 1,
         "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 45,
+            "name": "justitsministeren",
+            "short_name": "justitsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 45,
+            "name": "justitsministeren",
+            "short_name": "justitsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 20354,
+            "name": "Theresa Scavenius",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 3,
+            "role": "Stiller/MFU"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "justitsministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1210627,
+        "title": "MFU spm. om teknisk bistand til ændringsforslag om at fjerne automatisk tildeling af generel karantæne fra idrætsarrangementer ved registrering i hooliganregisteret",
+        "number": null,
+        "date": "2026-02-20",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l88/spm/25/3137509.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 45,
+            "name": "justitsministeren",
+            "short_name": "justitsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20354,
+            "name": "Theresa Scavenius",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 3,
+            "role": "Stiller/MFU"
+          }
+        ],
         "question_chain": {
           "askers": [],
           "responders": []

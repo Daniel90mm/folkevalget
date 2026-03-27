@@ -30,9 +30,8 @@
     "id": 21323,
     "name": "Danmarksdemokraterne – Inger Støjberg",
     "short_name": "DD",
-    "member_count": 15,
+    "member_count": 14,
     "member_ids": [
-      48,
       82,
       113,
       119,
@@ -313,7 +312,7 @@
     "id": 21322,
     "name": "Venstre, Danmarks Liberale Parti",
     "short_name": "V",
-    "member_count": 26,
+    "member_count": 25,
     "member_ids": [
       80,
       93,
@@ -335,7 +334,6 @@
       18701,
       20371,
       20546,
-      21168,
       21348,
       21352,
       21353,
