@@ -3330,82 +3330,151 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1211773,
-        "title": "Betænkning afgivet 25/2-26",
+        "document_id": 1211373,
+        "title": "L 115 - svar på spm. 21 om, hvor mange børn der lever under fattigdomsgrænsen, og hvor mange der kunne løftes over grænsen i 1 år ved at målrette 4,5 mia. kr. til lavindkomstfamilier",
         "number": null,
         "date": "2026-02-25",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l115/bilag/9/3140331.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 12,
-        "document_type": "Bilag",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1211941,
-        "title": "Vedtaget af Folketinget ved 3. behandling den 26. februar 2026",
-        "number": null,
-        "date": "2026-02-26",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l115/20251_l115_som_vedtaget.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 23,
-        "document_category": "Forslag som vedtaget",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1210874,
-        "title": "Omdeling af svar på spørgsmål vedrørende fødevarechecken, der er stillet før lovforslagets fremsættelse",
-        "number": null,
-        "date": "2026-02-23",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l115/bilag/4/3138113.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l115/bilag/0/3139352.pdf",
         "format": "DOCX",
         "variant_code": "P",
         "is_omtryk": false,
         "omtryk": [],
-        "document_type_id": 12,
-        "document_type": "Bilag",
+        "document_type_id": 17,
+        "document_type": "Svar",
         "document_status_id": 1,
         "document_status": "Endeligt",
-        "document_category_id": 56,
-        "document_category": "Meddelelse",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
         "document_actors": [
           {
-            "actor_id": 21154,
-            "name": "Europaudvalget",
-            "short_name": "EUU",
-            "type_id": 3,
-            "type": "Udvalg",
-            "role_id": 13,
-            "role": "Relevant for"
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 18725,
+            "name": "Samira Nawa",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "beskæftigelsesministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1211333,
+        "title": "Spm. om, hvor mange børn der lever under fattigdomsgrænsen, og hvor mange der kunne løftes over grænsen i 1 år ved at målrette 4,5 mia. kr. til lavindkomstfamilier",
+        "number": null,
+        "date": "2026-02-24",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l115/spm/21/3139252.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 18725,
+            "name": "Samira Nawa",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
           }
         ],
         "question_chain": {
           "askers": [],
           "responders": []
+        }
+      },
+      {
+        "document_id": 1211372,
+        "title": "L 115 - svar på spm. 20 om teknisk bistand til ændringsforslag, så midler frigivet gennem ændringsforslagene i spørgsmål 4‑8 kan bruges til at hæve udbetalingsbeløbet for den resterende modtagergruppe",
+        "number": null,
+        "date": "2026-02-25",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l115/spm/20/svar/2205231/3139349.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 238,
+            "name": "Morten Messerschmidt",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "beskæftigelsesministeren"
+          ]
         }
       }
     ],
@@ -9646,6 +9715,59 @@
     "sag_type_id": 3,
     "source_documents": [
       {
+        "document_id": 1203124,
+        "title": "L 55 - svar på spm. 6, om udenlandske myndigheder får lettere adgang til oplysninger om danske borgere end danske myndigheder",
+        "number": null,
+        "date": "2026-01-08",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l55/spm/6/svar/2192341/3118755.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 45,
+            "name": "justitsministeren",
+            "short_name": "justitsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 45,
+            "name": "justitsministeren",
+            "short_name": "justitsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 20372,
+            "name": "Betina Kastbjerg",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "justitsministeren"
+          ]
+        }
+      },
+      {
         "document_id": 1208111,
         "title": "Vedtaget af Folketinget ved 3. behandling den 5. februar 2026",
         "number": null,
@@ -9681,29 +9803,6 @@
         "omtryk": [],
         "document_type_id": 12,
         "document_type": "Bilag",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1205709,
-        "title": "Betænkning afgivet af Retsudvalget den 22. januar 2026",
-        "number": null,
-        "date": "2026-01-26",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l55/20251_l55_betaenkning.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
         "document_status_id": 1,
         "document_status": "Endeligt",
         "document_category_id": 55,
