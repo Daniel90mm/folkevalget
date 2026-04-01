@@ -4424,6 +4424,101 @@
     ],
     "documents": [
       {
+        "document_id": 1203822,
+        "title": "L 48 - svar på spm. 20 om salg af den digitale identitetstegnebogs software og tilhørende administration til f.eks. udenlandske virksomheder",
+        "number": null,
+        "date": "2026-01-14",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/20/svar/2193310/3120560.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 110,
+            "name": "Rosa Lund",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "ministeren for digitalisering"
+          ]
+        }
+      },
+      {
+        "document_id": 1202886,
+        "title": "Spm. om salg af den digitale identitetstegnebogs software og tilhørende administration til f.eks. udenlandske virksomheder",
+        "number": null,
+        "date": "2026-01-07",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/20/3118161.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 110,
+            "name": "Rosa Lund",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
         "document_id": 1210113,
         "title": "Vedtaget af Folketinget ved 3. behandling den 19. februar 2026",
         "number": null,
@@ -4664,119 +4759,6 @@
             "type": "Ministertitel",
             "role_id": 10,
             "role": "Adressat"
-          },
-          {
-            "actor_id": 110,
-            "name": "Rosa Lund",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 12,
-            "role": "Stiller"
-          }
-        ],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1203812,
-        "title": "L 48 - svar på spm. 17, om den danske digitale tegnebog kan realiseres ved brug af open source-software, hvis man anvender EU-Kommissionens referenceimplementering",
-        "number": null,
-        "date": "2026-01-14",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/17/svar/2193299/3120534.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 17,
-        "document_type": "Svar",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 22,
-        "document_category": "Endeligt svar",
-        "document_actors": [
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 4,
-            "role": "Besvaret af"
-          },
-          {
-            "actor_id": 21154,
-            "name": "Europaudvalget",
-            "short_name": "EUU",
-            "type_id": 3,
-            "type": "Udvalg",
-            "role_id": 13,
-            "role": "Relevant for"
-          },
-          {
-            "actor_id": 110,
-            "name": "Rosa Lund",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 12,
-            "role": "Stiller"
-          }
-        ],
-        "question_chain": {
-          "askers": [],
-          "responders": [
-            "ministeren for digitalisering"
-          ]
-        }
-      },
-      {
-        "document_id": 1202882,
-        "title": "Spm., om den danske digitale tegnebog kan realiseres ved brug af open source-software, hvis man anvender EU-Kommissionens referenceimplementering",
-        "number": null,
-        "date": "2026-01-07",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/17/3118156.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 13,
-        "document_type": "Spørgsmål",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 36,
-        "document_category": "Udvalgsspørgsmål",
-        "document_actors": [
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 21154,
-            "name": "Europaudvalget",
-            "short_name": "EUU",
-            "type_id": 3,
-            "type": "Udvalg",
-            "role_id": 13,
-            "role": "Relevant for"
           },
           {
             "actor_id": 110,

@@ -8787,79 +8787,12 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1210113,
-        "title": "Vedtaget af Folketinget ved 3. behandling den 19. februar 2026",
-        "number": null,
-        "date": "2026-02-19",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l48/20251_l48_som_vedtaget.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 23,
-        "document_category": "Forslag som vedtaget",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1209452,
-        "title": "L 48 - svar på spm. 34 om kommentar til henvendelsen af 5/2-26 fra Stephan Engberg",
-        "number": null,
-        "date": "2026-02-16",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/34/svar/2201709/3134747.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 17,
-        "document_type": "Svar",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 22,
-        "document_category": "Endeligt svar",
-        "document_actors": [
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 4,
-            "role": "Besvaret af"
-          }
-        ],
-        "question_chain": {
-          "askers": [],
-          "responders": [
-            "ministeren for digitalisering"
-          ]
-        }
-      },
-      {
-        "document_id": 1203806,
-        "title": "L 48 - svar på spm. 18 om en open source-licens, der muliggør, at brugere og udviklere kan forstå, gennemgå og revidere appsene",
+        "document_id": 1203822,
+        "title": "L 48 - svar på spm. 20 om salg af den digitale identitetstegnebogs software og tilhørende administration til f.eks. udenlandske virksomheder",
         "number": null,
         "date": "2026-01-14",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120512.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/20/svar/2193310/3120560.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -8904,6 +8837,71 @@
           "responders": [
             "ministeren for digitalisering"
           ]
+        }
+      },
+      {
+        "document_id": 1202886,
+        "title": "Spm. om salg af den digitale identitetstegnebogs software og tilhørende administration til f.eks. udenlandske virksomheder",
+        "number": null,
+        "date": "2026-01-07",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/20/3118161.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 110,
+            "name": "Rosa Lund",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1210113,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 19. februar 2026",
+        "number": null,
+        "date": "2026-02-19",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l48/20251_l48_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
         }
       }
     ],
