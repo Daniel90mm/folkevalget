@@ -18,12 +18,10 @@
     "id": 21332,
     "name": "Borgernes Parti – Lars Boje Mathiesen",
     "short_name": "BP",
-    "member_count": 4,
+    "member_count": 2,
     "member_ids": [
       18724,
-      21354,
-      21369,
-      21374
+      21354
     ]
   },
   {
@@ -135,7 +133,7 @@
     "id": 21325,
     "name": "Liberal Alliance",
     "short_name": "LA",
-    "member_count": 21,
+    "member_count": 20,
     "member_ids": [
       99,
       15779,
@@ -154,7 +152,6 @@
       20820,
       21341,
       21345,
-      21355,
       21366,
       21375,
       21384
@@ -306,6 +303,33 @@
     "member_count": 1,
     "member_ids": [
       20349
+    ]
+  },
+  {
+    "id": 21394,
+    "name": "Uden for folketingsgrupperne - Cecilie Liv Hansen",
+    "short_name": "UFG",
+    "member_count": 1,
+    "member_ids": [
+      21355
+    ]
+  },
+  {
+    "id": 21396,
+    "name": "Uden for folketingsgrupperne - Emilie Schytte",
+    "short_name": "UFG",
+    "member_count": 1,
+    "member_ids": [
+      21369
+    ]
+  },
+  {
+    "id": 21395,
+    "name": "Uden for folketingsgrupperne - Jacob Harris",
+    "short_name": "UFG",
+    "member_count": 1,
+    "member_ids": [
+      21374
     ]
   },
   {
