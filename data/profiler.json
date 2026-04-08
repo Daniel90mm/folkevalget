@@ -3000,7 +3000,7 @@
       "Cand.merc., CBS, København, 1995."
     ],
     "occupations": [
-      "Selvstændig (pt. orlov), Familien Feldt fra 1990."
+      "Selvstændig, Familien Feldt fra 1990."
     ],
     "email": "allan.feldt@ft.dk",
     "phone": "+45 6162 3967",
@@ -3735,8 +3735,8 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "michael.nedersoee@ft.dk",
+    "phone": "+45 3337 5136",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -7405,10 +7405,71 @@
         "active": true
       }
     ],
+    "educations": [
+      "Folkeskole, Risskov Skole, Aarhus.",
+      "Stx, Aarhus Statsgymnasium.",
+      "Cand.scient.pol, Københavns Universitet, 2022."
+    ],
+    "occupations": [
+      "Konsulent, Green Power Denmark, 2022-2026.",
+      "Radiovært, Radio24syv, 2020-2024."
+    ],
+    "email": "anders.storgaard@ft.dk",
+    "phone": "+45 6162 3952",
+    "website_url": "https://andersstorgaard.konservative.dk/",
+    "address": "Folketinget, Christiansborg 1218 København K",
+    "member_url": null,
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
+    "photo_source_url": null,
+    "photo_source_name": null,
+    "photo_photographer": null,
+    "photo_credit_text": null,
+    "member_since_date": "2026-03-24",
+    "member_since_year": 2026,
+    "seniority_label": "Under 1 aar i Folketinget",
+    "seniority_years": 0,
+    "seniority_months": 0,
+    "seniority_tag": "newcomer",
+    "votes_total": 0,
+    "votes_for": 0,
+    "votes_against": 0,
+    "votes_neither": 0,
+    "votes_absent": 0,
+    "attendance_pct": null,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
+    "recent_votes": []
+  },
+  {
+    "id": 21339,
+    "name": "Sofie Therese Svendsen",
+    "first_name": "Sofie Therese",
+    "last_name": "Svendsen",
+    "party": "Det Konservative Folkeparti",
+    "party_short": "KF",
+    "current_party": "Det Konservative Folkeparti",
+    "current_party_short": "KF",
+    "committees": [],
+    "role": "Sofie Therese Svendsen",
+    "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Nordjyllands Storkreds fra 24. marts 2026.",
+    "storkreds": "Nordjyllands Storkreds",
+    "constituency_history": [
+      "Folketingsmedlem for Det Konservative Folkeparti i Nordjyllands Storkreds fra 24. marts 2026."
+    ],
+    "party_history": [
+      {
+        "party": "Det Konservative Folkeparti",
+        "party_short": "KF",
+        "start_date": "2026-03-24",
+        "end_date": "2026-10-06",
+        "active": true
+      }
+    ],
     "educations": [],
     "occupations": [],
-    "email": "anders.storgaard@ft.dk",
-    "phone": "+45 3337 4243",
+    "email": "sofie.svendsen@ft.dk",
+    "phone": "+45 3337 4205",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -9132,10 +9193,24 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
-    "email": null,
-    "phone": null,
+    "educations": [
+      "Cand.jur., Aarhus Universitet, 2006-2012.",
+      "Folkeskole, Bramdrup Skole, Kolding, 2001.",
+      "Studentereksamen, Kolding Amtsgymnasium, 2001-2004."
+    ],
+    "occupations": [
+      "Særlig rådgiver, Udenrigsministeriet, 2025-2026.",
+      "Konstitueret partisekretær, Moderaterne, 2024-2025.",
+      "Særlig rådgiver, Udenrigsministeriet, 2023-2024.",
+      "Kontorchef, Justitsministeriet, 2020-2023.",
+      "Generalsekretær, Dansk Ungdoms Fællesråd, DUF, 2017-2020.",
+      "Særlig rådgiver, Forsvarsministeriet, 2015-2016.",
+      "Fuldmægtig, Justitsministeriet, 2015.",
+      "Juridisk specialattaché, Danmarks Faste Repræsentation ved den Europæiske Union, Bruxelles, 2013-2015.",
+      "Fuldmægtig, Justitsministeriet, 2012-2013."
+    ],
+    "email": "morten.brautsch@ft.dk",
+    "phone": "+45 6162 3958",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -9188,9 +9263,9 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
-    "website_url": null,
+    "email": "frida.bruun@ft.dk",
+    "phone": "+45 6162 3993",
+    "website_url": "https://fridabruun.dk/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
@@ -9242,8 +9317,8 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "pernille.christensen@ft.dk",
+    "phone": "+45 3337 5853",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -9359,10 +9434,15 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Katastrofe- og risikomanager, Københavns Professionshøjskole, 2023-2027.",
+      "Stx, Det frie Gymnasium, København, 2017-2020."
+    ],
+    "occupations": [
+      "Kagepige, Conditori La Glace, 2015-2021."
+    ],
     "email": "ellen.emilie@ft.dk",
-    "phone": "+45 3337 5846",
+    "phone": "+45 6162 3957",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -12036,8 +12116,8 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "trine.andersen@ft.dk",
+    "phone": "+45 3337 4087",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -14792,10 +14872,16 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Cand.jur., Aarhus Universitet, 2016-2022.",
+      "Student, Mariagerfjord Gymnasium, Hobro, 2012-2015.",
+      "Folkeskole, Hadsund Skole, 2002-2012."
+    ],
+    "occupations": [
+      "Forbundsformand for Danmarks Socialdemokratiske Ungdom, DSU Landsforbundet, 2022-2026."
+    ],
     "email": "katrine.jensen@ft.dk",
-    "phone": "+45 3337 4027",
+    "phone": "+45 6162 3988",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -20170,10 +20256,12 @@
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
     "committees": [],
-    "role": null,
-    "constituency": null,
-    "storkreds": null,
-    "constituency_history": [],
+    "role": "Nanna Bonde (SF)",
+    "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Københavns Storkreds fra 24. marts 2026.",
+    "storkreds": "Københavns Storkreds",
+    "constituency_history": [
+      "Folketingsmedlem for Socialistisk Folkeparti i Københavns Storkreds fra 24. marts 2026."
+    ],
     "party_history": [
       {
         "party": "Socialistisk Folkeparti",
@@ -20185,22 +20273,22 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "nanna.bonde@ft.dk",
+    "phone": "+45 3337 4436",
     "website_url": null,
-    "address": null,
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": null,
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": null,
-    "member_since_year": null,
-    "seniority_label": null,
-    "seniority_years": null,
-    "seniority_months": null,
-    "seniority_tag": null,
+    "member_since_date": "2026-03-24",
+    "member_since_year": 2026,
+    "seniority_label": "Under 1 aar i Folketinget",
+    "seniority_years": 0,
+    "seniority_months": 0,
+    "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
     "votes_against": 0,
@@ -21070,8 +21158,8 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "christina.lykke@ft.dk",
+    "phone": "+45 3337 4079",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -21129,12 +21217,14 @@
       "Folkeskole, Alkestrupskolen, Tureby og Herfølge Skole, 2008."
     ],
     "occupations": [
+      "Afdelingschef for Natur og Miljø, Danmarks Naturfredningsforening, 2025-2026.",
+      "Senior Public Affairs Manager, Andel, 2024-2025.",
       "Lærervikar, Hastrupskolen, Køge, 2011-2013.",
       "Operatør, Køge Bio, 2008-2011.",
       "Butiksassistent, Hammershus Bageri, Herfølge, 2007-2009."
     ],
     "email": "jacob.mark@ft.dk",
-    "phone": "+45 3337 4420",
+    "phone": "+45 3337 5500",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/j/jacob-mark",
@@ -22047,8 +22137,8 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "cecilie.liv.hansen@ft.dk",
+    "phone": "+45 3337 4956",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -23219,7 +23309,7 @@
       "BSc Psychology and Economics, City St George''s, University of London, 1999-2002."
     ],
     "occupations": [
-      "Autoriseret psykolog, Privat praksis, 2019-2025."
+      "Autoriseret psykolog, privat praksis, 2019-2025."
     ],
     "email": "marie.brixtofte@ft.dk",
     "phone": "+45 6162 3996",
@@ -23898,11 +23988,24 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Cand.scient.adm, Aalborg Universitet, 2020-2022.",
+      "Bachelor i politik og administration, Aalborg Universitet, 2017-2020.",
+      "Studentereksamen, Bagsværd Kostskole og Gymnasium, 2013-2016."
+    ],
+    "occupations": [
+      "Seniorrådgiver, Danmark Pelagiske Producentorganisation, 2025-2026.",
+      "Politisk rådgiver og kontorkoordinator, Mep Asger Christensen, Europa-Parlamentet, 2024-2025.",
+      "Influencer, Aalborg Universitet, 2022.",
+      "Praktikant hos mep Morten Løkkegaard, Europa-Parlamentet, 2022.",
+      "Presse- og politisk rådgiver, Mep Asger Christensen, Europa-Parlamentet, 2022-2024.",
+      "Politisk- og handelspraktikant, Den danske ambassade i Madrid, Udenrigsministeriet, 2021-2022.",
+      "Praktikant ved Aalborg Universitets kontor, Bruxelles, 2020-2021.",
+      "Forskningsassistent, Aalborg Universitet, 2019-2022."
+    ],
     "email": "amanda.heitmann@ft.dk",
     "phone": "+45 3337 4588",
-    "website_url": null,
+    "website_url": "https://www.venstre.dk/personer/amanda-heitmann",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
