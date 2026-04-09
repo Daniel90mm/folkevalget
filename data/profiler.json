@@ -3093,7 +3093,7 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [],
-    "role": "Julie Jacobsen (DF)",
+    "role": "Cand.scient.adm.",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Sjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
     "constituency_history": [
@@ -3111,8 +3111,8 @@
     "educations": [],
     "occupations": [],
     "email": "julie.jacobsen@ft.dk",
-    "phone": "+45 3337 5139",
-    "website_url": null,
+    "phone": "+45 6162 3962",
+    "website_url": "https://danskfolkeparti.dk/politikerne/julie-jacobsen/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
@@ -3525,8 +3525,8 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "malte.boehm.larsen@ft.dk",
+    "phone": "+45 3337 5143",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -5343,8 +5343,8 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "lisbeth.torfing@ft.dk",
+    "phone": "+45 3337 5063",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -7007,8 +7007,8 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "rune.kristensen@ft.dk",
+    "phone": "+45 3337 4244",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -7406,8 +7406,8 @@
       }
     ],
     "educations": [
-      "Folkeskole, Risskov Skole, Aarhus.",
-      "Stx, Aarhus Statsgymnasium.",
+      "Stx, Aarhus Statsgymnasium, 2013.",
+      "Folkeskole, Risskov Skole, Aarhus, 2010.",
       "Cand.scient.pol, Københavns Universitet, 2022."
     ],
     "occupations": [
@@ -9315,8 +9315,23 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Cand.scient.pol., Aarhus Universitet, 2022.",
+      "Matematisk studentereksamen, Rødkilde Amtsgymnasium, 1994."
+    ],
+    "occupations": [
+      "Chefkonsulent, Tårnby Kommune fra 2025.",
+      "Tværsektoriel projektleder, Sundhedsklynge Syd, 2023-2025.",
+      "Projektleder, Frederikssund Kommune, 2022-2023.",
+      "Chefkonsulent, Kommunernes Landsforening, 2018-2022.",
+      "Chefkonsulent, Sundhedsdatastyrelsen, 2017-2018.",
+      "Sektionsleder, Sundhedsdatastyrelsen, 2015-2017.",
+      "Chefkonsulent, Region Sjælland, 2012-2015.",
+      "Seniorkonsulent, Danske Regioner, 2009-2012.",
+      "Konsulent, Dansk Selskab for Patientsikkerhed, 2008-2009.",
+      "Seniorkonsulent, Danske Regioner, 2005-2008.",
+      "Fuldmægtig, Hvidovre Hospital, 2002-2005."
+    ],
     "email": "pernille.christensen@ft.dk",
     "phone": "+45 3337 5853",
     "website_url": null,
@@ -10744,7 +10759,13 @@
       }
     ],
     "educations": [],
-    "occupations": [],
+    "occupations": [
+      "Specialkonsulent (pt. orlov), Naleraq fra 2024.",
+      "Specialkonsulent, Siumut, 2022-2023.",
+      "Specialkonsulent, KNAPK (Sammenslutning for fiskere- og fangere), 2019-2021.",
+      "Partisekretær, Naleraq, 2018-2019.",
+      "Politisk konsulent, Naleraq, 2017-2018."
+    ],
     "email": "qarsoq.hoeegh-dam@ft.dk",
     "phone": "+45 3337 3277",
     "website_url": null,
@@ -16251,8 +16272,8 @@
     "last_name": "Langhoff",
     "party": "Socialdemokratiet",
     "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
+    "current_party": null,
+    "current_party_short": null,
     "committees": [],
     "role": "Rasmus Horn Langhoff (S)",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sjællands Storkreds, 15. september 2011 – 24. marts 2026.",
@@ -16265,8 +16286,8 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2025-10-07",
-        "end_date": null,
-        "active": true
+        "end_date": "2026-03-24",
+        "active": false
       }
     ],
     "educations": [
@@ -23377,7 +23398,7 @@
     "email": "min@km.dk",
     "phone": "+45 3392 3390",
     "website_url": "https://mortendahlin.dk/",
-    "address": "Folketinget, Christiansborg 1240 København K",
+    "address": "Frederiksholms Kanal 21 1220 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/m/morten-dahlin",
     "photo_url": "photos/18696.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/v/morten-dahlin/morten_dahlin_500.jpg",
@@ -24802,8 +24823,8 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "louise.louring@ft.dk",
+    "phone": "+45 3337 4542",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
