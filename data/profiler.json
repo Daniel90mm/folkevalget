@@ -3056,8 +3056,8 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "jan.herskov@ft.dk",
+    "phone": "+45 3337 5144",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -3917,8 +3917,8 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "anders.vistisen@ft.dk",
+    "phone": "+45 3337 3174",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -4150,7 +4150,7 @@
     "email": "pelle.dragsted@ft.dk",
     "phone": "+45 3337 5027",
     "website_url": null,
-    "address": "Folketinget, Christiansborg 1240 København K",
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/p/pelle-dragsted",
     "photo_url": "photos/15777.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/el/pelle-dragsted/pelle_dragsted_500.jpg",
@@ -6410,11 +6410,26 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Master i sundhedsantropologi, Aarhus Universitet, 2021.",
+      "Speciallæge i akutmedicin, Videreuddannelsesregion Nord, Aarhus, 2020.",
+      "Speciallæge i kirurgi, Videreuddannelsesregion Nord, Aalborg og Viborg, 2010.",
+      "Ph.d. i sundhedsvidenskab, Aarhus Universitet, 2010-2014.",
+      "Cand.med, Aarhus Universitet, 1994-2001.",
+      "Matematisk studentereksamen, Risskov Amtsgymnasium, 1990-1993.",
+      "Folkeskolens afgangseksamen, Jellebakkeskolen, 1980-1990."
+    ],
+    "occupations": [
+      "Uddannelsesansvarlig ledende overlæge, Aarhus Universitetshospital, 2022-2026.",
+      "Overlæge, sektionsleder, Styrelsen for Patientsikkerhed, 2021-2022.",
+      "Overlæge, Aarhus Universitetshospital, 2016-2020.",
+      "Uddannelsesansvarlig overlæge, Regionshospitalet Viborg, 2015.",
+      "Uddannelseskoordinerende overlæge, Aarhus Sygehus, 2015-2016.",
+      "Afdelingslæge, Region Midtjylland, 2014-2015."
+    ],
     "email": "charlotte.green@ft.dk",
-    "phone": "+45 3337 4240",
-    "website_url": null,
+    "phone": "+45 6162 4001",
+    "website_url": "https://charlotte-green.dk/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
@@ -8204,8 +8219,8 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "thorbjoern.jacobsen@ft.dk",
+    "phone": "+45 3337 4973",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -8328,8 +8343,8 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "peter1.larsen@ft.dk",
+    "phone": "+45 3337 4965",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -9261,8 +9276,19 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Freight forwarder, DFDS og Rybners, Esbjerg , 2014.",
+      "Eus, Rybners, Esbjerg, 2012.",
+      "Våbengast, Søværnets konstabeluddannelse, 2009.",
+      "Stx, Ribe Katedralskole, 2008."
+    ],
+    "occupations": [
+      "Procesejer og administrativ konsulent, Færdselsstyrelsen, 2021-2026.",
+      "Administrativ medarbejder, Forsvaret, 2020-2021.",
+      "Freight forwarder, Blue Water Shipping, 2014-2020.",
+      "Shipping Trainee, DFDS, 2012-2014.",
+      "Konstabel, Søværnet, 2009-2011."
+    ],
     "email": "frida.bruun@ft.dk",
     "phone": "+45 6162 3993",
     "website_url": "https://fridabruun.dk/",
@@ -9316,12 +9342,12 @@
       }
     ],
     "educations": [
-      "Cand.scient.pol., Aarhus Universitet, 2022.",
+      "Cand.scient.pol., Aarhus Universitet, 2002.",
       "Matematisk studentereksamen, Rødkilde Amtsgymnasium, 1994."
     ],
     "occupations": [
-      "Chefkonsulent, Tårnby Kommune fra 2025.",
-      "Tværsektoriel projektleder, Sundhedsklynge Syd, 2023-2025.",
+      "Chefkonsulent (orlov fra 2026), Tårnby Kommune fra 2025.",
+      "Tværsektoriel projektleder, Sundhedsklynge Syd, Amager og Vestegnen, 2023-2025.",
       "Projektleder, Frederikssund Kommune, 2022-2023.",
       "Chefkonsulent, Kommunernes Landsforening, 2018-2022.",
       "Chefkonsulent, Sundhedsdatastyrelsen, 2017-2018.",
@@ -15724,8 +15750,24 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Folkeskolelærer, Hjørring Seminarium, 2003-2007.",
+      "Hf, Fyns HF-kursus, Odense, 1999-2001.",
+      "Erhvervsuddannelse, salgsassistent, Mr. Isaksen, Odense, 1996-1998.",
+      "Hg, Tietgenskolen, Odense, 1995-1996."
+    ],
+    "occupations": [
+      "Uddannelseskoordinator Region Nord- og Midtjylland, Fagligt Fælles Forbund (3F), 2018-2026.",
+      "Underviser og vejleder, HF og VUC Nord, 2010-2018.",
+      "Folkeskolelærer, Holmegårdskolen, Hjørring, 2008-2009.",
+      "Folkeskolelærer, Fladstrand Skole, Frederikshavn, 2007-2008.",
+      "Salg, booking og reception, Skallerup Seaside Resort, 2004-2007.",
+      "Salgskonsulent, Scan Natura AG, Zürich, Schweiz, 2001-2003.",
+      "Trainee, Trelawny Beach Resort, Jamaica, Caribien, 2001.",
+      "Lagerarbejder, CK Blumen-Fach A/S, Stige, 1999-2001.",
+      "Værnepligtig, menig gruppefører, Den Kongelige Livgarde, 1998-1999.",
+      "Lærling, Mr. Isaksen, Odense, 1996-1998."
+    ],
     "email": "thomas.klimek@ft.dk",
     "phone": "+45 3337 4034",
     "website_url": null,
@@ -22032,11 +22074,16 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Cand.pæd. i pædagogisk antropologi, Aarhus Universitet, Emdrup, 2025.",
+      "Folkeskolelærer, VIA University College og Københavns Professionshøjskole, Aarhus og København, 2022."
+    ],
+    "occupations": [
+      "Fuldmægtig (pt. orlov), Uddannelses- og Forksningsstyrelsen fra 2025."
+    ],
     "email": "sofie.villadsen@ft.dk",
-    "phone": "+45 3337 4468",
-    "website_url": null,
+    "phone": "+45 6162 3997",
+    "website_url": "https://sf.dk/politiker/sofie-f-villadsen/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
