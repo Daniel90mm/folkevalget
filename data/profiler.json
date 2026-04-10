@@ -12326,8 +12326,8 @@
     "last_name": "Baaring",
     "party": "Socialdemokratiet",
     "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
+    "current_party": null,
+    "current_party_short": null,
     "committees": [],
     "role": "Lærer",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Fyns Storkreds, 1. november 2022 – 24. marts 2026.",
@@ -12340,8 +12340,8 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2025-10-07",
-        "end_date": null,
-        "active": true
+        "end_date": "2026-03-24",
+        "active": false
       }
     ],
     "educations": [
@@ -22357,7 +22357,7 @@
     "member_since_year": 2025,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 3,
+    "seniority_months": 4,
     "seniority_tag": "newcomer",
     "votes_total": 22,
     "votes_for": 17,
