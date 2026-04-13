@@ -6221,8 +6221,11 @@
       }
     ],
     "educations": [
+      "Bestyrelsesuddannelsen, Copenhagen Business School, 2023.",
       "Bestyrelsesuddannelsen, CBS, 2023.",
-      "Ba (markedsføring og service), Copenhagen Business Academy, 1992-1995."
+      "Akademiøkonom, Copenhagen Business Academy, 1992-1994.",
+      "Ba (markedsføring og service), Copenhagen Business Academy, 1992-1995.",
+      "Samfundssproglig student, Helsingør Gymnasium, 1983-1988."
     ],
     "occupations": [
       "Udviklings- og marketingschef, VisitNordsjælland, 2014-2019.",
@@ -6233,7 +6236,7 @@
       "Marketingkonsulent, Semco A/S, 1995-1999."
     ],
     "email": "birgitte.bergman@ft.dk",
-    "phone": "+45 3337 4245",
+    "phone": "+45 6162 3935",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/b/birgitte-bergman",
@@ -6413,11 +6416,11 @@
     "educations": [
       "Master i sundhedsantropologi, Aarhus Universitet, 2021.",
       "Speciallæge i akutmedicin, Videreuddannelsesregion Nord, Aarhus, 2020.",
+      "Ph.d. i sundhedsvidenskab, Aarhus Universitet, 2014.",
       "Speciallæge i kirurgi, Videreuddannelsesregion Nord, Aalborg og Viborg, 2010.",
-      "Ph.d. i sundhedsvidenskab, Aarhus Universitet, 2010-2014.",
-      "Cand.med, Aarhus Universitet, 1994-2001.",
-      "Matematisk studentereksamen, Risskov Amtsgymnasium, 1990-1993.",
-      "Folkeskolens afgangseksamen, Jellebakkeskolen, 1980-1990."
+      "Cand.med, Aarhus Universitet, 2001.",
+      "Matematisk studentereksamen, Risskov Amtsgymnasium, 1993.",
+      "Folkeskolens afgangseksamen, Jellebakkeskolen, 1990."
     ],
     "occupations": [
       "Uddannelsesansvarlig ledende overlæge, Aarhus Universitetshospital, 2022-2026.",
@@ -8107,7 +8110,7 @@
     "email": "katrine.daugaard@ft.dk",
     "phone": "+45 3337 5500",
     "website_url": "https://www.katrinedaugaard.dk/",
-    "address": "Folketinget, Christiansborg 1240 København K",
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/k/katrine-daugaard",
     "photo_url": "photos/20393.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/la/katrine-daugaard/katrine_daugaard_500.jpg",
@@ -8857,8 +8860,18 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Kandidatuddannelsen i statskundskab, København Universitet, 2025."
+    ],
+    "occupations": [
+      "Public Affairs Manager, Rud Pedersen, 2025-2026.",
+      "Seniorkonsulent, Rud Pedersen, 2025.",
+      "1. suppleant til Europa-Parlamentet (LA), Europa-Parlamentet fra 2024.",
+      "Politisk-økonomisk rådgiver, Liberal Alliances folketingsgruppe, 2024-2025.",
+      "Politisk kommentator, Altinget, 2022-2025.",
+      "Politisk- og presserådgiver, Liberal Alliances folketingsgruppe, 2022-2024.",
+      "PR Coordinator, Saxo Bank, 2021-2022."
+    ],
     "email": "mads.strange@ft.dk",
     "phone": "+45 3337 4968",
     "website_url": null,
@@ -22327,11 +22340,19 @@
         "active": false
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "HumTek, Roskilde Universitet, 2021-2024.",
+      "Cand.merc.SOL, Copenhagen Business School, 2015-2017.",
+      "Ha(psyk.), Copenhagen Business School, 2012-2015.",
+      "Stx, Sorø Akademi, 2008-2011."
+    ],
+    "occupations": [
+      "Account Manager, Jyllands-Posten JP/Politikens Hus, 2019.",
+      "Marketing Assistant, Beiersdorf A/S, 2015-2016."
+    ],
     "email": "emilie.schytte@ft.dk",
-    "phone": "+45 3337 3229",
-    "website_url": null,
+    "phone": "+45 61623994",
+    "website_url": "https://emilieschytte.dk/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
