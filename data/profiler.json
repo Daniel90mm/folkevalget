@@ -6982,8 +6982,7 @@
     "occupations": [
       "Major, Forsvarskommandoen, Sektionen for Internationale Operationer, 2025-2026.",
       "Kaptajn af reserven, Hæren, 2023-2024.",
-      "Seniorrådgiver ved Udenrigsministeriets indsats i Syrien, 2014-2015.",
-      "Seniorrådgiver, fokus på Danmarks indsats i Syrien, den danske ambassade i Tyrkiet, 2014-2015.",
+      "Seniorrådgiver med ansvar for Udenrigsministeriets programmer i Syrien, akkrediteret ved den danske ambassade i Tyrkiet, 2014-2015.",
       "Chef for EU''s ambassadesamarbejde (IPCB/EUPOL), Kabul, Afghanistan, 2010-2012.",
       "Seniorrådgiver ved NATO-hovedkvarteret i Kandahar, Afghanistan, 2009-2010.",
       "Kaptajn i Den Danske Kampgruppe, Helmandprovinsen, Afghanistan, 2008-2009.",
@@ -23360,10 +23359,19 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Cand.scient.pol., Aarhus Universitet, 2022-2024.",
+      "Bsc scient.pol., Aarhus Universitet, 2018-2021.",
+      "Hhx, Handelsgymnasiet Tradium, Randers, 2014-2017.",
+      "Folkeskole, Randers Realskole, 2011-2014.",
+      "Folkeskole, Hornbæk Skole, Randers, 2003-2011."
+    ],
+    "occupations": [
+      "Pr - og kommunikationsmedarbejder, Arla Foods, 2024-2026.",
+      "Stagiaire hos mep Morten Løkkegaard, Europa-Parlamentet, 2022-2023."
+    ],
     "email": "mathilde.bressum@ft.dk",
-    "phone": "+45 3337 4547",
+    "phone": "+45 6162 4003",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -24181,7 +24189,7 @@
       "Ejer og underviser, Juridisk Kursuscenter A/S, Aalborg, 1986-2012.",
       "Selvstændig advokatvirksomhed, 1983-2012.",
       "Møderet for Landsretten fra 1982.",
-      "Advokat fra 1982.",
+      "Advokat, 1982-2023.",
       "Enkeltfags-undervisning i erhvervsret og selskabsret, Aalborg Universitet, 1980-1992.",
       "Advokatfuldmægtig, landsretssagfører Bent Kinnerup, 1979-1982."
     ],
