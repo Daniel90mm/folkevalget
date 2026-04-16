@@ -74,7 +74,7 @@
     "id": 21328,
     "name": "Enhedslisten",
     "short_name": "EL",
-    "member_count": 11,
+    "member_count": 12,
     "member_ids": [
       109,
       110,
@@ -86,7 +86,8 @@
       20135,
       20411,
       21302,
-      21371
+      21371,
+      21398
     ]
   },
   {

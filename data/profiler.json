@@ -3323,14 +3323,14 @@
         "party_short": "DF",
         "start_date": "2026-04-16",
         "end_date": "2026-09-30",
-        "active": false
+        "active": true
       },
       {
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
         "end_date": "2026-04-15",
-        "active": true
+        "active": false
       }
     ],
     "educations": [],
@@ -4069,6 +4069,58 @@
     "recent_votes": []
   },
   {
+    "id": 21398,
+    "name": "Pil Christensen",
+    "first_name": "Pil",
+    "last_name": "Christensen",
+    "party": "Enhedslisten",
+    "party_short": "EL",
+    "current_party": "Enhedslisten",
+    "current_party_short": "EL",
+    "committees": [],
+    "role": null,
+    "constituency": null,
+    "storkreds": null,
+    "constituency_history": [],
+    "party_history": [
+      {
+        "party": "Enhedslisten",
+        "party_short": "EL",
+        "start_date": "2026-04-16",
+        "end_date": "2026-10-06",
+        "active": true
+      }
+    ],
+    "educations": [],
+    "occupations": [],
+    "email": null,
+    "phone": null,
+    "website_url": null,
+    "address": null,
+    "member_url": null,
+    "photo_url": null,
+    "photo_source_url": null,
+    "photo_source_name": null,
+    "photo_photographer": null,
+    "photo_credit_text": null,
+    "member_since_date": null,
+    "member_since_year": null,
+    "seniority_label": null,
+    "seniority_years": null,
+    "seniority_months": null,
+    "seniority_tag": null,
+    "votes_total": 0,
+    "votes_for": 0,
+    "votes_against": 0,
+    "votes_neither": 0,
+    "votes_absent": 0,
+    "attendance_pct": null,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
+    "recent_votes": []
+  },
+  {
     "id": 21371,
     "name": "Sinem Dybvad Demir",
     "first_name": "Sinem Dybvad",
@@ -4520,14 +4572,14 @@
         "party_short": "EL",
         "start_date": "2026-04-16",
         "end_date": "2026-10-06",
-        "active": false
+        "active": true
       },
       {
         "party": "Enhedslisten",
         "party_short": "EL",
         "start_date": "2025-10-07",
-        "end_date": null,
-        "active": true
+        "end_date": "2026-04-15",
+        "active": false
       }
     ],
     "educations": [
