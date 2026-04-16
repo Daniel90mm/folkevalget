@@ -3138,6 +3138,58 @@
     "recent_votes": []
   },
   {
+    "id": 21403,
+    "name": "Christian Kirk",
+    "first_name": "Christian",
+    "last_name": "Kirk",
+    "party": "Dansk Folkeparti",
+    "party_short": "DF",
+    "current_party": "Dansk Folkeparti",
+    "current_party_short": "DF",
+    "committees": [],
+    "role": null,
+    "constituency": null,
+    "storkreds": null,
+    "constituency_history": [],
+    "party_history": [
+      {
+        "party": "Dansk Folkeparti",
+        "party_short": "DF",
+        "start_date": "2026-04-16",
+        "end_date": "2026-09-30",
+        "active": true
+      }
+    ],
+    "educations": [],
+    "occupations": [],
+    "email": null,
+    "phone": null,
+    "website_url": null,
+    "address": null,
+    "member_url": null,
+    "photo_url": null,
+    "photo_source_url": null,
+    "photo_source_name": null,
+    "photo_photographer": null,
+    "photo_credit_text": null,
+    "member_since_date": null,
+    "member_since_year": null,
+    "seniority_label": null,
+    "seniority_years": null,
+    "seniority_months": null,
+    "seniority_tag": null,
+    "votes_total": 0,
+    "votes_for": 0,
+    "votes_against": 0,
+    "votes_neither": 0,
+    "votes_absent": 0,
+    "attendance_pct": null,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
+    "recent_votes": []
+  },
+  {
     "id": 252,
     "name": "Pia Kjærsgaard",
     "first_name": "Pia",
@@ -3537,8 +3589,18 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Cand.jur., Københavns Universitet, 2023-2025.",
+      "Ba.jur., Københavns Universitet, 2020-2023.",
+      "Stx, Helsingør Gymnasium, 2017-2020."
+    ],
+    "occupations": [
+      "Public Affairs Consultant, GRACE Public Affairs, 2026.",
+      "Advokatfuldmægtig, Kromann Reumert, 2025.",
+      "Legal Trainee, Kromann Reumert, 2024-2025.",
+      "Policy Advisor, Europa-Parlamentet, 2023-2024.",
+      "Junior Consultant, GRACE Public Affairs, 2022-2023."
+    ],
     "email": "malte.boehm.larsen@ft.dk",
     "phone": "+45 3337 5143",
     "website_url": null,
@@ -12233,7 +12295,7 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [],
-    "role": "Trine Birk Andersen (S)",
+    "role": "Sygeplejerske",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
     "constituency_history": [
@@ -12248,11 +12310,19 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Specialsygeplejerske psykiatri, Diakonissestiftelsen , Frederiksberg, 2002-2005."
+    ],
+    "occupations": [
+      "Projektsygeplejerske, Bakkehuset, Roskilde fra 2020.",
+      "Sygeplejerske, Region Hovedstadens Psykiatri, 2011-2020.",
+      "Sygeplejerske, Filadelfia Epilepsihospetal, Dianalund, 2010-2011.",
+      "Sygeplejerske, Holbæk Sygehus, 2007-2010.",
+      "Sygeplejerske, Bispebjerg Hospital, 2005-2007."
+    ],
     "email": "trine.andersen@ft.dk",
-    "phone": "+45 3337 4087",
-    "website_url": null,
+    "phone": "+45 6162 3939",
+    "website_url": "https://trinebirkandersen.dk/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",

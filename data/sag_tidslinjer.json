@@ -4424,12 +4424,12 @@
     ],
     "documents": [
       {
-        "document_id": 1203822,
-        "title": "L 48 - svar på spm. 20 om salg af den digitale identitetstegnebogs software og tilhørende administration til f.eks. udenlandske virksomheder",
+        "document_id": 1203832,
+        "title": "L 48 - svar på spm. 24 om gratis open source-software uden elementer, man køber licens til",
         "number": null,
         "date": "2026-01-14",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/20/svar/2193310/3120560.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120580.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -4477,12 +4477,12 @@
         }
       },
       {
-        "document_id": 1202886,
-        "title": "Spm. om salg af den digitale identitetstegnebogs software og tilhørende administration til f.eks. udenlandske virksomheder",
+        "document_id": 1202891,
+        "title": "Spm. om gratis open source-software uden elementer, man køber licens til",
         "number": null,
         "date": "2026-01-07",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/20/3118161.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/24/3118166.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -4519,35 +4519,12 @@
         }
       },
       {
-        "document_id": 1210113,
-        "title": "Vedtaget af Folketinget ved 3. behandling den 19. februar 2026",
+        "document_id": 1203834,
+        "title": "L 48 - svar på spm. 23 om gratis anvendelse af andre EU-landes certificerede open source-identitetstegnebøger til overførsel og modtagelse af danske beviser",
         "number": null,
-        "date": "2026-02-19",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l48/20251_l48_som_vedtaget.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 23,
-        "document_category": "Forslag som vedtaget",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1209452,
-        "title": "L 48 - svar på spm. 34 om kommentar til henvendelsen af 5/2-26 fra Stephan Engberg",
-        "number": null,
-        "date": "2026-02-16",
+        "date": "2026-01-14",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/34/svar/2201709/3134747.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120582.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -4576,6 +4553,24 @@
             "type": "Ministertitel",
             "role_id": 4,
             "role": "Besvaret af"
+          },
+          {
+            "actor_id": 21154,
+            "name": "Europaudvalget",
+            "short_name": "EUU",
+            "type_id": 3,
+            "type": "Udvalg",
+            "role_id": 13,
+            "role": "Relevant for"
+          },
+          {
+            "actor_id": 110,
+            "name": "Rosa Lund",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
           }
         ],
         "question_chain": {
@@ -4586,12 +4581,63 @@
         }
       },
       {
-        "document_id": 1203806,
-        "title": "L 48 - svar på spm. 18 om en open source-licens, der muliggør, at brugere og udviklere kan forstå, gennemgå og revidere appsene",
+        "document_id": 1202890,
+        "title": "Spm. om gratis anvendelse af andre EU-landes certificerede open source-identitetstegnebøger til overførsel og modtagelse af danske beviser",
+        "number": null,
+        "date": "2026-01-07",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/23/3118165.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21154,
+            "name": "Europaudvalget",
+            "short_name": "EUU",
+            "type_id": 3,
+            "type": "Udvalg",
+            "role_id": 13,
+            "role": "Relevant for"
+          },
+          {
+            "actor_id": 110,
+            "name": "Rosa Lund",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1203836,
+        "title": "L 48 - svar på spm. 22 om anvendelse af GPL 3.0- licens eller Apache 2.0- licens ved tilpasning til eIDAS-forordningen",
         "number": null,
         "date": "2026-01-14",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120512.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120587.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -4639,12 +4685,12 @@
         }
       },
       {
-        "document_id": 1202884,
-        "title": "Spm. om en open source-licens, der muliggør, at brugere og udviklere kan forstå, gennemgå og revidere appsene",
+        "document_id": 1202889,
+        "title": "Spm. om anvendelse af GPL 3.0- licens eller Apache 2.0- licens ved tilpasning til eIDAS-forordningen",
         "number": null,
         "date": "2026-01-07",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/18/3118159.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/22/3118164.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -4681,12 +4727,12 @@
         }
       },
       {
-        "document_id": 1203818,
-        "title": "L 48 - svar på spm. 19 om at overlade rettighederne til adgang til og udvikling af afgørende dele af den danske digitale identitetstegnebogsapps kode til private virksomheder",
+        "document_id": 1203839,
+        "title": "L 48 - svar på spm. 21, om EU-Kommissionen og eIDAS2-forordningen forudsætter, at medlemslandene anvender 100 pct. open source-licenser",
         "number": null,
         "date": "2026-01-14",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/19/svar/2193307/3120552.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/21/svar/2193331/3120594.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -4717,6 +4763,15 @@
             "role": "Besvaret af"
           },
           {
+            "actor_id": 21154,
+            "name": "Europaudvalget",
+            "short_name": "EUU",
+            "type_id": 3,
+            "type": "Udvalg",
+            "role_id": 13,
+            "role": "Relevant for"
+          },
+          {
             "actor_id": 110,
             "name": "Rosa Lund",
             "short_name": null,
@@ -4734,12 +4789,12 @@
         }
       },
       {
-        "document_id": 1202885,
-        "title": "Spm. om at overlade rettighederne til adgang til og udvikling af afgørende dele af den danske digitale identitetstegnebogsapps kode til private virksomheder",
+        "document_id": 1202887,
+        "title": "Spm., om EU-Kommissionen og eIDAS2-forordningen forudsætter, at medlemslandene anvender 100 pct. open source-licenser",
         "number": null,
         "date": "2026-01-07",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/19/3118160.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/21/3118162.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -4759,6 +4814,15 @@
             "type": "Ministertitel",
             "role_id": 10,
             "role": "Adressat"
+          },
+          {
+            "actor_id": 21154,
+            "name": "Europaudvalget",
+            "short_name": "EUU",
+            "type_id": 3,
+            "type": "Udvalg",
+            "role_id": 13,
+            "role": "Relevant for"
           },
           {
             "actor_id": 110,
@@ -4813,6 +4877,28 @@
         "document_status": "Endeligt",
         "document_category_id": 46,
         "document_category": "Fremsættelsestale",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1210113,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 19. februar 2026",
+        "number": null,
+        "date": "2026-02-19",
+        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l48/20251_l48_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
         "document_actors": [],
         "question_chain": {
           "askers": [],
