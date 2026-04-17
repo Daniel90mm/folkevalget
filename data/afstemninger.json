@@ -8738,107 +8738,12 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1203832,
-        "title": "L 48 - svar på spm. 24 om gratis open source-software uden elementer, man køber licens til",
+        "document_id": 1203844,
+        "title": "L 48 - svar på spm. 25 om gratis og fri open source-software til at udføre passcanning i den danske digitale identitetstegnebog",
         "number": null,
         "date": "2026-01-14",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120580.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 17,
-        "document_type": "Svar",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 22,
-        "document_category": "Endeligt svar",
-        "document_actors": [
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 4,
-            "role": "Besvaret af"
-          },
-          {
-            "actor_id": 110,
-            "name": "Rosa Lund",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 12,
-            "role": "Stiller"
-          }
-        ],
-        "question_chain": {
-          "askers": [],
-          "responders": [
-            "ministeren for digitalisering"
-          ]
-        }
-      },
-      {
-        "document_id": 1202891,
-        "title": "Spm. om gratis open source-software uden elementer, man køber licens til",
-        "number": null,
-        "date": "2026-01-07",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/24/3118166.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 13,
-        "document_type": "Spørgsmål",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 36,
-        "document_category": "Udvalgsspørgsmål",
-        "document_actors": [
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 110,
-            "name": "Rosa Lund",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 12,
-            "role": "Stiller"
-          }
-        ],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1203834,
-        "title": "L 48 - svar på spm. 23 om gratis anvendelse af andre EU-landes certificerede open source-identitetstegnebøger til overførsel og modtagelse af danske beviser",
-        "number": null,
-        "date": "2026-01-14",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120582.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120612.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -8876,6 +8781,110 @@
             "type": "Udvalg",
             "role_id": 13,
             "role": "Relevant for"
+          },
+          {
+            "actor_id": 110,
+            "name": "Rosa Lund",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "ministeren for digitalisering"
+          ]
+        }
+      },
+      {
+        "document_id": 1202892,
+        "title": "Spm. om gratis og fri open source-software til at udføre passcanning i den danske digitale identitetstegnebog",
+        "number": null,
+        "date": "2026-01-07",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/25/3118168.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21154,
+            "name": "Europaudvalget",
+            "short_name": "EUU",
+            "type_id": 3,
+            "type": "Udvalg",
+            "role_id": 13,
+            "role": "Relevant for"
+          },
+          {
+            "actor_id": 110,
+            "name": "Rosa Lund",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1203832,
+        "title": "L 48 - svar på spm. 24 om gratis open source-software uden elementer, man køber licens til",
+        "number": null,
+        "date": "2026-01-14",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120580.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
           },
           {
             "actor_id": 110,
@@ -12138,12 +12147,12 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1203092,
-        "title": "L 84 - svar på spm. 2 om, hvem de mest udsatte borgere er, der kan modtage tilskud",
+        "document_id": 1203111,
+        "title": "L 84 - svar på spm. 15 om antal personer, der vil kunne hjælpes til at finde en midlertidig bolig",
         "number": null,
         "date": "2026-01-08",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/2/svar/2192305/3118676.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/bilag/0/3118724.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -12174,8 +12183,8 @@
             "role": "Besvaret af"
           },
           {
-            "actor_id": 1146,
-            "name": "Marlene Harpsøe",
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
             "short_name": null,
             "type_id": 5,
             "type": "Person",
@@ -12191,12 +12200,12 @@
         }
       },
       {
-        "document_id": 1201171,
-        "title": "Spm. om, hvem de mest udsatte borgere er, der kan modtage tilskud",
+        "document_id": 1201842,
+        "title": "Spm. om antal personer, der vil kunne hjælpes til at finde en midlertidig bolig",
         "number": null,
-        "date": "2025-12-17",
+        "date": "2025-12-19",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/2/3113915.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/15/3115544.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -12218,8 +12227,8 @@
             "role": "Adressat"
           },
           {
-            "actor_id": 1146,
-            "name": "Marlene Harpsøe",
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
             "short_name": null,
             "type_id": 5,
             "type": "Person",
@@ -12233,12 +12242,12 @@
         }
       },
       {
-        "document_id": 1203091,
-        "title": "L 84 - svar på spm. 1 om, hvor mange borgere der vil kunne modtage tilskud til huslejen",
+        "document_id": 1203112,
+        "title": "L 84 - svar på spm. 14 om antal personer, der med disse midler kan hjælpes til at finde en fast bolig",
         "number": null,
         "date": "2026-01-08",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/1/svar/2192307/3118681.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/14/svar/2192331/3118726.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -12269,8 +12278,8 @@
             "role": "Besvaret af"
           },
           {
-            "actor_id": 1146,
-            "name": "Marlene Harpsøe",
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
             "short_name": null,
             "type_id": 5,
             "type": "Person",

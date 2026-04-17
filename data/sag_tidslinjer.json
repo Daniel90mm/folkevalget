@@ -4424,6 +4424,119 @@
     ],
     "documents": [
       {
+        "document_id": 1203844,
+        "title": "L 48 - svar på spm. 25 om gratis og fri open source-software til at udføre passcanning i den danske digitale identitetstegnebog",
+        "number": null,
+        "date": "2026-01-14",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120612.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 21154,
+            "name": "Europaudvalget",
+            "short_name": "EUU",
+            "type_id": 3,
+            "type": "Udvalg",
+            "role_id": 13,
+            "role": "Relevant for"
+          },
+          {
+            "actor_id": 110,
+            "name": "Rosa Lund",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "ministeren for digitalisering"
+          ]
+        }
+      },
+      {
+        "document_id": 1202892,
+        "title": "Spm. om gratis og fri open source-software til at udføre passcanning i den danske digitale identitetstegnebog",
+        "number": null,
+        "date": "2026-01-07",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/25/3118168.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21154,
+            "name": "Europaudvalget",
+            "short_name": "EUU",
+            "type_id": 3,
+            "type": "Udvalg",
+            "role_id": 13,
+            "role": "Relevant for"
+          },
+          {
+            "actor_id": 110,
+            "name": "Rosa Lund",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
         "document_id": 1203832,
         "title": "L 48 - svar på spm. 24 om gratis open source-software uden elementer, man køber licens til",
         "number": null,
@@ -4710,119 +4823,6 @@
             "type": "Ministertitel",
             "role_id": 10,
             "role": "Adressat"
-          },
-          {
-            "actor_id": 110,
-            "name": "Rosa Lund",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 12,
-            "role": "Stiller"
-          }
-        ],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1203839,
-        "title": "L 48 - svar på spm. 21, om EU-Kommissionen og eIDAS2-forordningen forudsætter, at medlemslandene anvender 100 pct. open source-licenser",
-        "number": null,
-        "date": "2026-01-14",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/21/svar/2193331/3120594.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 17,
-        "document_type": "Svar",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 22,
-        "document_category": "Endeligt svar",
-        "document_actors": [
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 4,
-            "role": "Besvaret af"
-          },
-          {
-            "actor_id": 21154,
-            "name": "Europaudvalget",
-            "short_name": "EUU",
-            "type_id": 3,
-            "type": "Udvalg",
-            "role_id": 13,
-            "role": "Relevant for"
-          },
-          {
-            "actor_id": 110,
-            "name": "Rosa Lund",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 12,
-            "role": "Stiller"
-          }
-        ],
-        "question_chain": {
-          "askers": [],
-          "responders": [
-            "ministeren for digitalisering"
-          ]
-        }
-      },
-      {
-        "document_id": 1202887,
-        "title": "Spm., om EU-Kommissionen og eIDAS2-forordningen forudsætter, at medlemslandene anvender 100 pct. open source-licenser",
-        "number": null,
-        "date": "2026-01-07",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/21/3118162.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 13,
-        "document_type": "Spørgsmål",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 36,
-        "document_category": "Udvalgsspørgsmål",
-        "document_actors": [
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 21154,
-            "name": "Europaudvalget",
-            "short_name": "EUU",
-            "type_id": 3,
-            "type": "Udvalg",
-            "role_id": 13,
-            "role": "Relevant for"
           },
           {
             "actor_id": 110,
@@ -9492,12 +9492,12 @@
     ],
     "documents": [
       {
-        "document_id": 1203092,
-        "title": "L 84 - svar på spm. 2 om, hvem de mest udsatte borgere er, der kan modtage tilskud",
+        "document_id": 1203111,
+        "title": "L 84 - svar på spm. 15 om antal personer, der vil kunne hjælpes til at finde en midlertidig bolig",
         "number": null,
         "date": "2026-01-08",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/2/svar/2192305/3118676.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/bilag/0/3118724.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -9528,8 +9528,8 @@
             "role": "Besvaret af"
           },
           {
-            "actor_id": 1146,
-            "name": "Marlene Harpsøe",
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
             "short_name": null,
             "type_id": 5,
             "type": "Person",
@@ -9545,12 +9545,12 @@
         }
       },
       {
-        "document_id": 1201171,
-        "title": "Spm. om, hvem de mest udsatte borgere er, der kan modtage tilskud",
+        "document_id": 1201842,
+        "title": "Spm. om antal personer, der vil kunne hjælpes til at finde en midlertidig bolig",
         "number": null,
-        "date": "2025-12-17",
+        "date": "2025-12-19",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/2/3113915.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/15/3115544.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -9572,8 +9572,8 @@
             "role": "Adressat"
           },
           {
-            "actor_id": 1146,
-            "name": "Marlene Harpsøe",
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
             "short_name": null,
             "type_id": 5,
             "type": "Person",
@@ -9587,12 +9587,12 @@
         }
       },
       {
-        "document_id": 1203091,
-        "title": "L 84 - svar på spm. 1 om, hvor mange borgere der vil kunne modtage tilskud til huslejen",
+        "document_id": 1203112,
+        "title": "L 84 - svar på spm. 14 om antal personer, der med disse midler kan hjælpes til at finde en fast bolig",
         "number": null,
         "date": "2026-01-08",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/1/svar/2192307/3118681.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/14/svar/2192331/3118726.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -9623,8 +9623,8 @@
             "role": "Besvaret af"
           },
           {
-            "actor_id": 1146,
-            "name": "Marlene Harpsøe",
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
             "short_name": null,
             "type_id": 5,
             "type": "Person",
@@ -9640,12 +9640,12 @@
         }
       },
       {
-        "document_id": 1201170,
-        "title": "Spm. om, hvor mange borgere der vil kunne modtage tilskud til huslejen",
+        "document_id": 1201841,
+        "title": "Spm. om antal personer, der med disse midler kan hjælpes til at finde en fast bolig",
         "number": null,
-        "date": "2025-12-17",
+        "date": "2025-12-19",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/1/3113913.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/14/3115543.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -9667,8 +9667,8 @@
             "role": "Adressat"
           },
           {
-            "actor_id": 1146,
-            "name": "Marlene Harpsøe",
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
             "short_name": null,
             "type_id": 5,
             "type": "Person",
@@ -9679,6 +9679,196 @@
         "question_chain": {
           "askers": [],
           "responders": []
+        }
+      },
+      {
+        "document_id": 1203106,
+        "title": "L 84 - svar på spm. 13 om, hvor mange der er sat ud af deres bolig eller har fået varslet opsigelse, som følge af at de ikke længere modtager det særlige huslejetilskud",
+        "number": null,
+        "date": "2026-01-08",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/13/svar/2192325/3118715.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "social- og boligministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1201839,
+        "title": "Spm. om, hvor mange der er sat ud af deres bolig eller har fået varslet opsigelse, som følge af at de ikke længere modtager det særlige huslejetilskud",
+        "number": null,
+        "date": "2025-12-19",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/13/3115541.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1201838,
+        "title": "Spm. om, hvor mange borgere der stod til at få anvist en bolig, men har fået afslag på grund af manglende økonomi",
+        "number": null,
+        "date": "2025-12-19",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/12/3115540.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1203107,
+        "title": "L 84 - svar på spm. 12 om, hvor mange borgere der stod til at få anvist en bolig, men har fået afslag på grund af manglende økonomi",
+        "number": null,
+        "date": "2026-01-08",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/12/svar/2192326/3118717.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "social- og boligministeren"
+          ]
         }
       },
       {
@@ -9686,7 +9876,6 @@
         "title": "Vedtaget af Folketinget ved 3. behandling den 22. januar 2026",
         "number": null,
         "date": "2026-01-22",
-        "role": "På sagstrin",
         "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l84/20251_l84_som_vedtaget.pdf",
         "format": "PDF",
         "variant_code": "P",
@@ -9705,34 +9894,10 @@
         }
       },
       {
-        "document_id": 1203752,
-        "title": "Betænkning afgivet den 13/1-26",
-        "number": null,
-        "date": "2026-01-13",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/bilag/5/3122861.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 12,
-        "document_type": "Bilag",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
         "document_id": 1204016,
         "title": "Efter afstemningen i Folketinget ved 2. behandling den 15. januar 2026",
         "number": null,
         "date": "2026-01-15",
-        "role": "På sagstrin",
         "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l84/20251_l84_efter_2behandling.pdf",
         "format": "PDF",
         "variant_code": "P",
@@ -9744,29 +9909,6 @@
         "document_status": "Endeligt",
         "document_category_id": 20,
         "document_category": "Optryk efter 2.beh",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1203753,
-        "title": "Betænkning afgivet af Socialudvalget den 13. januar 2026",
-        "number": null,
-        "date": "2026-01-14",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l84/20251_l84_betaenkning.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
         "document_actors": [],
         "question_chain": {
           "askers": [],
@@ -9796,12 +9938,6 @@
           "emneord": "udsatte voksne",
           "type_id": 1,
           "type": "Sagsområde"
-        },
-        {
-          "id": 33609,
-          "emneord": "betænkning",
-          "type_id": 2,
-          "type": "Ukontrolleret"
         }
       ],
       "samlet": [
@@ -9816,12 +9952,6 @@
           "emneord": "udsatte voksne",
           "type_id": 1,
           "type": "Sagsområde"
-        },
-        {
-          "id": 33609,
-          "emneord": "betænkning",
-          "type_id": 2,
-          "type": "Ukontrolleret"
         }
       ]
     }
