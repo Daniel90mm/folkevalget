@@ -2861,7 +2861,7 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [],
-    "role": "Rune Bønnelykke (DF)",
+    "role": "Selvstændig",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Sydjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Sydjyllands Storkreds",
     "constituency_history": [
@@ -2876,8 +2876,14 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Svendborg Handelsskole."
+    ],
+    "occupations": [
+      "Selvstændig, 2L-Automation, 2020-2024.",
+      "Projektleder, Toyota Material Handling, 2016-2020.",
+      "Projekansvarlig, IKEA, 2005-2015."
+    ],
     "email": "rune.boennelykke@ft.dk",
     "phone": "+45 3337 5132",
     "website_url": null,
@@ -3039,7 +3045,7 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [],
-    "role": "Jan Herskov (DF)",
+    "role": "Politiassistent",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Sjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
     "constituency_history": [
@@ -3054,10 +3060,16 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Politibetjent, Politiskolen, Amager og Brøndby, 1993-1996."
+    ],
+    "occupations": [
+      "Politiassistent (pt. orlov), Midt- og Vestsjællands Politi fra 2006.",
+      "Politibetjent, politiassistent, Københavns Politi, 1993-2006.",
+      "Sælger (kontorforsyning), 1989-1993."
+    ],
     "email": "jan.herskov@ft.dk",
-    "phone": "+45 3337 5144",
+    "phone": "+45 6162 3940",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -3796,7 +3808,7 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [],
-    "role": "Michael Nedersøe (DF)",
+    "role": "Ufaglært",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Østjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Østjyllands Storkreds",
     "constituency_history": [
@@ -3811,8 +3823,15 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Skole- og handicapchauffør, 2009."
+    ],
+    "occupations": [
+      "Chauffør inden for skole- og handicapkørsel (orlov fra 2026), Forskellige steder i Aarhus, Skanderborg og Horsens fra 2012.",
+      "Lagerarbejder, 1996-1997.",
+      "Arbejdsdreng på fabrik, 1994-1996.",
+      "Forskellige ufaglærte job inden for transportbranchen, både nationale og internationale.."
+    ],
     "email": "michael.nedersoee@ft.dk",
     "phone": "+45 3337 5136",
     "website_url": null,
@@ -5995,10 +6014,15 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Master i journalistik, Ilisimatusarfik, Grønlands Universitet, Nuuk, 2024.",
+      "Cand.psych.aut., Københavns Universitet, 2001."
+    ],
+    "occupations": [
+      "Direktør, Kriminalforsorgen i Grønland, 2015-2021."
+    ],
     "email": "naaja.nathanielsen@ft.dk",
-    "phone": "+45 3337 5302",
+    "phone": "+45 6162 3925",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -8343,7 +8367,7 @@
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
     "committees": [],
-    "role": "Thorbjørn Jacobsen (LA)",
+    "role": "Ingeniør",
     "constituency": "Folketingsmedlem for Liberal Alliance i Vestjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
     "constituency_history": [
@@ -8358,8 +8382,24 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "B.Sc. Business Development Engineer, Handels- og Ingeniørhøjskolen, Herning, 2025.",
+      "Matematisk studentereksamen, Holstebro Gymnasium og Hf, 2000."
+    ],
+    "occupations": [
+      "Mekanik-katalysator, Bang & Olufsen, 2025-2027.",
+      "Senior Business Development Consultant (pt. orlov), Simens Digital Industries Software fra 2022.",
+      "Solution Architect, Siemens Digital Industries Software, 2019-2022.",
+      "Implementation Consult, Siemens Digital Industries Software, 2014-2019.",
+      "PLM konsulent, Avalon Innovation, 2012-2014.",
+      "Metode- og procesudvikler, Bang & Olufsen, 2009-2012.",
+      "Senior Manager, Bang & Olufsen, 2007-2009.",
+      "Administrator, Ejerforeningen Hammerum Hovedgade 30, 2002-2005.",
+      "Salgsassistent, A-Z Herning, 2002-2004.",
+      "Kioskarbejder, Superkiosken, 1998-2000.",
+      "Kioskarbejder, Kopborgs Kiosk, 1997-1998.",
+      "Fejedreng, Tecma, 1993-1995."
+    ],
     "email": "thorbjoern.jacobsen@ft.dk",
     "phone": "+45 3337 4973",
     "website_url": null,
@@ -11665,11 +11705,15 @@
         "active": true
       }
     ],
-    "educations": [],
+    "educations": [
+      "Bachelor i Statskundskab, Københavns Universitet, 2019.",
+      "Student (stx), Aabenraa Statsskole, 2015.",
+      "Folkeskole, Hoptrup Efterskole, 2012."
+    ],
     "occupations": [],
     "email": "thomas.rohden@ft.dk",
-    "phone": "+45 3337 4733",
-    "website_url": null,
+    "phone": "+45 6162 3912",
+    "website_url": "https://www.radikale.dk/partiet/mennesker/thomas-rohden/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
