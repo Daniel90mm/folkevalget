@@ -9492,12 +9492,12 @@
     ],
     "documents": [
       {
-        "document_id": 1203111,
-        "title": "L 84 - svar på spm. 15 om antal personer, der vil kunne hjælpes til at finde en midlertidig bolig",
+        "document_id": 1203113,
+        "title": "L 84 - svar på spm. 19, om lovens midlertidighed kan sikre, at borgere kan blive anvist en bolig på mere permanente vilkår",
         "number": null,
         "date": "2026-01-08",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/bilag/0/3118724.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/19/svar/2192332/3118728.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -9545,12 +9545,12 @@
         }
       },
       {
-        "document_id": 1201842,
-        "title": "Spm. om antal personer, der vil kunne hjælpes til at finde en midlertidig bolig",
+        "document_id": 1201846,
+        "title": "Spm., om lovens midlertidighed kan sikre, at borgere kan blive anvist en bolig på mere permanente vilkår",
         "number": null,
         "date": "2025-12-19",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/15/3115544.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/19/3115548.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -9587,12 +9587,12 @@
         }
       },
       {
-        "document_id": 1203112,
-        "title": "L 84 - svar på spm. 14 om antal personer, der med disse midler kan hjælpes til at finde en fast bolig",
+        "document_id": 1203114,
+        "title": "L 84 - svar på spm. 18 om støtte til borgere, som ikke har udsigt til en forbedret betalingsevne",
         "number": null,
         "date": "2026-01-08",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/14/svar/2192331/3118726.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/bilag/0/3118731.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -9640,12 +9640,12 @@
         }
       },
       {
-        "document_id": 1201841,
-        "title": "Spm. om antal personer, der med disse midler kan hjælpes til at finde en fast bolig",
+        "document_id": 1201845,
+        "title": "Spm. om støtte til borgere, som ikke har udsigt til en forbedret betalingsevne",
         "number": null,
         "date": "2025-12-19",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/14/3115543.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/18/3115547.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -9682,12 +9682,12 @@
         }
       },
       {
-        "document_id": 1203106,
-        "title": "L 84 - svar på spm. 13 om, hvor mange der er sat ud af deres bolig eller har fået varslet opsigelse, som følge af at de ikke længere modtager det særlige huslejetilskud",
+        "document_id": 1203110,
+        "title": "L 84 - svar på spm. 17 om, hvor mange børnefamilier der vil miste deres bolig, fordi de ikke får det særlige huslejetilskud",
         "number": null,
         "date": "2026-01-08",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/13/svar/2192325/3118715.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/bilag/0/3118722.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -9735,12 +9735,12 @@
         }
       },
       {
-        "document_id": 1201839,
-        "title": "Spm. om, hvor mange der er sat ud af deres bolig eller har fået varslet opsigelse, som følge af at de ikke længere modtager det særlige huslejetilskud",
+        "document_id": 1201844,
+        "title": "Spm. om, hvor mange børnefamilier der vil miste deres bolig, fordi de ikke får det særlige huslejetilskud",
         "number": null,
         "date": "2025-12-19",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/13/3115541.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/17/3115546.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -9777,54 +9777,12 @@
         }
       },
       {
-        "document_id": 1201838,
-        "title": "Spm. om, hvor mange borgere der stod til at få anvist en bolig, men har fået afslag på grund af manglende økonomi",
-        "number": null,
-        "date": "2025-12-19",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/12/3115540.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 13,
-        "document_type": "Spørgsmål",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 36,
-        "document_category": "Udvalgsspørgsmål",
-        "document_actors": [
-          {
-            "actor_id": 20984,
-            "name": "social- og boligministeren",
-            "short_name": "social- og boligminister",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 18694,
-            "name": "Victoria Velasquez",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 12,
-            "role": "Stiller"
-          }
-        ],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1203107,
-        "title": "L 84 - svar på spm. 12 om, hvor mange borgere der stod til at få anvist en bolig, men har fået afslag på grund af manglende økonomi",
+        "document_id": 1203102,
+        "title": "L 84 - svar på spm. 16 om yderligere finansiering, hvis 15 mio. kr. ikke er tilstrækkeligt til at sikre bolig til målgruppen ",
         "number": null,
         "date": "2026-01-08",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/12/svar/2192326/3118717.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/bilag/0/3118702.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -9869,6 +9827,48 @@
           "responders": [
             "social- og boligministeren"
           ]
+        }
+      },
+      {
+        "document_id": 1201843,
+        "title": "Spm. om yderligere finansiering, hvis 15 mio. kr. ikke er tilstrækkeligt til at sikre bolig til målgruppen",
+        "number": null,
+        "date": "2025-12-19",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/16/3115545.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
         }
       },
       {

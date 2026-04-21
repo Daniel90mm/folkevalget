@@ -3827,10 +3827,10 @@
       "Skole- og handicapchauffør, 2009."
     ],
     "occupations": [
-      "Chauffør inden for skole- og handicapkørsel (orlov fra 2026), Forskellige steder i Aarhus, Skanderborg og Horsens fra 2012.",
-      "Lagerarbejder, 1996-1997.",
-      "Arbejdsdreng på fabrik, 1994-1996.",
-      "Forskellige ufaglærte job inden for transportbranchen, både nationale og internationale.."
+      "Chauffør inden for skole- og handicapkørsel (orlov fra 2026), forskellige steder i Aarhus, Skanderborg og Horsens fra 2012.",
+      "Lagerarbejder, diverse steder, 1996-1997.",
+      "Arbejdsdreng på fabrik, Friis Møbler og Scandisteep, 1994-1996.",
+      "Forskellige ufaglærte chaufførjob inden for transportbranchen, både nationale og internationale."
     ],
     "email": "michael.nedersoee@ft.dk",
     "phone": "+45 3337 5136",
@@ -4213,7 +4213,7 @@
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
     "committees": [],
-    "role": "Sinem Dybvad Demir (EL)",
+    "role": "Faglært tjener og selvstændig",
     "constituency": "Folketingsmedlem for Enhedslisten i Nordsjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordsjællands Storkreds",
     "constituency_history": [
@@ -4228,11 +4228,24 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Faglært tjener, Kokke- og Tjenerskolen ZBC, Slagelse, 2021.",
+      "Student, Tornbjerg Gymnasium, Odense, 2011.",
+      "Folkeskole, Kragsbjergskolen, Odense, 2008."
+    ],
+    "occupations": [
+      "Administrerende direktør, Restaurant 1899 fra 2024.",
+      "Restaurantchef, Mikkeller Færgekroen, 2024.",
+      "Tjener, Restaurant Kronborg, 2022-2024.",
+      "Tjener, Café Sebastopol, 2022.",
+      "Tjener, Restaurant Puk, 2021-2022.",
+      "Hovedkoordinator for jobpatruljen, 3F Region Hovedstaden, 2018-2021.",
+      "Tjener, Jensens Bøfhus, 2013-2020.",
+      "Butiksmedhjælper, Paw Sko, 2007-2017."
+    ],
     "email": "sinem.demir@ft.dk",
     "phone": "+45 3337 5055",
-    "website_url": null,
+    "website_url": "https://enhedslisten.dk/profil/sinem-dybvad-demir",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
@@ -5999,7 +6012,7 @@
     "current_party": "Inuit Ataqatigiit",
     "current_party_short": "IA",
     "committees": [],
-    "role": "Naaja H. Nathanielsen (IA)",
+    "role": "Fhv. naalakkersuisoq/minister",
     "constituency": "Folketingsmedlem for Inuit Ataqatigiit i Grønland fra 24. marts 2026.",
     "storkreds": "Grønland",
     "constituency_history": [
@@ -8387,13 +8400,13 @@
       "Matematisk studentereksamen, Holstebro Gymnasium og Hf, 2000."
     ],
     "occupations": [
-      "Mekanik-katalysator, Bang & Olufsen, 2025-2027.",
-      "Senior Business Development Consultant (pt. orlov), Simens Digital Industries Software fra 2022.",
+      "Senior Business Development Consultant (pt. orlov), Siemens Digital Industries Software fra 2022.",
       "Solution Architect, Siemens Digital Industries Software, 2019-2022.",
       "Implementation Consult, Siemens Digital Industries Software, 2014-2019.",
       "PLM konsulent, Avalon Innovation, 2012-2014.",
       "Metode- og procesudvikler, Bang & Olufsen, 2009-2012.",
       "Senior Manager, Bang & Olufsen, 2007-2009.",
+      "Mekanik-katalysator, Bang & Olufsen, 2005-2007.",
       "Administrator, Ejerforeningen Hammerum Hovedgade 30, 2002-2005.",
       "Salgsassistent, A-Z Herning, 2002-2004.",
       "Kioskarbejder, Superkiosken, 1998-2000.",
@@ -8863,7 +8876,7 @@
     "educations": [],
     "occupations": [],
     "email": "joachim.riis@ft.dk",
-    "phone": "+45 3337 4974",
+    "phone": "+45 2336 4070",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -10501,7 +10514,7 @@
     "member_since_year": 1994,
     "seniority_label": "31 aar i Folketinget",
     "seniority_years": 31,
-    "seniority_months": 378,
+    "seniority_months": 379,
     "seniority_tag": "experienced",
     "votes_total": 44,
     "votes_for": 0,
@@ -16466,7 +16479,7 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [],
-    "role": "Anders Kühnau (S)",
+    "role": "Konsulent",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Østjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Østjyllands Storkreds",
     "constituency_history": [
@@ -16481,8 +16494,14 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Cand.scient.pol., Aarhus Universitet, 2008.",
+      "Student, Aarhus katedralskole, 2000."
+    ],
+    "occupations": [
+      "Projektchef, Sundhed og Omsorg, Aarhus Kommune, 2010-2014.",
+      "Konsulent, BDO Danmark, 2006-2010."
+    ],
     "email": "anders.kuhnau@ft.dk",
     "phone": "+45 3337 4070",
     "website_url": null,
@@ -25935,7 +25954,7 @@
     "member_since_year": 1994,
     "seniority_label": "31 aar i Folketinget",
     "seniority_years": 31,
-    "seniority_months": 378,
+    "seniority_months": 379,
     "seniority_tag": "experienced",
     "votes_total": 22,
     "votes_for": 3,

@@ -12147,12 +12147,12 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1203111,
-        "title": "L 84 - svar på spm. 15 om antal personer, der vil kunne hjælpes til at finde en midlertidig bolig",
+        "document_id": 1203113,
+        "title": "L 84 - svar på spm. 19, om lovens midlertidighed kan sikre, at borgere kan blive anvist en bolig på mere permanente vilkår",
         "number": null,
         "date": "2026-01-08",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/bilag/0/3118724.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/19/svar/2192332/3118728.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -12200,12 +12200,12 @@
         }
       },
       {
-        "document_id": 1201842,
-        "title": "Spm. om antal personer, der vil kunne hjælpes til at finde en midlertidig bolig",
+        "document_id": 1201846,
+        "title": "Spm., om lovens midlertidighed kan sikre, at borgere kan blive anvist en bolig på mere permanente vilkår",
         "number": null,
         "date": "2025-12-19",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/15/3115544.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/19/3115548.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -12242,12 +12242,12 @@
         }
       },
       {
-        "document_id": 1203112,
-        "title": "L 84 - svar på spm. 14 om antal personer, der med disse midler kan hjælpes til at finde en fast bolig",
+        "document_id": 1203114,
+        "title": "L 84 - svar på spm. 18 om støtte til borgere, som ikke har udsigt til en forbedret betalingsevne",
         "number": null,
         "date": "2026-01-08",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/spm/14/svar/2192331/3118726.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l84/bilag/0/3118731.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
