@@ -517,7 +517,7 @@
     "current_party": "Borgernes Parti – Lars Boje Mathiesen",
     "current_party_short": "BP",
     "committees": [],
-    "role": "Nadja Natalie Isaksen (BP)",
+    "role": "Cand.jur.",
     "constituency": "Folketingsmedlem for Borgernes Parti i Sydjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Sydjyllands Storkreds",
     "constituency_history": [
@@ -532,10 +532,14 @@
         "active": true
       }
     ],
-    "educations": [],
+    "educations": [
+      "Cand.jur., København Universitet, 2017-2020.",
+      "Ba.jur., Aalborg Universitet, 2014-2017.",
+      "Hhx, Handelsgymnasiet Aalborg, 2011-2014."
+    ],
     "occupations": [],
     "email": "nadja.isaksen@ft.dk",
-    "phone": "+45 3337 3203",
+    "phone": "+45 6162 4011",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -3997,7 +4001,7 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [],
-    "role": "Anders Vistisen (DF)",
+    "role": "Juridisk konsulent",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Nordjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordjyllands Storkreds",
     "constituency_history": [
@@ -4012,11 +4016,18 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Cand.jur, Aarhus Universitet, 2006-2012.",
+      "Højere Handelseksamen, Skive Handelsskole , 2003-2006.",
+      "Folkeskole, Vridsted Skole, 1996-2006."
+    ],
+    "occupations": [
+      "Director, Grace Public Affairs , 2019-2022.",
+      "Juridisk konsulent, Europa-Parlamentet, 2012-2014."
+    ],
     "email": "anders.vistisen@ft.dk",
-    "phone": "+45 3337 3174",
-    "website_url": null,
+    "phone": "+45 6162 3885",
+    "website_url": "https://andersvistisen.dk/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
