@@ -5506,7 +5506,7 @@
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
     "committees": [],
-    "role": "Lisbeth Torfing (EL)",
+    "role": "Underviser",
     "constituency": "Folketingsmedlem for Enhedslisten i Vestjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
     "constituency_history": [
@@ -5521,8 +5521,18 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Ph.d. i nordisk sprog og litteratur, Aarhus Universitet, 2016.",
+      "Kandidat i nordisk sprog og litteratur, Aarhus Universitet, 2013.",
+      "MA i islandske middelalderstudier, Háskóli Íslands (Islands Universitet), 2011.",
+      "Bachelor i nordisk sprog og litteratur, Aarhus Universitet, 2009.",
+      "Student, matematisk linje, Aarhus Katedralskole, 2006.",
+      "Grundskole, Tranbjergskolen, Næshøjskolen og Skt. Knuds Skole, Aarhus, 2003."
+    ],
+    "occupations": [
+      "Seniorredaktør, Better Students, 2017-2019.",
+      "Ekstern lektor, Aarhus Universitet, 2016-2019."
+    ],
     "email": "lisbeth.torfing@ft.dk",
     "phone": "+45 3337 5063",
     "website_url": null,
@@ -8059,7 +8069,7 @@
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
     "committees": [],
-    "role": "Freja Brandhøj (LA)",
+    "role": "Chef",
     "constituency": "Folketingsmedlem for Liberal Alliance i Københavns Omegns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
     "constituency_history": [
@@ -8074,8 +8084,20 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Cand.scient.pol., Syddansk Universitet, 2008-2015.",
+      "Kamptropperne, Gardehusarregimentet, Slagelse, 2003-2006.",
+      "Matematisk studentereksamen, Sønderborg Statsskole, 2003-2006."
+    ],
+    "occupations": [
+      "Chef for iværksætteri og regelforenkling, Dansk Erhverv, 2024-2026.",
+      "Politisk direktør, Danmarks Restauranter og Caféer, 2020-2023.",
+      "Politisk konsulent, Horesta, 2020.",
+      "Kommunikationschef, Søernes Privathospital, 2020-2023.",
+      "Politisk konsulent, DGI, 2018-2020.",
+      "Communications advisor and director, Corporate Communication, 2016-2018.",
+      "Junior Consultant, Rud Pedersen, 2014-2016."
+    ],
     "email": "freja.brandhoej@ft.dk",
     "phone": "+45 3337 4967",
     "website_url": null,
@@ -8869,7 +8891,7 @@
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
     "committees": [],
-    "role": "Joachim Riis (LA)",
+    "role": "Head of Marketing & Partnerships",
     "constituency": "Folketingsmedlem for Liberal Alliance i Sjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
     "constituency_history": [
@@ -8884,8 +8906,21 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Master i Certified Motivator & Motivation Analyst, Mark Anthony, København, 2016.",
+      "Faglært salgsassistent med speciale i textiler, Bestseller Academy, 2011.",
+      "Hhx, Roskilde Handelsskole, 2008.",
+      "Folkeskole, Kirke Hyllinge Skole, 2005.",
+      "Folkeskole, Sæby-Gershøj Skole, Lejre, 2003."
+    ],
+    "occupations": [
+      "Head of Marketing & Partnerships, YellowBeard, 2025-2026.",
+      "Head of Sales & Partnerships, YellowBeard, 2024-2025.",
+      "Stifter og CEO, Due Signori, 2020-2023.",
+      "Country Sales Manager, Oscar Jacobson og Morris Stockholm, 2017-2023.",
+      "Store Manager & Buyer, Superdry, Fields og Rødovre Centrum, 2013-2016.",
+      "Store manager, Bestseller, 2011-2013."
+    ],
     "email": "joachim.riis@ft.dk",
     "phone": "+45 2336 4070",
     "website_url": null,
@@ -9492,7 +9527,7 @@
       }
     ],
     "educations": [
-      "Freight forwarder, DFDS og Rybners, Esbjerg , 2014.",
+      "Freight forwarder, DFDS og Rybners, Esbjerg, 2014.",
       "Eus, Rybners, Esbjerg, 2012.",
       "Våbengast, Søværnets konstabeluddannelse, 2009.",
       "Stx, Ribe Katedralskole, 2008."
@@ -21860,7 +21895,7 @@
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
     "committees": [],
-    "role": "Lise Müller (SF)",
+    "role": "Sygeplejerske",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Fyns Storkreds fra 24. marts 2026.",
     "storkreds": "Fyns Storkreds",
     "constituency_history": [
@@ -21875,8 +21910,17 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Master i sundhedspædagogik, Danmarks Pædagogiske Universitet, København , 2002-2003.",
+      "Sygeplejerske, H:S Sygeplejeuddannelsen, København, 1996-1999."
+    ],
+    "occupations": [
+      "Vikar som sygeplejerske (pt. orlov), Rigshospitalet, København fra 2023.",
+      "Hjemmesygeplejerske (pt. orlov), Frederiksberg og Gladsaxe Kommune fra 2015.",
+      "Klinisk vejleder, klinisk sygeplejespecialist, Rigshospitalet, København, 2004-2015.",
+      "Klinisk monitor, Coloplast A/S, 2002-2004.",
+      "Sygeplejerske, Rigshospitalet, København, 1999-2002."
+    ],
     "email": "Lise.Muller@ft.dk",
     "phone": "+45 3337 4472",
     "website_url": null,
