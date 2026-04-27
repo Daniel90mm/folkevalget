@@ -2925,7 +2925,7 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [],
-    "role": "Mikkel Dencker (DF)",
+    "role": "Selvstændig",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Københavns Amtskreds, 20. november 2001 – 13. november 2007.",
     "storkreds": "Københavns Amtskreds",
     "constituency_history": [
@@ -3873,7 +3873,7 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [],
-    "role": "Søren Boel Olesen (DF)",
+    "role": "Automekaniker",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Vestjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
     "constituency_history": [
@@ -3888,8 +3888,18 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Bestyrelsesuddannelse, Aarhus Universitet, 2019-2020.",
+      "Pædagogisk diplomuddannelse, Metropol København, 2009-2011.",
+      "Mekaniker, Uddannelsescenter Holstebro, 2001-2005.",
+      "Grundskole, Halgård Skole, Holstebro, AFCENT International School, Brunssum, Holland og Tvis Skole Holstebro, 1990-2001."
+    ],
+    "occupations": [
+      "Direktør, Søren Boel Olesen Holding ApS fra 2017.",
+      "Indehaver, Jysk Caravan Center fra 2012.",
+      "Selvstændig kørelærer, Skive Kaserne og Mejdal Køreskole, 2005-2012.",
+      "Mekaniker, Mekonomen Autoteknik Mejdal, 2001-2005."
+    ],
     "email": "soren.olesen@ft.dk",
     "phone": "+45 3337 5133",
     "website_url": null,
@@ -7620,9 +7630,9 @@
       }
     ],
     "educations": [
+      "Cand.scient.pol, Københavns Universitet, 2022.",
       "Stx, Aarhus Statsgymnasium, 2013.",
-      "Folkeskole, Risskov Skole, Aarhus, 2010.",
-      "Cand.scient.pol, Københavns Universitet, 2022."
+      "Folkeskole, Risskov Skole, Aarhus, 2010."
     ],
     "occupations": [
       "Konsulent, Green Power Denmark, 2022-2026.",
@@ -7719,7 +7729,7 @@
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
     "committees": [],
-    "role": "Christian Vigilius (KF)",
+    "role": "Marketingschef",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Københavns Omegns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
     "constituency_history": [
@@ -7734,11 +7744,17 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Bachelor i statskundskab , Københavns Universitet, 2019-2023."
+    ],
+    "occupations": [
+      "Marketingschef, Økonomisk Ugebrev, 2025-2026.",
+      "Eventplanlægger, Rekom A/S, 2024-2026.",
+      "Selvstændig, Niche Publicity, 2018-2022."
+    ],
     "email": "christian.vigilius@ft.dk",
-    "phone": "+45 3337 4229",
-    "website_url": null,
+    "phone": "+45 6162 4002",
+    "website_url": "http://christianvigilius.dk",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
@@ -11769,7 +11785,12 @@
       "Student (stx), Aabenraa Statsskole, 2015.",
       "Folkeskole, Hoptrup Efterskole, 2012."
     ],
-    "occupations": [],
+    "occupations": [
+      "Public Affairs Director, GRACE Public Affairs, 2023-2025.",
+      "Politisk konsulent, SMVDanmark, 2022.",
+      "Junior Consultant, GRACE Public Affairs, 2017-2021.",
+      "Lærermedhjælper, Høje Kolstrup Skole, 2015-2016."
+    ],
     "email": "thomas.rohden@ft.dk",
     "phone": "+45 6162 3912",
     "website_url": "https://www.radikale.dk/partiet/mennesker/thomas-rohden/",
@@ -21472,7 +21493,7 @@
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
     "committees": [],
-    "role": "Christina Lykke (SF)",
+    "role": "Socialpædagog",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Nordjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordjyllands Storkreds",
     "constituency_history": [
@@ -21487,10 +21508,18 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Familieterapeut, Psykolog Jacob Mosgaard, 2017-2020.",
+      "Socialpædagog, Hjørring Pædagogseminarium, 2002-2006."
+    ],
+    "occupations": [
+      "Familiebehandler, familieterapeut, Skansen Familiebehandling, Frederikshavn Kommune, 2013-2026.",
+      "Daglig leder, Børnehaven Lærkereden og Børnehaven Bølgen, Frederikshavn Kommune, 2010-2013.",
+      "Fritidspædagog, gadeteamsmedarbejder, Ungdomsgården Håndbæk, Frederikshavn, 2008-2010.",
+      "Socialpædagod, Døgninstitution Minibo i Frederikshavn, 2006-2008."
+    ],
     "email": "christina.lykke@ft.dk",
-    "phone": "+45 3337 4079",
+    "phone": "+45 6162 3870",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -25154,7 +25183,7 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [],
-    "role": "Louise Louring (V)",
+    "role": "Erhvervsjurist",
     "constituency": "Folketingsmedlem for Venstre i Østjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Østjyllands Storkreds",
     "constituency_history": [
@@ -25169,8 +25198,17 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Bachelor i jura, Aarhus Universitet.",
+      "Danish Badminton College.",
+      "Persondatabeskyttelse, København Universitet.",
+      "Hhx, Skanderborg-Odder Center for Uddannelse.",
+      "Kandidat i jura, Aarhus Universitet.",
+      "Markedsføringsøkonom, Erhvervsakademi Aarhus."
+    ],
+    "occupations": [
+      "Erhvervsjurist med speciale i GDPR og Compliance."
+    ],
     "email": "louise.louring@ft.dk",
     "phone": "+45 3337 4542",
     "website_url": null,
