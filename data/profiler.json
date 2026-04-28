@@ -9,10 +9,12 @@
     "current_party": "Alternativet",
     "current_party_short": "ALT",
     "committees": [],
-    "role": null,
-    "constituency": null,
-    "storkreds": null,
-    "constituency_history": [],
+    "role": "Klimaretfærdighedsaktivist",
+    "constituency": "Folketingsmedlem for Alternativet i Nordjyllands Storkreds fra 24. marts 2026.",
+    "storkreds": "Nordjyllands Storkreds",
+    "constituency_history": [
+      "Folketingsmedlem for Alternativet i Nordjyllands Storkreds fra 24. marts 2026."
+    ],
     "party_history": [
       {
         "party": "Alternativet",
@@ -22,24 +24,32 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
-    "email": null,
-    "phone": null,
-    "website_url": null,
-    "address": null,
+    "educations": [
+      "Kandidat i bæredygtighedsvidenskab, Lund Universitet, Sverige, 2022-2025.",
+      "Bachelor i miljøplanlægning, Roskilde Universitet, 2019-2022.",
+      "Stx, Silkeborg Gymnasium, 2014-2017."
+    ],
+    "occupations": [
+      "Klimapolitisk konsulent, Alternativet, 2025.",
+      "Grøn politisk rådgiver, Alternativet, 2025-2026.",
+      "Valgfagslærer i retorik, Krogerup Højskole, 2023-2025."
+    ],
+    "email": "anna.bjerre@ft.dk",
+    "phone": "+45 3337 4820",
+    "website_url": "https://alternativet.dk/personer/folketingskandidater/anna-bjerre-johansen",
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": null,
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": null,
-    "member_since_year": null,
-    "seniority_label": null,
-    "seniority_years": null,
-    "seniority_months": null,
-    "seniority_tag": null,
+    "member_since_date": "2026-03-24",
+    "member_since_year": 2026,
+    "seniority_label": "Under 1 aar i Folketinget",
+    "seniority_years": 0,
+    "seniority_months": 1,
+    "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
     "votes_against": 0,
@@ -409,7 +419,7 @@
     "current_party": "Alternativet",
     "current_party_short": "ALT",
     "committees": [],
-    "role": "Elise Sydendal (ALT)",
+    "role": "Sekretariatsmedarbejder",
     "constituency": "Folketingsmedlem for Alternativet i Sjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
     "constituency_history": [
@@ -424,8 +434,25 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Kandidat i statskundskab, Københavns Universitet, 2026.",
+      "Student, Sorø Akademi, 2018.",
+      "Grundskole, Maribo Borgerskole, 2012-2015.",
+      "Grundskole, Blæsenborgskolen, Maribo, 2010-2012.",
+      "Grundskole, Fejø Skole, Fejø, 2005-2010."
+    ],
+    "occupations": [
+      "Sekretariatsmedarbejder, Alliancen for trivselsøkonomi - WEAll DK, 2024-2026.",
+      "Studentermedhjælper, Center for Europæisk Politik, Institut for Statskundskab, Københavns Universitet, 2021-2023.",
+      "Studentermedhjælper, Research Group on Climate, Environment and Change (REGROUP), Københavns Universitet, 2021-2023.",
+      "Studentermedhjælper, Børne- og Undervisningsministeriet, 2021.",
+      "Administrativ medarbejder, By og Landskab, 2018-2025.",
+      "Mentor, MentorDanmark, 2017-2019.",
+      "Kioskmedarbejder og ispige, Søparkkiosken, Maribo, 2015.",
+      "Danseassistent, Team Elnegaard, 2013-2015.",
+      "Ispige, Den Lysegrønne Ø, Fejø, 2013.",
+      "Kirkekorsanger, Sakskøbing Kirkes Pigekor, Maribo Domkirke, Sorø Klosterkirke og Pedersborg Kirkes Pigekor, 2013-2018."
+    ],
     "email": "elise.sydendal@ft.dk",
     "phone": "+45 3337 4835",
     "website_url": null,
@@ -463,7 +490,7 @@
     "current_party": "Alternativet",
     "current_party_short": "ALT",
     "committees": [],
-    "role": "Signe Wenneberg (ALT)",
+    "role": "Retoriker, redaktør og journalist, foredragsholder",
     "constituency": "Folketingsmedlem for Alternativet i Københavns Omegns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
     "constituency_history": [
@@ -478,11 +505,16 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Retorik og kulturjournalistik, Københavns Universitet, 1991-1997.",
+      "Samfundssproglig studentereksamen, Haslev Gymnasium, 1984-1987."
+    ],
+    "occupations": [
+      "Selvstændig journalist, redaktør, kommunikationsrådgiver, tv-vært og iværksætter (orlov fra 2026), Wenneberg & Co fra 1991."
+    ],
     "email": "signe.wenneberg@ft.dk",
     "phone": "+45 3337 4834",
-    "website_url": null,
+    "website_url": "http://www.signewenneberg.dk",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
@@ -2950,6 +2982,7 @@
       "Folkeskole, Præstemoseskolen, 1982-1992."
     ],
     "occupations": [
+      "Selvstændig erhvervsdrivende, Inner City 18 ApS fra 2020.",
       "Serviceassistent på Q8-servicestation, 2000-2001.",
       "Studentermedhjælp, Dansk Folkepartis sekretariat, 2000-2001."
     ],
@@ -11786,10 +11819,11 @@
       "Folkeskole, Hoptrup Efterskole, 2012."
     ],
     "occupations": [
-      "Public Affairs Director, GRACE Public Affairs, 2023-2025.",
+      "Public Affairs Director, GRACE, 2023-2025.",
       "Politisk konsulent, SMVDanmark, 2022.",
-      "Junior Consultant, GRACE Public Affairs, 2017-2021.",
-      "Lærermedhjælper, Høje Kolstrup Skole, 2015-2016."
+      "Junior Consultant, GRACE, 2017-2021.",
+      "Lærermedhjælper, Høje Kolstrup Skole, 2015-2016.",
+      "Studentermedarbejder , Radikale Venstre, 2015-2018."
     ],
     "email": "thomas.rohden@ft.dk",
     "phone": "+45 6162 3912",
@@ -13341,7 +13375,7 @@
       "Produktionsmedhjælper, Aluline, Tølløse, 1993-1995.",
       "Avisbud, Tølløse, 1991-1993."
     ],
-    "email": "min@mgtp.dk",
+    "email": "jeppe.bruus@ft.dk",
     "phone": "+45 3333 3350",
     "website_url": null,
     "address": "Ministeriet for Grøn Trepart, Vester Voldgade 123 1552 København V",
@@ -21516,7 +21550,7 @@
       "Familiebehandler, familieterapeut, Skansen Familiebehandling, Frederikshavn Kommune, 2013-2026.",
       "Daglig leder, Børnehaven Lærkereden og Børnehaven Bølgen, Frederikshavn Kommune, 2010-2013.",
       "Fritidspædagog, gadeteamsmedarbejder, Ungdomsgården Håndbæk, Frederikshavn, 2008-2010.",
-      "Socialpædagod, Døgninstitution Minibo i Frederikshavn, 2006-2008."
+      "Socialpædagog, Døgninstitution Minibo i Frederikshavn, 2006-2008."
     ],
     "email": "christina.lykke@ft.dk",
     "phone": "+45 6162 3870",
@@ -25183,7 +25217,7 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [],
-    "role": "Erhvervsjurist",
+    "role": "Jurist",
     "constituency": "Folketingsmedlem for Venstre i Østjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Østjyllands Storkreds",
     "constituency_history": [
@@ -25199,12 +25233,12 @@
       }
     ],
     "educations": [
-      "Bachelor i jura, Aarhus Universitet.",
-      "Danish Badminton College.",
       "Persondatabeskyttelse, København Universitet.",
-      "Hhx, Skanderborg-Odder Center for Uddannelse.",
       "Kandidat i jura, Aarhus Universitet.",
-      "Markedsføringsøkonom, Erhvervsakademi Aarhus."
+      "Bachelor i jura, Aarhus Universitet.",
+      "Markedsføringsøkonom, Erhvervsakademi Aarhus.",
+      "Hhx, Skanderborg-Odder Center for Uddannelse.",
+      "Danish Badminton College."
     ],
     "occupations": [
       "Erhvervsjurist med speciale i GDPR og Compliance."
