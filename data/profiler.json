@@ -11464,7 +11464,7 @@
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
     "committees": [],
-    "role": "Anastasia Milthers (RV)",
+    "role": "Studerende",
     "constituency": "Folketingsmedlem for Radikale Venstre i Fyns Storkreds fra 24. marts 2026.",
     "storkreds": "Fyns Storkreds",
     "constituency_history": [
@@ -11479,8 +11479,16 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Bachelor i statskundskab, Københavns Universitet, 2025.",
+      "Student, Roskilde Katedralskole, 2021."
+    ],
+    "occupations": [
+      "Studentermedhjælper, Dansk Erhverv, 2023-2024.",
+      "Studentermedhjælper, Danske Service, 2023-2024.",
+      "Studentermedhjælper, Lægeforeningen, 2022-2023.",
+      "Kundeservicemedarbejder, OrderYOYO, 2021-2022."
+    ],
     "email": "anastasia.milthers@ft.dk",
     "phone": "+45 3337 4714",
     "website_url": null,
