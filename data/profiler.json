@@ -11128,7 +11128,7 @@
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
     "committees": [],
-    "role": "Steffen Holme Helledie (RV)",
+    "role": "International virksomhedskonsulent",
     "constituency": "Folketingsmedlem for Radikale Venstre i Nordjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordjyllands Storkreds",
     "constituency_history": [
@@ -11143,10 +11143,24 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "MSc i Innovation Management , Aalborg Universitet og Graduate University of Chinese Academy of Sciences, 2012-2014.",
+      "Bachelor i erhvervsøkonomi, Aalborg Universitet, 2009-2012.",
+      "Hhx, Hjørring Handelsskole, 2006-2009.",
+      "Folkeskole, Lundergårdskolen, Hjørring, 1995-2005."
+    ],
+    "occupations": [
+      "International virksomhedskonsulent, NordDanmarks EU-kontor fra 2023.",
+      "Medstifter, Okklu, 2017-2022.",
+      "Lektor, Professionshøjskolen UCN, Aalborg, 2015-2023.",
+      "Akademisk medarbejder, Sino-Danish Center for Education and Research, 2014-2015.",
+      "Business Development Manager (praktikophold), Hebei International Trading, Kina, 2013-2014.",
+      "Driftsoperatør, Sixt Biludlejning, 2012.",
+      "Studenterunderviser, Aalborg Universitet, 2010-2012.",
+      "Salgsassistent, Føtex, 2006-2015."
+    ],
     "email": "steffen.helledie@ft.dk",
-    "phone": "+45 3337 4705",
+    "phone": "+45 6162 4010",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -20650,7 +20664,7 @@
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
     "committees": [],
-    "role": "Nanna Bonde (SF)",
+    "role": "Sociolog",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Københavns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Storkreds",
     "constituency_history": [
@@ -20665,10 +20679,18 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Kandidat i sociologi, Københavns Universitet, 2022.",
+      "Bachelor i sociologi, Københavns Universitet, 2020.",
+      "Student, Tønder Gymnasium, 2013."
+    ],
+    "occupations": [
+      "Local Engagement Manager, European Energy, 2022-2026.",
+      "Junior Consultant, GRACE Public Affairs, 2017-2021.",
+      "Phoner, HK Danmark, 2014-2015."
+    ],
     "email": "nanna.bonde@ft.dk",
-    "phone": "+45 3337 4436",
+    "phone": "+45 6162 3905",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
