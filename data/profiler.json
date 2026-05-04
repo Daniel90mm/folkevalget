@@ -540,64 +540,6 @@
     "recent_votes": []
   },
   {
-    "id": 21354,
-    "name": "Nadja Natalie Isaksen",
-    "first_name": "Nadja Natalie",
-    "last_name": "Isaksen",
-    "party": "Borgernes Parti – Lars Boje Mathiesen",
-    "party_short": "BP",
-    "current_party": "Borgernes Parti – Lars Boje Mathiesen",
-    "current_party_short": "BP",
-    "committees": [],
-    "role": "Cand.jur.",
-    "constituency": "Folketingsmedlem for Borgernes Parti i Sydjyllands Storkreds fra 24. marts 2026.",
-    "storkreds": "Sydjyllands Storkreds",
-    "constituency_history": [
-      "Folketingsmedlem for Borgernes Parti i Sydjyllands Storkreds fra 24. marts 2026."
-    ],
-    "party_history": [
-      {
-        "party": "Borgernes Parti – Lars Boje Mathiesen",
-        "party_short": "BP",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
-    "educations": [
-      "Cand.jur., København Universitet, 2017-2020.",
-      "Ba.jur., Aalborg Universitet, 2014-2017.",
-      "Hhx, Handelsgymnasiet Aalborg, 2011-2014."
-    ],
-    "occupations": [],
-    "email": "nadja.isaksen@ft.dk",
-    "phone": "+45 6162 4011",
-    "website_url": null,
-    "address": "Folketinget, Christiansborg 1218 København K",
-    "member_url": null,
-    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
-    "photo_source_url": null,
-    "photo_source_name": null,
-    "photo_photographer": null,
-    "photo_credit_text": null,
-    "member_since_date": "2026-03-24",
-    "member_since_year": 2026,
-    "seniority_label": "Under 1 aar i Folketinget",
-    "seniority_years": 0,
-    "seniority_months": 1,
-    "seniority_tag": "newcomer",
-    "votes_total": 0,
-    "votes_for": 0,
-    "votes_against": 0,
-    "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": null,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
-    "recent_votes": []
-  },
-  {
     "id": 18724,
     "name": "Lars Boje Mathiesen",
     "first_name": "Lars Boje",
@@ -7247,7 +7189,7 @@
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
     "committees": [],
-    "role": "Rune Kristensen (KF)",
+    "role": "Chefkommunikationskonsulent",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Sjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
     "constituency_history": [
@@ -7262,8 +7204,26 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Engelsk (proficient user (C1), Common European Framework, CEFR), Virksomhedsskolen, 2018.",
+      "Finansiel forretningsforståelse, Aalborg Universitet (AAU Executive), 2017.",
+      "Kandidat i statskundskab, Københavns Universitet, 2012.",
+      "Bachelor i statskundskab, Syddansk Universitet, 2007.",
+      "Hhx, Lollands Handelsgymnasium, 2002.",
+      "Efterskole, Humble Efterskole, 1999.",
+      "Folkeskole, Halsted-Aunede Centralskole, 1998.",
+      "Lederuddannelse, Det Danske Spejderkorps , 1996."
+    ],
+    "occupations": [
+      "Senior Public Affairs Advisor og chefkommunikationskonsulent, Danske Bank, 2016-2026.",
+      "Seniorrådgiver, Policy Group, 2014-2016.",
+      "Account Director og PR Advisor, Integral, 2012-2014.",
+      "Ansat i Pressetjenesten på Christiansborg, Det Konservative Folkeparti, 2010-2011.",
+      "Politisk assistent for mf Naser Khader, Det Konservative Folkeparti, Folketinget, 2010.",
+      "Kommunikations- og pressekoordinator, Etnisk Rådgivning, 2007-2010.",
+      "It-, web- og kontoransvarlig, Odense Konservative Vælgerforening, 2004-2007.",
+      "Klubmedarbejder, Ungdomsskolen, 1996-2003."
+    ],
     "email": "rune.kristensen@ft.dk",
     "phone": "+45 3337 4244",
     "website_url": null,
@@ -22640,6 +22600,78 @@
     "occupations": [],
     "email": "jacob.harris@ft.dk",
     "phone": "+45 3337 3270",
+    "website_url": null,
+    "address": "Folketinget, Christiansborg 1218 København K",
+    "member_url": null,
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
+    "photo_source_url": null,
+    "photo_source_name": null,
+    "photo_photographer": null,
+    "photo_credit_text": null,
+    "member_since_date": "2026-03-24",
+    "member_since_year": 2026,
+    "seniority_label": "Under 1 aar i Folketinget",
+    "seniority_years": 0,
+    "seniority_months": 1,
+    "seniority_tag": "newcomer",
+    "votes_total": 0,
+    "votes_for": 0,
+    "votes_against": 0,
+    "votes_neither": 0,
+    "votes_absent": 0,
+    "attendance_pct": null,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
+    "recent_votes": []
+  },
+  {
+    "id": 21354,
+    "name": "Nadja Natalie Isaksen",
+    "first_name": "Nadja Natalie",
+    "last_name": "Isaksen",
+    "party": "Uden for folketingsgrupperne - Nadja Natalie Isaksen",
+    "party_short": "UFG",
+    "current_party": "Uden for folketingsgrupperne - Nadja Natalie Isaksen",
+    "current_party_short": "UFG",
+    "committees": [],
+    "role": "Cand.jur.",
+    "constituency": "Folketingsmedlem for Borgernes Parti i Sydjyllands Storkreds, 24. marts 2026 – 3. maj 2026.",
+    "storkreds": "Sydjyllands Storkreds",
+    "constituency_history": [
+      "Folketingsmedlem for Borgernes Parti i Sydjyllands Storkreds, 24. marts 2026 – 3. maj 2026.",
+      "Folketingsmedlem for Uden for folketingsgrupperne i Sydjyllands Storkreds fra 4. maj 2026."
+    ],
+    "party_history": [
+      {
+        "party": "Uden for folketingsgrupperne - Nadja Natalie Isaksen",
+        "party_short": "UFG",
+        "start_date": "2026-05-04",
+        "end_date": "2026-10-06",
+        "active": true
+      },
+      {
+        "party": "Borgernes Parti – Lars Boje Mathiesen",
+        "party_short": "BP",
+        "start_date": "2026-03-24",
+        "end_date": "2026-05-03",
+        "active": false
+      }
+    ],
+    "educations": [
+      "Cand.jur., København Universitet, 2017-2020.",
+      "Ba.jur., Aalborg Universitet, 2014-2017.",
+      "Hhx, Handelsgymnasiet Aalborg, 2011-2014.",
+      "Folkeskolens afgangseksamen, Herningvej Skole, Aalborg, 2001-2011."
+    ],
+    "occupations": [
+      "Juridisk fuldmægtig, Fødevarestyrelsen fra 2021.",
+      "Assisterende salgsassistent, Buch Cophenhagen, 2018-2020.",
+      "Tjener, Café Visa, Aalborg, 2015-2017.",
+      "Salgsassistent, House of Wear ApS, 2010-2014."
+    ],
+    "email": "nadja.isaksen@ft.dk",
+    "phone": "+45 6162 4011",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,

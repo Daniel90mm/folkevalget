@@ -18,10 +18,9 @@
     "id": 21332,
     "name": "Borgernes Parti – Lars Boje Mathiesen",
     "short_name": "BP",
-    "member_count": 2,
+    "member_count": 1,
     "member_ids": [
-      18724,
-      21354
+      18724
     ]
   },
   {
@@ -331,6 +330,15 @@
     "member_count": 1,
     "member_ids": [
       21374
+    ]
+  },
+  {
+    "id": 21407,
+    "name": "Uden for folketingsgrupperne - Nadja Natalie Isaksen",
+    "short_name": "UFG",
+    "member_count": 1,
+    "member_ids": [
+      21354
     ]
   },
   {
