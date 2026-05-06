@@ -26,13 +26,16 @@
     ],
     "educations": [
       "Kandidat i bæredygtighedsvidenskab, Lund Universitet, Sverige, 2022-2025.",
+      "Røst Talerskole, København, 2020.",
       "Bachelor i miljøplanlægning, Roskilde Universitet, 2019-2022.",
+      "Politikens Debattør- og Kritikerskole, København, 2019.",
       "Stx, Silkeborg Gymnasium, 2014-2017."
     ],
     "occupations": [
       "Klimapolitisk konsulent, Alternativet, 2025.",
       "Grøn politisk rådgiver, Alternativet, 2025-2026.",
-      "Valgfagslærer i retorik, Krogerup Højskole, 2023-2025."
+      "Valgfagslærer i retorik, Krogerup Højskole, 2023-2025.",
+      "Studentermedhjælper, FOF, København, 2021."
     ],
     "email": "anna.bjerre@ft.dk",
     "phone": "+45 3337 4820",
@@ -7668,7 +7671,7 @@
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
     "committees": [],
-    "role": "Sofie Therese Svendsen",
+    "role": "Studerende",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Nordjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordjyllands Storkreds",
     "constituency_history": [
@@ -7683,8 +7686,15 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Bachelor i kommunikation og digitale medier, Aalborg Universitet fra 2024.",
+      "Student, Aalborg Gymnasium, 2018-2021.",
+      "Folkeskole, Gug Skole, Aalborg."
+    ],
+    "occupations": [
+      "Salgsrådgiver, H&M fra 2021.",
+      "Poder, Region Nordjylland, 2021-2022."
+    ],
     "email": "sofie.svendsen@ft.dk",
     "phone": "+45 3337 4205",
     "website_url": null,
@@ -17972,6 +17982,13 @@
       "Folketingsmedlem for Socialdemokratiet i Vestjyllands Storkreds fra 5. juni 2019."
     ],
     "party_history": [
+      {
+        "party": "Socialdemokratiet",
+        "party_short": "S",
+        "start_date": "2026-05-12",
+        "end_date": "2026-10-06",
+        "active": false
+      },
       {
         "party": "Socialdemokratiet",
         "party_short": "S",
