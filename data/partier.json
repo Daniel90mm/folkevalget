@@ -163,7 +163,7 @@
     "id": 21326,
     "name": "Moderaterne",
     "short_name": "M",
-    "member_count": 17,
+    "member_count": 16,
     "member_ids": [
       57,
       145,
@@ -171,7 +171,6 @@
       20377,
       20378,
       20380,
-      20384,
       20385,
       20386,
       20389,
@@ -216,7 +215,7 @@
     "id": 21321,
     "name": "Socialdemokratiet",
     "short_name": "S",
-    "member_count": 48,
+    "member_count": 47,
     "member_ids": [
       12,
       74,
@@ -232,7 +231,6 @@
       224,
       244,
       260,
-      273,
       286,
       351,
       1619,

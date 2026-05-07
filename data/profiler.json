@@ -3102,8 +3102,18 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Cand.scient.adm., Roskilde Universitet, 2023.",
+      "Samfundsvidenskabelig bachelor, Roskilde Universitet, 2019.",
+      "Hf fjernstudie, 2015."
+    ],
+    "occupations": [
+      "Pleje af familiemedlem, 2021-2022.",
+      "Lærervikar, 2014-2018.",
+      "Ansat i transportvirksomhed, 2011-2014.",
+      "Køkkenleder, 2007-2011.",
+      "Butiksslagter og tjener, 2004-2007."
+    ],
     "email": "julie.jacobsen@ft.dk",
     "phone": "+45 6162 3962",
     "website_url": "https://danskfolkeparti.dk/politikerne/julie-jacobsen/",
@@ -7688,15 +7698,14 @@
     ],
     "educations": [
       "Bachelor i kommunikation og digitale medier, Aalborg Universitet fra 2024.",
-      "Student, Aalborg Gymnasium, 2018-2021.",
+      "Stx, Aalborghus Gymnasium, 2018-2021.",
       "Folkeskole, Gug Skole, Aalborg."
     ],
     "occupations": [
-      "Salgsrådgiver, H&M fra 2021.",
-      "Poder, Region Nordjylland, 2021-2022."
+      "Lærervikar, Nr. Uttrup Skole, 2022-2026."
     ],
     "email": "sofie.svendsen@ft.dk",
-    "phone": "+45 3337 4205",
+    "phone": "+45 6162 4027",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -10143,66 +10152,6 @@
         "vedtaget": false
       }
     ]
-  },
-  {
-    "id": 20384,
-    "name": "Nanna W. Gotfredsen",
-    "first_name": "Nanna W.",
-    "last_name": "Gotfredsen",
-    "party": "Moderaterne",
-    "party_short": "M",
-    "current_party": "Moderaterne",
-    "current_party_short": "M",
-    "committees": [],
-    "role": "Gadejurist",
-    "constituency": "Folketingsmedlem for Moderaterne i Københavns Storkreds, 1. november 2022 – 24. marts 2026.",
-    "storkreds": "Københavns Storkreds",
-    "constituency_history": [
-      "Folketingsmedlem for Moderaterne i Københavns Storkreds, 1. november 2022 – 24. marts 2026."
-    ],
-    "party_history": [
-      {
-        "party": "Moderaterne",
-        "party_short": "M",
-        "start_date": "2025-10-07",
-        "end_date": null,
-        "active": true
-      }
-    ],
-    "educations": [
-      "Cand. Jur., Københavns Universitet, 2000."
-    ],
-    "occupations": [
-      "Koordinator, BrugerForeningen – foreningen af aktive stofbrugere, 2000-2001.",
-      "Medstifter og leder, Gadejuristen fra 1999.",
-      "Projektkoordinator, Vilstrup Instituttet (Vilstrup Research), 1989-1999."
-    ],
-    "email": null,
-    "phone": null,
-    "website_url": null,
-    "address": null,
-    "member_url": "https://www.ft.dk/medlemmer/mf/n/nanna-w-gotfredsen",
-    "photo_url": "photos/20384.jpg",
-    "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/m/nanna-w,-d-,-gotfredsen/nanna_w_gotfredsen_500.jpg",
-    "photo_source_name": "Folketinget",
-    "photo_photographer": "Marie Hald",
-    "photo_credit_text": "Folketinget / Fotograf Marie Hald",
-    "member_since_date": "2026-03-24",
-    "member_since_year": 2026,
-    "seniority_label": "Under 1 aar i Folketinget",
-    "seniority_years": 0,
-    "seniority_months": 1,
-    "seniority_tag": "newcomer",
-    "votes_total": 0,
-    "votes_for": 0,
-    "votes_against": 0,
-    "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": null,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
-    "recent_votes": []
   },
   {
     "id": 20385,
@@ -14896,8 +14845,8 @@
     "last_name": "Husted",
     "party": "Socialdemokratiet",
     "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
+    "current_party": null,
+    "current_party_short": null,
     "committees": [],
     "role": "Lektor, selvstændigt erhvervsdrivende",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Nordjyllands Storkreds, 1. november 2022 – 24. marts 2026.",
@@ -14911,8 +14860,8 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2025-10-07",
-        "end_date": null,
-        "active": true
+        "end_date": "2026-03-24",
+        "active": false
       }
     ],
     "educations": [
@@ -21988,7 +21937,7 @@
       "Vikar som sygeplejerske (pt. orlov), Rigshospitalet, København fra 2023.",
       "Hjemmesygeplejerske (fast og senere vikar), Gladsaxe Kommune fra 2017.",
       "Hjemmesygeplejerske, Frederiksberg Kommune, 2015-2016.",
-      "Klinisk vejleder, klinisk sygeplejespecialist, Rigshospitalet, København, 2004-2015.",
+      "Sygeplejerske, klinisk vejleder, klinisk sygeplejespecialist, Rigshospitalet, København, 2004-2015.",
       "Klinisk monitor, Coloplast A/S, 2002-2004.",
       "Sygeplejerske, Rigshospitalet, København, 1999-2002."
     ],
