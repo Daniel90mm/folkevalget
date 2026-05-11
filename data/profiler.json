@@ -1982,7 +1982,7 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [],
-    "role": "Ulrik Knudsen (DD)",
+    "role": "Erhvervschef",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Sydjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Sydjyllands Storkreds",
     "constituency_history": [
@@ -1997,10 +1997,23 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Bestyrelsesuddannelse, Aarhus Universitet, 2018.",
+      "HD i regnskab og økonomistyring, Syddansk Universitet, 2005.",
+      "Hhx, Vejle Handelsskole, 1998.",
+      "Folkeskole, Ødsted Skole, 1995."
+    ],
+    "occupations": [
+      "Erhvervschef, AL Sydbank, 2019-2026.",
+      "Seniorerhvervsrådgiver, AL Sydbank, 2018-2019.",
+      "Acquisition Manager, Danske Bank, 2014-2018.",
+      "Erhvervskundechef, Danske Bank, 2008-2014.",
+      "Erhvervsrådgiver, Danske Bank, 2003-2008.",
+      "Erhvervstrainee, Danske Bank, 2001-2003.",
+      "Bankelev, BG Bank, 1999-2001."
+    ],
     "email": "ulrik.knudsen@ft.dk",
-    "phone": "+45 3337 5737",
+    "phone": "+45 6162 3948",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -8596,8 +8609,15 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Student, Thisted Gymnasium, 1987-1990."
+    ],
+    "occupations": [
+      "Selvstændig, Boligudlejning Thisted fra 2017.",
+      "Privatdirektør, Viborg, Skive, Aars og Thisted, Danske Bank, 2012-2017.",
+      "Filialdirektør, Thisted, Danske Bank, 2007-2012.",
+      "Pensionskonsulent, Danske Bank, 2005-2007."
+    ],
     "email": "peter1.larsen@ft.dk",
     "phone": "+45 3337 4965",
     "website_url": null,
@@ -22552,7 +22572,7 @@
     "current_party": "Uden for folketingsgrupperne - Jacob Harris",
     "current_party_short": "UFG",
     "committees": [],
-    "role": "Jacob Harris (UFG)",
+    "role": "Selvstændig montør",
     "constituency": "Folketingsmedlem for Borgernes Parti i Sjællands Storkreds, 24. marts 2026 – 28. marts 2026.",
     "storkreds": "Sjællands Storkreds",
     "constituency_history": [
@@ -22575,8 +22595,16 @@
         "active": false
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Blikkenslager, Tec Gladsaxe, 2004-2008."
+    ],
+    "occupations": [
+      "Selvstændig montør og sælger, HIC byg ApS, 2025-2026.",
+      "Teamleder, NNF Formandssekretariatet, 2022-2025.",
+      "Organizer, HK Handel Formandsekretariatet, 2020-2022.",
+      "Faglig sekretær, Dansk Metal Hovedstaden, 2014-2020.",
+      "Blikkenslager, Poul Damgaard vvs entreprenør, Euroblik, 2004-2014."
+    ],
     "email": "jacob.harris@ft.dk",
     "phone": "+45 3337 3270",
     "website_url": null,
@@ -24828,7 +24856,7 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [],
-    "role": "Trine Jepsen (V)",
+    "role": "Citymanager",
     "constituency": "Folketingsmedlem for Venstre i Vestjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
     "constituency_history": [
@@ -24843,8 +24871,26 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Diplomuddannelse i Ledelse, Kunst & kultur, De danske scenekunstskoler, 2017-2018."
+    ],
+    "occupations": [
+      "Citymanager, Herning City fra 2025.",
+      "Administrerende direktør, Trine Jepsen A/S fra 2021.",
+      "CEO, Schackenborg Fonden, 2019-2021.",
+      "Kunstnerisk konsulent, Dansk Talentakademi, 2016-2019.",
+      "Leder af Musical & Teater Aspiranterne, Dansk Talentakademi, 2015-2016.",
+      "Administrerende direktør, Fonden Nørre Vosborg, 2015-2019.",
+      "Koordinator og instruktør, Talentkuren, Dansk Talentakademi, 2014-2015.",
+      "Vært og tilrettelægger af portrætprogrammet Vores Jul, TV Midtvest, 2014.",
+      "Selvstændig, workshops og foredrag - stemme og kommunikation, 2013-2019.",
+      "Medvirkende i opsætninger af Cats, Sound of Music (lead), My Fair Lady (lead), Evita (lead), The Visitors (lead) og The Little Mermaid, 2011-2014.",
+      "Leder af Musical & Teater, Dansk Talentakademi, 2011-2016.",
+      "Tilrettelægger og vært, Skala Fms Morgenshow - Morgenministeriet, Syddanske Medier, 2008-2011.",
+      "Tv-vært - Bonde søger Brud, SBS, Kanal 4, 2007-2008.",
+      "Projektleder, Fagbladsgruppen, 2007.",
+      "Vært - Quiz Direkte, TV2, 2007-2008."
+    ],
     "email": "trine.jepsen@ft.dk",
     "phone": "+45 3337 4589",
     "website_url": null,
