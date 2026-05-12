@@ -8,7 +8,13 @@
     "party_short": "ALT",
     "current_party": "Alternativet",
     "current_party_short": "ALT",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      }
+    ],
     "role": "Klimaretfærdighedsaktivist",
     "constituency": "Folketingsmedlem for Alternativet i Nordjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordjyllands Storkreds",
@@ -421,7 +427,13 @@
     "party_short": "ALT",
     "current_party": "Alternativet",
     "current_party_short": "ALT",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Sekretariatsmedarbejder",
     "constituency": "Folketingsmedlem for Alternativet i Sjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
@@ -1065,7 +1077,18 @@
     "party_short": "DD",
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Arbejdsmiljøkonsulent",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Fyns Storkreds fra 18. august 2022.",
     "storkreds": "Fyns Storkreds",
@@ -1389,7 +1412,13 @@
     "party_short": "DD",
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "Fhv. selvstændigt erhvervsdrivende",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Vestjyllands Storkreds fra 18. august 2022.",
     "storkreds": "Vestjyllands Storkreds",
@@ -1698,7 +1727,13 @@
     "party_short": "DD",
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Sygeplejerske",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Nordsjællands Storkreds fra 1. november 2022.",
     "storkreds": "Nordsjællands Storkreds",
@@ -1981,7 +2016,13 @@
     "party_short": "DD",
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Erhvervschef",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Sydjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Sydjyllands Storkreds",
@@ -2644,7 +2685,18 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Forlægger",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Fyns Storkreds fra 15. september 2011.",
     "storkreds": "Fyns Storkreds",
@@ -2914,7 +2966,13 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21391,
+        "name": "Tingsekretærer",
+        "short_name": "Tingsekretærer"
+      }
+    ],
     "role": "Selvstændig",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Københavns Amtskreds, 20. november 2001 – 13. november 2007.",
     "storkreds": "Københavns Amtskreds",
@@ -3442,7 +3500,13 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Sydjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Sydjyllands Storkreds",
@@ -3592,7 +3656,13 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Malte Larsen (DF)",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Sjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
@@ -3656,7 +3726,23 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
+      {
+        "id": 21392,
+        "name": "Folketingets Præsidium",
+        "short_name": "FPR"
+      }
+    ],
     "role": "Formand for Dansk Folkeparti , cand.jur.",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Københavns Omegns Storkreds, 1. november 2022 – 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -3937,7 +4023,23 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Lærer",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Nordsjællands Storkreds fra 7. februar 2023.",
     "storkreds": "Nordsjællands Storkreds",
@@ -4011,7 +4113,13 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "Juridisk konsulent",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Nordjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordjyllands Storkreds",
@@ -4234,7 +4342,13 @@
     "party_short": "EL",
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Faglært tjener og selvstændig",
     "constituency": "Folketingsmedlem for Enhedslisten i Nordsjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordsjællands Storkreds",
@@ -4458,7 +4572,13 @@
     "party_short": "EL",
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Eva Flyvholm (EL)",
     "constituency": "Folketingsmedlem for Enhedslisten i Sjællands Storkreds, 18. juni 2015 – 1. november 2022.",
     "storkreds": "Sjællands Storkreds",
@@ -4523,7 +4643,13 @@
     "party_short": "EL",
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      }
+    ],
     "role": "Pædagog",
     "constituency": "Folketingsmedlem for Enhedslisten i Nordjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Nordjyllands Storkreds",
@@ -4838,7 +4964,13 @@
     "party_short": "EL",
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Politik- og pressechef",
     "constituency": "Folketingsmedlem for Enhedslisten i Sjællands Storkreds, 1. november 2022 – 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
@@ -5580,7 +5712,13 @@
     "party_short": "EL",
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Enhedslisten i Fyns Storkreds fra 5. juni 2019.",
     "storkreds": "Fyns Storkreds",
@@ -6256,7 +6394,18 @@
     "party_short": "KF",
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Formand for Statsrevisorerne",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Nordsjællands Storkreds fra 18. juni 2015.",
     "storkreds": "Nordsjællands Storkreds",
@@ -6409,7 +6558,13 @@
     "party_short": "KF",
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Birgitte Bergman (KF)",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Nordsjællands Storkreds, 5. juni 2019 – 1. november 2022.",
     "storkreds": "Nordsjællands Storkreds",
@@ -6536,7 +6691,13 @@
     "party_short": "KF",
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Københavns Storkreds fra 1. november 2022.",
     "storkreds": "Københavns Storkreds",
@@ -7214,7 +7375,13 @@
     "party_short": "KF",
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "Chefkommunikationskonsulent",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Sjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
@@ -7632,7 +7799,13 @@
     "party_short": "KF",
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Anders Storgaard (KF)",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Københavns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Storkreds",
@@ -8175,7 +8348,18 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21392,
+        "name": "Folketingets Præsidium",
+        "short_name": "FPR"
+      }
+    ],
     "role": "Bestyrelsesformand, investor og iværksætter",
     "constituency": "Folketingsmedlem for Liberal Alliance i Sjællands Storkreds fra 1. november 2022.",
     "storkreds": "Sjællands Storkreds",
@@ -8453,7 +8637,13 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Ingeniør",
     "constituency": "Folketingsmedlem for Liberal Alliance i Vestjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
@@ -8523,7 +8713,13 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Liberal Alliance i Nordjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Nordjyllands Storkreds",
@@ -8782,7 +8978,23 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      },
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Liberal Alliance i Københavns Storkreds fra 1. november 2022.",
     "storkreds": "Københavns Storkreds",
@@ -9129,7 +9341,13 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Mads Strange (LA)",
     "constituency": "Folketingsmedlem for Liberal Alliance i Københavns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Storkreds",
@@ -10182,7 +10400,13 @@
     "party_short": "M",
     "current_party": "Moderaterne",
     "current_party_short": "M",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "Selvstændig",
     "constituency": "Folketingsmedlem for Moderaterne i Sjællands Storkreds fra 1. november 2022.",
     "storkreds": "Sjællands Storkreds",
@@ -10661,7 +10885,23 @@
     "party_short": "M",
     "current_party": "Moderaterne",
     "current_party_short": "M",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Moderaterne i Nordjyllands Storkreds fra 24. november 2022.",
     "storkreds": "Nordjyllands Storkreds",
@@ -10721,7 +10961,13 @@
     "party_short": "M",
     "current_party": "Moderaterne",
     "current_party_short": "M",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Læge",
     "constituency": "Folketingsmedlem for Moderaterne i Københavns Omegns Storkreds fra 1. november 2022.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -11066,7 +11312,13 @@
     "party_short": "RV",
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "International virksomhedskonsulent",
     "constituency": "Folketingsmedlem for Radikale Venstre i Nordjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordjyllands Storkreds",
@@ -11348,7 +11600,13 @@
     "party_short": "RV",
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Ph.d., forsker",
     "constituency": "Folketingsmedlem for Radikale Venstre i Københavns Omegns Storkreds fra 1. maj 2023.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -11478,7 +11736,18 @@
     "party_short": "RV",
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "Cand.polit.",
     "constituency": "Folketingsmedlem for Radikale Venstre i Københavns Storkreds fra 5. juni 2019.",
     "storkreds": "Københavns Storkreds",
@@ -11758,7 +12027,13 @@
     "party_short": "RV",
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Thomas Rohden (RV)",
     "constituency": "Folketingsmedlem for Radikale Venstre i Københavns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Storkreds",
@@ -12941,7 +13216,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Fyns Storkreds fra 15. september 2011.",
     "storkreds": "Fyns Storkreds",
@@ -13800,7 +14081,28 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      },
+      {
+        "id": 21391,
+        "name": "Tingsekretærer",
+        "short_name": "Tingsekretærer"
+      },
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sydjyllands Storkreds fra 13. november 2007.",
     "storkreds": "Sydjyllands Storkreds",
@@ -15036,7 +15338,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Nordsjællands Storkreds fra 1. november 2022.",
     "storkreds": "Nordsjællands Storkreds",
@@ -15254,7 +15562,23 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
+      {
+        "id": 21392,
+        "name": "Folketingets Præsidium",
+        "short_name": "FPR"
+      }
+    ],
     "role": "1. næstformand i Folketinget, næstformand for Statsrevisorerne, havnearbejder",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Østjyllands Storkreds fra 13. november 2007.",
     "storkreds": "Østjyllands Storkreds",
@@ -15406,7 +15730,23 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      },
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Vestjyllands Storkreds fra 13. november 2007.",
     "storkreds": "Vestjyllands Storkreds",
@@ -16095,7 +16435,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Nordjyllands Storkreds fra 15. september 2011.",
     "storkreds": "Nordjyllands Storkreds",
@@ -17228,7 +17574,23 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sydjyllands Storkreds fra 18. juni 2015.",
     "storkreds": "Sydjyllands Storkreds",
@@ -17489,7 +17851,7 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [],
-    "role": null,
+    "role": "Gymnasielærer",
     "constituency": null,
     "storkreds": null,
     "constituency_history": [],
@@ -17504,22 +17866,22 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "eva.mejnertz@ft.dk",
+    "phone": "+45 3337 4056",
     "website_url": null,
-    "address": null,
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": null,
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": null,
-    "member_since_year": null,
-    "seniority_label": null,
-    "seniority_years": null,
-    "seniority_months": null,
-    "seniority_tag": null,
+    "member_since_date": "2026-05-12",
+    "member_since_year": 2026,
+    "seniority_label": "Under 1 aar i Folketinget",
+    "seniority_years": 0,
+    "seniority_months": 0,
+    "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
     "votes_against": 0,
@@ -17694,7 +18056,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Nordjyllands Storkreds fra 13. november 2007.",
     "storkreds": "Nordjyllands Storkreds",
@@ -18008,7 +18376,18 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "Rådgiver",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Vestjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Vestjyllands Storkreds",
@@ -18225,7 +18604,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sydjyllands Storkreds fra 21. marts 2013.",
     "storkreds": "Sydjyllands Storkreds",
@@ -18695,7 +19080,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Lektor",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sjællands Storkreds fra 5. juni 2019.",
     "storkreds": "Sjællands Storkreds",
@@ -19465,7 +19856,18 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21391,
+        "name": "Tingsekretærer",
+        "short_name": "Tingsekretærer"
+      },
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Lærer og leder",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sydjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Sydjyllands Storkreds",
@@ -19773,7 +20175,18 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Bornholms Storkreds fra 18. juni 2015.",
     "storkreds": "Bornholms Storkreds",
@@ -19993,7 +20406,13 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Københavns Omegns Storkreds fra 1. november 2022.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -20052,7 +20471,13 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Afdelingsformand",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Østjyllands Storkreds fra 8. august 2016.",
     "storkreds": "Østjyllands Storkreds",
@@ -20203,7 +20628,23 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21391,
+        "name": "Tingsekretærer",
+        "short_name": "Tingsekretærer"
+      },
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Nordjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Nordjyllands Storkreds",
@@ -20353,7 +20794,18 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "Cand.scient.soc.",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Københavns Storkreds fra 1. november 2022.",
     "storkreds": "Københavns Storkreds",
@@ -20580,7 +21032,13 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Miljøingeniør, ph.d.",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Nordsjællands Storkreds fra 1. november 2022.",
     "storkreds": "Nordsjællands Storkreds",
@@ -20736,7 +21194,18 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Sjællands Storkreds fra 5. juni 2019.",
     "storkreds": "Sjællands Storkreds",
@@ -21201,7 +21670,23 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
+      {
+        "id": 21392,
+        "name": "Folketingets Præsidium",
+        "short_name": "FPR"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Fyns Storkreds fra 18. juni 2015.",
     "storkreds": "Fyns Storkreds",
@@ -23470,7 +23955,13 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Europaminister",
     "constituency": "Folketingsmedlem for Venstre i Nordjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Nordjyllands Storkreds",
@@ -23900,7 +24391,13 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Minister for byer og landdistrikter, kirkeminister og minister for nordisk samarbejde",
     "constituency": "Folketingsmedlem for Venstre i Sjællands Storkreds fra 5. juni 2019.",
     "storkreds": "Sjællands Storkreds",
@@ -24359,7 +24856,18 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21392,
+        "name": "Folketingets Præsidium",
+        "short_name": "FPR"
+      }
+    ],
     "role": "Folketingets formand",
     "constituency": "Folketingsmedlem for Venstre i Vestjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Vestjyllands Storkreds",
@@ -24592,7 +25100,13 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Fhv. advokat (H)",
     "constituency": "Folketingsmedlem for Venstre i Nordjyllands Storkreds fra 15. september 2011.",
     "storkreds": "Nordjyllands Storkreds",
@@ -24753,7 +25267,13 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Minister for fødevarer, landbrug og fiskeri",
     "constituency": "Folketingsmedlem for Venstre i Sjællands Storkreds fra 13. november 2007.",
     "storkreds": "Sjællands Storkreds",
@@ -24979,7 +25499,13 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
+      }
+    ],
     "role": "Viceskoleinspektør",
     "constituency": "Folketingsmedlem for Venstre i Bornholms Storkreds fra 13. november 2007.",
     "storkreds": "Bornholms Storkreds",
@@ -25291,7 +25817,18 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "Økonomiminister",
     "constituency": "Folketingsmedlem for Venstre i Sydjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Sydjyllands Storkreds",
@@ -25418,7 +25955,18 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "Indenrigs- og sundhedsminister",
     "constituency": "Folketingsmedlem for Venstre i Nordsjællands Storkreds fra 13. november 2007.",
     "storkreds": "Nordsjællands Storkreds",
@@ -25573,7 +26121,13 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21391,
+        "name": "Tingsekretærer",
+        "short_name": "Tingsekretærer"
+      }
+    ],
     "role": "Koordinator",
     "constituency": "Folketingsmedlem for Venstre i Sydjyllands Storkreds fra 15. september 2011.",
     "storkreds": "Sydjyllands Storkreds",
@@ -26543,6 +27097,56 @@
         "vedtaget": false
       }
     ]
+  },
+  {
+    "id": 21306,
+    "name": "Sarah Louise Broberg Bernskov",
+    "first_name": "Sarah Louise Broberg",
+    "last_name": "Bernskov",
+    "party": null,
+    "party_short": null,
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
+    "role": null,
+    "constituency": null,
+    "storkreds": null,
+    "constituency_history": [],
+    "party_history": [],
+    "educations": [],
+    "occupations": [],
+    "email": null,
+    "phone": null,
+    "website_url": null,
+    "address": null,
+    "member_url": null,
+    "photo_url": null,
+    "photo_source_url": null,
+    "photo_source_name": null,
+    "photo_photographer": null,
+    "photo_credit_text": null,
+    "member_since_date": null,
+    "member_since_year": null,
+    "seniority_label": null,
+    "seniority_years": null,
+    "seniority_months": null,
+    "seniority_tag": null,
+    "votes_total": 0,
+    "votes_for": 0,
+    "votes_against": 0,
+    "votes_neither": 0,
+    "votes_absent": 0,
+    "attendance_pct": null,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
+    "recent_votes": []
   },
   {
     "id": 1158,
