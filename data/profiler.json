@@ -17480,6 +17480,58 @@
     ]
   },
   {
+    "id": 21404,
+    "name": "Eva Borchorst Mejnertz",
+    "first_name": "Eva Borchorst",
+    "last_name": "Mejnertz",
+    "party": "Socialdemokratiet",
+    "party_short": "S",
+    "current_party": "Socialdemokratiet",
+    "current_party_short": "S",
+    "committees": [],
+    "role": null,
+    "constituency": null,
+    "storkreds": null,
+    "constituency_history": [],
+    "party_history": [
+      {
+        "party": "Socialdemokratiet",
+        "party_short": "S",
+        "start_date": "2026-05-12",
+        "end_date": "2026-10-06",
+        "active": true
+      }
+    ],
+    "educations": [],
+    "occupations": [],
+    "email": null,
+    "phone": null,
+    "website_url": null,
+    "address": null,
+    "member_url": null,
+    "photo_url": null,
+    "photo_source_url": null,
+    "photo_source_name": null,
+    "photo_photographer": null,
+    "photo_credit_text": null,
+    "member_since_date": null,
+    "member_since_year": null,
+    "seniority_label": null,
+    "seniority_years": null,
+    "seniority_months": null,
+    "seniority_tag": null,
+    "votes_total": 0,
+    "votes_for": 0,
+    "votes_against": 0,
+    "votes_neither": 0,
+    "votes_absent": 0,
+    "attendance_pct": null,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
+    "recent_votes": []
+  },
+  {
     "id": 20362,
     "name": "Thomas Monberg",
     "first_name": "Thomas",
@@ -17969,14 +18021,14 @@
         "party_short": "S",
         "start_date": "2026-05-12",
         "end_date": "2026-10-06",
-        "active": false
+        "active": true
       },
       {
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2025-10-07",
-        "end_date": null,
-        "active": true
+        "end_date": "2026-05-11",
+        "active": false
       }
     ],
     "educations": [
