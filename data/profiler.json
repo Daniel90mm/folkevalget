@@ -25428,7 +25428,7 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [],
-    "role": "Citymanager",
+    "role": "Selvstændig",
     "constituency": "Folketingsmedlem for Venstre i Vestjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
     "constituency_history": [
@@ -25444,13 +25444,15 @@
       }
     ],
     "educations": [
-      "Diplomuddannelse i Ledelse, Kunst & kultur, De danske scenekunstskoler, 2017-2018."
+      "Diplomuddannelse i Ledelse, Kunst & kultur, De danske scenekunstskoler, 2017-2018.",
+      "Student, Ribe Katedralskole, 1993-1996.",
+      "Folkeskole, Højmarkskolen, Holsted, 1984-1993."
     ],
     "occupations": [
-      "Citymanager, Herning City fra 2025.",
+      "Citymanager, Herning City, 2025-2026.",
+      "Projektmedarbejder, Herning City, 2024.",
       "Administrerende direktør, Trine Jepsen A/S fra 2021.",
       "CEO, Schackenborg Fonden, 2019-2021.",
-      "Kunstnerisk konsulent, Dansk Talentakademi, 2016-2019.",
       "Leder af Musical & Teater Aspiranterne, Dansk Talentakademi, 2015-2016.",
       "Administrerende direktør, Fonden Nørre Vosborg, 2015-2019.",
       "Koordinator og instruktør, Talentkuren, Dansk Talentakademi, 2014-2015.",
@@ -25459,9 +25461,7 @@
       "Medvirkende i opsætninger af Cats, Sound of Music (lead), My Fair Lady (lead), Evita (lead), The Visitors (lead) og The Little Mermaid, 2011-2014.",
       "Leder af Musical & Teater, Dansk Talentakademi, 2011-2016.",
       "Tilrettelægger og vært, Skala Fms Morgenshow - Morgenministeriet, Syddanske Medier, 2008-2011.",
-      "Tv-vært - Bonde søger Brud, SBS, Kanal 4, 2007-2008.",
-      "Projektleder, Fagbladsgruppen, 2007.",
-      "Vært - Quiz Direkte, TV2, 2007-2008."
+      "Tv-vært - Bonde søger Brud, SBS, Kanal 4, 2007-2008."
     ],
     "email": "trine.jepsen@ft.dk",
     "phone": "+45 3337 4589",
@@ -25917,7 +25917,7 @@
       "Danish Badminton College."
     ],
     "occupations": [
-      "Erhvervsjurist med speciale i GDPR og Compliance."
+      "Jurist med speciale i GDPR og Compliance."
     ],
     "email": "louise.louring@ft.dk",
     "phone": "+45 3337 4542",
