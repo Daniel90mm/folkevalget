@@ -8738,12 +8738,12 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1203846,
-        "title": "L 48 - svar på spm. 27 om eIDAS2-forordningens artikel 5a om, at nationale identitetstegnebogsapps ved udgangen af 2026 skal have sikkerhedsniveau »høj«",
+        "document_id": 1203894,
+        "title": "L 48 - svar på spm. 31 om, hvad der sker, hvis fejlen i implementeringen er mindre grel, men stadig indebærer mulighed for delvis identifikation ",
         "number": null,
         "date": "2026-01-14",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/27/svar/2193339/3120621.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120731.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -8774,17 +8774,8 @@
             "role": "Besvaret af"
           },
           {
-            "actor_id": 21154,
-            "name": "Europaudvalget",
-            "short_name": "EUU",
-            "type_id": 3,
-            "type": "Udvalg",
-            "role_id": 13,
-            "role": "Relevant for"
-          },
-          {
-            "actor_id": 110,
-            "name": "Rosa Lund",
+            "actor_id": 20395,
+            "name": "Alexander Ryle",
             "short_name": null,
             "type_id": 5,
             "type": "Person",
@@ -8800,12 +8791,12 @@
         }
       },
       {
-        "document_id": 1202894,
-        "title": "Spm. om eIDAS2-forordningens artikel 5a om, at nationale identitetstegnebogsapps ved udgangen af 2026 skal have sikkerhedsniveau »høj«",
+        "document_id": 1203237,
+        "title": "Spm. om, hvad der sker, hvis fejlen i implementeringen er mindre grel, men stadig indebærer mulighed for delvis identifikation ",
         "number": null,
-        "date": "2026-01-07",
+        "date": "2026-01-09",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/27/3118170.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/31/3119039.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -8827,17 +8818,8 @@
             "role": "Adressat"
           },
           {
-            "actor_id": 21154,
-            "name": "Europaudvalget",
-            "short_name": "EUU",
-            "type_id": 3,
-            "type": "Udvalg",
-            "role_id": 13,
-            "role": "Relevant for"
-          },
-          {
-            "actor_id": 110,
-            "name": "Rosa Lund",
+            "actor_id": 20395,
+            "name": "Alexander Ryle",
             "short_name": null,
             "type_id": 5,
             "type": "Person",
@@ -8851,12 +8833,12 @@
         }
       },
       {
-        "document_id": 1203847,
-        "title": "L 48 - svar på spm. 26, om den nationale digitale tegnebog udbydes som projekt(er) mellem konkurrerende virksomheder med kompetence inden for open source-projekter",
+        "document_id": 1203890,
+        "title": "L 48 - svar på spm. 30, om appen bliver trukket tilbage, hvis implementeringen er fejlbehæftet, så brugere kan identificeres ",
         "number": null,
         "date": "2026-01-14",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/26/svar/2193340/3120623.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120723.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -8887,8 +8869,8 @@
             "role": "Besvaret af"
           },
           {
-            "actor_id": 110,
-            "name": "Rosa Lund",
+            "actor_id": 20395,
+            "name": "Alexander Ryle",
             "short_name": null,
             "type_id": 5,
             "type": "Person",
