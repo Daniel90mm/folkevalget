@@ -3433,7 +3433,7 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [],
-    "role": "Josephine Alstrup Kofod (DF)",
+    "role": "Socialrådgiver",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Sydjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Sydjyllands Storkreds",
     "constituency_history": [
@@ -3462,8 +3462,14 @@
         "active": false
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Socialrådgiver, UCL Erhvervsakademi og Professionshøjskole, 2025.",
+      "Htx, Kold Tekniske Gymnasium, 2018.",
+      "Folkeskole, Munkebo Skole, Munkebo, 2015."
+    ],
+    "occupations": [
+      "Socialrådgiver, Vejle Kommune fra 2025."
+    ],
     "email": "josephine.kofod@ft.dk",
     "phone": "+45 3337 5109",
     "website_url": null,
