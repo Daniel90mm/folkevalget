@@ -4243,7 +4243,7 @@
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
     "committees": [],
-    "role": "Ibrahim Benli (EL)",
+    "role": "Konsulent på beskæftigelsesområdet",
     "constituency": "Folketingsmedlem for Enhedslisten i Københavns Omegns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
     "constituency_history": [
@@ -4258,11 +4258,35 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Diplomuddannelse i ledelse, Professionshøjskolen Metropol, København, 2013-2016.",
+      "Cand.mag., kultur- og sprogmødestudier og kommunikation, Roskilde Universitet, 2005-2008.",
+      "Kultur- og sprogmødestudier, kommunikation, interkulturel kommunikation, Roskilde Universitet, 2005-2008.",
+      "Forberedelseskursus i dansk som andet sprog, Roskilde Universitet, 2003-2004.",
+      "Journalistisk bachelor, Kommunikationsfakultetet, Ankara Üniversitesi, 1996-2001.",
+      "Studentereksamen, Sokullu Mehmet Pasa Lisesi, Ankara (gymnasium) , 1994-1998.",
+      "Grundskole, Sokullu Mehmet Pasa Ilkögretim Okulu, Ankara, 1986-1993."
+    ],
+    "occupations": [
+      "Konsulent, Kommunernes Landsorganisation (KL), 2023-2026.",
+      "Projektansvarlig, Rødovre Jobcenter, Rødovre Kommune, 2019-2023.",
+      "Projektleder, Holbæk Kommune, 2016-2019.",
+      "Oversætter, Dansk Flygtningehjælp, 2015-2023.",
+      "Koordinator, Center for Afklaring og Beskæftigelse, Københavns Kommune , 2014-2016.",
+      "Støttekontaktperson, Københavns Kommune, 2014-2016.",
+      "Europæisk redaktør, tyrkisk gartneriblad Tarlasera, 2011-2016.",
+      "Underviser, vejleder, Københavns Kommune, 2011-2013.",
+      "Studentermedhjælper i forbindelse med forskningsprojekt, EU Monitoring and Advocacy, Nørrebro, 2008.",
+      "Sagsbehandler, Københavns Kommune, 2007-2011.",
+      "Tolk, Tolkeservice Danmark ApS, Glostrup, 2006-2009.",
+      "Tolk i sprogene kurdisk, tyrkisk og dansk, Tolkeservice Danmark, 2005-2008.",
+      "Praktikant, Nyheder International på den tyrkiske redaktion, Danmarks Radio, 2002.",
+      "Journalistisk praktikant, Anadolu Ajansi (Anatolske Nyhedsbureau), 1999-2000.",
+      "Instruktørpraktikant, TRT (det tyrkiske statstv ), 1998."
+    ],
     "email": "ibrahim.benli@ft.dk",
     "phone": "+45 3337 5060",
-    "website_url": null,
+    "website_url": "https://enhedslisten.dk/profil/ibrahim-benli-2/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
@@ -17582,6 +17606,11 @@
     "current_party_short": "S",
     "committees": [
       {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      },
+      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
@@ -18387,11 +18416,6 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
-      },
-      {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
       }
     ],
     "role": "Rådgiver",
@@ -21069,6 +21093,7 @@
       "Folkeskole, Mørdrupskolen, Espergærde, 1990-1995."
     ],
     "occupations": [
+      "Programleder (pt. orlov), Cirkulær København. Københavns Kommune fra 2022.",
       "Teamleder og cirkulær økonomi-ekspert, Asian Development Bank (ADB), 2020-2022.",
       "Seniorkonsulent, Rambøll, 2018-2021.",
       "Teknisk specialist, Miljøstyrelsen, 2014-2018.",
