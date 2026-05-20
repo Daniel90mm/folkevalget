@@ -11417,7 +11417,7 @@
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
     "committees": [],
-    "role": "Magnus Georg Jensen (RV)",
+    "role": "Konsulent",
     "constituency": "Folketingsmedlem for Radikale Venstre i Københavns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Storkreds",
     "constituency_history": [
@@ -11432,8 +11432,14 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "MSc EBA SOL, Copenhagen Business School, 2020-2022."
+    ],
+    "occupations": [
+      "Diverse stillinger herunder Head of Research, Egon Zehnder, 2021-2026.",
+      "Studentermedarbejder, Statsadvokaten for Særlig Økonomisk og International Kriminalitet (SØIK), 2020-2021.",
+      "Studentermedarbejder, Nordea, 2015-2020."
+    ],
     "email": "magnusgeorg@ft.dk",
     "phone": "+45 3337 4721",
     "website_url": null,
