@@ -4424,6 +4424,101 @@
     ],
     "documents": [
       {
+        "document_id": 1203902,
+        "title": "L 48 - svar på spm. 32 om, hvordan andre EU-lande forholder sig til kravet om open source ved udviklingen af den digitale identitetstegnebog",
+        "number": null,
+        "date": "2026-01-14",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120748.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 18726,
+            "name": "Stinus Lindgreen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "ministeren for digitalisering"
+          ]
+        }
+      },
+      {
+        "document_id": 1203269,
+        "title": "Spm. om, hvordan andre EU-lande forholder sig til kravet om open source ved udviklingen af den digitale identitetstegnebog",
+        "number": null,
+        "date": "2026-01-12",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/32/3119115.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20987,
+            "name": "ministeren for digitalisering",
+            "short_name": "minister for digitalisering",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 18726,
+            "name": "Stinus Lindgreen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
         "document_id": 1203894,
         "title": "L 48 - svar på spm. 31 om, hvad der sker, hvis fejlen i implementeringen er mindre grel, men stadig indebærer mulighed for delvis identifikation ",
         "number": null,
@@ -4704,130 +4799,6 @@
         "question_chain": {
           "askers": [],
           "responders": []
-        }
-      },
-      {
-        "document_id": 1203848,
-        "title": "L 48 - svar på spm. 28 om Danmark som foregangsland for udvikling af fri og open source-software i samarbejde med EU-lande og EU-Kommissionen",
-        "number": null,
-        "date": "2026-01-14",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120627.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 17,
-        "document_type": "Svar",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 22,
-        "document_category": "Endeligt svar",
-        "document_actors": [
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 4,
-            "role": "Besvaret af"
-          },
-          {
-            "actor_id": 21154,
-            "name": "Europaudvalget",
-            "short_name": "EUU",
-            "type_id": 3,
-            "type": "Udvalg",
-            "role_id": 13,
-            "role": "Relevant for"
-          },
-          {
-            "actor_id": 110,
-            "name": "Rosa Lund",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 12,
-            "role": "Stiller"
-          }
-        ],
-        "question_chain": {
-          "askers": [],
-          "responders": [
-            "ministeren for digitalisering"
-          ]
-        }
-      },
-      {
-        "document_id": 1203846,
-        "title": "L 48 - svar på spm. 27 om eIDAS2-forordningens artikel 5a om, at nationale identitetstegnebogsapps ved udgangen af 2026 skal have sikkerhedsniveau »høj«",
-        "number": null,
-        "date": "2026-01-14",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/27/svar/2193339/3120621.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 17,
-        "document_type": "Svar",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 22,
-        "document_category": "Endeligt svar",
-        "document_actors": [
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 20987,
-            "name": "ministeren for digitalisering",
-            "short_name": "minister for digitalisering",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 4,
-            "role": "Besvaret af"
-          },
-          {
-            "actor_id": 21154,
-            "name": "Europaudvalget",
-            "short_name": "EUU",
-            "type_id": 3,
-            "type": "Udvalg",
-            "role_id": 13,
-            "role": "Relevant for"
-          },
-          {
-            "actor_id": 110,
-            "name": "Rosa Lund",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 12,
-            "role": "Stiller"
-          }
-        ],
-        "question_chain": {
-          "askers": [],
-          "responders": [
-            "ministeren for digitalisering"
-          ]
         }
       },
       {

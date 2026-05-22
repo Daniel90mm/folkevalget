@@ -8738,12 +8738,12 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1203894,
-        "title": "L 48 - svar på spm. 31 om, hvad der sker, hvis fejlen i implementeringen er mindre grel, men stadig indebærer mulighed for delvis identifikation ",
+        "document_id": 1203902,
+        "title": "L 48 - svar på spm. 32 om, hvordan andre EU-lande forholder sig til kravet om open source ved udviklingen af den digitale identitetstegnebog",
         "number": null,
         "date": "2026-01-14",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120731.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120748.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -8774,8 +8774,8 @@
             "role": "Besvaret af"
           },
           {
-            "actor_id": 20395,
-            "name": "Alexander Ryle",
+            "actor_id": 18726,
+            "name": "Stinus Lindgreen",
             "short_name": null,
             "type_id": 5,
             "type": "Person",
@@ -8791,12 +8791,12 @@
         }
       },
       {
-        "document_id": 1203237,
-        "title": "Spm. om, hvad der sker, hvis fejlen i implementeringen er mindre grel, men stadig indebærer mulighed for delvis identifikation ",
+        "document_id": 1203269,
+        "title": "Spm. om, hvordan andre EU-lande forholder sig til kravet om open source ved udviklingen af den digitale identitetstegnebog",
         "number": null,
-        "date": "2026-01-09",
+        "date": "2026-01-12",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/31/3119039.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/spm/32/3119115.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -8818,8 +8818,8 @@
             "role": "Adressat"
           },
           {
-            "actor_id": 20395,
-            "name": "Alexander Ryle",
+            "actor_id": 18726,
+            "name": "Stinus Lindgreen",
             "short_name": null,
             "type_id": 5,
             "type": "Person",
@@ -8833,12 +8833,12 @@
         }
       },
       {
-        "document_id": 1203890,
-        "title": "L 48 - svar på spm. 30, om appen bliver trukket tilbage, hvis implementeringen er fejlbehæftet, så brugere kan identificeres ",
+        "document_id": 1203894,
+        "title": "L 48 - svar på spm. 31 om, hvad der sker, hvis fejlen i implementeringen er mindre grel, men stadig indebærer mulighed for delvis identifikation ",
         "number": null,
         "date": "2026-01-14",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120723.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l48/bilag/0/3120731.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
