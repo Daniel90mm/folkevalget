@@ -1,5 +1,22 @@
 # Repository Instructions
 
+
+
+<!-- BEGIN MANAGED: agent-delegation -->
+## DeepSeek Delegation
+
+This repository may use DeepSeek only through `agent-delegate`.
+
+Before delegating, write a task file with YAML front matter declaring `provider`, `topic`, `allowed_read`, `allowed_write`, and `output`. Run `agent-delegate deepseek --dry-run <task-file>` before the first real call.
+
+Use DeepSeek only for bounded, reviewable work. Do not call DeepSeek directly, and do not send secrets, credentials, private logs, compliance-sensitive material, or files outside the declared allowlist.
+
+DeepSeek output is advisory. The active Codex/Claude agent owns final review, tests, edits, and commits.
+<!-- END MANAGED: agent-delegation -->
+
+
+
+
 - Read `C:\Users\danie\Desktop\Mig\Programmering\Git\folkevalget\FOLKEVALGET_DESIGN_LANGUAGE.md` at the start of each task involving design or feature work, and use it to validate that all changes uphold the project's design and product rules.
 - Keep the interface focused and avoid clutter. Prefer fewer, clearer elements over adding more UI chrome, labels, badges, or decorative containers.
 - Follow the existing design rules and visual language already established in the repo. Extend current patterns instead of inventing a competing style.
