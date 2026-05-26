@@ -5380,7 +5380,7 @@
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
     "committees": [],
-    "role": "MF",
+    "role": "Seniorrådgiver",
     "constituency": "Folketingsmedlem for Enhedslisten i Københavns Storkreds fra 1. november 2024.",
     "storkreds": "Københavns Storkreds",
     "constituency_history": [
@@ -5395,8 +5395,26 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "Ph.d. i globale studier, Roskilde Universitet, 2011-2015.",
+      "MSc. i mellemøststudier, SOAS University of London, 2007-2008.",
+      "Arabisk, American University of Beirut, 2006.",
+      "Arabisk, Københavns Universitet, 2006-2007.",
+      "Master i offentlig administration, Roskilde Universitet."
+    ],
+    "occupations": [
+      "Seniorrådgiver, Center for Bæredygtig Finans, Mellemfolkeligt Samvirke, 2023-2025.",
+      "Politisk rådgiver, Enhedslisten, 2020-2023.",
+      "Seniorrådgiver, Advice, 2019-2020.",
+      "Særlig rådgiver, Center for Global Klimahandling, Klima-, Energi- og Forsyningsministeriet, 2019-2020.",
+      "Politisk chef, Alternativet, 2017-2022.",
+      "Rådgiver, Alternativet, 2015-2022.",
+      "Ekstern lektor, Syddansk Universitet, 2012-2022.",
+      "Forskningsassistent, Dansk Institut for Internationale Studier, 2011-2012.",
+      "Forskningsassistent, Københavns Universitet, 2010-2011.",
+      "Programassistent, Det danske repræsentationskontor i Ramallah, 2009.",
+      "International konsulent, Dansk Røde Kors, 2009-2010."
+    ],
     "email": "leila.stockmarr@ft.dk",
     "phone": "+45 3337 5009",
     "website_url": null,
