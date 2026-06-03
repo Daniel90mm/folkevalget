@@ -10299,7 +10299,7 @@
     "current_party": "Moderaterne",
     "current_party_short": "M",
     "committees": [],
-    "role": "Ældreminister",
+    "role": "Henrik Frandsen (M)",
     "constituency": "Folketingsmedlem for Moderaterne i Sydjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Sydjyllands Storkreds",
     "constituency_history": [
@@ -10321,10 +10321,10 @@
     "occupations": [
       "Landmand, Skærbæk i Tønder Kommune, 1985-2020."
     ],
-    "email": "aeldremin@aeldremin.dk",
-    "phone": "+45 3392 9300",
+    "email": "henrik.frandsen@ft.dk",
+    "phone": null,
     "website_url": null,
-    "address": "Holbergsgade 6 1060 København K",
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/h/henrik-frandsen",
     "photo_url": "photos/20377.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/m/henrik-frandsen/henrik_frandsen_500.jpg",
@@ -25326,7 +25326,7 @@
         "short_name": "EUU"
       }
     ],
-    "role": "Minister for fødevarer, landbrug og fiskeri",
+    "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Venstre i Sjællands Storkreds fra 13. november 2007.",
     "storkreds": "Sjællands Storkreds",
     "constituency_history": [
@@ -25352,10 +25352,10 @@
       "Kontorchef, Maersk UK, London, 2001-2002.",
       "Økonom, A.P. Møller, København, 1998-2001."
     ],
-    "email": "min@fvm.dk",
-    "phone": "+45 3810 6000",
+    "email": "jacob.jensen@ft.dk",
+    "phone": "+45 3337 5500",
     "website_url": "https://jacobjensen.venstre.dk/",
-    "address": "Ministeriet for Fødevarer, Landbrug og Fiskeri, Holbergsgade 6 1057 København K",
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/j/jacob-jensen",
     "photo_url": "photos/173.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2015/v/jacob-jensen/jacob_jensen_500,-d-,jpg.jpg",
@@ -26019,7 +26019,7 @@
         "short_name": "FIU"
       }
     ],
-    "role": "Indenrigs- og sundhedsminister",
+    "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Venstre i Nordsjællands Storkreds fra 13. november 2007.",
     "storkreds": "Nordsjællands Storkreds",
     "constituency_history": [
@@ -26046,10 +26046,10 @@
       "Plejeassistent, Rikke Marie Hjemmet, Skodsborg, 2003-2004.",
       "Salgsassistent, Plaza Ure & Smykker, Illum, København, 1999-2004."
     ],
-    "email": "sum@sum.dk",
-    "phone": "+45 7226 9000",
-    "website_url": "https://sum.dk/",
-    "address": "Sundhedsministeriet, Slotholmsgade 10-12 1216 København K",
+    "email": "sophie.lohde@ft.dk",
+    "phone": "+45 3337 5500",
+    "website_url": null,
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/s/sophie-loehde",
     "photo_url": "photos/130.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2019/v/sophie-loehde/sophie_lohde_500.jpg",
@@ -26482,8 +26482,8 @@
     "last_name": "Pedersen",
     "party": "Venstre, Danmarks Liberale Parti",
     "party_short": "V",
-    "current_party": "Venstre, Danmarks Liberale Parti",
-    "current_party_short": "V",
+    "current_party": null,
+    "current_party_short": null,
     "committees": [],
     "role": "Minister for samfundssikkerhed og beredskab",
     "constituency": "Folketingsmedlem for Venstre i Nordjyllands Storkreds, 13. november 2007 – 24. marts 2026.",
@@ -26497,8 +26497,8 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2025-10-07",
-        "end_date": null,
-        "active": true
+        "end_date": "2026-03-24",
+        "active": false
       }
     ],
     "educations": [
@@ -27183,12 +27183,12 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2026-04-16",
-    "member_since_year": 2026,
-    "seniority_label": "Under 1 aar i Folketinget",
-    "seniority_years": 0,
-    "seniority_months": 1,
-    "seniority_tag": "newcomer",
+    "member_since_date": null,
+    "member_since_year": null,
+    "seniority_label": null,
+    "seniority_years": null,
+    "seniority_months": null,
+    "seniority_tag": null,
     "votes_total": 0,
     "votes_for": 0,
     "votes_against": 0,
