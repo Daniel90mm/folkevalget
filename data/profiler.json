@@ -11794,11 +11794,6 @@
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
-      },
-      {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
       }
     ],
     "role": "Klima-, energi- og forsyningsminister",
@@ -12082,6 +12077,11 @@
     "current_party_short": "RV",
     "committees": [
       {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      },
+      {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
@@ -12175,7 +12175,7 @@
     ],
     "email": "kum@kum.dk",
     "phone": "+45 3392 3370",
-    "website_url": null,
+    "website_url": "https://kum.dk/",
     "address": "Kulturministeriet, Nybrogade 2 1203 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/z/zenia-stampe",
     "photo_url": "photos/191.jpg",
@@ -15633,7 +15633,7 @@
         "short_name": "FPR"
       }
     ],
-    "role": "1. næstformand i Folketinget, næstformand for Statsrevisorerne, havnearbejder",
+    "role": "Første næstformand i Folketinget, næstformand for Statsrevisorerne, havnearbejder",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Østjyllands Storkreds fra 13. november 2007.",
     "storkreds": "Østjyllands Storkreds",
     "constituency_history": [
@@ -17630,11 +17630,6 @@
     "current_party_short": "S",
     "committees": [
       {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
-      },
-      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
@@ -19595,7 +19590,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Københavns Omegns Storkreds fra 18. juni 2015.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -20853,11 +20854,6 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
-      },
-      {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
       }
     ],
     "role": "Minister for samfundssikkerhed og beredskab",
@@ -20887,7 +20883,7 @@
     ],
     "email": "mssb@mssb.dk",
     "phone": "+45 3311 2000",
-    "website_url": null,
+    "website_url": "https://mssb.dk/",
     "address": "Ministeriet for Samfundssikkerhed og Beredskab, Slotsholmsgade 12 1216 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/l/lisbeth-bech-nielsen",
     "photo_url": "photos/219.jpg",
@@ -21601,7 +21597,7 @@
     "email": "minister@oem.dk",
     "phone": "+45 4020 8687",
     "website_url": "https://sf.dk/politiker/pia-olsen-dyhr/",
-    "address": "Økonomiministeriet, Ved Stranden 8 1061 København K",
+    "address": "Økonomi- og Indenrigsministeriet, Ved Stranden 8 1061 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/p/pia-olsen-dyhr",
     "photo_url": "photos/43.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2019/sf/pia-olsen-dyhr/pia_olsen_dyhr_500.jpg",
@@ -22043,7 +22039,13 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Østjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Østjyllands Storkreds",
@@ -22262,7 +22264,7 @@
     "email": "trm@trm.dk",
     "phone": "+45 4171 2700",
     "website_url": "https://www.trm.dk/",
-    "address": "Frederiksholms Kanal 27 F 1220 København K",
+    "address": "By-, Land- og Transportministeriet, Frederiksholms Kanal 27 F 1220 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/s/signe-munk",
     "photo_url": "photos/18709.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/sf/signe-munk/signe_munk_500.jpg",
