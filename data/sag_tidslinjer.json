@@ -5359,12 +5359,297 @@
     ],
     "documents": [
       {
-        "document_id": 1201728,
-        "title": "L 50 - svar på spm. 4 om en ensartet national praksis, så borgernes rettigheder i forbindelse med valg af medarbejder ikke varierer væsentligt på tværs af kommuner",
+        "document_id": 1200141,
+        "title": "L 50 - svar på spm. 10 om at udvide borgerens ret til at vælge en bestemt medarbejder til bostøtte fra andre sociale tilbud",
+        "number": null,
+        "date": "2025-12-12",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/spm/10/svar/2188299/3111263.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 18708,
+            "name": "Charlotte Broman Mølbæk",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "social- og boligministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1198518,
+        "title": "Spm. om at udvide borgerens ret til at vælge en bestemt medarbejder til bostøtte fra andre sociale tilbud ",
+        "number": null,
+        "date": "2025-12-05",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/spm/10/3107299.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 18708,
+            "name": "Charlotte Broman Mølbæk",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1200143,
+        "title": "L 50 - svar på spm. 9 om at sikre, at tvister mellem kommuner ikke forsinker bostøtten unødigt, så borgeren står uden hjælp i en kritisk periode",
+        "number": null,
+        "date": "2025-12-12",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/spm/9/svar/2188300/3111265.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 18708,
+            "name": "Charlotte Broman Mølbæk",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "social- og boligministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1198514,
+        "title": "Spm. om at sikre, at tvister mellem kommuner ikke forsinker bostøtten unødigt, så borgeren står uden hjælp i en kritisk periode",
+        "number": null,
+        "date": "2025-12-05",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/spm/9/3107292.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 18708,
+            "name": "Charlotte Broman Mølbæk",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1200142,
+        "title": "L 50 - svar på spm. 8 om at udvide retten til valg af leverandør af bostøtten til også at omfatte ICM og ACT-forløb",
+        "number": null,
+        "date": "2025-12-12",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/bilag/0/3111267.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 18708,
+            "name": "Charlotte Broman Mølbæk",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "social- og boligministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1198512,
+        "title": "Spm. om at udvide retten til valg af leverandør af bostøtten til også at omfatte ICM og ACT-forløb",
+        "number": null,
+        "date": "2025-12-05",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/spm/8/3107287.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 18708,
+            "name": "Charlotte Broman Mølbæk",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1201730,
+        "title": "L 50 - svar på spm. 5 om den faglige begrundelse for at afgrænse selvbestemmelsesordningen til CTI-metoden og ikke udvide det til også at omfatte ICM- og ACT-metoderne",
         "number": null,
         "date": "2025-12-18",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/spm/4/svar/2190501/3115195.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/bilag/0/3115193.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -5412,12 +5697,12 @@
         }
       },
       {
-        "document_id": 1198075,
-        "title": "Spm. om en ensartet national praksis, så borgernes rettigheder i forbindelse med valg af medarbejder ikke varierer væsentligt på tværs af kommuner",
+        "document_id": 1198079,
+        "title": "Spm. om den faglige begrundelse for at afgrænse selvbestemmelsesordningen til CTI-metoden og ikke udvide det til også at omfatte ICM- og ACT-metoderne",
         "number": null,
         "date": "2025-12-04",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/spm/4/3106095.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/spm/5/3106104.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
@@ -5448,124 +5733,6 @@
             "role": "Stiller"
           }
         ],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1201727,
-        "title": "L 50 - svar på spm. 3 om, hvilke faglige og ressourcemæssige kriterier kommunerne forventes at lægge til grund for vurderingen af, om en borgers ønske om en bestemt medarbejder kan imødekommes",
-        "number": null,
-        "date": "2025-12-18",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/spm/3/svar/2190502/3115197.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 17,
-        "document_type": "Svar",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 22,
-        "document_category": "Endeligt svar",
-        "document_actors": [
-          {
-            "actor_id": 20984,
-            "name": "social- og boligministeren",
-            "short_name": "social- og boligminister",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 20984,
-            "name": "social- og boligministeren",
-            "short_name": "social- og boligminister",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 4,
-            "role": "Besvaret af"
-          },
-          {
-            "actor_id": 21194,
-            "name": "Joachim Hoffmann-Petersen",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 12,
-            "role": "Stiller"
-          }
-        ],
-        "question_chain": {
-          "askers": [],
-          "responders": [
-            "social- og boligministeren"
-          ]
-        }
-      },
-      {
-        "document_id": 1198074,
-        "title": "Spm. om, hvilke faglige og ressourcemæssige kriterier kommunerne forventes at lægge til grund for vurderingen af, om en borgers ønske om en bestemt medarbejder kan imødekommes",
-        "number": null,
-        "date": "2025-12-04",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/spm/3/3106094.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 13,
-        "document_type": "Spørgsmål",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 36,
-        "document_category": "Udvalgsspørgsmål",
-        "document_actors": [
-          {
-            "actor_id": 20984,
-            "name": "social- og boligministeren",
-            "short_name": "social- og boligminister",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 21194,
-            "name": "Joachim Hoffmann-Petersen",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 12,
-            "role": "Stiller"
-          }
-        ],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1208109,
-        "title": "Vedtaget af Folketinget ved 3. behandling den 5. februar 2026",
-        "number": null,
-        "date": "2026-02-05",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l50/20251_l50_som_vedtaget.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 23,
-        "document_category": "Forslag som vedtaget",
-        "document_actors": [],
         "question_chain": {
           "askers": [],
           "responders": []
@@ -5576,7 +5743,6 @@
         "title": "Efter afstemningen i Folketinget ved 2. behandling den 29. januar 2026",
         "number": null,
         "date": "2026-01-29",
-        "role": "På sagstrin",
         "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l50/20251_l50_efter_2behandling.pdf",
         "format": "PDF",
         "variant_code": "P",
@@ -5588,52 +5754,6 @@
         "document_status": "Endeligt",
         "document_category_id": 20,
         "document_category": "Optryk efter 2.beh",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1205749,
-        "title": "Betænkning afgivet den 22/1-126",
-        "number": null,
-        "date": "2026-01-22",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/bilag/6/3125334.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 12,
-        "document_type": "Bilag",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1205750,
-        "title": "Betænkning afgivet af Socialudvalget den 22. januar 2026",
-        "number": null,
-        "date": "2026-01-26",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l50/20251_l50_betaenkning.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
         "document_actors": [],
         "question_chain": {
           "askers": [],
@@ -5663,12 +5783,6 @@
           "emneord": "udsatte voksne",
           "type_id": 1,
           "type": "Sagsområde"
-        },
-        {
-          "id": 33609,
-          "emneord": "betænkning",
-          "type_id": 2,
-          "type": "Ukontrolleret"
         }
       ],
       "samlet": [
@@ -5683,12 +5797,6 @@
           "emneord": "udsatte voksne",
           "type_id": 1,
           "type": "Sagsområde"
-        },
-        {
-          "id": 33609,
-          "emneord": "betænkning",
-          "type_id": 2,
-          "type": "Ukontrolleret"
         }
       ]
     }
@@ -7441,91 +7549,22 @@
     ],
     "documents": [
       {
-        "document_id": 1210116,
-        "title": "Vedtaget af Folketinget ved 3. behandling den 19. februar 2026",
+        "document_id": 1204900,
+        "title": "L 80 - svar på spm. 4 om, hvor mange der i de seneste 5 år er dømt en ubetinget frihedsberøvende straf for lovovertrædelser, som med lovforslaget vil udløse frakendelse af forskellige ydelser",
         "number": null,
-        "date": "2026-02-19",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l80/20251_l80_som_vedtaget.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 23,
-        "document_category": "Forslag som vedtaget",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1209740,
-        "title": "Ændringsforslag til 3. behandling",
-        "number": null,
-        "date": "2026-02-17",
+        "date": "2026-01-21",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l80/bilag/10/3135425.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 12,
-        "document_type": "Bilag",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1209737,
-        "title": "Ændringsforslag nr. 1-12 af beskæftigelsesministeren stillet den 17.02.2026",
-        "number": null,
-        "date": "2026-02-17",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l80/20251_l80_aendringsforslag_beh33135419.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1208718,
-        "title": "Ændringsforslag til 3. behandling, fra beskæftigelsesministeren",
-        "number": null,
-        "date": "2026-02-09",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l80/bilag/9/3132813.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l80/spm/4/svar/2195071/3123182.pdf",
         "format": "DOCX",
         "variant_code": "P",
         "is_omtryk": false,
         "omtryk": [],
-        "document_type_id": 12,
-        "document_type": "Bilag",
+        "document_type_id": 17,
+        "document_type": "Svar",
         "document_status_id": 1,
         "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
         "document_actors": [
           {
             "actor_id": 136,
@@ -7533,8 +7572,52 @@
             "short_name": "beskæftigelsesminister",
             "type_id": 2,
             "type": "Ministertitel",
-            "role_id": 1,
-            "role": "Afsender"
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "beskæftigelsesministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1202979,
+        "title": "Spm. om, hvor mange der i de seneste 5 år er dømt en ubetinget frihedsberøvende straf for lovovertrædelser, som med lovforslaget vil udløse frakendelse af forskellige ydelser",
+        "number": null,
+        "date": "2026-01-08",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l80/spm/4/3118391.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
           }
         ],
         "question_chain": {
@@ -7543,92 +7626,285 @@
         }
       },
       {
-        "document_id": 1208089,
-        "title": "Efter afstemningen i Folketinget ved 2. behandling den 5. februar 2026",
+        "document_id": 1202123,
+        "title": "L 80 - svar på spm. 3 om dokumentation for, at en fratagelse af pension og forsørgelsesgrundlag efter afsoning reducerer risikoen for ny kriminalitet og ikke øger den ",
         "number": null,
-        "date": "2026-02-05",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l80/20251_l80_efter_2behandling.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 20,
-        "document_category": "Optryk efter 2.beh",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1207384,
-        "title": "Betænkning afgivet 28/1-26",
-        "number": null,
-        "date": "2026-01-28",
+        "date": "2025-12-22",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l80/bilag/8/3129304.pdf",
-        "format": "PDF",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l80/bilag/0/3116267.pdf",
+        "format": "DOCX",
         "variant_code": "P",
         "is_omtryk": false,
         "omtryk": [],
-        "document_type_id": 12,
-        "document_type": "Bilag",
+        "document_type_id": 17,
+        "document_type": "Svar",
         "document_status_id": 1,
         "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
         "question_chain": {
           "askers": [],
-          "responders": []
+          "responders": [
+            "beskæftigelsesministeren"
+          ]
         }
       },
       {
-        "document_id": 1207383,
-        "title": "Betænkning afgivet af Beskæftigelsesudvalget den 28. januar 2026",
+        "document_id": 1198656,
+        "title": "Spm. om dokumentation for, at en fratagelse af pension og forsørgelsesgrundlag efter afsoning reducerer risikoen for ny kriminalitet og ikke øger den ",
         "number": null,
-        "date": "2026-02-02",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l80/20251_l80_betaenkning.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1206190,
-        "title": "Udkast til betænkning",
-        "number": null,
-        "date": "2026-01-27",
+        "date": "2025-12-05",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l80/bilag/7/3126292.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l80/spm/3/3107619.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
         "omtryk": [],
-        "document_type_id": 12,
-        "document_type": "Bilag",
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
         "document_status_id": 1,
         "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1202124,
+        "title": "L 80 - svar på spm. 2 om retssikkerhed ved automatisk frakendelse af førtidspension, seniorpension eller tidlig pension ved bestemte domme uden individuel vurdering af personlige forhold",
+        "number": null,
+        "date": "2025-12-22",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l80/spm/2/svar/2191002/3116269.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "beskæftigelsesministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1198655,
+        "title": "Spm. om retssikkerhed ved automatisk frakendelse af førtidspension, seniorpension eller tidlig pension ved bestemte domme uden individuel vurdering af personlige forhold",
+        "number": null,
+        "date": "2025-12-05",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l80/spm/2/3107618.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1202125,
+        "title": "L 80 - svar på spm. 1, om det er foreneligt med grundlæggende retsprincipper, at mennesker skal straffes to gange - først med fængsel og derefter med tab af deres indkomst",
+        "number": null,
+        "date": "2025-12-22",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l80/spm/1/svar/2191003/3116271.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "beskæftigelsesministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1198652,
+        "title": "Spm., om det er foreneligt med grundlæggende retsprincipper, at mennesker skal straffes to gange - først med fængsel og derefter med tab af deres indkomst",
+        "number": null,
+        "date": "2025-12-05",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l80/spm/1/3107617.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 18694,
+            "name": "Victoria Velasquez",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
         "question_chain": {
           "askers": [],
           "responders": []
@@ -7650,6 +7926,72 @@
         "document_status": "Endeligt",
         "document_category_id": 46,
         "document_category": "Fremsættelsestale",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1210116,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 19. februar 2026",
+        "number": null,
+        "date": "2026-02-19",
+        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l80/20251_l80_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1208089,
+        "title": "Efter afstemningen i Folketinget ved 2. behandling den 5. februar 2026",
+        "number": null,
+        "date": "2026-02-05",
+        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l80/20251_l80_efter_2behandling.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 20,
+        "document_category": "Optryk efter 2.beh",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1209737,
+        "title": "Ændringsforslag nr. 1-12 af beskæftigelsesministeren stillet den 17.02.2026",
+        "number": null,
+        "date": "2026-02-17",
+        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l80/20251_l80_aendringsforslag_beh33135419.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
         "document_actors": [],
         "question_chain": {
           "askers": [],
@@ -12335,31 +12677,8 @@
     ],
     "documents": [
       {
-        "document_id": 1210119,
-        "title": "Vedtaget af Folketinget ved 3. behandling den 19. februar 2026",
-        "number": null,
-        "date": "2026-02-19",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l89/20251_l89_som_vedtaget.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 23,
-        "document_category": "Forslag som vedtaget",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
         "document_id": 1207414,
-        "title": "L 89 - svar på spm. 2 om ministeren vil kommentere på mulighederne for at måle asbest på en mere præcis måde, der kan detektere asbest til lavere grænseværdier end den, som Arbejdstilsynet aktuelt bruger",
+        "title": "L 89 - svar på spm. 2 om muligheder for mere præcis måling af asbest med detektion ved lavere grænseværdier end Arbejdstilsynets nuværende metode",
         "number": null,
         "date": "2026-02-02",
         "role": "Hovedtilknytning",
@@ -12411,6 +12730,71 @@
         }
       },
       {
+        "document_id": 1206135,
+        "title": "Spm. om muligheder for mere præcis måling af asbest med detektion ved lavere grænseværdier end Arbejdstilsynets nuværende metode",
+        "number": null,
+        "date": "2026-01-27",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l89/spm/2/3126195.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 136,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 199,
+            "name": "Karsten Hønge",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1210119,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 19. februar 2026",
+        "number": null,
+        "date": "2026-02-19",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l89/20251_l89_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
         "document_id": 1207339,
         "title": "Betænkning afgivet 28/1-26",
         "number": null,
@@ -12451,48 +12835,6 @@
         "document_category_id": 55,
         "document_category": "Betænkning m.v.",
         "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1206135,
-        "title": "Spm. om ministeren vil kommentere på mulighederne for at måle asbest på en mere præcis måde, der kan detektere asbest til lavere grænseværdier end den, som Arbejdstilsynet aktuelt bruger",
-        "number": null,
-        "date": "2026-01-27",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l89/spm/2/3126195.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 13,
-        "document_type": "Spørgsmål",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 36,
-        "document_category": "Udvalgsspørgsmål",
-        "document_actors": [
-          {
-            "actor_id": 136,
-            "name": "beskæftigelsesministeren",
-            "short_name": "beskæftigelsesminister",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 199,
-            "name": "Karsten Hønge",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 12,
-            "role": "Stiller"
-          }
-        ],
         "question_chain": {
           "askers": [],
           "responders": []
