@@ -7527,58 +7527,12 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1210117,
-        "title": "Vedtaget af Folketinget ved 3. behandling den 19. februar 2026",
+        "document_id": 1207416,
+        "title": "L 86 - svar på spm. 5 om, i hvor mange af de 14 sager som er indgivet mere end 5 år efter hændelsesdatoen, påklager har fået hel eller delvis medhold i klagen",
         "number": null,
-        "date": "2026-02-19",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l86b/20251_l86b_som_vedtaget.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 23,
-        "document_category": "Forslag som vedtaget",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1208086,
-        "title": "Efter afstemningen i Folketinget ved 2. behandling den 5. februar 2026",
-        "number": null,
-        "date": "2026-02-05",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l86b/20251_l86b_efter_2behandling.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 20,
-        "document_category": "Optryk efter 2.beh",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1206074,
-        "title": "L 86 - svar på spm. 2 om, hvordan forslaget om at indføre klagefrister til Det Psykiatriske Patientklagenævn vil tage højde for, at nogle mennesker først flere år efter et tvangsindgreb kan være i stand til at indgive en klage",
-        "number": null,
-        "date": "2026-01-27",
+        "date": "2026-02-02",
         "role": "Parallelomdelt på",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l86/spm/2/svar/2196792/3126056.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l86/spm/5/svar/2198807/3129399.pdf",
         "format": "DOCX",
         "variant_code": "P",
         "is_omtryk": false,
@@ -7623,6 +7577,71 @@
           "responders": [
             "indenrigs- og sundhedsministeren"
           ]
+        }
+      },
+      {
+        "document_id": 1206589,
+        "title": "Spm. om, i hvor mange af de 14 sager, som er indgivet mere end 5 år efter hændelsesdatoen, påklager har fået hel eller delvis medhold i klagen",
+        "number": null,
+        "date": "2026-01-28",
+        "role": "Parallelomdelt på",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l86/spm/5/3127207.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 2,
+        "document_status": "Låst",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20426,
+            "name": "indenrigs- og sundhedsministeren",
+            "short_name": "indenrigs- og sundhedsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 16582,
+            "name": "Peder Hvelplund",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1210117,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 19. februar 2026",
+        "number": null,
+        "date": "2026-02-19",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l86b/20251_l86b_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
         }
       }
     ],
@@ -8133,58 +8152,12 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1210115,
-        "title": "Vedtaget af Folketinget ved 3. behandling den 19. februar 2026",
+        "document_id": 1207416,
+        "title": "L 86 - svar på spm. 5 om, i hvor mange af de 14 sager som er indgivet mere end 5 år efter hændelsesdatoen, påklager har fået hel eller delvis medhold i klagen",
         "number": null,
-        "date": "2026-02-19",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l86a/20251_l86a_som_vedtaget.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 23,
-        "document_category": "Forslag som vedtaget",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1208087,
-        "title": "Efter afstemningen i Folketinget ved 2. behandling den 5. februar 2026",
-        "number": null,
-        "date": "2026-02-05",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l86a/20251_l86a_efter_2behandling.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 20,
-        "document_category": "Optryk efter 2.beh",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1206074,
-        "title": "L 86 - svar på spm. 2 om, hvordan forslaget om at indføre klagefrister til Det Psykiatriske Patientklagenævn vil tage højde for, at nogle mennesker først flere år efter et tvangsindgreb kan være i stand til at indgive en klage",
-        "number": null,
-        "date": "2026-01-27",
+        "date": "2026-02-02",
         "role": "Parallelomdelt på",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l86/spm/2/svar/2196792/3126056.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l86/spm/5/svar/2198807/3129399.pdf",
         "format": "DOCX",
         "variant_code": "P",
         "is_omtryk": false,
@@ -8229,6 +8202,71 @@
           "responders": [
             "indenrigs- og sundhedsministeren"
           ]
+        }
+      },
+      {
+        "document_id": 1206589,
+        "title": "Spm. om, i hvor mange af de 14 sager, som er indgivet mere end 5 år efter hændelsesdatoen, påklager har fået hel eller delvis medhold i klagen",
+        "number": null,
+        "date": "2026-01-28",
+        "role": "Parallelomdelt på",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l86/spm/5/3127207.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 2,
+        "document_status": "Låst",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20426,
+            "name": "indenrigs- og sundhedsministeren",
+            "short_name": "indenrigs- og sundhedsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 16582,
+            "name": "Peder Hvelplund",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1210115,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 19. februar 2026",
+        "number": null,
+        "date": "2026-02-19",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l86a/20251_l86a_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
         }
       }
     ],
@@ -9831,72 +9869,151 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1208109,
-        "title": "Vedtaget af Folketinget ved 3. behandling den 5. februar 2026",
+        "document_id": 1201728,
+        "title": "L 50 - svar på spm. 4 om en ensartet national praksis, så borgernes rettigheder i forbindelse med valg af medarbejder ikke varierer væsentligt på tværs af kommuner",
         "number": null,
-        "date": "2026-02-05",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l50/20251_l50_som_vedtaget.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 23,
-        "document_category": "Forslag som vedtaget",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1206645,
-        "title": "Efter afstemningen i Folketinget ved 2. behandling den 29. januar 2026",
-        "number": null,
-        "date": "2026-01-29",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l50/20251_l50_efter_2behandling.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 20,
-        "document_category": "Optryk efter 2.beh",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1205749,
-        "title": "Betænkning afgivet den 22/1-126",
-        "number": null,
-        "date": "2026-01-22",
+        "date": "2025-12-18",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/bilag/6/3125334.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/spm/4/svar/2190501/3115195.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
         "omtryk": [],
-        "document_type_id": 12,
-        "document_type": "Bilag",
+        "document_type_id": 17,
+        "document_type": "Svar",
         "document_status_id": 1,
         "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 21194,
+            "name": "Joachim Hoffmann-Petersen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "social- og boligministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1198075,
+        "title": "Spm. om en ensartet national praksis, så borgernes rettigheder i forbindelse med valg af medarbejder ikke varierer væsentligt på tværs af kommuner",
+        "number": null,
+        "date": "2025-12-04",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/spm/4/3106095.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21194,
+            "name": "Joachim Hoffmann-Petersen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
         "question_chain": {
           "askers": [],
           "responders": []
+        }
+      },
+      {
+        "document_id": 1201727,
+        "title": "L 50 - svar på spm. 3 om, hvilke faglige og ressourcemæssige kriterier kommunerne forventes at lægge til grund for vurderingen af, om en borgers ønske om en bestemt medarbejder kan imødekommes",
+        "number": null,
+        "date": "2025-12-18",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l50/spm/3/svar/2190502/3115197.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20984,
+            "name": "social- og boligministeren",
+            "short_name": "social- og boligminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 21194,
+            "name": "Joachim Hoffmann-Petersen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "social- og boligministeren"
+          ]
         }
       }
     ],
@@ -11047,69 +11164,116 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1206675,
-        "title": "Vedtaget af Folketinget ved 3. behandling den 29. januar 2026",
+        "document_id": 1203308,
+        "title": "L 26 - svar på spm. 1 om kommentar til undersøgelsen af vilkårene for tjenestemandspensionister i hhv. Grønland og Danmark fra Lærerforeningen i Grønland - IMAK",
         "number": null,
-        "date": "2026-01-29",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l26/20251_l26_som_vedtaget.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 23,
-        "document_category": "Forslag som vedtaget",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1205190,
-        "title": "Efter afstemningen i Folketinget ved 2. behandling den 22. januar 2026",
-        "number": null,
-        "date": "2026-01-22",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l26/20251_l26_efter_2behandling.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 20,
-        "document_category": "Optryk efter 2.beh",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1204607,
-        "title": "Betænkning afgivet den 14. januar 2026",
-        "number": null,
-        "date": "2026-01-19",
+        "date": "2025-12-19",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l26/bilag/10/3122426.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l26/spm/1/svar/2192717/3119210.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 3,
+            "name": "finansministeren",
+            "short_name": "finansminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 3,
+            "name": "finansministeren",
+            "short_name": "finansminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "finansministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1195308,
+        "title": "Spm. om kommentar til undersøgelsen af vilkårene for tjenestemandspensionister i hhv. Grønland og Danmark fra Lærerforeningen i Grønland - IMAK",
+        "number": null,
+        "date": "2025-11-24",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l26/spm/1/3099367.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": true,
+        "omtryk": [
+          {
+            "id": 19726,
+            "date": "2025-11-24",
+            "reason": "Ændret ordlyd"
+          }
+        ],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 3,
+            "name": "finansministeren",
+            "short_name": "finansminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1195434,
+        "title": "Spm. om det aktuelle antal af tjenestemandspensionister, som har været ansat som tjenestemænd i Grønland før indførelsen af Hjemmestyret i 1979",
+        "number": null,
+        "date": "2025-11-24",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l26/spm/2/3099654.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
         "omtryk": [],
-        "document_type_id": 12,
-        "document_type": "Bilag",
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
         "document_status_id": 1,
         "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 3,
+            "name": "finansministeren",
+            "short_name": "finansminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          }
+        ],
         "question_chain": {
           "askers": [],
           "responders": []
@@ -12784,58 +12948,107 @@
     "sag_type_id": 3,
     "source_documents": [
       {
-        "document_id": 1205187,
-        "title": "Vedtaget af Folketinget ved 3. behandling den 22. januar 2026",
+        "document_id": 1202694,
+        "title": "L 76 - svar på spm. 1 om, hvad regeringens mål er for den nationale beskyttelsesrumskapacitet",
         "number": null,
-        "date": "2026-01-22",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l76/20251_l76_som_vedtaget.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 23,
-        "document_category": "Forslag som vedtaget",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1204014,
-        "title": "Efter afstemningen i Folketinget ved 2. behandling den 15. januar 2026",
-        "number": null,
-        "date": "2026-01-15",
-        "role": "På sagstrin",
-        "url": "https://www.ft.dk/ripdf/samling/20251/lovforslag/l76/20251_l76_efter_2behandling.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 21,
-        "document_type": "Forslagstekst",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 20,
-        "document_category": "Optryk efter 2.beh",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1203994,
-        "title": "L 76 - svar på spm. 15 om ministeren, uafhængigt af besvarelsen af spørgsmål nr. 6, vil redegøre for om CO₂-udledningen i forbindelse med opførelse af nye beskyttelsesrum efter regeringens forslag tilskrives staten eller kommunerne",
-        "number": null,
-        "date": "2026-01-14",
+        "date": "2026-01-06",
         "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20251/lovforslag/l76/spm/15/svar/2193572/3120968.pdf",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l76/spm/1/svar/2191734/3117690.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 20978,
+            "name": "ministeren for samfundssikkerhed og beredskab",
+            "short_name": "minister for samfundssikkerhed og beredskab",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20978,
+            "name": "ministeren for samfundssikkerhed og beredskab",
+            "short_name": "minister for samfundssikkerhed og beredskab",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 20353,
+            "name": "Sascha Faxe",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "ministeren for samfundssikkerhed og beredskab"
+          ]
+        }
+      },
+      {
+        "document_id": 1197857,
+        "title": "Spm. om, hvad regeringens mål er for den nationale beskyttelsesrumskapacitet",
+        "number": null,
+        "date": "2025-12-03",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l76/spm/1/3105617.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 20978,
+            "name": "ministeren for samfundssikkerhed og beredskab",
+            "short_name": "minister for samfundssikkerhed og beredskab",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 20353,
+            "name": "Sascha Faxe",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1202697,
+        "title": "L 76 - svar på spm. 3 om overholdelse af LCA-krav, CO₂-grænseværdier og byggetekniske standarder ved opførelse af beskyttelsesrum",
+        "number": null,
+        "date": "2026-01-06",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20251/lovforslag/l76/spm/3/svar/2191737/3117698.pdf",
         "format": "PDF",
         "variant_code": "P",
         "is_omtryk": false,
