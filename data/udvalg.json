@@ -1,5 +1,47 @@
 [
   {
+    "id": 21479,
+    "name": "Børne-, Undervisnings- og Forskningsudvalget",
+    "short_name": "BUU",
+    "member_count": 25,
+    "member_ids": [
+      97,
+      113,
+      118,
+      168,
+      1146,
+      18698,
+      18726,
+      19000,
+      20350,
+      20357,
+      20364,
+      20365,
+      20366,
+      20386,
+      20411,
+      21337,
+      21339,
+      21344,
+      21353,
+      21363,
+      21365,
+      21370,
+      21379,
+      21383,
+      21386
+    ]
+  },
+  {
+    "id": 21489,
+    "name": "Epidemiudvalget",
+    "short_name": "EPI",
+    "member_count": 1,
+    "member_ids": [
+      21349
+    ]
+  },
+  {
     "id": 21397,
     "name": "Europaudvalget",
     "short_name": "EUU",
@@ -83,6 +125,50 @@
     "member_ids": [
       390,
       1158
+    ]
+  },
+  {
+    "id": 21469,
+    "name": "Klima-, Energi- og Forsyningsudvalget",
+    "short_name": "KEF",
+    "member_count": 27,
+    "member_ids": [
+      97,
+      127,
+      139,
+      216,
+      15760,
+      15763,
+      16073,
+      16351,
+      17628,
+      17629,
+      18711,
+      18720,
+      20135,
+      20355,
+      20358,
+      20394,
+      20423,
+      21337,
+      21342,
+      21345,
+      21352,
+      21360,
+      21375,
+      21376,
+      21382,
+      21383,
+      21385
+    ]
+  },
+  {
+    "id": 21485,
+    "name": "Retsudvalget",
+    "short_name": "REU",
+    "member_count": 1,
+    "member_ids": [
+      162
     ]
   },
   {

@@ -13,6 +13,11 @@
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
       }
     ],
     "role": "Klimaretfærdighedsaktivist",
@@ -432,6 +437,11 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
       }
     ],
     "role": "Sekretariatsmedarbejder",
@@ -642,7 +652,13 @@
     "party_short": "DD",
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      }
+    ],
     "role": "Social- og sundhedsassistent",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Sydjyllands Storkreds fra 18. august 2022.",
     "storkreds": "Sydjyllands Storkreds",
@@ -798,7 +814,13 @@
     "party_short": "DD",
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Nye Borgerlige i Nordjyllands Storkreds, 1. november 2022 – 15. januar 2024.",
     "storkreds": "Nordjyllands Storkreds",
@@ -1088,6 +1110,11 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
       }
     ],
     "role": "Arbejdsmiljøkonsulent",
@@ -1573,7 +1600,13 @@
     "party_short": "DD",
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "Historiker, USA-analytiker",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Vestjyllands Storkreds fra 19. marts 2024.",
     "storkreds": "Vestjyllands Storkreds",
@@ -1733,6 +1766,11 @@
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
         "short_name": "UPV"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
       }
     ],
     "role": "Sygeplejerske",
@@ -2972,6 +3010,11 @@
         "id": 21391,
         "name": "Tingsekretærer",
         "short_name": "Tingsekretærer"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
       }
     ],
     "role": "Selvstændig",
@@ -2992,9 +3035,9 @@
       }
     ],
     "educations": [
-      "HA-studier, Vestsjællands Handelshøjskolecenter, 2000-2001.",
+      "Ha-studier, Vestsjællands Handelshøjskolecenter, 2000-2001.",
       "Økonomistudier, Københavns Universitet, 1996-2000.",
-      "1-årig HH, Vestegnens Handelsskole, 1995-1996.",
+      "1-årig hh, Vestegnens Handelsskole, 1995-1996.",
       "Matematisk studentereksamen, Rødovre Gymnasium, 1992-1995.",
       "Folkeskole, Præstemoseskolen, 1982-1992."
     ],
@@ -3039,7 +3082,13 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "Iværksætter",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Københavns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Storkreds",
@@ -3512,6 +3561,11 @@
         "id": 21393,
         "name": "Finansudvalget",
         "short_name": "FIU"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
       }
     ],
     "role": "MF",
@@ -3668,6 +3722,11 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
       }
     ],
     "role": "Cand.jur.",
@@ -4186,7 +4245,13 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Østjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Østjyllands Storkreds",
@@ -5162,7 +5227,13 @@
     "party_short": "EL",
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "Økologisk landmand og socialpædagog",
     "constituency": "Folketingsmedlem for Enhedslisten i Sydjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Sydjyllands Storkreds",
@@ -5378,7 +5449,13 @@
     "party_short": "EL",
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "Seniorrådgiver",
     "constituency": "Folketingsmedlem for Enhedslisten i Københavns Storkreds fra 1. november 2024.",
     "storkreds": "Københavns Storkreds",
@@ -5696,7 +5773,13 @@
     "party_short": "EL",
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "Underviser",
     "constituency": "Folketingsmedlem for Enhedslisten i Vestjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
@@ -6611,6 +6694,11 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
       }
     ],
     "role": "Birgitte Bergman (KF)",
@@ -6678,7 +6766,13 @@
     "party_short": "KF",
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "Specialpædagog i børne- og ungdomspsykiatri",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Vestjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Vestjyllands Storkreds",
@@ -7851,6 +7945,11 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
       }
     ],
     "role": "Konsulent",
@@ -7913,7 +8012,13 @@
     "party_short": "KF",
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "Studerende",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Nordjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordjyllands Storkreds",
@@ -8623,7 +8728,13 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Liberal Alliance i Nordsjællands Storkreds fra 1. november 2022.",
     "storkreds": "Nordsjællands Storkreds",
@@ -8689,6 +8800,11 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
       }
     ],
     "role": "Ingeniør",
@@ -8708,12 +8824,12 @@
     ],
     "educations": [
       "B.Sc. Business Development Engineer, Handels- og Ingeniørhøjskolen, Herning, 2025.",
-      "Matematisk studentereksamen, Holstebro Gymnasium og Hf, 2000."
+      "Matematisk studentereksamen, Holstebro Gymnasium og HF, 2000."
     ],
     "occupations": [
       "Senior Business Development Consultant (pt. orlov), Siemens Digital Industries Software fra 2022.",
       "Solution Architect, Siemens Digital Industries Software, 2019-2022.",
-      "Implementation Consult, Siemens Digital Industries Software, 2014-2019.",
+      "Implementation Consultant, Siemens Digital Industries Software, 2014-2019.",
       "PLM konsulent, Avalon Innovation, 2012-2014.",
       "Metode- og procesudvikler, Bang & Olufsen, 2009-2012.",
       "Senior Manager, Bang & Olufsen, 2007-2009.",
@@ -8837,7 +8953,7 @@
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
     "committees": [],
-    "role": "Peter Larsen (LA)",
+    "role": "Selvstændig",
     "constituency": "Folketingsmedlem for Liberal Alliance i Nordjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordjyllands Storkreds",
     "constituency_history": [
@@ -8853,16 +8969,26 @@
       }
     ],
     "educations": [
+      "Finansdiplomstudiet, 1995-1997.",
+      "1 årig HH, Nykøbing Mors, 1993.",
+      "Folkeskolens afgangseksamen, Tingstrup Skole, Thisted, 1987.",
       "Student, Thisted Gymnasium, 1987-1990."
     ],
     "occupations": [
       "Selvstændig, Boligudlejning Thisted fra 2017.",
       "Privatdirektør, Viborg, Skive, Aars og Thisted, Danske Bank, 2012-2017.",
       "Filialdirektør, Thisted, Danske Bank, 2007-2012.",
-      "Pensionskonsulent, Danske Bank, 2005-2007."
+      "Pensionskonsulent, Danske Bank, Thisted, 2005-2007.",
+      "Bankrådgiver, BG Bank, Østerbro, København, 1998-2005.",
+      "Erhvervstrainee, Unibank, Berlin, 1997-1998.",
+      "Bankrådgiver, Unibank, Albertslund, 1995-1997.",
+      "Bankelev, Unibank, Løgstør, 1993-1995.",
+      "Bryggeriarbejder, Thisted Bryghus, 1992.",
+      "Bartender, Rio Grande, Thisted, 1991-1993.",
+      "Værnepligtig, Jyske Dragonregiment, Holstebro/Skive, 1991."
     ],
     "email": "peter1.larsen@ft.dk",
-    "phone": "+45 3337 4965",
+    "phone": "+45 6162 4016",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -9197,7 +9323,13 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "Head of Marketing & Partnerships",
     "constituency": "Folketingsmedlem for Liberal Alliance i Sjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
@@ -9687,7 +9819,13 @@
     "party_short": "M",
     "current_party": "Moderaterne",
     "current_party_short": "M",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Moderaterne i Fyns Storkreds fra 24. marts 2026.",
     "storkreds": "Fyns Storkreds",
@@ -9888,7 +10026,13 @@
     "party_short": "M",
     "current_party": "Moderaterne",
     "current_party_short": "M",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "Pernille Christensen (M)",
     "constituency": "Folketingsmedlem for Moderaterne i Nordsjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordsjællands Storkreds",
@@ -10022,7 +10166,13 @@
     "party_short": "M",
     "current_party": "Moderaterne",
     "current_party_short": "M",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "Ellen Emilie (M)",
     "constituency": "Folketingsmedlem for Moderaterne i Københavns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Storkreds",
@@ -10712,7 +10862,13 @@
     "party_short": "M",
     "current_party": "Moderaterne",
     "current_party_short": "M",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "Psykolog, forfatter og ekstern lektor",
     "constituency": "Folketingsmedlem for Moderaterne i Københavns Omegns Storkreds, 1. november 2022 – 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -11658,6 +11814,11 @@
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
         "short_name": "UPV"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
       }
     ],
     "role": "Ph.d., forsker",
@@ -11727,7 +11888,13 @@
     "party_short": "RV",
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "Studerende",
     "constituency": "Folketingsmedlem for Radikale Venstre i Fyns Storkreds fra 24. marts 2026.",
     "storkreds": "Fyns Storkreds",
@@ -11803,6 +11970,13 @@
       "Folketingsmedlem for Radikale Venstre i Københavns Storkreds fra 5. juni 2019."
     ],
     "party_history": [
+      {
+        "party": "Radikale Venstre",
+        "party_short": "RV",
+        "start_date": "2026-06-10",
+        "end_date": "2026-10-06",
+        "active": false
+      },
       {
         "party": "Radikale Venstre",
         "party_short": "RV",
@@ -12307,7 +12481,13 @@
     "party_short": "RV",
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "Philip Vivet (RV)",
     "constituency": "Folketingsmedlem for Radikale Venstre i Vestjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
@@ -12324,7 +12504,7 @@
       }
     ],
     "educations": [
-      "Bachelor i samfundsfag og musikvidenskab, Aarhus Universitet fra 2023.",
+      "Bachelor i samfundsfag og musikvidenskab (p.t. orlov), Aarhus Universitet fra 2023.",
       "Stx (musik A - matematik A), Herning Gymnasium, 2017-2020.",
       "Efterskole, Orkesterefterskolen, Holstebro, 2016-2017.",
       "Folkeskole, Herningsholmskolen, Herning, 2013-2016."
@@ -13281,6 +13461,11 @@
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
         "short_name": "UPV"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
       }
     ],
     "role": "Fhv. minister",
@@ -13586,7 +13771,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "Jordemoderstuderende",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Københavns Omegns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -14323,7 +14514,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Østjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Østjyllands Storkreds",
@@ -16117,7 +16314,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "Industritekniker",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Fyns Storkreds fra 1. november 2022.",
     "storkreds": "Fyns Storkreds",
@@ -16426,7 +16629,18 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "Thomas Klimek (S)",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Nordjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordjyllands Storkreds",
@@ -16960,7 +17174,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      }
+    ],
     "role": "Konsulent",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Østjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Østjyllands Storkreds",
@@ -17173,7 +17393,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "Indehaver",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Østjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Østjyllands Storkreds",
@@ -18665,6 +18891,16 @@
         "id": 21393,
         "name": "Finansudvalget",
         "short_name": "FIU"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
       }
     ],
     "role": "Fhv. minister",
@@ -18817,7 +19053,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "Sygeplejerske",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Nordsjællands Storkreds fra 1. november 2022.",
     "storkreds": "Nordsjællands Storkreds",
@@ -19760,7 +20002,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sjællands Storkreds fra 1. november 2022.",
     "storkreds": "Sjællands Storkreds",
@@ -20111,9 +20359,9 @@
     ],
     "occupations": [],
     "email": "jm@jm.dk",
-    "phone": null,
+    "phone": "+45 7226 8400",
     "website_url": "https://www.jm.dk/",
-    "address": null,
+    "address": "Ministry of Justice, Slotsholmsgade 10 1216 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/n/nicolai-wammen",
     "photo_url": "photos/12.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/20111/s/nicolai_wammen/nicolai_wammen_pdf,-d-,jpg.jpg",
@@ -20247,6 +20495,11 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
       }
     ],
     "role": "Fhv. minister",
@@ -20705,6 +20958,11 @@
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
         "short_name": "UPV"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
       }
     ],
     "role": "MF",
@@ -21094,6 +21352,11 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
       }
     ],
     "role": "Miljøingeniør, ph.d.",
@@ -21190,7 +21453,18 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "Sociolog",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Københavns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Storkreds",
@@ -22825,7 +23099,13 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Københavns Storkreds fra 5. juni 2019.",
     "storkreds": "Københavns Storkreds",
@@ -22989,7 +23269,13 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "Sofie F. Villadsen (SF)",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Københavns Omegns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -23386,7 +23672,13 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Venstre i Fyns Storkreds fra 10. december 2025.",
     "storkreds": "Fyns Storkreds",
@@ -24327,7 +24619,13 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "Mathilde Hjort Bressum (V)",
     "constituency": "Folketingsmedlem for Venstre i Østjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Østjyllands Storkreds",
@@ -24611,7 +24909,13 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Venstre i Vestjyllands Storkreds fra 15. september 2011.",
     "storkreds": "Vestjyllands Storkreds",
@@ -25165,6 +25469,11 @@
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
         "short_name": "UPV"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
       }
     ],
     "role": "Fhv. advokat (H)",
@@ -25952,7 +26261,13 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      }
+    ],
     "role": "Jurist",
     "constituency": "Folketingsmedlem for Venstre i Østjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Østjyllands Storkreds",
@@ -26186,6 +26501,11 @@
         "id": 21391,
         "name": "Tingsekretærer",
         "short_name": "Tingsekretærer"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
       }
     ],
     "role": "Koordinator",
@@ -27191,12 +27511,12 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": null,
-    "member_since_year": null,
-    "seniority_label": null,
-    "seniority_years": null,
-    "seniority_months": null,
-    "seniority_tag": null,
+    "member_since_date": "2026-04-16",
+    "member_since_year": 2026,
+    "seniority_label": "Under 1 aar i Folketinget",
+    "seniority_years": 0,
+    "seniority_months": 1,
+    "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
     "votes_against": 0,
