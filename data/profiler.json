@@ -20,14 +20,14 @@
         "short_name": "SAU"
       },
       {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
-      },
-      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
       }
     ],
     "role": "Klimaretfærdighedsaktivist",
@@ -486,6 +486,11 @@
         "short_name": "UUI"
       },
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21477,
         "name": "Transportudvalget",
         "short_name": "TRU"
@@ -494,11 +499,6 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       }
     ],
     "role": "Sekretariatsmedarbejder",
@@ -584,6 +584,11 @@
         "short_name": "GRU"
       },
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
         "id": 21480,
         "name": "Erhvervs- og Digitaliseringsudvalget",
         "short_name": "ERU"
@@ -592,6 +597,11 @@
         "id": 21468,
         "name": "Færøudvalget",
         "short_name": "FÆU"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Retoriker, redaktør og journalist, foredragsholder",
@@ -909,19 +919,29 @@
     "current_party_short": "DD",
     "committees": [
       {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
         "id": 21476,
         "name": "Miljø- og Fødevareudvalget",
         "short_name": "MOF"
       },
       {
-        "id": 21467,
-        "name": "Beskæftigelses- og Ligestillingsudvalget",
-        "short_name": "BEU"
-      },
-      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
       }
     ],
     "role": "MF",
@@ -1210,6 +1230,11 @@
         "short_name": "EPI"
       },
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21477,
         "name": "Transportudvalget",
         "short_name": "TRU"
@@ -1220,6 +1245,11 @@
         "short_name": "SUU"
       },
       {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
+      },
+      {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
@@ -1228,11 +1258,6 @@
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       }
     ],
     "role": "Arbejdsmiljøkonsulent",
@@ -1750,6 +1775,11 @@
         "short_name": "MOF"
       },
       {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      },
+      {
         "id": 21468,
         "name": "Færøudvalget",
         "short_name": "FÆU"
@@ -1760,9 +1790,9 @@
         "short_name": "AD"
       },
       {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Historiker, USA-analytiker",
@@ -1926,6 +1956,11 @@
         "short_name": "SOU"
       },
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
         "short_name": "SUU"
@@ -1934,11 +1969,6 @@
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
         "short_name": "UPV"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       }
     ],
     "role": "Sygeplejerske",
@@ -2106,6 +2136,11 @@
         "id": 21483,
         "name": "Grønlandsudvalget",
         "short_name": "GRU"
+      },
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
       },
       {
         "id": 21468,
@@ -3208,6 +3243,11 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
         "id": 21476,
         "name": "Miljø- og Fødevareudvalget",
         "short_name": "MOF"
@@ -3216,6 +3256,11 @@
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
         "short_name": "SUU"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Selvstændig",
@@ -3299,19 +3344,24 @@
         "short_name": "TRU"
       },
       {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      },
+      {
         "id": 21468,
         "name": "Færøudvalget",
         "short_name": "FÆU"
       },
       {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
+      },
+      {
         "id": 21391,
         "name": "Tingsekretærer",
         "short_name": "Tingsekretærer"
-      },
-      {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
       }
     ],
     "role": "Selvstændig",
@@ -3386,6 +3436,11 @@
         "short_name": "ERU"
       },
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21478,
         "name": "Skatteudvalget",
         "short_name": "SAU"
@@ -3394,11 +3449,6 @@
         "id": 21476,
         "name": "Miljø- og Fødevareudvalget",
         "short_name": "MOF"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       }
     ],
     "role": "Iværksætter",
@@ -3560,6 +3610,11 @@
         "id": 21486,
         "name": "Socialudvalget",
         "short_name": "SOU"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Cand.scient.adm.",
@@ -3917,19 +3972,14 @@
         "short_name": "UUI"
       },
       {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
-      },
-      {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
-      },
-      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
       }
     ],
     "role": "MF",
@@ -4088,14 +4138,19 @@
         "short_name": "REU"
       },
       {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
       },
       {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
       }
     ],
     "role": "Cand.jur.",
@@ -4162,6 +4217,11 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
       {
         "id": 21468,
         "name": "Færøudvalget",
@@ -4348,6 +4408,11 @@
         "id": 21467,
         "name": "Beskæftigelses- og Ligestillingsudvalget",
         "short_name": "BEU"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Ufaglært",
@@ -4378,7 +4443,7 @@
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/2026/df/michael-nedersoe/michael_nedersoe_500.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
@@ -4673,14 +4738,14 @@
         "short_name": "UUI"
       },
       {
-        "id": 21467,
-        "name": "Beskæftigelses- og Ligestillingsudvalget",
-        "short_name": "BEU"
-      },
-      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
       }
     ],
     "role": "MF",
@@ -5156,6 +5221,11 @@
         "short_name": "FÆU"
       },
       {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
+      },
+      {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
@@ -5578,6 +5648,11 @@
         "short_name": "UDF"
       },
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
         "id": 21468,
         "name": "Færøudvalget",
         "short_name": "FÆU"
@@ -5586,6 +5661,11 @@
         "id": 21462,
         "name": "Den Arktiske Delegation",
         "short_name": "AD"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       },
       {
         "id": 21402,
@@ -5983,14 +6063,19 @@
     "current_party_short": "EL",
     "committees": [
       {
-        "id": 21477,
-        "name": "Transportudvalget",
-        "short_name": "TRU"
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
       },
       {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
       }
     ],
     "role": "Seniorrådgiver",
@@ -6964,6 +7049,11 @@
         "id": 21462,
         "name": "Den Arktiske Delegation",
         "short_name": "AD"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Cand.scient.pol.",
@@ -7310,14 +7400,24 @@
         "short_name": "SOU"
       },
       {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
       },
       {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
       }
     ],
     "role": "Birgitte Bergman (KF)",
@@ -7387,14 +7487,14 @@
     "current_party_short": "KF",
     "committees": [
       {
-        "id": 21466,
-        "name": "Sundheds- og Ældreudvalget",
-        "short_name": "SUU"
-      },
-      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
       }
     ],
     "role": "Specialpædagog i børne- og ungdomspsykiatri",
@@ -7467,6 +7567,11 @@
         "id": 21482,
         "name": "Udenrigs- og Forsvarsudvalget",
         "short_name": "UDF"
+      },
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
       },
       {
         "id": 21478,
@@ -8123,6 +8228,11 @@
         "short_name": "AD"
       },
       {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
+      },
+      {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
@@ -8737,6 +8847,11 @@
         "short_name": "ERU"
       },
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21478,
         "name": "Skatteudvalget",
         "short_name": "SAU"
@@ -8745,11 +8860,6 @@
         "id": 21467,
         "name": "Beskæftigelses- og Ligestillingsudvalget",
         "short_name": "BEU"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       }
     ],
     "role": "Studerende",
@@ -8967,6 +9077,11 @@
         "id": 21486,
         "name": "Socialudvalget",
         "short_name": "SOU"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
       },
       {
         "id": 21467,
@@ -9319,6 +9434,11 @@
         "short_name": "FÆU"
       },
       {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
+      },
+      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
@@ -9483,6 +9603,11 @@
         "id": 21483,
         "name": "Grønlandsudvalget",
         "short_name": "GRU"
+      },
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
       }
     ],
     "role": "MF, cand.musicae",
@@ -9650,19 +9775,24 @@
         "short_name": "SOU"
       },
       {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      },
+      {
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
         "short_name": "SUU"
       },
       {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
+      },
+      {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
-      },
-      {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
       }
     ],
     "role": "Ingeniør",
@@ -9739,6 +9869,11 @@
         "id": 21485,
         "name": "Retsudvalget",
         "short_name": "REU"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
       },
       {
         "id": 21468,
@@ -10078,14 +10213,14 @@
         "short_name": "EUU"
       },
       {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
-      },
-      {
         "id": 21393,
         "name": "Finansudvalget",
         "short_name": "FIU"
+      },
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
       },
       {
         "id": 21402,
@@ -10253,6 +10388,11 @@
         "id": 21480,
         "name": "Erhvervs- og Digitaliseringsudvalget",
         "short_name": "ERU"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
       },
       {
         "id": 21469,
@@ -10470,6 +10610,11 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
       }
     ],
     "role": "Mads Strange (LA)",
@@ -10705,6 +10850,11 @@
         "short_name": "UUI"
       },
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
         "id": 21476,
         "name": "Miljø- og Fødevareudvalget",
         "short_name": "MOF"
@@ -10795,6 +10945,11 @@
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
       }
     ],
     "role": "Fhv. minister",
@@ -10884,6 +11039,16 @@
         "id": 21468,
         "name": "Færøudvalget",
         "short_name": "FÆU"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
+      },
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
       }
     ],
     "role": "Morten E.G. Brautsch (M)",
@@ -10963,6 +11128,11 @@
         "id": 21483,
         "name": "Grønlandsudvalget",
         "short_name": "GRU"
+      },
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
       },
       {
         "id": 21477,
@@ -11046,6 +11216,11 @@
         "short_name": "SOU"
       },
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21467,
         "name": "Beskæftigelses- og Ligestillingsudvalget",
         "short_name": "BEU"
@@ -11054,11 +11229,6 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       }
     ],
     "role": "Pernille Christensen (M)",
@@ -11660,11 +11830,6 @@
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
         "short_name": "SUU"
-      },
-      {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
       }
     ],
     "role": "Selvstændig",
@@ -11937,6 +12102,11 @@
         "short_name": "SOU"
       },
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21467,
         "name": "Beskæftigelses- og Ligestillingsudvalget",
         "short_name": "BEU"
@@ -11945,11 +12115,6 @@
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
         "short_name": "SUU"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       }
     ],
     "role": "Psykolog, forfatter og ekstern lektor",
@@ -12188,14 +12353,19 @@
         "short_name": "IFU"
       },
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
         "id": 21468,
         "name": "Færøudvalget",
         "short_name": "FÆU"
       },
       {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       },
       {
         "id": 21402,
@@ -12373,7 +12543,7 @@
       "Public Affairs Consultant, Dansk Standard, 2015-2016."
     ],
     "email": "caroline.stage@ft.dk",
-    "phone": "+453337 5500",
+    "phone": "+453337 5884",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/c/caroline-stage-olsen",
@@ -12583,6 +12753,11 @@
         "id": 21462,
         "name": "Den Arktiske Delegation",
         "short_name": "AD"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Qarsoq Høegh-Dam (N)",
@@ -13044,6 +13219,11 @@
         "short_name": "UDF"
       },
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
         "short_name": "SUU"
@@ -13052,11 +13232,6 @@
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
         "short_name": "UPV"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       }
     ],
     "role": "Ph.d., forsker",
@@ -13141,6 +13316,11 @@
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Studerende",
@@ -13283,6 +13463,11 @@
         "id": 21478,
         "name": "Skatteudvalget",
         "short_name": "SAU"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
       }
     ],
     "role": "Cand.scient.pol.",
@@ -13519,9 +13704,9 @@
         "short_name": "AD"
       },
       {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Thomas Rohden (RV)",
@@ -13814,14 +13999,19 @@
     "current_party_short": "RV",
     "committees": [
       {
-        "id": 21477,
-        "name": "Transportudvalget",
-        "short_name": "TRU"
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
       },
       {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
       }
     ],
     "role": "Philip Vivet (RV)",
@@ -14203,6 +14393,16 @@
         "short_name": "IBL"
       },
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
+      },
+      {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
@@ -14242,7 +14442,7 @@
       "Post Danmark, Søborg og København, 1994-1997."
     ],
     "email": "sophie.andersen@ft.dk",
-    "phone": "+453337 5500",
+    "phone": "+453337 4095",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/s/sophie-haestorp-andersen",
@@ -14297,6 +14497,11 @@
         "id": 21486,
         "name": "Socialudvalget",
         "short_name": "SOU"
+      },
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
       },
       {
         "id": 21468,
@@ -14679,6 +14884,11 @@
         "id": 21487,
         "name": "Udlændinge- og Integrationsudvalget",
         "short_name": "UUI"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
       }
     ],
     "role": "Fhv. minister",
@@ -14714,7 +14924,7 @@
       "Butiksassistent, Holbæk Fiskehus, 2001-2004."
     ],
     "email": "kaare.dybvad@ft.dk",
-    "phone": "+45 3337 5500",
+    "phone": "+45 3337 4054",
     "website_url": "https://www.socialdemokratiet.dk/politikere/kaare-dybvad-bek/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/k/kaare-dybvad-bek",
@@ -14857,14 +15067,14 @@
         "short_name": "ERU"
       },
       {
-        "id": 21402,
-        "name": "Udvalget til Prøvelse af Valgene",
-        "short_name": "UPV"
-      },
-      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
+      },
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
       }
     ],
     "role": "Fhv. minister",
@@ -15046,6 +15256,11 @@
         "id": 21468,
         "name": "Færøudvalget",
         "short_name": "FÆU"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Ba.scient.adm.",
@@ -15208,6 +15423,11 @@
         "short_name": "SOU"
       },
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21478,
         "name": "Skatteudvalget",
         "short_name": "SAU"
@@ -15226,11 +15446,6 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       }
     ],
     "role": "Jordemoderstuderende",
@@ -15991,14 +16206,14 @@
         "short_name": "SOU"
       },
       {
-        "id": 21466,
-        "name": "Sundheds- og Ældreudvalget",
-        "short_name": "SUU"
-      },
-      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
       }
     ],
     "role": "MF",
@@ -17531,9 +17746,9 @@
         "short_name": "GRU"
       },
       {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
       },
       {
         "id": 21402,
@@ -17862,14 +18077,14 @@
         "short_name": "IFU"
       },
       {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
-      },
-      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
       }
     ],
     "role": "Industritekniker",
@@ -18197,6 +18412,16 @@
         "short_name": "GRU"
       },
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      },
+      {
         "id": 21468,
         "name": "Færøudvalget",
         "short_name": "FÆU"
@@ -18212,14 +18437,9 @@
         "short_name": "SUU"
       },
       {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
-      },
-      {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Thomas Klimek (S)",
@@ -18301,11 +18521,6 @@
         "id": 21480,
         "name": "Erhvervs- og Digitaliseringsudvalget",
         "short_name": "ERU"
-      },
-      {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
       }
     ],
     "role": "Fhv. minister",
@@ -18624,6 +18839,11 @@
         "id": 21483,
         "name": "Grønlandsudvalget",
         "short_name": "GRU"
+      },
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
       },
       {
         "id": 21480,
@@ -20021,6 +20241,11 @@
         "id": 21462,
         "name": "Den Arktiske Delegation",
         "short_name": "AD"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Fhv. minister",
@@ -20560,11 +20785,6 @@
         "short_name": "UDF"
       },
       {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
-      },
-      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -20573,6 +20793,11 @@
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
       }
     ],
     "role": "Fhv. minister",
@@ -20727,6 +20952,11 @@
     "current_party_short": "S",
     "committees": [
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21476,
         "name": "Miljø- og Fødevareudvalget",
         "short_name": "MOF"
@@ -20740,11 +20970,6 @@
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       }
     ],
     "role": "Sygeplejerske",
@@ -21097,6 +21322,11 @@
         "short_name": "AD"
       },
       {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
+      },
+      {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
@@ -21441,7 +21671,7 @@
       "Konsulent, Dansk Metal, 2011-2013."
     ],
     "email": "rasmus.stoklund@ft.dk",
-    "phone": "+453337 5500",
+    "phone": "+453337 4039",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/r/rasmus-stoklund",
@@ -21574,14 +21804,14 @@
         "short_name": "§71"
       },
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
-      },
-      {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
       }
     ],
     "role": "Fhv. minister",
@@ -21750,6 +21980,11 @@
         "id": 21484,
         "name": "Indfødsretsudvalget",
         "short_name": "IFU"
+      },
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
       },
       {
         "id": 21479,
@@ -22275,9 +22510,19 @@
         "short_name": "IFU"
       },
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21393,
+        "name": "Finansudvalget",
+        "short_name": "FIU"
       }
     ],
     "role": "Fhv. minister",
@@ -22758,6 +23003,16 @@
         "short_name": "EPI"
       },
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
@@ -22771,11 +23026,6 @@
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
         "short_name": "UPV"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       }
     ],
     "role": "MF",
@@ -23182,14 +23432,14 @@
         "short_name": "MOF"
       },
       {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
-      },
-      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
       }
     ],
     "role": "Miljøingeniør, ph.d.",
@@ -23288,19 +23538,24 @@
     "current_party_short": "SF",
     "committees": [
       {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
-      },
-      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
       },
       {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Sociolog",
@@ -23560,6 +23815,11 @@
         "id": 21483,
         "name": "Grønlandsudvalget",
         "short_name": "GRU"
+      },
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
       },
       {
         "id": 21468,
@@ -24309,6 +24569,11 @@
         "id": 21486,
         "name": "Socialudvalget",
         "short_name": "SOU"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Socialpædagog",
@@ -24601,6 +24866,11 @@
         "short_name": "REU"
       },
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
         "id": 21480,
         "name": "Erhvervs- og Digitaliseringsudvalget",
         "short_name": "ERU"
@@ -24609,6 +24879,11 @@
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
         "short_name": "SUU"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       },
       {
         "id": 21397,
@@ -25356,6 +25631,11 @@
         "id": 21462,
         "name": "Den Arktiske Delegation",
         "short_name": "AD"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Anna Falkenberg (SP)",
@@ -25606,7 +25886,7 @@
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/2026/ufg/nadja-nathalie-isaksen/nadja_nathalie_isaksen_500.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
@@ -25637,7 +25917,18 @@
     "party_short": "UFG",
     "current_party": "Uden for folketingsgrupperne - Emilie Schytte",
     "current_party_short": "UFG",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Emilie Schytte (UFG)",
     "constituency": "Folketingsmedlem for Borgernes Parti i Nordsjællands Storkreds, 24. marts 2026 – 4. april 2026.",
     "storkreds": "Nordsjællands Storkreds",
@@ -26365,6 +26656,11 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
         "id": 21476,
         "name": "Miljø- og Fødevareudvalget",
         "short_name": "MOF"
@@ -26402,7 +26698,7 @@
       "Politisk assistent for mep Jens Rohde, Europa-Parlamentet, Bruxelles, 2010-2012."
     ],
     "email": "marie.bjerre@ft.dk",
-    "phone": "+453337 5500",
+    "phone": "+453337 4516",
     "website_url": "https://mariebjerre.dk",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/m/marie-bjerre",
@@ -26687,14 +26983,19 @@
         "short_name": "ERU"
       },
       {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
-      },
-      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
       }
     ],
     "role": "Mathilde Hjort Bressum (V)",
@@ -26885,7 +27186,7 @@
       "Kommunikationsrådgiver, Policy Group, 2013-2015."
     ],
     "email": "morten.dahlin@ft.dk",
-    "phone": "+453337 5500",
+    "phone": "+453337 4524",
     "website_url": "https://mortendahlin.dk/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/m/morten-dahlin",
@@ -27051,7 +27352,7 @@
       "Bankrådgiver, Sparekassen Holstebro, 2009-2011."
     ],
     "email": "thomas.danielsen@ft.dk",
-    "phone": "+45 3337 5500",
+    "phone": "+45 3337 4526",
     "website_url": "https://thomas-danielsen.dk/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/t/thomas-danielsen",
@@ -27334,6 +27635,11 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
         "id": 21476,
         "name": "Miljø- og Fødevareudvalget",
         "short_name": "MOF"
@@ -27614,14 +27920,14 @@
         "short_name": "REU"
       },
       {
-        "id": 21402,
-        "name": "Udvalget til Prøvelse af Valgene",
-        "short_name": "UPV"
-      },
-      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
+      },
+      {
+        "id": 21402,
+        "name": "Udvalget til Prøvelse af Valgene",
+        "short_name": "UPV"
       }
     ],
     "role": "Fhv. advokat (H)",
@@ -27828,7 +28134,7 @@
       "Økonom, A.P. Møller, København, 1998-2001."
     ],
     "email": "jacob.jensen@ft.dk",
-    "phone": "+45 3337 5500",
+    "phone": "+45 3337 4558",
     "website_url": "https://jacobjensen.venstre.dk/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/j/jacob-jensen",
@@ -27961,9 +28267,19 @@
         "short_name": "IBL"
       },
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
         "id": 21467,
         "name": "Beskæftigelses- og Ligestillingsudvalget",
         "short_name": "BEU"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Selvstændig",
@@ -28006,7 +28322,7 @@
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/2026/v/trine-jepsen/trine_jepsen_500.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
@@ -28405,7 +28721,7 @@
       "Makroanalytiker, Jyske Markets, Silkeborg, 2006-2007."
     ],
     "email": "stephanie.lose@ft.dk",
-    "phone": "+45 3337 5500",
+    "phone": "+45 3337 4518",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -28447,6 +28763,11 @@
         "short_name": "REU"
       },
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21478,
         "name": "Skatteudvalget",
         "short_name": "SAU"
@@ -28462,9 +28783,9 @@
         "short_name": "AD"
       },
       {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
       }
     ],
     "role": "Jurist",
@@ -28551,14 +28872,14 @@
         "short_name": "SUU"
       },
       {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
-      },
-      {
         "id": 21393,
         "name": "Finansudvalget",
         "short_name": "FIU"
+      },
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
       }
     ],
     "role": "Fhv. minister",
@@ -28589,7 +28910,7 @@
       "Salgsassistent, Plaza Ure & Smykker, Illum, København, 1999-2004."
     ],
     "email": "sophie.lohde@ft.dk",
-    "phone": "+45 3337 5500",
+    "phone": "+45 3337 4508",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/s/sophie-loehde",
@@ -28717,6 +29038,16 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21476,
         "name": "Miljø- og Fødevareudvalget",
         "short_name": "MOF"
@@ -28730,11 +29061,6 @@
         "id": 21391,
         "name": "Tingsekretærer",
         "short_name": "Tingsekretærer"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       }
     ],
     "role": "Koordinator",
