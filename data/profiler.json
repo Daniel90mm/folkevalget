@@ -10,6 +10,16 @@
     "current_party_short": "ALT",
     "committees": [
       {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
@@ -218,7 +228,23 @@
     "party_short": "ALT",
     "current_party": "Alternativet",
     "current_party_short": "ALT",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Alternativet i Østjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Østjyllands Storkreds",
@@ -372,7 +398,23 @@
     "party_short": "ALT",
     "current_party": "Alternativet",
     "current_party_short": "ALT",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      }
+    ],
     "role": "Politisk leder for Alternativet",
     "constituency": "Folketingsmedlem for Alternativet i Københavns Storkreds fra 1. november 2022.",
     "storkreds": "Københavns Storkreds",
@@ -433,6 +475,21 @@
     "current_party": "Alternativet",
     "current_party_short": "ALT",
     "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
       {
         "id": 21397,
         "name": "Europaudvalget",
@@ -515,7 +572,28 @@
     "party_short": "ALT",
     "current_party": "Alternativet",
     "current_party_short": "ALT",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      }
+    ],
     "role": "Retoriker, redaktør og journalist, foredragsholder",
     "constituency": "Folketingsmedlem for Alternativet i Københavns Omegns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -653,6 +731,21 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
       {
         "id": 21485,
         "name": "Retsudvalget",
@@ -815,6 +908,16 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
       {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
@@ -1102,14 +1205,29 @@
     "current_party_short": "DD",
     "committees": [
       {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
       },
       {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
+      },
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
       },
       {
         "id": 21479,
@@ -1442,6 +1560,21 @@
     "current_party_short": "DD",
     "committees": [
       {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
         "id": 21393,
         "name": "Finansudvalget",
         "short_name": "FIU"
@@ -1601,6 +1734,31 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
+      },
       {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
@@ -1762,6 +1920,16 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
       {
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
@@ -1928,7 +2096,23 @@
     "party_short": "DD",
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      }
+    ],
     "role": "Journalist",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Sjællands Storkreds fra 1. november 2022.",
     "storkreds": "Sjællands Storkreds",
@@ -2056,6 +2240,26 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
       {
         "id": 21397,
         "name": "Europaudvalget",
@@ -2410,7 +2614,23 @@
     "party_short": "DD",
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      }
+    ],
     "role": "Projektspeditør",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Østjyllands Storkreds fra 18. august 2022.",
     "storkreds": "Østjyllands Storkreds",
@@ -2726,6 +2946,31 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
+      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
@@ -2887,7 +3132,23 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Fyns Storkreds, 24. januar 2023 – 24. marts 2026.",
     "storkreds": "Fyns Storkreds",
@@ -2945,7 +3206,18 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      }
+    ],
     "role": "Selvstændig",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Sydjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Sydjyllands Storkreds",
@@ -3006,6 +3278,31 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
       {
         "id": 21391,
         "name": "Tingsekretærer",
@@ -3084,6 +3381,21 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -3147,7 +3459,28 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      }
+    ],
     "role": "Politiassistent",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Sjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
@@ -3207,7 +3540,28 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21491,
+        "name": "Tilsynet i henhold til grundlovens § 71",
+        "short_name": "§71"
+      },
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      }
+    ],
     "role": "Cand.scient.adm.",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Sjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
@@ -3558,6 +3912,16 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
+      {
         "id": 21393,
         "name": "Finansudvalget",
         "short_name": "FIU"
@@ -3719,6 +4083,11 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
@@ -3794,14 +4163,14 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
-      },
-      {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
       },
       {
         "id": 21392,
@@ -3964,7 +4333,23 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      }
+    ],
     "role": "Ufaglært",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Østjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Østjyllands Storkreds",
@@ -4024,7 +4409,28 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      }
+    ],
     "role": "Automekaniker",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Vestjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
@@ -4090,9 +4496,14 @@
     "current_party_short": "DF",
     "committees": [
       {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
       },
       {
         "id": 21397,
@@ -4180,6 +4591,16 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
         "id": 21393,
         "name": "Finansudvalget",
         "short_name": "FIU"
@@ -4247,6 +4668,16 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -4307,7 +4738,23 @@
     "party_short": "EL",
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      }
+    ],
     "role": "Konsulent på beskæftigelsesområdet",
     "constituency": "Folketingsmedlem for Enhedslisten i Københavns Omegns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -4438,6 +4885,21 @@
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
     "committees": [
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
       {
         "id": 21397,
         "name": "Europaudvalget",
@@ -4669,6 +5131,31 @@
     "current_party_short": "EL",
     "committees": [
       {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
@@ -4739,6 +5226,26 @@
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
     "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
       {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
@@ -5061,6 +5568,26 @@
     "current_party_short": "EL",
     "committees": [
       {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
+      },
+      {
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
         "short_name": "UPV"
@@ -5228,6 +5755,11 @@
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
     "committees": [
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
       {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
@@ -5450,6 +5982,11 @@
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
     "committees": [
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
       {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
@@ -5775,6 +6312,21 @@
     "current_party_short": "EL",
     "committees": [
       {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
@@ -5844,6 +6396,16 @@
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
     "committees": [
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
       {
         "id": 21393,
         "name": "Finansudvalget",
@@ -6312,7 +6874,28 @@
     "party_short": "IA",
     "current_party": "Inuit Ataqatigiit",
     "current_party_short": "IA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
+      }
+    ],
     "role": "Fhv. naalakkersuisoq/minister",
     "constituency": "Folketingsmedlem for Inuit Ataqatigiit i Grønland fra 24. marts 2026.",
     "storkreds": "Grønland",
@@ -6371,7 +6954,18 @@
     "party_short": "JF",
     "current_party": "Javnaðarflokkurin",
     "current_party_short": "JF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
+      }
+    ],
     "role": "Cand.scient.pol.",
     "constituency": "Folketingsmedlem for Javnaðarflokkurin i Færøerne fra 15. september 2011.",
     "storkreds": "Færøerne",
@@ -6526,6 +7120,21 @@
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
     "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
       {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
@@ -6691,6 +7300,16 @@
     "current_party_short": "KF",
     "committees": [
       {
+        "id": 21491,
+        "name": "Tilsynet i henhold til grundlovens § 71",
+        "short_name": "§71"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
@@ -6768,6 +7387,11 @@
     "current_party_short": "KF",
     "committees": [
       {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -6834,6 +7458,21 @@
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
     "committees": [
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
       {
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
@@ -6904,7 +7543,28 @@
     "party_short": "KF",
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      }
+    ],
     "role": "Charlotte Green (KF)",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Østjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Østjyllands Storkreds",
@@ -7441,7 +8101,33 @@
     "party_short": "KF",
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Master of Public Administration",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Sjællands Storkreds, 29. november 2019 – 1. november 2022.",
     "storkreds": "Sjællands Storkreds",
@@ -7517,6 +8203,16 @@
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
     "committees": [
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
       {
         "id": 21393,
         "name": "Finansudvalget",
@@ -7747,7 +8443,18 @@
     "party_short": "KF",
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Fyns Storkreds fra 15. september 2011.",
     "storkreds": "Fyns Storkreds",
@@ -7813,7 +8520,13 @@
     "party_short": "KF",
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      }
+    ],
     "role": "Konsulent",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Sydjyllands Storkreds fra 26. juni 2024.",
     "storkreds": "Sydjyllands Storkreds",
@@ -7942,9 +8655,9 @@
     "current_party_short": "KF",
     "committees": [
       {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
       },
       {
         "id": 21469,
@@ -8014,6 +8727,26 @@
     "current_party_short": "KF",
     "committees": [
       {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -8078,7 +8811,23 @@
     "party_short": "KF",
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      }
+    ],
     "role": "Marketingchef",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Københavns Omegns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -8213,7 +8962,18 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Liberal Alliance i Sydjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Sydjyllands Storkreds",
@@ -8273,7 +9033,28 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
+      }
+    ],
     "role": "Geolog",
     "constituency": "Folketingsmedlem for Liberal Alliance i Vestjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Vestjyllands Storkreds",
@@ -8434,7 +9215,28 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      }
+    ],
     "role": "Chef for iværksætteripolitik",
     "constituency": "Folketingsmedlem for Liberal Alliance i Københavns Omegns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -8501,6 +9303,21 @@
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
     "committees": [
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
       {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
@@ -8651,7 +9468,23 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21491,
+        "name": "Tilsynet i henhold til grundlovens § 71",
+        "short_name": "§71"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      }
+    ],
     "role": "MF, cand.musicae",
     "constituency": "Folketingsmedlem for Liberal Alliance i Fyns Storkreds fra 1. november 2022.",
     "storkreds": "Fyns Storkreds",
@@ -8730,6 +9563,16 @@
     "current_party_short": "LA",
     "committees": [
       {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
@@ -8796,6 +9639,21 @@
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
     "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
       {
         "id": 21397,
         "name": "Europaudvalget",
@@ -8878,6 +9736,21 @@
     "current_party_short": "LA",
     "committees": [
       {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
         "short_name": "UPV"
@@ -8952,7 +9825,18 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      }
+    ],
     "role": "Selvstændig",
     "constituency": "Folketingsmedlem for Liberal Alliance i Nordjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordjyllands Storkreds",
@@ -9085,7 +9969,28 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      }
+    ],
     "role": "Statsautoriseret ejendomsmægler",
     "constituency": "Folketingsmedlem for Liberal Alliance i Østjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Østjyllands Storkreds",
@@ -9152,6 +10057,26 @@
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
     "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
       {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
@@ -9324,6 +10249,11 @@
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
     "committees": [
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
       {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
@@ -9521,6 +10451,21 @@
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
     "committees": [
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
       {
         "id": 21397,
         "name": "Europaudvalget",
@@ -9753,7 +10698,23 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      }
+    ],
     "role": "Bygningsarkitekt",
     "constituency": "Folketingsmedlem for Nye Borgerlige i Sydjyllands Storkreds, 5. juni 2019 – 10. januar 2024.",
     "storkreds": "Sydjyllands Storkreds",
@@ -9820,6 +10781,16 @@
     "current_party": "Moderaterne",
     "current_party_short": "M",
     "committees": [
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
       {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
@@ -9893,7 +10864,28 @@
     "party_short": "M",
     "current_party": "Moderaterne",
     "current_party_short": "M",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      }
+    ],
     "role": "Morten E.G. Brautsch (M)",
     "constituency": "Folketingsmedlem for Moderaterne i Vestjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
@@ -9961,7 +10953,23 @@
     "party_short": "M",
     "current_party": "Moderaterne",
     "current_party_short": "M",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      }
+    ],
     "role": "Frida Bruun (M)",
     "constituency": "Folketingsmedlem for Moderaterne i Sydjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Sydjyllands Storkreds",
@@ -10027,6 +11035,26 @@
     "current_party": "Moderaterne",
     "current_party_short": "M",
     "committees": [
+      {
+        "id": 21491,
+        "name": "Tilsynet i henhold til grundlovens § 71",
+        "short_name": "§71"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
       {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
@@ -10167,6 +11195,21 @@
     "current_party": "Moderaterne",
     "current_party_short": "M",
     "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
       {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
@@ -10599,6 +11642,26 @@
     "current_party_short": "M",
     "committees": [
       {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
+      {
         "id": 21393,
         "name": "Finansudvalget",
         "short_name": "FIU"
@@ -10864,6 +11927,26 @@
     "current_party_short": "M",
     "committees": [
       {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -11090,14 +12173,29 @@
     "current_party_short": "M",
     "committees": [
       {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
-      },
-      {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
       },
       {
         "id": 21402,
@@ -11164,13 +12262,7 @@
     "party_short": "M",
     "current_party": "Moderaterne",
     "current_party_short": "M",
-    "committees": [
-      {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
-      }
-    ],
+    "committees": [],
     "role": "Socialminister og minister for nordisk samarbejde",
     "constituency": "Folketingsmedlem for Moderaterne i Københavns Omegns Storkreds fra 1. november 2022.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -11238,7 +12330,23 @@
     "party_short": "M",
     "current_party": "Moderaterne",
     "current_party_short": "M",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Caroline Stage (M)",
     "constituency": "Folketingsmedlem for Moderaterne i Østjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Østjyllands Storkreds",
@@ -11455,7 +12563,28 @@
     "party_short": "N",
     "current_party": "Naleraq",
     "current_party_short": "N",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
+      }
+    ],
     "role": "Qarsoq Høegh-Dam (N)",
     "constituency": "Folketingsmedlem for Naleraq i Grønland fra 24. marts 2026.",
     "storkreds": "Grønland",
@@ -11516,6 +12645,16 @@
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
     "committees": [
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
       {
         "id": 21397,
         "name": "Europaudvalget",
@@ -11589,7 +12728,28 @@
     "party_short": "RV",
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      }
+    ],
     "role": "Konsulent",
     "constituency": "Folketingsmedlem for Radikale Venstre i Københavns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Storkreds",
@@ -11629,6 +12789,69 @@
     "seniority_years": 0,
     "seniority_months": 2,
     "seniority_tag": "newcomer",
+    "votes_total": 0,
+    "votes_for": 0,
+    "votes_against": 0,
+    "votes_neither": 0,
+    "votes_absent": 0,
+    "attendance_pct": null,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
+    "recent_votes": []
+  },
+  {
+    "id": 21475,
+    "name": "Line Krogh Lay",
+    "first_name": "Line Krogh",
+    "last_name": "Lay",
+    "party": "Radikale Venstre",
+    "party_short": "RV",
+    "current_party": "Radikale Venstre",
+    "current_party_short": "RV",
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      }
+    ],
+    "role": null,
+    "constituency": null,
+    "storkreds": null,
+    "constituency_history": [],
+    "party_history": [
+      {
+        "party": "Radikale Venstre",
+        "party_short": "RV",
+        "start_date": "2026-06-10",
+        "end_date": "2026-10-06",
+        "active": true
+      }
+    ],
+    "educations": [],
+    "occupations": [],
+    "email": null,
+    "phone": null,
+    "website_url": null,
+    "address": null,
+    "member_url": null,
+    "photo_url": null,
+    "photo_source_url": null,
+    "photo_source_name": null,
+    "photo_photographer": null,
+    "photo_credit_text": null,
+    "member_since_date": null,
+    "member_since_year": null,
+    "seniority_label": null,
+    "seniority_years": null,
+    "seniority_months": null,
+    "seniority_tag": null,
     "votes_total": 0,
     "votes_for": 0,
     "votes_against": 0,
@@ -11811,6 +13034,21 @@
     "current_party_short": "RV",
     "committees": [
       {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
+      {
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
         "short_name": "UPV"
@@ -11890,6 +13128,16 @@
     "current_party_short": "RV",
     "committees": [
       {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
@@ -11956,13 +13204,7 @@
     "party_short": "RV",
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
-    "committees": [
-      {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
-      }
-    ],
+    "committees": [],
     "role": "Klima-, energi- og forsyningsminister",
     "constituency": "Folketingsmedlem for Radikale Venstre i Københavns Storkreds fra 5. juni 2019.",
     "storkreds": "Københavns Storkreds",
@@ -11975,14 +13217,14 @@
         "party_short": "RV",
         "start_date": "2026-06-10",
         "end_date": "2026-10-06",
-        "active": false
+        "active": true
       },
       {
         "party": "Radikale Venstre",
         "party_short": "RV",
         "start_date": "2025-10-07",
-        "end_date": null,
-        "active": true
+        "end_date": "2026-06-09",
+        "active": false
       }
     ],
     "educations": [
@@ -12036,7 +13278,13 @@
     "party_short": "RV",
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      }
+    ],
     "role": "Cand.scient.pol.",
     "constituency": "Folketingsmedlem for Radikale Venstre i Østjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Østjyllands Storkreds",
@@ -12251,14 +13499,29 @@
     "current_party_short": "RV",
     "committees": [
       {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
+      },
+      {
         "id": 21393,
         "name": "Finansudvalget",
         "short_name": "FIU"
-      },
-      {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
       }
     ],
     "role": "Thomas Rohden (RV)",
@@ -12316,6 +13579,74 @@
     "recent_votes": []
   },
   {
+    "id": 21474,
+    "name": "Maria Georgi Sloth",
+    "first_name": "Maria Georgi",
+    "last_name": "Sloth",
+    "party": "Radikale Venstre",
+    "party_short": "RV",
+    "current_party": "Radikale Venstre",
+    "current_party_short": "RV",
+    "committees": [
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      }
+    ],
+    "role": null,
+    "constituency": null,
+    "storkreds": null,
+    "constituency_history": [],
+    "party_history": [
+      {
+        "party": "Radikale Venstre",
+        "party_short": "RV",
+        "start_date": "2026-06-10",
+        "end_date": "2026-10-06",
+        "active": true
+      }
+    ],
+    "educations": [],
+    "occupations": [],
+    "email": null,
+    "phone": null,
+    "website_url": null,
+    "address": null,
+    "member_url": null,
+    "photo_url": null,
+    "photo_source_url": null,
+    "photo_source_name": null,
+    "photo_photographer": null,
+    "photo_credit_text": null,
+    "member_since_date": "2026-06-10",
+    "member_since_year": 2026,
+    "seniority_label": "Under 1 aar i Folketinget",
+    "seniority_years": 0,
+    "seniority_months": 0,
+    "seniority_tag": "newcomer",
+    "votes_total": 0,
+    "votes_for": 0,
+    "votes_against": 0,
+    "votes_neither": 0,
+    "votes_absent": 0,
+    "attendance_pct": null,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
+    "recent_votes": []
+  },
+  {
     "id": 191,
     "name": "Zenia Stampe",
     "first_name": "Zenia",
@@ -12337,14 +13668,14 @@
         "party_short": "RV",
         "start_date": "2026-06-10",
         "end_date": "2026-10-06",
-        "active": false
+        "active": true
       },
       {
         "party": "Radikale Venstre",
         "party_short": "RV",
         "start_date": "2025-10-07",
-        "end_date": null,
-        "active": true
+        "end_date": "2026-06-09",
+        "active": false
       }
     ],
     "educations": [
@@ -12482,6 +13813,11 @@
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
     "committees": [
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
       {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
@@ -12860,7 +14196,18 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Københavns Omegns Storkreds, 13. november 2007 – 31. december 2013.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -12930,7 +14277,38 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21491,
+        "name": "Tilsynet i henhold til grundlovens § 71",
+        "short_name": "§71"
+      },
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      }
+    ],
     "role": "Sygeplejerske",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sjællands Storkreds fra 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
@@ -13296,7 +14674,13 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sjællands Storkreds fra 18. juni 2015.",
     "storkreds": "Sjællands Storkreds",
@@ -13457,6 +14841,21 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
       {
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
@@ -13622,7 +15021,33 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      }
+    ],
     "role": "Ba.scient.adm.",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Fyns Storkreds fra 5. juni 2019.",
     "storkreds": "Fyns Storkreds",
@@ -13772,6 +15197,36 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
       {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
@@ -14334,6 +15789,16 @@
     "current_party_short": "S",
     "committees": [
       {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
@@ -14515,6 +15980,21 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
       {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
@@ -15598,6 +17078,26 @@
     "current_party_short": "S",
     "committees": [
       {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
         "short_name": "UPV"
@@ -15760,7 +17260,38 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      }
+    ],
     "role": "Katrine Evelyn Jensen (S)",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Vestjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
@@ -15822,14 +17353,19 @@
     "current_party_short": "S",
     "committees": [
       {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
-      },
-      {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
       },
       {
         "id": 21392,
@@ -15990,9 +17526,9 @@
     "current_party_short": "S",
     "committees": [
       {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
       },
       {
         "id": 21393,
@@ -16316,6 +17852,21 @@
     "current_party_short": "S",
     "committees": [
       {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -16631,6 +18182,36 @@
     "current_party_short": "S",
     "committees": [
       {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -16711,6 +18292,16 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
       {
         "id": 21393,
         "name": "Finansudvalget",
@@ -17023,7 +18614,38 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21432,
+        "name": "Tilsynet med Folketingets Bibliotek",
+        "short_name": "Tilsyn med Bibliotek"
+      }
+    ],
     "role": "Lærer",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sydjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Sydjyllands Storkreds",
@@ -17175,6 +18797,21 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
       {
         "id": 21489,
         "name": "Epidemiudvalget",
@@ -17394,6 +19031,21 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
       {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
@@ -17863,16 +19515,6 @@
     "current_party_short": "S",
     "committees": [
       {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
-      },
-      {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
-      },
-      {
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
         "short_name": "UPV"
@@ -18189,7 +19831,23 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Østjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Østjyllands Storkreds",
@@ -18345,9 +20003,24 @@
     "current_party_short": "S",
     "committees": [
       {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
       }
     ],
     "role": "Fhv. minister",
@@ -18663,13 +20336,7 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [
-      {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
-      }
-    ],
+    "committees": [],
     "role": "Rådgiver",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Vestjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Vestjyllands Storkreds",
@@ -18888,6 +20555,11 @@
     "current_party_short": "S",
     "committees": [
       {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
         "id": 21393,
         "name": "Finansudvalget",
         "short_name": "FIU"
@@ -19054,6 +20726,21 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
       {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
@@ -19380,6 +21067,36 @@
     "current_party_short": "S",
     "committees": [
       {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
+      },
+      {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
@@ -19685,7 +21402,18 @@
     "party_short": "S",
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      }
+    ],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Nordsjællands Storkreds fra 5. juni 2019.",
     "storkreds": "Nordsjællands Storkreds",
@@ -19840,6 +21568,16 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [
+      {
+        "id": 21491,
+        "name": "Tilsynet i henhold til grundlovens § 71",
+        "short_name": "§71"
+      },
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
+      },
       {
         "id": 21393,
         "name": "Finansudvalget",
@@ -20004,6 +21742,16 @@
     "current_party_short": "S",
     "committees": [
       {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -20167,6 +21915,26 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
       {
         "id": 21391,
         "name": "Tingsekretærer",
@@ -20487,14 +22255,24 @@
     "current_party_short": "S",
     "committees": [
       {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
+        "id": 21491,
+        "name": "Tilsynet i henhold til grundlovens § 71",
+        "short_name": "§71"
       },
       {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
       },
       {
         "id": 21469,
@@ -20723,6 +22501,11 @@
     "current_party_short": "SF",
     "committees": [
       {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
         "id": 21393,
         "name": "Finansudvalget",
         "short_name": "FIU"
@@ -20787,6 +22570,31 @@
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
     "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
       {
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
@@ -20944,6 +22752,11 @@
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
     "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
       {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
@@ -21114,13 +22927,7 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [
-      {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
-      }
-    ],
+    "committees": [],
     "role": "Minister for samfundssikkerhed og beredskab",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Københavns Storkreds fra 1. november 2022.",
     "storkreds": "Københavns Storkreds",
@@ -21273,7 +23080,23 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Sjællands Storkreds fra 5. juni 2019.",
     "storkreds": "Sjællands Storkreds",
@@ -21348,6 +23171,16 @@
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
     "committees": [
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
       {
         "id": 21397,
         "name": "Europaudvalget",
@@ -21455,6 +23288,11 @@
     "current_party_short": "SF",
     "committees": [
       {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -21527,6 +23365,21 @@
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
     "committees": [
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
       {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
@@ -21692,7 +23545,28 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      }
+    ],
     "role": "Lærer, kommunikationskonsulent",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Sydjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Sydjyllands Storkreds",
@@ -22004,14 +23878,39 @@
     "current_party_short": "SF",
     "committees": [
       {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
       },
       {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
+      },
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
       },
       {
         "id": 21392,
@@ -22322,6 +24221,16 @@
     "current_party_short": "SF",
     "committees": [
       {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
         "id": 21393,
         "name": "Finansudvalget",
         "short_name": "FIU"
@@ -22390,7 +24299,18 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21491,
+        "name": "Tilsynet i henhold til grundlovens § 71",
+        "short_name": "§71"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      }
+    ],
     "role": "Socialpædagog",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Nordjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Nordjyllands Storkreds",
@@ -22669,7 +24589,33 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Pædagog",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Østjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Østjyllands Storkreds",
@@ -22821,7 +24767,33 @@
     "party_short": "SF",
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      }
+    ],
     "role": "Sygeplejerske",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Fyns Storkreds fra 24. marts 2026.",
     "storkreds": "Fyns Storkreds",
@@ -23101,6 +25073,26 @@
     "current_party_short": "SF",
     "committees": [
       {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
@@ -23271,6 +25263,16 @@
     "current_party_short": "SF",
     "committees": [
       {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -23334,7 +25336,28 @@
     "party_short": "SP",
     "current_party": "Sambandsflokkurin",
     "current_party_short": "SP",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
+      }
+    ],
     "role": "Anna Falkenberg (SP)",
     "constituency": "Folketingsmedlem for Sambandsflokkurin i Færøerne fra 1. november 2022.",
     "storkreds": "Færøerne",
@@ -23396,7 +25419,13 @@
     "party_short": "UFG",
     "current_party": "Uden for folketingsgrupperne - Cecilie Liv Hansen",
     "current_party_short": "UFG",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      }
+    ],
     "role": "Cecilie Liv Hansen (UFG)",
     "constituency": "Folketingsmedlem for Liberal Alliance i Sydjyllands Storkreds, 24. marts 2026 – 28. marts 2026.",
     "storkreds": "Sydjyllands Storkreds",
@@ -23458,7 +25487,13 @@
     "party_short": "UFG",
     "current_party": "Uden for folketingsgrupperne - Jacob Harris",
     "current_party_short": "UFG",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      }
+    ],
     "role": "Selvstændig montør",
     "constituency": "Folketingsmedlem for Borgernes Parti i Sjællands Storkreds, 24. marts 2026 – 28. marts 2026.",
     "storkreds": "Sjællands Storkreds",
@@ -23528,7 +25563,13 @@
     "party_short": "UFG",
     "current_party": "Uden for folketingsgrupperne - Nadja Natalie Isaksen",
     "current_party_short": "UFG",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      }
+    ],
     "role": "Cand.jur.",
     "constituency": "Folketingsmedlem for Borgernes Parti i Sydjyllands Storkreds, 24. marts 2026 – 3. maj 2026.",
     "storkreds": "Sydjyllands Storkreds",
@@ -23674,6 +25715,21 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -23717,7 +25773,7 @@
     "member_since_year": 2025,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 5,
+    "seniority_months": 6,
     "seniority_tag": "newcomer",
     "votes_total": 22,
     "votes_for": 17,
@@ -24309,9 +26365,14 @@
     "current_party_short": "V",
     "committees": [
       {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21432,
+        "name": "Tilsynet med Folketingets Bibliotek",
+        "short_name": "Tilsyn med Bibliotek"
       }
     ],
     "role": "Fhv. minister",
@@ -24621,6 +26682,16 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      },
+      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
@@ -24688,7 +26759,28 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      }
+    ],
     "role": "Marie Brixtofte (V)",
     "constituency": "Folketingsmedlem for Venstre i Københavns Omegns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -24751,9 +26843,19 @@
     "current_party_short": "V",
     "committees": [
       {
-        "id": 21397,
-        "name": "Europaudvalget",
-        "short_name": "EUU"
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21484,
+        "name": "Indfødsretsudvalget",
+        "short_name": "IFU"
+      },
+      {
+        "id": 21401,
+        "name": "Udvalget for Forretningsordenen",
+        "short_name": "UFO"
       }
     ],
     "role": "Fhv. minister",
@@ -24910,6 +27012,16 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
       {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
@@ -25222,6 +27334,11 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
@@ -25397,7 +27514,28 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21491,
+        "name": "Tilsynet i henhold til grundlovens § 71",
+        "short_name": "§71"
+      },
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
     "role": "Amanda Heitmann (V)",
     "constituency": "Folketingsmedlem for Venstre i Fyns Storkreds fra 24. marts 2026.",
     "storkreds": "Fyns Storkreds",
@@ -25465,6 +27603,16 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
       {
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
@@ -25638,6 +27786,16 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
         "id": 21397,
         "name": "Europaudvalget",
         "short_name": "EUU"
@@ -25796,7 +27954,18 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      }
+    ],
     "role": "Selvstændig",
     "constituency": "Folketingsmedlem for Venstre i Vestjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
@@ -25869,6 +28038,16 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
       {
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
@@ -26188,9 +28367,9 @@
     "current_party_short": "V",
     "committees": [
       {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
       },
       {
         "id": 21393,
@@ -26263,6 +28442,26 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -26331,6 +28530,26 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
       {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
@@ -26498,6 +28717,16 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
+      {
         "id": 21391,
         "name": "Tingsekretærer",
         "short_name": "Tingsekretærer"
@@ -26661,7 +28890,33 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21489,
+        "name": "Epidemiudvalget",
+        "short_name": "EPI"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      },
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Venstre i Sydjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Sydjyllands Storkreds",
@@ -26966,7 +29221,18 @@
     "party_short": "V",
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      }
+    ],
     "role": "Formand for Venstre, fhv. minister",
     "constituency": "Folketingsmedlem for Venstre i Østjyllands Storkreds fra 13. november 2007.",
     "storkreds": "Østjyllands Storkreds",

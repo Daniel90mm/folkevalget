@@ -196,7 +196,7 @@
     "id": 21330,
     "name": "Radikale Venstre",
     "short_name": "RV",
-    "member_count": 11,
+    "member_count": 13,
     "member_ids": [
       112,
       141,
@@ -208,7 +208,9 @@
       21344,
       21360,
       21380,
-      21381
+      21381,
+      21474,
+      21475
     ]
   },
   {
