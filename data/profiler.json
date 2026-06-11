@@ -27910,6 +27910,11 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
         "id": 21486,
         "name": "Socialudvalget",
         "short_name": "SOU"
@@ -28682,11 +28687,6 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
-      {
-        "id": 21478,
-        "name": "Skatteudvalget",
-        "short_name": "SAU"
-      },
       {
         "id": 21393,
         "name": "Finansudvalget",
@@ -30159,6 +30159,56 @@
     "seniority_years": 0,
     "seniority_months": 0,
     "seniority_tag": "newcomer",
+    "votes_total": 0,
+    "votes_for": 0,
+    "votes_against": 0,
+    "votes_neither": 0,
+    "votes_absent": 0,
+    "attendance_pct": null,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
+    "recent_votes": []
+  },
+  {
+    "id": 20597,
+    "name": "Hanne Wetendorff Nielsen",
+    "first_name": "Hanne Wetendorff",
+    "last_name": "Nielsen",
+    "party": null,
+    "party_short": null,
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      }
+    ],
+    "role": null,
+    "constituency": null,
+    "storkreds": null,
+    "constituency_history": [],
+    "party_history": [],
+    "educations": [],
+    "occupations": [],
+    "email": null,
+    "phone": null,
+    "website_url": null,
+    "address": null,
+    "member_url": null,
+    "photo_url": null,
+    "photo_source_url": null,
+    "photo_source_name": null,
+    "photo_photographer": null,
+    "photo_credit_text": null,
+    "member_since_date": null,
+    "member_since_year": null,
+    "seniority_label": null,
+    "seniority_years": null,
+    "seniority_months": null,
+    "seniority_tag": null,
     "votes_total": 0,
     "votes_for": 0,
     "votes_against": 0,
