@@ -924,11 +924,6 @@
         "short_name": "UUI"
       },
       {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
         "id": 21476,
         "name": "Miljø- og Fødevareudvalget",
         "short_name": "MOF"
@@ -1759,6 +1754,11 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
       {
         "id": 21483,
         "name": "Grønlandsudvalget",
@@ -6096,22 +6096,15 @@
     "educations": [
       "Ph.d. i globale studier, Roskilde Universitet, 2011-2015.",
       "MSc. i mellemøststudier, SOAS University of London, 2007-2008.",
-      "Arabisk, American University of Beirut, 2006.",
-      "Arabisk, Københavns Universitet, 2006-2007.",
-      "Master i offentlig administration, Roskilde Universitet."
+      "Kandidat i offentlig administration, Roskilde Universitet."
     ],
     "occupations": [
       "Seniorrådgiver, Center for Bæredygtig Finans, Mellemfolkeligt Samvirke, 2023-2025.",
       "Politisk rådgiver, Enhedslisten, 2020-2023.",
-      "Seniorrådgiver, Advice, 2019-2020.",
-      "Særlig rådgiver, Center for Global Klimahandling, Klima-, Energi- og Forsyningsministeriet, 2019-2020.",
-      "Politisk chef, Alternativet, 2017-2022.",
-      "Rådgiver, Alternativet, 2015-2022.",
-      "Ekstern lektor, Syddansk Universitet, 2012-2022.",
+      "Konsulent, Center for Global Klimahandling, Klima-, Energi- og Forsyningsministeriet, 2019-2020.",
+      "Rådgiver/politisk chef, Alternativet, 2015-2018.",
       "Forskningsassistent, Dansk Institut for Internationale Studier, 2011-2012.",
-      "Forskningsassistent, Københavns Universitet, 2010-2011.",
-      "Programassistent, Det danske repræsentationskontor i Ramallah, 2009.",
-      "International konsulent, Dansk Røde Kors, 2009-2010."
+      "International konsulent, Ungdommens Røde Kors, 2009-2010."
     ],
     "email": "leila.stockmarr@ft.dk",
     "phone": "+45 3337 5009",
@@ -8065,7 +8058,7 @@
       "Strategisk planning, Den Danske Reklameskole, 2000-2001.",
       "Hd (A), Handelshøjskole Syd (Syddansk Universitet), 1992-1993.",
       "Ha (E), Handelshøjskole Syd (Syddansk Universitet), 1988-1990.",
-      "Matematisk student, Amtsgymnasiet Horsens, 1984-1986."
+      "Matematisk student, Amtsgymnasiet Horsens, 1983-1986."
     ],
     "occupations": [
       "Bestyrelsesmedlem og partner, Envision A/S, 2018-2022.",
@@ -16063,7 +16056,7 @@
       "Nyhedsmedarbejder, Radio Mojn, 1991.",
       "Studievært, Radio Sønderborg, 1991.",
       "Kassemedarbejder, Øbro Marked, 1990.",
-      "Journalist og underviser, Mediecenteret KURT, 1986-1990.",
+      "Journalist og underviser, Radio KURT/Mediecenteret KURT, 1986-1990.",
       "Rengøringsarbejde, diverse ejendomme, 1984-1986."
     ],
     "email": "benny.engelbrecht@ft.dk",
