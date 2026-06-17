@@ -1230,11 +1230,6 @@
         "short_name": "BUU"
       },
       {
-        "id": 21477,
-        "name": "Transportudvalget",
-        "short_name": "TRU"
-      },
-      {
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
         "short_name": "SUU"
@@ -2127,6 +2122,11 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
       {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
@@ -3169,6 +3169,11 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
@@ -3434,11 +3439,6 @@
         "id": 21480,
         "name": "Erhvervs- og Digitaliseringsudvalget",
         "short_name": "ERU"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       },
       {
         "id": 21478,
@@ -18389,6 +18389,11 @@
     "current_party_short": "S",
     "committees": [
       {
+        "id": 21491,
+        "name": "Tilsynet i henhold til grundlovens § 71",
+        "short_name": "§71"
+      },
+      {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
@@ -19009,6 +19014,16 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [
+      {
+        "id": 21491,
+        "name": "Tilsynet i henhold til grundlovens § 71",
+        "short_name": "§71"
+      },
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
       {
         "id": 21486,
         "name": "Socialudvalget",
@@ -21791,16 +21806,6 @@
     "current_party_short": "S",
     "committees": [
       {
-        "id": 21491,
-        "name": "Tilsynet i henhold til grundlovens § 71",
-        "short_name": "§71"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
@@ -22481,11 +22486,6 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [
-      {
-        "id": 21491,
-        "name": "Tilsynet i henhold til grundlovens § 71",
-        "short_name": "§71"
-      },
       {
         "id": 21487,
         "name": "Udlændinge- og Integrationsudvalget",
