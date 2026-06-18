@@ -1946,9 +1946,9 @@
     "current_party_short": "DD",
     "committees": [
       {
-        "id": 21486,
-        "name": "Socialudvalget",
-        "short_name": "SOU"
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
       },
       {
         "id": 21479,
@@ -2122,6 +2122,11 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
+      {
+        "id": 21486,
+        "name": "Socialudvalget",
+        "short_name": "SOU"
+      },
       {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
@@ -4233,7 +4238,7 @@
         "short_name": "FPR"
       }
     ],
-    "role": "Formand for Dansk Folkeparti , cand.jur.",
+    "role": "Formand for Dansk Folkeparti, cand.jur.",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Københavns Omegns Storkreds, 1. november 2022 – 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
     "constituency_history": [
@@ -15470,7 +15475,7 @@
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/2026/s/sofie-de-bretteville/sofie_de_bretteville_500.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
@@ -22356,7 +22361,7 @@
     "email": "jm@jm.dk",
     "phone": "+45 7226 8400",
     "website_url": "https://www.jm.dk/",
-    "address": "Ministry of Justice, Slotsholmsgade 10 1216 København K",
+    "address": "Justitsministeriet, Slotsholmsgade 10 1216 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/n/nicolai-wammen",
     "photo_url": "photos/12.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/20111/s/nicolai_wammen/nicolai_wammen_pdf,-d-,jpg.jpg",
@@ -25560,7 +25565,7 @@
       "Folkeskolelærer, VIA University College og Københavns Professionshøjskole, Aarhus og København, 2022."
     ],
     "occupations": [
-      "Fuldmægtig (pt. orlov), Uddannelses- og Forksningsstyrelsen fra 2025."
+      "Fuldmægtig (pt. orlov), Uddannelses- og Forskningsstyrelsen fra 2025."
     ],
     "email": "sofie.villadsen@ft.dk",
     "phone": "+45 6162 3997",
@@ -30190,12 +30195,12 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": null,
-    "member_since_year": null,
-    "seniority_label": null,
-    "seniority_years": null,
-    "seniority_months": null,
-    "seniority_tag": null,
+    "member_since_date": "2026-06-10",
+    "member_since_year": 2026,
+    "seniority_label": "Under 1 aar i Folketinget",
+    "seniority_years": 0,
+    "seniority_months": 0,
+    "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
     "votes_against": 0,
