@@ -574,6 +574,11 @@
     "current_party_short": "ALT",
     "committees": [
       {
+        "id": 21508,
+        "name": "Udvalget for Det Tyske Mindretal",
+        "short_name": "UTM"
+      },
+      {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
@@ -1220,6 +1225,11 @@
     "current_party_short": "DD",
     "committees": [
       {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
         "id": 21489,
         "name": "Epidemiudvalget",
         "short_name": "EPI"
@@ -1749,6 +1759,11 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
+      {
+        "id": 21508,
+        "name": "Udvalget for Det Tyske Mindretal",
+        "short_name": "UTM"
+      },
       {
         "id": 21481,
         "name": "Kultur- og Kirkeudvalget",
@@ -5831,6 +5846,11 @@
     "current_party_short": "EL",
     "committees": [
       {
+        "id": 21508,
+        "name": "Udvalget for Det Tyske Mindretal",
+        "short_name": "UTM"
+      },
+      {
         "id": 21476,
         "name": "Miljø- og Fødevareudvalget",
         "short_name": "MOF"
@@ -8619,6 +8639,11 @@
     "current_party_short": "KF",
     "committees": [
       {
+        "id": 21508,
+        "name": "Udvalget for Det Tyske Mindretal",
+        "short_name": "UTM"
+      },
+      {
         "id": 21476,
         "name": "Miljø- og Fødevareudvalget",
         "short_name": "MOF"
@@ -9060,6 +9085,11 @@
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
     "committees": [
+      {
+        "id": 21508,
+        "name": "Udvalget for Det Tyske Mindretal",
+        "short_name": "UTM"
+      },
       {
         "id": 21486,
         "name": "Socialudvalget",
@@ -11106,6 +11136,11 @@
     "current_party": "Moderaterne",
     "current_party_short": "M",
     "committees": [
+      {
+        "id": 21508,
+        "name": "Udvalget for Det Tyske Mindretal",
+        "short_name": "UTM"
+      },
       {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
@@ -13985,6 +14020,11 @@
     "current_party": "Radikale Venstre",
     "current_party_short": "RV",
     "committees": [
+      {
+        "id": 21508,
+        "name": "Udvalget for Det Tyske Mindretal",
+        "short_name": "UTM"
+      },
       {
         "id": 21481,
         "name": "Kultur- og Kirkeudvalget",
@@ -20781,6 +20821,11 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [
+      {
+        "id": 21508,
+        "name": "Udvalget for Det Tyske Mindretal",
+        "short_name": "UTM"
+      },
       {
         "id": 21482,
         "name": "Udenrigs- og Forsvarsudvalget",
@@ -29024,6 +29069,11 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
+      {
+        "id": 21508,
+        "name": "Udvalget for Det Tyske Mindretal",
+        "short_name": "UTM"
+      },
       {
         "id": 21481,
         "name": "Kultur- og Kirkeudvalget",

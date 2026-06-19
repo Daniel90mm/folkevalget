@@ -709,10 +709,11 @@
     "id": 21477,
     "name": "Transportudvalget",
     "short_name": "TRU",
-    "member_count": 28,
+    "member_count": 29,
     "member_ids": [
       82,
       99,
+      113,
       120,
       180,
       189,
@@ -813,6 +814,23 @@
       21381,
       21384,
       21385
+    ]
+  },
+  {
+    "id": 21508,
+    "name": "Udvalget for Det Tyske Mindretal",
+    "short_name": "UTM",
+    "member_count": 9,
+    "member_ids": [
+      97,
+      168,
+      16073,
+      17629,
+      20398,
+      20966,
+      21344,
+      21356,
+      21368
     ]
   },
   {
