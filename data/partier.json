@@ -3,15 +3,14 @@
     "id": 21331,
     "name": "Alternativet",
     "short_name": "ALT",
-    "member_count": 7,
+    "member_count": 6,
     "member_ids": [
       15775,
       20351,
       20352,
       20353,
       21342,
-      21368,
-      21379
+      21368
     ]
   },
   {
@@ -27,10 +26,9 @@
     "id": 21323,
     "name": "Danmarksdemokraterne – Inger Støjberg",
     "short_name": "DD",
-    "member_count": 14,
+    "member_count": 12,
     "member_ids": [
       82,
-      113,
       119,
       162,
       182,
@@ -41,21 +39,18 @@
       20373,
       20374,
       20375,
-      20376,
-      21359
+      20376
     ]
   },
   {
     "id": 21329,
     "name": "Dansk Folkeparti",
     "short_name": "DF",
-    "member_count": 17,
+    "member_count": 14,
     "member_ids": [
-      18,
       216,
       238,
       15763,
-      18721,
       20350,
       20356,
       20414,
@@ -63,7 +58,6 @@
       21351,
       21357,
       21358,
-      21376,
       21377,
       21378,
       21386,
@@ -74,19 +68,17 @@
     "id": 21328,
     "name": "Enhedslisten",
     "short_name": "EL",
-    "member_count": 12,
+    "member_count": 10,
     "member_ids": [
       109,
       110,
       15777,
-      15791,
       16073,
       16582,
       18694,
       20135,
       20411,
       21302,
-      21371,
       21398
     ]
   },
@@ -112,13 +104,11 @@
     "id": 21327,
     "name": "Det Konservative Folkeparti",
     "short_name": "KF",
-    "member_count": 15,
+    "member_count": 13,
     "member_ids": [
       189,
       11702,
-      15790,
       15793,
-      18711,
       18713,
       20357,
       20369,
@@ -135,9 +125,8 @@
     "id": 21325,
     "name": "Liberal Alliance",
     "short_name": "LA",
-    "member_count": 20,
+    "member_count": 17,
     "member_ids": [
-      99,
       15779,
       18703,
       18723,
@@ -153,17 +142,15 @@
       20400,
       20820,
       21341,
-      21345,
       21366,
-      21375,
-      21384
+      21375
     ]
   },
   {
     "id": 21326,
     "name": "Moderaterne",
     "short_name": "M",
-    "member_count": 16,
+    "member_count": 14,
     "member_ids": [
       57,
       145,
@@ -176,10 +163,8 @@
       20389,
       20415,
       20423,
-      20976,
       21346,
       21356,
-      21370,
       21385
     ]
   },
@@ -196,7 +181,7 @@
     "id": 21330,
     "name": "Radikale Venstre",
     "short_name": "RV",
-    "member_count": 13,
+    "member_count": 12,
     "member_ids": [
       112,
       141,
@@ -204,7 +189,6 @@
       18725,
       18726,
       18729,
-      21338,
       21344,
       21360,
       21380,
@@ -217,7 +201,7 @@
     "id": 21321,
     "name": "Socialdemokratiet",
     "short_name": "S",
-    "member_count": 48,
+    "member_count": 43,
     "member_ids": [
       12,
       74,
@@ -234,14 +218,12 @@
       244,
       260,
       286,
-      351,
       1619,
       15760,
       15762,
       15770,
       15776,
       15787,
-      16180,
       16351,
       16503,
       18715,
@@ -255,8 +237,6 @@
       20361,
       20362,
       20364,
-      20365,
-      20366,
       20367,
       20368,
       20781,
@@ -264,7 +244,6 @@
       21337,
       21343,
       21349,
-      21363,
       21372,
       21404
     ]
@@ -273,21 +252,18 @@
     "id": 21324,
     "name": "Socialistisk Folkeparti",
     "short_name": "SF",
-    "member_count": 20,
+    "member_count": 17,
     "member_ids": [
       43,
       121,
-      199,
       219,
       15788,
       16728,
       17628,
       18706,
       18707,
-      18708,
       18709,
       19000,
-      20358,
       20359,
       20360,
       20798,
@@ -316,15 +292,6 @@
     ]
   },
   {
-    "id": 21396,
-    "name": "Uden for folketingsgrupperne - Emilie Schytte",
-    "short_name": "UFG",
-    "member_count": 1,
-    "member_ids": [
-      21369
-    ]
-  },
-  {
     "id": 21395,
     "name": "Uden for folketingsgrupperne - Jacob Harris",
     "short_name": "UFG",
@@ -346,7 +313,7 @@
     "id": 21322,
     "name": "Venstre, Danmarks Liberale Parti",
     "short_name": "V",
-    "member_count": 23,
+    "member_count": 20,
     "member_ids": [
       93,
       127,
@@ -355,7 +322,6 @@
       139,
       164,
       168,
-      173,
       180,
       206,
       1845,
@@ -367,9 +333,7 @@
       20371,
       20546,
       21348,
-      21352,
       21353,
-      21362,
       21367
     ]
   }
