@@ -2,10 +2,96 @@
   "scope": "case-linked-meetings",
   "scope_note": "Moeder og dagsordenspunkter koblet til sager i det aktuelle datasaet.",
   "counts": {
-    "meetings": 19,
-    "agenda_points": 43
+    "meetings": 22,
+    "agenda_points": 46
   },
   "meetings": [
+    {
+      "meeting_id": 15983,
+      "date": "2026-06-25",
+      "number": "12",
+      "title": "Møde i salen",
+      "type": "Møde i salen",
+      "status": "Under forberedelse",
+      "start_note": "",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 101159,
+          "agenda_number": "3",
+          "agenda_title": "Eventuelt: 3. behandling",
+          "forhandling": "",
+          "sag_id": 105024,
+          "sag_number": "L 2",
+          "sag_title": "Om tillægsbevilling for finansåret 2025.",
+          "sagstrin_id": 273885,
+          "sagstrin_date": "2026-06-25",
+          "sagstrin_title": "Eventuelt: 3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "På dagsorden",
+          "vote_ids": [
+            10571
+          ]
+        }
+      ],
+      "agenda_point_count": 1
+    },
+    {
+      "meeting_id": 15982,
+      "date": "2026-06-23",
+      "number": "10",
+      "title": "Møde i salen",
+      "type": "Møde i salen",
+      "status": "Afholdt",
+      "start_note": "",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 101092,
+          "agenda_number": "1",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105024,
+          "sag_number": "L 2",
+          "sag_title": "Om tillægsbevilling for finansåret 2025.",
+          "sagstrin_id": 273883,
+          "sagstrin_date": "2026-06-23",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "På dagsorden",
+          "vote_ids": []
+        }
+      ],
+      "agenda_point_count": 1
+    },
+    {
+      "meeting_id": 15981,
+      "date": "2026-06-09",
+      "number": "6",
+      "title": "Møde i salen",
+      "type": "Møde i salen",
+      "status": "Afholdt",
+      "start_note": "",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 100820,
+          "agenda_number": "2",
+          "agenda_title": "1. behandling",
+          "forhandling": "",
+          "sag_id": 105024,
+          "sag_number": "L 2",
+          "sag_title": "Om tillægsbevilling for finansåret 2025.",
+          "sagstrin_id": 273876,
+          "sagstrin_date": "2026-06-09",
+          "sagstrin_title": "1. behandling",
+          "sagstrin_type": "1. behandling",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
+        }
+      ],
+      "agenda_point_count": 1
+    },
     {
       "meeting_id": 15496,
       "date": "2026-02-26",
@@ -925,5 +1011,5 @@
       "agenda_point_count": 1
     }
   ],
-  "generated_at": "2026-06-24T19:11:46+00:00"
+  "generated_at": "2026-06-25T08:39:58+00:00"
 }

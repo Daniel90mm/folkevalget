@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-06-24T19:11:46+00:00",
+  "generated_at": "2026-06-25T08:39:58+00:00",
   "source": "Folketinget ODA API",
   "start_date": "2026-01-12",
   "vote_window": {
     "start_date": "2026-01-12",
-    "today": "2026-06-24",
+    "today": "2026-06-25",
     "first_vote_id": 10544,
     "first_sagstrin_id": 269776,
-    "sagstrin_count": 27
+    "sagstrin_count": 28
   },
   "counts": {
-    "people": 228,
+    "people": 238,
     "parties": 19,
     "committees": 30,
-    "actor_relations": 1955,
-    "votes": 27,
-    "individual_votes": 3938,
-    "profiles": 228
+    "actor_relations": 1956,
+    "votes": 28,
+    "individual_votes": 4117,
+    "profiles": 238
   }
 }
