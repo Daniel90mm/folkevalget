@@ -429,7 +429,7 @@
     "id": 21485,
     "name": "Retsudvalget",
     "short_name": "REU",
-    "member_count": 24,
+    "member_count": 23,
     "member_ids": [
       82,
       118,
@@ -451,7 +451,6 @@
       21342,
       21343,
       21346,
-      21353,
       21354,
       21378,
       21474
@@ -625,7 +624,7 @@
     "id": 21482,
     "name": "Udenrigs- og Forsvarsudvalget",
     "short_name": "UDF",
-    "member_count": 21,
+    "member_count": 22,
     "member_ids": [
       97,
       109,
@@ -634,6 +633,7 @@
       180,
       208,
       224,
+      238,
       15779,
       17629,
       18706,

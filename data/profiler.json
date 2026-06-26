@@ -2744,6 +2744,11 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
         "id": 21481,
         "name": "Kultur- og Kirkeudvalget",
         "short_name": "KUU"
@@ -17379,7 +17384,8 @@
     ],
     "educations": [
       "LL.M. (Master of Laws), University of California, Berkeley School of Law, 2015-2016.",
-      "Cand.jur, Københavns Universitet, 2005-2011.",
+      "Cand.jur, Københavns Universitet, 2008-2011.",
+      "Ba.jur , Københavns Universitet, 2005-2008.",
       "Matematisk student, Viborg Katedralskole, 2002-2005.",
       "Folkeskole, Rødkærsbro Skole, 1992-2002."
     ],
@@ -18359,11 +18365,6 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
-      {
-        "id": 21485,
-        "name": "Retsudvalget",
-        "short_name": "REU"
-      },
       {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
