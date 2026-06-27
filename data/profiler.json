@@ -2744,11 +2744,6 @@
     "current_party_short": "DF",
     "committees": [
       {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
         "id": 21481,
         "name": "Kultur- og Kirkeudvalget",
         "short_name": "KUU"
@@ -17922,6 +17917,11 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
         "id": 21486,
         "name": "Socialudvalget",
         "short_name": "SOU"
@@ -18366,6 +18366,11 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -18568,11 +18573,6 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
-      {
-        "id": 21485,
-        "name": "Retsudvalget",
-        "short_name": "REU"
-      },
       {
         "id": 21508,
         "name": "Udvalget for Det Tyske Mindretal",
