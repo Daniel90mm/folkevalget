@@ -3,7 +3,7 @@
     "id": 21467,
     "name": "Beskæftigelses- og Ligestillingsudvalget",
     "short_name": "BEU",
-    "member_count": 20,
+    "member_count": 21,
     "member_ids": [
       260,
       15775,
@@ -24,6 +24,7 @@
       21351,
       21353,
       21364,
+      21405,
       21474
     ]
   },
@@ -187,7 +188,7 @@
     "id": 21468,
     "name": "Færøudvalget",
     "short_name": "FÆU",
-    "member_count": 25,
+    "member_count": 26,
     "member_ids": [
       109,
       121,
@@ -213,7 +214,8 @@
       21373,
       21380,
       21387,
-      21388
+      21388,
+      21405
     ]
   },
   {

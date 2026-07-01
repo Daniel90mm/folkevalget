@@ -5936,87 +5936,6 @@
     "recent_votes": []
   },
   {
-    "id": 9896,
-    "name": "Jørgen Kvist",
-    "first_name": "Jørgen",
-    "last_name": "Kvist",
-    "party": null,
-    "party_short": "KRF",
-    "current_party": null,
-    "current_party_short": null,
-    "committees": [],
-    "role": "Jørgen Kvist Jensen (KRF)",
-    "constituency": null,
-    "storkreds": null,
-    "constituency_history": [],
-    "party_history": [],
-    "educations": [],
-    "occupations": [],
-    "email": null,
-    "phone": null,
-    "website_url": null,
-    "address": null,
-    "member_url": null,
-    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
-    "photo_source_url": null,
-    "photo_source_name": null,
-    "photo_photographer": null,
-    "photo_credit_text": null,
-    "member_since_date": "1991-10-28",
-    "member_since_year": 1991,
-    "seniority_label": "34 aar i Folketinget",
-    "seniority_years": 34,
-    "seniority_months": 416,
-    "seniority_tag": "experienced",
-    "votes_total": 4,
-    "votes_for": 4,
-    "votes_against": 0,
-    "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
-    "recent_votes": [
-      {
-        "afstemning_id": 10579,
-        "date": "2026-06-25",
-        "vote_type_id": 1,
-        "vote_type": "For",
-        "sag_number": "B 12",
-        "sag_title": "Forslag til folketingsbeslutning i henhold til grundlovens § 47 med hensyn til statsregnskabet for finansåret 2024.",
-        "vedtaget": true
-      },
-      {
-        "afstemning_id": 10579,
-        "date": "2026-06-25",
-        "vote_type_id": 1,
-        "vote_type": "For",
-        "sag_number": "B 12",
-        "sag_title": "Forslag til folketingsbeslutning i henhold til grundlovens § 47 med hensyn til statsregnskabet for finansåret 2024.",
-        "vedtaget": true
-      },
-      {
-        "afstemning_id": 10571,
-        "date": "2026-06-25",
-        "vote_type_id": 1,
-        "vote_type": "For",
-        "sag_number": "L 2",
-        "sag_title": "Om tillægsbevilling for finansåret 2025.",
-        "vedtaget": true
-      },
-      {
-        "afstemning_id": 10571,
-        "date": "2026-06-25",
-        "vote_type_id": 1,
-        "vote_type": "For",
-        "sag_number": "L 2",
-        "sag_title": "Om tillægsbevilling for finansåret 2025.",
-        "vedtaget": true
-      }
-    ]
-  },
-  {
     "id": 20820,
     "name": "Carl Andersen",
     "first_name": "Carl",
@@ -6291,7 +6210,18 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      }
+    ],
     "role": "Pilot",
     "constituency": null,
     "storkreds": null,
@@ -8809,7 +8739,7 @@
       "Underviser, Copenhagen Academy of Medical Education and Simulation, 2017-2022.",
       "Læge, Region Hovedstaden, 2015-2018."
     ],
-    "email": "sbmin@sm.dk",
+    "email": "socialministeren@sm.dk",
     "phone": "+45 3392 9300",
     "website_url": "https://www.monikarubin.dk/",
     "address": "Holmens Kanal 22 1060 København K",
@@ -14144,7 +14074,7 @@
       "Sekretær for Samrådet , DUI-LEG og VIRKE, 2014.",
       "Projektmedarbejder, Dansk Ungdoms Fællesråd (DUF), 2013.",
       "Fuldtidsansat servicemedarbejder, Netto i Tølløse, 2013.",
-      "Avisbud, Mowgli i forestillingen »Junglebogen«, , kassemedarbejder, flaskedreng og rengøringsmedhjælper, Louise Schouw Teater, Ølstykke Sommerteater, Holbæk Amts Venstreblad, Dagli''Brugsen i Vipperød, Netto i Tølløse, Trekkingbureauet, 2007-2013."
+      "Avisbud, Mowgli i forestillingen »Junglebogen«, , kassemedarbejder, flaskedreng og rengøringsmedhjælper, Louise Schouw Teater, Ølstykke Sommerteater, Holbæk Amts Venstreblad, Dagli''Brugsen i Vipperød, Trekkingbureauet, 2007-2013."
     ],
     "email": "frederik.vad@ft.dk",
     "phone": "+45 3337 4076",
@@ -15780,6 +15710,95 @@
     "seniority_years": 11,
     "seniority_months": 132,
     "seniority_tag": "experienced",
+    "votes_total": 4,
+    "votes_for": 4,
+    "votes_against": 0,
+    "votes_neither": 0,
+    "votes_absent": 0,
+    "attendance_pct": 100.0,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
+    "recent_votes": [
+      {
+        "afstemning_id": 10579,
+        "date": "2026-06-25",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "B 12",
+        "sag_title": "Forslag til folketingsbeslutning i henhold til grundlovens § 47 med hensyn til statsregnskabet for finansåret 2024.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10579,
+        "date": "2026-06-25",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "B 12",
+        "sag_title": "Forslag til folketingsbeslutning i henhold til grundlovens § 47 med hensyn til statsregnskabet for finansåret 2024.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10571,
+        "date": "2026-06-25",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "L 2",
+        "sag_title": "Om tillægsbevilling for finansåret 2025.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10571,
+        "date": "2026-06-25",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "L 2",
+        "sag_title": "Om tillægsbevilling for finansåret 2025.",
+        "vedtaget": true
+      }
+    ]
+  },
+  {
+    "id": 9896,
+    "name": "Jørgen Kvist",
+    "first_name": "Jørgen",
+    "last_name": "Kvist",
+    "party": null,
+    "party_short": "SF",
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
+    "role": "Jørgen Kvist (SF)",
+    "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Sydjyllands Storkreds fra 24. marts 2026.",
+    "storkreds": "Sydjyllands Storkreds",
+    "constituency_history": [
+      "Folketingsmedlem for Socialistisk Folkeparti i Sydjyllands Storkreds fra 24. marts 2026."
+    ],
+    "party_history": [],
+    "educations": [
+      "Cand. theol., Aarhus Universitet, 1997."
+    ],
+    "occupations": [
+      "Generalsekretær, KFUM og KFUK i Danmark, 2013-2025.",
+      "Præst, folkekirken, 2011-2013.",
+      "Højskoleforstander, Haslev Udvidede Højskole, 1997-2005."
+    ],
+    "email": "kvist@ft.dk",
+    "phone": "+45 6162 4021",
+    "website_url": "https://sf.dk/politiker/kvist",
+    "address": "Folketinget, Christiansborg 1218 København K",
+    "member_url": null,
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/2026/sf/joergen-kvist/joergen_kvist_500.ashx",
+    "photo_source_url": null,
+    "photo_source_name": null,
+    "photo_photographer": null,
+    "photo_credit_text": null,
+    "member_since_date": "2026-03-24",
+    "member_since_year": 2026,
+    "seniority_label": "Under 1 aar i Folketinget",
+    "seniority_years": 0,
+    "seniority_months": 3,
+    "seniority_tag": "newcomer",
     "votes_total": 4,
     "votes_for": 4,
     "votes_against": 0,
@@ -17852,14 +17871,14 @@
     "current_party_short": "V",
     "committees": [
       {
-        "id": 21485,
-        "name": "Retsudvalget",
-        "short_name": "REU"
-      },
-      {
         "id": 21486,
         "name": "Socialudvalget",
         "short_name": "SOU"
+      },
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
       },
       {
         "id": 21469,
