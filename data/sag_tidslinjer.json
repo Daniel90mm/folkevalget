@@ -102,11 +102,44 @@
         "date": "2026-06-25",
         "title": "2. (sidste) behandling",
         "type": "2. behandling",
-        "status": "På dagsorden",
+        "status": "Behandlet/Vedtaget",
         "vote_ids": [
           10579
         ],
         "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273959,
+        "date": "2026-06-25",
+        "title": "Forslaget som vedtaget",
+        "type": "Forslag som vedtaget",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1217792,
+            "title": "Vedtaget af Folketinget ved 2.(sidste) behandling den 25. juni 2026",
+            "number": null,
+            "date": "2026-06-25",
+            "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b12/20252_b12_som_vedtaget.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 23,
+            "document_category": "Forslag som vedtaget",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
         "agenda_items": []
       }
     ],
@@ -215,6 +248,2951 @@
         {
           "id": 34676,
           "emneord": "statsregnskabet",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ]
+    }
+  },
+  {
+    "sag_id": 105178,
+    "sag_number": "B 14",
+    "sag_title": "Forslag til folketingsbeslutning om lavere afgifter og moms på benzin og diesel (borgerforslag).",
+    "sag_short_title": "Om lavere afgifter og moms på benzin og diesel (borgerforslag).",
+    "sag_type_id": 5,
+    "sag_type": "Beslutningsforslag",
+    "sag_status_id": 16,
+    "sag_status": "2. beh./Forkastet",
+    "sag_category_id": 15,
+    "sag_category": "B1 - Privat forslag",
+    "fremsatundersagid": null,
+    "deltundersagid": null,
+    "actors": [
+      {
+        "actor_id": 18,
+        "name": "Alex Ahrendtsen",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21342,
+        "name": "Anna Bjerre",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 20349,
+        "name": "Anna Falkenberg",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 113,
+        "name": "Jens Henrik Thulesen Dahl",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 18724,
+        "name": "Lars Boje Mathiesen",
+        "short_name": "UFG",
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 15770,
+        "name": "Mattias Tesfaye",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 15793,
+        "name": "Mette Abildgaard",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 18696,
+        "name": "Morten Dahlin",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21346,
+        "name": "Morten E.G. Brautsch",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21354,
+        "name": "Nadja Natalie Isaksen",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 99,
+        "name": "Ole Birk Olesen",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 16582,
+        "name": "Peder Hvelplund",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 20359,
+        "name": "Sigurd Agersnap",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21338,
+        "name": "Steffen Holme Helledie",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU",
+        "type_id": 3,
+        "type": "Udvalg",
+        "role_id": 11,
+        "role": "Henvist til"
+      },
+      {
+        "actor_id": 21451,
+        "name": "skatte- og vækstministeren",
+        "short_name": "skatte- og vækstminister",
+        "type_id": 2,
+        "type": "Ministertitel",
+        "role_id": 14,
+        "role": "Minister"
+      },
+      {
+        "actor_id": 21450,
+        "name": "Skatte- og Vækstministeriet",
+        "short_name": null,
+        "type_id": 1,
+        "type": "Ministerområde",
+        "role_id": 6,
+        "role": "Ministerområde"
+      }
+    ],
+    "law_followup": {
+      "law_number": null,
+      "law_number_date": null,
+      "decision_date": null,
+      "decision_result_code": null,
+      "decision_text": null,
+      "retsinformation_url": null
+    },
+    "steps": [
+      {
+        "sagstrin_id": 274116,
+        "date": "2026-06-16",
+        "title": "Fremsættelse",
+        "type": "Fremsættelse",
+        "status": "Fremsat",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274117,
+        "date": "2026-06-16",
+        "title": "Forslaget som fremsat",
+        "type": "Forslag som fremsat",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1215656,
+            "title": "Fremsat den 16. juni 2026 af Mattias Tesfaye (S), Sigurd Agersnap (SF), Morten Dahlin (V), Alex Ahrendtsen (DF), Ole Birk Olesen (LA), Morten E. G. Brautsch (M), Mette Abildgaard (KF), Peder Hvelplund (EL), Jens Henrik Thulesen Dahl (DD), Steffen Holme Helledie (RV), Anna Bjerre (ALT), Lars Boje Mathiesen (BP), Anna Falkenberg (SP) og Nadja Natalie Isaksen (UFG)",
+            "number": null,
+            "date": "2026-06-16",
+            "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b14/20252_b14_som_fremsat.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 31,
+            "document_category": "Forslag som fremsat",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274118,
+        "date": "2026-06-18",
+        "title": "1. behandling",
+        "type": "1. behandling.",
+        "status": "Behandlet/Henvist til udvalg",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274119,
+        "date": "2026-06-18",
+        "title": "Frist for spørgsmål",
+        "type": "Frist for spørgsmål",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274123,
+        "date": "2026-06-19",
+        "title": "Frist for politiske bem. og ÆF",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274121,
+        "date": "2026-06-22",
+        "title": "Betænkning",
+        "type": "Betænkning",
+        "status": "Betænkning afgivet",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1217050,
+            "title": "Betænkning afgivet af Skatteudvalget den 22. juni 2026",
+            "number": null,
+            "date": "2026-06-23",
+            "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b14/20252_b14_betaenkning.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 55,
+            "document_category": "Betænkning m.v.",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274122,
+        "date": "2026-06-22",
+        "title": "Politisk drøftelse",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274125,
+        "date": "2026-06-25",
+        "title": "2. (sidste) behandling",
+        "type": "2. behandling",
+        "status": "Behandlet/Forkastet",
+        "vote_ids": [
+          10577
+        ],
+        "documents": [],
+        "agenda_items": []
+      }
+    ],
+    "documents": [
+      {
+        "document_id": 1217059,
+        "title": "Betænkning afgivet 22/6-26",
+        "number": null,
+        "date": "2026-06-22",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b14/bilag/3/3154762.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217050,
+        "title": "Betænkning afgivet af Skatteudvalget den 22. juni 2026",
+        "number": null,
+        "date": "2026-06-23",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b14/20252_b14_betaenkning.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1216528,
+        "title": "1. udkast til betænkning",
+        "number": null,
+        "date": "2026-06-19",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b14/bilag/2/3153669.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1215611,
+        "title": "Fastsat tidsplan for udvalgets behandling af beslutningsforslaget",
+        "number": null,
+        "date": "2026-06-16",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b14/bilag/1/3151471.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 56,
+        "document_category": "Meddelelse",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1215656,
+        "title": "Fremsat den 16. juni 2026 af Mattias Tesfaye (S), Sigurd Agersnap (SF), Morten Dahlin (V), Alex Ahrendtsen (DF), Ole Birk Olesen (LA), Morten E. G. Brautsch (M), Mette Abildgaard (KF), Peder Hvelplund (EL), Jens Henrik Thulesen Dahl (DD), Steffen Holme Helledie (RV), Anna Bjerre (ALT), Lars Boje Mathiesen (BP), Anna Falkenberg (SP) og Nadja Natalie Isaksen (UFG)",
+        "number": null,
+        "date": "2026-06-16",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b14/20252_b14_som_fremsat.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 31,
+        "document_category": "Forslag som fremsat",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "related_cases": [
+      {
+        "sag_id": 104938,
+        "sag_number": "B 2",
+        "sag_title": "Forslag til folketingsbeslutning om nedsættelse af de danske afgifter og moms på benzin og diesel.",
+        "sag_short_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
+        "relations": [
+          "Sambehandlet"
+        ]
+      },
+      {
+        "sag_id": 104949,
+        "sag_number": "B 4",
+        "sag_title": "Forslag til folketingsbeslutning om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
+        "sag_short_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
+        "relations": [
+          "Sambehandlet"
+        ]
+      }
+    ],
+    "emneord": {
+      "sag": [
+        {
+          "id": 35521,
+          "emneord": "benzin",
+          "type_id": 3,
+          "type": "Kontrolleret"
+        },
+        {
+          "id": 84443,
+          "emneord": "borgerforslag",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33337,
+          "emneord": "moms ",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33622,
+          "emneord": "afgifter",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 41117,
+          "emneord": "diesel",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        }
+      ],
+      "dokumenter": [
+        {
+          "id": 84443,
+          "emneord": "borgerforslag",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33337,
+          "emneord": "moms ",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ],
+      "samlet": [
+        {
+          "id": 35521,
+          "emneord": "benzin",
+          "type_id": 3,
+          "type": "Kontrolleret"
+        },
+        {
+          "id": 84443,
+          "emneord": "borgerforslag",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33337,
+          "emneord": "moms ",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33622,
+          "emneord": "afgifter",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 41117,
+          "emneord": "diesel",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        }
+      ]
+    }
+  },
+  {
+    "sag_id": 104938,
+    "sag_number": "B 2",
+    "sag_title": "Forslag til folketingsbeslutning om nedsættelse af de danske afgifter og moms på benzin og diesel.",
+    "sag_short_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
+    "sag_type_id": 5,
+    "sag_type": "Beslutningsforslag",
+    "sag_status_id": 16,
+    "sag_status": "2. beh./Forkastet",
+    "sag_category_id": 15,
+    "sag_category": "B1 - Privat forslag",
+    "fremsatundersagid": null,
+    "deltundersagid": null,
+    "actors": [
+      {
+        "actor_id": 18,
+        "name": "Alex Ahrendtsen",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21386,
+        "name": "Allan Feldt",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 20414,
+        "name": "Anders Vistisen",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21378,
+        "name": "Jan Herskov",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21358,
+        "name": "Josephine Alstrup Kofod",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21377,
+        "name": "Julie Jacobsen",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21376,
+        "name": "Malte Larsen",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 18721,
+        "name": "Mette Thiesen",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21351,
+        "name": "Michael Nedersøe",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 20356,
+        "name": "Mikkel Bjørn",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 216,
+        "name": "Mikkel Dencker",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 238,
+        "name": "Morten Messerschmidt",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 20350,
+        "name": "Nick Zimmermann",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 15763,
+        "name": "Peter Kofod",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21357,
+        "name": "Rune Bønnelykke",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21347,
+        "name": "Søren Boel Olesen",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU",
+        "type_id": 3,
+        "type": "Udvalg",
+        "role_id": 11,
+        "role": "Henvist til"
+      },
+      {
+        "actor_id": 203,
+        "name": "skatteministeren",
+        "short_name": "skatteminister",
+        "type_id": 2,
+        "type": "Ministertitel",
+        "role_id": 14,
+        "role": "Minister"
+      },
+      {
+        "actor_id": 204,
+        "name": "Skatteministeriet",
+        "short_name": null,
+        "type_id": 1,
+        "type": "Ministerområde",
+        "role_id": 6,
+        "role": "Ministerområde"
+      }
+    ],
+    "law_followup": {
+      "law_number": null,
+      "law_number_date": null,
+      "decision_date": null,
+      "decision_result_code": null,
+      "decision_text": null,
+      "retsinformation_url": null
+    },
+    "steps": [
+      {
+        "sagstrin_id": 273661,
+        "date": "2026-04-14",
+        "title": "Fremsættelse",
+        "type": "Fremsættelse",
+        "status": "Fremsat",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273662,
+        "date": "2026-04-14",
+        "title": "Forslaget som fremsat",
+        "type": "Forslag som fremsat",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273663,
+        "date": "2026-06-18",
+        "title": "1. behandling",
+        "type": "1. behandling.",
+        "status": "Behandlet/Henvist til udvalg",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273664,
+        "date": "2026-06-18",
+        "title": "Frist for spørgsmål",
+        "type": "Frist for spørgsmål",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273665,
+        "date": "2026-06-19",
+        "title": "Frist for svar",
+        "type": "Frist for svar",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273668,
+        "date": "2026-06-19",
+        "title": "Frist for politiske bem. og ÆF",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273666,
+        "date": "2026-06-22",
+        "title": "Betænkning",
+        "type": "Betænkning",
+        "status": "Betænkning afgivet",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1217051,
+            "title": "Betænkning afgivet af Skatteudvalget den 22. juni 2026",
+            "number": null,
+            "date": "2026-06-23",
+            "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b2/20252_b2_betaenkning.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 55,
+            "document_category": "Betænkning m.v.",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273667,
+        "date": "2026-06-22",
+        "title": "Politisk drøftelse",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273670,
+        "date": "2026-06-25",
+        "title": "2. (sidste) behandling",
+        "type": "2. behandling",
+        "status": "Behandlet/Forkastet",
+        "vote_ids": [
+          10575
+        ],
+        "documents": [],
+        "agenda_items": []
+      }
+    ],
+    "documents": [
+      {
+        "document_id": 1217065,
+        "title": "Betænkning afgivet 22/6-26",
+        "number": null,
+        "date": "2026-06-22",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b2/bilag/3/3154774.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [
+          {
+            "actor_id": 18814,
+            "name": "Anders Christopher Solberg",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 14507,
+            "name": "Anja Brokholt Pedersen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 1274,
+            "name": "Anja Østergaard Johansen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 10612,
+            "name": "Anton Høj Jacobsen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 21422,
+            "name": "Berit Dea Hvolby",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 12594,
+            "name": "Camilla Bredal With",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 17657,
+            "name": "Catrine Nielsen Voigt",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 4881,
+            "name": "David Kruse Lange",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 13325,
+            "name": "Delia Laksø",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 17846,
+            "name": "Helle Carpentier",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 2012,
+            "name": "Helle Køhler Ward",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 20835,
+            "name": "Helle Therese Tærsløv Berg",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 2368,
+            "name": "Henrik Albrechtsen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 2362,
+            "name": "Johan Bremsted",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 2427,
+            "name": "Kerstin Tensing Larsen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 1983,
+            "name": "Lars Busch Nielsen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 1073,
+            "name": "Lise Brogaard Dahl",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 634,
+            "name": "Lone Clausen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 1072,
+            "name": "Malene Rasmussen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 2058,
+            "name": "Ole Ødegaard Christiansen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 240,
+            "name": "Signe Draabe Bruunsgaard",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 20195,
+            "name": "Søren Bang Andersen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 4505,
+            "name": "Thea Halse",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          },
+          {
+            "actor_id": 682,
+            "name": "Tommy Jørgensen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 1,
+            "role": "Afsender"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217051,
+        "title": "Betænkning afgivet af Skatteudvalget den 22. juni 2026",
+        "number": null,
+        "date": "2026-06-23",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b2/20252_b2_betaenkning.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1216521,
+        "title": "1. udkast til betænkning",
+        "number": null,
+        "date": "2026-06-19",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b2/bilag/2/3153660.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1215609,
+        "title": "Fastsat tidsplan for udvalgets behandling af beslutningsforslaget",
+        "number": null,
+        "date": "2026-06-16",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b2/bilag/1/3151466.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 56,
+        "document_category": "Meddelelse",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1213198,
+        "title": "Fremsat den 14. april 2026 af Peter Kofod (DF), Alex Ahrendtsen (DF), Mikkel Bjørn (DF), Rune Bønnelykke (DF), Mikkel Dencker (DF), Allan Feldt (DF), Jan Herskov (DF), Julie Jacobsen (DF), Josephine Alstrup Kofod (DF), Malte Larsen (DF), Morten Messerschmidt (DF), Michael Nedersøe (DF), Søren Boel Olesen (DF), Mette Thiesen (DF), Anders Vistisen (DF) og Nick Zimmermann (DF)",
+        "number": null,
+        "date": "2026-04-14",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b2/20252_b2_som_fremsat.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 31,
+        "document_category": "Forslag som fremsat",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "related_cases": [
+      {
+        "sag_id": 105178,
+        "sag_number": "B 14",
+        "sag_title": "Forslag til folketingsbeslutning om lavere afgifter og moms på benzin og diesel (borgerforslag).",
+        "sag_short_title": "Om lavere afgifter og moms på benzin og diesel (borgerforslag).",
+        "relations": [
+          "Sambehandlet"
+        ]
+      },
+      {
+        "sag_id": 104949,
+        "sag_number": "B 4",
+        "sag_title": "Forslag til folketingsbeslutning om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
+        "sag_short_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
+        "relations": [
+          "Sambehandlet"
+        ]
+      }
+    ],
+    "emneord": {
+      "sag": [
+        {
+          "id": 35521,
+          "emneord": "benzin",
+          "type_id": 3,
+          "type": "Kontrolleret"
+        },
+        {
+          "id": 34079,
+          "emneord": "moms",
+          "type_id": 3,
+          "type": "Kontrolleret"
+        },
+        {
+          "id": 34248,
+          "emneord": "Skatter og afgifter 59",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 33103,
+          "emneord": "personskatter",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33622,
+          "emneord": "afgifter",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 35140,
+          "emneord": "benzinafgift",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 41117,
+          "emneord": "diesel",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 35141,
+          "emneord": "dieselafgift",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        }
+      ],
+      "dokumenter": [
+        {
+          "id": 33131,
+          "emneord": "Folketinget",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33162,
+          "emneord": "internationale missioner og operationer",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33161,
+          "emneord": "militært materiel",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33103,
+          "emneord": "personskatter",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ],
+      "samlet": [
+        {
+          "id": 35521,
+          "emneord": "benzin",
+          "type_id": 3,
+          "type": "Kontrolleret"
+        },
+        {
+          "id": 34079,
+          "emneord": "moms",
+          "type_id": 3,
+          "type": "Kontrolleret"
+        },
+        {
+          "id": 34248,
+          "emneord": "Skatter og afgifter 59",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 33131,
+          "emneord": "Folketinget",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33162,
+          "emneord": "internationale missioner og operationer",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33161,
+          "emneord": "militært materiel",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33103,
+          "emneord": "personskatter",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33622,
+          "emneord": "afgifter",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 35140,
+          "emneord": "benzinafgift",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 41117,
+          "emneord": "diesel",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 35141,
+          "emneord": "dieselafgift",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        }
+      ]
+    }
+  },
+  {
+    "sag_id": 105278,
+    "sag_number": "B 22",
+    "sag_title": "Forslag til folketingsbeslutning om danske militære bidrag til europæiskledede militære missioner og operationer i og omkring Hormuzstrædet og Det Røde Hav.\n",
+    "sag_short_title": "Om  danske militære bidrag til europæiskledede militære missioner og operationer i og omkring Hormuzstrædet og Det Røde Hav.",
+    "sag_type_id": 5,
+    "sag_type": "Beslutningsforslag",
+    "sag_status_id": 39,
+    "sag_status": "2. beh/Vedtaget",
+    "sag_category_id": 17,
+    "sag_category": "B1 - Regeringsforslag",
+    "fremsatundersagid": null,
+    "deltundersagid": null,
+    "actors": [
+      {
+        "actor_id": 145,
+        "name": "Lars Løkke Rasmussen",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 19,
+        "role": "Forslagsstiller (reg.)"
+      },
+      {
+        "actor_id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF",
+        "type_id": 3,
+        "type": "Udvalg",
+        "role_id": 11,
+        "role": "Henvist til"
+      },
+      {
+        "actor_id": 29,
+        "name": "udenrigsministeren",
+        "short_name": "udenrigsminister",
+        "type_id": 2,
+        "type": "Ministertitel",
+        "role_id": 14,
+        "role": "Minister"
+      },
+      {
+        "actor_id": 32,
+        "name": "Udenrigsministeriet",
+        "short_name": null,
+        "type_id": 1,
+        "type": "Ministerområde",
+        "role_id": 6,
+        "role": "Ministerområde"
+      }
+    ],
+    "law_followup": {
+      "law_number": null,
+      "law_number_date": null,
+      "decision_date": null,
+      "decision_result_code": null,
+      "decision_text": null,
+      "retsinformation_url": null
+    },
+    "steps": [
+      {
+        "sagstrin_id": 274357,
+        "date": "2026-06-23",
+        "title": "Fremsættelse",
+        "type": "Fremsættelse",
+        "status": "Fremsat",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1217100,
+            "title": "Skriftlig fremsættelse (23. juni 2026)",
+            "number": null,
+            "date": "2026-06-23",
+            "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b22/20252_b22_fremsaettelsestale.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 7,
+            "document_type": "Fremsættelsestale",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 46,
+            "document_category": "Fremsættelsestale",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274358,
+        "date": "2026-06-23",
+        "title": "Forslaget som fremsat",
+        "type": "Forslag som fremsat",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1217099,
+            "title": "Fremsat den 23. juni 2026 af udenrigsministeren (Lars Løkke Rasmussen)",
+            "number": null,
+            "date": "2026-06-23",
+            "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b22/20252_b22_som_fremsat.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 31,
+            "document_category": "Forslag som fremsat",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274359,
+        "date": "2026-06-24",
+        "title": "1. behandling",
+        "type": "1. behandling.",
+        "status": "Behandlet/Henvist til udvalg",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274360,
+        "date": "2026-06-24",
+        "title": "Frist for spørgsmål",
+        "type": "Frist for spørgsmål",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274361,
+        "date": "2026-06-24",
+        "title": "Frist for svar",
+        "type": "Frist for svar",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274364,
+        "date": "2026-06-24",
+        "title": "Frist for politiske bem. og ÆF",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274362,
+        "date": "2026-06-24",
+        "title": "Betænkning",
+        "type": "Betænkning",
+        "status": "Betænkning afgivet",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1217653,
+            "title": "Betænkning afgivet af Udenrigs- og Forsvarsudvalget den 24. juni 2026",
+            "number": null,
+            "date": "2026-06-24",
+            "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b22/20252_b22_betaenkning.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 55,
+            "document_category": "Betænkning m.v.",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274363,
+        "date": "2026-06-24",
+        "title": "Politisk drøftelse",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274365,
+        "date": "2026-06-25",
+        "title": "Forslag som vedtaget",
+        "type": "Forslag som vedtaget",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274366,
+        "date": "2026-06-25",
+        "title": "Eventuelt: 2. (sidste) behandling",
+        "type": "2. behandling",
+        "status": "Behandlet/Vedtaget",
+        "vote_ids": [
+          10578
+        ],
+        "documents": [],
+        "agenda_items": []
+      }
+    ],
+    "documents": [
+      {
+        "document_id": 1217419,
+        "title": "MFU spm. om forskellen mellem mandatet til selvforsvar og mandatet for magtanvendelse til at sikre den frie sejlads",
+        "number": null,
+        "date": "2026-06-24",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b22/spm/6/3155540.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 8,
+            "name": "forsvarsministeren",
+            "short_name": "forsvarsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 29,
+            "name": "udenrigsministeren",
+            "short_name": "udenrigsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21368,
+            "name": "Signe Wenneberg",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 3,
+            "role": "Stiller/MFU"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217445,
+        "title": "Spm. om det er ministerens vurdering, at israelske angreb mod Libanon vil medføre, at aftalen mellem Iran og USA anses for bortfaldet",
+        "number": null,
+        "date": "2026-06-24",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b22/spm/23/3155594.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 8,
+            "name": "forsvarsministeren",
+            "short_name": "forsvarsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 29,
+            "name": "udenrigsministeren",
+            "short_name": "udenrigsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21387,
+            "name": "Naaja H. Nathanielsen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217444,
+        "title": "Spm. om, hvornår regeringen ikke længere vil anse denne forudsætning, om at der foreligger en aftale mellem Iran og USA, for opfyldt, og hvilke konsekvenser det i givet fald vil få for det danske bidrag",
+        "number": null,
+        "date": "2026-06-24",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b22/spm/22/3155586.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 8,
+            "name": "forsvarsministeren",
+            "short_name": "forsvarsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 29,
+            "name": "udenrigsministeren",
+            "short_name": "udenrigsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21387,
+            "name": "Naaja H. Nathanielsen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217433,
+        "title": "Spm. om, hvad de danske militære bidrags ”magtanvendelsesmandat til at sikre den frie sejlads” indebærer",
+        "number": null,
+        "date": "2026-06-24",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b22/spm/20/3155555.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 8,
+            "name": "forsvarsministeren",
+            "short_name": "forsvarsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 29,
+            "name": "udenrigsministeren",
+            "short_name": "udenrigsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 109,
+            "name": "Trine Pertou Mach",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217430,
+        "title": "Spm. om, hvordan ministeren bedømmer holdbarheden af den aftale, der er indgået med forståelsespapiret mellem USA og Iran efter krigen i foråret 2026",
+        "number": null,
+        "date": "2026-06-24",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b22/spm/17/3155552.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 8,
+            "name": "forsvarsministeren",
+            "short_name": "forsvarsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 29,
+            "name": "udenrigsministeren",
+            "short_name": "udenrigsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 109,
+            "name": "Trine Pertou Mach",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217428,
+        "title": "Spm. om en vedtagelse af beslutningsforslaget vil indebære, at de i forslaget nævnte danske kapaciteter frit kan overføres mellem M3SoH og ASPIDES, uden at Folketinget eller Det Udenrigspolitiske Nævn høres på ny",
+        "number": null,
+        "date": "2026-06-24",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b22/spm/15/3155550.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 8,
+            "name": "forsvarsministeren",
+            "short_name": "forsvarsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 29,
+            "name": "udenrigsministeren",
+            "short_name": "udenrigsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 109,
+            "name": "Trine Pertou Mach",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217425,
+        "title": "Spm. om missionen vil kunne påbegyndes førend Iran og USA aktivt har erklæret Hormuzstrædet for genåbnet som led i aftalen mellem de to lande",
+        "number": null,
+        "date": "2026-06-24",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b22/spm/12/3155547.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 8,
+            "name": "forsvarsministeren",
+            "short_name": "forsvarsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 29,
+            "name": "udenrigsministeren",
+            "short_name": "udenrigsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 109,
+            "name": "Trine Pertou Mach",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217100,
+        "title": "Skriftlig fremsættelse (23. juni 2026)",
+        "number": null,
+        "date": "2026-06-23",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b22/20252_b22_fremsaettelsestale.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 7,
+        "document_type": "Fremsættelsestale",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 46,
+        "document_category": "Fremsættelsestale",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217653,
+        "title": "Betænkning afgivet af Udenrigs- og Forsvarsudvalget den 24. juni 2026",
+        "number": null,
+        "date": "2026-06-24",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b22/20252_b22_betaenkning.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217099,
+        "title": "Fremsat den 23. juni 2026 af udenrigsministeren (Lars Løkke Rasmussen)",
+        "number": null,
+        "date": "2026-06-23",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b22/20252_b22_som_fremsat.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 31,
+        "document_category": "Forslag som fremsat",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "related_cases": [],
+    "emneord": {
+      "sag": [
+        {
+          "id": 33162,
+          "emneord": "internationale missioner og operationer",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33161,
+          "emneord": "militært materiel",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ],
+      "dokumenter": [
+        {
+          "id": 33162,
+          "emneord": "internationale missioner og operationer",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33161,
+          "emneord": "militært materiel",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ],
+      "samlet": [
+        {
+          "id": 33162,
+          "emneord": "internationale missioner og operationer",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33161,
+          "emneord": "militært materiel",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ]
+    }
+  },
+  {
+    "sag_id": 104949,
+    "sag_number": "B 4",
+    "sag_title": "Forslag til folketingsbeslutning om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
+    "sag_short_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
+    "sag_type_id": 5,
+    "sag_type": "Beslutningsforslag",
+    "sag_status_id": 16,
+    "sag_status": "2. beh./Forkastet",
+    "sag_category_id": 15,
+    "sag_category": "B1 - Privat forslag",
+    "fremsatundersagid": null,
+    "deltundersagid": null,
+    "actors": [
+      {
+        "actor_id": 119,
+        "name": "Dennis Flydtkjær",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 182,
+        "name": "Inger Støjberg",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 113,
+        "name": "Jens Henrik Thulesen Dahl",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 17629,
+        "name": "Mads Fuglede",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 20373,
+        "name": "Susie Jessen",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU",
+        "type_id": 3,
+        "type": "Udvalg",
+        "role_id": 11,
+        "role": "Henvist til"
+      },
+      {
+        "actor_id": 203,
+        "name": "skatteministeren",
+        "short_name": "skatteminister",
+        "type_id": 2,
+        "type": "Ministertitel",
+        "role_id": 14,
+        "role": "Minister"
+      },
+      {
+        "actor_id": 204,
+        "name": "Skatteministeriet",
+        "short_name": null,
+        "type_id": 1,
+        "type": "Ministerområde",
+        "role_id": 6,
+        "role": "Ministerområde"
+      }
+    ],
+    "law_followup": {
+      "law_number": null,
+      "law_number_date": null,
+      "decision_date": null,
+      "decision_result_code": null,
+      "decision_text": null,
+      "retsinformation_url": null
+    },
+    "steps": [
+      {
+        "sagstrin_id": 273683,
+        "date": "2026-04-16",
+        "title": "Fremsættelse",
+        "type": "Fremsættelse",
+        "status": "Fremsat",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273684,
+        "date": "2026-04-16",
+        "title": "Forslaget som fremsat",
+        "type": "Forslag som fremsat",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273685,
+        "date": "2026-06-18",
+        "title": "1. behandling",
+        "type": "1. behandling.",
+        "status": "Behandlet/Henvist til udvalg",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273686,
+        "date": "2026-06-18",
+        "title": "Frist for spørgsmål",
+        "type": "Frist for spørgsmål",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273687,
+        "date": "2026-06-19",
+        "title": "Frist for svar",
+        "type": "Frist for svar",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273690,
+        "date": "2026-06-19",
+        "title": "Frist for politiske bem. og ÆF",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273688,
+        "date": "2026-06-22",
+        "title": "Betænkning",
+        "type": "Betænkning",
+        "status": "Betænkning afgivet",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1217053,
+            "title": "Betænkning afgivet af Skatteudvalget den 22. juni 2026",
+            "number": null,
+            "date": "2026-06-23",
+            "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b4/20252_b4_betaenkning.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 55,
+            "document_category": "Betænkning m.v.",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273689,
+        "date": "2026-06-22",
+        "title": "Politisk drøftelse",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273692,
+        "date": "2026-06-25",
+        "title": "2. (sidste) behandling",
+        "type": "2. behandling",
+        "status": "Behandlet/Forkastet",
+        "vote_ids": [
+          10576
+        ],
+        "documents": [],
+        "agenda_items": []
+      }
+    ],
+    "documents": [
+      {
+        "document_id": 1217062,
+        "title": "Betænkning afgivet 22/6-26",
+        "number": null,
+        "date": "2026-06-22",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b4/bilag/3/3154768.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217053,
+        "title": "Betænkning afgivet af Skatteudvalget den 22. juni 2026",
+        "number": null,
+        "date": "2026-06-23",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b4/20252_b4_betaenkning.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1216523,
+        "title": "1. udkast til betænkning",
+        "number": null,
+        "date": "2026-06-19",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b4/bilag/2/3153662.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1215610,
+        "title": "Fastsat tidsplan for udvalgets behandling af beslutningsforslaget",
+        "number": null,
+        "date": "2026-06-16",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b4/bilag/1/3151468.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 56,
+        "document_category": "Meddelelse",
+        "document_actors": [
+          {
+            "actor_id": 21397,
+            "name": "Europaudvalget",
+            "short_name": "EUU",
+            "type_id": 3,
+            "type": "Udvalg",
+            "role_id": 13,
+            "role": "Relevant for"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1213216,
+        "title": "Fremsat den 16. april 2026 af Dennis Flydtkjær (DD), Jens Henrik Thulesen Dahl (DD), Mads Fuglede (DD), Susie Jessen (DD) og Inger Støjberg (DD)",
+        "number": null,
+        "date": "2026-04-16",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b4/20252_b4_som_fremsat.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 31,
+        "document_category": "Forslag som fremsat",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "related_cases": [
+      {
+        "sag_id": 105178,
+        "sag_number": "B 14",
+        "sag_title": "Forslag til folketingsbeslutning om lavere afgifter og moms på benzin og diesel (borgerforslag).",
+        "sag_short_title": "Om lavere afgifter og moms på benzin og diesel (borgerforslag).",
+        "relations": [
+          "Sambehandlet"
+        ]
+      },
+      {
+        "sag_id": 104938,
+        "sag_number": "B 2",
+        "sag_title": "Forslag til folketingsbeslutning om nedsættelse af de danske afgifter og moms på benzin og diesel.",
+        "sag_short_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
+        "relations": [
+          "Sambehandlet"
+        ]
+      }
+    ],
+    "emneord": {
+      "sag": [
+        {
+          "id": 33258,
+          "emneord": "EU",
+          "type_id": 3,
+          "type": "Kontrolleret"
+        },
+        {
+          "id": 35521,
+          "emneord": "benzin",
+          "type_id": 3,
+          "type": "Kontrolleret"
+        },
+        {
+          "id": 34248,
+          "emneord": "Skatter og afgifter 59",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 33103,
+          "emneord": "personskatter",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33622,
+          "emneord": "afgifter",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 41117,
+          "emneord": "diesel",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 58543,
+          "emneord": "minimumssats",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 33387,
+          "emneord": "vejtransport",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        }
+      ],
+      "dokumenter": [
+        {
+          "id": 33131,
+          "emneord": "Folketinget",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33103,
+          "emneord": "personskatter",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ],
+      "samlet": [
+        {
+          "id": 33258,
+          "emneord": "EU",
+          "type_id": 3,
+          "type": "Kontrolleret"
+        },
+        {
+          "id": 35521,
+          "emneord": "benzin",
+          "type_id": 3,
+          "type": "Kontrolleret"
+        },
+        {
+          "id": 34248,
+          "emneord": "Skatter og afgifter 59",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 33131,
+          "emneord": "Folketinget",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33103,
+          "emneord": "personskatter",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33622,
+          "emneord": "afgifter",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 41117,
+          "emneord": "diesel",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 58543,
+          "emneord": "minimumssats",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        },
+        {
+          "id": 33387,
+          "emneord": "vejtransport",
+          "type_id": 2,
+          "type": "Ukontrolleret"
+        }
+      ]
+    }
+  },
+  {
+    "sag_id": 104968,
+    "sag_number": "L 1",
+    "sag_title": "Forslag til lov om ændring af lov om forskellige forbrugsafgifter, lov om midlertidig nedsættelse af straffen for overtrædelse af skatte- og afgiftslovgivningen vedrørende midler på udenlandske konti m.v. og konkursloven og om ophævelse af chokoladeafgiftsloven.  (Afskaffelse af chokolade- og sukkervareafgiften og kaffeafgiften).",
+    "sag_short_title": "Om ophævelse af chokoladeafgiftsloven m.v.",
+    "sag_type_id": 3,
+    "sag_type": "Lovforslag",
+    "sag_status_id": 37,
+    "sag_status": "3. beh./Forkastet",
+    "sag_category_id": 12,
+    "sag_category": "Privat forslag",
+    "fremsatundersagid": null,
+    "deltundersagid": null,
+    "actors": [
+      {
+        "actor_id": 119,
+        "name": "Dennis Flydtkjær",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 82,
+        "name": "Hans Kristian Skibby",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 182,
+        "name": "Inger Støjberg",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 113,
+        "name": "Jens Henrik Thulesen Dahl",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 17629,
+        "name": "Mads Fuglede",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 20373,
+        "name": "Susie Jessen",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 16,
+        "role": "Forslagsstiller (priv.)"
+      },
+      {
+        "actor_id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU",
+        "type_id": 3,
+        "type": "Udvalg",
+        "role_id": 11,
+        "role": "Henvist til"
+      },
+      {
+        "actor_id": 203,
+        "name": "skatteministeren",
+        "short_name": "skatteminister",
+        "type_id": 2,
+        "type": "Ministertitel",
+        "role_id": 14,
+        "role": "Minister"
+      },
+      {
+        "actor_id": 204,
+        "name": "Skatteministeriet",
+        "short_name": null,
+        "type_id": 1,
+        "type": "Ministerområde",
+        "role_id": 6,
+        "role": "Ministerområde"
+      }
+    ],
+    "law_followup": {
+      "law_number": null,
+      "law_number_date": null,
+      "decision_date": null,
+      "decision_result_code": null,
+      "decision_text": null,
+      "retsinformation_url": null
+    },
+    "steps": [
+      {
+        "sagstrin_id": 273732,
+        "date": "2026-05-12",
+        "title": "Fremsættelse",
+        "type": "Fremsættelse",
+        "status": "Fremsat",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273733,
+        "date": "2026-05-12",
+        "title": "Lovforslag som fremsat",
+        "type": "Lovforslag som fremsat",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273734,
+        "date": "2026-06-18",
+        "title": "1. behandling",
+        "type": "1. behandling",
+        "status": "Behandlet/Henvist til udvalg",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273735,
+        "date": "2026-06-18",
+        "title": "Frist for spørgsmål",
+        "type": "Frist for spørgsmål",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273736,
+        "date": "2026-06-19",
+        "title": "Frist for svar",
+        "type": "Frist for svar",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273740,
+        "date": "2026-06-19",
+        "title": "Frist for ændringsforslag",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273737,
+        "date": "2026-06-22",
+        "title": "Politisk drøftelse",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273739,
+        "date": "2026-06-22",
+        "title": "Betænkning",
+        "type": "Betænkning",
+        "status": "Betænkning afgivet",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1216933,
+            "title": "Betænkning afgivet af Skatteudvalget den 22. juni 2026",
+            "number": null,
+            "date": "2026-06-22",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l1/20252_l1_betaenkning.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 55,
+            "document_category": "Betænkning m.v.",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273741,
+        "date": "2026-06-23",
+        "title": "2. behandling",
+        "type": "2. behandling",
+        "status": "Behandlet/Direkte til 3. beh.",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 273743,
+        "date": "2026-06-25",
+        "title": "3. behandling",
+        "type": "3. behandling",
+        "status": "Behandlet/Forkastet",
+        "vote_ids": [
+          10572
+        ],
+        "documents": [],
+        "agenda_items": []
+      }
+    ],
+    "documents": [
+      {
+        "document_id": 1216935,
+        "title": "Betænkning afgivet den 22. juni 2026",
+        "number": null,
+        "date": "2026-06-22",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l1/bilag/3/3154528.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1216933,
+        "title": "Betænkning afgivet af Skatteudvalget den 22. juni 2026",
+        "number": null,
+        "date": "2026-06-22",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l1/20252_l1_betaenkning.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1216562,
+        "title": "1. udkast til betænkning",
+        "number": null,
+        "date": "2026-06-19",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l1/bilag/2/3153749.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1215606,
+        "title": "Fastsat tidsplan for udvalgets behandling af lovforslaget",
+        "number": null,
+        "date": "2026-06-16",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l1/bilag/1/3151463.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 56,
+        "document_category": "Meddelelse",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1213600,
+        "title": "Fremsat den 12. maj 2026 af Hans Kristian Skibby (DD), Jens Henrik Thulesen Dahl (DD), Dennis Flydtkjær (DD), Mads Fuglede (DD), Susie Jessen (DD) og Inger Støjberg (DD)",
+        "number": null,
+        "date": "2026-05-12",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l1/20252_l1_som_fremsat.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 31,
+        "document_category": "Forslag som fremsat",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "related_cases": [],
+    "emneord": {
+      "sag": [
+        {
+          "id": 37915,
+          "emneord": "Retspleje 84",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 34106,
+          "emneord": "Skatter og afgifter 65",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 34244,
+          "emneord": "Skatter og afgifter 87",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 62608,
+          "emneord": "lønsumsafgift",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ],
+      "dokumenter": [
+        {
+          "id": 33131,
+          "emneord": "Folketinget",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 62608,
+          "emneord": "lønsumsafgift",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ],
+      "samlet": [
+        {
+          "id": 37915,
+          "emneord": "Retspleje 84",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 34106,
+          "emneord": "Skatter og afgifter 65",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 34244,
+          "emneord": "Skatter og afgifter 87",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 33131,
+          "emneord": "Folketinget",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 62608,
+          "emneord": "lønsumsafgift",
           "type_id": 1,
           "type": "Sagsområde"
         }
@@ -352,11 +3330,44 @@
         ]
       },
       {
+        "sagstrin_id": 273881,
+        "date": "2026-06-18",
+        "title": "Betænkning",
+        "type": "Betænkning",
+        "status": "Betænkning afgivet",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1216323,
+            "title": "Betænkning afgivet af Finansudvalget den 18. juni 2026",
+            "number": null,
+            "date": "2026-06-18",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l2/20252_l2_betaenkning.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 55,
+            "document_category": "Betænkning m.v.",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
         "sagstrin_id": 273883,
         "date": "2026-06-23",
         "title": "2. behandling",
         "type": "2. behandling",
-        "status": "På dagsorden",
+        "status": "Behandlet/Direkte til 3. beh.",
         "vote_ids": [],
         "documents": [],
         "agenda_items": [
@@ -383,7 +3394,7 @@
         "date": "2026-06-25",
         "title": "Eventuelt: 3. behandling",
         "type": "3. behandling",
-        "status": "På dagsorden",
+        "status": "Behandlet/Vedtaget",
         "vote_ids": [
           10571
         ],
@@ -406,6 +3417,39 @@
             }
           }
         ]
+      },
+      {
+        "sagstrin_id": 273886,
+        "date": "2026-06-25",
+        "title": "Lovforslag som vedtaget",
+        "type": "Lovforslag som vedtaget",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1217763,
+            "title": "Vedtaget af Folketinget ved 3. behandling den 25. juni 2026",
+            "number": null,
+            "date": "2026-06-25",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l2/20252_l2_som_vedtaget.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 23,
+            "document_category": "Forslag som vedtaget",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
       }
     ],
     "documents": [
@@ -638,6 +3682,1377 @@
         {
           "id": 33217,
           "emneord": "finanspolitik",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ]
+    }
+  },
+  {
+    "sag_id": 105167,
+    "sag_number": "L 3",
+    "sag_title": "Forslag til lov om ændring af ejendomsvurderingsloven, ejendomsskatteloven og forskellige andre love. \n(Samlet ejendomskategori for landbrugs-, skov- og naturejendomme, forenkling af ejendomsvurderingerne for 2026 og 2027 og lempeligere ejendomsbeskatningsgrundlag for kolonihavegrunde m.v.).\n",
+    "sag_short_title": "Om samlet ejendomskategori for landbrugs-, skov og naturejendomme m.v.",
+    "sag_type_id": 3,
+    "sag_type": "Lovforslag",
+    "sag_status_id": 11,
+    "sag_status": "Stadfæstet",
+    "sag_category_id": 13,
+    "sag_category": "Regeringsforslag",
+    "fremsatundersagid": null,
+    "deltundersagid": null,
+    "actors": [
+      {
+        "actor_id": 57,
+        "name": "Jakob Engel-Schmidt",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 19,
+        "role": "Forslagsstiller (reg.)"
+      },
+      {
+        "actor_id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU",
+        "type_id": 3,
+        "type": "Udvalg",
+        "role_id": 11,
+        "role": "Henvist til"
+      },
+      {
+        "actor_id": 21451,
+        "name": "skatte- og vækstministeren",
+        "short_name": "skatte- og vækstminister",
+        "type_id": 2,
+        "type": "Ministertitel",
+        "role_id": 14,
+        "role": "Minister"
+      },
+      {
+        "actor_id": 21450,
+        "name": "Skatte- og Vækstministeriet",
+        "short_name": null,
+        "type_id": 1,
+        "type": "Ministerområde",
+        "role_id": 6,
+        "role": "Ministerområde"
+      }
+    ],
+    "law_followup": {
+      "law_number": "615",
+      "law_number_date": "2026-06-30",
+      "decision_date": null,
+      "decision_result_code": null,
+      "decision_text": null,
+      "retsinformation_url": null
+    },
+    "steps": [
+      {
+        "sagstrin_id": 274055,
+        "date": "2026-06-16",
+        "title": "Fremsættelse",
+        "type": "Fremsættelse",
+        "status": "Fremsat",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1215658,
+            "title": "Skriftlig fremsættelse (16. juni 2026)",
+            "number": null,
+            "date": "2026-06-16",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l3/20252_l3_fremsaettelsestale.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 7,
+            "document_type": "Fremsættelsestale",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 46,
+            "document_category": "Fremsættelsestale",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274056,
+        "date": "2026-06-16",
+        "title": "Lovforslag som fremsat",
+        "type": "Lovforslag som fremsat",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1215661,
+            "title": "Fremsat den 16. juni 2026 af skatte- og vækstministeren (Jakob Engel-Schmidt)",
+            "number": null,
+            "date": "2026-06-16",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l3/20252_l3_som_fremsat.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 31,
+            "document_category": "Forslag som fremsat",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274057,
+        "date": "2026-06-18",
+        "title": "1. behandling",
+        "type": "1. behandling",
+        "status": "Behandlet/Henvist til udvalg",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274058,
+        "date": "2026-06-18",
+        "title": "Frist for spørgsmål",
+        "type": "Frist for spørgsmål",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274059,
+        "date": "2026-06-19",
+        "title": "Frist for svar",
+        "type": "Frist for svar",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274063,
+        "date": "2026-06-19",
+        "title": "Frist for ændringsforslag",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274060,
+        "date": "2026-06-22",
+        "title": "Politisk drøftelse",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274062,
+        "date": "2026-06-22",
+        "title": "Betænkning",
+        "type": "Betænkning",
+        "status": "Betænkning afgivet",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1216942,
+            "title": "Betænkning afgivet af Skatteudvalget den 22. juni 2026",
+            "number": null,
+            "date": "2026-06-22",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l3/20252_l3_betaenkning.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 55,
+            "document_category": "Betænkning m.v.",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274064,
+        "date": "2026-06-23",
+        "title": "2. behandling",
+        "type": "2. behandling",
+        "status": "Behandlet/Direkte til 3. beh.",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274387,
+        "date": "2026-06-23",
+        "title": "Lovforslaget optrykt efter 2. behandling",
+        "type": "Lovforslaget optrykt efter 2. behandling",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1217116,
+            "title": "Efter afstemningen i Folketinget ved 2. behandling den 23. juni 2026",
+            "number": null,
+            "date": "2026-06-23",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l3/20252_l3_efter_2behandling.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 20,
+            "document_category": "Optryk efter 2.beh",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274066,
+        "date": "2026-06-25",
+        "title": "Eventuelt: 3. behandling",
+        "type": "3. behandling",
+        "status": "Behandlet/Vedtaget",
+        "vote_ids": [
+          10573
+        ],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274067,
+        "date": "2026-06-25",
+        "title": "Lovforslag som vedtaget",
+        "type": "Lovforslag som vedtaget",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      }
+    ],
+    "documents": [
+      {
+        "document_id": 1217770,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 25. juni 2026",
+        "number": null,
+        "date": "2026-06-25",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l3/20252_l3_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217690,
+        "title": "L 3 - svar på spm. 16 om indekserede ejendomsvurderinger, automatisk afgørelse efter GDPR artikel 22 samt retssikkerhedsgarantier og klageadgang",
+        "number": null,
+        "date": "2026-06-25",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l3/bilag/0/3156155.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 21384,
+            "name": "Mads Strange",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "skatte- og vækstministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1217577,
+        "title": "Spm., om indekserede ejendomsvurderinger, automatisk afgørelse efter GDPR artikel 22 samt retssikkerhedsgarantier og klageadgang",
+        "number": null,
+        "date": "2026-06-24",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l3/spm/16/3155893.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21384,
+            "name": "Mads Strange",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217116,
+        "title": "Efter afstemningen i Folketinget ved 2. behandling den 23. juni 2026",
+        "number": null,
+        "date": "2026-06-23",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l3/20252_l3_efter_2behandling.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 20,
+        "document_category": "Optryk efter 2.beh",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1216947,
+        "title": "L 3 - svar på spm. 15 om kommentar til henvendelse af 19/6-26 fra Stine Jepsen om ejendomsvurdering for kolonihaver",
+        "number": null,
+        "date": "2026-06-22",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l3/spm/15/svar/2214213/3154546.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "skatte- og vækstministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1216945,
+        "title": "Betænkning afgivet 22/6-26",
+        "number": null,
+        "date": "2026-06-22",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l3/bilag/6/3154544.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1216942,
+        "title": "Betænkning afgivet af Skatteudvalget den 22. juni 2026",
+        "number": null,
+        "date": "2026-06-22",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l3/20252_l3_betaenkning.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1216700,
+        "title": "L 3 - svar på spm. 14 om Vurderingsstyrelsens individuel kontakt til boligejere ved data indikerer indekseret vurdering afvigelse over 20 pct. handelsværdi",
+        "number": null,
+        "date": "2026-06-21",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l3/spm/14/svar/2213513/3154041.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 21367,
+            "name": "Marie Brixtofte",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "skatte- og vækstministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1215661,
+        "title": "Fremsat den 16. juni 2026 af skatte- og vækstministeren (Jakob Engel-Schmidt)",
+        "number": null,
+        "date": "2026-06-16",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l3/20252_l3_som_fremsat.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 31,
+        "document_category": "Forslag som fremsat",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1215658,
+        "title": "Skriftlig fremsættelse (16. juni 2026)",
+        "number": null,
+        "date": "2026-06-16",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l3/20252_l3_fremsaettelsestale.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 7,
+        "document_type": "Fremsættelsestale",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 46,
+        "document_category": "Fremsættelsestale",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "related_cases": [],
+    "emneord": {
+      "sag": [
+        {
+          "id": 33271,
+          "emneord": "Bygningsvæsen 21",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 35291,
+          "emneord": "Skatter og afgifter 11",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 34108,
+          "emneord": "Skatter og afgifter 3",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 33487,
+          "emneord": "Skatter og afgifter 5",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 34106,
+          "emneord": "Skatter og afgifter 65",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 33062,
+          "emneord": "Skatter og afgifter 70",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 34348,
+          "emneord": "Skatter og afgifter 71",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 33060,
+          "emneord": "Skatter og afgifter 78",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 35290,
+          "emneord": "Skatter og afgifter 79",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 62445,
+          "emneord": "ejendomsdata",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ],
+      "dokumenter": [
+        {
+          "id": 62445,
+          "emneord": "ejendomsdata",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ],
+      "samlet": [
+        {
+          "id": 33271,
+          "emneord": "Bygningsvæsen 21",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 35291,
+          "emneord": "Skatter og afgifter 11",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 34108,
+          "emneord": "Skatter og afgifter 3",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 33487,
+          "emneord": "Skatter og afgifter 5",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 34106,
+          "emneord": "Skatter og afgifter 65",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 33062,
+          "emneord": "Skatter og afgifter 70",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 34348,
+          "emneord": "Skatter og afgifter 71",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 33060,
+          "emneord": "Skatter og afgifter 78",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 35290,
+          "emneord": "Skatter og afgifter 79",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 62445,
+          "emneord": "ejendomsdata",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ]
+    }
+  },
+  {
+    "sag_id": 105171,
+    "sag_number": "L 4",
+    "sag_title": "Forslag til lov om ændring af ligningsloven og lov om en aktiv beskæftigelsesindsats. (Forhøjelse af befordringsfradraget for indkomståret 2026 og forhøjelse af befordringsgodtgørelsen efter § 175 i lov om en aktiv beskæftigelsesindsats for andet halvår 2026).\n",
+    "sag_short_title": "Om forhøjelse af befordringsfradraget for indkomståret 2026.",
+    "sag_type_id": 3,
+    "sag_type": "Lovforslag",
+    "sag_status_id": 11,
+    "sag_status": "Stadfæstet",
+    "sag_category_id": 13,
+    "sag_category": "Regeringsforslag",
+    "fremsatundersagid": null,
+    "deltundersagid": null,
+    "actors": [
+      {
+        "actor_id": 57,
+        "name": "Jakob Engel-Schmidt",
+        "short_name": null,
+        "type_id": 5,
+        "type": "Person",
+        "role_id": 19,
+        "role": "Forslagsstiller (reg.)"
+      },
+      {
+        "actor_id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU",
+        "type_id": 3,
+        "type": "Udvalg",
+        "role_id": 11,
+        "role": "Henvist til"
+      },
+      {
+        "actor_id": 21451,
+        "name": "skatte- og vækstministeren",
+        "short_name": "skatte- og vækstminister",
+        "type_id": 2,
+        "type": "Ministertitel",
+        "role_id": 14,
+        "role": "Minister"
+      },
+      {
+        "actor_id": 21450,
+        "name": "Skatte- og Vækstministeriet",
+        "short_name": null,
+        "type_id": 1,
+        "type": "Ministerområde",
+        "role_id": 6,
+        "role": "Ministerområde"
+      }
+    ],
+    "law_followup": {
+      "law_number": "616",
+      "law_number_date": "2026-06-30",
+      "decision_date": null,
+      "decision_result_code": null,
+      "decision_text": null,
+      "retsinformation_url": null
+    },
+    "steps": [
+      {
+        "sagstrin_id": 274106,
+        "date": null,
+        "title": "Lovforslag som vedtaget",
+        "type": "Lovforslag som vedtaget",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274094,
+        "date": "2026-06-16",
+        "title": "Fremsættelse",
+        "type": "Fremsættelse",
+        "status": "Fremsat",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1215660,
+            "title": "Skriftlig fremsættelse (16. juni 2026)",
+            "number": null,
+            "date": "2026-06-17",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l4/20252_l4_fremsaettelsestale.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 7,
+            "document_type": "Fremsættelsestale",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 46,
+            "document_category": "Fremsættelsestale",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274095,
+        "date": "2026-06-16",
+        "title": "Lovforslag som fremsat",
+        "type": "Lovforslag som fremsat",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1215659,
+            "title": "Fremsat den 16. juni 2026 af skatte- og vækstministeren (Jakob Engel-Schmidt)",
+            "number": null,
+            "date": "2026-06-16",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l4/20252_l4_som_fremsat.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 31,
+            "document_category": "Forslag som fremsat",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274096,
+        "date": "2026-06-18",
+        "title": "1. behandling",
+        "type": "1. behandling",
+        "status": "Behandlet/Henvist til udvalg",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274097,
+        "date": "2026-06-18",
+        "title": "Frist for spørgsmål",
+        "type": "Frist for spørgsmål",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274098,
+        "date": "2026-06-19",
+        "title": "Frist for svar",
+        "type": "Frist for svar",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274102,
+        "date": "2026-06-19",
+        "title": "Frist for ændringsforslag",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274099,
+        "date": "2026-06-22",
+        "title": "Politisk drøftelse",
+        "type": "Udvalgsbehandling",
+        "status": "Konfirmeret",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274101,
+        "date": "2026-06-22",
+        "title": "Betænkning",
+        "type": "Betænkning",
+        "status": "Betænkning afgivet",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1216936,
+            "title": "Betænkning afgivet af Skatteudvalget den 22. juni 2026",
+            "number": null,
+            "date": "2026-06-22",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l4/20252_l4_betaenkning.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 55,
+            "document_category": "Betænkning m.v.",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274103,
+        "date": "2026-06-23",
+        "title": "2. behandling",
+        "type": "2. behandling",
+        "status": "Behandlet/Direkte til 3. beh.",
+        "vote_ids": [],
+        "documents": [],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274367,
+        "date": "2026-06-23",
+        "title": "Lovforslaget optrykt efter 2. behandling",
+        "type": "Lovforslaget optrykt efter 2. behandling",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1217117,
+            "title": "Efter afstemningen i Folketinget ved 2. behandling den 23. juni 2026",
+            "number": null,
+            "date": "2026-06-23",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l4/20252_l4_efter_2behandling.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 20,
+            "document_category": "Optryk efter 2.beh",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274592,
+        "date": "2026-06-24",
+        "title": "Ændringsforslag nr. 1 af 24.06.2026 til 3. behandling af skatte- og vækstministeren (Jakob Engel-Schmidt)",
+        "type": "Ændringsforslag uden for tillægsbetænkning/til 3. behandling",
+        "status": "Endelig",
+        "vote_ids": [],
+        "documents": [
+          {
+            "document_id": 1217522,
+            "title": "Ændringsforslag nr. 1 af skatte- og vækstministeren stillet den 24.06.2026",
+            "number": null,
+            "date": "2026-06-24",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l4/20252_l4_aendringsforslag_beh33155750.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 55,
+            "document_category": "Betænkning m.v.",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
+        "agenda_items": []
+      },
+      {
+        "sagstrin_id": 274105,
+        "date": "2026-06-25",
+        "title": "Eventuelt: 3. behandling",
+        "type": "3. behandling",
+        "status": "Behandlet/Vedtaget",
+        "vote_ids": [
+          10574
+        ],
+        "documents": [],
+        "agenda_items": []
+      }
+    ],
+    "documents": [
+      {
+        "document_id": 1217769,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 25. juni 2026",
+        "number": null,
+        "date": "2026-06-25",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l4/20252_l4_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217529,
+        "title": "Ændringsforslag til 3. behandling",
+        "number": null,
+        "date": "2026-06-24",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l4/bilag/0/3155768.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217522,
+        "title": "Ændringsforslag nr. 1 af skatte- og vækstministeren stillet den 24.06.2026",
+        "number": null,
+        "date": "2026-06-24",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l4/20252_l4_aendringsforslag_beh33155750.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217319,
+        "title": "Ændringsforslag, fra skatte- og vækstministeren",
+        "number": null,
+        "date": "2026-06-23",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l4/bilag/9/3155296.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 15,
+        "document_category": "Notat",
+        "document_actors": [
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 1,
+            "role": "Afsender"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1217117,
+        "title": "Efter afstemningen i Folketinget ved 2. behandling den 23. juni 2026",
+        "number": null,
+        "date": "2026-06-23",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l4/20252_l4_efter_2behandling.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 20,
+        "document_category": "Optryk efter 2.beh",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1216940,
+        "title": "Betænkning afgivet den 22. juni 2026",
+        "number": null,
+        "date": "2026-06-22",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l4/bilag/8/3154536.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1216936,
+        "title": "Betænkning afgivet af Skatteudvalget den 22. juni 2026",
+        "number": null,
+        "date": "2026-06-22",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l4/20252_l4_betaenkning.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1216703,
+        "title": "L 4 - svar på spm. 15 om udskudte eller annullerede lovforslag, provenu, status, tidsplan og påvirkede borgere og virksomheder ved finansiering af forhøjet befordringsfradrag",
+        "number": null,
+        "date": "2026-06-21",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l4/spm/15/svar/2213516/3154049.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 21367,
+            "name": "Marie Brixtofte",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "skatte- og vækstministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1215659,
+        "title": "Fremsat den 16. juni 2026 af skatte- og vækstministeren (Jakob Engel-Schmidt)",
+        "number": null,
+        "date": "2026-06-16",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l4/20252_l4_som_fremsat.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 31,
+        "document_category": "Forslag som fremsat",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1215660,
+        "title": "Skriftlig fremsættelse (16. juni 2026)",
+        "number": null,
+        "date": "2026-06-17",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l4/20252_l4_fremsaettelsestale.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 7,
+        "document_type": "Fremsættelsestale",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 46,
+        "document_category": "Fremsættelsestale",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "related_cases": [],
+    "emneord": {
+      "sag": [
+        {
+          "id": 33060,
+          "emneord": "Skatter og afgifter 78",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 33103,
+          "emneord": "personskatter",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ],
+      "dokumenter": [
+        {
+          "id": 62445,
+          "emneord": "ejendomsdata",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33103,
+          "emneord": "personskatter",
+          "type_id": 1,
+          "type": "Sagsområde"
+        }
+      ],
+      "samlet": [
+        {
+          "id": 33060,
+          "emneord": "Skatter og afgifter 78",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 62445,
+          "emneord": "ejendomsdata",
+          "type_id": 1,
+          "type": "Sagsområde"
+        },
+        {
+          "id": 33103,
+          "emneord": "personskatter",
           "type_id": 1,
           "type": "Sagsområde"
         }

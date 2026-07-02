@@ -28,7 +28,7 @@
           "sagstrin_date": "2026-06-25",
           "sagstrin_title": "Eventuelt: 3. behandling",
           "sagstrin_type": "3. behandling",
-          "sagstrin_status": "På dagsorden",
+          "sagstrin_status": "Behandlet/Vedtaget",
           "vote_ids": [
             10571
           ]
@@ -58,7 +58,7 @@
           "sagstrin_date": "2026-06-23",
           "sagstrin_title": "2. behandling",
           "sagstrin_type": "2. behandling",
-          "sagstrin_status": "På dagsorden",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
           "vote_ids": []
         }
       ],
@@ -108,5 +108,5 @@
       "agenda_point_count": 2
     }
   ],
-  "generated_at": "2026-07-01T19:17:52+00:00"
+  "generated_at": "2026-07-02T08:32:57+00:00"
 }
