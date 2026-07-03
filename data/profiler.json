@@ -1824,6 +1824,11 @@
     "current_party_short": "DD",
     "committees": [
       {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
         "id": 21508,
         "name": "Udvalget for Det Tyske Mindretal",
         "short_name": "UTM"
@@ -17580,6 +17585,11 @@
     "current_party_short": "S",
     "committees": [
       {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
         "id": 21477,
         "name": "Transportudvalget",
         "short_name": "TRU"
@@ -19706,11 +19716,6 @@
     "current_party": "Socialistisk Folkeparti",
     "current_party_short": "SF",
     "committees": [
-      {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
-      },
       {
         "id": 21478,
         "name": "Skatteudvalget",
@@ -22701,6 +22706,11 @@
     "current_party_short": "SF",
     "committees": [
       {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
@@ -23707,6 +23717,11 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
       {
         "id": 21481,
         "name": "Kultur- og Kirkeudvalget",
@@ -25598,11 +25613,6 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
-      {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
-      },
       {
         "id": 21489,
         "name": "Epidemiudvalget",
