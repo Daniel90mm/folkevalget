@@ -17065,7 +17065,7 @@
     ],
     "educations": [
       "Cand.scient.pol., Aarhus Universitet, 2008.",
-      "Student, Aarhus katedralskole, 2000."
+      "Student, Aarhus Katedralskole, 2000."
     ],
     "occupations": [
       "Projektchef, Sundhed og Omsorg, Aarhus Kommune, 2010-2014.",
@@ -23221,7 +23221,7 @@
         "short_name": "MOF"
       }
     ],
-    "role": "Cecilie Liv Hansen (UFG)",
+    "role": "Salg- og marketingskoordinator",
     "constituency": "Folketingsmedlem for Liberal Alliance i Sydjyllands Storkreds, 24. marts 2026 – 28. marts 2026.",
     "storkreds": "Sydjyllands Storkreds",
     "constituency_history": [
@@ -23237,8 +23237,16 @@
         "active": true
       }
     ],
-    "educations": [],
-    "occupations": [],
+    "educations": [
+      "UCL Erhvervsakademi og Professionshøjskole, 2023.",
+      "Commerce Management, Sales and Sales Management, 2021-2023.",
+      "Stx, Aabenraa Statsskole, 2017-2019."
+    ],
+    "occupations": [
+      "Salgs- og marketingskoordinator, Danfoss IXA, 2023-2025.",
+      "Salgsassistent, Hunkemöller, 2020-2022.",
+      "Salgsassistent, hybrid distribution, 2019-2020."
+    ],
     "email": "cecilie.liv.hansen@ft.dk",
     "phone": "+45 3337 4956",
     "website_url": null,
@@ -25310,11 +25318,11 @@
       "Young European Leadership Programme, International Visitor Leadership Programme, U.S. Embassy, 2011.",
       "Bachelor i erhvervsøkonomi og virksomhedskommunikation, Copenhagen Business School (CBS), 2004-2007.",
       "Sproglig studentereksamen, Frederiksborg Gymnasium og HF, 1999-2002.",
-      "9. klasses afgangseksamen, Parkvejskolen, Birkerød, 1999."
+      "Folkeskolens afgangseksamen, Parkvejskolen, Birkerød, 1999."
     ],
     "occupations": [
       "Projektkonsulent, Kristiansen Strategy, 2007.",
-      "Politisk assistent for MF Michael Aastrup Jensen, Christiansborg, 2005-2007.",
+      "Politisk assistent for mf Michael Aastrup Jensen, Christiansborg, 2005-2007.",
       "Plejeassistent, Rikke Marie Hjemmet, Skodsborg, 2003-2004.",
       "Salgsassistent, Plaza Ure & Smykker, Illum, København, 1999-2004."
     ],
@@ -25491,7 +25499,7 @@
     ],
     "occupations": [
       "Koordinator i privat virksomhed, Krogager og Billund, 2007-2011.",
-      "Politisk sekretær, Christiansborg, 2005-2007.",
+      "Politisk sekretær for mf for Venstre, Christiansborg, 2005-2007.",
       "Kontorassistent og overassistent, Grindsted Rådhus, 1987-2005."
     ],
     "email": "anni.matthiesen@ft.dk",

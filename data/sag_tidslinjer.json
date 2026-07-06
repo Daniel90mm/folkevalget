@@ -706,6 +706,18 @@
           "type": "Kontrolleret"
         },
         {
+          "id": 34105,
+          "emneord": "Skatter og afgifter 15",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 34248,
+          "emneord": "Skatter og afgifter 59",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
           "id": 84443,
           "emneord": "borgerforslag",
           "type_id": 1,
@@ -750,6 +762,18 @@
           "emneord": "benzin",
           "type_id": 3,
           "type": "Kontrolleret"
+        },
+        {
+          "id": 34105,
+          "emneord": "Skatter og afgifter 15",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
+          "id": 34248,
+          "emneord": "Skatter og afgifter 59",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
         },
         {
           "id": 84443,
@@ -2251,6 +2275,12 @@
     "emneord": {
       "sag": [
         {
+          "id": 33298,
+          "emneord": "Folkeretlige forhold 43",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
           "id": 33162,
           "emneord": "internationale missioner og operationer",
           "type_id": 1,
@@ -2278,6 +2308,12 @@
         }
       ],
       "samlet": [
+        {
+          "id": 33298,
+          "emneord": "Folkeretlige forhold 43",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
         {
           "id": 33162,
           "emneord": "internationale missioner og operationer",
