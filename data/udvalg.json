@@ -3,7 +3,7 @@
     "id": 21467,
     "name": "Beskæftigelses- og Ligestillingsudvalget",
     "short_name": "BEU",
-    "member_count": 21,
+    "member_count": 22,
     "member_ids": [
       260,
       15775,
@@ -24,6 +24,7 @@
       21351,
       21353,
       21364,
+      21398,
       21405,
       21474
     ]
@@ -32,7 +33,7 @@
     "id": 21479,
     "name": "Børne-, Undervisnings- og Forskningsudvalget",
     "short_name": "BUU",
-    "member_count": 22,
+    "member_count": 21,
     "member_ids": [
       97,
       118,
@@ -45,7 +46,6 @@
       20357,
       20364,
       20386,
-      20391,
       20398,
       20411,
       21337,
@@ -369,7 +369,7 @@
     "id": 21476,
     "name": "Miljø- og Fødevareudvalget",
     "short_name": "MOF",
-    "member_count": 22,
+    "member_count": 23,
     "member_ids": [
       168,
       1845,
@@ -392,6 +392,7 @@
       21383,
       21385,
       21386,
+      21398,
       21475
     ]
   },
@@ -443,7 +444,6 @@
       18718,
       20349,
       20361,
-      20391,
       20396,
       20414,
       20415,
@@ -454,6 +454,7 @@
       21353,
       21354,
       21378,
+      21398,
       21474
     ]
   },

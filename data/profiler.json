@@ -4747,7 +4747,23 @@
     "party_short": "EL",
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21467,
+        "name": "Beskæftigelses- og Ligestillingsudvalget",
+        "short_name": "BEU"
+      }
+    ],
     "role": "Naturpolitisk rådgiver",
     "constituency": null,
     "storkreds": null,
@@ -8913,14 +8929,14 @@
       "Advanced Board Education, Columbia Business School, 2023.",
       "Executive Management Education, Columbia Business School, New York, 2012.",
       "Hd 1. del, uafsluttet 2. del (udenrigshandel), Københavns Handelshøjskole (CBS), 1990.",
-      "Flere finans- og ledelsesuddannelser fra bl.a. London Business School, Oxford University, Copenhagen Business School (CBS), International Management School, Bruxelles, Institute of Directors, London, 1989-2014.",
+      "Flere finans- og ledelsesuddannelser fra bl.a. London Business School, Oxford University, Copenhagen Business School (CBS), International Management School, Bruxelles, Institute of Directors, London, 1989-2022.",
       "Bankuddannet, Jyske Bank, Roskilde, 1986.",
       "Sproglig handelsstudent, Roskilde Handelsskole, 1984.",
       "Matematisk student, Himmelev Gymnasium, Roskilde, 1982."
     ],
     "occupations": [
       "Executive Director og facilitator, Presidents Institute fra 2015.",
-      "Facilitator og taler, Board Company fra 2014.",
+      "Facilitator og taler, Board Company, 2014-2026.",
       "Direktør, Artha Kapitalforvaltning, 2013-2015.",
       "Salgsdirektør, TAGTEC, 2012.",
       "Direktør og landechef og Senior Vice President , EFG Bank Danmark og EFG International, 2010-2013.",
@@ -9209,16 +9225,6 @@
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
     "committees": [
-      {
-        "id": 21485,
-        "name": "Retsudvalget",
-        "short_name": "REU"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
-      },
       {
         "id": 21402,
         "name": "Udvalget til Prøvelse af Valgene",
