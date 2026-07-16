@@ -1014,7 +1014,30 @@
         "type": "Forslag som fremsat",
         "status": "Endelig",
         "vote_ids": [],
-        "documents": [],
+        "documents": [
+          {
+            "document_id": 1213198,
+            "title": "Fremsat den 14. april 2026 af Peter Kofod (DF), Alex Ahrendtsen (DF), Mikkel Bjørn (DF), Rune Bønnelykke (DF), Mikkel Dencker (DF), Allan Feldt (DF), Jan Herskov (DF), Julie Jacobsen (DF), Josephine Alstrup Kofod (DF), Malte Larsen (DF), Morten Messerschmidt (DF), Michael Nedersøe (DF), Søren Boel Olesen (DF), Mette Thiesen (DF), Anders Vistisen (DF) og Nick Zimmermann (DF)",
+            "number": null,
+            "date": "2026-04-14",
+            "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b2/20252_b2_som_fremsat.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 31,
+            "document_category": "Forslag som fremsat",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
         "agenda_items": []
       },
       {
@@ -2442,7 +2465,30 @@
         "type": "Forslag som fremsat",
         "status": "Endelig",
         "vote_ids": [],
-        "documents": [],
+        "documents": [
+          {
+            "document_id": 1213216,
+            "title": "Fremsat den 16. april 2026 af Dennis Flydtkjær (DD), Jens Henrik Thulesen Dahl (DD), Mads Fuglede (DD), Susie Jessen (DD) og Inger Støjberg (DD)",
+            "number": null,
+            "date": "2026-04-16",
+            "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b4/20252_b4_som_fremsat.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 31,
+            "document_category": "Forslag som fremsat",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
         "agenda_items": []
       },
       {
