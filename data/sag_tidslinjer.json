@@ -57,7 +57,30 @@
         "type": "Betænkning og indstilling",
         "status": "Fremsat",
         "vote_ids": [],
-        "documents": [],
+        "documents": [
+          {
+            "document_id": 1214156,
+            "title": "Betænkning og indstilling afgivet af Finansudvalget den 4. juni 2026",
+            "number": null,
+            "date": "2026-06-04",
+            "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b12/20252_b12_som_fremsat.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 31,
+            "document_category": "Forslag som fremsat",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
         "agenda_items": []
       },
       {
@@ -2979,7 +3002,30 @@
         "type": "Lovforslag som fremsat",
         "status": "Endelig",
         "vote_ids": [],
-        "documents": [],
+        "documents": [
+          {
+            "document_id": 1213600,
+            "title": "Fremsat den 12. maj 2026 af Hans Kristian Skibby (DD), Jens Henrik Thulesen Dahl (DD), Dennis Flydtkjær (DD), Mads Fuglede (DD), Susie Jessen (DD) og Inger Støjberg (DD)",
+            "number": null,
+            "date": "2026-05-12",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l1/20252_l1_som_fremsat.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 31,
+            "document_category": "Forslag som fremsat",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
         "agenda_items": []
       },
       {
@@ -3381,7 +3427,30 @@
         "type": "Lovforslag som fremsat",
         "status": "Endelig",
         "vote_ids": [],
-        "documents": [],
+        "documents": [
+          {
+            "document_id": 1213891,
+            "title": "Fremsat den 26. maj 2026 af finansministeren (Nicolai Wammen, fg.):",
+            "number": null,
+            "date": "2026-05-26",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l2/20252_l2_som_fremsat.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 31,
+            "document_category": "Forslag som fremsat",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
         "agenda_items": []
       },
       {
@@ -4041,7 +4110,30 @@
         "type": "Lovforslag som vedtaget",
         "status": "Endelig",
         "vote_ids": [],
-        "documents": [],
+        "documents": [
+          {
+            "document_id": 1217770,
+            "title": "Vedtaget af Folketinget ved 3. behandling den 25. juni 2026",
+            "number": null,
+            "date": "2026-06-25",
+            "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l3/20252_l3_som_vedtaget.pdf",
+            "format": "PDF",
+            "variant_code": "P",
+            "is_omtryk": false,
+            "omtryk": [],
+            "document_type_id": 21,
+            "document_type": "Forslagstekst",
+            "document_status_id": 1,
+            "document_status": "Endeligt",
+            "document_category_id": 23,
+            "document_category": "Forslag som vedtaget",
+            "document_actors": [],
+            "question_chain": {
+              "askers": [],
+              "responders": []
+            }
+          }
+        ],
         "agenda_items": []
       }
     ],
