@@ -3703,11 +3703,6 @@
     "current_party_short": "DF",
     "committees": [
       {
-        "id": 21487,
-        "name": "Udlændinge- og Integrationsudvalget",
-        "short_name": "UUI"
-      },
-      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
