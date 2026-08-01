@@ -132,15 +132,6 @@
     ]
   },
   {
-    "id": 21397,
-    "name": "Europaudvalget",
-    "short_name": "EUU",
-    "member_count": 1,
-    "member_ids": [
-      21306
-    ]
-  },
-  {
     "id": 21393,
     "name": "Finansudvalget",
     "short_name": "FIU",
