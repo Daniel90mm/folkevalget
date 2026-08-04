@@ -11150,8 +11150,24 @@
     "party_short": "M",
     "current_party": "Moderaterne",
     "current_party_short": "M",
-    "committees": [],
-    "role": "Specialkonsulent",
+    "committees": [
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
+        "id": 21397,
+        "name": "Europaudvalget",
+        "short_name": "EUU"
+      }
+    ],
+    "role": "Chefkonsulent",
     "constituency": "Folketingsmedlem for Radikale Venstre i Østjyllands Storkreds, 17. juni 2021 – 1. november 2022.",
     "storkreds": "Østjyllands Storkreds",
     "constituency_history": [
@@ -11171,13 +11187,15 @@
       "Cand.jur., Aarhus Universitet, 1988-1994."
     ],
     "occupations": [
+      "Specialkonsulent, Skattestyrelsen, 2022-2024.",
+      "Chefkonsulent, Skattestyrelsen, 2013-2026.",
       "Specialkonsulent, Skattestyrelsen, 2013-2020.",
       "Specialkonsulent, Skatteministeriet, 2010-2012.",
       "Fuldmægtig, Skatteankenævnet, 1995.",
       "Fuldmægtig, Skattestyrelsen, 1995-2010."
     ],
-    "email": null,
-    "phone": null,
+    "email": "susan.kronborg@ft.dk",
+    "phone": "+45 61623825",
     "website_url": "https://www.susankronborg.dk/",
     "address": null,
     "member_url": null,
@@ -11186,11 +11204,11 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2022-11-01",
-    "member_since_year": 2022,
-    "seniority_label": "3 aar i Folketinget",
-    "seniority_years": 3,
-    "seniority_months": 45,
+    "member_since_date": "2026-06-25",
+    "member_since_year": 2026,
+    "seniority_label": "Under 1 aar i Folketinget",
+    "seniority_years": 0,
+    "seniority_months": 1,
     "seniority_tag": "newcomer",
     "votes_total": 9,
     "votes_for": 0,
@@ -13130,7 +13148,7 @@
         "short_name": "BEU"
       }
     ],
-    "role": null,
+    "role": "Studerende",
     "constituency": null,
     "storkreds": null,
     "constituency_history": [],
@@ -13145,12 +13163,12 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "maria.sloth@ft.dk",
+    "phone": "+45 3337 4724",
     "website_url": null,
-    "address": null,
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": null,
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_133x133,-d-,jpg.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,

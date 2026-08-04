@@ -132,6 +132,15 @@
     ]
   },
   {
+    "id": 21397,
+    "name": "Europaudvalget",
+    "short_name": "EUU",
+    "member_count": 1,
+    "member_ids": [
+      19475
+    ]
+  },
+  {
     "id": 21393,
     "name": "Finansudvalget",
     "short_name": "FIU",
@@ -453,7 +462,7 @@
     "id": 21478,
     "name": "Skatteudvalget",
     "short_name": "SAU",
-    "member_count": 26,
+    "member_count": 27,
     "member_ids": [
       82,
       119,
@@ -464,6 +473,7 @@
       18694,
       18718,
       18729,
+      19475,
       20135,
       20359,
       20360,
@@ -585,7 +595,7 @@
     "id": 21477,
     "name": "Transportudvalget",
     "short_name": "TRU",
-    "member_count": 24,
+    "member_count": 25,
     "member_ids": [
       82,
       120,
@@ -598,6 +608,7 @@
       18717,
       18718,
       18719,
+      19475,
       20135,
       20360,
       20362,
