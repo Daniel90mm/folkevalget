@@ -33,7 +33,7 @@
     "id": 21479,
     "name": "Børne-, Undervisnings- og Forskningsudvalget",
     "short_name": "BUU",
-    "member_count": 21,
+    "member_count": 22,
     "member_ids": [
       97,
       118,
@@ -55,7 +55,8 @@
       21365,
       21375,
       21383,
-      21386
+      21386,
+      21405
     ]
   },
   {
@@ -430,7 +431,7 @@
     "id": 21485,
     "name": "Retsudvalget",
     "short_name": "REU",
-    "member_count": 24,
+    "member_count": 25,
     "member_ids": [
       82,
       118,
@@ -455,6 +456,7 @@
       21354,
       21378,
       21398,
+      21405,
       21474
     ]
   },

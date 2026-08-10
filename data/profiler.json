@@ -2226,7 +2226,7 @@
     ],
     "occupations": [
       "Taleskriver og kommunikationskonsulent, Dansk Erhverv, 2022.",
-      "Politisk konsulent/politisk assistent for Kristian Thulesen Dahl, Dansk Folkeparti, 2017-2022.",
+      "Politisk konsulent/politisk assistent for mf Kristian Thulesen Dahl, Dansk Folkeparti, 2017-2022.",
       "Pressemedarbejder, Dansk Folkeparti, 2014-2017.",
       "Journalist, Politikens Lokalaviser i Vejen og efterfølgende Kolding, 2011-2014.",
       "Journalist, Vejle Amts Folkeblad og Fredericia Dagblad, 2010-2011.",
@@ -4434,7 +4434,7 @@
         "short_name": "BEU"
       }
     ],
-    "role": "MF",
+    "role": "Nick Zimmermann (DF)",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Østjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Østjyllands Storkreds",
     "constituency_history": [
@@ -8730,6 +8730,16 @@
     "current_party_short": "LA",
     "committees": [
       {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21468,
         "name": "Færøudvalget",
         "short_name": "FÆU"
@@ -8760,7 +8770,7 @@
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_500x500.ashx",
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_133x133,-d-,jpg.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
@@ -12527,7 +12537,7 @@
         "short_name": "NOR"
       }
     ],
-    "role": "Studerende",
+    "role": "BSc.pol.",
     "constituency": "Folketingsmedlem for Radikale Venstre i Fyns Storkreds fra 24. marts 2026.",
     "storkreds": "Fyns Storkreds",
     "constituency_history": [
@@ -13161,10 +13171,14 @@
         "active": true
       }
     ],
-    "educations": [],
+    "educations": [
+      "Ba i pædagogik, Københavns Universitet, 2022-2026.",
+      "Student, Middelfart Gymnasium, 2016-2019.",
+      "Grundskole, Middelfart Friskole, 2005-2015."
+    ],
     "occupations": [],
     "email": "maria.sloth@ft.dk",
-    "phone": "+45 3337 4724",
+    "phone": "+45 6162 4039",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
@@ -14187,8 +14201,8 @@
       "Seniorkonsulent, Deloitte Business Consulting, 2007-2011.",
       "Forskningsassistent, Københavns Universitet, 2006-2007.",
       "Arbejdsmarkedspolitisk medarbejder, Danmarks Socialdemokratiske Ungdom, 2005-2007.",
-      "Frit Forum, 2004-2007.",
-      "Føtex, Svendborg, 1995-2004."
+      "Politisk medarbejder, Frit Forum, 2004-2007.",
+      "Assistent, Føtex, Svendborg, 1995-2004."
     ],
     "email": "trine.bramsen@ft.dk",
     "phone": "+45 3337 5500",
@@ -17349,7 +17363,7 @@
     "email": "min@mgtp.dk",
     "phone": "+45 3333 3350",
     "website_url": "https://mgtp.dk/",
-    "address": "Ministeriet for Natur og Dyrevelfærd, Vester Voldgade 123 1552 København K",
+    "address": "Ministeriet for Natur og Dyrevelfærd, Holmens Kanal 22 1060 København K",
     "member_url": "https://www.ft.dk/medlemmer/mf/c/christian-rabjerg-madsen",
     "photo_url": "photos/15762.jpg",
     "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/s/christian-rabjerg-madsen/christian_rabjerg_madsen_500.jpg",
@@ -18536,7 +18550,7 @@
       "Lærerstuderende, Vordingborg Seminarium, 2001-2005."
     ],
     "occupations": [
-      "Uddannelsesleder, bioanalytikeruddannelsen, Absalon, 2016-2018.",
+      "Uddannelsesleder, bioanalytikeruddannelsen, Professionshøjskolen Absalon, 2016-2018.",
       "Lektor, VUC Storstrøm, 2006-2015.",
       "Soldat med udsendelse til Kosovo, Livgarden, 1999-2001."
     ],
@@ -23237,7 +23251,7 @@
         "short_name": "MOF"
       }
     ],
-    "role": "Salg- og marketingskoordinator",
+    "role": "Salgs- og marketingskoordinator",
     "constituency": "Folketingsmedlem for Liberal Alliance i Sydjyllands Storkreds, 24. marts 2026 – 28. marts 2026.",
     "storkreds": "Sydjyllands Storkreds",
     "constituency_history": [
@@ -24738,7 +24752,7 @@
       "Matematisk student, Holbæk, 1989-1992."
     ],
     "occupations": [
-      "Deltid, A.P. Møller, København, 2005-2007.",
+      "Kontorchef (deltid), A.P. Møller, København, 2005-2007.",
       "Kontorchef, A.P. Møller, København, 2002-2005.",
       "Kontorchef, Maersk UK, London, 2001-2002.",
       "Økonom, A.P. Møller, København, 1998-2001."
