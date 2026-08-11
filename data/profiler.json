@@ -317,7 +317,7 @@
         "short_name": "BEU"
       }
     ],
-    "role": "MF",
+    "role": "Torsten Gejl (ALT)",
     "constituency": "Folketingsmedlem for Alternativet i Østjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Østjyllands Storkreds",
     "constituency_history": [
@@ -1122,6 +1122,11 @@
     "current_party_short": "DD",
     "committees": [
       {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
@@ -1823,11 +1828,6 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
-      {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
-      },
       {
         "id": 21508,
         "name": "Udvalget for Det Tyske Mindretal",
@@ -4373,7 +4373,7 @@
       }
     ],
     "educations": [
-      "Cand.jur, Aarhus Universitet, 2006-2012.",
+      "Cand.jur., Aarhus Universitet, 2006-2012.",
       "Højere Handelseksamen, Skive Handelsskole , 2003-2006.",
       "Folkeskole, Vridsted Skole, 1996-2006."
     ],
@@ -11197,9 +11197,7 @@
       "Cand.jur., Aarhus Universitet, 1988-1994."
     ],
     "occupations": [
-      "Specialkonsulent, Skattestyrelsen, 2022-2024.",
       "Chefkonsulent, Skattestyrelsen, 2013-2026.",
-      "Specialkonsulent, Skattestyrelsen, 2013-2020.",
       "Specialkonsulent, Skatteministeriet, 2010-2012.",
       "Fuldmægtig, Skatteankenævnet, 1995.",
       "Fuldmægtig, Skattestyrelsen, 1995-2010."
@@ -13018,7 +13016,7 @@
     ],
     "occupations": [
       "Public Affairs Director, GRACE, 2023-2025.",
-      "Politisk konsulent, SMVDanmark, 2022.",
+      "Politisk konsulent, SMVdanmark, 2022.",
       "Junior Consultant, GRACE, 2017-2021.",
       "Lærermedhjælper, Høje Kolstrup Skole, 2015-2016.",
       "Studentermedarbejder , Radikale Venstre, 2015-2018."
@@ -13588,7 +13586,7 @@
       "Cand.scient.pol., Københavns Universitet, 2006.",
       "Matematisk studentereksamen, Gladsaxe Gymnasium, 1991-1994.",
       "Udvekslingsstudent, Aurora Central High School, Colorado, USA, 1990-1991.",
-      "9. klasse, Gladsaxe Skole, 1980-1990."
+      "Folkeskole, Gladsaxe Skole, 1980-1990."
     ],
     "occupations": [
       "Overborgmester, Københavns Kommune, 2022-2024.",
@@ -13784,7 +13782,7 @@
     "occupations": [
       "Projektsygeplejerske, Bakkehuset, Roskilde fra 2020.",
       "Sygeplejerske, Region Hovedstadens Psykiatri, 2011-2020.",
-      "Sygeplejerske, Filadelfia Epilepsihospetal, Dianalund, 2010-2011.",
+      "Sygeplejerske, Filadelfia Epilepsihospital, Dianalund, 2010-2011.",
       "Sygeplejerske, Holbæk Sygehus, 2007-2010.",
       "Sygeplejerske, Bispebjerg Hospital, 2005-2007."
     ],
@@ -18052,7 +18050,7 @@
       "Sproglig student, Skive Gymnasium og HF, 2008."
     ],
     "occupations": [
-      "Rådgiver, Energinet, 2017-2019.",
+      "Energipolitisk rådgiver, Energinet, 2017-2019.",
       "Konsulent, TDC Group, 2015-2016.",
       "Politisk medarbejder, Danmarks Socialdemokratiske Ungdom, 2013-2014.",
       "Praktikant, Geelmuyden Kiese, 2013.",
@@ -20439,7 +20437,7 @@
         "short_name": "FÆU"
       }
     ],
-    "role": "MF",
+    "role": "Mf",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Sjællands Storkreds fra 5. juni 2019.",
     "storkreds": "Sjællands Storkreds",
     "constituency_history": [
@@ -25853,7 +25851,7 @@
     "occupations": [
       "Ejer, Birkehøjgaard fra 2005.",
       "Pressekoordinator, Ørestadsselskabet, 1998-2001.",
-      "Politisk sekretær, Christiansborg, 1995-1997."
+      "Politisk sekretær for Venstre, Christiansborg, 1995-1997."
     ],
     "email": "troels.poulsen@ft.dk",
     "phone": "+45 3337 5500",
