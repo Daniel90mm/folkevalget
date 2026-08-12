@@ -1122,11 +1122,6 @@
     "current_party_short": "DD",
     "committees": [
       {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
-      },
-      {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
@@ -1828,6 +1823,11 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
       {
         "id": 21508,
         "name": "Udvalget for Det Tyske Mindretal",
@@ -17507,7 +17507,7 @@
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 2,
+    "seniority_months": 3,
     "seniority_tag": "newcomer",
     "votes_total": 9,
     "votes_for": 5,
