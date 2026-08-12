@@ -7246,11 +7246,6 @@
     "current_party_short": "KF",
     "committees": [
       {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
         "id": 21482,
         "name": "Udenrigs- og Forsvarsudvalget",
         "short_name": "UDF"
@@ -7336,6 +7331,11 @@
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
     "committees": [
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
       {
         "id": 21489,
         "name": "Epidemiudvalget",
@@ -9266,7 +9266,7 @@
     "educations": [
       "Cand.jur., Aalborg Universitet, 2014-2016.",
       "Bac.jur., Aalborg Universitet, 2011-2014.",
-      "Hhx, Handelsskolen på Færøerne, Kambsdal, 2007-2011.",
+      "Hhx, Færøernes Handelsskole, Kambsdal, 2007-2011.",
       "Folkeskolen, Runavíkar Kommunuskúli, Runavík, Færøerne, 1998-2007."
     ],
     "occupations": [
@@ -15143,7 +15143,7 @@
       "Afdelingsleder, Langagerskolen, 2005-2014.",
       "Lærer, Langagerskolen, 1999-2005.",
       "Studenterjob som støtteperson for en familie med børn med adhd og autisme, 1996-1999.",
-      "Forskellige ansættelser som fabriksarbejder på Danfoss Aarhus, kok på en coaster og leder af en grillbar i Gellerup."
+      "Forskellige ansættelser som fabriksarbejder på Danfoss, Aarhus, kok på en coaster og leder af en grillbar i Gellerup."
     ],
     "email": "camilla.fabricius@ft.dk",
     "phone": "+45 6162 5864",
@@ -19206,7 +19206,7 @@
       "Lærer, Jelling Statsseminarium, 1984-1989."
     ],
     "occupations": [
-      "Afdelingsleder, Petersmindeskolen, Vejle fra 2018.",
+      "Afdelingsleder, Petersmindeskolen, Vejle, 2018-2019.",
       "Skolekonsulent, Vejle Kommune, 2005-2006.",
       "Ledende pædagog, Petersmindeskolen, Vejle, 2001-2017.",
       "Speciallærer, Stormfuglen, Jelling, 1999.",
@@ -24385,11 +24385,6 @@
         "short_name": "KUU"
       },
       {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
-      },
-      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
@@ -25000,7 +24995,7 @@
     ],
     "educations": [
       "Læreruddannet, Hjørring Seminarium, 1996-2000.",
-      "Linjeofficer, Frederiksberg Slot, 1991-1993.",
+      "Linjeofficer, Hærens Officersskole, Frederiksberg Slot, 1991-1993.",
       "Efg og hh, Bornholms Erhvervsskole, Rønne, 1984-1987."
     ],
     "occupations": [
@@ -25649,6 +25644,11 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
       {
         "id": 21489,
         "name": "Epidemiudvalget",
