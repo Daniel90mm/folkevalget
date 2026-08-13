@@ -7246,6 +7246,11 @@
     "current_party_short": "KF",
     "committees": [
       {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
         "id": 21482,
         "name": "Udenrigs- og Forsvarsudvalget",
         "short_name": "UDF"
@@ -7331,11 +7336,6 @@
     "current_party": "Det Konservative Folkeparti",
     "current_party_short": "KF",
     "committees": [
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
       {
         "id": 21489,
         "name": "Epidemiudvalget",
@@ -13864,7 +13864,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 224,
+    "seniority_months": 225,
     "seniority_tag": "experienced",
     "votes_total": 18,
     "votes_for": 0,
@@ -14985,7 +14985,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 224,
+    "seniority_months": 225,
     "seniority_tag": "experienced",
     "votes_total": 18,
     "votes_for": 10,
@@ -16296,7 +16296,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 224,
+    "seniority_months": 225,
     "seniority_tag": "experienced",
     "votes_total": 18,
     "votes_for": 0,
@@ -17847,7 +17847,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 224,
+    "seniority_months": 225,
     "seniority_tag": "experienced",
     "votes_total": 18,
     "votes_for": 10,
@@ -18211,7 +18211,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 224,
+    "seniority_months": 225,
     "seniority_tag": "experienced",
     "votes_total": 18,
     "votes_for": 10,
@@ -21313,7 +21313,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 224,
+    "seniority_months": 225,
     "seniority_tag": "experienced",
     "votes_total": 18,
     "votes_for": 0,
@@ -24380,6 +24380,11 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
         "id": 21481,
         "name": "Kultur- og Kirkeudvalget",
         "short_name": "KUU"
@@ -25017,7 +25022,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 224,
+    "seniority_months": 225,
     "seniority_tag": "experienced",
     "votes_total": 9,
     "votes_for": 0,
@@ -25363,7 +25368,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 224,
+    "seniority_months": 225,
     "seniority_tag": "experienced",
     "votes_total": 9,
     "votes_for": 7,
@@ -25644,11 +25649,6 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
-      {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
-      },
       {
         "id": 21489,
         "name": "Epidemiudvalget",
