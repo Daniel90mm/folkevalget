@@ -74,16 +74,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 5,
     "votes_against": 4,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 1,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 9,
     "party_loyalty_comparisons": 9,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -359,17 +368,35 @@
     "seniority_years": 11,
     "seniority_months": 133,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -439,24 +466,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -503,8 +512,8 @@
       }
     ],
     "educations": [
-      "Geografi (cand.scient.geo.), Københavns Universitet, 2015.",
-      "Sundhed og humanernæring (prof.-bach.), Suhrs Højskole, København, 2010."
+      "Cand.scient.geo., Københavns Universitet, 2015.",
+      "Sundhed og humanernæring (prof. Bach.), Suhrs Højskole, København, 2010."
     ],
     "occupations": [
       "Køkkenchef, Spisehuset Maarbjerggaard, 2012-2017.",
@@ -526,17 +535,35 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
-    "votes_against": 8,
+    "votes_against": 10,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -606,24 +633,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -681,16 +690,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
-    "votes_against": 0,
+    "votes_against": 1,
     "votes_neither": 0,
     "votes_absent": 9,
-    "attendance_pct": 0.0,
+    "attendance_pct": 10.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -858,16 +876,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 5,
-    "votes_against": 4,
+    "votes_against": 5,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -1018,16 +1045,25 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 6,
-    "votes_against": 2,
+    "votes_against": 3,
     "votes_neither": 1,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -1186,16 +1222,25 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
-    "votes_against": 0,
+    "votes_against": 1,
     "votes_neither": 0,
     "votes_absent": 9,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 1,
+    "party_loyalty_comparisons": 1,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -1350,16 +1395,25 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 6,
-    "votes_against": 1,
+    "votes_against": 2,
     "votes_neither": 2,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -1554,9 +1608,9 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 6,
-    "votes_against": 1,
+    "votes_against": 2,
     "votes_neither": 2,
     "votes_absent": 0,
     "attendance_pct": 100.0,
@@ -1564,6 +1618,15 @@
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -1720,16 +1783,25 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 6,
-    "votes_against": 1,
+    "votes_against": 2,
     "votes_neither": 2,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -1912,16 +1984,25 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
-    "votes_against": 0,
+    "votes_against": 1,
     "votes_neither": 0,
     "votes_absent": 9,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 1,
+    "party_loyalty_comparisons": 1,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -2080,16 +2161,25 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 6,
     "votes_against": 1,
     "votes_neither": 2,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 1,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 9,
     "party_loyalty_comparisons": 9,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -2517,16 +2607,25 @@
     "seniority_years": 21,
     "seniority_months": 258,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 6,
     "votes_against": 1,
     "votes_neither": 2,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 1,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 9,
     "party_loyalty_comparisons": 9,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -2666,16 +2765,25 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -2801,9 +2909,9 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 8,
-    "votes_against": 1,
+    "votes_against": 2,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
@@ -2811,6 +2919,15 @@
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -2957,16 +3074,25 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
-    "votes_against": 0,
+    "votes_against": 1,
     "votes_neither": 0,
     "votes_absent": 9,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 1,
+    "party_loyalty_comparisons": 1,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -3227,16 +3353,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -3756,16 +3891,25 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 7,
-    "votes_against": 2,
+    "votes_against": 3,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -3924,16 +4068,25 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 7,
     "votes_against": 2,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 1,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 9,
     "party_loyalty_comparisons": 9,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -4238,16 +4391,25 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 7,
     "votes_against": 2,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 1,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -4469,16 +4631,25 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 7,
     "votes_against": 2,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 1,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 9,
     "party_loyalty_comparisons": 9,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -4645,16 +4816,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 4,
-    "votes_against": 5,
+    "votes_against": 6,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -4795,16 +4975,25 @@
     "seniority_years": 0,
     "seniority_months": 3,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 4,
-    "votes_against": 5,
+    "votes_against": 6,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -4936,9 +5125,9 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 4,
-    "votes_against": 5,
+    "votes_against": 6,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
@@ -4946,6 +5135,15 @@
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -5084,17 +5282,35 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -5164,24 +5380,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -5232,9 +5430,9 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 8,
-    "votes_against": 10,
+    "votes_against": 12,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
@@ -5243,6 +5441,24 @@
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -5312,24 +5528,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -5411,17 +5609,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
-    "votes_against": 0,
+    "votes_against": 2,
     "votes_neither": 0,
     "votes_absent": 18,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 2,
+    "party_loyalty_comparisons": 2,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -5491,24 +5707,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -5673,17 +5871,35 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -5753,24 +5969,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -5840,17 +6038,35 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -5920,24 +6136,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -6012,16 +6210,25 @@
     "seniority_years": 1,
     "seniority_months": 21,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
-    "votes_against": 0,
+    "votes_against": 1,
     "votes_neither": 0,
     "votes_absent": 9,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 1,
+    "party_loyalty_comparisons": 1,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -6136,7 +6343,7 @@
         "short_name": "KEF"
       }
     ],
-    "role": "Underviser",
+    "role": "Lisbeth Torfing (EL)",
     "constituency": "Folketingsmedlem for Enhedslisten i Vestjyllands Storkreds fra 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
     "constituency_history": [
@@ -6179,17 +6386,35 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 8,
     "votes_against": 10,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 2,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 18,
     "party_loyalty_comparisons": 18,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -6259,24 +6484,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -6346,17 +6553,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 8,
-    "votes_against": 10,
+    "votes_against": 12,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -6426,24 +6651,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -6517,16 +6724,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -6678,16 +6894,25 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -6848,16 +7073,25 @@
     "seniority_years": 11,
     "seniority_months": 133,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
-    "votes_against": 0,
+    "votes_against": 1,
     "votes_neither": 0,
     "votes_absent": 9,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 1,
+    "party_loyalty_comparisons": 1,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -6988,9 +7222,9 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 6,
-    "votes_against": 3,
+    "votes_against": 4,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
@@ -6998,6 +7232,15 @@
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -7118,13 +7361,13 @@
       }
     ],
     "educations": [
-      "Master i Vejledning/Programme in Guidance, Danmarks institut for Pædagogik og Uddannelse (DPU), Aarhus Universitet, Emdrup, 2014.",
+      "Master i vejledning/Programme in Guidance, Danmarks institut for Pædagogik og Uddannelse (DPU), Aarhus Universitet, Emdrup, 2014.",
       "Autisme Diagnostisk Observation, Center for Autisme, København, 2011.",
       "Kognitive behandlingsformer, Aarhus Universitetshospital, 2010.",
-      "Specialpædagog, Viborg Seminariet, 1999."
+      "Specialpædagog, Viborg-Seminariet, 1999."
     ],
     "occupations": [
-      "Specialpædagog i børne- og ungdomspsykiatri (orlov), Børne- og ungdomspsykiatrisk Regionscenter, Viborg fra 1999."
+      "Specialpædagog i børne- og ungdomspsykiatri (p.t. orlov), Børne- og Ungdomspsykiatrisk Regionscenter, Viborg fra 1999."
     ],
     "email": "lise.bertelsen@ft.dk",
     "phone": "+45 6162 4970",
@@ -7142,16 +7385,25 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 6,
     "votes_against": 3,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 1,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 9,
     "party_loyalty_comparisons": 9,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -7474,16 +7726,25 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -7623,16 +7884,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -7925,16 +8195,25 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 6,
     "votes_against": 3,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 1,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 9,
     "party_loyalty_comparisons": 9,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -8626,16 +8905,25 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -9585,9 +9873,9 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 6,
-    "votes_against": 3,
+    "votes_against": 4,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
@@ -9595,6 +9883,15 @@
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -9946,16 +10243,25 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -10115,16 +10421,25 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 6,
-    "votes_against": 3,
+    "votes_against": 4,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -10541,17 +10856,35 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
     "votes_against": 8,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 2,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 18,
     "party_loyalty_comparisons": 18,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -10621,24 +10954,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -10779,17 +11094,35 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -10859,24 +11192,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -11218,16 +11533,25 @@
     "seniority_years": 0,
     "seniority_months": 1,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
-    "votes_for": 0,
+    "votes_total": 10,
+    "votes_for": 1,
     "votes_against": 0,
     "votes_neither": 0,
     "votes_absent": 9,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 1,
+    "party_loyalty_comparisons": 1,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -11455,17 +11779,35 @@
     "seniority_years": 31,
     "seniority_months": 382,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -11535,24 +11877,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -11703,16 +12027,25 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -11931,16 +12264,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
-    "votes_for": 0,
+    "votes_total": 10,
+    "votes_for": 1,
     "votes_against": 0,
     "votes_neither": 0,
     "votes_absent": 9,
-    "attendance_pct": 0.0,
+    "attendance_pct": 10.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -12126,7 +12468,7 @@
         "short_name": "MOF"
       }
     ],
-    "role": null,
+    "role": "Folkeskolelærer",
     "constituency": null,
     "storkreds": null,
     "constituency_history": [],
@@ -12141,12 +12483,12 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "line.lay@ft.dk",
+    "phone": "+45 3337 4729",
     "website_url": null,
-    "address": null,
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": null,
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_133x133,-d-,jpg.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
@@ -12226,17 +12568,35 @@
     "seniority_years": 11,
     "seniority_months": 133,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -12306,24 +12666,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -12411,16 +12753,25 @@
     "seniority_years": 3,
     "seniority_months": 39,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -12576,16 +12927,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
-    "votes_for": 5,
+    "votes_total": 10,
+    "votes_for": 6,
     "votes_against": 4,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -12803,16 +13163,25 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 5,
     "votes_against": 4,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 1,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 9,
     "party_loyalty_comparisons": 9,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -13037,16 +13406,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
-    "votes_for": 0,
+    "votes_total": 10,
+    "votes_for": 1,
     "votes_against": 0,
     "votes_neither": 0,
     "votes_absent": 9,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 1,
+    "party_loyalty_comparisons": 1,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -13340,16 +13718,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
-    "votes_for": 5,
+    "votes_total": 10,
+    "votes_for": 6,
     "votes_against": 4,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -13613,17 +14000,35 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -13693,24 +14098,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -13866,17 +14253,35 @@
     "seniority_years": 18,
     "seniority_months": 225,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 0,
+    "votes_total": 20,
+    "votes_for": 2,
     "votes_against": 0,
     "votes_neither": 0,
     "votes_absent": 18,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 2,
+    "party_loyalty_comparisons": 2,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -13946,24 +14351,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -14037,17 +14424,35 @@
     "seniority_years": 11,
     "seniority_months": 133,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -14117,24 +14522,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -14218,17 +14605,35 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
     "votes_against": 8,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 2,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 18,
     "party_loyalty_comparisons": 18,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -14298,24 +14703,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -14398,17 +14785,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
     "votes_against": 8,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 2,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 18,
     "party_loyalty_comparisons": 18,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -14478,24 +14883,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -14562,17 +14949,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
     "votes_against": 8,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 2,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 18,
     "party_loyalty_comparisons": 18,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -14642,24 +15047,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -14718,17 +15105,35 @@
     "seniority_years": 24,
     "seniority_months": 296,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -14798,24 +15203,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -14987,17 +15374,35 @@
     "seniority_years": 18,
     "seniority_months": 225,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
     "votes_against": 8,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 2,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 18,
     "party_loyalty_comparisons": 18,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -15067,24 +15472,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -15161,17 +15548,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 0,
+    "votes_total": 20,
+    "votes_for": 2,
     "votes_against": 0,
     "votes_neither": 0,
     "votes_absent": 18,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 2,
+    "party_loyalty_comparisons": 2,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -15241,24 +15646,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -15315,17 +15702,35 @@
     "seniority_years": 24,
     "seniority_months": 296,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -15395,24 +15800,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -15465,17 +15852,35 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -15545,24 +15950,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -15595,7 +15982,7 @@
     ],
     "educations": [
       "Journalist, Danmarks Journalisthøjskole, Aarhus, 1998-2002.",
-      "Student, Næstved Gymnasium, 1992-1995.",
+      "Student, Næstved Gymnasium & HF, 1992-1995.",
       "10. klasses afgangsprøve, Gunslevholm Idrætsefterskole, Falster, 1991-1992.",
       "Folkeskolens 9. klasses afgangsprøve, Kildemarkskolen, Næstved, 1981-1991."
     ],
@@ -15622,17 +16009,35 @@
     "seniority_years": 21,
     "seniority_months": 258,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -15702,24 +16107,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -15775,17 +16162,35 @@
     "seniority_years": 11,
     "seniority_months": 133,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
     "votes_against": 8,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 2,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 18,
     "party_loyalty_comparisons": 18,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -15855,24 +16260,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -15952,17 +16339,35 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -16032,24 +16437,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -16134,16 +16521,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
-    "votes_for": 5,
+    "votes_total": 10,
+    "votes_for": 6,
     "votes_against": 4,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -16298,17 +16694,35 @@
     "seniority_years": 18,
     "seniority_months": 225,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -16378,24 +16792,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -16469,17 +16865,35 @@
     "seniority_years": 21,
     "seniority_months": 258,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -16549,24 +16963,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -16754,17 +17150,35 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -16834,24 +17248,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -16941,17 +17337,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
     "votes_against": 8,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 2,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 18,
     "party_loyalty_comparisons": 18,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -17021,24 +17435,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -17165,7 +17561,7 @@
         "short_name": "KEF"
       }
     ],
-    "role": "Indehaver",
+    "role": "Selvstændigt erhvervsdrivende",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Østjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Østjyllands Storkreds",
     "constituency_history": [
@@ -17215,17 +17611,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -17295,24 +17709,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -17374,17 +17770,35 @@
     "seniority_years": 11,
     "seniority_months": 133,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -17454,24 +17868,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -17509,8 +17905,8 @@
     "seniority_years": 0,
     "seniority_months": 3,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
-    "votes_for": 5,
+    "votes_total": 10,
+    "votes_for": 6,
     "votes_against": 4,
     "votes_neither": 0,
     "votes_absent": 0,
@@ -17519,6 +17915,15 @@
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -17670,16 +18075,25 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
-    "votes_for": 5,
+    "votes_total": 10,
+    "votes_for": 6,
     "votes_against": 4,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -17849,17 +18263,35 @@
     "seniority_years": 18,
     "seniority_months": 225,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -17929,24 +18361,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -18213,17 +18627,35 @@
     "seniority_years": 18,
     "seniority_months": 225,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
     "votes_against": 8,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 2,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 18,
     "party_loyalty_comparisons": 18,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -18293,24 +18725,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -18362,16 +18776,25 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
-    "votes_for": 0,
+    "votes_total": 10,
+    "votes_for": 1,
     "votes_against": 0,
     "votes_neither": 0,
     "votes_absent": 9,
-    "attendance_pct": 0.0,
+    "attendance_pct": 10.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -18568,8 +18991,8 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
@@ -18579,6 +19002,24 @@
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -18648,24 +19089,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -18791,17 +19214,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -18871,24 +19312,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -18954,17 +19377,35 @@
     "seniority_years": 11,
     "seniority_months": 133,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -19034,24 +19475,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -19230,17 +19653,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 0,
+    "votes_total": 20,
+    "votes_for": 2,
     "votes_against": 0,
     "votes_neither": 0,
     "votes_absent": 18,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 2,
+    "party_loyalty_comparisons": 2,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -19310,24 +19751,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -19381,17 +19804,35 @@
     "seniority_years": 24,
     "seniority_months": 296,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -19461,24 +19902,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -19549,7 +19972,7 @@
       "Praktik, planlægger, Deadline, DR2, 2010.",
       "Studentermedhjælper, Udenrigsministeriet, 2008-2010.",
       "Praktik, udvikling af lokaldemokrati, Mellemfolkeligt Samvirke, Tanzania, 2008.",
-      "Studentermedhjælper for fhv. mf Thomas Adelskov, Socialdemokratiet, 2006-2008.",
+      "Studentermedhjælper for daværende mf Thomas Adelskov, Socialdemokratiet, 2006-2008.",
       "Afdelingsmedarbejder, Danmarks Socialdemokratiske Ungdom, 2004-2006.",
       "Lærervikar, Søndermarksskolen, Frederiksberg, 2004-2005."
     ],
@@ -19569,17 +19992,35 @@
     "seniority_years": 11,
     "seniority_months": 133,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
     "votes_against": 8,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 2,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 18,
     "party_loyalty_comparisons": 18,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -19649,24 +20090,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -19793,17 +20216,35 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
-    "votes_for": 0,
+    "votes_total": 20,
+    "votes_for": 2,
     "votes_against": 0,
     "votes_neither": 0,
     "votes_absent": 18,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 2,
+    "party_loyalty_comparisons": 2,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -19873,24 +20314,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -19975,17 +20398,35 @@
     "seniority_years": 10,
     "seniority_months": 120,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
     "votes_against": 8,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 2,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 18,
     "party_loyalty_comparisons": 18,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -20055,24 +20496,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -20156,17 +20579,35 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -20236,24 +20677,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -20309,17 +20732,35 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 0,
+    "votes_total": 20,
+    "votes_for": 2,
     "votes_against": 0,
     "votes_neither": 0,
     "votes_absent": 18,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 2,
+    "party_loyalty_comparisons": 2,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -20389,24 +20830,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -20483,17 +20906,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 0,
+    "votes_total": 20,
+    "votes_for": 2,
     "votes_against": 0,
     "votes_neither": 0,
     "votes_absent": 18,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 2,
+    "party_loyalty_comparisons": 2,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -20563,24 +21004,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -20633,17 +21056,35 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
     "votes_against": 8,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 2,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -20713,24 +21154,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -20807,16 +21230,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
-    "votes_for": 5,
+    "votes_total": 10,
+    "votes_for": 6,
     "votes_against": 4,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -20979,17 +21411,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -21059,24 +21509,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -21142,7 +21574,7 @@
     "occupations": [
       "Kommunikationskonsulent, Dansk Fjernvarme, 2016-2019.",
       "Presserådgiver, Børne- og Ungeforvaltningen, Odense Kommune, 2015-2016.",
-      "Lærer, Ålykkeskolen, Kolding, 2003-2007.",
+      "Lærer, Aalykkeskolen, Kolding, 2003-2007.",
       "Lærer, Salbrovadskolen, Assens, 2003-2004.",
       "Restaurantmedarbejder, Monarch Harte Nord, Kolding, 2002-2007."
     ],
@@ -21162,17 +21594,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -21242,24 +21692,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -21315,17 +21747,35 @@
     "seniority_years": 18,
     "seniority_months": 225,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -21395,24 +21845,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -21442,7 +21874,7 @@
       "Realeksamen, Nykøbing M, 1975."
     ],
     "occupations": [
-      "Fagforeningsformand, Snedker- og Tømrerforbundet / Træ-Industri-Byg, Fyn, 1992-2008.",
+      "Fagforeningsformand, Snedker- og Tømrerforbundet/Træ-Industri-Byg, Fyn, 1992-2008.",
       "Tømrer, 1980-1992.",
       "Soldat, Skive, 1978-1979."
     ],
@@ -21462,8 +21894,8 @@
     "seniority_years": 11,
     "seniority_months": 133,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
@@ -21473,6 +21905,24 @@
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -21542,24 +21992,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -21605,8 +22037,8 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
@@ -21616,6 +22048,24 @@
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -21685,24 +22135,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -21776,17 +22208,35 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -21856,24 +22306,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -21945,16 +22377,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
-    "votes_for": 5,
+    "votes_total": 10,
+    "votes_for": 6,
     "votes_against": 4,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -22092,17 +22533,35 @@
     "seniority_years": 1,
     "seniority_months": 20,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
-    "votes_for": 0,
+    "votes_total": 20,
+    "votes_for": 2,
     "votes_against": 0,
     "votes_neither": 0,
     "votes_absent": 18,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 2,
+    "party_loyalty_comparisons": 2,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -22172,24 +22631,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -22244,17 +22685,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 18,
+    "votes_absent": 20,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 3,
@@ -22324,24 +22783,6 @@
         "vote_type": "Fravær",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 3,
-        "vote_type": "Fravær",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -22388,17 +22829,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
     "votes_against": 8,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 2,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -22468,24 +22927,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -22543,7 +22984,7 @@
     ],
     "educations": [
       "Master i sundhedspædagogik, Danmarks Pædagogiske Universitet, København , 2002-2003.",
-      "Sygeplejerske, H:S Sygeplejeuddannelsen, København, 1996-1999."
+      "Sygeplejerske, H:S sygeplejeuddannelsen, København, 1996-1999."
     ],
     "occupations": [
       "Vikar som sygeplejerske (pt. orlov), Rigshospitalet, København fra 2023.",
@@ -22569,16 +23010,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
-    "votes_for": 5,
+    "votes_total": 10,
+    "votes_for": 6,
     "votes_against": 4,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -22804,17 +23254,35 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 18,
-    "votes_for": 10,
+    "votes_total": 20,
+    "votes_for": 12,
     "votes_against": 8,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 18,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_matches": 20,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -22884,24 +23352,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -22970,16 +23420,25 @@
     "seniority_years": 0,
     "seniority_months": 4,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
-    "votes_for": 5,
+    "votes_total": 10,
+    "votes_for": 6,
     "votes_against": 4,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 1,
+        "vote_type": "For",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -23140,16 +23599,25 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -23509,16 +23977,25 @@
     "seniority_years": 0,
     "seniority_months": 8,
     "seniority_tag": "newcomer",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 7,
-    "votes_against": 2,
+    "votes_against": 3,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -23812,16 +24289,25 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 7,
-    "votes_against": 2,
+    "votes_against": 3,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -24055,16 +24541,25 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 7,
-    "votes_against": 2,
+    "votes_against": 3,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
     "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 9,
-    "party_loyalty_comparisons": 9,
+    "party_loyalty_matches": 10,
+    "party_loyalty_comparisons": 10,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -24212,16 +24707,25 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -24454,17 +24958,35 @@
     "seniority_years": 3,
     "seniority_months": 45,
     "seniority_tag": "newcomer",
-    "votes_total": 18,
+    "votes_total": 20,
     "votes_for": 10,
-    "votes_against": 8,
+    "votes_against": 10,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
-    "party_loyalty_pct": 77.8,
-    "party_loyalty_matches": 14,
-    "party_loyalty_comparisons": 18,
+    "party_loyalty_pct": 80.0,
+    "party_loyalty_matches": 16,
+    "party_loyalty_comparisons": 20,
     "recent_votes": [
       {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
+      {
         "afstemning_id": 10579,
         "date": "2026-06-25",
         "vote_type_id": 1,
@@ -24534,24 +25056,6 @@
         "vote_type": "Imod",
         "sag_number": "B 4",
         "sag_title": "Om at sænke afgifterne på benzin og diesel til vejtransport til EU’s minimumsniveau.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
-        "vedtaget": false
-      },
-      {
-        "afstemning_id": 10575,
-        "date": "2026-06-25",
-        "vote_type_id": 2,
-        "vote_type": "Imod",
-        "sag_number": "B 2",
-        "sag_title": "Om nedsættelse af de danske afgifter og moms på benzin og diesel.",
         "vedtaget": false
       }
     ]
@@ -24634,16 +25138,25 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -24771,9 +25284,9 @@
     "seniority_years": 21,
     "seniority_months": 258,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 7,
-    "votes_against": 2,
+    "votes_against": 3,
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
@@ -24781,6 +25294,15 @@
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -25024,16 +25546,25 @@
     "seniority_years": 18,
     "seniority_months": 225,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
-    "votes_against": 0,
+    "votes_against": 1,
     "votes_neither": 0,
     "votes_absent": 9,
-    "attendance_pct": 0.0,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
+    "attendance_pct": 10.0,
+    "party_loyalty_pct": 100.0,
+    "party_loyalty_matches": 1,
+    "party_loyalty_comparisons": 1,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 2,
+        "vote_type": "Imod",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -25257,7 +25788,7 @@
     ],
     "occupations": [
       "Jurist med speciale i GDPR og Compliance, 2022-2026.",
-      "Selvstændig erhvervsdrivende fra 2014."
+      "Selvstændigt erhvervsdrivende fra 2014."
     ],
     "email": "louise.louring@ft.dk",
     "phone": "+45 3337 4542",
@@ -25370,16 +25901,25 @@
     "seniority_years": 18,
     "seniority_months": 225,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 7,
     "votes_against": 2,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 1,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 9,
     "party_loyalty_comparisons": 9,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -25546,16 +26086,25 @@
     "seniority_years": 14,
     "seniority_months": 178,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -25714,16 +26263,25 @@
     "seniority_years": 7,
     "seniority_months": 86,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 7,
     "votes_against": 2,
     "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": 100.0,
+    "votes_absent": 1,
+    "attendance_pct": 90.0,
     "party_loyalty_pct": 100.0,
     "party_loyalty_matches": 9,
     "party_loyalty_comparisons": 9,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
@@ -25869,16 +26427,25 @@
     "seniority_years": 24,
     "seniority_months": 296,
     "seniority_tag": "experienced",
-    "votes_total": 9,
+    "votes_total": 10,
     "votes_for": 0,
     "votes_against": 0,
     "votes_neither": 0,
-    "votes_absent": 9,
+    "votes_absent": 10,
     "attendance_pct": 0.0,
     "party_loyalty_pct": null,
     "party_loyalty_matches": 0,
     "party_loyalty_comparisons": 0,
     "recent_votes": [
+      {
+        "afstemning_id": 10580,
+        "date": "2026-08-13",
+        "vote_type_id": 3,
+        "vote_type": "Fravær",
+        "sag_number": "V 1",
+        "sag_title": "Om konsekvenserne for Danmark og Schengensamarbejdet af situationen ved Ceuta, presset på EU’s ydre grænser, og hvordan vores egne grænser kan beskyttes, hvis dette skulle blive nødvendigt.",
+        "vedtaget": true
+      },
       {
         "afstemning_id": 10579,
         "date": "2026-06-25",
