@@ -2746,11 +2746,6 @@
         "short_name": "IBL"
       },
       {
-        "id": 21480,
-        "name": "Erhvervs- og Digitaliseringsudvalget",
-        "short_name": "ERU"
-      },
-      {
         "id": 21478,
         "name": "Skatteudvalget",
         "short_name": "SAU"
@@ -8225,7 +8220,7 @@
         "short_name": "NOR"
       }
     ],
-    "role": "Qarsoq Høegh-Dam (N)",
+    "role": "Specialkonsulent",
     "constituency": "Folketingsmedlem for Naleraq i Grønland fra 24. marts 2026.",
     "storkreds": "Grønland",
     "constituency_history": [
@@ -8244,7 +8239,7 @@
     "occupations": [
       "Specialkonsulent (pt. orlov), Naleraq fra 2024.",
       "Specialkonsulent, Siumut, 2022-2023.",
-      "Specialkonsulent, KNAPK (Sammenslutning for fiskere- og fangere), 2019-2021.",
+      "Specialkonsulent, KNAPK (Sammenslutningen af fiskere- og fangere), 2019-2021.",
       "Partisekretær, Naleraq, 2018-2019.",
       "Politisk konsulent, Naleraq, 2017-2018."
     ],
