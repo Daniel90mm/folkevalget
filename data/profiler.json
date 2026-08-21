@@ -2741,6 +2741,11 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
@@ -7985,7 +7990,7 @@
     "member_since_year": 1994,
     "seniority_label": "31 aar i Folketinget",
     "seniority_years": 31,
-    "seniority_months": 382,
+    "seniority_months": 383,
     "seniority_tag": "experienced",
     "votes_total": 2,
     "votes_for": 0,
