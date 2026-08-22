@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-21T17:56:40+00:00",
+  "generated_at": "2026-08-22T09:20:45+00:00",
   "source": "Folketinget ODA API",
   "start_date": "2026-06-29",
   "vote_window": {
     "start_date": "2026-06-29",
-    "today": "2026-08-21",
+    "today": "2026-08-22",
     "first_vote_id": 10580,
     "first_sagstrin_id": 274894,
     "sagstrin_count": 1
