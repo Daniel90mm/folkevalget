@@ -2564,11 +2564,6 @@
     "current_party_short": "DF",
     "committees": [
       {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
         "id": 21468,
         "name": "Færøudvalget",
         "short_name": "FÆU"
@@ -5191,7 +5186,7 @@
     "member_since_year": 2024,
     "seniority_label": "2 aar i Folketinget",
     "seniority_years": 2,
-    "seniority_months": 25,
+    "seniority_months": 26,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
@@ -5755,7 +5750,7 @@
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 1,
+    "seniority_months": 2,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
@@ -14571,7 +14566,7 @@
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 4,
+    "seniority_months": 5,
     "seniority_tag": "newcomer",
     "votes_total": 1,
     "votes_for": 1,
