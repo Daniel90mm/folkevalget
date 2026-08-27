@@ -3,7 +3,7 @@
     "id": 21467,
     "name": "Beskæftigelses- og Ligestillingsudvalget",
     "short_name": "BEU",
-    "member_count": 22,
+    "member_count": 23,
     "member_ids": [
       260,
       15775,
@@ -25,6 +25,7 @@
       21353,
       21364,
       21398,
+      21403,
       21405,
       21474
     ]
@@ -33,7 +34,7 @@
     "id": 21479,
     "name": "Børne-, Undervisnings- og Forskningsudvalget",
     "short_name": "BUU",
-    "member_count": 22,
+    "member_count": 23,
     "member_ids": [
       97,
       118,
@@ -56,6 +57,7 @@
       21375,
       21383,
       21386,
+      21403,
       21405
     ]
   },
@@ -286,7 +288,7 @@
     "id": 21484,
     "name": "Indfødsretsudvalget",
     "short_name": "IFU",
-    "member_count": 13,
+    "member_count": 14,
     "member_ids": [
       15760,
       16582,
@@ -300,7 +302,8 @@
       21343,
       21361,
       21364,
-      21381
+      21381,
+      21403
     ]
   },
   {
@@ -337,12 +340,13 @@
     "id": 21481,
     "name": "Kultur- og Kirkeudvalget",
     "short_name": "KUU",
-    "member_count": 24,
+    "member_count": 25,
     "member_ids": [
       109,
       121,
       154,
       168,
+      238,
       1845,
       15760,
       17629,
@@ -369,7 +373,7 @@
     "id": 21476,
     "name": "Miljø- og Fødevareudvalget",
     "short_name": "MOF",
-    "member_count": 23,
+    "member_count": 24,
     "member_ids": [
       168,
       1845,
@@ -393,6 +397,7 @@
       21385,
       21386,
       21398,
+      21403,
       21475
     ]
   },
@@ -498,7 +503,7 @@
     "id": 21486,
     "name": "Socialudvalget",
     "short_name": "SOU",
-    "member_count": 21,
+    "member_count": 22,
     "member_ids": [
       127,
       162,
@@ -520,6 +525,7 @@
       21372,
       21377,
       21378,
+      21403,
       21474
     ]
   },
@@ -604,7 +610,7 @@
       189,
       216,
       16351,
-      18699,
+      18698,
       18707,
       18717,
       18718,
@@ -618,11 +624,11 @@
       21341,
       21344,
       21347,
+      21348,
       21350,
       21351,
       21356,
-      21361,
-      21367
+      21361
     ]
   },
   {
@@ -689,7 +695,7 @@
     "id": 21508,
     "name": "Udvalget for Det Tyske Mindretal",
     "short_name": "UTM",
-    "member_count": 9,
+    "member_count": 10,
     "member_ids": [
       97,
       168,
@@ -699,7 +705,8 @@
       20966,
       21344,
       21356,
-      21368
+      21368,
+      21403
     ]
   },
   {

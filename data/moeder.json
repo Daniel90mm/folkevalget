@@ -2,9 +2,339 @@
   "scope": "case-linked-meetings",
   "scope_note": "Moeder og dagsordenspunkter koblet til sager i det aktuelle datasaet.",
   "counts": {
-    "meetings": 0,
-    "agenda_points": 0
+    "meetings": 3,
+    "agenda_points": 18
   },
-  "meetings": [],
-  "generated_at": "2026-08-26T19:24:44+00:00"
+  "meetings": [
+    {
+      "meeting_id": 16037,
+      "date": "2026-08-27",
+      "number": "20",
+      "title": "Møde i salen",
+      "type": "Møde i salen",
+      "status": "Afholdt",
+      "start_note": "",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 101490,
+          "agenda_number": "1",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105382,
+          "sag_number": "L 18",
+          "sag_title": "Om at implementering af centrale dele af aftalen om styrkede rammer for alment boligbyggeri.",
+          "sagstrin_id": 274590,
+          "sagstrin_date": "2026-08-27",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10581
+          ]
+        },
+        {
+          "agenda_point_id": 101491,
+          "agenda_number": "2",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105368,
+          "sag_number": "L 14",
+          "sag_title": "Om begrænsninger i adgangen til ophold for personer omfattet af regler for mobilisering i Ukraine.",
+          "sagstrin_id": 274538,
+          "sagstrin_date": "2026-08-27",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10582
+          ]
+        },
+        {
+          "agenda_point_id": 101492,
+          "agenda_number": "3",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105369,
+          "sag_number": "L 15",
+          "sag_title": "Om gennemførelse af dele af EU’s pagt om migration og asyl m.v.",
+          "sagstrin_id": 274551,
+          "sagstrin_date": "2026-08-27",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10583
+          ]
+        },
+        {
+          "agenda_point_id": 101493,
+          "agenda_number": "4",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105379,
+          "sag_number": "L 11",
+          "sag_title": "Om godtgørelsesordning for kvinder omfattet af antikonceptionssagen (spiralsagen) i Grønland i perioden 1960-1991.",
+          "sagstrin_id": 274499,
+          "sagstrin_date": "2026-08-27",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10584
+          ]
+        },
+        {
+          "agenda_point_id": 101494,
+          "agenda_number": "5",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105668,
+          "sag_number": "L 12 A",
+          "sag_title": "Om ophævelse af visse krav m.v. for erhvervsdrivende fonde, nægtelse af godkendelse som ejendomsmægler som følge af strafbare forhold m.v.",
+          "sagstrin_id": 275152,
+          "sagstrin_date": "2026-08-27",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10585
+          ]
+        },
+        {
+          "agenda_point_id": 101495,
+          "agenda_number": "6",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105669,
+          "sag_number": "L 12 B",
+          "sag_title": "Om styrket alderskontrol ved salg af tobak, nikotin og alkohol",
+          "sagstrin_id": 275156,
+          "sagstrin_date": "2026-08-27",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10586
+          ]
+        },
+        {
+          "agenda_point_id": 101496,
+          "agenda_number": "7",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105381,
+          "sag_number": "L 13",
+          "sag_title": "Om pligt til at afskære sanktionerede personer fra at udøve kontrol med danske virksomheder.",
+          "sagstrin_id": 274525,
+          "sagstrin_date": "2026-08-27",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10587
+          ]
+        },
+        {
+          "agenda_point_id": 101497,
+          "agenda_number": "8",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105374,
+          "sag_number": "L 6",
+          "sag_title": "Om reparation af varer.",
+          "sagstrin_id": 274434,
+          "sagstrin_date": "2026-08-27",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10588
+          ]
+        },
+        {
+          "agenda_point_id": 101498,
+          "agenda_number": "9",
+          "agenda_title": "2. (sidste) behandling",
+          "forhandling": "",
+          "sag_id": 105448,
+          "sag_number": "B 26",
+          "sag_title": "Om Folketingets Ombudsmands beretning for 2025.",
+          "sagstrin_id": 274740,
+          "sagstrin_date": "2026-08-27",
+          "sagstrin_title": "2. (sidste) behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10589
+          ]
+        },
+        {
+          "agenda_point_id": 101499,
+          "agenda_number": "10",
+          "agenda_title": "Eneste behandling",
+          "forhandling": "",
+          "sag_id": 105449,
+          "sag_number": "B 25",
+          "sag_title": "Om valg af Folketingets ombudsmand.",
+          "sagstrin_id": 274744,
+          "sagstrin_date": "2026-08-27",
+          "sagstrin_title": "Eneste behandling",
+          "sagstrin_type": "Eneste behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10590
+          ]
+        }
+      ],
+      "agenda_point_count": 10
+    },
+    {
+      "meeting_id": 16035,
+      "date": "2026-08-25",
+      "number": "18",
+      "title": "Møde i salen",
+      "type": "Møde i salen",
+      "status": "Afholdt",
+      "start_note": "13:00",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 101447,
+          "agenda_number": "3",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105382,
+          "sag_number": "L 18",
+          "sag_title": "Om at implementering af centrale dele af aftalen om styrkede rammer for alment boligbyggeri.",
+          "sagstrin_id": 274588,
+          "sagstrin_date": "2026-08-25",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101448,
+          "agenda_number": "4",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105368,
+          "sag_number": "L 14",
+          "sag_title": "Om begrænsninger i adgangen til ophold for personer omfattet af regler for mobilisering i Ukraine.",
+          "sagstrin_id": 274536,
+          "sagstrin_date": "2026-08-25",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101449,
+          "agenda_number": "5",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105369,
+          "sag_number": "L 15",
+          "sag_title": "Om gennemførelse af dele af EU’s pagt om migration og asyl m.v.",
+          "sagstrin_id": 274549,
+          "sagstrin_date": "2026-08-25",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101450,
+          "agenda_number": "6",
+          "agenda_title": "Eventuelt: 2. behandling",
+          "forhandling": "",
+          "sag_id": 105379,
+          "sag_number": "L 11",
+          "sag_title": "Om godtgørelsesordning for kvinder omfattet af antikonceptionssagen (spiralsagen) i Grønland i perioden 1960-1991.",
+          "sagstrin_id": 274497,
+          "sagstrin_date": "2026-08-25",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101452,
+          "agenda_number": "8",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105381,
+          "sag_number": "L 13",
+          "sag_title": "Om pligt til at afskære sanktionerede personer fra at udøve kontrol med danske virksomheder.",
+          "sagstrin_id": 274523,
+          "sagstrin_date": "2026-08-25",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101453,
+          "agenda_number": "9",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105374,
+          "sag_number": "L 6",
+          "sag_title": "Om reparation af varer.",
+          "sagstrin_id": 274432,
+          "sagstrin_date": "2026-08-25",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101454,
+          "agenda_number": "10",
+          "agenda_title": "1. behandling",
+          "forhandling": "",
+          "sag_id": 105448,
+          "sag_number": "B 26",
+          "sag_title": "Om Folketingets Ombudsmands beretning for 2025.",
+          "sagstrin_id": 274739,
+          "sagstrin_date": "2026-08-25",
+          "sagstrin_title": "1. behandling",
+          "sagstrin_type": "1. behandling.",
+          "sagstrin_status": "Behandlet/Direkte til 2. beh.",
+          "vote_ids": []
+        }
+      ],
+      "agenda_point_count": 7
+    },
+    {
+      "meeting_id": 16033,
+      "date": "2026-08-14",
+      "number": "16",
+      "title": "Møde i salen",
+      "type": "Møde i salen",
+      "status": "Afholdt",
+      "start_note": "",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 101341,
+          "agenda_number": "3",
+          "agenda_title": "1. behandling",
+          "forhandling": "",
+          "sag_id": 105379,
+          "sag_number": "L 11",
+          "sag_title": "Om godtgørelsesordning for kvinder omfattet af antikonceptionssagen (spiralsagen) i Grønland i perioden 1960-1991.",
+          "sagstrin_id": 274490,
+          "sagstrin_date": "2026-08-14",
+          "sagstrin_title": "1. behandling",
+          "sagstrin_type": "1. behandling",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
+        }
+      ],
+      "agenda_point_count": 1
+    }
+  ],
+  "generated_at": "2026-08-27T16:49:07+00:00"
 }
