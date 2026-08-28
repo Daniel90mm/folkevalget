@@ -3694,6 +3694,57 @@
     ],
     "documents": [
       {
+        "document_id": 1224599,
+        "title": "MFU spm. om fristoverskridelse ved Dublin-/AM-overførsel",
+        "number": null,
+        "date": "2026-08-25",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l15/spm/21/3173649.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 17075,
+            "name": "udlændinge- og integrationsministeren",
+            "short_name": "udlændinge- og integrationsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21397,
+            "name": "Europaudvalget",
+            "short_name": "EUU",
+            "type_id": 3,
+            "type": "Udvalg",
+            "role_id": 13,
+            "role": "Relevant for"
+          },
+          {
+            "actor_id": 21354,
+            "name": "Nadja Natalie Isaksen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 3,
+            "role": "Stiller/MFU"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
         "document_id": 1225216,
         "title": "Vedtaget af Folketinget ved 3. behandling den 27. august 2026",
         "number": null,
@@ -3838,48 +3889,6 @@
         "document_category_id": 20,
         "document_category": "Optryk efter 2.beh",
         "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1224599,
-        "title": "MFU spm. om fristoverskridelse ved Dublin-/AM-overførsel",
-        "number": null,
-        "date": "2026-08-25",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20252/lovforslag/l15/spm/21/3173649.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 13,
-        "document_type": "Spørgsmål",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 36,
-        "document_category": "Udvalgsspørgsmål",
-        "document_actors": [
-          {
-            "actor_id": 17075,
-            "name": "udlændinge- og integrationsministeren",
-            "short_name": "udlændinge- og integrationsminister",
-            "type_id": 2,
-            "type": "Ministertitel",
-            "role_id": 10,
-            "role": "Adressat"
-          },
-          {
-            "actor_id": 21354,
-            "name": "Nadja Natalie Isaksen",
-            "short_name": null,
-            "type_id": 5,
-            "type": "Person",
-            "role_id": 3,
-            "role": "Stiller/MFU"
-          }
-        ],
         "question_chain": {
           "askers": [],
           "responders": []

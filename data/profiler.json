@@ -655,7 +655,7 @@
     ],
     "party_history": [],
     "educations": [
-      "Kandidat i statskundskab, Københavns Universitet, 2024-2026.",
+      "Kandidat i statskundskab, Københavns Universitet, 2026.",
       "Bachelor i statskundskab, Københavns Universitet, 2022.",
       "Student, Sorø Akademi, 2018.",
       "Grundskole, Maribo Borgerskole, 2012-2015.",
@@ -4059,7 +4059,7 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2026-08-25",
+    "member_since_date": "2026-08-28",
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
@@ -4344,11 +4344,6 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [
-      {
-        "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
-        "short_name": "IBL"
-      },
       {
         "id": 21477,
         "name": "Transportudvalget",
@@ -5807,7 +5802,7 @@
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
     "committees": [],
-    "role": "MF",
+    "role": "Rosa Lund (EL)",
     "constituency": "Folketingsmedlem for Enhedslisten i Københavns Storkreds fra 5. juni 2019.",
     "storkreds": "Københavns Storkreds",
     "constituency_history": [
@@ -15291,83 +15286,6 @@
         "vedtaget": true
       }
     ]
-  },
-  {
-    "id": 20368,
-    "name": "Maria Durhuus",
-    "first_name": "Maria",
-    "last_name": "Durhuus",
-    "party": "Socialdemokratiet",
-    "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
-    "committees": [],
-    "role": "Sygeplejerske",
-    "constituency": "Folketingsmedlem for Socialdemokratiet i Københavns Omegns Storkreds, 1. november 2022 – 24. marts 2026.",
-    "storkreds": "Københavns Omegns Storkreds",
-    "constituency_history": [
-      "Folketingsmedlem for Socialdemokratiet i Københavns Omegns Storkreds, 1. november 2022 – 24. marts 2026."
-    ],
-    "party_history": [
-      {
-        "party": "Socialdemokratiet",
-        "party_short": "S",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
-    "educations": [
-      "Diplom i ledelse, Københavns Professionshøjskole, 2024.",
-      "LA2 certificeret praktiker og træner (afsluttende eksamen mangler), Sopra, 2021.",
-      "Diplom i psykosocial rehabilitering, Københavns Professionshøjskole, 2021.",
-      "Uddannelse i dialektisk adfærdsterapi (DAT), Casper Aaen, 2020-2021.",
-      "Uddannelse i NADA øreakupunktur, NADA Danmark, 2015.",
-      "Uddannelse i kognitiv terapi, Cektos Frederiksberg, 2011.",
-      "Specialuddannelse for psykiatriske sygeplejersker, Sankt Hans Hospital, 2008.",
-      "Sygeplejerske, H:S Sygeplejerskeuddannelsen, 2006.",
-      "Key Account Manager, Sonofon, 2002.",
-      "Student, Thisted Gymnasium og HF, 1996."
-    ],
-    "occupations": [
-      "Afdelingsleder, botilbuddet Thorupgården, Københavns Kommune, 2020-2022.",
-      "Politisk rådgiver, HK Handel, 2019-2020.",
-      "Fængselssygeplejerske, Kriminalforsorgen (Vridsløselille, Herstedvester, Køge arrest, Storstrøm fængsel), 2013-2019.",
-      "Sygeplejerske, KABS City, 2012-2013.",
-      "Sygeplejerske, Gastroenhedens akutmodtagelse, Hvidovre Hospital, 2011-2012.",
-      "Sygeplejerske, Valmuen (specialinstitution for heroinbehandling i Københavns Kommune), 2010-2011.",
-      "Sygeplejerske, Akutmodtagelsen, Hillerød Hospital, 2009-2010.",
-      "Sygeplejerske, Ambulix, 2006-2010.",
-      "Sygeplejerske, Afdeling 809, Psykiatrisk Center Hvidovre, 2006-2009.",
-      "Ufaglært, Afdeling 809, Psykiatrisk Center Hvidovre, 2004-2006.",
-      "Konsulent og sælger, Sonofon, 1999-2006."
-    ],
-    "email": null,
-    "phone": null,
-    "website_url": null,
-    "address": null,
-    "member_url": "https://www.ft.dk/medlemmer/mf/m/maria-durhuus",
-    "photo_url": "photos/20368.jpg",
-    "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/s/maria-durhuus/maria_durhuus_500.jpg",
-    "photo_source_name": "Folketinget",
-    "photo_photographer": "Marie Hald",
-    "photo_credit_text": "Folketinget / Fotograf Marie Hald",
-    "member_since_date": "2026-03-24",
-    "member_since_year": 2026,
-    "seniority_label": "Under 1 aar i Folketinget",
-    "seniority_years": 0,
-    "seniority_months": 5,
-    "seniority_tag": "newcomer",
-    "votes_total": 0,
-    "votes_for": 0,
-    "votes_against": 0,
-    "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": null,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
-    "recent_votes": []
   },
   {
     "id": 120,
