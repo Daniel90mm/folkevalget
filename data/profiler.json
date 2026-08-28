@@ -1741,7 +1741,7 @@
         "short_name": "FIU"
       }
     ],
-    "role": "Fhv. selvstændigt erhvervsdrivende",
+    "role": "Selvstændigt erhvervsdrivende",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Vestjyllands Storkreds fra 18. august 2022.",
     "storkreds": "Vestjyllands Storkreds",
     "constituency_history": [
@@ -4345,19 +4345,9 @@
     "current_party_short": "DF",
     "committees": [
       {
-        "id": 21480,
-        "name": "Erhvervs- og Digitaliseringsudvalget",
-        "short_name": "ERU"
-      },
-      {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
-      },
-      {
-        "id": 21478,
-        "name": "Skatteudvalget",
-        "short_name": "SAU"
       },
       {
         "id": 21477,
@@ -9625,14 +9615,14 @@
     "current_party_short": "LA",
     "committees": [
       {
-        "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
-        "short_name": "IBL"
-      },
-      {
         "id": 21477,
         "name": "Transportudvalget",
         "short_name": "TRU"
+      },
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
       }
     ],
     "role": "Selvstændig",
@@ -11023,7 +11013,7 @@
       }
     ],
     "educations": [
-      "Katastrofe- og risikomanager, Københavns Professionshøjskole, 2023-2027.",
+      "Katastrofe- og risikomanager, Københavns Professionshøjskole fra 2023.",
       "Stx, Det frie Gymnasium, København, 2017-2020."
     ],
     "occupations": [
@@ -23938,6 +23928,11 @@
     "current_party_short": "UFG",
     "committees": [
       {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
         "id": 21485,
         "name": "Retsudvalget",
         "short_name": "REU"
@@ -24004,11 +23999,6 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
-      {
-        "id": 21477,
-        "name": "Transportudvalget",
-        "short_name": "TRU"
-      },
       {
         "id": 21487,
         "name": "Udlændinge- og Integrationsudvalget",
@@ -24494,6 +24484,11 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
       {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
@@ -25485,11 +25480,6 @@
     "current_party_short": "V",
     "committees": [
       {
-        "id": 21477,
-        "name": "Transportudvalget",
-        "short_name": "TRU"
-      },
-      {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
@@ -26291,6 +26281,11 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
+      {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
       {
         "id": 21489,
         "name": "Epidemiudvalget",
