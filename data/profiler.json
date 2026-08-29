@@ -23846,11 +23846,6 @@
     "current_party_short": "UFG",
     "committees": [
       {
-        "id": 21487,
-        "name": "Udlændinge- og Integrationsudvalget",
-        "short_name": "UUI"
-      },
-      {
         "id": 21485,
         "name": "Retsudvalget",
         "short_name": "REU"
