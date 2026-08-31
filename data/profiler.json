@@ -4033,11 +4033,29 @@
     "party_short": "DF",
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
-    "committees": [],
-    "role": null,
-    "constituency": null,
-    "storkreds": null,
-    "constituency_history": [],
+    "committees": [
+      {
+        "id": 21492,
+        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      }
+    ],
+    "role": "Sygeplejerske",
+    "constituency": "Folketingsmedlem for Dansk Folkeparti i Vestjyllands Storkreds fra 25. august 2026.",
+    "storkreds": "Vestjyllands Storkreds",
+    "constituency_history": [
+      "Folketingsmedlem for Dansk Folkeparti i Vestjyllands Storkreds fra 25. august 2026."
+    ],
     "party_history": [
       {
         "party": "Dansk Folkeparti",
@@ -4049,17 +4067,17 @@
     ],
     "educations": [],
     "occupations": [],
-    "email": null,
-    "phone": null,
+    "email": "lone.langballe@ft.dk",
+    "phone": "+45 3337 5160",
     "website_url": null,
-    "address": null,
+    "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": null,
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_133x133,-d-,jpg.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2026-08-28",
+    "member_since_date": "2026-08-25",
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
@@ -23876,7 +23894,7 @@
       "Juridisk fuldmægtig, Fødevarestyrelsen, 2021-2026."
     ],
     "email": "nadja.isaksen@ft.dk",
-    "phone": "+45 6162 4011",
+    "phone": "+45 3337 5500",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,

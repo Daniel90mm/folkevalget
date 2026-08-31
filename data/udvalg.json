@@ -109,7 +109,7 @@
     "id": 21480,
     "name": "Erhvervs- og Digitaliseringsudvalget",
     "short_name": "ERU",
-    "member_count": 20,
+    "member_count": 21,
     "member_ids": [
       118,
       139,
@@ -130,7 +130,8 @@
       21373,
       21374,
       21375,
-      21386
+      21386,
+      21527
     ]
   },
   {
@@ -255,7 +256,7 @@
     "id": 21492,
     "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
     "short_name": "IBL",
-    "member_count": 23,
+    "member_count": 24,
     "member_ids": [
       118,
       121,
@@ -279,7 +280,8 @@
       21381,
       21382,
       21385,
-      21475
+      21475,
+      21527
     ]
   },
   {
@@ -466,7 +468,7 @@
     "id": 21478,
     "name": "Skatteudvalget",
     "short_name": "SAU",
-    "member_count": 26,
+    "member_count": 27,
     "member_ids": [
       82,
       119,
@@ -493,7 +495,8 @@
       21366,
       21367,
       21381,
-      21386
+      21386,
+      21527
     ]
   },
   {
