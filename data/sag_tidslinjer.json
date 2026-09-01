@@ -2247,7 +2247,24 @@
         "status": "Behandlet/Henvist til udvalg",
         "vote_ids": [],
         "documents": [],
-        "agenda_items": []
+        "agenda_items": [
+          {
+            "dagsordenspunkt_id": 101295,
+            "agenda_number": "4",
+            "agenda_title": "1. behandling",
+            "forhandling": "",
+            "meeting": {
+              "id": 16031,
+              "date": "2026-08-12",
+              "number": "14",
+              "title": "Møde i salen",
+              "type": "Møde i salen",
+              "status": "Afholdt",
+              "start_note": "",
+              "agenda_url": ""
+            }
+          }
+        ]
       },
       {
         "sagstrin_id": 274517,
@@ -2876,7 +2893,24 @@
         "status": "Behandlet/Henvist til udvalg",
         "vote_ids": [],
         "documents": [],
-        "agenda_items": []
+        "agenda_items": [
+          {
+            "dagsordenspunkt_id": 101299,
+            "agenda_number": "8",
+            "agenda_title": "1. behandling",
+            "forhandling": "",
+            "meeting": {
+              "id": 16031,
+              "date": "2026-08-12",
+              "number": "14",
+              "title": "Møde i salen",
+              "type": "Møde i salen",
+              "status": "Afholdt",
+              "start_note": "",
+              "agenda_url": ""
+            }
+          }
+        ]
       },
       {
         "sagstrin_id": 274530,
@@ -3517,7 +3551,24 @@
         "status": "Behandlet/Henvist til udvalg",
         "vote_ids": [],
         "documents": [],
-        "agenda_items": []
+        "agenda_items": [
+          {
+            "dagsordenspunkt_id": 101300,
+            "agenda_number": "9",
+            "agenda_title": "1. behandling",
+            "forhandling": "",
+            "meeting": {
+              "id": 16031,
+              "date": "2026-08-12",
+              "number": "14",
+              "title": "Møde i salen",
+              "type": "Møde i salen",
+              "status": "Afholdt",
+              "start_note": "",
+              "agenda_url": ""
+            }
+          }
+        ]
       },
       {
         "sagstrin_id": 274543,
@@ -4286,7 +4337,24 @@
         "status": "Behandlet/Henvist til udvalg",
         "vote_ids": [],
         "documents": [],
-        "agenda_items": []
+        "agenda_items": [
+          {
+            "dagsordenspunkt_id": 101293,
+            "agenda_number": "2",
+            "agenda_title": "1. behandling",
+            "forhandling": "",
+            "meeting": {
+              "id": 16031,
+              "date": "2026-08-12",
+              "number": "14",
+              "title": "Møde i salen",
+              "type": "Møde i salen",
+              "status": "Afholdt",
+              "start_note": "",
+              "agenda_url": ""
+            }
+          }
+        ]
       },
       {
         "sagstrin_id": 274583,
@@ -4985,7 +5053,24 @@
         "status": "Behandlet/Henvist til udvalg",
         "vote_ids": [],
         "documents": [],
-        "agenda_items": []
+        "agenda_items": [
+          {
+            "dagsordenspunkt_id": 101298,
+            "agenda_number": "7",
+            "agenda_title": "1. behandling",
+            "forhandling": "",
+            "meeting": {
+              "id": 16031,
+              "date": "2026-08-12",
+              "number": "14",
+              "title": "Møde i salen",
+              "type": "Møde i salen",
+              "status": "Afholdt",
+              "start_note": "",
+              "agenda_url": ""
+            }
+          }
+        ]
       },
       {
         "sagstrin_id": 274426,

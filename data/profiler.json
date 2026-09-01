@@ -1953,8 +1953,22 @@
       {
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
-        "start_date": "2026-03-24",
+        "start_date": "2026-10-02",
         "end_date": "2026-10-06",
+        "active": false
+      },
+      {
+        "party": "Danmarksdemokraterne – Inger Støjberg",
+        "party_short": "DD",
+        "start_date": "2026-09-16",
+        "end_date": "2026-10-01",
+        "active": false
+      },
+      {
+        "party": "Danmarksdemokraterne – Inger Støjberg",
+        "party_short": "DD",
+        "start_date": "2026-03-24",
+        "end_date": "2026-09-15",
         "active": true
       }
     ],
@@ -10844,8 +10858,15 @@
       {
         "party": "Moderaterne",
         "party_short": "M",
-        "start_date": "2026-03-24",
+        "start_date": "2026-09-03",
         "end_date": "2026-10-06",
+        "active": false
+      },
+      {
+        "party": "Moderaterne",
+        "party_short": "M",
+        "start_date": "2026-03-24",
+        "end_date": "2026-09-02",
         "active": true
       }
     ],
@@ -12018,8 +12039,15 @@
       {
         "party": "Moderaterne",
         "party_short": "M",
-        "start_date": "2026-03-24",
+        "start_date": "2026-09-03",
         "end_date": "2026-10-06",
+        "active": false
+      },
+      {
+        "party": "Moderaterne",
+        "party_short": "M",
+        "start_date": "2026-03-24",
+        "end_date": "2026-09-02",
         "active": true
       }
     ],
