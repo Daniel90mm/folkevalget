@@ -1896,11 +1896,6 @@
     "current_party_short": "DD",
     "committees": [
       {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
-      },
-      {
         "id": 21508,
         "name": "Udvalget for Det Tyske Mindretal",
         "short_name": "UTM"
@@ -3493,11 +3488,6 @@
         "id": 21478,
         "name": "Skatteudvalget",
         "short_name": "SAU"
-      },
-      {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
       }
     ],
     "role": "Iværksætter",
@@ -4295,6 +4285,11 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
       {
         "id": 21482,
         "name": "Udenrigs- og Forsvarsudvalget",

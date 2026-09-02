@@ -132,6 +132,12 @@
     "emneord": {
       "sag": [
         {
+          "id": 34264,
+          "emneord": "Forfatningsforhold 41",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
           "id": 34265,
           "emneord": "Folketingets Ombudsmand",
           "type_id": 1,
@@ -147,6 +153,12 @@
         }
       ],
       "samlet": [
+        {
+          "id": 34264,
+          "emneord": "Forfatningsforhold 41",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
         {
           "id": 34265,
           "emneord": "Folketingets Ombudsmand",
@@ -349,6 +361,12 @@
     "emneord": {
       "sag": [
         {
+          "id": 34264,
+          "emneord": "Forfatningsforhold 41",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
+        {
           "id": 34265,
           "emneord": "Folketingets Ombudsmand",
           "type_id": 1,
@@ -364,6 +382,12 @@
         }
       ],
       "samlet": [
+        {
+          "id": 34264,
+          "emneord": "Forfatningsforhold 41",
+          "type_id": 4,
+          "type": "Lovsagsnavn"
+        },
         {
           "id": 34265,
           "emneord": "Folketingets Ombudsmand",
