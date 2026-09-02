@@ -25113,6 +25113,11 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
         "id": 21486,
         "name": "Socialudvalget",
         "short_name": "SOU"
@@ -25784,11 +25789,6 @@
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
-      },
-      {
-        "id": 21478,
-        "name": "Skatteudvalget",
-        "short_name": "SAU"
       },
       {
         "id": 21467,
