@@ -1896,6 +1896,11 @@
     "current_party_short": "DD",
     "committees": [
       {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
         "id": 21508,
         "name": "Udvalget for Det Tyske Mindretal",
         "short_name": "UTM"
@@ -3475,6 +3480,11 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
@@ -4285,11 +4295,6 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [
-      {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
-      },
       {
         "id": 21482,
         "name": "Udenrigs- og Forsvarsudvalget",
@@ -10668,11 +10673,6 @@
         "short_name": "UDF"
       },
       {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
         "id": 21456,
         "name": "Nordisk Råd",
         "short_name": "NOR"
@@ -10855,14 +10855,14 @@
         "party_short": "M",
         "start_date": "2026-09-03",
         "end_date": "2026-10-06",
-        "active": false
+        "active": true
       },
       {
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-03-24",
         "end_date": "2026-09-02",
-        "active": true
+        "active": false
       }
     ],
     "educations": [
@@ -11374,11 +11374,6 @@
         "id": 21478,
         "name": "Skatteudvalget",
         "short_name": "SAU"
-      },
-      {
-        "id": 21466,
-        "name": "Sundheds- og Ældreudvalget",
-        "short_name": "SUU"
       }
     ],
     "role": "Selvstændig",
@@ -11492,6 +11487,64 @@
     "seniority_years": 0,
     "seniority_months": 5,
     "seniority_tag": "newcomer",
+    "votes_total": 0,
+    "votes_for": 0,
+    "votes_against": 0,
+    "votes_neither": 0,
+    "votes_absent": 0,
+    "attendance_pct": null,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
+    "recent_votes": []
+  },
+  {
+    "id": 21529,
+    "name": "Özkan Kocak",
+    "first_name": "Özkan",
+    "last_name": "Kocak",
+    "party": "Moderaterne",
+    "party_short": "M",
+    "current_party": "Moderaterne",
+    "current_party_short": "M",
+    "committees": [
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      }
+    ],
+    "role": null,
+    "constituency": null,
+    "storkreds": null,
+    "constituency_history": [],
+    "party_history": [
+      {
+        "party": "Moderaterne",
+        "party_short": "M",
+        "start_date": "2026-09-03",
+        "end_date": "2026-10-06",
+        "active": true
+      }
+    ],
+    "educations": [],
+    "occupations": [],
+    "email": null,
+    "phone": null,
+    "website_url": null,
+    "address": null,
+    "member_url": null,
+    "photo_url": null,
+    "photo_source_url": null,
+    "photo_source_name": null,
+    "photo_photographer": null,
+    "photo_credit_text": null,
+    "member_since_date": null,
+    "member_since_year": null,
+    "seniority_label": null,
+    "seniority_years": null,
+    "seniority_months": null,
+    "seniority_tag": null,
     "votes_total": 0,
     "votes_for": 0,
     "votes_against": 0,
@@ -11671,6 +11724,64 @@
         "vedtaget": true
       }
     ]
+  },
+  {
+    "id": 21528,
+    "name": "Sten Larsen",
+    "first_name": "Sten",
+    "last_name": "Larsen",
+    "party": "Moderaterne",
+    "party_short": "M",
+    "current_party": "Moderaterne",
+    "current_party_short": "M",
+    "committees": [
+      {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      }
+    ],
+    "role": null,
+    "constituency": null,
+    "storkreds": null,
+    "constituency_history": [],
+    "party_history": [
+      {
+        "party": "Moderaterne",
+        "party_short": "M",
+        "start_date": "2026-09-03",
+        "end_date": "2026-10-06",
+        "active": true
+      }
+    ],
+    "educations": [],
+    "occupations": [],
+    "email": null,
+    "phone": null,
+    "website_url": null,
+    "address": null,
+    "member_url": null,
+    "photo_url": null,
+    "photo_source_url": null,
+    "photo_source_name": null,
+    "photo_photographer": null,
+    "photo_credit_text": null,
+    "member_since_date": null,
+    "member_since_year": null,
+    "seniority_label": null,
+    "seniority_years": null,
+    "seniority_months": null,
+    "seniority_tag": null,
+    "votes_total": 0,
+    "votes_for": 0,
+    "votes_against": 0,
+    "votes_neither": 0,
+    "votes_absent": 0,
+    "attendance_pct": null,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
+    "recent_votes": []
   },
   {
     "id": 20386,
@@ -12036,14 +12147,14 @@
         "party_short": "M",
         "start_date": "2026-09-03",
         "end_date": "2026-10-06",
-        "active": false
+        "active": true
       },
       {
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-03-24",
         "end_date": "2026-09-02",
-        "active": true
+        "active": false
       }
     ],
     "educations": [
@@ -25108,11 +25219,6 @@
     "current_party_short": "V",
     "committees": [
       {
-        "id": 21478,
-        "name": "Skatteudvalget",
-        "short_name": "SAU"
-      },
-      {
         "id": 21486,
         "name": "Socialudvalget",
         "short_name": "SOU"
@@ -25775,6 +25881,11 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
       {
         "id": 21485,
         "name": "Retsudvalget",
@@ -26821,11 +26932,11 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2026-08-19",
+    "member_since_date": "2026-06-10",
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 0,
+    "seniority_months": 2,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,

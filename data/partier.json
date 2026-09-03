@@ -151,7 +151,7 @@
     "id": 21326,
     "name": "Moderaterne",
     "short_name": "M",
-    "member_count": 15,
+    "member_count": 17,
     "member_ids": [
       57,
       145,
@@ -167,7 +167,9 @@
       20423,
       21346,
       21356,
-      21385
+      21385,
+      21528,
+      21529
     ]
   },
   {
