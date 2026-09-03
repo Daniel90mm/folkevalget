@@ -224,7 +224,7 @@
     "id": 21483,
     "name": "Grønlandsudvalget",
     "short_name": "GRU",
-    "member_count": 23,
+    "member_count": 22,
     "member_ids": [
       109,
       121,
@@ -242,7 +242,6 @@
       20393,
       20414,
       21337,
-      21346,
       21356,
       21365,
       21368,
@@ -404,7 +403,7 @@
     "id": 21456,
     "name": "Nordisk Råd",
     "short_name": "NOR",
-    "member_count": 22,
+    "member_count": 21,
     "member_ids": [
       109,
       216,
@@ -417,7 +416,6 @@
       20415,
       21337,
       21340,
-      21346,
       21348,
       21351,
       21353,

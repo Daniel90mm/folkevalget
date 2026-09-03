@@ -2,10 +2,394 @@
   "scope": "case-linked-meetings",
   "scope_note": "Moeder og dagsordenspunkter koblet til sager i det aktuelle datasaet.",
   "counts": {
-    "meetings": 4,
-    "agenda_points": 23
+    "meetings": 9,
+    "agenda_points": 55
   },
   "meetings": [
+    {
+      "meeting_id": 16039,
+      "date": "2026-09-03",
+      "number": "23",
+      "title": "Møde i salen",
+      "type": "Møde i salen",
+      "status": "Under forberedelse",
+      "start_note": "",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 101599,
+          "agenda_number": "3",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105373,
+          "sag_number": "L 5",
+          "sag_title": "Om bæredygtig forvaltning af næringsstoffer og drivhusgasser m.v. i land- og skovbruget.",
+          "sagstrin_id": 274421,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10591
+          ]
+        },
+        {
+          "agenda_point_id": 101600,
+          "agenda_number": "4",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105376,
+          "sag_number": "L 8",
+          "sag_title": "Om forhøjelse af rykkergebyr ved told- og skatteforvaltningens opkrævning af visse skatter og afgifter m.v.",
+          "sagstrin_id": 274460,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10592
+          ]
+        },
+        {
+          "agenda_point_id": 101601,
+          "agenda_number": "5",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105377,
+          "sag_number": "L 9",
+          "sag_title": "Om implementering af FATF’s anbefalinger om bekæmpelse af hvidvask, terrorfinansiering og proliferationsfinansering m.v.",
+          "sagstrin_id": 274473,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10593
+          ]
+        },
+        {
+          "agenda_point_id": 101602,
+          "agenda_number": "6",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105383,
+          "sag_number": "L 19",
+          "sag_title": "Om id-kort på byggepladser.",
+          "sagstrin_id": 274604,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10594
+          ]
+        },
+        {
+          "agenda_point_id": 101603,
+          "agenda_number": "7",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105384,
+          "sag_number": "L 20",
+          "sag_title": "Om overførsel af opgaver til Udbetaling Danmark og Arbejdsgivernes Uddannelsesbidrag m.v.",
+          "sagstrin_id": 274617,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10595
+          ]
+        },
+        {
+          "agenda_point_id": 101604,
+          "agenda_number": "8",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105385,
+          "sag_number": "L 21",
+          "sag_title": "Om gennemførsel af en række initiativer for at forhindre misbrug af studieophold m.v.",
+          "sagstrin_id": 274630,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10596
+          ]
+        },
+        {
+          "agenda_point_id": 101606,
+          "agenda_number": "10",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105378,
+          "sag_number": "L 10",
+          "sag_title": "Om forenkling af regler for solcelleanlæg på offentlige bygninger.",
+          "sagstrin_id": 274486,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10597
+          ]
+        },
+        {
+          "agenda_point_id": 101607,
+          "agenda_number": "11",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105366,
+          "sag_number": "L 16",
+          "sag_title": "Om ny overenskomstbaseret beløbsordning for certificerede virksomheder.",
+          "sagstrin_id": 274564,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10598
+          ]
+        },
+        {
+          "agenda_point_id": 101608,
+          "agenda_number": "12",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105732,
+          "sag_number": "L 17 A",
+          "sag_title": "Om skærpelse af regler om udvisning ved ubetinget fængselsstraf af mindst 1 års varighed for visse former for alvorlig kriminalitet m.v.",
+          "sagstrin_id": 275260,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10599
+          ]
+        },
+        {
+          "agenda_point_id": 101609,
+          "agenda_number": "13",
+          "agenda_title": "3. behandling",
+          "forhandling": "",
+          "sag_id": 105733,
+          "sag_number": "L 17 B",
+          "sag_title": "Om styrkelse af hjemrejsestøtteordningen og repatrieringsordningen.",
+          "sagstrin_id": 275264,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10600
+          ]
+        },
+        {
+          "agenda_point_id": 101610,
+          "agenda_number": "14",
+          "agenda_title": "2. (sidste) behandling",
+          "forhandling": "",
+          "sag_id": 105027,
+          "sag_number": "B 9",
+          "sag_title": "Om mulighed for at stille krav om håndtryk og respekt for danske samfundsnormer i offentlige institutioner og på arbejdsmarkedet.",
+          "sagstrin_id": 273940,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "2. (sidste) behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Forkastet",
+          "vote_ids": [
+            10601
+          ]
+        },
+        {
+          "agenda_point_id": 101611,
+          "agenda_number": "15",
+          "agenda_title": "2. (sidste) behandling",
+          "forhandling": "",
+          "sag_id": 105048,
+          "sag_number": "B 11",
+          "sag_title": "Om forbud mod højtalerforstærket bøn eller bønnekald i det offentlige rum.",
+          "sagstrin_id": 273969,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "2. (sidste) behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Forkastet",
+          "vote_ids": [
+            10602
+          ]
+        },
+        {
+          "agenda_point_id": 101612,
+          "agenda_number": "16",
+          "agenda_title": "2. (sidste) behandling",
+          "forhandling": "",
+          "sag_id": 105121,
+          "sag_number": "B 13",
+          "sag_title": "Om at forbyde kønsopdelt svømning i offentlige svømmehaller.",
+          "sagstrin_id": 274025,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "2. (sidste) behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Forkastet",
+          "vote_ids": [
+            10603
+          ]
+        },
+        {
+          "agenda_point_id": 101613,
+          "agenda_number": "17",
+          "agenda_title": "2. (sidste) behandling",
+          "forhandling": "",
+          "sag_id": 70911,
+          "sag_number": "B 16",
+          "sag_title": "Om ændring af folketingsbeslutning om statsrevisorernes valg og virksomhed.",
+          "sagstrin_id": 274151,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "2. (sidste) behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10604
+          ]
+        }
+      ],
+      "agenda_point_count": 14
+    },
+    {
+      "meeting_id": 16036,
+      "date": "2026-09-01",
+      "number": "21",
+      "title": "Møde i salen",
+      "type": "Møde i salen",
+      "status": "Afholdt",
+      "start_note": "",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 101541,
+          "agenda_number": "2",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105366,
+          "sag_number": "L 16",
+          "sag_title": "Om ny overenskomstbaseret beløbsordning for certificerede virksomheder.",
+          "sagstrin_id": 274562,
+          "sagstrin_date": "2026-09-01",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101542,
+          "agenda_number": "3",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105376,
+          "sag_number": "L 8",
+          "sag_title": "Om forhøjelse af rykkergebyr ved told- og skatteforvaltningens opkrævning af visse skatter og afgifter m.v.",
+          "sagstrin_id": 274458,
+          "sagstrin_date": "2026-09-01",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101543,
+          "agenda_number": "4",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105377,
+          "sag_number": "L 9",
+          "sag_title": "Om implementering af FATF’s anbefalinger om bekæmpelse af hvidvask, terrorfinansiering og proliferationsfinansering m.v.",
+          "sagstrin_id": 274471,
+          "sagstrin_date": "2026-09-01",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101544,
+          "agenda_number": "5",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105373,
+          "sag_number": "L 5",
+          "sag_title": "Om bæredygtig forvaltning af næringsstoffer og drivhusgasser m.v. i land- og skovbruget.",
+          "sagstrin_id": 274419,
+          "sagstrin_date": "2026-09-01",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101545,
+          "agenda_number": "6",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105384,
+          "sag_number": "L 20",
+          "sag_title": "Om overførsel af opgaver til Udbetaling Danmark og Arbejdsgivernes Uddannelsesbidrag m.v.",
+          "sagstrin_id": 274615,
+          "sagstrin_date": "2026-09-01",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101546,
+          "agenda_number": "7",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105385,
+          "sag_number": "L 21",
+          "sag_title": "Om gennemførsel af en række initiativer for at forhindre misbrug af studieophold m.v.",
+          "sagstrin_id": 274628,
+          "sagstrin_date": "2026-09-01",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101547,
+          "agenda_number": "8",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105383,
+          "sag_number": "L 19",
+          "sag_title": "Om id-kort på byggepladser.",
+          "sagstrin_id": 274602,
+          "sagstrin_date": "2026-09-01",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101549,
+          "agenda_number": "10",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 105378,
+          "sag_number": "L 10",
+          "sag_title": "Om forenkling af regler for solcelleanlæg på offentlige bygninger.",
+          "sagstrin_id": 274484,
+          "sagstrin_date": "2026-09-01",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Direkte til 3. beh.",
+          "vote_ids": []
+        }
+      ],
+      "agenda_point_count": 8
+    },
     {
       "meeting_id": 16037,
       "date": "2026-08-27",
@@ -190,6 +574,62 @@
       "agenda_point_count": 10
     },
     {
+      "meeting_id": 16110,
+      "date": "2026-08-27",
+      "number": null,
+      "title": "Miljø- og Fødevareudvalget - dep.",
+      "type": "Udvalgsmøde",
+      "status": "Afholdt",
+      "start_note": "kl. 13.00",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 101484,
+          "agenda_number": "c",
+          "agenda_title": "A.P. Grønt vedrørende L 5 (gødskningsloven), jf. L 5 - bilag 10. ",
+          "forhandling": "",
+          "sag_id": 105373,
+          "sag_number": "L 5",
+          "sag_title": "Om bæredygtig forvaltning af næringsstoffer og drivhusgasser m.v. i land- og skovbruget.",
+          "sagstrin_id": 275164,
+          "sagstrin_date": "2026-08-27",
+          "sagstrin_title": "A.P. Grønt vedrørende L 5 (gødskningsloven), jf. L 5 - bilag 10. ",
+          "sagstrin_type": "Deputation",
+          "sagstrin_status": "Afholdt",
+          "vote_ids": []
+        }
+      ],
+      "agenda_point_count": 1
+    },
+    {
+      "meeting_id": 16095,
+      "date": "2026-08-26",
+      "number": null,
+      "title": "Beskæftigelses- og Ligestillingsudvalget",
+      "type": "Udvalgsmøde",
+      "status": "Afholdt",
+      "start_note": "kl. 14.30",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 101375,
+          "agenda_number": "a",
+          "agenda_title": "(Afholdes virtuelt) Lars Flak vedrørende L 19, jf. L 19 - bilag 4 og 7. Se tillige L 19 - svar på spørgsmål 2 og 16.",
+          "forhandling": "",
+          "sag_id": 105383,
+          "sag_number": "L 19",
+          "sag_title": "Om id-kort på byggepladser.",
+          "sagstrin_id": 275002,
+          "sagstrin_date": "2026-08-26",
+          "sagstrin_title": "(Afholdes virtuelt) Lars Flak vedrørende L 19, jf. L 19 - bilag 4 og 7. Se tillige L 19 - svar på spørgsmål 2 og 16.",
+          "sagstrin_type": "Deputation",
+          "sagstrin_status": "Afholdt",
+          "vote_ids": []
+        }
+      ],
+      "agenda_point_count": 1
+    },
+    {
       "meeting_id": 16035,
       "date": "2026-08-25",
       "number": "18",
@@ -318,6 +758,21 @@
       "agenda_url": "",
       "agenda_points": [
         {
+          "agenda_point_id": 101340,
+          "agenda_number": "2",
+          "agenda_title": "1. behandling",
+          "forhandling": "",
+          "sag_id": 105383,
+          "sag_number": "L 19",
+          "sag_title": "Om id-kort på byggepladser.",
+          "sagstrin_id": 274595,
+          "sagstrin_date": "2026-08-14",
+          "sagstrin_title": "1. behandling",
+          "sagstrin_type": "1. behandling",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
+        },
+        {
           "agenda_point_id": 101341,
           "agenda_number": "3",
           "agenda_title": "1. behandling",
@@ -333,7 +788,95 @@
           "vote_ids": []
         }
       ],
-      "agenda_point_count": 1
+      "agenda_point_count": 2
+    },
+    {
+      "meeting_id": 16032,
+      "date": "2026-08-13",
+      "number": "15",
+      "title": "Møde i salen",
+      "type": "Møde i salen",
+      "status": "Afholdt",
+      "start_note": "",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 101323,
+          "agenda_number": "2",
+          "agenda_title": "1. behandling",
+          "forhandling": "",
+          "sag_id": 105366,
+          "sag_number": "L 16",
+          "sag_title": "Om ny overenskomstbaseret beløbsordning for certificerede virksomheder.",
+          "sagstrin_id": 274555,
+          "sagstrin_date": "2026-08-13",
+          "sagstrin_title": "1. behandling",
+          "sagstrin_type": "1. behandling",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101325,
+          "agenda_number": "4",
+          "agenda_title": "1. behandling",
+          "forhandling": "",
+          "sag_id": 105384,
+          "sag_number": "L 20",
+          "sag_title": "Om overførsel af opgaver til Udbetaling Danmark og Arbejdsgivernes Uddannelsesbidrag m.v.",
+          "sagstrin_id": 274608,
+          "sagstrin_date": "2026-08-13",
+          "sagstrin_title": "1. behandling",
+          "sagstrin_type": "1. behandling",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101326,
+          "agenda_number": "5",
+          "agenda_title": "1. behandling",
+          "forhandling": "",
+          "sag_id": 105385,
+          "sag_number": "L 21",
+          "sag_title": "Om gennemførsel af en række initiativer for at forhindre misbrug af studieophold m.v.",
+          "sagstrin_id": 274621,
+          "sagstrin_date": "2026-08-13",
+          "sagstrin_title": "1. behandling",
+          "sagstrin_type": "1. behandling",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101327,
+          "agenda_number": "6",
+          "agenda_title": "1. behandling",
+          "forhandling": "",
+          "sag_id": 105378,
+          "sag_number": "L 10",
+          "sag_title": "Om forenkling af regler for solcelleanlæg på offentlige bygninger.",
+          "sagstrin_id": 274477,
+          "sagstrin_date": "2026-08-13",
+          "sagstrin_title": "1. behandling",
+          "sagstrin_type": "1. behandling",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101328,
+          "agenda_number": "7",
+          "agenda_title": "1. behandling",
+          "forhandling": "",
+          "sag_id": 105373,
+          "sag_number": "L 5",
+          "sag_title": "Om bæredygtig forvaltning af næringsstoffer og drivhusgasser m.v. i land- og skovbruget.",
+          "sagstrin_id": 274412,
+          "sagstrin_date": "2026-08-13",
+          "sagstrin_title": "1. behandling",
+          "sagstrin_type": "1. behandling",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
+        }
+      ],
+      "agenda_point_count": 5
     },
     {
       "meeting_id": 16031,
@@ -369,6 +912,36 @@
           "sag_number": "L 13",
           "sag_title": "Om pligt til at afskære sanktionerede personer fra at udøve kontrol med danske virksomheder.",
           "sagstrin_id": 274516,
+          "sagstrin_date": "2026-08-12",
+          "sagstrin_title": "1. behandling",
+          "sagstrin_type": "1. behandling",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101296,
+          "agenda_number": "5",
+          "agenda_title": "1. behandling",
+          "forhandling": "",
+          "sag_id": 105377,
+          "sag_number": "L 9",
+          "sag_title": "Om implementering af FATF’s anbefalinger om bekæmpelse af hvidvask, terrorfinansiering og proliferationsfinansering m.v.",
+          "sagstrin_id": 274464,
+          "sagstrin_date": "2026-08-12",
+          "sagstrin_title": "1. behandling",
+          "sagstrin_type": "1. behandling",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101297,
+          "agenda_number": "6",
+          "agenda_title": "1. behandling",
+          "forhandling": "",
+          "sag_id": 105376,
+          "sag_number": "L 8",
+          "sag_title": "Om forhøjelse af rykkergebyr ved told- og skatteforvaltningens opkrævning af visse skatter og afgifter m.v.",
+          "sagstrin_id": 274451,
           "sagstrin_date": "2026-08-12",
           "sagstrin_title": "1. behandling",
           "sagstrin_type": "1. behandling",
@@ -421,8 +994,8 @@
           "vote_ids": []
         }
       ],
-      "agenda_point_count": 5
+      "agenda_point_count": 7
     }
   ],
-  "generated_at": "2026-09-03T10:04:59+00:00"
+  "generated_at": "2026-09-03T20:01:44+00:00"
 }

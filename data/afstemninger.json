@@ -1,5 +1,8572 @@
 [
   {
+    "afstemning_id": 10604,
+    "nummer": 43,
+    "date": "2026-09-03",
+    "vedtaget": true,
+    "konklusion": "Forslaget er vedtaget.\nFor stemte 106 (S, SF, V, DF, LA, M, KF, EL, RV, ALT, BP, Cecilie Liv Hansen (UFG), Emilie Schytte (UFG), Jacob Harris (UFG) og Nadja Natalie Isaksen (UFG)),\nimod stemte 6 (DD),\nhverken for eller imod stemte 0.",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 274151,
+    "sagstrin_title": "2. (sidste) behandling",
+    "sagstrin_type": "2. behandling",
+    "sagstrin_status": "Behandlet/Vedtaget",
+    "sag_id": 70911,
+    "sag_title": "Forslag til folketingsbeslutning om ændring af folketingsbeslutning om statsrevisorernes valg og virksomhed.",
+    "sag_short_title": "Om ændring af folketingsbeslutning om statsrevisorernes valg og virksomhed.",
+    "sag_resume": null,
+    "sag_number": "B 16",
+    "sag_type_id": 5,
+    "source_documents": [
+      {
+        "document_id": 1226881,
+        "title": "Vedtaget af Folketinget ved 2.(sidste) behandling den 3. september 2026",
+        "number": null,
+        "date": "2026-09-03",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b16/20252_b16_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1222378,
+        "title": "Betænkning afgivet 12/8-26",
+        "number": null,
+        "date": "2026-08-12",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b16/bilag/3/3168238.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 15,
+        "document_category": "Notat",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1222363,
+        "title": "Betænkning afgivet af Udvalget for Forretningsordenen den 12. august 2026",
+        "number": null,
+        "date": "2026-08-14",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b16/20252_b16_betaenkning.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "counts": {
+      "for": 96,
+      "imod": 4,
+      "fravaer": 79,
+      "hverken": 0
+    },
+    "vote_groups": {
+      "for": [
+        18,
+        97,
+        99,
+        118,
+        121,
+        127,
+        130,
+        154,
+        168,
+        180,
+        199,
+        208,
+        216,
+        220,
+        244,
+        351,
+        9896,
+        15760,
+        15775,
+        15779,
+        15787,
+        15793,
+        16073,
+        16180,
+        16351,
+        16582,
+        16728,
+        18694,
+        18696,
+        18699,
+        18706,
+        18707,
+        18711,
+        18716,
+        18718,
+        18719,
+        18723,
+        18724,
+        18729,
+        19000,
+        19475,
+        20135,
+        20350,
+        20357,
+        20358,
+        20359,
+        20360,
+        20361,
+        20362,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        21371,
+        20135,
+        20361,
+        20365,
+        20362,
+        21360,
+        21342,
+        20360,
+        20358,
+        18706,
+        21302,
+        16073,
+        18718,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        21368,
+        15775,
+        121,
+        20411,
+        118,
+        97,
+        154,
+        199,
+        16728,
+        18694,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        16582,
+        351,
+        19000,
+        18716,
+        244,
+        220
+      ],
+      "imod": [
+        82,
+        162,
+        17629,
+        20355
+      ],
+      "fravaer": [
+        12,
+        43,
+        57,
+        109,
+        113,
+        119,
+        120,
+        138,
+        139,
+        141,
+        145,
+        152,
+        173,
+        182,
+        189,
+        206,
+        214,
+        219,
+        224,
+        238,
+        260,
+        262,
+        286,
+        1146,
+        1845,
+        15762,
+        15763,
+        15770,
+        15776,
+        15777,
+        15788,
+        15790,
+        15791,
+        17628,
+        18698,
+        18701,
+        18703,
+        18708,
+        18709,
+        18713,
+        18717,
+        18720,
+        18721,
+        18726,
+        20349,
+        20351,
+        20356,
+        21388,
+        18717,
+        21387,
+        21379,
+        18708,
+        18720,
+        21380,
+        17628,
+        109,
+        120,
+        224,
+        21338,
+        20351,
+        15791,
+        21398,
+        15777,
+        15770,
+        145,
+        43,
+        138,
+        12,
+        15776,
+        141,
+        57,
+        214,
+        286,
+        18709,
+        15788,
+        219,
+        15762,
+        152,
+        260
+      ],
+      "hverken": []
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [
+          97,
+          118,
+          154,
+          208,
+          220,
+          244,
+          15760,
+          15787,
+          16351,
+          18716,
+          18718,
+          18719,
+          20361,
+          20362,
+          20361,
+          20362,
+          18718,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          154,
+          21343,
+          15787,
+          15760,
+          18716,
+          244,
+          220
+        ],
+        "imod": [],
+        "fravaer": [
+          12,
+          120,
+          138,
+          152,
+          214,
+          224,
+          260,
+          286,
+          15762,
+          15770,
+          15776,
+          18717,
+          18720,
+          18717,
+          18720,
+          120,
+          224,
+          15770,
+          138,
+          12,
+          15776,
+          214,
+          286,
+          15762,
+          152,
+          260
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          18,
+          99,
+          199,
+          351,
+          9896,
+          16180,
+          18711,
+          20358,
+          9896,
+          21371,
+          20365,
+          20358,
+          21404,
+          16180,
+          199,
+          351
+        ],
+        "imod": [],
+        "fravaer": [
+          113,
+          173,
+          15790,
+          15791,
+          18708,
+          18721,
+          21379,
+          18708,
+          21338,
+          15791
+        ],
+        "hverken": []
+      },
+      "SF": {
+        "for": [
+          121,
+          16728,
+          18706,
+          18707,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          121,
+          16728,
+          20359,
+          18707,
+          19000
+        ],
+        "imod": [],
+        "fravaer": [
+          43,
+          219,
+          15788,
+          17628,
+          18709,
+          17628,
+          43,
+          18709,
+          15788,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [
+          19475
+        ],
+        "imod": [],
+        "fravaer": [
+          57,
+          145,
+          145,
+          57
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [],
+        "imod": [
+          82,
+          162,
+          17629,
+          20355
+        ],
+        "fravaer": [
+          119,
+          182,
+          1146
+        ],
+        "hverken": []
+      },
+      "EL": {
+        "for": [
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          18694,
+          16582
+        ],
+        "imod": [],
+        "fravaer": [
+          109,
+          15777,
+          109,
+          21398,
+          15777
+        ],
+        "hverken": []
+      },
+      "V": {
+        "for": [
+          127,
+          130,
+          168,
+          180,
+          18696,
+          18699
+        ],
+        "imod": [],
+        "fravaer": [
+          139,
+          206,
+          1845,
+          18698,
+          18701
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [
+          18729,
+          21474,
+          21475,
+          21360,
+          21344
+        ],
+        "imod": [],
+        "fravaer": [
+          141,
+          18726,
+          21380,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [
+          15793,
+          20357
+        ],
+        "imod": [],
+        "fravaer": [
+          189,
+          18713
+        ],
+        "hverken": []
+      },
+      "DF": {
+        "for": [
+          216,
+          20350
+        ],
+        "imod": [],
+        "fravaer": [
+          238,
+          15763,
+          20356
+        ],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [
+          15775,
+          21342,
+          21368,
+          15775
+        ],
+        "imod": [],
+        "fravaer": [
+          20351,
+          20351
+        ],
+        "hverken": []
+      },
+      "LA": {
+        "for": [
+          15779,
+          18723
+        ],
+        "imod": [],
+        "fravaer": [
+          18703
+        ],
+        "hverken": []
+      },
+      "BP": {
+        "for": [
+          18724
+        ],
+        "imod": [],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21388
+        ],
+        "hverken": []
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 0,
+    "margin": 92,
+    "counts_source": "stemme"
+  },
+  {
+    "afstemning_id": 10603,
+    "nummer": 42,
+    "date": "2026-09-03",
+    "vedtaget": false,
+    "konklusion": "Forslaget er forkastet.\nFor stemte 48 (V, DF, LA, KF, DD, BP, Emilie Schytte (UFG), Nadja Natalie Isaksen (UFG)),\nimod stemte 62 (S, SF, M, EL, RV, ALT),\nhverken for eller imod stemte 2 (Cecilie Liv Hansen (UFG), Jacob Harris (UFG)).",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 274025,
+    "sagstrin_title": "2. (sidste) behandling",
+    "sagstrin_type": "2. behandling",
+    "sagstrin_status": "Behandlet/Forkastet",
+    "sag_id": 105121,
+    "sag_title": "Forslag til folketingsbeslutning om at forbyde kønsopdelt svømning i offentlige svømmehaller.\n",
+    "sag_short_title": "Om at forbyde kønsopdelt svømning i offentlige svømmehaller.",
+    "sag_resume": "Forslaget forbyder anvendelse af offentligt ejede og støttede svømmehaller til aktiviteter med kønsadskillelse som adgangskriterium. Forbuddet skal gælde, uanset om aktiviteten finder sted i eller uden for svømmehallens åbningstid, og skal forhindre, at borgere udelukkes fra adgang eller deltagelse i aktiviteter på baggrund af køn. ",
+    "sag_number": "B 13",
+    "sag_type_id": 5,
+    "source_documents": [
+      {
+        "document_id": 1226296,
+        "title": "Betænkning afgivet den 27. august 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b13/bilag/2/3177911.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 15,
+        "document_category": "Notat",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1226292,
+        "title": "Betænkning afgivet af Udlændinge- og Integrationsudvalget den 27. august 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b13/20252_b13_betaenkning.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1225724,
+        "title": "B 13 - svar på MFU spm. 3 om kønsopdelt svømning i københavnske svømmehaller og foreneligheden med ligestillingsbekendtgørelsens § 6.",
+        "number": null,
+        "date": "2026-08-28",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b13/spm/3/svar/2225349/3176389.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 17075,
+            "name": "udlændinge- og integrationsministeren",
+            "short_name": "udlændinge- og integrationsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 17075,
+            "name": "udlændinge- og integrationsministeren",
+            "short_name": "udlændinge- og integrationsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 21354,
+            "name": "Nadja Natalie Isaksen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 3,
+            "role": "Stiller/MFU"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "udlændinge- og integrationsministeren"
+          ]
+        }
+      }
+    ],
+    "counts": {
+      "for": 20,
+      "imod": 80,
+      "fravaer": 79,
+      "hverken": 0
+    },
+    "vote_groups": {
+      "for": [
+        18,
+        82,
+        99,
+        127,
+        130,
+        162,
+        168,
+        180,
+        216,
+        15779,
+        15793,
+        17629,
+        18696,
+        18699,
+        18711,
+        18723,
+        18724,
+        20350,
+        20355,
+        20357
+      ],
+      "imod": [
+        97,
+        118,
+        121,
+        154,
+        199,
+        208,
+        220,
+        244,
+        351,
+        9896,
+        15760,
+        15775,
+        15787,
+        16073,
+        16180,
+        16351,
+        16582,
+        16728,
+        18694,
+        18706,
+        18707,
+        18716,
+        18718,
+        18719,
+        18729,
+        19000,
+        19475,
+        20135,
+        20358,
+        20359,
+        20360,
+        20361,
+        20362,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        21371,
+        20135,
+        20361,
+        20365,
+        20362,
+        21360,
+        21342,
+        20360,
+        20358,
+        18706,
+        21302,
+        16073,
+        18718,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        21368,
+        15775,
+        121,
+        20411,
+        118,
+        97,
+        154,
+        199,
+        16728,
+        18694,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        16582,
+        351,
+        19000,
+        18716,
+        244,
+        220
+      ],
+      "fravaer": [
+        12,
+        43,
+        57,
+        109,
+        113,
+        119,
+        120,
+        138,
+        139,
+        141,
+        145,
+        152,
+        173,
+        182,
+        189,
+        206,
+        214,
+        219,
+        224,
+        238,
+        260,
+        262,
+        286,
+        1146,
+        1845,
+        15762,
+        15763,
+        15770,
+        15776,
+        15777,
+        15788,
+        15790,
+        15791,
+        17628,
+        18698,
+        18701,
+        18703,
+        18708,
+        18709,
+        18713,
+        18717,
+        18720,
+        18721,
+        18726,
+        20349,
+        20351,
+        20356,
+        21388,
+        18717,
+        21387,
+        21379,
+        18708,
+        18720,
+        21380,
+        17628,
+        109,
+        120,
+        224,
+        21338,
+        20351,
+        15791,
+        21398,
+        15777,
+        15770,
+        145,
+        43,
+        138,
+        12,
+        15776,
+        141,
+        57,
+        214,
+        286,
+        18709,
+        15788,
+        219,
+        15762,
+        152,
+        260
+      ],
+      "hverken": []
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [],
+        "imod": [
+          97,
+          118,
+          154,
+          208,
+          220,
+          244,
+          15760,
+          15787,
+          16351,
+          18716,
+          18718,
+          18719,
+          20361,
+          20362,
+          20361,
+          20362,
+          18718,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          154,
+          21343,
+          15787,
+          15760,
+          18716,
+          244,
+          220
+        ],
+        "fravaer": [
+          12,
+          120,
+          138,
+          152,
+          214,
+          224,
+          260,
+          286,
+          15762,
+          15770,
+          15776,
+          18717,
+          18720,
+          18717,
+          18720,
+          120,
+          224,
+          15770,
+          138,
+          12,
+          15776,
+          214,
+          286,
+          15762,
+          152,
+          260
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          18,
+          99,
+          18711
+        ],
+        "imod": [
+          199,
+          351,
+          9896,
+          16180,
+          20358,
+          9896,
+          21371,
+          20365,
+          20358,
+          21404,
+          16180,
+          199,
+          351
+        ],
+        "fravaer": [
+          113,
+          173,
+          15790,
+          15791,
+          18708,
+          18721,
+          21379,
+          18708,
+          21338,
+          15791
+        ],
+        "hverken": []
+      },
+      "SF": {
+        "for": [],
+        "imod": [
+          121,
+          16728,
+          18706,
+          18707,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          121,
+          16728,
+          20359,
+          18707,
+          19000
+        ],
+        "fravaer": [
+          43,
+          219,
+          15788,
+          17628,
+          18709,
+          17628,
+          43,
+          18709,
+          15788,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [],
+        "imod": [
+          19475
+        ],
+        "fravaer": [
+          57,
+          145,
+          145,
+          57
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [
+          82,
+          162,
+          17629,
+          20355
+        ],
+        "imod": [],
+        "fravaer": [
+          119,
+          182,
+          1146
+        ],
+        "hverken": []
+      },
+      "EL": {
+        "for": [],
+        "imod": [
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          18694,
+          16582
+        ],
+        "fravaer": [
+          109,
+          15777,
+          109,
+          21398,
+          15777
+        ],
+        "hverken": []
+      },
+      "V": {
+        "for": [
+          127,
+          130,
+          168,
+          180,
+          18696,
+          18699
+        ],
+        "imod": [],
+        "fravaer": [
+          139,
+          206,
+          1845,
+          18698,
+          18701
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [],
+        "imod": [
+          18729,
+          21474,
+          21475,
+          21360,
+          21344
+        ],
+        "fravaer": [
+          141,
+          18726,
+          21380,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [
+          15793,
+          20357
+        ],
+        "imod": [],
+        "fravaer": [
+          189,
+          18713
+        ],
+        "hverken": []
+      },
+      "DF": {
+        "for": [
+          216,
+          20350
+        ],
+        "imod": [],
+        "fravaer": [
+          238,
+          15763,
+          20356
+        ],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [],
+        "imod": [
+          15775,
+          21342,
+          21368,
+          15775
+        ],
+        "fravaer": [
+          20351,
+          20351
+        ],
+        "hverken": []
+      },
+      "LA": {
+        "for": [
+          15779,
+          18723
+        ],
+        "imod": [],
+        "fravaer": [
+          18703
+        ],
+        "hverken": []
+      },
+      "BP": {
+        "for": [
+          18724
+        ],
+        "imod": [],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21388
+        ],
+        "hverken": []
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 0,
+    "margin": 60,
+    "counts_source": "stemme"
+  },
+  {
+    "afstemning_id": 10602,
+    "nummer": 41,
+    "date": "2026-09-03",
+    "vedtaget": false,
+    "konklusion": "Forslaget er forkastet.\nFor stemte 47 (V, DF, LA, KF, DD, BP, Nadja Natalie Isaksen (UFG)),\nimod stemte 63 (S, SF, M, EL, RV, ALT, Emilie Schytte (UFG)),\nhverken for eller imod stemte 2 (Cecilie Liv Hansen (UFG), Jacob Harris (UFG)).",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 273969,
+    "sagstrin_title": "2. (sidste) behandling",
+    "sagstrin_type": "2. behandling",
+    "sagstrin_status": "Behandlet/Forkastet",
+    "sag_id": 105048,
+    "sag_title": "Forslag til folketingsbeslutning om forbud mod højtalerforstærket bøn eller bønnekald i det offentlige rum.",
+    "sag_short_title": "Om forbud mod højtalerforstærket bøn eller bønnekald i det offentlige rum.",
+    "sag_resume": "Forslaget forbyder højtalerforstærket bøn eller bønnekald i det offentlige rum. Formålet er at indføre et landsdækkende forbud frem for den nuværende regulering via kommunale støjregler.",
+    "sag_number": "B 11",
+    "sag_type_id": 5,
+    "source_documents": [
+      {
+        "document_id": 1226294,
+        "title": "Betænkning afgivet den 27. august 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b11/bilag/2/3177908.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 15,
+        "document_category": "Notat",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1226291,
+        "title": "Betænkning afgivet af Udlændinge- og Integrationsudvalget den 27. august 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b11/20252_b11_betaenkning.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1224749,
+        "title": "Udkast til betænkning",
+        "number": null,
+        "date": "2026-08-25",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b11/bilag/1/3174024.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "counts": {
+      "for": 20,
+      "imod": 80,
+      "fravaer": 79,
+      "hverken": 0
+    },
+    "vote_groups": {
+      "for": [
+        18,
+        82,
+        99,
+        127,
+        130,
+        162,
+        168,
+        180,
+        216,
+        15779,
+        15793,
+        17629,
+        18696,
+        18699,
+        18711,
+        18723,
+        18724,
+        20350,
+        20355,
+        20357
+      ],
+      "imod": [
+        97,
+        118,
+        121,
+        154,
+        199,
+        208,
+        220,
+        244,
+        351,
+        9896,
+        15760,
+        15775,
+        15787,
+        16073,
+        16180,
+        16351,
+        16582,
+        16728,
+        18694,
+        18706,
+        18707,
+        18716,
+        18718,
+        18719,
+        18729,
+        19000,
+        19475,
+        20135,
+        20358,
+        20359,
+        20360,
+        20361,
+        20362,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        21371,
+        20135,
+        20361,
+        20365,
+        20362,
+        21360,
+        21342,
+        20360,
+        20358,
+        18706,
+        21302,
+        16073,
+        18718,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        21368,
+        15775,
+        121,
+        20411,
+        118,
+        97,
+        154,
+        199,
+        16728,
+        18694,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        16582,
+        351,
+        19000,
+        18716,
+        244,
+        220
+      ],
+      "fravaer": [
+        12,
+        43,
+        57,
+        109,
+        113,
+        119,
+        120,
+        138,
+        139,
+        141,
+        145,
+        152,
+        173,
+        182,
+        189,
+        206,
+        214,
+        219,
+        224,
+        238,
+        260,
+        262,
+        286,
+        1146,
+        1845,
+        15762,
+        15763,
+        15770,
+        15776,
+        15777,
+        15788,
+        15790,
+        15791,
+        17628,
+        18698,
+        18701,
+        18703,
+        18708,
+        18709,
+        18713,
+        18717,
+        18720,
+        18721,
+        18726,
+        20349,
+        20351,
+        20356,
+        21388,
+        18717,
+        21387,
+        21379,
+        18708,
+        18720,
+        21380,
+        17628,
+        109,
+        120,
+        224,
+        21338,
+        20351,
+        15791,
+        21398,
+        15777,
+        15770,
+        145,
+        43,
+        138,
+        12,
+        15776,
+        141,
+        57,
+        214,
+        286,
+        18709,
+        15788,
+        219,
+        15762,
+        152,
+        260
+      ],
+      "hverken": []
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [],
+        "imod": [
+          97,
+          118,
+          154,
+          208,
+          220,
+          244,
+          15760,
+          15787,
+          16351,
+          18716,
+          18718,
+          18719,
+          20361,
+          20362,
+          20361,
+          20362,
+          18718,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          154,
+          21343,
+          15787,
+          15760,
+          18716,
+          244,
+          220
+        ],
+        "fravaer": [
+          12,
+          120,
+          138,
+          152,
+          214,
+          224,
+          260,
+          286,
+          15762,
+          15770,
+          15776,
+          18717,
+          18720,
+          18717,
+          18720,
+          120,
+          224,
+          15770,
+          138,
+          12,
+          15776,
+          214,
+          286,
+          15762,
+          152,
+          260
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          18,
+          99,
+          18711
+        ],
+        "imod": [
+          199,
+          351,
+          9896,
+          16180,
+          20358,
+          9896,
+          21371,
+          20365,
+          20358,
+          21404,
+          16180,
+          199,
+          351
+        ],
+        "fravaer": [
+          113,
+          173,
+          15790,
+          15791,
+          18708,
+          18721,
+          21379,
+          18708,
+          21338,
+          15791
+        ],
+        "hverken": []
+      },
+      "SF": {
+        "for": [],
+        "imod": [
+          121,
+          16728,
+          18706,
+          18707,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          121,
+          16728,
+          20359,
+          18707,
+          19000
+        ],
+        "fravaer": [
+          43,
+          219,
+          15788,
+          17628,
+          18709,
+          17628,
+          43,
+          18709,
+          15788,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [],
+        "imod": [
+          19475
+        ],
+        "fravaer": [
+          57,
+          145,
+          145,
+          57
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [
+          82,
+          162,
+          17629,
+          20355
+        ],
+        "imod": [],
+        "fravaer": [
+          119,
+          182,
+          1146
+        ],
+        "hverken": []
+      },
+      "EL": {
+        "for": [],
+        "imod": [
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          18694,
+          16582
+        ],
+        "fravaer": [
+          109,
+          15777,
+          109,
+          21398,
+          15777
+        ],
+        "hverken": []
+      },
+      "V": {
+        "for": [
+          127,
+          130,
+          168,
+          180,
+          18696,
+          18699
+        ],
+        "imod": [],
+        "fravaer": [
+          139,
+          206,
+          1845,
+          18698,
+          18701
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [],
+        "imod": [
+          18729,
+          21474,
+          21475,
+          21360,
+          21344
+        ],
+        "fravaer": [
+          141,
+          18726,
+          21380,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [
+          15793,
+          20357
+        ],
+        "imod": [],
+        "fravaer": [
+          189,
+          18713
+        ],
+        "hverken": []
+      },
+      "DF": {
+        "for": [
+          216,
+          20350
+        ],
+        "imod": [],
+        "fravaer": [
+          238,
+          15763,
+          20356
+        ],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [],
+        "imod": [
+          15775,
+          21342,
+          21368,
+          15775
+        ],
+        "fravaer": [
+          20351,
+          20351
+        ],
+        "hverken": []
+      },
+      "LA": {
+        "for": [
+          15779,
+          18723
+        ],
+        "imod": [],
+        "fravaer": [
+          18703
+        ],
+        "hverken": []
+      },
+      "BP": {
+        "for": [
+          18724
+        ],
+        "imod": [],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21388
+        ],
+        "hverken": []
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 0,
+    "margin": 60,
+    "counts_source": "stemme"
+  },
+  {
+    "afstemning_id": 10601,
+    "nummer": 40,
+    "date": "2026-09-03",
+    "vedtaget": false,
+    "konklusion": "Forslaget er forkastet.\nFor stemte 48 (V, DF, LA, KF, DD, BP, Emilie Schytte (UFG), Nadja Natalie Isaksen (UFG)),\nimod stemte 62 (S, SF, M, EL, RV, ALT),\nhverken for eller imod stemte 2 (Cecilie Liv Hansen (UFG), Jacob Harris (UFG)).",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 273940,
+    "sagstrin_title": "2. (sidste) behandling",
+    "sagstrin_type": "2. behandling",
+    "sagstrin_status": "Behandlet/Forkastet",
+    "sag_id": 105027,
+    "sag_title": "Forslag til folketingsbeslutning om mulighed for at stille krav om håndtryk og respekt for danske samfundsnormer i offentlige institutioner og på arbejdsmarkedet.",
+    "sag_short_title": "Om mulighed for at stille krav om håndtryk og respekt for danske samfundsnormer i offentlige institutioner og på arbejdsmarkedet.",
+    "sag_resume": "Forslaget skal sikre, at offentlige myndigheder og arbejdsgivere kan stille generelle og kønsneutrale krav om almindelige professionelle omgangsformer, herunder håndtryk, når det er sagligt begrundet i hensynet til ligebehandling mellem mænd og kvinder, institutioners funktion og autoritet, tillid i borgerbetjening og integration i fælles samfundsnormer.\n\nBaggrunden for forslaget er en dom fra Højesteret i maj 2026, som efter forslagsstillernes opfattelse viser behov for klarere regler om forholdet mellem religionsfrihed og krav om ligebehandling og fælles normer. ",
+    "sag_number": "B 9",
+    "sag_type_id": 5,
+    "source_documents": [
+      {
+        "document_id": 1226293,
+        "title": "Betænkning afgivet den 27. august 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b9/bilag/2/3177907.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 15,
+        "document_category": "Notat",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1226290,
+        "title": "Betænkning afgivet af Udlændinge- og Integrationsudvalget den 27. august 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/beslutningsforslag/b9/20252_b9_betaenkning.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1224748,
+        "title": "Udkast til betænkning",
+        "number": null,
+        "date": "2026-08-25",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/beslutningsforslag/b9/bilag/1/3174023.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "counts": {
+      "for": 20,
+      "imod": 80,
+      "fravaer": 79,
+      "hverken": 0
+    },
+    "vote_groups": {
+      "for": [
+        18,
+        82,
+        99,
+        127,
+        130,
+        162,
+        168,
+        180,
+        216,
+        15779,
+        15793,
+        17629,
+        18696,
+        18699,
+        18711,
+        18723,
+        18724,
+        20350,
+        20355,
+        20357
+      ],
+      "imod": [
+        97,
+        118,
+        121,
+        154,
+        199,
+        208,
+        220,
+        244,
+        351,
+        9896,
+        15760,
+        15775,
+        15787,
+        16073,
+        16180,
+        16351,
+        16582,
+        16728,
+        18694,
+        18706,
+        18707,
+        18716,
+        18718,
+        18719,
+        18729,
+        19000,
+        19475,
+        20135,
+        20358,
+        20359,
+        20360,
+        20361,
+        20362,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        21371,
+        20135,
+        20361,
+        20365,
+        20362,
+        21360,
+        21342,
+        20360,
+        20358,
+        18706,
+        21302,
+        16073,
+        18718,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        21368,
+        15775,
+        121,
+        20411,
+        118,
+        97,
+        154,
+        199,
+        16728,
+        18694,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        16582,
+        351,
+        19000,
+        18716,
+        244,
+        220
+      ],
+      "fravaer": [
+        12,
+        43,
+        57,
+        109,
+        113,
+        119,
+        120,
+        138,
+        139,
+        141,
+        145,
+        152,
+        173,
+        182,
+        189,
+        206,
+        214,
+        219,
+        224,
+        238,
+        260,
+        262,
+        286,
+        1146,
+        1845,
+        15762,
+        15763,
+        15770,
+        15776,
+        15777,
+        15788,
+        15790,
+        15791,
+        17628,
+        18698,
+        18701,
+        18703,
+        18708,
+        18709,
+        18713,
+        18717,
+        18720,
+        18721,
+        18726,
+        20349,
+        20351,
+        20356,
+        21388,
+        18717,
+        21387,
+        21379,
+        18708,
+        18720,
+        21380,
+        17628,
+        109,
+        120,
+        224,
+        21338,
+        20351,
+        15791,
+        21398,
+        15777,
+        15770,
+        145,
+        43,
+        138,
+        12,
+        15776,
+        141,
+        57,
+        214,
+        286,
+        18709,
+        15788,
+        219,
+        15762,
+        152,
+        260
+      ],
+      "hverken": []
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [],
+        "imod": [
+          97,
+          118,
+          154,
+          208,
+          220,
+          244,
+          15760,
+          15787,
+          16351,
+          18716,
+          18718,
+          18719,
+          20361,
+          20362,
+          20361,
+          20362,
+          18718,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          154,
+          21343,
+          15787,
+          15760,
+          18716,
+          244,
+          220
+        ],
+        "fravaer": [
+          12,
+          120,
+          138,
+          152,
+          214,
+          224,
+          260,
+          286,
+          15762,
+          15770,
+          15776,
+          18717,
+          18720,
+          18717,
+          18720,
+          120,
+          224,
+          15770,
+          138,
+          12,
+          15776,
+          214,
+          286,
+          15762,
+          152,
+          260
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          18,
+          99,
+          18711
+        ],
+        "imod": [
+          199,
+          351,
+          9896,
+          16180,
+          20358,
+          9896,
+          21371,
+          20365,
+          20358,
+          21404,
+          16180,
+          199,
+          351
+        ],
+        "fravaer": [
+          113,
+          173,
+          15790,
+          15791,
+          18708,
+          18721,
+          21379,
+          18708,
+          21338,
+          15791
+        ],
+        "hverken": []
+      },
+      "SF": {
+        "for": [],
+        "imod": [
+          121,
+          16728,
+          18706,
+          18707,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          121,
+          16728,
+          20359,
+          18707,
+          19000
+        ],
+        "fravaer": [
+          43,
+          219,
+          15788,
+          17628,
+          18709,
+          17628,
+          43,
+          18709,
+          15788,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [],
+        "imod": [
+          19475
+        ],
+        "fravaer": [
+          57,
+          145,
+          145,
+          57
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [
+          82,
+          162,
+          17629,
+          20355
+        ],
+        "imod": [],
+        "fravaer": [
+          119,
+          182,
+          1146
+        ],
+        "hverken": []
+      },
+      "EL": {
+        "for": [],
+        "imod": [
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          18694,
+          16582
+        ],
+        "fravaer": [
+          109,
+          15777,
+          109,
+          21398,
+          15777
+        ],
+        "hverken": []
+      },
+      "V": {
+        "for": [
+          127,
+          130,
+          168,
+          180,
+          18696,
+          18699
+        ],
+        "imod": [],
+        "fravaer": [
+          139,
+          206,
+          1845,
+          18698,
+          18701
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [],
+        "imod": [
+          18729,
+          21474,
+          21475,
+          21360,
+          21344
+        ],
+        "fravaer": [
+          141,
+          18726,
+          21380,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [
+          15793,
+          20357
+        ],
+        "imod": [],
+        "fravaer": [
+          189,
+          18713
+        ],
+        "hverken": []
+      },
+      "DF": {
+        "for": [
+          216,
+          20350
+        ],
+        "imod": [],
+        "fravaer": [
+          238,
+          15763,
+          20356
+        ],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [],
+        "imod": [
+          15775,
+          21342,
+          21368,
+          15775
+        ],
+        "fravaer": [
+          20351,
+          20351
+        ],
+        "hverken": []
+      },
+      "LA": {
+        "for": [
+          15779,
+          18723
+        ],
+        "imod": [],
+        "fravaer": [
+          18703
+        ],
+        "hverken": []
+      },
+      "BP": {
+        "for": [
+          18724
+        ],
+        "imod": [],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21388
+        ],
+        "hverken": []
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 0,
+    "margin": 60,
+    "counts_source": "stemme"
+  },
+  {
+    "afstemning_id": 10600,
+    "nummer": 39,
+    "date": "2026-09-03",
+    "vedtaget": true,
+    "konklusion": "Forslaget er vedtaget.\nFor stemte 71 (S, SF, V, M, KF, RV og Emilie Schytte (UFG)),\nimod stemte 40 (DF, LA, EL, DD, ALT, BP, Cecilie Liv Hansen (UFG), Jacob Harris (UFG) og Nadja Natalie Isaksen (UFG)),\nhverken for eller imod stemte 0.",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 275264,
+    "sagstrin_title": "3. behandling",
+    "sagstrin_type": "3. behandling",
+    "sagstrin_status": "Behandlet/Vedtaget",
+    "sag_id": 105733,
+    "sag_title": "Forslag til lov om ændring af hjemrejseloven og repatrieringsloven. (Styrkelse af hjemrejsestøtteordningen og repatrieringsordningen).",
+    "sag_short_title": "Om styrkelse af hjemrejsestøtteordningen og repatrieringsordningen.",
+    "sag_resume": null,
+    "sag_number": "L 17 B",
+    "sag_type_id": 3,
+    "source_documents": [
+      {
+        "document_id": 1226879,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 3. september 2026",
+        "number": null,
+        "date": "2026-09-03",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l17b/20252_l17b_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1226257,
+        "title": "Efter afstemningen i Folketinget ved 2. behandling den 1. september 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l17b/20252_l17b_efter_2behandling.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 20,
+        "document_category": "Optryk efter 2.beh",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1225756,
+        "title": "Betænkning afgivet den 28. august 2026",
+        "number": null,
+        "date": "2026-08-28",
+        "role": "Parallelomdelt på",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l17/bilag/8/3176482.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 2,
+        "document_status": "Låst",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "counts": {
+      "for": 73,
+      "imod": 26,
+      "fravaer": 80,
+      "hverken": 0
+    },
+    "vote_groups": {
+      "for": [
+        97,
+        118,
+        121,
+        127,
+        130,
+        154,
+        168,
+        180,
+        199,
+        208,
+        220,
+        244,
+        351,
+        9896,
+        15760,
+        15787,
+        15793,
+        16180,
+        16351,
+        16728,
+        18696,
+        18699,
+        18706,
+        18707,
+        18711,
+        18716,
+        18718,
+        18719,
+        18729,
+        19000,
+        19475,
+        20357,
+        20358,
+        20359,
+        20360,
+        20361,
+        20362,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        20361,
+        20365,
+        20362,
+        20360,
+        20358,
+        18706,
+        18718,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        121,
+        118,
+        97,
+        154,
+        199,
+        16728,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        351,
+        19000,
+        18716,
+        244,
+        220
+      ],
+      "imod": [
+        18,
+        82,
+        99,
+        162,
+        216,
+        15775,
+        15779,
+        16073,
+        16582,
+        17629,
+        18694,
+        18723,
+        18724,
+        20135,
+        20350,
+        20355,
+        21371,
+        20135,
+        21342,
+        21302,
+        16073,
+        21368,
+        15775,
+        20411,
+        18694,
+        16582
+      ],
+      "fravaer": [
+        12,
+        43,
+        57,
+        109,
+        113,
+        119,
+        120,
+        138,
+        139,
+        141,
+        145,
+        152,
+        173,
+        182,
+        189,
+        206,
+        214,
+        219,
+        224,
+        238,
+        260,
+        262,
+        286,
+        1146,
+        1845,
+        15762,
+        15763,
+        15770,
+        15776,
+        15777,
+        15788,
+        15790,
+        15791,
+        17628,
+        18698,
+        18701,
+        18703,
+        18708,
+        18709,
+        18713,
+        18717,
+        18720,
+        18721,
+        18726,
+        20349,
+        20351,
+        20356,
+        21388,
+        18717,
+        21387,
+        21360,
+        21379,
+        18708,
+        18720,
+        21380,
+        17628,
+        109,
+        120,
+        224,
+        21338,
+        20351,
+        15791,
+        21398,
+        15777,
+        15770,
+        145,
+        43,
+        138,
+        12,
+        15776,
+        141,
+        57,
+        214,
+        286,
+        18709,
+        15788,
+        219,
+        15762,
+        152,
+        260
+      ],
+      "hverken": []
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [
+          97,
+          118,
+          154,
+          208,
+          220,
+          244,
+          15760,
+          15787,
+          16351,
+          18716,
+          18718,
+          18719,
+          20361,
+          20362,
+          20361,
+          20362,
+          18718,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          154,
+          21343,
+          15787,
+          15760,
+          18716,
+          244,
+          220
+        ],
+        "imod": [],
+        "fravaer": [
+          12,
+          120,
+          138,
+          152,
+          214,
+          224,
+          260,
+          286,
+          15762,
+          15770,
+          15776,
+          18717,
+          18720,
+          18717,
+          18720,
+          120,
+          224,
+          15770,
+          138,
+          12,
+          15776,
+          214,
+          286,
+          15762,
+          152,
+          260
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          199,
+          351,
+          9896,
+          16180,
+          18711,
+          20358,
+          9896,
+          20365,
+          20358,
+          21404,
+          16180,
+          199,
+          351
+        ],
+        "imod": [
+          18,
+          99,
+          21371
+        ],
+        "fravaer": [
+          113,
+          173,
+          15790,
+          15791,
+          18708,
+          18721,
+          21379,
+          18708,
+          21338,
+          15791
+        ],
+        "hverken": []
+      },
+      "SF": {
+        "for": [
+          121,
+          16728,
+          18706,
+          18707,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          121,
+          16728,
+          20359,
+          18707,
+          19000
+        ],
+        "imod": [],
+        "fravaer": [
+          43,
+          219,
+          15788,
+          17628,
+          18709,
+          17628,
+          43,
+          18709,
+          15788,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [
+          19475
+        ],
+        "imod": [],
+        "fravaer": [
+          57,
+          145,
+          145,
+          57
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [],
+        "imod": [
+          82,
+          162,
+          17629,
+          20355
+        ],
+        "fravaer": [
+          119,
+          182,
+          1146
+        ],
+        "hverken": []
+      },
+      "EL": {
+        "for": [],
+        "imod": [
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          18694,
+          16582
+        ],
+        "fravaer": [
+          109,
+          15777,
+          109,
+          21398,
+          15777
+        ],
+        "hverken": []
+      },
+      "V": {
+        "for": [
+          127,
+          130,
+          168,
+          180,
+          18696,
+          18699
+        ],
+        "imod": [],
+        "fravaer": [
+          139,
+          206,
+          1845,
+          18698,
+          18701
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [
+          18729,
+          21474,
+          21475,
+          21344
+        ],
+        "imod": [],
+        "fravaer": [
+          141,
+          18726,
+          21360,
+          21380,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [
+          15793,
+          20357
+        ],
+        "imod": [],
+        "fravaer": [
+          189,
+          18713
+        ],
+        "hverken": []
+      },
+      "DF": {
+        "for": [],
+        "imod": [
+          216,
+          20350
+        ],
+        "fravaer": [
+          238,
+          15763,
+          20356
+        ],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [],
+        "imod": [
+          15775,
+          21342,
+          21368,
+          15775
+        ],
+        "fravaer": [
+          20351,
+          20351
+        ],
+        "hverken": []
+      },
+      "LA": {
+        "for": [],
+        "imod": [
+          15779,
+          18723
+        ],
+        "fravaer": [
+          18703
+        ],
+        "hverken": []
+      },
+      "BP": {
+        "for": [],
+        "imod": [
+          18724
+        ],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21388
+        ],
+        "hverken": []
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 0,
+    "margin": 47,
+    "counts_source": "stemme"
+  },
+  {
+    "afstemning_id": 10599,
+    "nummer": 38,
+    "date": "2026-09-03",
+    "vedtaget": true,
+    "konklusion": "Forslaget er vedtaget.\nFor stemte 100 (S, SF, V, DF, LA, M, KF, DD, RV, BP, Emilie Schytte (UFG) og Nadja Natalie Isaksen (UFG)),\nimod stemte 10 (EL og ALT),\nhverken for eller imod stemte 2 (Cecilie Liv Hansen (UFG) og Jacob Harris (UFG)).",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 275260,
+    "sagstrin_title": "3. behandling",
+    "sagstrin_type": "3. behandling",
+    "sagstrin_status": "Behandlet/Vedtaget",
+    "sag_id": 105732,
+    "sag_title": "Forslag til lov om ændring af udlændingeloven, lov om midlertidig opholdstilladelse til personer, der er fordrevet fra Ukraine, hjemrejseloven, lov om fuldbyrdelse af straf m.v., repatrieringsloven og straffeloven. (Skærpelse af regler om udvisning ved ubetinget fængselsstraf af mindst 1 års varighed for visse former for alvorlig kriminalitet og indførelse af elektronisk kontrol med fodlænke for visse udlændinge m.v.).",
+    "sag_short_title": "Om skærpelse af regler om udvisning ved ubetinget fængselsstraf af mindst 1 års varighed for visse former for alvorlig kriminalitet m.v.",
+    "sag_resume": null,
+    "sag_number": "L 17 A",
+    "sag_type_id": 3,
+    "source_documents": [
+      {
+        "document_id": 1226880,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 3. september 2026",
+        "number": null,
+        "date": "2026-09-03",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l17a/20252_l17a_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1226256,
+        "title": "Efter afstemningen i Folketinget ved 2. behandling den 1. september 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l17a/20252_l17a_efter_2behandling.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 20,
+        "document_category": "Optryk efter 2.beh",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1225756,
+        "title": "Betænkning afgivet den 28. august 2026",
+        "number": null,
+        "date": "2026-08-28",
+        "role": "Parallelomdelt på",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l17/bilag/8/3176482.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 2,
+        "document_status": "Låst",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "counts": {
+      "for": 85,
+      "imod": 15,
+      "fravaer": 79,
+      "hverken": 0
+    },
+    "vote_groups": {
+      "for": [
+        18,
+        82,
+        97,
+        99,
+        118,
+        121,
+        127,
+        130,
+        154,
+        162,
+        168,
+        180,
+        199,
+        208,
+        216,
+        220,
+        244,
+        351,
+        9896,
+        15760,
+        15779,
+        15787,
+        15793,
+        16180,
+        16351,
+        16728,
+        17629,
+        18696,
+        18699,
+        18706,
+        18707,
+        18711,
+        18716,
+        18717,
+        18718,
+        18719,
+        18723,
+        18724,
+        18729,
+        19000,
+        19475,
+        20350,
+        20355,
+        20357,
+        20358,
+        20359,
+        20360,
+        20361,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        20361,
+        20365,
+        18717,
+        21360,
+        20360,
+        20358,
+        18706,
+        18718,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        121,
+        118,
+        97,
+        154,
+        16728,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        351,
+        19000,
+        18716,
+        244,
+        220,
+        199
+      ],
+      "imod": [
+        15775,
+        16073,
+        16582,
+        18694,
+        20135,
+        21371,
+        20135,
+        21342,
+        21302,
+        16073,
+        21368,
+        15775,
+        20411,
+        18694,
+        16582
+      ],
+      "fravaer": [
+        12,
+        43,
+        57,
+        109,
+        113,
+        119,
+        120,
+        138,
+        139,
+        141,
+        145,
+        152,
+        173,
+        182,
+        189,
+        206,
+        214,
+        219,
+        224,
+        238,
+        260,
+        262,
+        286,
+        1146,
+        1845,
+        15762,
+        15763,
+        15770,
+        15776,
+        15777,
+        15788,
+        15790,
+        15791,
+        17628,
+        18698,
+        18701,
+        18703,
+        18708,
+        18709,
+        18713,
+        18720,
+        18721,
+        18726,
+        20349,
+        20351,
+        20356,
+        20362,
+        21388,
+        20362,
+        21387,
+        21379,
+        18708,
+        18720,
+        21380,
+        17628,
+        109,
+        120,
+        224,
+        21338,
+        20351,
+        15791,
+        21398,
+        260,
+        15777,
+        15770,
+        145,
+        43,
+        138,
+        12,
+        15776,
+        141,
+        57,
+        214,
+        286,
+        18709,
+        15788,
+        219,
+        15762,
+        152
+      ],
+      "hverken": []
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [
+          97,
+          118,
+          154,
+          208,
+          220,
+          244,
+          15760,
+          15787,
+          16351,
+          18716,
+          18717,
+          18718,
+          18719,
+          20361,
+          20361,
+          18717,
+          18718,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          154,
+          21343,
+          15787,
+          15760,
+          18716,
+          244,
+          220
+        ],
+        "imod": [],
+        "fravaer": [
+          12,
+          120,
+          138,
+          152,
+          214,
+          224,
+          260,
+          286,
+          15762,
+          15770,
+          15776,
+          18720,
+          20362,
+          20362,
+          18720,
+          120,
+          224,
+          260,
+          15770,
+          138,
+          12,
+          15776,
+          214,
+          286,
+          15762,
+          152
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          18,
+          99,
+          199,
+          351,
+          9896,
+          16180,
+          18711,
+          20358,
+          9896,
+          20365,
+          20358,
+          21404,
+          16180,
+          351,
+          199
+        ],
+        "imod": [
+          21371
+        ],
+        "fravaer": [
+          113,
+          173,
+          15790,
+          15791,
+          18708,
+          18721,
+          21379,
+          18708,
+          21338,
+          15791
+        ],
+        "hverken": []
+      },
+      "SF": {
+        "for": [
+          121,
+          16728,
+          18706,
+          18707,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          121,
+          16728,
+          20359,
+          18707,
+          19000
+        ],
+        "imod": [],
+        "fravaer": [
+          43,
+          219,
+          15788,
+          17628,
+          18709,
+          17628,
+          43,
+          18709,
+          15788,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [
+          19475
+        ],
+        "imod": [],
+        "fravaer": [
+          57,
+          145,
+          145,
+          57
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [
+          82,
+          162,
+          17629,
+          20355
+        ],
+        "imod": [],
+        "fravaer": [
+          119,
+          182,
+          1146
+        ],
+        "hverken": []
+      },
+      "EL": {
+        "for": [],
+        "imod": [
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          18694,
+          16582
+        ],
+        "fravaer": [
+          109,
+          15777,
+          109,
+          21398,
+          15777
+        ],
+        "hverken": []
+      },
+      "V": {
+        "for": [
+          127,
+          130,
+          168,
+          180,
+          18696,
+          18699
+        ],
+        "imod": [],
+        "fravaer": [
+          139,
+          206,
+          1845,
+          18698,
+          18701
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [
+          18729,
+          21474,
+          21475,
+          21360,
+          21344
+        ],
+        "imod": [],
+        "fravaer": [
+          141,
+          18726,
+          21380,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [
+          15793,
+          20357
+        ],
+        "imod": [],
+        "fravaer": [
+          189,
+          18713
+        ],
+        "hverken": []
+      },
+      "DF": {
+        "for": [
+          216,
+          20350
+        ],
+        "imod": [],
+        "fravaer": [
+          238,
+          15763,
+          20356
+        ],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [],
+        "imod": [
+          15775,
+          21342,
+          21368,
+          15775
+        ],
+        "fravaer": [
+          20351,
+          20351
+        ],
+        "hverken": []
+      },
+      "LA": {
+        "for": [
+          15779,
+          18723
+        ],
+        "imod": [],
+        "fravaer": [
+          18703
+        ],
+        "hverken": []
+      },
+      "BP": {
+        "for": [
+          18724
+        ],
+        "imod": [],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21388
+        ],
+        "hverken": []
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 0,
+    "margin": 70,
+    "counts_source": "stemme"
+  },
+  {
+    "afstemning_id": 10598,
+    "nummer": 37,
+    "date": "2026-09-03",
+    "vedtaget": true,
+    "konklusion": "Forslaget er vedtaget.\nFor stemte 92 (S, SF, V, LA, M, KF, EL, RV og ALT),\nimod stemte 18 (DF, DD, BP, Emilie Schytte (UFG) og Nadja Natalie Isaksen (UFG)),\nhverken for eller imod stemte 2 (Cecilie Liv Hansen (UFG) og Jacob Harris (UFG)).",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 274564,
+    "sagstrin_title": "3. behandling",
+    "sagstrin_type": "3. behandling",
+    "sagstrin_status": "Behandlet/Vedtaget",
+    "sag_id": 105366,
+    "sag_title": "Forslag til lov om ændring af udlændingeloven. (Ny overenskomstbaseret beløbsordning for certificerede virksomheder).",
+    "sag_short_title": "Om ny overenskomstbaseret beløbsordning for certificerede virksomheder.",
+    "sag_resume": "Med forslaget indføres en ny beløbsordning med en lavere beløbsgrænse end de eksisterende beløbsordninger, som kan anvendes af certificerede virksomheder til at ansætte udenlandsk arbejdskraft under ordnede løn- og arbejdsvilkår. \n\nOrdningen vil være betinget af et overenskomstkrav, som skal påses af arbejdsmarkedets parter, og ordningen skal kun gælde for borgere fra visse lande og kun i perioder med lav ledighed. Der stilles desuden krav om bl.a. en minimumsløn på 322.000 kr. årligt (2026-niveau). For at kunne anvende ordningen skal virksomheder certificeres og opfylde en række krav, herunder dokumentation for ordnede forhold og adgang for relevante lønmodtagerorganisationer til at føre kontrol. \n\nForslaget foreslås at træde i kraft den 1. januar 2027.\n",
+    "sag_number": "L 16",
+    "sag_type_id": 3,
+    "source_documents": [
+      {
+        "document_id": 1226882,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 3. september 2026",
+        "number": null,
+        "date": "2026-09-03",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l16/20252_l16_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1226262,
+        "title": "Efter afstemningen i Folketinget ved 2. behandling den 1. september 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l16/20252_l16_efter_2behandling.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 20,
+        "document_category": "Optryk efter 2.beh",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1225751,
+        "title": "L 16 - svar på MFU spm. 32 om overblik over kriminalitet blandt borgere fra landelisten",
+        "number": null,
+        "date": "2026-08-28",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l16/spm/32/svar/2225396/3176468.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 17075,
+            "name": "udlændinge- og integrationsministeren",
+            "short_name": "udlændinge- og integrationsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 17075,
+            "name": "udlændinge- og integrationsministeren",
+            "short_name": "udlændinge- og integrationsminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 21354,
+            "name": "Nadja Natalie Isaksen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 3,
+            "role": "Stiller/MFU"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "udlændinge- og integrationsministeren"
+          ]
+        }
+      }
+    ],
+    "counts": {
+      "for": 92,
+      "imod": 8,
+      "fravaer": 79,
+      "hverken": 0
+    },
+    "vote_groups": {
+      "for": [
+        97,
+        99,
+        118,
+        121,
+        127,
+        130,
+        154,
+        168,
+        180,
+        199,
+        208,
+        220,
+        244,
+        351,
+        9896,
+        15760,
+        15775,
+        15779,
+        15787,
+        15793,
+        16073,
+        16180,
+        16351,
+        16582,
+        16728,
+        18694,
+        18696,
+        18699,
+        18706,
+        18707,
+        18711,
+        18716,
+        18717,
+        18718,
+        18719,
+        18723,
+        18729,
+        19000,
+        19475,
+        20135,
+        20357,
+        20358,
+        20359,
+        20360,
+        20361,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        21371,
+        20135,
+        20361,
+        20365,
+        18717,
+        21360,
+        21342,
+        20360,
+        20358,
+        18706,
+        21302,
+        16073,
+        18718,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        21368,
+        15775,
+        121,
+        20411,
+        118,
+        97,
+        154,
+        16728,
+        18694,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        16582,
+        351,
+        19000,
+        18716,
+        244,
+        220,
+        199
+      ],
+      "imod": [
+        18,
+        82,
+        162,
+        216,
+        17629,
+        18724,
+        20350,
+        20355
+      ],
+      "fravaer": [
+        12,
+        43,
+        57,
+        109,
+        113,
+        119,
+        120,
+        138,
+        139,
+        141,
+        145,
+        152,
+        173,
+        182,
+        189,
+        206,
+        214,
+        219,
+        224,
+        238,
+        260,
+        262,
+        286,
+        1146,
+        1845,
+        15762,
+        15763,
+        15770,
+        15776,
+        15777,
+        15788,
+        15790,
+        15791,
+        17628,
+        18698,
+        18701,
+        18703,
+        18708,
+        18709,
+        18713,
+        18720,
+        18721,
+        18726,
+        20349,
+        20351,
+        20356,
+        20362,
+        21388,
+        20362,
+        21387,
+        21379,
+        18708,
+        18720,
+        21380,
+        17628,
+        109,
+        120,
+        224,
+        21338,
+        20351,
+        15791,
+        21398,
+        260,
+        15777,
+        15770,
+        145,
+        43,
+        138,
+        12,
+        15776,
+        141,
+        57,
+        214,
+        286,
+        18709,
+        15788,
+        219,
+        15762,
+        152
+      ],
+      "hverken": []
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [
+          97,
+          118,
+          154,
+          208,
+          220,
+          244,
+          15760,
+          15787,
+          16351,
+          18716,
+          18717,
+          18718,
+          18719,
+          20361,
+          20361,
+          18717,
+          18718,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          154,
+          21343,
+          15787,
+          15760,
+          18716,
+          244,
+          220
+        ],
+        "imod": [],
+        "fravaer": [
+          12,
+          120,
+          138,
+          152,
+          214,
+          224,
+          260,
+          286,
+          15762,
+          15770,
+          15776,
+          18720,
+          20362,
+          20362,
+          18720,
+          120,
+          224,
+          260,
+          15770,
+          138,
+          12,
+          15776,
+          214,
+          286,
+          15762,
+          152
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          99,
+          199,
+          351,
+          9896,
+          16180,
+          18711,
+          20358,
+          9896,
+          21371,
+          20365,
+          20358,
+          21404,
+          16180,
+          351,
+          199
+        ],
+        "imod": [
+          18
+        ],
+        "fravaer": [
+          113,
+          173,
+          15790,
+          15791,
+          18708,
+          18721,
+          21379,
+          18708,
+          21338,
+          15791
+        ],
+        "hverken": []
+      },
+      "SF": {
+        "for": [
+          121,
+          16728,
+          18706,
+          18707,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          121,
+          16728,
+          20359,
+          18707,
+          19000
+        ],
+        "imod": [],
+        "fravaer": [
+          43,
+          219,
+          15788,
+          17628,
+          18709,
+          17628,
+          43,
+          18709,
+          15788,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [
+          19475
+        ],
+        "imod": [],
+        "fravaer": [
+          57,
+          145,
+          145,
+          57
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [],
+        "imod": [
+          82,
+          162,
+          17629,
+          20355
+        ],
+        "fravaer": [
+          119,
+          182,
+          1146
+        ],
+        "hverken": []
+      },
+      "EL": {
+        "for": [
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          18694,
+          16582
+        ],
+        "imod": [],
+        "fravaer": [
+          109,
+          15777,
+          109,
+          21398,
+          15777
+        ],
+        "hverken": []
+      },
+      "V": {
+        "for": [
+          127,
+          130,
+          168,
+          180,
+          18696,
+          18699
+        ],
+        "imod": [],
+        "fravaer": [
+          139,
+          206,
+          1845,
+          18698,
+          18701
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [
+          18729,
+          21474,
+          21475,
+          21360,
+          21344
+        ],
+        "imod": [],
+        "fravaer": [
+          141,
+          18726,
+          21380,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [
+          15793,
+          20357
+        ],
+        "imod": [],
+        "fravaer": [
+          189,
+          18713
+        ],
+        "hverken": []
+      },
+      "DF": {
+        "for": [],
+        "imod": [
+          216,
+          20350
+        ],
+        "fravaer": [
+          238,
+          15763,
+          20356
+        ],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [
+          15775,
+          21342,
+          21368,
+          15775
+        ],
+        "imod": [],
+        "fravaer": [
+          20351,
+          20351
+        ],
+        "hverken": []
+      },
+      "LA": {
+        "for": [
+          15779,
+          18723
+        ],
+        "imod": [],
+        "fravaer": [
+          18703
+        ],
+        "hverken": []
+      },
+      "BP": {
+        "for": [],
+        "imod": [
+          18724
+        ],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21388
+        ],
+        "hverken": []
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 0,
+    "margin": 84,
+    "counts_source": "stemme"
+  },
+  {
+    "afstemning_id": 10597,
+    "nummer": 36,
+    "date": "2026-09-03",
+    "vedtaget": true,
+    "konklusion": "Forslaget er vedtaget.\nFor stemte 112 (S, SF, V, DF, LA, M, KF, EL, DD, RV, ALT, BP, Cecilie Liv Hansen (UFG), Emilie Schytte (UFG), Jacob Harris (UFG) og Nadja Natalie Isaksen (UFG)),\nimod stemte 0,\nhverken for eller imod stemte 0.",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 274486,
+    "sagstrin_title": "3. behandling",
+    "sagstrin_type": "3. behandling",
+    "sagstrin_status": "Behandlet/Vedtaget",
+    "sag_id": 105378,
+    "sag_title": "Forslag til lov om ændring af lov om elforsyning. (Forenkling af regler for solcelleanlæg på offentlige bygninger).",
+    "sag_short_title": "Om forenkling af regler for solcelleanlæg på offentlige bygninger.",
+    "sag_resume": "Forslaget er en genfremsættelse af L 107, samling 2025-26 (1. samling).\n\nForslaget, der bygger på \"Aftale om udbygningen af sol og vind på land 2025\", vil forenkle reglerne for solcelleanlæg på offentlige bygninger. Kommuner og regioner vil fremadrettet selv kunne producere, forbruge, lagre og sælge overskydende el fra solcelleanlæg uden at skulle oprette særskilte selskaber eller indberette besparelser. Dette vil fjerne administrative byrder og giver elafgiftsfritagelse for egetforbrug. Lovforslaget forventes at træde i kraft den 14. september 2026 og forventes at fremme udbygningen af solceller på offentlige bygninger.",
+    "sag_number": "L 10",
+    "sag_type_id": 3,
+    "source_documents": [
+      {
+        "document_id": 1226875,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 3. september 2026",
+        "number": null,
+        "date": "2026-09-03",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l10/20252_l10_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1226279,
+        "title": "Efter afstemningen i Folketinget ved 2. behandling den 1. september 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l10/20252_l10_efter_2behandling.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 20,
+        "document_category": "Optryk efter 2.beh",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1225288,
+        "title": "Betænkning afgivet den 26/8-26",
+        "number": null,
+        "date": "2026-08-27",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l10/bilag/7/3175310.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "counts": {
+      "for": 100,
+      "imod": 0,
+      "fravaer": 79,
+      "hverken": 0
+    },
+    "vote_groups": {
+      "for": [
+        18,
+        82,
+        97,
+        99,
+        118,
+        121,
+        127,
+        130,
+        154,
+        162,
+        168,
+        180,
+        199,
+        208,
+        216,
+        220,
+        244,
+        351,
+        9896,
+        15760,
+        15775,
+        15779,
+        15787,
+        15793,
+        16073,
+        16180,
+        16351,
+        16582,
+        16728,
+        17629,
+        18694,
+        18696,
+        18699,
+        18706,
+        18707,
+        18711,
+        18716,
+        18717,
+        18718,
+        18719,
+        18723,
+        18724,
+        18729,
+        19000,
+        19475,
+        20135,
+        20350,
+        20355,
+        20357,
+        20358,
+        20359,
+        20360,
+        20361,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        21371,
+        20135,
+        20361,
+        20365,
+        18717,
+        21360,
+        21342,
+        20360,
+        20358,
+        18706,
+        21302,
+        16073,
+        18718,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        21368,
+        15775,
+        121,
+        20411,
+        118,
+        97,
+        154,
+        16728,
+        18694,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        16582,
+        351,
+        19000,
+        18716,
+        244,
+        220,
+        199
+      ],
+      "imod": [],
+      "fravaer": [
+        12,
+        43,
+        57,
+        109,
+        113,
+        119,
+        120,
+        138,
+        139,
+        141,
+        145,
+        152,
+        173,
+        182,
+        189,
+        206,
+        214,
+        219,
+        224,
+        238,
+        260,
+        262,
+        286,
+        1146,
+        1845,
+        15762,
+        15763,
+        15770,
+        15776,
+        15777,
+        15788,
+        15790,
+        15791,
+        17628,
+        18698,
+        18701,
+        18703,
+        18708,
+        18709,
+        18713,
+        18720,
+        18721,
+        18726,
+        20349,
+        20351,
+        20356,
+        20362,
+        21388,
+        20362,
+        21387,
+        21379,
+        18708,
+        18720,
+        21380,
+        17628,
+        109,
+        120,
+        224,
+        21338,
+        20351,
+        15791,
+        21398,
+        260,
+        15777,
+        15770,
+        145,
+        43,
+        138,
+        12,
+        15776,
+        141,
+        57,
+        214,
+        286,
+        18709,
+        15788,
+        219,
+        15762,
+        152
+      ],
+      "hverken": []
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [
+          97,
+          118,
+          154,
+          208,
+          220,
+          244,
+          15760,
+          15787,
+          16351,
+          18716,
+          18717,
+          18718,
+          18719,
+          20361,
+          20361,
+          18717,
+          18718,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          154,
+          21343,
+          15787,
+          15760,
+          18716,
+          244,
+          220
+        ],
+        "imod": [],
+        "fravaer": [
+          12,
+          120,
+          138,
+          152,
+          214,
+          224,
+          260,
+          286,
+          15762,
+          15770,
+          15776,
+          18720,
+          20362,
+          20362,
+          18720,
+          120,
+          224,
+          260,
+          15770,
+          138,
+          12,
+          15776,
+          214,
+          286,
+          15762,
+          152
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          18,
+          99,
+          199,
+          351,
+          9896,
+          16180,
+          18711,
+          20358,
+          9896,
+          21371,
+          20365,
+          20358,
+          21404,
+          16180,
+          351,
+          199
+        ],
+        "imod": [],
+        "fravaer": [
+          113,
+          173,
+          15790,
+          15791,
+          18708,
+          18721,
+          21379,
+          18708,
+          21338,
+          15791
+        ],
+        "hverken": []
+      },
+      "SF": {
+        "for": [
+          121,
+          16728,
+          18706,
+          18707,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          121,
+          16728,
+          20359,
+          18707,
+          19000
+        ],
+        "imod": [],
+        "fravaer": [
+          43,
+          219,
+          15788,
+          17628,
+          18709,
+          17628,
+          43,
+          18709,
+          15788,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [
+          19475
+        ],
+        "imod": [],
+        "fravaer": [
+          57,
+          145,
+          145,
+          57
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [
+          82,
+          162,
+          17629,
+          20355
+        ],
+        "imod": [],
+        "fravaer": [
+          119,
+          182,
+          1146
+        ],
+        "hverken": []
+      },
+      "EL": {
+        "for": [
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          18694,
+          16582
+        ],
+        "imod": [],
+        "fravaer": [
+          109,
+          15777,
+          109,
+          21398,
+          15777
+        ],
+        "hverken": []
+      },
+      "V": {
+        "for": [
+          127,
+          130,
+          168,
+          180,
+          18696,
+          18699
+        ],
+        "imod": [],
+        "fravaer": [
+          139,
+          206,
+          1845,
+          18698,
+          18701
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [
+          18729,
+          21474,
+          21475,
+          21360,
+          21344
+        ],
+        "imod": [],
+        "fravaer": [
+          141,
+          18726,
+          21380,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [
+          15793,
+          20357
+        ],
+        "imod": [],
+        "fravaer": [
+          189,
+          18713
+        ],
+        "hverken": []
+      },
+      "DF": {
+        "for": [
+          216,
+          20350
+        ],
+        "imod": [],
+        "fravaer": [
+          238,
+          15763,
+          20356
+        ],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [
+          15775,
+          21342,
+          21368,
+          15775
+        ],
+        "imod": [],
+        "fravaer": [
+          20351,
+          20351
+        ],
+        "hverken": []
+      },
+      "LA": {
+        "for": [
+          15779,
+          18723
+        ],
+        "imod": [],
+        "fravaer": [
+          18703
+        ],
+        "hverken": []
+      },
+      "BP": {
+        "for": [
+          18724
+        ],
+        "imod": [],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21388
+        ],
+        "hverken": []
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 0,
+    "margin": 100,
+    "counts_source": "stemme"
+  },
+  {
+    "afstemning_id": 10596,
+    "nummer": 35,
+    "date": "2026-09-03",
+    "vedtaget": true,
+    "konklusion": "Forslaget er vedtaget.\nFor stemte 96 (S, SF, V, DF, LA, M, KF, DD, RV, BP og Nadja Natalie Isaksen (UFG)),\nimod stemte 3 (ALT),\nhverken for eller imod stemte 10 (EL, Cecilie Liv Hansen (UFG), Emilie Schytte (UFG) og Jacob Harris (UFG)).",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 274630,
+    "sagstrin_title": "3. behandling",
+    "sagstrin_type": "3. behandling",
+    "sagstrin_status": "Behandlet/Vedtaget",
+    "sag_id": 105385,
+    "sag_title": "Forslag til lov om ændring af universitetsloven, lov om adgangsregulering ved videregående uddannelser og forskellige andre love. (Initiativer vedrørende visse udenlandske studerende, adgang til ph.d.-uddannelse, specialpædagogisk støtte til studerende på erhvervskandidatuddannelser m.v.).",
+    "sag_short_title": "Om gennemførsel af en række initiativer for at forhindre misbrug af studieophold m.v.",
+    "sag_resume": "Lovforslaget har til formål at forhindre misbrug af studieophold til arbejdsmigration og at følge op på reformen af universitetsuddannelserne.\n\nLovforslaget giver universiteter mulighed for at indføre studiestartsprøver, stille skærpede krav til studieaktivitet for visse udenlandske studerende og kræve verificerede dokumenter samt afvise ansøgninger ved snyd. Der indføres også ændringer i gebyrer og deltagerbetaling for visse udenlandske studerende.\n\nDerudover foreslås det, at visse udenlandske studerende ikke kan medtage familie til Danmark, og at jobsøgningsophold, der i dag gives til udlændinge, der afslutter visse danske uddannelser, forkortes fra tre til et år. Forslaget udvider samtidig adgangen til ph.d.-uddannelse og adgangen til SU og specialpædagogisk støtte for erhvervskandidatstuderende.\n\nLovforslaget foreslås at træde i kraft den 1. oktober 2026. \n\nL 21 er en genfremsættelse af L 121, folketingsåret 2025-26, 1. samling. \n",
+    "sag_number": "L 21",
+    "sag_type_id": 3,
+    "source_documents": [
+      {
+        "document_id": 1226874,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 3. september 2026",
+        "number": null,
+        "date": "2026-09-03",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l21/20252_l21_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1226278,
+        "title": "Efter afstemningen i Folketinget ved 2. behandling den 1. september 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l21/20252_l21_efter_2behandling.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 20,
+        "document_category": "Optryk efter 2.beh",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1225401,
+        "title": "Betænkning afgivet 26/8-26",
+        "number": null,
+        "date": "2026-08-27",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l21/bilag/5/3175621.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "counts": {
+      "for": 83,
+      "imod": 4,
+      "fravaer": 81,
+      "hverken": 11
+    },
+    "vote_groups": {
+      "for": [
+        18,
+        82,
+        97,
+        99,
+        118,
+        121,
+        127,
+        130,
+        154,
+        162,
+        168,
+        180,
+        199,
+        208,
+        216,
+        220,
+        244,
+        9896,
+        15760,
+        15779,
+        15787,
+        15793,
+        16180,
+        16351,
+        16728,
+        17629,
+        18696,
+        18699,
+        18706,
+        18707,
+        18711,
+        18716,
+        18717,
+        18718,
+        18719,
+        18723,
+        18724,
+        18729,
+        19000,
+        19475,
+        20350,
+        20355,
+        20357,
+        20358,
+        20359,
+        20360,
+        20361,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        20361,
+        20365,
+        18717,
+        21360,
+        20360,
+        20358,
+        18706,
+        18718,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        121,
+        118,
+        97,
+        154,
+        16728,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        19000,
+        18716,
+        244,
+        220,
+        199
+      ],
+      "imod": [
+        15775,
+        21342,
+        21368,
+        15775
+      ],
+      "fravaer": [
+        12,
+        43,
+        57,
+        109,
+        113,
+        119,
+        120,
+        138,
+        139,
+        141,
+        145,
+        152,
+        173,
+        182,
+        189,
+        206,
+        214,
+        219,
+        224,
+        238,
+        260,
+        262,
+        286,
+        351,
+        1146,
+        1845,
+        15762,
+        15763,
+        15770,
+        15776,
+        15777,
+        15788,
+        15790,
+        15791,
+        17628,
+        18698,
+        18701,
+        18703,
+        18708,
+        18709,
+        18713,
+        18720,
+        18721,
+        18726,
+        20349,
+        20351,
+        20356,
+        20362,
+        21388,
+        20362,
+        21387,
+        21379,
+        18708,
+        18720,
+        21380,
+        17628,
+        109,
+        120,
+        224,
+        21338,
+        20351,
+        15791,
+        21398,
+        260,
+        351,
+        15777,
+        15770,
+        145,
+        43,
+        138,
+        12,
+        15776,
+        141,
+        57,
+        214,
+        286,
+        18709,
+        15788,
+        219,
+        15762,
+        152
+      ],
+      "hverken": [
+        16073,
+        16582,
+        18694,
+        20135,
+        21371,
+        20135,
+        21302,
+        16073,
+        20411,
+        18694,
+        16582
+      ]
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [
+          97,
+          118,
+          154,
+          208,
+          220,
+          244,
+          15760,
+          15787,
+          16351,
+          18716,
+          18717,
+          18718,
+          18719,
+          20361,
+          20361,
+          18717,
+          18718,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          154,
+          21343,
+          15787,
+          15760,
+          18716,
+          244,
+          220
+        ],
+        "imod": [],
+        "fravaer": [
+          12,
+          120,
+          138,
+          152,
+          214,
+          224,
+          260,
+          286,
+          15762,
+          15770,
+          15776,
+          18720,
+          20362,
+          20362,
+          18720,
+          120,
+          224,
+          260,
+          15770,
+          138,
+          12,
+          15776,
+          214,
+          286,
+          15762,
+          152
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          18,
+          99,
+          199,
+          9896,
+          16180,
+          18711,
+          20358,
+          9896,
+          20365,
+          20358,
+          21404,
+          16180,
+          199
+        ],
+        "imod": [],
+        "fravaer": [
+          113,
+          173,
+          351,
+          15790,
+          15791,
+          18708,
+          18721,
+          21379,
+          18708,
+          21338,
+          15791,
+          351
+        ],
+        "hverken": [
+          21371
+        ]
+      },
+      "SF": {
+        "for": [
+          121,
+          16728,
+          18706,
+          18707,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          121,
+          16728,
+          20359,
+          18707,
+          19000
+        ],
+        "imod": [],
+        "fravaer": [
+          43,
+          219,
+          15788,
+          17628,
+          18709,
+          17628,
+          43,
+          18709,
+          15788,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [
+          19475
+        ],
+        "imod": [],
+        "fravaer": [
+          57,
+          145,
+          145,
+          57
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [
+          82,
+          162,
+          17629,
+          20355
+        ],
+        "imod": [],
+        "fravaer": [
+          119,
+          182,
+          1146
+        ],
+        "hverken": []
+      },
+      "EL": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          109,
+          15777,
+          109,
+          21398,
+          15777
+        ],
+        "hverken": [
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          18694,
+          16582
+        ]
+      },
+      "V": {
+        "for": [
+          127,
+          130,
+          168,
+          180,
+          18696,
+          18699
+        ],
+        "imod": [],
+        "fravaer": [
+          139,
+          206,
+          1845,
+          18698,
+          18701
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [
+          18729,
+          21474,
+          21475,
+          21360,
+          21344
+        ],
+        "imod": [],
+        "fravaer": [
+          141,
+          18726,
+          21380,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [
+          15793,
+          20357
+        ],
+        "imod": [],
+        "fravaer": [
+          189,
+          18713
+        ],
+        "hverken": []
+      },
+      "DF": {
+        "for": [
+          216,
+          20350
+        ],
+        "imod": [],
+        "fravaer": [
+          238,
+          15763,
+          20356
+        ],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [],
+        "imod": [
+          15775,
+          21342,
+          21368,
+          15775
+        ],
+        "fravaer": [
+          20351,
+          20351
+        ],
+        "hverken": []
+      },
+      "LA": {
+        "for": [
+          15779,
+          18723
+        ],
+        "imod": [],
+        "fravaer": [
+          18703
+        ],
+        "hverken": []
+      },
+      "BP": {
+        "for": [
+          18724
+        ],
+        "imod": [],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21388
+        ],
+        "hverken": []
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 0,
+    "margin": 79,
+    "counts_source": "stemme"
+  },
+  {
+    "afstemning_id": 10595,
+    "nummer": 34,
+    "date": "2026-09-03",
+    "vedtaget": true,
+    "konklusion": "Forslaget er vedtaget.\nFor stemte 112 (S, SF, V, DF, LA, M, KF, EL, DD, RV, ALT, BP, Cecilie Liv Hansen (UFG), Emilie Schytte (UFG), Jacob Harris (UFG) og Nadja Natalie Isaksen (UFG)),\nimod stemte 0,\nhverken for eller imod stemte 0.",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 274617,
+    "sagstrin_title": "3. behandling",
+    "sagstrin_type": "3. behandling",
+    "sagstrin_status": "Behandlet/Vedtaget",
+    "sag_id": 105384,
+    "sag_title": "Forslag til lov om ændring af SU-loven og forskellige andre love. (Overførsel af opgaver fra Uddannelses- og Forskningsstyrelsen og uddannelsesinstitutioner til Udbetaling Danmark og Arbejdsgivernes Uddannelsesbidrag).",
+    "sag_short_title": "Om overførsel af opgaver til Udbetaling Danmark og Arbejdsgivernes Uddannelsesbidrag m.v.",
+    "sag_resume": "Med lovforslaget vil administrationen af og vejledningen om su, statens voksenuddannelsesstøtte (svu) og befordringsrabat overføres fra Uddannelses- og Forskningsstyrelsen og uddannelsesinstitutioner til Udbetaling Danmark og Arbejdsgivernes Uddannelsesbidrag.\n\nLovforslaget er en delvis genfremsættelse af L 94, folketingsåret 2025-26 (1. samling). ",
+    "sag_number": "L 20",
+    "sag_type_id": 3,
+    "source_documents": [
+      {
+        "document_id": 1226876,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 3. september 2026",
+        "number": null,
+        "date": "2026-09-03",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l20/20252_l20_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1226277,
+        "title": "Efter afstemningen i Folketinget ved 2. behandling den 1. september 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l20/20252_l20_efter_2behandling.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 20,
+        "document_category": "Optryk efter 2.beh",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1225377,
+        "title": "Betænkning afgivet den 26/8-26",
+        "number": null,
+        "date": "2026-08-27",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l20/bilag/5/3175549.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "counts": {
+      "for": 99,
+      "imod": 0,
+      "fravaer": 80,
+      "hverken": 0
+    },
+    "vote_groups": {
+      "for": [
+        18,
+        82,
+        97,
+        99,
+        118,
+        121,
+        127,
+        130,
+        154,
+        162,
+        168,
+        180,
+        199,
+        208,
+        216,
+        220,
+        244,
+        351,
+        9896,
+        15760,
+        15775,
+        15779,
+        15787,
+        15793,
+        16073,
+        16180,
+        16351,
+        16582,
+        16728,
+        17629,
+        18694,
+        18696,
+        18706,
+        18707,
+        18711,
+        18716,
+        18717,
+        18718,
+        18719,
+        18723,
+        18724,
+        18729,
+        19000,
+        19475,
+        20135,
+        20350,
+        20355,
+        20357,
+        20358,
+        20359,
+        20360,
+        20361,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        21371,
+        20135,
+        20361,
+        20365,
+        18717,
+        21360,
+        21342,
+        20360,
+        20358,
+        18706,
+        21302,
+        16073,
+        18718,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        21368,
+        15775,
+        121,
+        20411,
+        118,
+        97,
+        154,
+        16728,
+        18694,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        16582,
+        351,
+        19000,
+        18716,
+        244,
+        220,
+        199
+      ],
+      "imod": [],
+      "fravaer": [
+        12,
+        43,
+        57,
+        109,
+        113,
+        119,
+        120,
+        138,
+        139,
+        141,
+        145,
+        152,
+        173,
+        182,
+        189,
+        206,
+        214,
+        219,
+        224,
+        238,
+        260,
+        262,
+        286,
+        1146,
+        1845,
+        15762,
+        15763,
+        15770,
+        15776,
+        15777,
+        15788,
+        15790,
+        15791,
+        17628,
+        18698,
+        18699,
+        18701,
+        18703,
+        18708,
+        18709,
+        18713,
+        18720,
+        18721,
+        18726,
+        20349,
+        20351,
+        20356,
+        20362,
+        21388,
+        20362,
+        21387,
+        21379,
+        18708,
+        18720,
+        21380,
+        17628,
+        109,
+        120,
+        224,
+        21338,
+        20351,
+        15791,
+        21398,
+        260,
+        15777,
+        15770,
+        145,
+        43,
+        138,
+        12,
+        15776,
+        141,
+        57,
+        214,
+        286,
+        18709,
+        15788,
+        219,
+        15762,
+        152
+      ],
+      "hverken": []
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [
+          97,
+          118,
+          154,
+          208,
+          220,
+          244,
+          15760,
+          15787,
+          16351,
+          18716,
+          18717,
+          18718,
+          18719,
+          20361,
+          20361,
+          18717,
+          18718,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          154,
+          21343,
+          15787,
+          15760,
+          18716,
+          244,
+          220
+        ],
+        "imod": [],
+        "fravaer": [
+          12,
+          120,
+          138,
+          152,
+          214,
+          224,
+          260,
+          286,
+          15762,
+          15770,
+          15776,
+          18720,
+          20362,
+          20362,
+          18720,
+          120,
+          224,
+          260,
+          15770,
+          138,
+          12,
+          15776,
+          214,
+          286,
+          15762,
+          152
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          18,
+          99,
+          199,
+          351,
+          9896,
+          16180,
+          18711,
+          20358,
+          9896,
+          21371,
+          20365,
+          20358,
+          21404,
+          16180,
+          351,
+          199
+        ],
+        "imod": [],
+        "fravaer": [
+          113,
+          173,
+          15790,
+          15791,
+          18708,
+          18721,
+          21379,
+          18708,
+          21338,
+          15791
+        ],
+        "hverken": []
+      },
+      "SF": {
+        "for": [
+          121,
+          16728,
+          18706,
+          18707,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          121,
+          16728,
+          20359,
+          18707,
+          19000
+        ],
+        "imod": [],
+        "fravaer": [
+          43,
+          219,
+          15788,
+          17628,
+          18709,
+          17628,
+          43,
+          18709,
+          15788,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [
+          19475
+        ],
+        "imod": [],
+        "fravaer": [
+          57,
+          145,
+          145,
+          57
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [
+          82,
+          162,
+          17629,
+          20355
+        ],
+        "imod": [],
+        "fravaer": [
+          119,
+          182,
+          1146
+        ],
+        "hverken": []
+      },
+      "EL": {
+        "for": [
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          18694,
+          16582
+        ],
+        "imod": [],
+        "fravaer": [
+          109,
+          15777,
+          109,
+          21398,
+          15777
+        ],
+        "hverken": []
+      },
+      "V": {
+        "for": [
+          127,
+          130,
+          168,
+          180,
+          18696
+        ],
+        "imod": [],
+        "fravaer": [
+          139,
+          206,
+          1845,
+          18698,
+          18699,
+          18701
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [
+          18729,
+          21474,
+          21475,
+          21360,
+          21344
+        ],
+        "imod": [],
+        "fravaer": [
+          141,
+          18726,
+          21380,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [
+          15793,
+          20357
+        ],
+        "imod": [],
+        "fravaer": [
+          189,
+          18713
+        ],
+        "hverken": []
+      },
+      "DF": {
+        "for": [
+          216,
+          20350
+        ],
+        "imod": [],
+        "fravaer": [
+          238,
+          15763,
+          20356
+        ],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [
+          15775,
+          21342,
+          21368,
+          15775
+        ],
+        "imod": [],
+        "fravaer": [
+          20351,
+          20351
+        ],
+        "hverken": []
+      },
+      "LA": {
+        "for": [
+          15779,
+          18723
+        ],
+        "imod": [],
+        "fravaer": [
+          18703
+        ],
+        "hverken": []
+      },
+      "BP": {
+        "for": [
+          18724
+        ],
+        "imod": [],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21388
+        ],
+        "hverken": []
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 0,
+    "margin": 99,
+    "counts_source": "stemme"
+  },
+  {
+    "afstemning_id": 10594,
+    "nummer": 33,
+    "date": "2026-09-03",
+    "vedtaget": true,
+    "konklusion": "Forslaget er vedtaget.\nFor stemte 86 (S, SF, V, DF, M, EL, RV, ALT og Nadja Natalie Isaksen (UFG)),\nimod stemte 26 (LA, KF, DD, BP, Cecilie Liv Hansen (UFG), Emilie Schytte (UFG) og Jacob Harris (UFG)),\nhverken for eller imod stemte 0.",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 274604,
+    "sagstrin_title": "3. behandling",
+    "sagstrin_type": "3. behandling",
+    "sagstrin_status": "Behandlet/Vedtaget",
+    "sag_id": 105383,
+    "sag_title": "Forslag til lov om id-kort på byggepladser.",
+    "sag_short_title": "Om id-kort på byggepladser.",
+    "sag_resume": "Lovforslaget udmønter dele af »Aftale om en styrket indsats mod social dumping«, som blev indgået mellem den daværende regering (Socialdemokratiet, Venstre og Moderaterne), Socialistisk Folkeparti, Enhedslisten, Dansk Folkeparti, Radikale Venstre og Alternativet den 8. oktober 2025.\n\nDer indføres med forslaget et krav om id-kort på bygge- og anlægsprojekter med en anlægssum på over 100 mio. kr., herunder krav til hvilke oplysninger id-kortet skal indeholde, registrering af opholdstid på bygge- og anlægsprojekterne og en indberetningspligt for bygherre til Arbejdstilsynet. Beskæftigelsesministeren bemyndiges til at beslutte, om branchen bliver ansvarlig for at sikre en løsning til at udstede id-kort, eller om Arbejdstilsynet bliver ansvarlig for et statsligt id-kort.\n\nLovforslaget er bortset fra ændringer af ikrafttrædelsestidspunktet og af lovteknisk karakter en genfremsættelse af lovforslag nr. L 120, der bortfaldt i forbindelse med udskrivelsen af valget til Folketinget den 26. februar 2026.",
+    "sag_number": "L 19",
+    "sag_type_id": 3,
+    "source_documents": [
+      {
+        "document_id": 1226877,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 3. september 2026",
+        "number": null,
+        "date": "2026-09-03",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l19/20252_l19_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1226531,
+        "title": "L 19 - svar på spm. 17 om kommentar til henvendelse af 29/8-26 fra Lars Flak",
+        "number": null,
+        "date": "2026-09-02",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l19/spm/17/svar/2226379/3178417.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 21459,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21459,
+            "name": "beskæftigelsesministeren",
+            "short_name": "beskæftigelsesminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "beskæftigelsesministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1226280,
+        "title": "Efter afstemningen i Folketinget ved 2. behandling den 1. september 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l19/20252_l19_efter_2behandling.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 20,
+        "document_category": "Optryk efter 2.beh",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "counts": {
+      "for": 91,
+      "imod": 10,
+      "fravaer": 78,
+      "hverken": 0
+    },
+    "vote_groups": {
+      "for": [
+        18,
+        97,
+        118,
+        121,
+        127,
+        130,
+        154,
+        168,
+        180,
+        199,
+        208,
+        216,
+        220,
+        244,
+        286,
+        351,
+        9896,
+        15760,
+        15775,
+        15787,
+        16073,
+        16180,
+        16351,
+        16582,
+        16728,
+        18694,
+        18696,
+        18699,
+        18706,
+        18707,
+        18716,
+        18717,
+        18718,
+        18719,
+        18729,
+        19000,
+        19475,
+        20135,
+        20350,
+        20358,
+        20359,
+        20360,
+        20361,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        21371,
+        20135,
+        20361,
+        20365,
+        18717,
+        21360,
+        21342,
+        20360,
+        20358,
+        18706,
+        21302,
+        16073,
+        18718,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        21368,
+        15775,
+        121,
+        20411,
+        118,
+        97,
+        154,
+        16728,
+        18694,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        16582,
+        351,
+        19000,
+        18716,
+        286,
+        244,
+        220,
+        199
+      ],
+      "imod": [
+        82,
+        162,
+        15779,
+        15793,
+        17629,
+        18711,
+        18723,
+        18724,
+        20355,
+        20357
+      ],
+      "fravaer": [
+        12,
+        43,
+        57,
+        99,
+        109,
+        113,
+        119,
+        120,
+        138,
+        139,
+        141,
+        145,
+        152,
+        173,
+        182,
+        189,
+        206,
+        214,
+        219,
+        224,
+        238,
+        260,
+        262,
+        1146,
+        1845,
+        15762,
+        15763,
+        15770,
+        15776,
+        15777,
+        15788,
+        15790,
+        15791,
+        17628,
+        18698,
+        18701,
+        18703,
+        18708,
+        18709,
+        18713,
+        18720,
+        18721,
+        18726,
+        20349,
+        20351,
+        20356,
+        20362,
+        21388,
+        20362,
+        21387,
+        21379,
+        18708,
+        18720,
+        21380,
+        17628,
+        109,
+        120,
+        224,
+        21338,
+        20351,
+        15791,
+        21398,
+        260,
+        15777,
+        15770,
+        145,
+        43,
+        138,
+        12,
+        15776,
+        141,
+        57,
+        214,
+        18709,
+        15788,
+        219,
+        15762,
+        152
+      ],
+      "hverken": []
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [
+          97,
+          118,
+          154,
+          208,
+          220,
+          244,
+          286,
+          15760,
+          15787,
+          16351,
+          18716,
+          18717,
+          18718,
+          18719,
+          20361,
+          20361,
+          18717,
+          18718,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          154,
+          21343,
+          15787,
+          15760,
+          18716,
+          286,
+          244,
+          220
+        ],
+        "imod": [],
+        "fravaer": [
+          12,
+          120,
+          138,
+          152,
+          214,
+          224,
+          260,
+          15762,
+          15770,
+          15776,
+          18720,
+          20362,
+          20362,
+          18720,
+          120,
+          224,
+          260,
+          15770,
+          138,
+          12,
+          15776,
+          214,
+          15762,
+          152
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          18,
+          199,
+          351,
+          9896,
+          16180,
+          20358,
+          9896,
+          21371,
+          20365,
+          20358,
+          21404,
+          16180,
+          351,
+          199
+        ],
+        "imod": [
+          18711
+        ],
+        "fravaer": [
+          99,
+          113,
+          173,
+          15790,
+          15791,
+          18708,
+          18721,
+          21379,
+          18708,
+          21338,
+          15791
+        ],
+        "hverken": []
+      },
+      "SF": {
+        "for": [
+          121,
+          16728,
+          18706,
+          18707,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          121,
+          16728,
+          20359,
+          18707,
+          19000
+        ],
+        "imod": [],
+        "fravaer": [
+          43,
+          219,
+          15788,
+          17628,
+          18709,
+          17628,
+          43,
+          18709,
+          15788,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [
+          19475
+        ],
+        "imod": [],
+        "fravaer": [
+          57,
+          145,
+          145,
+          57
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [],
+        "imod": [
+          82,
+          162,
+          17629,
+          20355
+        ],
+        "fravaer": [
+          119,
+          182,
+          1146
+        ],
+        "hverken": []
+      },
+      "EL": {
+        "for": [
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          18694,
+          16582
+        ],
+        "imod": [],
+        "fravaer": [
+          109,
+          15777,
+          109,
+          21398,
+          15777
+        ],
+        "hverken": []
+      },
+      "V": {
+        "for": [
+          127,
+          130,
+          168,
+          180,
+          18696,
+          18699
+        ],
+        "imod": [],
+        "fravaer": [
+          139,
+          206,
+          1845,
+          18698,
+          18701
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [
+          18729,
+          21474,
+          21475,
+          21360,
+          21344
+        ],
+        "imod": [],
+        "fravaer": [
+          141,
+          18726,
+          21380,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [],
+        "imod": [
+          15793,
+          20357
+        ],
+        "fravaer": [
+          189,
+          18713
+        ],
+        "hverken": []
+      },
+      "DF": {
+        "for": [
+          216,
+          20350
+        ],
+        "imod": [],
+        "fravaer": [
+          238,
+          15763,
+          20356
+        ],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [
+          15775,
+          21342,
+          21368,
+          15775
+        ],
+        "imod": [],
+        "fravaer": [
+          20351,
+          20351
+        ],
+        "hverken": []
+      },
+      "LA": {
+        "for": [],
+        "imod": [
+          15779,
+          18723
+        ],
+        "fravaer": [
+          18703
+        ],
+        "hverken": []
+      },
+      "BP": {
+        "for": [],
+        "imod": [
+          18724
+        ],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21388
+        ],
+        "hverken": []
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 0,
+    "margin": 81,
+    "counts_source": "stemme"
+  },
+  {
+    "afstemning_id": 10593,
+    "nummer": 32,
+    "date": "2026-09-03",
+    "vedtaget": true,
+    "konklusion": "Forslaget er vedtaget.\nFor stemte 113 (S, SF, V, DF, LA, M, KF, EL, DD, RV, ALT, BP, Emilie Schytte (UFG) og Nadja Natalie Isaksen (UFG)),\nimod stemte 0,\nhverken for eller imod stemte 2 (Cecilie Liv Hansen (UFG) og Jacob Harris (UFG)).",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 274473,
+    "sagstrin_title": "3. behandling",
+    "sagstrin_type": "3. behandling",
+    "sagstrin_status": "Behandlet/Vedtaget",
+    "sag_id": 105377,
+    "sag_title": "Forslag til lov om ændring af hvidvaskloven, lov om finansiel virksomhed, lov om betalinger, lov om fondsmæglerselskaber og investeringsservice og -aktiviteter og forskellige andre love. (Styrkelse af Danmarks efterlevelse af FATF’s anbefalinger om bekæmpelse af hvidvask, terrorfinansiering og proliferationsfinansiering, oprettelse af basal indlånskonto for mindreårige, fastsættelse af regler om gennemsigtighed i gebyrer og vilkår for indløsning af betalingstransaktioner med et betalingsinstrument og gennemførelse af direktiv om tilsyn med investeringsselskaber m.v.).",
+    "sag_short_title": "Om implementering af FATF’s anbefalinger om bekæmpelse af hvidvask, terrorfinansiering og proliferationsfinansering m.v.",
+    "sag_resume": "Forslaget skal styrke indsatsen mod hvidvask, terrorfinansiering og finansiering af masseødelæggelsesvåben. Med forslaget indføres der i hvidvasklovgivningen krav om, at virksomheder skal foretage risikovurderinger vedrørende finansiering af masseødelæggelsesvåben og have kontroller, der sikrer overholdelse af regler om finansielle sanktioner mod lande, personer og virksomheder. Kravene skal understøtte efterlevelsen af FN’s sikkerhedsresolutioner, EU’s sanktionsforordninger og internationale anbefalinger fra Financial Action Task Force (FATF). Forslaget skal desuden give mulighed for, at mindreårige fra 15 år i visse tilfælde kan oprette en basal indlånskonto uden værgens samtykke. Derudover skal forslaget styrke konkurrencen på betalingsområdet og skabe mere gennemsigtighed i betalingsmarkedet samt udmønte aftalen fra 26. juni 2025 mellem den daværende regering (Socialdemokratiet, Venstre og Moderaterne), Socialistisk Folkeparti, Det Konservative Folkeparti, Radikale Venstre og Dansk Folkeparti om styrkelse af Dankort.\n",
+    "sag_number": "L 9",
+    "sag_type_id": 3,
+    "source_documents": [
+      {
+        "document_id": 1226878,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 3. september 2026",
+        "number": null,
+        "date": "2026-09-03",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l9/20252_l9_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1226275,
+        "title": "Efter afstemningen i Folketinget ved 2. behandling den 1. september 2026",
+        "number": null,
+        "date": "2026-09-01",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l9/20252_l9_efter_2behandling.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 20,
+        "document_category": "Optryk efter 2.beh",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1226068,
+        "title": "L 9 - svar på spm. 20 om hvidvaskreglers anvendelse ved oprettelse af indlånskonto for mindreårige fyldt 15 år efter lovforslaget",
+        "number": null,
+        "date": "2026-08-31",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l9/spm/20/svar/2225777/3177312.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 21374,
+            "name": "Jacob Harris",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "skatte- og vækstministeren"
+          ]
+        }
+      }
+    ],
+    "counts": {
+      "for": 104,
+      "imod": 0,
+      "fravaer": 75,
+      "hverken": 0
+    },
+    "vote_groups": {
+      "for": [
+        18,
+        57,
+        82,
+        97,
+        99,
+        118,
+        120,
+        121,
+        127,
+        130,
+        154,
+        162,
+        168,
+        180,
+        199,
+        208,
+        216,
+        220,
+        244,
+        286,
+        9896,
+        15760,
+        15775,
+        15779,
+        15787,
+        15793,
+        16073,
+        16180,
+        16351,
+        16582,
+        16728,
+        17629,
+        18694,
+        18696,
+        18699,
+        18706,
+        18707,
+        18711,
+        18716,
+        18717,
+        18718,
+        18719,
+        18723,
+        18724,
+        18729,
+        19000,
+        19475,
+        20135,
+        20350,
+        20355,
+        20357,
+        20358,
+        20359,
+        20360,
+        20361,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        21371,
+        20135,
+        20361,
+        20365,
+        18717,
+        21360,
+        21342,
+        20360,
+        20358,
+        18706,
+        21302,
+        16073,
+        18718,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        21368,
+        15775,
+        121,
+        20411,
+        118,
+        97,
+        120,
+        154,
+        16728,
+        18694,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        16582,
+        19000,
+        18716,
+        57,
+        286,
+        244,
+        220,
+        199
+      ],
+      "imod": [],
+      "fravaer": [
+        12,
+        43,
+        109,
+        113,
+        119,
+        138,
+        139,
+        141,
+        145,
+        152,
+        173,
+        182,
+        189,
+        206,
+        214,
+        219,
+        224,
+        238,
+        260,
+        262,
+        351,
+        1146,
+        1845,
+        15762,
+        15763,
+        15770,
+        15776,
+        15777,
+        15788,
+        15790,
+        15791,
+        17628,
+        18698,
+        18701,
+        18703,
+        18708,
+        18709,
+        18713,
+        18720,
+        18721,
+        18726,
+        20349,
+        20351,
+        20356,
+        20362,
+        21388,
+        20362,
+        21387,
+        21379,
+        18708,
+        18720,
+        21380,
+        17628,
+        109,
+        224,
+        21338,
+        20351,
+        15791,
+        21398,
+        260,
+        351,
+        15777,
+        15770,
+        145,
+        43,
+        138,
+        12,
+        15776,
+        141,
+        214,
+        18709,
+        15788,
+        219,
+        15762,
+        152
+      ],
+      "hverken": []
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [
+          97,
+          118,
+          120,
+          154,
+          208,
+          220,
+          244,
+          286,
+          15760,
+          15787,
+          16351,
+          18716,
+          18717,
+          18718,
+          18719,
+          20361,
+          20361,
+          18717,
+          18718,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          120,
+          154,
+          21343,
+          15787,
+          15760,
+          18716,
+          286,
+          244,
+          220
+        ],
+        "imod": [],
+        "fravaer": [
+          12,
+          138,
+          152,
+          214,
+          224,
+          260,
+          15762,
+          15770,
+          15776,
+          18720,
+          20362,
+          20362,
+          18720,
+          224,
+          260,
+          15770,
+          138,
+          12,
+          15776,
+          214,
+          15762,
+          152
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          18,
+          99,
+          199,
+          9896,
+          16180,
+          18711,
+          20358,
+          9896,
+          21371,
+          20365,
+          20358,
+          21404,
+          16180,
+          199
+        ],
+        "imod": [],
+        "fravaer": [
+          113,
+          173,
+          351,
+          15790,
+          15791,
+          18708,
+          18721,
+          21379,
+          18708,
+          21338,
+          15791,
+          351
+        ],
+        "hverken": []
+      },
+      "SF": {
+        "for": [
+          121,
+          16728,
+          18706,
+          18707,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          121,
+          16728,
+          20359,
+          18707,
+          19000
+        ],
+        "imod": [],
+        "fravaer": [
+          43,
+          219,
+          15788,
+          17628,
+          18709,
+          17628,
+          43,
+          18709,
+          15788,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [
+          57,
+          19475,
+          57
+        ],
+        "imod": [],
+        "fravaer": [
+          145,
+          145
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [
+          82,
+          162,
+          17629,
+          20355
+        ],
+        "imod": [],
+        "fravaer": [
+          119,
+          182,
+          1146
+        ],
+        "hverken": []
+      },
+      "EL": {
+        "for": [
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          18694,
+          16582
+        ],
+        "imod": [],
+        "fravaer": [
+          109,
+          15777,
+          109,
+          21398,
+          15777
+        ],
+        "hverken": []
+      },
+      "V": {
+        "for": [
+          127,
+          130,
+          168,
+          180,
+          18696,
+          18699
+        ],
+        "imod": [],
+        "fravaer": [
+          139,
+          206,
+          1845,
+          18698,
+          18701
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [
+          18729,
+          21474,
+          21475,
+          21360,
+          21344
+        ],
+        "imod": [],
+        "fravaer": [
+          141,
+          18726,
+          21380,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [
+          15793,
+          20357
+        ],
+        "imod": [],
+        "fravaer": [
+          189,
+          18713
+        ],
+        "hverken": []
+      },
+      "DF": {
+        "for": [
+          216,
+          20350
+        ],
+        "imod": [],
+        "fravaer": [
+          238,
+          15763,
+          20356
+        ],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [
+          15775,
+          21342,
+          21368,
+          15775
+        ],
+        "imod": [],
+        "fravaer": [
+          20351,
+          20351
+        ],
+        "hverken": []
+      },
+      "LA": {
+        "for": [
+          15779,
+          18723
+        ],
+        "imod": [],
+        "fravaer": [
+          18703
+        ],
+        "hverken": []
+      },
+      "BP": {
+        "for": [
+          18724
+        ],
+        "imod": [],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21388
+        ],
+        "hverken": []
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 0,
+    "margin": 104,
+    "counts_source": "stemme"
+  },
+  {
+    "afstemning_id": 10592,
+    "nummer": 31,
+    "date": "2026-09-03",
+    "vedtaget": true,
+    "konklusion": "Forslaget er vedtaget.\nFor stemte 108 (S, SF, V, DF, LA, M, KF, EL, DD, RV, ALT og Nadja Natalie Isaksen (UFG)),\nimod stemte 5 (BP, Hans Kristian Skibby (DD), Cecilie Liv Hansen (UFG), Emilie Schytte (UFG) og Jacob Harris (UFG)),\nhverken for eller imod stemte 1 (N).",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 274460,
+    "sagstrin_title": "3. behandling",
+    "sagstrin_type": "3. behandling",
+    "sagstrin_status": "Behandlet/Vedtaget",
+    "sag_id": 105376,
+    "sag_title": "Forslag til lov om ændring af opkrævningsloven og forskellige andre love. (Forhøjelse af rykkergebyr ved told- og skatteforvaltningens opkrævning af visse skatter og afgifter m.v.).",
+    "sag_short_title": "Om forhøjelse af rykkergebyr ved told- og skatteforvaltningens opkrævning af visse skatter og afgifter m.v.",
+    "sag_resume": "Lovforslaget er med enkelte justeringer en genfremsættelse af lovforslag nr. L 102, folketingsåret 2025-26, 1. samling, og har til formål at udmønte dele af ”Flerårsaftale om skattevæsenets økonomi for 2023-2027”, som blev indgået mellem den daværende regering (Socialdemokratiet, Venstre og Moderaterne), Socialistisk Folkeparti, Danmarksdemokraterne, Liberal Alliance, Det Konservative Folkeparti, Enhedslisten, Radikale Venstre, Dansk Folkeparti og Alternativet den 13. juni 2023. \n\nAftaleparterne er den 14. november 2025 blevet enige om et nyt finansieringsforslag om opregulering af rykkergebyr med henblik på at udligne den manglende finansiering af flerårsaftalen vedrørende 2026-2027. I dag pålægges et rykkergebyr på 65 kr. ved for sen betaling af visse skatter og afgifter. Gebyret er uændret siden 1992. Det foreslås at regulere gebyret for opkrævning af visse skatter og afgifter til 2026-niveau, hvorved gebyret fastsættes til 160 kr. \n\nHerudover foreslås det bl.a. at lovfæste en beløbsmæssig bagatelgrænse for, hvornår der rykkes for en virksomheds skatte- og afgiftsgæld, når virksomheden i forvejen har gæld under inddrivelse. I lyset af forhøjelsen af rykkergebyret foreslås det, at bagatelgrænsen lovfæstes og forhøjes til 200 kr.\n\nDet foreslås, at loven skal træde i kraft den 14. september 2026.\n",
+    "sag_number": "L 8",
+    "sag_type_id": 3,
+    "source_documents": [
+      {
+        "document_id": 1226871,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 3. september 2026",
+        "number": null,
+        "date": "2026-09-03",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l8/20252_l8_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1225331,
+        "title": "Betænkning afgivet af Skatteudvalget den 26. august 2026",
+        "number": null,
+        "date": "2026-08-27",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l8/bilag/4/3175437.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 12,
+        "document_type": "Bilag",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1225306,
+        "title": "Betænkning afgivet af Skatteudvalget den 26. august 2026",
+        "number": null,
+        "date": "2026-08-27",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l8/20252_l8_betaenkning.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 55,
+        "document_category": "Betænkning m.v.",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      }
+    ],
+    "counts": {
+      "for": 99,
+      "imod": 2,
+      "fravaer": 77,
+      "hverken": 1
+    },
+    "vote_groups": {
+      "for": [
+        18,
+        57,
+        97,
+        99,
+        118,
+        120,
+        121,
+        127,
+        130,
+        162,
+        180,
+        199,
+        208,
+        216,
+        220,
+        244,
+        286,
+        9896,
+        15760,
+        15775,
+        15779,
+        15787,
+        15793,
+        16073,
+        16180,
+        16351,
+        16582,
+        16728,
+        17629,
+        18694,
+        18696,
+        18699,
+        18706,
+        18707,
+        18711,
+        18716,
+        18717,
+        18718,
+        18719,
+        18723,
+        18729,
+        19000,
+        19475,
+        20135,
+        20350,
+        20355,
+        20357,
+        20358,
+        20359,
+        20360,
+        20361,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        21371,
+        20135,
+        20361,
+        20365,
+        18717,
+        21360,
+        21342,
+        20360,
+        20358,
+        18706,
+        21302,
+        16073,
+        18718,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        21368,
+        15775,
+        121,
+        20411,
+        118,
+        97,
+        120,
+        16728,
+        18694,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        16582,
+        19000,
+        18716,
+        57,
+        286,
+        244,
+        220,
+        199
+      ],
+      "imod": [
+        82,
+        18724
+      ],
+      "fravaer": [
+        12,
+        43,
+        109,
+        113,
+        119,
+        138,
+        139,
+        141,
+        145,
+        152,
+        154,
+        168,
+        173,
+        182,
+        189,
+        206,
+        214,
+        219,
+        224,
+        238,
+        260,
+        262,
+        351,
+        1146,
+        1845,
+        15762,
+        15763,
+        15770,
+        15776,
+        15777,
+        15788,
+        15790,
+        15791,
+        17628,
+        18698,
+        18701,
+        18703,
+        18708,
+        18709,
+        18713,
+        18720,
+        18721,
+        18726,
+        20349,
+        20351,
+        20356,
+        20362,
+        20362,
+        21387,
+        21379,
+        18708,
+        18720,
+        21380,
+        17628,
+        109,
+        224,
+        154,
+        21338,
+        20351,
+        15791,
+        21398,
+        260,
+        351,
+        15777,
+        15770,
+        145,
+        43,
+        138,
+        12,
+        15776,
+        141,
+        214,
+        18709,
+        15788,
+        219,
+        15762,
+        152
+      ],
+      "hverken": [
+        21388
+      ]
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [
+          97,
+          118,
+          120,
+          208,
+          220,
+          244,
+          286,
+          15760,
+          15787,
+          16351,
+          18716,
+          18717,
+          18718,
+          18719,
+          20361,
+          20361,
+          18717,
+          18718,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          120,
+          21343,
+          15787,
+          15760,
+          18716,
+          286,
+          244,
+          220
+        ],
+        "imod": [],
+        "fravaer": [
+          12,
+          138,
+          152,
+          154,
+          214,
+          224,
+          260,
+          15762,
+          15770,
+          15776,
+          18720,
+          20362,
+          20362,
+          18720,
+          224,
+          154,
+          260,
+          15770,
+          138,
+          12,
+          15776,
+          214,
+          15762,
+          152
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          18,
+          99,
+          199,
+          9896,
+          16180,
+          18711,
+          20358,
+          9896,
+          21371,
+          20365,
+          20358,
+          21404,
+          16180,
+          199
+        ],
+        "imod": [],
+        "fravaer": [
+          113,
+          173,
+          351,
+          15790,
+          15791,
+          18708,
+          18721,
+          21379,
+          18708,
+          21338,
+          15791,
+          351
+        ],
+        "hverken": []
+      },
+      "SF": {
+        "for": [
+          121,
+          16728,
+          18706,
+          18707,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          121,
+          16728,
+          20359,
+          18707,
+          19000
+        ],
+        "imod": [],
+        "fravaer": [
+          43,
+          219,
+          15788,
+          17628,
+          18709,
+          17628,
+          43,
+          18709,
+          15788,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [
+          57,
+          19475,
+          57
+        ],
+        "imod": [],
+        "fravaer": [
+          145,
+          145
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [
+          162,
+          17629,
+          20355
+        ],
+        "imod": [
+          82
+        ],
+        "fravaer": [
+          119,
+          182,
+          1146
+        ],
+        "hverken": []
+      },
+      "EL": {
+        "for": [
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          18694,
+          16582
+        ],
+        "imod": [],
+        "fravaer": [
+          109,
+          15777,
+          109,
+          21398,
+          15777
+        ],
+        "hverken": []
+      },
+      "V": {
+        "for": [
+          127,
+          130,
+          180,
+          18696,
+          18699
+        ],
+        "imod": [],
+        "fravaer": [
+          139,
+          168,
+          206,
+          1845,
+          18698,
+          18701
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [
+          18729,
+          21474,
+          21475,
+          21360,
+          21344
+        ],
+        "imod": [],
+        "fravaer": [
+          141,
+          18726,
+          21380,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [
+          15793,
+          20357
+        ],
+        "imod": [],
+        "fravaer": [
+          189,
+          18713
+        ],
+        "hverken": []
+      },
+      "DF": {
+        "for": [
+          216,
+          20350
+        ],
+        "imod": [],
+        "fravaer": [
+          238,
+          15763,
+          20356
+        ],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [
+          15775,
+          21342,
+          21368,
+          15775
+        ],
+        "imod": [],
+        "fravaer": [
+          20351,
+          20351
+        ],
+        "hverken": []
+      },
+      "LA": {
+        "for": [
+          15779,
+          18723
+        ],
+        "imod": [],
+        "fravaer": [
+          18703
+        ],
+        "hverken": []
+      },
+      "BP": {
+        "for": [],
+        "imod": [
+          18724
+        ],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [],
+        "hverken": [
+          21388
+        ]
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 1,
+    "margin": 97,
+    "counts_source": "stemme"
+  },
+  {
+    "afstemning_id": 10591,
+    "nummer": 30,
+    "date": "2026-09-03",
+    "vedtaget": true,
+    "konklusion": "Forslaget er vedtaget.\nFor stemte 119 (S, SF, V, LA, M, KF, EL, RV og ALT),\nimod stemte 34 (DF, DD, BP, Peter Juel-Jensen (V), Søren Gade (V), Preben Bang Henriksen (V), Anni Matthiesen (V), Amanda Heitmann (V), Emilie Schytte (UFG) og Nadja Natalie Isaksen (UFG)),\nhverken for eller imod stemte 0.",
+    "kommentar": null,
+    "type_id": 1,
+    "type": "Endelig vedtagelse",
+    "sagstrin_id": 274421,
+    "sagstrin_title": "3. behandling",
+    "sagstrin_type": "3. behandling",
+    "sagstrin_status": "Behandlet/Vedtaget",
+    "sag_id": 105373,
+    "sag_title": "Forslag til lov om bæredygtig forvaltning af næringsstoffer og drivhusgasser m.v. i land- og skovbruget (gødskningsloven).",
+    "sag_short_title": "Om bæredygtig forvaltning af næringsstoffer og drivhusgasser m.v. i land- og skovbruget.",
+    "sag_resume": "Lovforslaget etablerer en ny ramme for regulering af land- og skovbrugets udledninger af næringsstoffer og drivhusgasser til vandmiljøet og naturen som led i »Aftale om Implementering af et Grønt Danmark« fra den 18. november 2024  mellem den daværende regering (Socialdemokratiet, Venstre og Moderaterne), Socialistisk Folkeparti, Liberal Alliance, Det Konservative Folkeparti og Radikale Venstre.\n\nForslaget er en del af et paradigmeskifte i kvælstofindsatsen, hvor regulering kombineres med målrettet arealomlægning, omstilling og moderne arealforvaltning. Indsatsen bygger på lokalt forankret, frivillig omstilling af landbruget og fælles løsninger.\n\nFra 2027 erstattes den nuværende markregulering af en udledningsbaseret regulering. Miljøgarantien sikrer yderligere regulering, hvis indsatsbehovet ikke opfyldes, og mulighed for lempelser, hvis effekten bliver større end forudsat.\n\nLovforslaget bidrager til at opfylde EU-forpligtelser om vandmiljø, nitrat og Natura 2000 og indeholder hjemmel til ekspropriation samt straf ved overtrædelser.\n\n",
+    "sag_number": "L 5",
+    "sag_type_id": 3,
+    "source_documents": [
+      {
+        "document_id": 1226872,
+        "title": "Vedtaget af Folketinget ved 3. behandling den 3. september 2026",
+        "number": null,
+        "date": "2026-09-03",
+        "role": "På sagstrin",
+        "url": "https://www.ft.dk/ripdf/samling/20252/lovforslag/l5/20252_l5_som_vedtaget.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 21,
+        "document_type": "Forslagstekst",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 23,
+        "document_category": "Forslag som vedtaget",
+        "document_actors": [],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
+        "document_id": 1226766,
+        "title": "L 5 - svar på spm. 79 om kommentar til henvendelse af 1/9-26 fra Fair Spildevand",
+        "number": null,
+        "date": "2026-09-03",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l5/spm/79/svar/2226631/3178980.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 21434,
+            "name": "ministeren for natur og dyrevelfærd",
+            "short_name": "minister for natur og dyrevelfærd",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21434,
+            "name": "ministeren for natur og dyrevelfærd",
+            "short_name": "minister for natur og dyrevelfærd",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "ministeren for natur og dyrevelfærd"
+          ]
+        }
+      },
+      {
+        "document_id": 1226767,
+        "title": "L 5 - svar på spm. 78 om det er udtryk for lighed for loven, når der fastsættes særregler for én type landbrugsproduktion frem for en anden",
+        "number": null,
+        "date": "2026-09-03",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l5/spm/78/svar/2226632/3178982.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 21434,
+            "name": "ministeren for natur og dyrevelfærd",
+            "short_name": "minister for natur og dyrevelfærd",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21434,
+            "name": "ministeren for natur og dyrevelfærd",
+            "short_name": "minister for natur og dyrevelfærd",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 20355,
+            "name": "Kim Edberg Andersen",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 12,
+            "role": "Stiller"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "ministeren for natur og dyrevelfærd"
+          ]
+        }
+      }
+    ],
+    "counts": {
+      "for": 127,
+      "imod": 20,
+      "fravaer": 32,
+      "hverken": 0
+    },
+    "vote_groups": {
+      "for": [
+        43,
+        57,
+        97,
+        99,
+        109,
+        118,
+        120,
+        121,
+        130,
+        139,
+        154,
+        173,
+        189,
+        199,
+        206,
+        208,
+        220,
+        244,
+        260,
+        286,
+        351,
+        9896,
+        15760,
+        15762,
+        15770,
+        15775,
+        15779,
+        15787,
+        15788,
+        15790,
+        15793,
+        16073,
+        16180,
+        16351,
+        16582,
+        16728,
+        17628,
+        18694,
+        18696,
+        18699,
+        18701,
+        18703,
+        18706,
+        18707,
+        18709,
+        18711,
+        18713,
+        18716,
+        18717,
+        18718,
+        18719,
+        18720,
+        18723,
+        18729,
+        19000,
+        19475,
+        20135,
+        20351,
+        20357,
+        20358,
+        20359,
+        20360,
+        20361,
+        21474,
+        21475,
+        21365,
+        21383,
+        21340,
+        21361,
+        9896,
+        21371,
+        20135,
+        20361,
+        20365,
+        18717,
+        21360,
+        21379,
+        21342,
+        20360,
+        20358,
+        18706,
+        21302,
+        16073,
+        18718,
+        18720,
+        18719,
+        21404,
+        16180,
+        16351,
+        208,
+        21344,
+        21380,
+        21368,
+        15775,
+        17628,
+        121,
+        20411,
+        109,
+        118,
+        97,
+        120,
+        154,
+        21338,
+        20351,
+        16728,
+        18694,
+        21343,
+        15787,
+        15760,
+        20359,
+        18707,
+        21398,
+        16582,
+        260,
+        351,
+        19000,
+        18716,
+        15770,
+        43,
+        57,
+        286,
+        244,
+        220,
+        18709,
+        15788,
+        15762,
+        199
+      ],
+      "imod": [
+        18,
+        82,
+        113,
+        119,
+        127,
+        162,
+        168,
+        180,
+        182,
+        216,
+        238,
+        1146,
+        1845,
+        15763,
+        17629,
+        18721,
+        18724,
+        20350,
+        20355,
+        20356
+      ],
+      "fravaer": [
+        12,
+        138,
+        141,
+        145,
+        152,
+        214,
+        219,
+        224,
+        262,
+        15776,
+        15777,
+        15791,
+        18698,
+        18708,
+        18726,
+        20349,
+        20362,
+        21388,
+        20362,
+        21387,
+        18708,
+        224,
+        15791,
+        15777,
+        145,
+        138,
+        12,
+        15776,
+        141,
+        214,
+        219,
+        152
+      ],
+      "hverken": []
+    },
+    "vote_groups_by_party": {
+      "S": {
+        "for": [
+          97,
+          118,
+          120,
+          154,
+          208,
+          220,
+          244,
+          260,
+          286,
+          15760,
+          15762,
+          15770,
+          15787,
+          16351,
+          18716,
+          18717,
+          18718,
+          18719,
+          18720,
+          20361,
+          20361,
+          18717,
+          18718,
+          18720,
+          18719,
+          16351,
+          208,
+          118,
+          97,
+          120,
+          154,
+          21343,
+          15787,
+          15760,
+          260,
+          18716,
+          15770,
+          286,
+          244,
+          220,
+          15762
+        ],
+        "imod": [],
+        "fravaer": [
+          12,
+          138,
+          152,
+          214,
+          224,
+          15776,
+          20362,
+          20362,
+          224,
+          138,
+          12,
+          15776,
+          214,
+          152
+        ],
+        "hverken": []
+      },
+      "Uden parti": {
+        "for": [
+          99,
+          173,
+          199,
+          351,
+          9896,
+          15790,
+          16180,
+          18711,
+          20358,
+          9896,
+          21371,
+          20365,
+          21379,
+          20358,
+          21404,
+          16180,
+          21338,
+          351,
+          199
+        ],
+        "imod": [
+          18,
+          113,
+          18721
+        ],
+        "fravaer": [
+          15791,
+          18708,
+          18708,
+          15791
+        ],
+        "hverken": []
+      },
+      "SF": {
+        "for": [
+          43,
+          121,
+          15788,
+          16728,
+          17628,
+          18706,
+          18707,
+          18709,
+          19000,
+          20359,
+          20360,
+          21365,
+          21383,
+          21340,
+          21361,
+          20360,
+          18706,
+          17628,
+          121,
+          16728,
+          20359,
+          18707,
+          19000,
+          43,
+          18709,
+          15788
+        ],
+        "imod": [],
+        "fravaer": [
+          219,
+          219
+        ],
+        "hverken": []
+      },
+      "M": {
+        "for": [
+          57,
+          19475,
+          57
+        ],
+        "imod": [],
+        "fravaer": [
+          145,
+          145
+        ],
+        "hverken": []
+      },
+      "DD": {
+        "for": [],
+        "imod": [
+          82,
+          119,
+          162,
+          182,
+          1146,
+          17629,
+          20355
+        ],
+        "fravaer": [],
+        "hverken": []
+      },
+      "EL": {
+        "for": [
+          109,
+          16073,
+          16582,
+          18694,
+          20135,
+          20135,
+          21302,
+          16073,
+          20411,
+          109,
+          18694,
+          21398,
+          16582
+        ],
+        "imod": [],
+        "fravaer": [
+          15777,
+          15777
+        ],
+        "hverken": []
+      },
+      "V": {
+        "for": [
+          130,
+          139,
+          206,
+          18696,
+          18699,
+          18701
+        ],
+        "imod": [
+          127,
+          168,
+          180,
+          1845
+        ],
+        "fravaer": [
+          18698
+        ],
+        "hverken": []
+      },
+      "RV": {
+        "for": [
+          18729,
+          21474,
+          21475,
+          21360,
+          21344,
+          21380
+        ],
+        "imod": [],
+        "fravaer": [
+          141,
+          18726,
+          141
+        ],
+        "hverken": []
+      },
+      "KF": {
+        "for": [
+          189,
+          15793,
+          18713,
+          20357
+        ],
+        "imod": [],
+        "fravaer": [],
+        "hverken": []
+      },
+      "DF": {
+        "for": [],
+        "imod": [
+          216,
+          238,
+          15763,
+          20350,
+          20356
+        ],
+        "fravaer": [],
+        "hverken": []
+      },
+      "JF": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          262
+        ],
+        "hverken": []
+      },
+      "ALT": {
+        "for": [
+          15775,
+          20351,
+          21342,
+          21368,
+          15775,
+          20351
+        ],
+        "imod": [],
+        "fravaer": [],
+        "hverken": []
+      },
+      "LA": {
+        "for": [
+          15779,
+          18703,
+          18723
+        ],
+        "imod": [],
+        "fravaer": [],
+        "hverken": []
+      },
+      "BP": {
+        "for": [],
+        "imod": [
+          18724
+        ],
+        "fravaer": [],
+        "hverken": []
+      },
+      "SP": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          20349
+        ],
+        "hverken": []
+      },
+      "N": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21388
+        ],
+        "hverken": []
+      },
+      "IA": {
+        "for": [],
+        "imod": [],
+        "fravaer": [
+          21387
+        ],
+        "hverken": []
+      }
+    },
+    "party_split_count": 1,
+    "margin": 107,
+    "counts_source": "stemme"
+  },
+  {
     "afstemning_id": 10590,
     "nummer": 24,
     "date": "2026-08-27",
