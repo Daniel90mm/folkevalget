@@ -1159,6 +1159,11 @@
     "current_party_short": "DD",
     "committees": [
       {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      },
+      {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
@@ -2288,6 +2293,11 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      },
       {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
@@ -3887,11 +3897,6 @@
         "id": 21487,
         "name": "Udlændinge- og Integrationsudvalget",
         "short_name": "UUI"
-      },
-      {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
       },
       {
         "id": 21401,
@@ -10863,7 +10868,7 @@
     "occupations": [
       "Særlig politisk udvikler, Dansk Industri, 2022.",
       "Akademichef, Tænketanken Justitia, 2021-2022.",
-      "Public affairs director, Rud Pedersen, 2021-2022.",
+      "Public affairs director, Rud Pedersen, 2021.",
       "Selvstændig erhvervsdrivende, Jambo Feriepark, 2006-2015.",
       "Vekselerer, Chequepoint, Paris, 1996-1998.",
       "Erhvervssælger, ungarbejder, Bingohallen, Hjørring, 1991-1993."
