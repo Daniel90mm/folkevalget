@@ -1159,11 +1159,6 @@
     "current_party_short": "DD",
     "committees": [
       {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
-      },
-      {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
@@ -2293,11 +2288,6 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
-      {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
-      },
       {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
@@ -3893,6 +3883,11 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      },
       {
         "id": 21487,
         "name": "Udlændinge- og Integrationsudvalget",
@@ -24176,11 +24171,6 @@
     "current_party_short": "UFG",
     "committees": [
       {
-        "id": 21484,
-        "name": "Indfødsretsudvalget",
-        "short_name": "IFU"
-      },
-      {
         "id": 21485,
         "name": "Retsudvalget",
         "short_name": "REU"
@@ -26344,6 +26334,11 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
       {
         "id": 21508,
         "name": "Udvalget for Det Tyske Mindretal",
