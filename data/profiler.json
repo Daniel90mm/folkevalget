@@ -9144,11 +9144,6 @@
         "short_name": "ERU"
       },
       {
-        "id": 21478,
-        "name": "Skatteudvalget",
-        "short_name": "SAU"
-      },
-      {
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
         "short_name": "SUU"
@@ -10227,7 +10222,13 @@
     "party_short": "LA",
     "current_party": "Liberal Alliance",
     "current_party_short": "LA",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      }
+    ],
     "role": "Partileder",
     "constituency": "Folketingsmedlem for Liberal Alliance i Østjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Østjyllands Storkreds",
@@ -14656,7 +14657,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 225,
+    "seniority_months": 226,
     "seniority_tag": "experienced",
     "votes_total": 50,
     "votes_for": 14,
@@ -15700,7 +15701,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 225,
+    "seniority_months": 226,
     "seniority_tag": "experienced",
     "votes_total": 50,
     "votes_for": 26,
@@ -17020,7 +17021,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 225,
+    "seniority_months": 226,
     "seniority_tag": "experienced",
     "votes_total": 50,
     "votes_for": 2,
@@ -18589,7 +18590,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 225,
+    "seniority_months": 226,
     "seniority_tag": "experienced",
     "votes_total": 50,
     "votes_for": 22,
@@ -18946,7 +18947,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 225,
+    "seniority_months": 226,
     "seniority_tag": "experienced",
     "votes_total": 50,
     "votes_for": 42,
@@ -22066,7 +22067,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 225,
+    "seniority_months": 226,
     "seniority_tag": "experienced",
     "votes_total": 50,
     "votes_for": 2,
@@ -25865,7 +25866,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 225,
+    "seniority_months": 226,
     "seniority_tag": "experienced",
     "votes_total": 25,
     "votes_for": 23,
@@ -26220,7 +26221,7 @@
     "member_since_year": 2007,
     "seniority_label": "18 aar i Folketinget",
     "seniority_years": 18,
-    "seniority_months": 225,
+    "seniority_months": 226,
     "seniority_tag": "experienced",
     "votes_total": 25,
     "votes_for": 24,
