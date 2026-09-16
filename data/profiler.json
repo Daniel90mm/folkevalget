@@ -1963,14 +1963,14 @@
         "party_short": "DD",
         "start_date": "2026-09-16",
         "end_date": "2026-10-01",
-        "active": false
+        "active": true
       },
       {
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
         "start_date": "2026-03-24",
         "end_date": "2026-09-15",
-        "active": true
+        "active": false
       }
     ],
     "educations": [
@@ -3202,6 +3202,11 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
+      },
+      {
         "id": 21481,
         "name": "Kultur- og Kirkeudvalget",
         "short_name": "KUU"
@@ -3788,7 +3793,7 @@
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 4,
+    "seniority_months": 5,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
@@ -5082,7 +5087,7 @@
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 4,
+    "seniority_months": 5,
     "seniority_tag": "newcomer",
     "votes_total": 25,
     "votes_for": 9,
