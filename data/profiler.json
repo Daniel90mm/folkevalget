@@ -798,62 +798,18 @@
     "name": "Signe Wenneberg",
     "first_name": "Signe",
     "last_name": "Wenneberg",
-    "party": "Alternativet",
+    "party": null,
     "party_short": "ALT",
-    "current_party": "Alternativet",
-    "current_party_short": "ALT",
-    "committees": [
-      {
-        "id": 21508,
-        "name": "Udvalget for Det Tyske Mindretal",
-        "short_name": "UTM"
-      },
-      {
-        "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
-        "short_name": "IBL"
-      },
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
-        "id": 21480,
-        "name": "Erhvervs- og Digitaliseringsudvalget",
-        "short_name": "ERU"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
-        "id": 21456,
-        "name": "Nordisk Råd",
-        "short_name": "NOR"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Retoriker, redaktør og journalist, foredragsholder",
     "constituency": "Folketingsmedlem for Alternativet i Københavns Omegns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Alternativet i Københavns Omegns Storkreds fra 24. marts 2026."
     ],
-    "party_history": [
-      {
-        "party": "Alternativet",
-        "party_short": "ALT",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Retorik og kulturjournalistik, Københavns Universitet, 1991-1997.",
       "Samfundssproglig studentereksamen, Haslev Gymnasium, 1984-1987."
@@ -883,9 +839,9 @@
     "votes_neither": 0,
     "votes_absent": 10,
     "attendance_pct": 60.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 15,
-    "party_loyalty_comparisons": 15,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -1891,57 +1847,11 @@
     "name": "Mads Fuglede",
     "first_name": "Mads",
     "last_name": "Fuglede",
-    "party": "Danmarksdemokraterne – Inger Støjberg",
+    "party": null,
     "party_short": "DD",
-    "current_party": "Danmarksdemokraterne – Inger Støjberg",
-    "current_party_short": "DD",
-    "committees": [
-      {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
-      },
-      {
-        "id": 21508,
-        "name": "Udvalget for Det Tyske Mindretal",
-        "short_name": "UTM"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
-        "id": 21462,
-        "name": "Den Arktiske Delegation",
-        "short_name": "AD"
-      },
-      {
-        "id": 21456,
-        "name": "Nordisk Råd",
-        "short_name": "NOR"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Historiker, USA-analytiker",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Vestjyllands Storkreds fra 19. marts 2024.",
     "storkreds": "Vestjyllands Storkreds",
@@ -1950,29 +1860,7 @@
       "Folketingsmedlem for Venstre i Københavns Omegns Storkreds, 5. juni 2019 – 1. november 2022.",
       "Folketingsmedlem for Venstre i Vestjyllands Storkreds, 1. november 2022 – 18. marts 2024."
     ],
-    "party_history": [
-      {
-        "party": "Danmarksdemokraterne – Inger Støjberg",
-        "party_short": "DD",
-        "start_date": "2026-10-02",
-        "end_date": "2026-10-06",
-        "active": false
-      },
-      {
-        "party": "Danmarksdemokraterne – Inger Støjberg",
-        "party_short": "DD",
-        "start_date": "2026-09-16",
-        "end_date": "2026-10-01",
-        "active": true
-      },
-      {
-        "party": "Danmarksdemokraterne – Inger Støjberg",
-        "party_short": "DD",
-        "start_date": "2026-03-24",
-        "end_date": "2026-09-15",
-        "active": false
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Cand.mag. i historie og filosofi, Aarhus Universitet, 2004.",
       "Student, Dronninglund Gymnasium, 1989."
@@ -2005,9 +1893,9 @@
     "votes_neither": 0,
     "votes_absent": 10,
     "attendance_pct": 60.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 15,
-    "party_loyalty_comparisons": 15,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -2373,7 +2261,33 @@
     "party_short": "DD",
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21508,
+        "name": "Udvalget for Det Tyske Mindretal",
+        "short_name": "UTM"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
+      }
+    ],
     "role": "International projektleder",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Vestjyllands Storkreds, 1. november 2022 – 24. marts 2026.",
     "storkreds": "Vestjyllands Storkreds",
@@ -2384,8 +2298,8 @@
       {
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "start_date": "2026-09-16",
+        "end_date": "2026-10-01",
         "active": true
       }
     ],
@@ -2399,8 +2313,8 @@
       "Projektkoordinator, KPC Byg A/S, 2005-2009.",
       "Administrativ assistent, EnergiMidt, 1992-2005."
     ],
-    "email": null,
-    "phone": null,
+    "email": "betina.kastbjerg@ft.dk",
+    "phone": "+45 3337 5713",
     "website_url": null,
     "address": null,
     "member_url": "https://www.ft.dk/medlemmer/mf/b/betina-kastbjerg",
@@ -2729,10 +2643,10 @@
     "name": "Inger Støjberg",
     "first_name": "Inger",
     "last_name": "Støjberg",
-    "party": "Danmarksdemokraterne – Inger Støjberg",
+    "party": null,
     "party_short": "DD",
-    "current_party": "Danmarksdemokraterne – Inger Støjberg",
-    "current_party_short": "DD",
+    "current_party": null,
+    "current_party_short": null,
     "committees": [],
     "role": "Formand for Danmarksdemokraterne, fhv. minister",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Nordjyllands Storkreds fra 1. november 2022.",
@@ -2743,15 +2657,7 @@
       "Folketingsmedlem for Uden for folketingsgrupperne i Vestjyllands Storkreds, 5. februar 2021 – 21. december 2021.",
       "Folketingsmedlem for Venstre i Vestjyllands Storkreds, 13. november 2007 – 4. februar 2021."
     ],
-    "party_history": [
-      {
-        "party": "Danmarksdemokraterne – Inger Støjberg",
-        "party_short": "DD",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Master of Business Administration, Aalborg Universitet, 2013.",
       "InformationsAkademiet, Viborg Handelsskole, 1999.",
@@ -2786,9 +2692,9 @@
     "votes_neither": 0,
     "votes_absent": 24,
     "attendance_pct": 4.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 1,
-    "party_loyalty_comparisons": 1,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -3202,6 +3108,11 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21477,
+        "name": "Transportudvalget",
+        "short_name": "TRU"
+      },
+      {
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
         "short_name": "SUU"
@@ -3277,52 +3188,11 @@
     "name": "Mikkel Dencker",
     "first_name": "Mikkel",
     "last_name": "Dencker",
-    "party": "Dansk Folkeparti",
+    "party": null,
     "party_short": "DF",
-    "current_party": "Dansk Folkeparti",
-    "current_party_short": "DF",
-    "committees": [
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21480,
-        "name": "Erhvervs- og Digitaliseringsudvalget",
-        "short_name": "ERU"
-      },
-      {
-        "id": 21478,
-        "name": "Skatteudvalget",
-        "short_name": "SAU"
-      },
-      {
-        "id": 21477,
-        "name": "Transportudvalget",
-        "short_name": "TRU"
-      },
-      {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
-        "id": 21456,
-        "name": "Nordisk Råd",
-        "short_name": "NOR"
-      },
-      {
-        "id": 21391,
-        "name": "Tingsekretærer",
-        "short_name": "Tingsekretærer"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Selvstændig",
     "constituency": "Folketingsmedlem for Dansk Folkeparti i Københavns Amtskreds, 20. november 2001 – 13. november 2007.",
     "storkreds": "Københavns Amtskreds",
@@ -3331,15 +3201,7 @@
       "Folketingsmedlem for Dansk Folkeparti i Københavns Omegns Storkreds, 13. november 2007 – 5. juni 2019.",
       "Folketingsmedlem for Dansk Folkeparti i Københavns Omegns Storkreds fra 24. marts 2026."
     ],
-    "party_history": [
-      {
-        "party": "Dansk Folkeparti",
-        "party_short": "DF",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Ha-studier, Vestsjællands Handelshøjskolecenter, 2000-2001.",
       "Økonomistudier, Københavns Universitet, 1996-2000.",
@@ -3374,9 +3236,9 @@
     "votes_neither": 0,
     "votes_absent": 11,
     "attendance_pct": 56.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 14,
-    "party_loyalty_comparisons": 14,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -4168,7 +4030,7 @@
     "occupations": [
       "Juridisk konsulent, Stefansens Forlystelser fra 2009."
     ],
-    "email": null,
+    "email": "morten.messerschmidt@ft.dk",
     "phone": "+45 3337 5500",
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
@@ -4919,7 +4781,7 @@
     "website_url": "https://enhedslisten.dk/profil/ibrahim-benli-2/",
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": "https://www.ft.dk/-/media/cv/foto/2026/el/ibrahim-benli/ibrahim_benli_500l.ashx",
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/2026/el/ibrahim-benli/ibrahim_benli_500.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
@@ -5346,10 +5208,10 @@
     "name": "Pelle Dragsted",
     "first_name": "Pelle",
     "last_name": "Dragsted",
-    "party": "Enhedslisten",
+    "party": null,
     "party_short": "EL",
-    "current_party": "Enhedslisten",
-    "current_party_short": "EL",
+    "current_party": null,
+    "current_party_short": null,
     "committees": [],
     "role": "MF",
     "constituency": "Folketingsmedlem for Enhedslisten i Københavns Storkreds fra 1. november 2022.",
@@ -5358,15 +5220,7 @@
       "Folketingsmedlem for Enhedslisten i Københavns Storkreds fra 1. november 2022.",
       "Folketingsmedlem for Enhedslisten i Københavns Storkreds, 18. juni 2015 – 5. juni 2019."
     ],
-    "party_history": [
-      {
-        "party": "Enhedslisten",
-        "party_short": "EL",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Master i retorik og formidling, Aarhus Universitet, 2011-2016.",
       "Kandidatstuderende i historie og spansk, Københavns Universitet, 2002-2005.",
@@ -5402,9 +5256,9 @@
     "votes_neither": 0,
     "votes_absent": 30,
     "attendance_pct": 40.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 20,
-    "party_loyalty_comparisons": 20,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -5894,47 +5748,11 @@
     "name": "Trine Pertou Mach",
     "first_name": "Trine Pertou",
     "last_name": "Mach",
-    "party": "Enhedslisten",
+    "party": null,
     "party_short": "EL",
-    "current_party": "Enhedslisten",
-    "current_party_short": "EL",
-    "committees": [
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
-        "id": 21462,
-        "name": "Den Arktiske Delegation",
-        "short_name": "AD"
-      },
-      {
-        "id": 21456,
-        "name": "Nordisk Råd",
-        "short_name": "NOR"
-      },
-      {
-        "id": 21402,
-        "name": "Udvalget til Prøvelse af Valgene",
-        "short_name": "UPV"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Politik- og pressechef",
     "constituency": "Folketingsmedlem for Enhedslisten i Sjællands Storkreds, 1. november 2022 – 24. marts 2026.",
     "storkreds": "Sjællands Storkreds",
@@ -5943,15 +5761,7 @@
       "Folketingsmedlem for Socialistisk Folkeparti i Københavns Storkreds, 21. december 2013 – 18. juni 2015.",
       "Folketingsmedlem for Enhedslisten i Østjyllands Storkreds fra 24. marts 2026."
     ],
-    "party_history": [
-      {
-        "party": "Enhedslisten",
-        "party_short": "EL",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Statskundskab, Aarhus Universitet, 1990-1998.",
       "Studentereksamen, Ringkjøbing Gymnasium, 1985-1988."
@@ -5991,9 +5801,9 @@
     "votes_neither": 0,
     "votes_absent": 48,
     "attendance_pct": 4.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 2,
-    "party_loyalty_comparisons": 2,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -6774,47 +6584,18 @@
     "name": "Naaja H. Nathanielsen",
     "first_name": "Naaja H.",
     "last_name": "Nathanielsen",
-    "party": "Inuit Ataqatigiit",
+    "party": null,
     "party_short": "IA",
-    "current_party": "Inuit Ataqatigiit",
-    "current_party_short": "IA",
-    "committees": [
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
-        "id": 21462,
-        "name": "Den Arktiske Delegation",
-        "short_name": "AD"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Fhv. naalakkersuisoq/minister",
     "constituency": "Folketingsmedlem for Inuit Ataqatigiit i Grønland fra 24. marts 2026.",
     "storkreds": "Grønland",
     "constituency_history": [
       "Folketingsmedlem for Inuit Ataqatigiit i Grønland fra 24. marts 2026."
     ],
-    "party_history": [
-      {
-        "party": "Inuit Ataqatigiit",
-        "party_short": "IA",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Master i journalistik, Ilisimatusarfik, Grønlands Universitet, Nuuk, 2024.",
       "Cand.psych.aut., Københavns Universitet, 2001."
@@ -6844,9 +6625,9 @@
     "votes_neither": 0,
     "votes_absent": 24,
     "attendance_pct": 4.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 1,
-    "party_loyalty_comparisons": 1,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -6945,42 +6726,18 @@
     "name": "Sjúrður Skaale",
     "first_name": "Sjúrður",
     "last_name": "Skaale",
-    "party": "Javnaðarflokkurin",
+    "party": null,
     "party_short": "JF",
-    "current_party": "Javnaðarflokkurin",
-    "current_party_short": "JF",
-    "committees": [
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
-        "id": 21462,
-        "name": "Den Arktiske Delegation",
-        "short_name": "AD"
-      },
-      {
-        "id": 21456,
-        "name": "Nordisk Råd",
-        "short_name": "NOR"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Cand.scient.pol.",
     "constituency": "Folketingsmedlem for Javnaðarflokkurin i Færøerne fra 15. september 2011.",
     "storkreds": "Færøerne",
     "constituency_history": [
       "Folketingsmedlem for Javnaðarflokkurin i Færøerne fra 15. september 2011."
     ],
-    "party_history": [
-      {
-        "party": "Javnaðarflokkurin",
-        "party_short": "JF",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Cand.scient.pol., Københavns Universitet og Universidad Complutense de Madrid, 1992-1997.",
       "Suppleringsuddannelse i spansk, Københavns Universitet, 1990-1991."
@@ -7602,97 +7359,6 @@
     ]
   },
   {
-    "id": 20369,
-    "name": "Helle Bonnesen",
-    "first_name": "Helle",
-    "last_name": "Bonnesen",
-    "party": "Det Konservative Folkeparti",
-    "party_short": "KF",
-    "current_party": "Det Konservative Folkeparti",
-    "current_party_short": "KF",
-    "committees": [
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
-        "id": 21478,
-        "name": "Skatteudvalget",
-        "short_name": "SAU"
-      },
-      {
-        "id": 21402,
-        "name": "Udvalget til Prøvelse af Valgene",
-        "short_name": "UPV"
-      }
-    ],
-    "role": "MF",
-    "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Københavns Storkreds fra 1. november 2022.",
-    "storkreds": "Københavns Storkreds",
-    "constituency_history": [
-      "Folketingsmedlem for Det Konservative Folkeparti i Københavns Storkreds fra 1. november 2022."
-    ],
-    "party_history": [
-      {
-        "party": "Det Konservative Folkeparti",
-        "party_short": "KF",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
-    "educations": [
-      "Den lille kedelpassereksamen, 2017.",
-      "Bestyrelsesuddannelse, Business Kolding og INSEAD, 2012.",
-      "Diplom i fødevareøkonomi, Scandinavian International Management Institute (SIMI), 2004.",
-      "International Advertising Association Diploma (IAA), International Advertising Association, 1990.",
-      "Cand.merc. strategi og markedsføring, Copenhagen Business School (CBS), 1989."
-    ],
-    "occupations": [
-      "Grammofonpladepresser, Nordsø Records, 2015-2022.",
-      "Nordic Marketing Manager (og andre roller), The Coca-Cola Company, 2001-2011.",
-      "Nordic Marketing Manager (og andre roller), Colgate-Palmolive, 1992-2001.",
-      "Reklamechef, Coca-Cola Danmark, 1990-1992."
-    ],
-    "email": "helle.bonnesen@ft.dk",
-    "phone": "+45 3337 4218",
-    "website_url": null,
-    "address": "Folketinget, Christiansborg 1218 København K",
-    "member_url": "https://www.ft.dk/medlemmer/mf/h/helle-bonnesen",
-    "photo_url": "photos/20369.jpg",
-    "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/kf/helle-bonnesen/helle_bonnesen_500.jpg",
-    "photo_source_name": "Folketinget",
-    "photo_photographer": "Marie Hald",
-    "photo_credit_text": "Folketinget / Fotograf Marie Hald",
-    "member_since_date": "2022-11-01",
-    "member_since_year": 2022,
-    "seniority_label": "3 aar i Folketinget",
-    "seniority_years": 3,
-    "seniority_months": 46,
-    "seniority_tag": "newcomer",
-    "votes_total": 0,
-    "votes_for": 0,
-    "votes_against": 0,
-    "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": null,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
-    "recent_votes": []
-  },
-  {
     "id": 21350,
     "name": "Charlotte Green",
     "first_name": "Charlotte",
@@ -7787,10 +7453,10 @@
     "name": "Mona Juul",
     "first_name": "Mona",
     "last_name": "Juul",
-    "party": "Det Konservative Folkeparti",
+    "party": null,
     "party_short": "KF",
-    "current_party": "Det Konservative Folkeparti",
-    "current_party_short": "KF",
+    "current_party": null,
+    "current_party_short": null,
     "committees": [],
     "role": "Formand for Det Konservative Folkeparti",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Østjyllands Storkreds fra 5. juni 2019.",
@@ -7798,15 +7464,7 @@
     "constituency_history": [
       "Folketingsmedlem for Det Konservative Folkeparti i Østjyllands Storkreds fra 5. juni 2019."
     ],
-    "party_history": [
-      {
-        "party": "Det Konservative Folkeparti",
-        "party_short": "KF",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Strategisk planning, Den Danske Reklameskole, 2000-2001.",
       "Hd (A), Handelshøjskole Syd (Syddansk Universitet), 1992-1993.",
@@ -7846,9 +7504,9 @@
     "votes_neither": 0,
     "votes_absent": 24,
     "attendance_pct": 4.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 1,
-    "party_loyalty_comparisons": 1,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -8873,32 +8531,11 @@
     "name": "Carsten Bach",
     "first_name": "Carsten",
     "last_name": "Bach",
-    "party": "Liberal Alliance",
+    "party": null,
     "party_short": "LA",
-    "current_party": "Liberal Alliance",
-    "current_party_short": "LA",
-    "committees": [
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
-        "id": 21462,
-        "name": "Den Arktiske Delegation",
-        "short_name": "AD"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Geolog",
     "constituency": "Folketingsmedlem for Liberal Alliance i Vestjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Vestjyllands Storkreds",
@@ -8906,15 +8543,7 @@
       "Folketingsmedlem for Liberal Alliance i Vestjyllands Storkreds fra 1. november 2022.",
       "Folketingsmedlem for Liberal Alliance i Østjyllands Storkreds, 18. juni 2015 – 5. juni 2019."
     ],
-    "party_history": [
-      {
-        "party": "Liberal Alliance",
-        "party_short": "LA",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Master i ledelses- og organisationspsykologi (LOOP), Aalborg Universitet, 2020-2022.",
       "Cand.scient. i anvendt kvartærgeologi, Aarhus Universitet, Geologisk Institut, afdeling for sedimentologi, 1998-2003.",
@@ -8954,9 +8583,9 @@
     "votes_neither": 0,
     "votes_absent": 1,
     "attendance_pct": 96.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 24,
-    "party_loyalty_comparisons": 24,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -9211,117 +8840,6 @@
     "recent_votes": []
   },
   {
-    "id": 20392,
-    "name": "Lars-Christian Brask",
-    "first_name": "Lars-Christian",
-    "last_name": "Brask",
-    "party": "Liberal Alliance",
-    "party_short": "LA",
-    "current_party": "Liberal Alliance",
-    "current_party_short": "LA",
-    "committees": [
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
-        "id": 21456,
-        "name": "Nordisk Råd",
-        "short_name": "NOR"
-      },
-      {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
-      },
-      {
-        "id": 21392,
-        "name": "Folketingets Præsidium",
-        "short_name": "FPR"
-      }
-    ],
-    "role": "Bestyrelsesformand, investor og iværksætter",
-    "constituency": "Folketingsmedlem for Liberal Alliance i Sjællands Storkreds fra 1. november 2022.",
-    "storkreds": "Sjællands Storkreds",
-    "constituency_history": [
-      "Folketingsmedlem for Liberal Alliance i Sjællands Storkreds fra 1. november 2022."
-    ],
-    "party_history": [
-      {
-        "party": "Liberal Alliance",
-        "party_short": "LA",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
-    "educations": [
-      "Advanced Board Education, Columbia Business School, 2023.",
-      "Executive Management Education, Columbia Business School, New York, 2012.",
-      "Hd 1. del, uafsluttet 2. del (udenrigshandel), Københavns Handelshøjskole (CBS), 1990.",
-      "Flere finans- og ledelsesuddannelser fra bl.a. London Business School, Oxford University, Copenhagen Business School (CBS), International Management School, Bruxelles, Institute of Directors, London, 1989-2022.",
-      "Bankuddannet, Jyske Bank, Roskilde, 1986.",
-      "Sproglig handelsstudent, Roskilde Handelsskole, 1984.",
-      "Matematisk student, Himmelev Gymnasium, Roskilde, 1982."
-    ],
-    "occupations": [
-      "Executive Director og facilitator, Presidents Institute fra 2015.",
-      "Facilitator og taler, Board Company, 2014-2026.",
-      "Direktør, Artha Kapitalforvaltning, 2013-2015.",
-      "Salgsdirektør, TAGTEC, 2012.",
-      "Direktør og landechef og Senior Vice President , EFG Bank Danmark og EFG International, 2010-2013.",
-      "Motorsport tv-kommentator, Sky Sports, 1998-2001, og Canal+, 2008-2011.",
-      "Tour Manager, bandet Aqua, 2008-2011.",
-      "Direktør, chef for Private Banking, Carnegie Investment Bank, København, 2005-2010.",
-      "Director, Key Clients & Business Development, UBS Wealth Management, London, 2003-2005.",
-      "CEO, Brask & Company Ltd, London, 1999-2003.",
-      "Partner, Managing Director, Europe and Head of Capital Markets, Robertson Stephens & Company LLC (Bank of America), San Francisco og London, 1996-1999.",
-      "Director of Institutional Client Division, Equities, Merrill Lynch (Bank of America), London, 1990-1996.",
-      "Country Head, Nordic Region all services and products, Merrill Lynch (Bank of America), London og New York, 1990-1996.",
-      "Aktiechef, Rued Jørgensen/Sankt Annæ Bank, 1987-1990.",
-      "Børsfuldmægtig, Vekselererfirmaet Johs. Steffensens Eftf., 1986-1987.",
-      "Booker, band and tour manager, Rock On, 1982-1984.",
-      "Lærervikar, Skt. Josefs Skole, Roskilde, 1982-1983."
-    ],
-    "email": "lars-christian.brask@ft.dk",
-    "phone": "+45 6162 4888",
-    "website_url": "https://larschristianbrask.dk/",
-    "address": "Folketinget, Christiansborg 1218 København K",
-    "member_url": "https://www.ft.dk/medlemmer/mf/l/lars-christian-brask",
-    "photo_url": "photos/20392.jpg",
-    "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/la/lars-christian-brask/lars_christian_brask_500.jpg",
-    "photo_source_name": "Folketinget",
-    "photo_photographer": "Marie Hald",
-    "photo_credit_text": "Folketinget / Fotograf Marie Hald",
-    "member_since_date": "2022-11-01",
-    "member_since_year": 2022,
-    "seniority_label": "3 aar i Folketinget",
-    "seniority_years": 3,
-    "seniority_months": 46,
-    "seniority_tag": "newcomer",
-    "votes_total": 0,
-    "votes_for": 0,
-    "votes_against": 0,
-    "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": null,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
-    "recent_votes": []
-  },
-  {
     "id": 20399,
     "name": "Louise Brown",
     "first_name": "Louise",
@@ -9524,7 +9042,7 @@
       "MSc. Management of Innovation and Business Development (MIB), Copenhagen Business School (CBS), 2011."
     ],
     "occupations": [
-      "Chief marketing officer, GreenMobility fra 2020.",
+      "Chief marketing officer, GreenMobility, 2020-2022.",
       "Investor, i en række startups via selskabet Likeminded fra 2018.",
       "Managing director, Rainmaking Studio, 2016-2017.",
       "Founder and CEO, Bownty, 2010-2016."
@@ -10095,66 +9613,6 @@
     "recent_votes": []
   },
   {
-    "id": 20395,
-    "name": "Alexander Ryle",
-    "first_name": "Alexander",
-    "last_name": "Ryle",
-    "party": "Liberal Alliance",
-    "party_short": "LA",
-    "current_party": "Liberal Alliance",
-    "current_party_short": "LA",
-    "committees": [],
-    "role": "It-konsulent",
-    "constituency": "Folketingsmedlem for Liberal Alliance i Københavns Storkreds, 1. november 2022 – 24. marts 2026.",
-    "storkreds": "Københavns Storkreds",
-    "constituency_history": [
-      "Folketingsmedlem for Liberal Alliance i Københavns Storkreds, 1. november 2022 – 24. marts 2026."
-    ],
-    "party_history": [
-      {
-        "party": "Liberal Alliance",
-        "party_short": "LA",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
-    "educations": [
-      "Cand.merc.it. E-business, Copenhagen Business School (CBS), 2017.",
-      "Bachelor i global virksomhedsinformatik, IT-Universitetet, København, 2013."
-    ],
-    "occupations": [
-      "Human Capital Management-konsulent, Kainos, 2018-2023.",
-      "Human Capital Management-konsulent, Deloitte, 2017-2018."
-    ],
-    "email": null,
-    "phone": null,
-    "website_url": null,
-    "address": null,
-    "member_url": "https://www.ft.dk/medlemmer/mf/a/alexander-ryle",
-    "photo_url": "photos/20395.jpg",
-    "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/la/alexander-ryle/alexander_ryle_500.jpg",
-    "photo_source_name": "Folketinget",
-    "photo_photographer": "Marie Hald",
-    "photo_credit_text": "Folketinget / Fotograf Marie Hald",
-    "member_since_date": "2026-03-24",
-    "member_since_year": 2026,
-    "seniority_label": "Under 1 aar i Folketinget",
-    "seniority_years": 0,
-    "seniority_months": 5,
-    "seniority_tag": "newcomer",
-    "votes_total": 0,
-    "votes_for": 0,
-    "votes_against": 0,
-    "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": null,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
-    "recent_votes": []
-  },
-  {
     "id": 20400,
     "name": "Sandra Elisabeth Skalvig",
     "first_name": "Sandra Elisabeth",
@@ -10223,10 +9681,10 @@
     "name": "Alex Vanopslagh",
     "first_name": "Alex",
     "last_name": "Vanopslagh",
-    "party": "Liberal Alliance",
+    "party": null,
     "party_short": "LA",
-    "current_party": "Liberal Alliance",
-    "current_party_short": "LA",
+    "current_party": null,
+    "current_party_short": null,
     "committees": [],
     "role": "Partileder",
     "constituency": "Folketingsmedlem for Liberal Alliance i Østjyllands Storkreds fra 1. november 2022.",
@@ -10235,15 +9693,7 @@
       "Folketingsmedlem for Liberal Alliance i Østjyllands Storkreds fra 1. november 2022.",
       "Folketingsmedlem for Liberal Alliance i Vestjyllands Storkreds, 5. juni 2019 – 1. november 2022."
     ],
-    "party_history": [
-      {
-        "party": "Liberal Alliance",
-        "party_short": "LA",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Kandidat i statskundskab, Københavns Universitet, 2014-2017.",
       "Bachelor i statskundskab, Syddansk Universitet (SDU), 2011-2014.",
@@ -10285,9 +9735,9 @@
     "votes_neither": 0,
     "votes_absent": 24,
     "attendance_pct": 4.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 1,
-    "party_loyalty_comparisons": 1,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -10627,90 +10077,6 @@
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
     "photo_url": "https://www.ft.dk/-/media/cv/foto/2026/m/lars-aagaard/lars_aagaard_500.ashx",
-    "photo_source_url": null,
-    "photo_source_name": null,
-    "photo_photographer": null,
-    "photo_credit_text": null,
-    "member_since_date": "2026-03-24",
-    "member_since_year": 2026,
-    "seniority_label": "Under 1 aar i Folketinget",
-    "seniority_years": 0,
-    "seniority_months": 5,
-    "seniority_tag": "newcomer",
-    "votes_total": 0,
-    "votes_for": 0,
-    "votes_against": 0,
-    "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": null,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
-    "recent_votes": []
-  },
-  {
-    "id": 21346,
-    "name": "Morten E.G. Brautsch",
-    "first_name": "Morten E.G.",
-    "last_name": "Brautsch",
-    "party": "Moderaterne",
-    "party_short": "M",
-    "current_party": "Moderaterne",
-    "current_party_short": "M",
-    "committees": [
-      {
-        "id": 21485,
-        "name": "Retsudvalget",
-        "short_name": "REU"
-      },
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
-      }
-    ],
-    "role": "Morten E.G. Brautsch (M)",
-    "constituency": "Folketingsmedlem for Moderaterne i Vestjyllands Storkreds fra 24. marts 2026.",
-    "storkreds": "Vestjyllands Storkreds",
-    "constituency_history": [
-      "Folketingsmedlem for Moderaterne i Vestjyllands Storkreds fra 24. marts 2026."
-    ],
-    "party_history": [
-      {
-        "party": "Moderaterne",
-        "party_short": "M",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
-    "educations": [
-      "Cand.jur., Aarhus Universitet, 2006-2012.",
-      "Folkeskolens afgangseksamen, Bramdrup Skole, Kolding, 2001.",
-      "Studentereksamen, Kolding Amtsgymnasium, 2001-2004."
-    ],
-    "occupations": [
-      "Særlig rådgiver, Udenrigsministeriet, 2025-2026.",
-      "Konstitueret partisekretær, Moderaterne, 2024-2025.",
-      "Særlig rådgiver, Udenrigsministeriet, 2023-2024.",
-      "Kontorchef, Justitsministeriet, 2020-2023.",
-      "Generalsekretær, Dansk Ungdoms Fællesråd (DUF), 2017-2020.",
-      "Særlig rådgiver, Forsvarsministeriet, 2015-2016.",
-      "Fuldmægtig, Justitsministeriet, 2015.",
-      "Juridisk specialattaché, Danmarks Faste Repræsentation ved den Europæiske Union, Bruxelles, 2013-2015.",
-      "Fuldmægtig, Justitsministeriet, 2012-2013."
-    ],
-    "email": "morten.brautsch@ft.dk",
-    "phone": "+45 6162 3958",
-    "website_url": null,
-    "address": "Folketinget, Christiansborg 1218 København K",
-    "member_url": null,
-    "photo_url": "https://www.ft.dk/-/media/cv/foto/2026/m/morten-e,-d-,-g,-d-,-brautsch/morten_eg_brautsch_500.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
@@ -12021,102 +11387,6 @@
     ]
   },
   {
-    "id": 20415,
-    "name": "Mohammad Rona",
-    "first_name": "Mohammad",
-    "last_name": "Rona",
-    "party": "Moderaterne",
-    "party_short": "M",
-    "current_party": "Moderaterne",
-    "current_party_short": "M",
-    "committees": [
-      {
-        "id": 21487,
-        "name": "Udlændinge- og Integrationsudvalget",
-        "short_name": "UUI"
-      },
-      {
-        "id": 21485,
-        "name": "Retsudvalget",
-        "short_name": "REU"
-      },
-      {
-        "id": 21484,
-        "name": "Indfødsretsudvalget",
-        "short_name": "IFU"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
-        "id": 21456,
-        "name": "Nordisk Råd",
-        "short_name": "NOR"
-      },
-      {
-        "id": 21402,
-        "name": "Udvalget til Prøvelse af Valgene",
-        "short_name": "UPV"
-      }
-    ],
-    "role": "MF",
-    "constituency": "Folketingsmedlem for Moderaterne i Nordjyllands Storkreds fra 24. november 2022.",
-    "storkreds": "Nordjyllands Storkreds",
-    "constituency_history": [
-      "Folketingsmedlem for Moderaterne i Nordjyllands Storkreds fra 24. november 2022."
-    ],
-    "party_history": [
-      {
-        "party": "Moderaterne",
-        "party_short": "M",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
-    "educations": [
-      "Hd i organisation og ledelse, Aalborg Universitet, 2011-2013.",
-      "Finansøkonom, Niels Brock, København, 2007-2009."
-    ],
-    "occupations": [
-      "Head of 24/7 IT-support, OnlinePOS, 2020-2022.",
-      "Head of Quantitative Department i Danmark og Norge, Epinion, 2017-2020."
-    ],
-    "email": "mohammad.rona@ft.dk",
-    "phone": "+45 3337 5866",
-    "website_url": "https://mrona.dk/",
-    "address": "Folketinget, Christiansborg 1218 København K",
-    "member_url": "https://www.ft.dk/medlemmer/mf/m/mohammad-rona",
-    "photo_url": "photos/20415.jpg",
-    "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/m/mohammad-rona/mohammad_rona_500.jpg",
-    "photo_source_name": "Folketinget",
-    "photo_photographer": "Marie Hald",
-    "photo_credit_text": "Folketinget / Fotograf Marie Hald",
-    "member_since_date": "2022-11-24",
-    "member_since_year": 2022,
-    "seniority_label": "3 aar i Folketinget",
-    "seniority_years": 3,
-    "seniority_months": 45,
-    "seniority_tag": "newcomer",
-    "votes_total": 0,
-    "votes_for": 0,
-    "votes_against": 0,
-    "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": null,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
-    "recent_votes": []
-  },
-  {
     "id": 20380,
     "name": "Monika Rubin",
     "first_name": "Monika",
@@ -12280,52 +11550,18 @@
     "name": "Qarsoq Høegh-Dam",
     "first_name": "Qarsoq",
     "last_name": "Høegh-Dam",
-    "party": "Naleraq",
+    "party": null,
     "party_short": "N",
-    "current_party": "Naleraq",
-    "current_party_short": "N",
-    "committees": [
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
-        "id": 21462,
-        "name": "Den Arktiske Delegation",
-        "short_name": "AD"
-      },
-      {
-        "id": 21456,
-        "name": "Nordisk Råd",
-        "short_name": "NOR"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Specialkonsulent",
     "constituency": "Folketingsmedlem for Naleraq i Grønland fra 24. marts 2026.",
     "storkreds": "Grønland",
     "constituency_history": [
       "Folketingsmedlem for Naleraq i Grønland fra 24. marts 2026."
     ],
-    "party_history": [
-      {
-        "party": "Naleraq",
-        "party_short": "N",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [],
     "occupations": [
       "Specialkonsulent (pt. orlov), Naleraq fra 2024.",
@@ -12356,9 +11592,9 @@
     "votes_neither": 1,
     "votes_absent": 13,
     "attendance_pct": 7.1,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 1,
-    "party_loyalty_comparisons": 1,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -13003,37 +12239,11 @@
     "name": "Stinus Lindgreen",
     "first_name": "Stinus",
     "last_name": "Lindgreen",
-    "party": "Radikale Venstre",
+    "party": null,
     "party_short": "RV",
-    "current_party": "Radikale Venstre",
-    "current_party_short": "RV",
-    "committees": [
-      {
-        "id": 21489,
-        "name": "Epidemiudvalget",
-        "short_name": "EPI"
-      },
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
-      },
-      {
-        "id": 21466,
-        "name": "Sundheds- og Ældreudvalget",
-        "short_name": "SUU"
-      },
-      {
-        "id": 21402,
-        "name": "Udvalget til Prøvelse af Valgene",
-        "short_name": "UPV"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Ph.d., forsker",
     "constituency": "Folketingsmedlem for Radikale Venstre i Københavns Omegns Storkreds fra 1. maj 2023.",
     "storkreds": "Københavns Omegns Storkreds",
@@ -13041,15 +12251,7 @@
       "Folketingsmedlem for Radikale Venstre i Københavns Omegns Storkreds fra 1. maj 2023.",
       "Folketingsmedlem for Radikale Venstre i Københavns Omegns Storkreds, 5. juni 2019 – 1. november 2022."
     ],
-    "party_history": [
-      {
-        "party": "Radikale Venstre",
-        "party_short": "RV",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Ph.d. i bioinformatik, Københavns Universitet, 2006-2010.",
       "Kandidat i bioinformatik, Københavns Universitet, 2003-2006.",
@@ -13087,9 +12289,9 @@
     "votes_neither": 0,
     "votes_absent": 15,
     "attendance_pct": 40.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 10,
-    "party_loyalty_comparisons": 10,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -13653,52 +12855,18 @@
     "name": "Thomas Rohden",
     "first_name": "Thomas",
     "last_name": "Rohden",
-    "party": "Radikale Venstre",
+    "party": null,
     "party_short": "RV",
-    "current_party": "Radikale Venstre",
-    "current_party_short": "RV",
-    "committees": [
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
-        "id": 21466,
-        "name": "Sundheds- og Ældreudvalget",
-        "short_name": "SUU"
-      },
-      {
-        "id": 21462,
-        "name": "Den Arktiske Delegation",
-        "short_name": "AD"
-      },
-      {
-        "id": 21456,
-        "name": "Nordisk Råd",
-        "short_name": "NOR"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Thomas Rohden (RV)",
     "constituency": "Folketingsmedlem for Radikale Venstre i Københavns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Radikale Venstre i Københavns Storkreds fra 24. marts 2026."
     ],
-    "party_history": [
-      {
-        "party": "Radikale Venstre",
-        "party_short": "RV",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Bachelor i Statskundskab, Københavns Universitet, 2019.",
       "Student (stx), Aabenraa Statsskole, 2015.",
@@ -13733,9 +12901,9 @@
     "votes_neither": 0,
     "votes_absent": 13,
     "attendance_pct": 48.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 12,
-    "party_loyalty_comparisons": 12,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -14062,14 +13230,14 @@
     "current_party_short": "RV",
     "committees": [
       {
-        "id": 21508,
-        "name": "Udvalget for Det Tyske Mindretal",
-        "short_name": "UTM"
-      },
-      {
         "id": 21481,
         "name": "Kultur- og Kirkeudvalget",
         "short_name": "KUU"
+      },
+      {
+        "id": 21508,
+        "name": "Udvalget for Det Tyske Mindretal",
+        "short_name": "UTM"
       },
       {
         "id": 21479,
@@ -14098,14 +13266,15 @@
       }
     ],
     "educations": [
-      "Bachelorstuderende, samfundsfag og musikvidenskab (p.t. orlov), Aarhus Universitet fra 2023.",
+      "Bachelorstuderende, samfundsfag og musikvidenskab, Aarhus Universitet, 2023-2026.",
       "Stx (musik A - matematik A), Herning Gymnasium, 2017-2020.",
       "Efterskole, Orkesterefterskolen, Holstebro, 2016-2017.",
-      "Folkeskole, Herningsholmskolen, Herning, 2013-2016."
+      "Folkeskole, Herningsholmskolen, 2013-2016.",
+      "Folkeskole, Højgaardskolen, 2006-2013."
     ],
     "occupations": [
       "Lærervikar og SFO-medhjælper , Herningsholmskolen, 2020-2023.",
-      "Freelance trompetist, 2014-2026."
+      "Freelancetrompetist fra 2014."
     ],
     "email": "philip.vivet@ft.dk",
     "phone": "+45 6162 3949",
@@ -15617,57 +14786,18 @@
     "name": "Benny Engelbrecht",
     "first_name": "Benny",
     "last_name": "Engelbrecht",
-    "party": "Socialdemokratiet",
+    "party": null,
     "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
-    "committees": [
-      {
-        "id": 21478,
-        "name": "Skatteudvalget",
-        "short_name": "SAU"
-      },
-      {
-        "id": 21477,
-        "name": "Transportudvalget",
-        "short_name": "TRU"
-      },
-      {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
-      },
-      {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
-      },
-      {
-        "id": 21391,
-        "name": "Tingsekretærer",
-        "short_name": "Tingsekretærer"
-      },
-      {
-        "id": 21402,
-        "name": "Udvalget til Prøvelse af Valgene",
-        "short_name": "UPV"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sydjyllands Storkreds fra 13. november 2007.",
     "storkreds": "Sydjyllands Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Socialdemokratiet i Sydjyllands Storkreds fra 13. november 2007."
     ],
-    "party_history": [
-      {
-        "party": "Socialdemokratiet",
-        "party_short": "S",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Bestyrelsesuddannelse, INSEAD, Fontainebleau, 2025.",
       "Kurser på merkonomuddannelsen i markedsføring, Handelsskolen Aabenraa, 1997-1999.",
@@ -15708,9 +14838,9 @@
     "votes_neither": 0,
     "votes_absent": 24,
     "attendance_pct": 52.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 26,
-    "party_loyalty_comparisons": 26,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -17129,27 +16259,11 @@
     "name": "Mogens Jensen",
     "first_name": "Mogens",
     "last_name": "Jensen",
-    "party": "Socialdemokratiet",
+    "party": null,
     "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
-    "committees": [
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
-        "id": 21402,
-        "name": "Udvalget til Prøvelse af Valgene",
-        "short_name": "UPV"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Vestjyllands Storkreds fra 13. november 2007.",
     "storkreds": "Vestjyllands Storkreds",
@@ -17157,15 +16271,7 @@
       "Folketingsmedlem for Socialdemokratiet i Vestjyllands Storkreds fra 13. november 2007.",
       "Folketingsmedlem for Socialdemokratiet i Ringkøbing Amtskreds, 8. februar 2005 – 13. november 2007."
     ],
-    "party_history": [
-      {
-        "party": "Socialdemokratiet",
-        "party_short": "S",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Fagbevægelsens lederuddannelse, LO-Skolen, Helsingør, 1997-1999.",
       "Student, Morsø Gymnasium, 1979-1982.",
@@ -17199,9 +16305,9 @@
     "votes_neither": 0,
     "votes_absent": 24,
     "attendance_pct": 52.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 26,
-    "party_loyalty_comparisons": 26,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -17421,37 +16527,18 @@
     "name": "Simon Kollerup",
     "first_name": "Simon",
     "last_name": "Kollerup",
-    "party": "Socialdemokratiet",
+    "party": null,
     "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
-    "committees": [
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21480,
-        "name": "Erhvervs- og Digitaliseringsudvalget",
-        "short_name": "ERU"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Nordjyllands Storkreds fra 15. september 2011.",
     "storkreds": "Nordjyllands Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Socialdemokratiet i Nordjyllands Storkreds fra 15. september 2011."
     ],
-    "party_history": [
-      {
-        "party": "Socialdemokratiet",
-        "party_short": "S",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Cand.scient.pol., Københavns Universitet, 2009-2011.",
       "Værnepligt, Flyvevåbnet, 2006.",
@@ -17484,9 +16571,9 @@
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 50,
-    "party_loyalty_comparisons": 50,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -17585,62 +16672,18 @@
     "name": "Anders Kronborg",
     "first_name": "Anders",
     "last_name": "Kronborg",
-    "party": "Socialdemokratiet",
+    "party": null,
     "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
-    "committees": [
-      {
-        "id": 21485,
-        "name": "Retsudvalget",
-        "short_name": "REU"
-      },
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
-        "id": 21480,
-        "name": "Erhvervs- og Digitaliseringsudvalget",
-        "short_name": "ERU"
-      },
-      {
-        "id": 21478,
-        "name": "Skatteudvalget",
-        "short_name": "SAU"
-      },
-      {
-        "id": 21477,
-        "name": "Transportudvalget",
-        "short_name": "TRU"
-      },
-      {
-        "id": 21432,
-        "name": "Tilsynet med Folketingets Bibliotek",
-        "short_name": "Tilsyn med Bibliotek"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Lærer",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sydjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Sydjyllands Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Socialdemokratiet i Sydjyllands Storkreds fra 5. juni 2019."
     ],
-    "party_history": [
-      {
-        "party": "Socialdemokratiet",
-        "party_short": "S",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Lærer, Ribe Statsseminarium, 2006.",
       "Matematisk student, Esbjerg Statsskole, 2002."
@@ -17671,9 +16714,9 @@
     "votes_neither": 0,
     "votes_absent": 22,
     "attendance_pct": 56.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 28,
-    "party_loyalty_comparisons": 28,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -18510,52 +17553,18 @@
     "name": "Flemming Møller Mortensen",
     "first_name": "Flemming Møller",
     "last_name": "Mortensen",
-    "party": "Socialdemokratiet",
+    "party": null,
     "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
-    "committees": [
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
-        "id": 21462,
-        "name": "Den Arktiske Delegation",
-        "short_name": "AD"
-      },
-      {
-        "id": 21456,
-        "name": "Nordisk Råd",
-        "short_name": "NOR"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Nordjyllands Storkreds fra 13. november 2007.",
     "storkreds": "Nordjyllands Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Socialdemokratiet i Nordjyllands Storkreds fra 13. november 2007."
     ],
-    "party_history": [
-      {
-        "party": "Socialdemokratiet",
-        "party_short": "S",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Lederuddannelse, Novartis, 2005-2007.",
       "LiF-eksamen, 2002.",
@@ -18597,9 +17606,9 @@
     "votes_neither": 0,
     "votes_absent": 28,
     "attendance_pct": 44.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 22,
-    "party_loyalty_comparisons": 22,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -18755,71 +17764,6 @@
     "recent_votes": []
   },
   {
-    "id": 16503,
-    "name": "Anne Paulin",
-    "first_name": "Anne",
-    "last_name": "Paulin",
-    "party": "Socialdemokratiet",
-    "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
-    "committees": [],
-    "role": "Rådgiver",
-    "constituency": "Folketingsmedlem for Socialdemokratiet i Vestjyllands Storkreds fra 5. juni 2019.",
-    "storkreds": "Vestjyllands Storkreds",
-    "constituency_history": [
-      "Folketingsmedlem for Socialdemokratiet i Vestjyllands Storkreds fra 5. juni 2019."
-    ],
-    "party_history": [
-      {
-        "party": "Socialdemokratiet",
-        "party_short": "S",
-        "start_date": "2026-05-12",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
-    "educations": [
-      "MSc. International Business and Politics, Copenhagen Business School (CBS) og Columbia University, 2015.",
-      "BSc. International Business and Politics, Copenhagen Business School (CBS), 2011.",
-      "Sproglig student, Skive Gymnasium og HF, 2008."
-    ],
-    "occupations": [
-      "Energipolitisk rådgiver, Energinet, 2017-2019.",
-      "Konsulent, TDC Group, 2015-2016.",
-      "Politisk medarbejder, Danmarks Socialdemokratiske Ungdom, 2013-2014.",
-      "Praktikant, Geelmuyden Kiese, 2013.",
-      "Studentermedarbejder, Socialforvaltningen, Københavns Kommune, 2012.",
-      "Studentermedarbejder, 3F - Fælles Fagligt Forbund, 2010-2011."
-    ],
-    "email": "anne.paulin@ft.dk",
-    "phone": "+45 6162 5140",
-    "website_url": "http://www.annepaulin.nu",
-    "address": "Folketinget, Christiansborg 1218 København K",
-    "member_url": "https://www.ft.dk/medlemmer/mf/a/anne-paulin",
-    "photo_url": "photos/16503.jpg",
-    "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/s/anne-paulin/anne_paulin_500.jpg",
-    "photo_source_name": "Folketinget",
-    "photo_photographer": "Marie Hald",
-    "photo_credit_text": "Folketinget / Fotograf Marie Hald",
-    "member_since_date": "2019-06-05",
-    "member_since_year": 2019,
-    "seniority_label": "7 aar i Folketinget",
-    "seniority_years": 7,
-    "seniority_months": 87,
-    "seniority_tag": "experienced",
-    "votes_total": 0,
-    "votes_for": 0,
-    "votes_against": 0,
-    "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": null,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
-    "recent_votes": []
-  },
-  {
     "id": 21044,
     "name": "Lasse Haugaard Pedersen",
     "first_name": "Lasse Haugaard",
@@ -18878,37 +17822,11 @@
     "name": "Jesper Petersen",
     "first_name": "Jesper",
     "last_name": "Petersen",
-    "party": "Socialdemokratiet",
+    "party": null,
     "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
-    "committees": [
-      {
-        "id": 21508,
-        "name": "Udvalget for Det Tyske Mindretal",
-        "short_name": "UTM"
-      },
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
-      },
-      {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
-      },
-      {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sydjyllands Storkreds fra 21. marts 2013.",
     "storkreds": "Sydjyllands Storkreds",
@@ -18916,15 +17834,7 @@
       "Folketingsmedlem for Socialdemokratiet i Sydjyllands Storkreds fra 21. marts 2013.",
       "Folketingsmedlem for Socialistisk Folkeparti i Sydjyllands Storkreds, 13. november 2007 – 20. marts 2013."
     ],
-    "party_history": [
-      {
-        "party": "Socialdemokratiet",
-        "party_short": "S",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Bachelor i statskundskab, Københavns Universitet, 2007.",
       "Student, Haderslev Katedralskole, 2000."
@@ -18954,9 +17864,9 @@
     "votes_neither": 0,
     "votes_absent": 2,
     "attendance_pct": 96.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 48,
-    "party_loyalty_comparisons": 48,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -19477,37 +18387,18 @@
     "name": "Rasmus Stoklund",
     "first_name": "Rasmus",
     "last_name": "Stoklund",
-    "party": "Socialdemokratiet",
+    "party": null,
     "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
-    "committees": [
-      {
-        "id": 21487,
-        "name": "Udlændinge- og Integrationsudvalget",
-        "short_name": "UUI"
-      },
-      {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Nordsjællands Storkreds fra 5. juni 2019.",
     "storkreds": "Nordsjællands Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Socialdemokratiet i Nordsjællands Storkreds fra 5. juni 2019."
     ],
-    "party_history": [
-      {
-        "party": "Socialdemokratiet",
-        "party_short": "S",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Cand.scient.pol., Københavns Universitet, 2009-2012.",
       "BSc.pol., Københavns Universitet, 2006-2009.",
@@ -19541,9 +18432,9 @@
     "votes_neither": 0,
     "votes_absent": 2,
     "attendance_pct": 96.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 48,
-    "party_loyalty_comparisons": 48,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -19893,57 +18784,18 @@
     "name": "Birgitte Vind",
     "first_name": "Birgitte",
     "last_name": "Vind",
-    "party": "Socialdemokratiet",
+    "party": null,
     "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
-    "committees": [
-      {
-        "id": 21480,
-        "name": "Erhvervs- og Digitaliseringsudvalget",
-        "short_name": "ERU"
-      },
-      {
-        "id": 21477,
-        "name": "Transportudvalget",
-        "short_name": "TRU"
-      },
-      {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
-      },
-      {
-        "id": 21467,
-        "name": "Beskæftigelses- og Ligestillingsudvalget",
-        "short_name": "BEU"
-      },
-      {
-        "id": 21391,
-        "name": "Tingsekretærer",
-        "short_name": "Tingsekretærer"
-      },
-      {
-        "id": 21402,
-        "name": "Udvalget til Prøvelse af Valgene",
-        "short_name": "UPV"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Lærer og leder",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Sydjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Sydjyllands Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Socialdemokratiet i Sydjyllands Storkreds fra 5. juni 2019."
     ],
-    "party_history": [
-      {
-        "party": "Socialdemokratiet",
-        "party_short": "S",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Diploma of Leadership, CVU Sønderjylland University College, 2008-2011.",
       "Familieterapeut, The Kempler Institute of Scandinavia, 2001-2003.",
@@ -19980,9 +18832,9 @@
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 50,
-    "party_loyalty_comparisons": 50,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -20232,57 +19084,18 @@
     "name": "Lea Wermelin",
     "first_name": "Lea",
     "last_name": "Wermelin",
-    "party": "Socialdemokratiet",
+    "party": null,
     "party_short": "S",
-    "current_party": "Socialdemokratiet",
-    "current_party_short": "S",
-    "committees": [
-      {
-        "id": 21487,
-        "name": "Udlændinge- og Integrationsudvalget",
-        "short_name": "UUI"
-      },
-      {
-        "id": 21485,
-        "name": "Retsudvalget",
-        "short_name": "REU"
-      },
-      {
-        "id": 21484,
-        "name": "Indfødsretsudvalget",
-        "short_name": "IFU"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
-      },
-      {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Socialdemokratiet i Bornholms Storkreds fra 18. juni 2015.",
     "storkreds": "Bornholms Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Socialdemokratiet i Bornholms Storkreds fra 18. juni 2015."
     ],
-    "party_history": [
-      {
-        "party": "Socialdemokratiet",
-        "party_short": "S",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Semester, statskundskab, Lunds Universitet, 2009.",
       "Cand.scient.pol., Københavns Universitet, 2005-2011.",
@@ -20319,9 +19132,9 @@
     "votes_neither": 0,
     "votes_absent": 2,
     "attendance_pct": 96.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 48,
-    "party_loyalty_comparisons": 48,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -20483,37 +19296,18 @@
     "name": "Sigurd Agersnap",
     "first_name": "Sigurd",
     "last_name": "Agersnap",
-    "party": "Socialistisk Folkeparti",
+    "party": null,
     "party_short": "SF",
-    "current_party": "Socialistisk Folkeparti",
-    "current_party_short": "SF",
-    "committees": [
-      {
-        "id": 21478,
-        "name": "Skatteudvalget",
-        "short_name": "SAU"
-      },
-      {
-        "id": 21393,
-        "name": "Finansudvalget",
-        "short_name": "FIU"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "MF",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Københavns Omegns Storkreds fra 1. november 2022.",
     "storkreds": "Københavns Omegns Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Socialistisk Folkeparti i Københavns Omegns Storkreds fra 1. november 2022."
     ],
-    "party_history": [
-      {
-        "party": "Socialistisk Folkeparti",
-        "party_short": "SF",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Cand.scient.pol, Københavns Universitet, 2015-2020."
     ],
@@ -20543,9 +19337,9 @@
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 50,
-    "party_loyalty_comparisons": 50,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -20826,57 +19620,18 @@
     "name": "Theresa Berg Andersen",
     "first_name": "Theresa Berg",
     "last_name": "Andersen",
-    "party": "Socialistisk Folkeparti",
+    "party": null,
     "party_short": "SF",
-    "current_party": "Socialistisk Folkeparti",
-    "current_party_short": "SF",
-    "committees": [
-      {
-        "id": 21489,
-        "name": "Epidemiudvalget",
-        "short_name": "EPI"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
-      },
-      {
-        "id": 21401,
-        "name": "Udvalget for Forretningsordenen",
-        "short_name": "UFO"
-      },
-      {
-        "id": 21391,
-        "name": "Tingsekretærer",
-        "short_name": "Tingsekretærer"
-      },
-      {
-        "id": 21402,
-        "name": "Udvalget til Prøvelse af Valgene",
-        "short_name": "UPV"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Pædagog, diplom og master i ledelse",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Nordjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Nordjyllands Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Socialistisk Folkeparti i Nordjyllands Storkreds fra 1. november 2022."
     ],
-    "party_history": [
-      {
-        "party": "Socialistisk Folkeparti",
-        "party_short": "SF",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Master i offentlig ledelse, Aarhus Universitet, 2010-2015.",
       "Pædagog, Ranum Seminarium, 1999-2003."
@@ -20906,9 +19661,9 @@
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 50,
-    "party_loyalty_comparisons": 50,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -21160,42 +19915,18 @@
     "name": "Anne Valentina Berthelsen",
     "first_name": "Anne Valentina",
     "last_name": "Berthelsen",
-    "party": "Socialistisk Folkeparti",
+    "party": null,
     "party_short": "SF",
-    "current_party": "Socialistisk Folkeparti",
-    "current_party_short": "SF",
-    "committees": [
-      {
-        "id": 21487,
-        "name": "Udlændinge- og Integrationsudvalget",
-        "short_name": "UUI"
-      },
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Mf",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Sjællands Storkreds fra 5. juni 2019.",
     "storkreds": "Sjællands Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Socialistisk Folkeparti i Sjællands Storkreds fra 5. juni 2019."
     ],
-    "party_history": [
-      {
-        "party": "Socialistisk Folkeparti",
-        "party_short": "SF",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Bachelor, politik og administration, Roskilde Universitet, 2017-2019.",
       "Statskundskab, Københavns Universitet, 2015-2017.",
@@ -21233,9 +19964,9 @@
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 50,
-    "party_loyalty_comparisons": 50,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -21664,6 +20395,11 @@
     "current_party_short": "SF",
     "committees": [
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21485,
         "name": "Retsudvalget",
         "short_name": "REU"
@@ -21839,37 +20575,11 @@
     "name": "Karina Lorentzen Dehnhardt",
     "first_name": "Karina Lorentzen",
     "last_name": "Dehnhardt",
-    "party": "Socialistisk Folkeparti",
+    "party": null,
     "party_short": "SF",
-    "current_party": "Socialistisk Folkeparti",
-    "current_party_short": "SF",
-    "committees": [
-      {
-        "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
-        "short_name": "IBL"
-      },
-      {
-        "id": 21485,
-        "name": "Retsudvalget",
-        "short_name": "REU"
-      },
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Lærer, kommunikationskonsulent",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Sydjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Sydjyllands Storkreds",
@@ -21877,15 +20587,7 @@
       "Folketingsmedlem for Socialistisk Folkeparti i Sydjyllands Storkreds fra 5. juni 2019.",
       "Folketingsmedlem for Socialistisk Folkeparti i Sydjyllands Storkreds, 13. november 2007 – 18. juni 2015."
     ],
-    "party_history": [
-      {
-        "party": "Socialistisk Folkeparti",
-        "party_short": "SF",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Master i professionel kommunikation, Roskilde Universitet, 2016-2018.",
       "Læsevejleder, CVU Lillebælt, 2007-2009.",
@@ -21921,9 +20623,9 @@
     "votes_neither": 0,
     "votes_absent": 2,
     "attendance_pct": 96.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 48,
-    "party_loyalty_comparisons": 48,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -23696,11 +22398,6 @@
         "id": 21483,
         "name": "Grønlandsudvalget",
         "short_name": "GRU"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
       }
     ],
     "role": "Sofie F. Villadsen (SF)",
@@ -23723,7 +22420,8 @@
       "Folkeskolelærer, VIA University College, Aarhus, og Københavns Professionshøjskole, København, 2022."
     ],
     "occupations": [
-      "Fuldmægtig (pt. orlov), Uddannelses- og Forskningsstyrelsen fra 2025."
+      "Fuldmægtig (pt. orlov), Uddannelses- og Forskningsstyrelsen fra 2025.",
+      "Juniorkonsulent, Danmarks Evalueringsinstitut (EVA), 2022-2025."
     ],
     "email": "sofie.villadsen@ft.dk",
     "phone": "+45 6162 3997",
@@ -23848,52 +22546,18 @@
     "name": "Anna Falkenberg",
     "first_name": "Anna",
     "last_name": "Falkenberg",
-    "party": "Sambandsflokkurin",
+    "party": null,
     "party_short": "SP",
-    "current_party": "Sambandsflokkurin",
-    "current_party_short": "SP",
-    "committees": [
-      {
-        "id": 21485,
-        "name": "Retsudvalget",
-        "short_name": "REU"
-      },
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      },
-      {
-        "id": 21462,
-        "name": "Den Arktiske Delegation",
-        "short_name": "AD"
-      },
-      {
-        "id": 21456,
-        "name": "Nordisk Råd",
-        "short_name": "NOR"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Cand.scient.pol.",
     "constituency": "Folketingsmedlem for Sambandsflokkurin i Færøerne fra 1. november 2022.",
     "storkreds": "Færøerne",
     "constituency_history": [
       "Folketingsmedlem for Sambandsflokkurin i Færøerne fra 1. november 2022."
     ],
-    "party_history": [
-      {
-        "party": "Sambandsflokkurin",
-        "party_short": "SP",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Cand.scient.pol., Københavns Universitet, 2016-2022.",
       "Matematisk student, Føroya Studentaskúli og HF-skeið, Tórshavn, Færøerne, 2012-2015.",
@@ -24546,42 +23210,18 @@
     "name": "Marie Bjerre",
     "first_name": "Marie",
     "last_name": "Bjerre",
-    "party": "Venstre, Danmarks Liberale Parti",
+    "party": null,
     "party_short": "V",
-    "current_party": "Venstre, Danmarks Liberale Parti",
-    "current_party_short": "V",
-    "committees": [
-      {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
-        "id": 21432,
-        "name": "Tilsynet med Folketingets Bibliotek",
-        "short_name": "Tilsyn med Bibliotek"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Venstre i Nordjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Nordjyllands Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Venstre i Nordjyllands Storkreds fra 5. juni 2019."
     ],
-    "party_history": [
-      {
-        "party": "Venstre, Danmarks Liberale Parti",
-        "party_short": "V",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "LL.M. (Master of Laws), University of California, Berkeley School of Law, 2015-2016.",
       "Cand.jur, Københavns Universitet, 2008-2011.",
@@ -24616,9 +23256,9 @@
     "votes_neither": 0,
     "votes_absent": 13,
     "attendance_pct": 48.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 12,
-    "party_loyalty_comparisons": 12,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -24743,7 +23383,7 @@
         "short_name": "SUU"
       }
     ],
-    "role": "Marie Brixtofte (V)",
+    "role": "Psykolog",
     "constituency": "Folketingsmedlem for Venstre i Københavns Omegns Storkreds fra 24. marts 2026.",
     "storkreds": "Københavns Omegns Storkreds",
     "constituency_history": [
@@ -24969,42 +23609,18 @@
     "name": "Thomas Danielsen",
     "first_name": "Thomas",
     "last_name": "Danielsen",
-    "party": "Venstre, Danmarks Liberale Parti",
+    "party": null,
     "party_short": "V",
-    "current_party": "Venstre, Danmarks Liberale Parti",
-    "current_party_short": "V",
-    "committees": [
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21480,
-        "name": "Erhvervs- og Digitaliseringsudvalget",
-        "short_name": "ERU"
-      },
-      {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Fhv. minister",
     "constituency": "Folketingsmedlem for Venstre i Vestjyllands Storkreds fra 15. september 2011.",
     "storkreds": "Vestjyllands Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Venstre i Vestjyllands Storkreds fra 15. september 2011."
     ],
-    "party_history": [
-      {
-        "party": "Venstre, Danmarks Liberale Parti",
-        "party_short": "V",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Bankrådgiveruddannelse, Sparekassen Holstebro, 2009.",
       "Lastvognsmekaniker, Iveco, Holstebro, 2004."
@@ -25034,9 +23650,9 @@
     "votes_neither": 0,
     "votes_absent": 14,
     "attendance_pct": 44.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 11,
-    "party_loyalty_comparisons": 11,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -25386,47 +24002,18 @@
     "name": "Preben Bang Henriksen",
     "first_name": "Preben Bang",
     "last_name": "Henriksen",
-    "party": "Venstre, Danmarks Liberale Parti",
+    "party": null,
     "party_short": "V",
-    "current_party": "Venstre, Danmarks Liberale Parti",
-    "current_party_short": "V",
-    "committees": [
-      {
-        "id": 21486,
-        "name": "Socialudvalget",
-        "short_name": "SOU"
-      },
-      {
-        "id": 21485,
-        "name": "Retsudvalget",
-        "short_name": "REU"
-      },
-      {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
-      },
-      {
-        "id": 21402,
-        "name": "Udvalget til Prøvelse af Valgene",
-        "short_name": "UPV"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Fhv. advokat (H)",
     "constituency": "Folketingsmedlem for Venstre i Nordjyllands Storkreds fra 15. september 2011.",
     "storkreds": "Nordjyllands Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Venstre i Nordjyllands Storkreds fra 15. september 2011."
     ],
-    "party_history": [
-      {
-        "party": "Venstre, Danmarks Liberale Parti",
-        "party_short": "V",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Cand.jur., Aarhus Universitet, 1979.",
       "Student, Nørresundby Gymnasium, 1974.",
@@ -25465,9 +24052,9 @@
     "votes_neither": 0,
     "votes_absent": 1,
     "attendance_pct": 96.0,
-    "party_loyalty_pct": 95.8,
-    "party_loyalty_matches": 23,
-    "party_loyalty_comparisons": 24,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -25805,42 +24392,18 @@
     "name": "Peter Juel-Jensen",
     "first_name": "Peter",
     "last_name": "Juel-Jensen",
-    "party": "Venstre, Danmarks Liberale Parti",
+    "party": null,
     "party_short": "V",
-    "current_party": "Venstre, Danmarks Liberale Parti",
-    "current_party_short": "V",
-    "committees": [
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21477,
-        "name": "Transportudvalget",
-        "short_name": "TRU"
-      },
-      {
-        "id": 21402,
-        "name": "Udvalget til Prøvelse af Valgene",
-        "short_name": "UPV"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Viceskoleinspektør",
     "constituency": "Folketingsmedlem for Venstre i Bornholms Storkreds fra 13. november 2007.",
     "storkreds": "Bornholms Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Venstre i Bornholms Storkreds fra 13. november 2007."
     ],
-    "party_history": [
-      {
-        "party": "Venstre, Danmarks Liberale Parti",
-        "party_short": "V",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Læreruddannet, Hjørring Seminarium, 1996-2000.",
       "Linjeofficer, Hærens Officersskole, Frederiksberg Slot, 1991-1993.",
@@ -25873,9 +24436,9 @@
     "votes_neither": 0,
     "votes_absent": 0,
     "attendance_pct": 100.0,
-    "party_loyalty_pct": 96.0,
-    "party_loyalty_matches": 24,
-    "party_loyalty_comparisons": 25,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -26022,7 +24585,7 @@
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": "https://www.ft.dk/-/media/cv/foto/2022/v/stephanie-lohse/stephanie_lohse_500.ashx",
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/2026/v/stephanie-lose/stephanie_lose_500.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
@@ -26329,57 +24892,18 @@
     "name": "Anni Matthiesen",
     "first_name": "Anni",
     "last_name": "Matthiesen",
-    "party": "Venstre, Danmarks Liberale Parti",
+    "party": null,
     "party_short": "V",
-    "current_party": "Venstre, Danmarks Liberale Parti",
-    "current_party_short": "V",
-    "committees": [
-      {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
-      },
-      {
-        "id": 21508,
-        "name": "Udvalget for Det Tyske Mindretal",
-        "short_name": "UTM"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
-      },
-      {
-        "id": 21466,
-        "name": "Sundheds- og Ældreudvalget",
-        "short_name": "SUU"
-      },
-      {
-        "id": 21391,
-        "name": "Tingsekretærer",
-        "short_name": "Tingsekretærer"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Koordinator",
     "constituency": "Folketingsmedlem for Venstre i Sydjyllands Storkreds fra 15. september 2011.",
     "storkreds": "Sydjyllands Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Venstre i Sydjyllands Storkreds fra 15. september 2011."
     ],
-    "party_history": [
-      {
-        "party": "Venstre, Danmarks Liberale Parti",
-        "party_short": "V",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Diplomuddannelse, Danmarks Forvaltningshøjskole, 1997-2003.",
       "Kontorassistent, Skoleforvaltningen, Grindsted Rådhus, 1985-1987.",
@@ -26413,9 +24937,9 @@
     "votes_neither": 0,
     "votes_absent": 12,
     "attendance_pct": 52.0,
-    "party_loyalty_pct": 92.3,
-    "party_loyalty_matches": 12,
-    "party_loyalty_comparisons": 13,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -26514,52 +25038,18 @@
     "name": "Christoffer Aagaard Melson",
     "first_name": "Christoffer Aagaard",
     "last_name": "Melson",
-    "party": "Venstre, Danmarks Liberale Parti",
+    "party": null,
     "party_short": "V",
-    "current_party": "Venstre, Danmarks Liberale Parti",
-    "current_party_short": "V",
-    "committees": [
-      {
-        "id": 21477,
-        "name": "Transportudvalget",
-        "short_name": "TRU"
-      },
-      {
-        "id": 21489,
-        "name": "Epidemiudvalget",
-        "short_name": "EPI"
-      },
-      {
-        "id": 21480,
-        "name": "Erhvervs- og Digitaliseringsudvalget",
-        "short_name": "ERU"
-      },
-      {
-        "id": 21467,
-        "name": "Beskæftigelses- og Ligestillingsudvalget",
-        "short_name": "BEU"
-      },
-      {
-        "id": 21466,
-        "name": "Sundheds- og Ældreudvalget",
-        "short_name": "SUU"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "MF",
     "constituency": "Folketingsmedlem for Venstre i Sydjyllands Storkreds fra 5. juni 2019.",
     "storkreds": "Sydjyllands Storkreds",
     "constituency_history": [
       "Folketingsmedlem for Venstre i Sydjyllands Storkreds fra 5. juni 2019."
     ],
-    "party_history": [
-      {
-        "party": "Venstre, Danmarks Liberale Parti",
-        "party_short": "V",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Kandidat i analytisk journalistik (cand.public.), Aarhus Universitet, 2008-2011.",
       "Bachelor i medievidenskab, Aarhus Universitet, 2005-2008."
@@ -26590,9 +25080,9 @@
     "votes_neither": 0,
     "votes_absent": 2,
     "attendance_pct": 92.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 23,
-    "party_loyalty_comparisons": 23,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -26691,22 +25181,11 @@
     "name": "Troels Lund Poulsen",
     "first_name": "Troels Lund",
     "last_name": "Poulsen",
-    "party": "Venstre, Danmarks Liberale Parti",
+    "party": null,
     "party_short": "V",
-    "current_party": "Venstre, Danmarks Liberale Parti",
-    "current_party_short": "V",
-    "committees": [
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21468,
-        "name": "Færøudvalget",
-        "short_name": "FÆU"
-      }
-    ],
+    "current_party": null,
+    "current_party_short": null,
+    "committees": [],
     "role": "Formand for Venstre, fhv. minister",
     "constituency": "Folketingsmedlem for Venstre i Østjyllands Storkreds fra 13. november 2007.",
     "storkreds": "Østjyllands Storkreds",
@@ -26714,15 +25193,7 @@
       "Folketingsmedlem for Venstre i Østjyllands Storkreds fra 13. november 2007.",
       "Folketingsmedlem for Venstre i Vejle Amtskreds, 20. november 2001 – 13. november 2007."
     ],
-    "party_history": [
-      {
-        "party": "Venstre, Danmarks Liberale Parti",
-        "party_short": "V",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
+    "party_history": [],
     "educations": [
       "Student, Tørring Amtsgymnasium, 1992-1995.",
       "Folkeskolen, Lindved Skole, 1982-1992."
@@ -26754,9 +25225,9 @@
     "votes_neither": 0,
     "votes_absent": 24,
     "attendance_pct": 4.0,
-    "party_loyalty_pct": 100.0,
-    "party_loyalty_matches": 1,
-    "party_loyalty_comparisons": 1,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
     "recent_votes": [
       {
         "afstemning_id": 10604,
@@ -27105,11 +25576,11 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2026-08-19",
+    "member_since_date": "2026-06-10",
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 0,
+    "seniority_months": 3,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,

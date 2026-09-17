@@ -14374,6 +14374,101 @@
     ],
     "documents": [
       {
+        "document_id": 1224197,
+        "title": "MFU spm., om børn under 15 års mulighed for at få oprettet konto uden forældres eller værgers samtykke",
+        "number": null,
+        "date": "2026-08-21",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l9/spm/8/svar/2223381/3172554.pdf",
+        "format": "DOCX",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 17,
+        "document_type": "Svar",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 22,
+        "document_category": "Endeligt svar",
+        "document_actors": [
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 4,
+            "role": "Besvaret af"
+          },
+          {
+            "actor_id": 21384,
+            "name": "Mads Strange",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 3,
+            "role": "Stiller/MFU"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": [
+            "skatte- og vækstministeren"
+          ]
+        }
+      },
+      {
+        "document_id": 1221485,
+        "title": "MFU spm., om børn under 15 års mulighed for at få oprettet konto uden forældres eller værgers samtykke",
+        "number": null,
+        "date": "2026-08-11",
+        "role": "Hovedtilknytning",
+        "url": "https://www.ft.dk/samling/20252/lovforslag/l9/spm/8/3166096.pdf",
+        "format": "PDF",
+        "variant_code": "P",
+        "is_omtryk": false,
+        "omtryk": [],
+        "document_type_id": 13,
+        "document_type": "Spørgsmål",
+        "document_status_id": 1,
+        "document_status": "Endeligt",
+        "document_category_id": 36,
+        "document_category": "Udvalgsspørgsmål",
+        "document_actors": [
+          {
+            "actor_id": 21451,
+            "name": "skatte- og vækstministeren",
+            "short_name": "skatte- og vækstminister",
+            "type_id": 2,
+            "type": "Ministertitel",
+            "role_id": 10,
+            "role": "Adressat"
+          },
+          {
+            "actor_id": 21384,
+            "name": "Mads Strange",
+            "short_name": null,
+            "type_id": 5,
+            "type": "Person",
+            "role_id": 3,
+            "role": "Stiller/MFU"
+          }
+        ],
+        "question_chain": {
+          "askers": [],
+          "responders": []
+        }
+      },
+      {
         "document_id": 1226878,
         "title": "Vedtaget af Folketinget ved 3. behandling den 3. september 2026",
         "number": null,
@@ -14555,52 +14650,6 @@
             "role": "Stiller"
           }
         ],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1224752,
-        "title": "Udkast til betænkning",
-        "number": null,
-        "date": "2026-08-25",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20252/lovforslag/l9/bilag/8/3174028.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 12,
-        "document_type": "Bilag",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
-        "question_chain": {
-          "askers": [],
-          "responders": []
-        }
-      },
-      {
-        "document_id": 1224853,
-        "title": "2. udkast til betænkning",
-        "number": null,
-        "date": "2026-08-26",
-        "role": "Hovedtilknytning",
-        "url": "https://www.ft.dk/samling/20252/lovforslag/l9/bilag/10/3174301.pdf",
-        "format": "PDF",
-        "variant_code": "P",
-        "is_omtryk": false,
-        "omtryk": [],
-        "document_type_id": 12,
-        "document_type": "Bilag",
-        "document_status_id": 1,
-        "document_status": "Endeligt",
-        "document_category_id": 55,
-        "document_category": "Betænkning m.v.",
-        "document_actors": [],
         "question_chain": {
           "askers": [],
           "responders": []
