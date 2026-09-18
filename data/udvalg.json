@@ -464,7 +464,7 @@
     "id": 21477,
     "name": "Transportudvalget",
     "short_name": "TRU",
-    "member_count": 20,
+    "member_count": 19,
     "member_ids": [
       82,
       189,
@@ -483,7 +483,6 @@
       21350,
       21351,
       21356,
-      21357,
       21361,
       21367
     ]
