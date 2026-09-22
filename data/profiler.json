@@ -41,7 +41,7 @@
         "party": "Alternativet",
         "party_short": "ALT",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -339,7 +339,7 @@
         "party": "Alternativet",
         "party_short": "ALT",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -508,7 +508,7 @@
         "party": "Alternativet",
         "party_short": "ALT",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -685,7 +685,7 @@
         "party": "Alternativet",
         "party_short": "ALT",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -884,7 +884,7 @@
         "party": "Alternativet",
         "party_short": "ALT",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -1036,7 +1036,7 @@
         "party": "Borgernes Parti – Lars Boje Mathiesen",
         "party_short": "BP",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -1226,7 +1226,7 @@
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -1403,7 +1403,7 @@
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -1645,7 +1645,7 @@
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -1828,7 +1828,7 @@
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -1978,6 +1978,13 @@
       "Folketingsmedlem for Venstre i Vestjyllands Storkreds, 1. november 2022 – 18. marts 2024."
     ],
     "party_history": [
+      {
+        "party": "Danmarksdemokraterne – Inger Støjberg",
+        "party_short": "DD",
+        "start_date": "2026-10-06",
+        "end_date": "2027-10-05",
+        "active": false
+      },
       {
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
@@ -2172,7 +2179,7 @@
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -2352,7 +2359,7 @@
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -2531,7 +2538,7 @@
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -2744,7 +2751,7 @@
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -2900,7 +2907,7 @@
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -3091,7 +3098,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -3261,7 +3268,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -3429,7 +3436,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -3532,7 +3539,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -3708,7 +3715,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -3788,7 +3795,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -3874,7 +3881,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -4023,7 +4030,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-10-01",
-        "end_date": "2026-10-06",
+        "end_date": "2027-10-05",
         "active": false
       },
       {
@@ -4106,8 +4113,15 @@
       {
         "party": "Dansk Folkeparti",
         "party_short": "DF",
+        "start_date": "2026-10-01",
+        "end_date": "2027-10-05",
+        "active": false
+      },
+      {
+        "party": "Dansk Folkeparti",
+        "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": "2026-09-30",
         "active": true
       }
     ],
@@ -4271,6 +4285,13 @@
       {
         "party": "Dansk Folkeparti",
         "party_short": "DF",
+        "start_date": "2026-09-29",
+        "end_date": "2026-12-31",
+        "active": false
+      },
+      {
+        "party": "Dansk Folkeparti",
+        "party_short": "DF",
         "start_date": "2026-08-25",
         "end_date": "2026-09-27",
         "active": true
@@ -4283,7 +4304,7 @@
     "website_url": null,
     "address": "Folketinget, Christiansborg 1218 København K",
     "member_url": null,
-    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_133x133,-d-,jpg.ashx",
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/2026/df/lone-langballe/lone_langballe_500.ashx",
     "photo_source_url": null,
     "photo_source_name": null,
     "photo_photographer": null,
@@ -4342,7 +4363,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -4433,7 +4454,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -4604,7 +4625,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -4669,8 +4690,29 @@
       {
         "party": "Dansk Folkeparti",
         "party_short": "DF",
+        "start_date": "2026-10-06",
+        "end_date": "2027-10-05",
+        "active": false
+      },
+      {
+        "party": "Dansk Folkeparti",
+        "party_short": "DF",
+        "start_date": "2026-10-06",
+        "end_date": "2026-09-28",
+        "active": false
+      },
+      {
+        "party": "Dansk Folkeparti",
+        "party_short": "DF",
+        "start_date": "2026-09-29",
+        "end_date": "2026-12-31",
+        "active": false
+      },
+      {
+        "party": "Dansk Folkeparti",
+        "party_short": "DF",
         "start_date": "2026-09-28",
-        "end_date": "2026-10-06",
+        "end_date": "2026-09-28",
         "active": false
       },
       {
@@ -4776,7 +4818,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -4955,7 +4997,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -5011,11 +5053,6 @@
         "short_name": "UUI"
       },
       {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
-      },
-      {
         "id": 21467,
         "name": "Beskæftigelses- og Ligestillingsudvalget",
         "short_name": "BEU"
@@ -5032,7 +5069,7 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -5195,7 +5232,7 @@
         "party": "Enhedslisten",
         "party_short": "EL",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -5543,7 +5580,7 @@
         "party": "Enhedslisten",
         "party_short": "EL",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -5689,7 +5726,13 @@
     "party_short": "EL",
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      }
+    ],
     "role": "MF",
     "constituency": "Folketingsmedlem for Enhedslisten i Københavns Storkreds fra 1. november 2022.",
     "storkreds": "Københavns Storkreds",
@@ -5702,7 +5745,7 @@
         "party": "Enhedslisten",
         "party_short": "EL",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -5895,7 +5938,7 @@
         "party": "Enhedslisten",
         "party_short": "EL",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -6076,7 +6119,7 @@
         "party": "Enhedslisten",
         "party_short": "EL",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -6230,7 +6273,7 @@
         "party": "Enhedslisten",
         "party_short": "EL",
         "start_date": "2026-04-16",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -6331,7 +6374,7 @@
         "party": "Enhedslisten",
         "party_short": "EL",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -6489,11 +6532,6 @@
         "id": 21476,
         "name": "Miljø- og Fødevareudvalget",
         "short_name": "MOF"
-      },
-      {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
       }
     ],
     "role": "Økologisk landmand og socialpædagog",
@@ -6507,7 +6545,7 @@
         "party": "Enhedslisten",
         "party_short": "EL",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -6674,7 +6712,7 @@
         "party": "Enhedslisten",
         "party_short": "EL",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -6851,7 +6889,7 @@
         "party": "Enhedslisten",
         "party_short": "EL",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -7022,7 +7060,7 @@
         "party": "Enhedslisten",
         "party_short": "EL",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -7194,7 +7232,7 @@
         "party": "Inuit Ataqatigiit",
         "party_short": "IA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -7360,7 +7398,7 @@
         "party": "Javnaðarflokkurin",
         "party_short": "JF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -7529,7 +7567,7 @@
         "short_name": "UPV"
       }
     ],
-    "role": "Formand for Statsrevisorerne",
+    "role": "Gruppeformand",
     "constituency": "Folketingsmedlem for Det Konservative Folkeparti i Nordsjællands Storkreds fra 18. juni 2015.",
     "storkreds": "Nordsjællands Storkreds",
     "constituency_history": [
@@ -7540,7 +7578,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -7730,7 +7768,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -7897,7 +7935,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -8075,7 +8113,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -8161,7 +8199,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -8230,7 +8268,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -8418,7 +8456,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -8598,7 +8636,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -8743,7 +8781,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -8904,7 +8942,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -8971,7 +9009,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -9058,7 +9096,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -9134,7 +9172,7 @@
         "party": "Det Konservative Folkeparti",
         "party_short": "KF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -9290,7 +9328,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -9372,7 +9410,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -9626,7 +9664,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -9723,7 +9761,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -9884,7 +9922,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -9977,7 +10015,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -10069,7 +10107,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -10145,7 +10183,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-06-26",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -10226,7 +10264,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -10380,7 +10418,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -10483,7 +10521,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -10654,7 +10692,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -10811,7 +10849,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -10876,7 +10914,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -11062,7 +11100,7 @@
         "party": "Liberal Alliance",
         "party_short": "LA",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -11237,7 +11275,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -11321,7 +11359,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -11415,7 +11453,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -11506,7 +11544,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -11577,7 +11615,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-09-03",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       },
       {
@@ -11760,7 +11798,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -11822,7 +11860,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -12035,7 +12073,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -12110,7 +12148,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -12262,7 +12300,7 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2026-10-07",
+    "member_since_date": "2026-10-06",
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
@@ -12554,7 +12592,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -12622,7 +12660,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -12809,7 +12847,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -12869,7 +12907,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-09-03",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       },
       {
@@ -13028,7 +13066,7 @@
         "party": "Moderaterne",
         "party_short": "M",
         "start_date": "2026-06-25",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -13116,7 +13154,7 @@
         "party": "Naleraq",
         "party_short": "N",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -13283,7 +13321,7 @@
         "party": "Radikale Venstre",
         "party_short": "RV",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -13463,7 +13501,7 @@
         "party": "Radikale Venstre",
         "party_short": "RV",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -13679,7 +13717,7 @@
         "party": "Radikale Venstre",
         "party_short": "RV",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -13864,7 +13902,7 @@
         "party": "Radikale Venstre",
         "party_short": "RV",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -14043,7 +14081,7 @@
         "party": "Radikale Venstre",
         "party_short": "RV",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -14196,7 +14234,7 @@
         "party": "Radikale Venstre",
         "party_short": "RV",
         "start_date": "2026-06-10",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -14274,7 +14312,7 @@
         "party": "Radikale Venstre",
         "party_short": "RV",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -14513,7 +14551,7 @@
         "party": "Radikale Venstre",
         "party_short": "RV",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -14831,7 +14869,7 @@
         "party": "Radikale Venstre",
         "party_short": "RV",
         "start_date": "2026-06-10",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -14911,7 +14949,7 @@
         "party": "Radikale Venstre",
         "party_short": "RV",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -15218,7 +15256,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -15412,7 +15450,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -15476,7 +15514,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -15640,7 +15678,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -15826,7 +15864,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -16012,7 +16050,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -16197,7 +16235,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -16265,7 +16303,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -16428,7 +16466,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -16614,7 +16652,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -16796,7 +16834,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -16951,7 +16989,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -17103,7 +17141,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -17254,7 +17292,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -17410,7 +17448,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -17589,7 +17627,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -17771,7 +17809,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -17943,7 +17981,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -18112,7 +18150,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -18287,7 +18325,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -18402,7 +18440,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -18483,7 +18521,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -18672,7 +18710,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -18854,7 +18892,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -18935,7 +18973,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -19103,7 +19141,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -19407,7 +19445,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -19587,7 +19625,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -19810,7 +19848,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-05-12",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -19956,7 +19994,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -20127,7 +20165,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -20391,7 +20429,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -20612,7 +20650,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -20772,7 +20810,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -20950,7 +20988,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -21048,7 +21086,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -21206,7 +21244,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -21387,7 +21425,7 @@
         "party": "Socialdemokratiet",
         "party_short": "S",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -21618,7 +21656,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -21799,7 +21837,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -21981,7 +22019,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -22132,7 +22170,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -22300,7 +22338,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -22479,7 +22517,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -22658,7 +22696,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -22842,7 +22880,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -23024,7 +23062,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -23182,7 +23220,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -23375,7 +23413,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -23565,7 +23603,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -23732,7 +23770,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -23903,7 +23941,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -24057,7 +24095,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -24212,7 +24250,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -24400,7 +24438,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -24578,7 +24616,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -24820,7 +24858,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -24988,7 +25026,7 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -25165,7 +25203,7 @@
         "party": "Sambandsflokkurin",
         "party_short": "SP",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -25325,7 +25363,7 @@
         "party": "Uden for folketingsgrupperne - Cecilie Liv Hansen",
         "party_short": "UFG",
         "start_date": "2026-03-29",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -25394,7 +25432,7 @@
         "party": "Uden for folketingsgrupperne - Jacob Harris",
         "party_short": "UFG",
         "start_date": "2026-03-29",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -25463,7 +25501,7 @@
         "party": "Uden for folketingsgrupperne - Nadja Natalie Isaksen",
         "party_short": "UFG",
         "start_date": "2026-05-04",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -25535,7 +25573,7 @@
         "party": "Uden for folketingsgrupperne - Emilie Schytte",
         "party_short": "UFG",
         "start_date": "2026-04-05",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -25625,7 +25663,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -25933,7 +25971,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -26109,7 +26147,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -26193,7 +26231,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -26270,7 +26308,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -26440,7 +26478,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -26678,7 +26716,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -26862,7 +26900,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -26950,7 +26988,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -27126,7 +27164,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -27300,7 +27338,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -27388,7 +27426,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -27552,7 +27590,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -27647,7 +27685,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -27741,7 +27779,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -27927,7 +27965,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -28107,7 +28145,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -28270,7 +28308,7 @@
         "party": "Venstre, Danmarks Liberale Parti",
         "party_short": "V",
         "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
+        "end_date": null,
         "active": true
       }
     ],
@@ -28656,7 +28694,7 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2026-09-21",
+    "member_since_date": "2026-10-07",
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
