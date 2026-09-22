@@ -1612,11 +1612,6 @@
         "short_name": "EPI"
       },
       {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
-      },
-      {
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
         "short_name": "SUU"
@@ -2320,6 +2315,11 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
       {
         "id": 21492,
         "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
