@@ -8635,7 +8635,6 @@
       }
     ],
     "educations": [
-      "Engelsk (Common European Framework of Reference for Languages (CEFR), niveau C1), Virksomhedsskolen, 2018.",
       "Finansiel forretningsforståelse, Aalborg Universitet (AAU Executive), 2017.",
       "Kandidat i statskundskab, Københavns Universitet, 2012.",
       "Bachelor i statskundskab, Syddansk Universitet, 2007.",
@@ -16605,6 +16604,11 @@
     "current_party_short": "S",
     "committees": [
       {
+        "id": 21492,
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
+        "short_name": "IBL"
+      },
+      {
         "id": 21478,
         "name": "Skatteudvalget",
         "short_name": "SAU"
@@ -18378,11 +18382,6 @@
         "short_name": "§71"
       },
       {
-        "id": 21492,
-        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
-        "short_name": "IBL"
-      },
-      {
         "id": 21489,
         "name": "Epidemiudvalget",
         "short_name": "EPI"
@@ -18657,6 +18656,11 @@
     "current_party": "Socialdemokratiet",
     "current_party_short": "S",
     "committees": [
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
       {
         "id": 21485,
         "name": "Retsudvalget",
@@ -20131,11 +20135,6 @@
         "id": 21479,
         "name": "Børne-, Undervisnings- og Forskningsudvalget",
         "short_name": "BUU"
-      },
-      {
-        "id": 21476,
-        "name": "Miljø- og Fødevareudvalget",
-        "short_name": "MOF"
       },
       {
         "id": 21466,
@@ -28593,11 +28592,11 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2026-10-07",
+    "member_since_date": "2026-06-10",
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 0,
+    "seniority_months": 3,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
@@ -28693,11 +28692,11 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2026-10-07",
+    "member_since_date": "2026-08-19",
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 0,
+    "seniority_months": 1,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
