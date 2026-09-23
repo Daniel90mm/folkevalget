@@ -650,7 +650,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -844,7 +844,7 @@
       },
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -1194,7 +1194,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -1601,6 +1601,11 @@
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
     "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
       {
         "id": 21477,
         "name": "Transportudvalget",
@@ -2323,13 +2328,8 @@
     "current_party_short": "DD",
     "committees": [
       {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
-      },
-      {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -2503,7 +2503,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -3241,7 +3241,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -3404,6 +3404,11 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
       {
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
@@ -3846,7 +3851,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -4092,11 +4097,6 @@
         "short_name": "KEF"
       },
       {
-        "id": 21487,
-        "name": "Udlændinge- og Integrationsudvalget",
-        "short_name": "UUI"
-      },
-      {
         "id": 21401,
         "name": "Udvalget for Forretningsordenen",
         "short_name": "UFO"
@@ -4261,7 +4261,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -5048,11 +5048,6 @@
     "current_party_short": "DF",
     "committees": [
       {
-        "id": 21487,
-        "name": "Udlændinge- og Integrationsudvalget",
-        "short_name": "UUI"
-      },
-      {
         "id": 21467,
         "name": "Beskæftigelses- og Ligestillingsudvalget",
         "short_name": "BEU"
@@ -5726,13 +5721,7 @@
     "party_short": "EL",
     "current_party": "Enhedslisten",
     "current_party_short": "EL",
-    "committees": [
-      {
-        "id": 21469,
-        "name": "Klima-, Energi- og Forsyningsudvalget",
-        "short_name": "KEF"
-      }
-    ],
+    "committees": [],
     "role": "MF",
     "constituency": "Folketingsmedlem for Enhedslisten i Københavns Storkreds fra 1. november 2022.",
     "storkreds": "Københavns Storkreds",
@@ -6524,6 +6513,11 @@
     "current_party_short": "EL",
     "committees": [
       {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      },
+      {
         "id": 21508,
         "name": "Udvalget for Det Tyske Mindretal",
         "short_name": "UTM"
@@ -6859,7 +6853,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -8419,7 +8413,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -8989,7 +8983,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -10249,7 +10243,7 @@
       },
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       }
     ],
@@ -10475,7 +10469,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -11423,7 +11417,7 @@
       },
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -11768,7 +11762,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -13471,7 +13465,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -13552,7 +13546,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -15223,7 +15217,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -15405,7 +15399,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -15829,7 +15823,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -16010,7 +16004,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -17769,7 +17763,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -18385,7 +18379,7 @@
       },
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -23026,7 +23020,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -24828,7 +24822,7 @@
       },
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -25006,7 +25000,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -25483,6 +25477,11 @@
     "current_party": "Uden for folketingsgrupperne - Nadja Natalie Isaksen",
     "current_party_short": "UFG",
     "committees": [
+      {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
       {
         "id": 21485,
         "name": "Retsudvalget",
@@ -26206,7 +26205,7 @@
       },
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -27308,7 +27307,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
@@ -27739,7 +27738,7 @@
     "committees": [
       {
         "id": 21492,
-        "name": "Indenrigs- Bolig- og Landdistriktsudvalget",
+        "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
       },
       {
