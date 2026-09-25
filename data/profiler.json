@@ -3740,7 +3740,7 @@
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 5,
+    "seniority_months": 6,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
@@ -4087,6 +4087,11 @@
     "current_party_short": "DF",
     "committees": [
       {
+        "id": 21487,
+        "name": "Udlændinge- og Integrationsudvalget",
+        "short_name": "UUI"
+      },
+      {
         "id": 21469,
         "name": "Klima-, Energi- og Forsyningsudvalget",
         "short_name": "KEF"
@@ -4308,7 +4313,7 @@
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 0,
+    "seniority_months": 1,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
@@ -12375,7 +12380,7 @@
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 2,
+    "seniority_months": 3,
     "seniority_tag": "newcomer",
     "votes_total": 25,
     "votes_for": 22,
@@ -14574,7 +14579,7 @@
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 5,
+    "seniority_months": 6,
     "seniority_tag": "newcomer",
     "votes_total": 25,
     "votes_for": 12,
@@ -25477,11 +25482,6 @@
     "current_party_short": "UFG",
     "committees": [
       {
-        "id": 21487,
-        "name": "Udlændinge- og Integrationsudvalget",
-        "short_name": "UUI"
-      },
-      {
         "id": 21485,
         "name": "Retsudvalget",
         "short_name": "REU"
@@ -25842,7 +25842,7 @@
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 5,
+    "seniority_months": 6,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,

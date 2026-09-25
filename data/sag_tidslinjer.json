@@ -9686,8 +9686,8 @@
     "sag_short_title": "Om id-kort på byggepladser.",
     "sag_type_id": 3,
     "sag_type": "Lovforslag",
-    "sag_status_id": 41,
-    "sag_status": "3.beh./Vedtaget",
+    "sag_status_id": 11,
+    "sag_status": "Stadfæstet",
     "sag_category_id": 13,
     "sag_category": "Regeringsforslag",
     "fremsatundersagid": null,
@@ -9731,8 +9731,8 @@
       }
     ],
     "law_followup": {
-      "law_number": null,
-      "law_number_date": null,
+      "law_number": "804",
+      "law_number_date": "2026-09-24",
       "decision_date": null,
       "decision_result_code": null,
       "decision_text": null,
