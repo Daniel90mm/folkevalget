@@ -26053,6 +26053,11 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
+      {
         "id": 21480,
         "name": "Erhvervs- og Digitaliseringsudvalget",
         "short_name": "ERU"
@@ -27580,11 +27585,6 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
-      {
-        "id": 21478,
-        "name": "Skatteudvalget",
-        "short_name": "SAU"
-      },
       {
         "id": 21485,
         "name": "Retsudvalget",
