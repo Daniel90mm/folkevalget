@@ -234,74 +234,6 @@
     "recent_votes": []
   },
   {
-    "id": 20353,
-    "name": "Sascha Faxe",
-    "first_name": "Sascha",
-    "last_name": "Faxe",
-    "party": "Alternativet",
-    "party_short": "ALT",
-    "current_party": "Alternativet",
-    "current_party_short": "ALT",
-    "committees": [],
-    "role": "Sascha Faxe (ALT)",
-    "constituency": "Folketingsmedlem for Alternativet i Sjællands Storkreds, 1. november 2022 – 24. marts 2026.",
-    "storkreds": "Sjællands Storkreds",
-    "constituency_history": [
-      "Folketingsmedlem for Alternativet i Sjællands Storkreds, 1. november 2022 – 24. marts 2026."
-    ],
-    "party_history": [
-      {
-        "party": "Alternativet",
-        "party_short": "ALT",
-        "start_date": "2026-03-24",
-        "end_date": "2026-10-06",
-        "active": true
-      }
-    ],
-    "educations": [
-      "Council Guide, Ehama Institute, New Mexico, 2006.",
-      "Cand.mag. i medievidenskab, Aarhus Universitet, 2003.",
-      "Bachelor i historie og medievidenskab, Aarhus Universitet, 1998.",
-      "Exam.art. i historie, Aarhus Universitet, 1995.",
-      "Student, Maribo Gymnasium, 1990.",
-      "Folkeskole, Stokkemarke Skole og Østofte Skole, 1987."
-    ],
-    "occupations": [
-      "Programleder, Ventilen Danmark, 2021-2022.",
-      "Udviklingsmedarbejder og kommunikationsansvarlig, INSP, 2018-2021.",
-      "Politikudviklingschef, Alternativet, 2016-2017.",
-      "Uddannelseskonsulent og projektleder, Mellemfolkeligt Samvirke, 2014-2015.",
-      "Team leader , KaosPilots Switzerland, 2012-2013.",
-      "Selvstændig konsulent, 2005-2015."
-    ],
-    "email": null,
-    "phone": null,
-    "website_url": null,
-    "address": null,
-    "member_url": "https://www.ft.dk/medlemmer/mf/s/sascha-faxe",
-    "photo_url": "photos/20353.jpg",
-    "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/alt/sascha-faxe/sascha_faxe_500.jpg",
-    "photo_source_name": "Folketinget",
-    "photo_photographer": "Marie Hald",
-    "photo_credit_text": "Folketinget / Fotograf Marie Hald",
-    "member_since_date": "2026-03-24",
-    "member_since_year": 2026,
-    "seniority_label": "Under 1 aar i Folketinget",
-    "seniority_years": 0,
-    "seniority_months": 6,
-    "seniority_tag": "newcomer",
-    "votes_total": 0,
-    "votes_for": 0,
-    "votes_against": 0,
-    "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": null,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
-    "recent_votes": []
-  },
-  {
     "id": 15775,
     "name": "Torsten Gejl",
     "first_name": "Torsten",
@@ -4254,10 +4186,10 @@
     "name": "Lone Langballe",
     "first_name": "Lone",
     "last_name": "Langballe",
-    "party": "Dansk Folkeparti",
+    "party": null,
     "party_short": "DF",
-    "current_party": "Dansk Folkeparti",
-    "current_party_short": "DF",
+    "current_party": null,
+    "current_party_short": null,
     "committees": [
       {
         "id": 21492,
@@ -4294,7 +4226,7 @@
         "party_short": "DF",
         "start_date": "2026-08-25",
         "end_date": "2026-09-27",
-        "active": true
+        "active": false
       }
     ],
     "educations": [],
@@ -4713,14 +4645,14 @@
         "party_short": "DF",
         "start_date": "2026-09-28",
         "end_date": "2026-09-28",
-        "active": false
+        "active": true
       },
       {
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-08-25",
         "end_date": "2026-09-27",
-        "active": true
+        "active": false
       },
       {
         "party": "Dansk Folkeparti",
@@ -12298,7 +12230,7 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2026-10-06",
+    "member_since_date": "2026-09-03",
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
@@ -25023,8 +24955,15 @@
       {
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
+        "start_date": "2026-09-29",
+        "end_date": "2027-10-05",
+        "active": false
+      },
+      {
+        "party": "Socialistisk Folkeparti",
+        "party_short": "SF",
         "start_date": "2026-03-24",
-        "end_date": null,
+        "end_date": "2026-09-28",
         "active": true
       }
     ],
