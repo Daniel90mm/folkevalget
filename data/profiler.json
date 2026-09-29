@@ -1138,11 +1138,6 @@
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
         "short_name": "SUU"
-      },
-      {
-        "id": 21485,
-        "name": "Retsudvalget",
-        "short_name": "REU"
       }
     ],
     "role": "Social- og sundhedsassistent",
@@ -2850,6 +2845,8 @@
       "Student, Morsø Gymnasium, 1993."
     ],
     "occupations": [
+      "Klummeskribent, Avisen Danmark, 2022.",
+      "Fast debattør på Det Blå Hjørne, Radio4, 2022.",
       "Tv-vært, dk4, 2022.",
       "Klummeskribent, Ekstra Bladet, 2022.",
       "Freelancejournalist, Støjberg Kommunikation, 2000-2001.",
@@ -10102,7 +10099,7 @@
         "short_name": "UPV"
       }
     ],
-    "role": "MF",
+    "role": "Cand.jur.",
     "constituency": "Folketingsmedlem for Liberal Alliance i Nordjyllands Storkreds fra 1. november 2022.",
     "storkreds": "Nordjyllands Storkreds",
     "constituency_history": [
@@ -22799,7 +22796,7 @@
         "short_name": "UPV"
       }
     ],
-    "role": "Mf",
+    "role": "Astrid Carøe (SF)",
     "constituency": "Folketingsmedlem for Socialistisk Folkeparti i Sjællands Storkreds fra 5. juni 2019.",
     "storkreds": "Sjællands Storkreds",
     "constituency_history": [
@@ -27296,6 +27293,11 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21456,
+        "name": "Nordisk Råd",
+        "short_name": "NOR"
+      },
+      {
         "id": 21492,
         "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
@@ -27656,11 +27658,6 @@
         "id": 21462,
         "name": "Den Arktiske Delegation",
         "short_name": "AD"
-      },
-      {
-        "id": 21456,
-        "name": "Nordisk Råd",
-        "short_name": "NOR"
       }
     ],
     "role": "Jurist",
