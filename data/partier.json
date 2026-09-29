@@ -48,7 +48,7 @@
     "id": 21329,
     "name": "Dansk Folkeparti",
     "short_name": "DF",
-    "member_count": 17,
+    "member_count": 18,
     "member_ids": [
       18,
       216,
@@ -66,7 +66,8 @@
       21377,
       21378,
       21386,
-      21403
+      21403,
+      21527
     ]
   },
   {
@@ -271,7 +272,7 @@
     "id": 21324,
     "name": "Socialistisk Folkeparti",
     "short_name": "SF",
-    "member_count": 21,
+    "member_count": 22,
     "member_ids": [
       43,
       121,
@@ -293,7 +294,8 @@
       21340,
       21361,
       21365,
-      21383
+      21383,
+      21417
     ]
   },
   {

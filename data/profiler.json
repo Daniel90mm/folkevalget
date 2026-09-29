@@ -4186,10 +4186,10 @@
     "name": "Lone Langballe",
     "first_name": "Lone",
     "last_name": "Langballe",
-    "party": null,
+    "party": "Dansk Folkeparti",
     "party_short": "DF",
-    "current_party": null,
-    "current_party_short": null,
+    "current_party": "Dansk Folkeparti",
+    "current_party_short": "DF",
     "committees": [
       {
         "id": 21492,
@@ -4218,8 +4218,8 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-09-29",
-        "end_date": "2026-12-31",
-        "active": false
+        "end_date": null,
+        "active": true
       },
       {
         "party": "Dansk Folkeparti",
@@ -4637,15 +4637,15 @@
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-09-29",
-        "end_date": "2026-12-31",
-        "active": false
+        "end_date": null,
+        "active": true
       },
       {
         "party": "Dansk Folkeparti",
         "party_short": "DF",
         "start_date": "2026-09-28",
         "end_date": "2026-09-28",
-        "active": true
+        "active": false
       },
       {
         "party": "Dansk Folkeparti",
@@ -23477,6 +23477,58 @@
     ]
   },
   {
+    "id": 21417,
+    "name": "Vivi Nør Jacobsen",
+    "first_name": "Vivi Nør",
+    "last_name": "Jacobsen",
+    "party": "Socialistisk Folkeparti",
+    "party_short": "SF",
+    "current_party": "Socialistisk Folkeparti",
+    "current_party_short": "SF",
+    "committees": [],
+    "role": "Afdelingschef",
+    "constituency": null,
+    "storkreds": null,
+    "constituency_history": [],
+    "party_history": [
+      {
+        "party": "Socialistisk Folkeparti",
+        "party_short": "SF",
+        "start_date": "2026-09-29",
+        "end_date": "2026-10-06",
+        "active": true
+      }
+    ],
+    "educations": [],
+    "occupations": [],
+    "email": "vivi.jacobsen@ft.dk",
+    "phone": "+45 3337 4422",
+    "website_url": null,
+    "address": "Folketinget, Christiansborg 1218 København K",
+    "member_url": null,
+    "photo_url": "https://www.ft.dk/-/media/cv/foto/foto-mangler_133x133,-d-,jpg.ashx",
+    "photo_source_url": null,
+    "photo_source_name": null,
+    "photo_photographer": null,
+    "photo_credit_text": null,
+    "member_since_date": "2026-09-29",
+    "member_since_year": 2026,
+    "seniority_label": "Under 1 aar i Folketinget",
+    "seniority_years": 0,
+    "seniority_months": 0,
+    "seniority_tag": "newcomer",
+    "votes_total": 0,
+    "votes_for": 0,
+    "votes_against": 0,
+    "votes_neither": 0,
+    "votes_absent": 0,
+    "attendance_pct": null,
+    "party_loyalty_pct": null,
+    "party_loyalty_matches": 0,
+    "party_loyalty_comparisons": 0,
+    "recent_votes": []
+  },
+  {
     "id": 9896,
     "name": "Jørgen Kvist",
     "first_name": "Jørgen",
@@ -24956,15 +25008,15 @@
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-09-29",
-        "end_date": "2027-10-05",
-        "active": false
+        "end_date": null,
+        "active": true
       },
       {
         "party": "Socialistisk Folkeparti",
         "party_short": "SF",
         "start_date": "2026-03-24",
         "end_date": "2026-09-28",
-        "active": true
+        "active": false
       }
     ],
     "educations": [
@@ -26052,11 +26104,6 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
-      {
-        "id": 21478,
-        "name": "Skatteudvalget",
-        "short_name": "SAU"
-      },
       {
         "id": 21480,
         "name": "Erhvervs- og Digitaliseringsudvalget",
@@ -27585,6 +27632,11 @@
     "current_party": "Venstre, Danmarks Liberale Parti",
     "current_party_short": "V",
     "committees": [
+      {
+        "id": 21478,
+        "name": "Skatteudvalget",
+        "short_name": "SAU"
+      },
       {
         "id": 21485,
         "name": "Retsudvalget",
