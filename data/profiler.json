@@ -1125,6 +1125,11 @@
     "current_party_short": "DD",
     "committees": [
       {
+        "id": 21485,
+        "name": "Retsudvalget",
+        "short_name": "REU"
+      },
+      {
         "id": 21492,
         "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
@@ -4194,11 +4199,6 @@
         "short_name": "IBL"
       },
       {
-        "id": 21480,
-        "name": "Erhvervs- og Digitaliseringsudvalget",
-        "short_name": "ERU"
-      },
-      {
         "id": 21478,
         "name": "Skatteudvalget",
         "short_name": "SAU"
@@ -4603,6 +4603,11 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [
+      {
+        "id": 21480,
+        "name": "Erhvervs- og Digitaliseringsudvalget",
+        "short_name": "ERU"
+      },
       {
         "id": 21477,
         "name": "Transportudvalget",
@@ -24104,7 +24109,7 @@
     "member_since_year": 2024,
     "seniority_label": "1 aar i Folketinget",
     "seniority_years": 1,
-    "seniority_months": 21,
+    "seniority_months": 22,
     "seniority_tag": "newcomer",
     "votes_total": 50,
     "votes_for": 6,
@@ -28680,11 +28685,11 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2026-10-07",
+    "member_since_date": "2026-06-10",
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 0,
+    "seniority_months": 3,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
