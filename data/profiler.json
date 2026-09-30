@@ -3658,7 +3658,7 @@
       "Cand.merc., Copenhagen Business School (CBS), 1995."
     ],
     "occupations": [
-      "Selvstændig, Familien Feldt fra 1990."
+      "Selvstændig, Familien Feldt fra 1988."
     ],
     "email": "allan.feldt@ft.dk",
     "phone": "+45 6162 3967",
@@ -3697,6 +3697,11 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
       {
         "id": 21489,
         "name": "Epidemiudvalget",
@@ -24579,11 +24584,6 @@
         "short_name": "IFU"
       },
       {
-        "id": 21477,
-        "name": "Transportudvalget",
-        "short_name": "TRU"
-      },
-      {
         "id": 21466,
         "name": "Sundheds- og Ældreudvalget",
         "short_name": "SUU"
@@ -24992,11 +24992,6 @@
         "id": 21492,
         "name": "Indenrigs-, Bolig- og Landdistriktsudvalget",
         "short_name": "IBL"
-      },
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
       }
     ],
     "role": "Sofie F. Villadsen (SF)",

@@ -40,7 +40,7 @@
     "id": 21479,
     "name": "Børne-, Undervisnings- og Forskningsudvalget",
     "short_name": "BUU",
-    "member_count": 28,
+    "member_count": 29,
     "member_ids": [
       97,
       113,
@@ -65,6 +65,7 @@
       21363,
       21370,
       21375,
+      21378,
       21379,
       21383,
       21386,
@@ -282,7 +283,7 @@
     "id": 21483,
     "name": "Grønlandsudvalget",
     "short_name": "GRU",
-    "member_count": 28,
+    "member_count": 27,
     "member_ids": [
       18,
       109,
@@ -307,7 +308,6 @@
       20414,
       21337,
       21356,
-      21365,
       21368,
       21380,
       21387,
@@ -711,7 +711,7 @@
     "id": 21477,
     "name": "Transportudvalget",
     "short_name": "TRU",
-    "member_count": 29,
+    "member_count": 28,
     "member_ids": [
       82,
       99,
@@ -739,7 +739,6 @@
       21350,
       21351,
       21356,
-      21361,
       21367,
       21379
     ]
