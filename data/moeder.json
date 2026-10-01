@@ -2,10 +2,198 @@
   "scope": "case-linked-meetings",
   "scope_note": "Moeder og dagsordenspunkter koblet til sager i det aktuelle datasaet.",
   "counts": {
-    "meetings": 9,
-    "agenda_points": 55
+    "meetings": 12,
+    "agenda_points": 66
   },
   "meetings": [
+    {
+      "meeting_id": 16099,
+      "date": "2026-10-01",
+      "number": "25",
+      "title": "Møde i salen",
+      "type": "Møde i salen",
+      "status": "Afholdt",
+      "start_note": "",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 102104,
+          "agenda_number": "1",
+          "agenda_title": "Eventuelt: 3. behandling",
+          "forhandling": "",
+          "sag_id": 71032,
+          "sag_number": "L 23",
+          "sag_title": "Om prioritering af kapacitet i elnettet og hensigtsmæssig tilslutning til elnettet m.v.",
+          "sagstrin_id": 274943,
+          "sagstrin_date": "2026-10-01",
+          "sagstrin_title": "Eventuelt: 3. behandling",
+          "sagstrin_type": "3. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10605
+          ]
+        },
+        {
+          "agenda_point_id": 102105,
+          "agenda_number": "2",
+          "agenda_title": "2. (sidste) behandling",
+          "forhandling": "",
+          "sag_id": 104939,
+          "sag_number": "B 3",
+          "sag_title": "Om at genindføre store bededag som helligdag.",
+          "sagstrin_id": 273680,
+          "sagstrin_date": "2026-10-01",
+          "sagstrin_title": "2. (sidste) behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Forkastet",
+          "vote_ids": [
+            10606
+          ]
+        },
+        {
+          "agenda_point_id": 102106,
+          "agenda_number": "3",
+          "agenda_title": "2. (sidste) behandling",
+          "forhandling": "",
+          "sag_id": 104963,
+          "sag_number": "B 5",
+          "sag_title": "Om etablering af kursusordning for private til nedtagning af asbestholdige tage.",
+          "sagstrin_id": 273801,
+          "sagstrin_date": "2026-10-01",
+          "sagstrin_title": "2. (sidste) behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Forkastet",
+          "vote_ids": [
+            10607
+          ]
+        },
+        {
+          "agenda_point_id": 102107,
+          "agenda_number": "4",
+          "agenda_title": "2. (sidste) behandling",
+          "forhandling": "",
+          "sag_id": 70824,
+          "sag_number": "B 6",
+          "sag_title": "Om at afskaffe koranloven.",
+          "sagstrin_id": 273813,
+          "sagstrin_date": "2026-10-01",
+          "sagstrin_title": "2. (sidste) behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Forkastet",
+          "vote_ids": [
+            10608
+          ]
+        },
+        {
+          "agenda_point_id": 102108,
+          "agenda_number": "5",
+          "agenda_title": "2. (sidste) behandling",
+          "forhandling": "",
+          "sag_id": 104978,
+          "sag_number": "B 8",
+          "sag_title": "Om, at en gerningspersons unge alder ikke kan indgå som formildende omstændighed i sager om personfarlig kriminalitet.",
+          "sagstrin_id": 273834,
+          "sagstrin_date": "2026-10-01",
+          "sagstrin_title": "2. (sidste) behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Forkastet",
+          "vote_ids": [
+            10609
+          ]
+        },
+        {
+          "agenda_point_id": 102109,
+          "agenda_number": "6",
+          "agenda_title": "2. (sidste) behandling",
+          "forhandling": "",
+          "sag_id": 105576,
+          "sag_number": "B 27",
+          "sag_title": "Om »rette indkomstmodtager« og sikring af, at ingen samlet betaler mere i skat, end de tjener.",
+          "sagstrin_id": 274874,
+          "sagstrin_date": "2026-10-01",
+          "sagstrin_title": "2. (sidste) behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10610
+          ]
+        },
+        {
+          "agenda_point_id": 102110,
+          "agenda_number": "7",
+          "agenda_title": "1. (eneste) behandling",
+          "forhandling": "",
+          "sag_id": 105254,
+          "sag_number": "B 18",
+          "sag_title": "Om at undersøge en model for forvaltningsdomstole i Danmark.",
+          "sagstrin_id": 274305,
+          "sagstrin_date": "2026-10-01",
+          "sagstrin_title": "1. (eneste) behandling",
+          "sagstrin_type": "1. (eneste) behandling",
+          "sagstrin_status": "Behandlet/Vedtaget",
+          "vote_ids": [
+            10611
+          ]
+        }
+      ],
+      "agenda_point_count": 7
+    },
+    {
+      "meeting_id": 16098,
+      "date": "2026-09-29",
+      "number": "24",
+      "title": "Møde i salen",
+      "type": "Møde i salen",
+      "status": "Afholdt",
+      "start_note": "13:00",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 102067,
+          "agenda_number": "3",
+          "agenda_title": "2. behandling",
+          "forhandling": "",
+          "sag_id": 71032,
+          "sag_number": "L 23",
+          "sag_title": "Om prioritering af kapacitet i elnettet og hensigtsmæssig tilslutning til elnettet m.v.",
+          "sagstrin_id": 274941,
+          "sagstrin_date": "2026-09-29",
+          "sagstrin_title": "2. behandling",
+          "sagstrin_type": "2. behandling",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
+        }
+      ],
+      "agenda_point_count": 1
+    },
+    {
+      "meeting_id": 16117,
+      "date": "2026-09-23",
+      "number": null,
+      "title": "Klima-, Energi- og Forsyningsudvalget - dep",
+      "type": "Udvalgsmøde",
+      "status": "Afholdt",
+      "start_note": "kl. 13.00",
+      "agenda_url": "",
+      "agenda_points": [
+        {
+          "agenda_point_id": 101959,
+          "agenda_number": "a",
+          "agenda_title": "Proreum Data Solutions om L 23 – kategorisering af datacentre og netvenlighed, jf. L 23 - bilag 6.",
+          "forhandling": "",
+          "sag_id": 71032,
+          "sag_number": "L 23",
+          "sag_title": "Om prioritering af kapacitet i elnettet og hensigtsmæssig tilslutning til elnettet m.v.",
+          "sagstrin_id": 275594,
+          "sagstrin_date": "2026-09-23",
+          "sagstrin_title": "Proreum Data Solutions om L 23 – kategorisering af datacentre og netvenlighed, jf. L 23 - bilag 6.",
+          "sagstrin_type": "Deputation",
+          "sagstrin_status": "Afholdt",
+          "vote_ids": []
+        }
+      ],
+      "agenda_point_count": 1
+    },
     {
       "meeting_id": 16039,
       "date": "2026-09-03",
@@ -253,9 +441,39 @@
           "vote_ids": [
             10604
           ]
+        },
+        {
+          "agenda_point_id": 101614,
+          "agenda_number": "18",
+          "agenda_title": "1. behandling",
+          "forhandling": "",
+          "sag_id": 71032,
+          "sag_number": "L 23",
+          "sag_title": "Om prioritering af kapacitet i elnettet og hensigtsmæssig tilslutning til elnettet m.v.",
+          "sagstrin_id": 274934,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "1. behandling",
+          "sagstrin_type": "1. behandling",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
+        },
+        {
+          "agenda_point_id": 101615,
+          "agenda_number": "19",
+          "agenda_title": "1. behandling",
+          "forhandling": "",
+          "sag_id": 105576,
+          "sag_number": "B 27",
+          "sag_title": "Om »rette indkomstmodtager« og sikring af, at ingen samlet betaler mere i skat, end de tjener.",
+          "sagstrin_id": 274867,
+          "sagstrin_date": "2026-09-03",
+          "sagstrin_title": "1. behandling",
+          "sagstrin_type": "1. behandling.",
+          "sagstrin_status": "Behandlet/Henvist til udvalg",
+          "vote_ids": []
         }
       ],
-      "agenda_point_count": 14
+      "agenda_point_count": 16
     },
     {
       "meeting_id": 16036,
@@ -997,5 +1215,5 @@
       "agenda_point_count": 7
     }
   ],
-  "generated_at": "2026-09-30T21:30:38+00:00"
+  "generated_at": "2026-10-01T11:49:30+00:00"
 }
