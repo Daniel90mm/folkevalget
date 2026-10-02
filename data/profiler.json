@@ -1905,7 +1905,48 @@
     "party_short": "DD",
     "current_party": "Danmarksdemokraterne – Inger Støjberg",
     "current_party_short": "DD",
-    "committees": [],
+    "committees": [
+      {
+        "id": 21508,
+        "name": "Udvalget for Det Tyske Mindretal",
+        "short_name": "UTM"
+      },
+      {
+        "id": 21483,
+        "name": "Grønlandsudvalget",
+        "short_name": "GRU"
+      },
+      {
+        "id": 21482,
+        "name": "Udenrigs- og Forsvarsudvalget",
+        "short_name": "UDF"
+      },
+      {
+        "id": 21481,
+        "name": "Kultur- og Kirkeudvalget",
+        "short_name": "KUU"
+      },
+      {
+        "id": 21476,
+        "name": "Miljø- og Fødevareudvalget",
+        "short_name": "MOF"
+      },
+      {
+        "id": 21469,
+        "name": "Klima-, Energi- og Forsyningsudvalget",
+        "short_name": "KEF"
+      },
+      {
+        "id": 21468,
+        "name": "Færøudvalget",
+        "short_name": "FÆU"
+      },
+      {
+        "id": 21462,
+        "name": "Den Arktiske Delegation",
+        "short_name": "AD"
+      }
+    ],
     "role": "Historiker, USA-analytiker",
     "constituency": "Folketingsmedlem for Danmarksdemokraterne i Vestjyllands Storkreds fra 19. marts 2024.",
     "storkreds": "Vestjyllands Storkreds",
@@ -1926,15 +1967,15 @@
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
         "start_date": "2026-10-02",
-        "end_date": "2026-10-06",
-        "active": false
+        "end_date": null,
+        "active": true
       },
       {
         "party": "Danmarksdemokraterne – Inger Støjberg",
         "party_short": "DD",
         "start_date": "2026-09-16",
         "end_date": "2026-10-01",
-        "active": true
+        "active": false
       },
       {
         "party": "Danmarksdemokraterne – Inger Støjberg",
@@ -2323,94 +2364,6 @@
     "seniority_label": "3 aar i Folketinget",
     "seniority_years": 3,
     "seniority_months": 47,
-    "seniority_tag": "newcomer",
-    "votes_total": 0,
-    "votes_for": 0,
-    "votes_against": 0,
-    "votes_neither": 0,
-    "votes_absent": 0,
-    "attendance_pct": null,
-    "party_loyalty_pct": null,
-    "party_loyalty_matches": 0,
-    "party_loyalty_comparisons": 0,
-    "recent_votes": []
-  },
-  {
-    "id": 20372,
-    "name": "Betina Kastbjerg",
-    "first_name": "Betina",
-    "last_name": "Kastbjerg",
-    "party": "Danmarksdemokraterne – Inger Støjberg",
-    "party_short": "DD",
-    "current_party": "Danmarksdemokraterne – Inger Støjberg",
-    "current_party_short": "DD",
-    "committees": [
-      {
-        "id": 21508,
-        "name": "Udvalget for Det Tyske Mindretal",
-        "short_name": "UTM"
-      },
-      {
-        "id": 21483,
-        "name": "Grønlandsudvalget",
-        "short_name": "GRU"
-      },
-      {
-        "id": 21482,
-        "name": "Udenrigs- og Forsvarsudvalget",
-        "short_name": "UDF"
-      },
-      {
-        "id": 21481,
-        "name": "Kultur- og Kirkeudvalget",
-        "short_name": "KUU"
-      },
-      {
-        "id": 21456,
-        "name": "Nordisk Råd",
-        "short_name": "NOR"
-      }
-    ],
-    "role": "International projektleder",
-    "constituency": "Folketingsmedlem for Danmarksdemokraterne i Vestjyllands Storkreds, 1. november 2022 – 24. marts 2026.",
-    "storkreds": "Vestjyllands Storkreds",
-    "constituency_history": [
-      "Folketingsmedlem for Danmarksdemokraterne i Vestjyllands Storkreds, 1. november 2022 – 24. marts 2026."
-    ],
-    "party_history": [
-      {
-        "party": "Danmarksdemokraterne – Inger Støjberg",
-        "party_short": "DD",
-        "start_date": "2026-09-16",
-        "end_date": "2026-10-01",
-        "active": true
-      }
-    ],
-    "educations": [
-      "Merkonom marketing, Herning Handelsskole, 1992.",
-      "Højere handelseksamen, Herning Handelsskole, 1990."
-    ],
-    "occupations": [
-      "International projektleder, Kvik A/S, 2021-2022.",
-      "International projektleder, Bestseller og Jack & Jones, 2009-2021.",
-      "Projektkoordinator, KPC Byg A/S, 2005-2009.",
-      "Administrativ assistent, EnergiMidt, 1992-2005."
-    ],
-    "email": "betina.kastbjerg@ft.dk",
-    "phone": "+45 3337 5713",
-    "website_url": null,
-    "address": null,
-    "member_url": "https://www.ft.dk/medlemmer/mf/b/betina-kastbjerg",
-    "photo_url": "photos/20372.jpg",
-    "photo_source_url": "https://www.ft.dk/-/media/cv/foto/2022/dd/betina-kastbjerg/betina_kastbjerg_500.jpg",
-    "photo_source_name": "Folketinget",
-    "photo_photographer": "Marie Hald",
-    "photo_credit_text": "Folketinget / Fotograf Marie Hald",
-    "member_since_date": "2026-03-24",
-    "member_since_year": 2026,
-    "seniority_label": "Under 1 aar i Folketinget",
-    "seniority_years": 0,
-    "seniority_months": 6,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
@@ -4995,6 +4948,11 @@
     "current_party": "Dansk Folkeparti",
     "current_party_short": "DF",
     "committees": [
+      {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
       {
         "id": 21487,
         "name": "Udlændinge- og Integrationsudvalget",
@@ -28202,6 +28160,11 @@
     "current_party_short": "V",
     "committees": [
       {
+        "id": 21479,
+        "name": "Børne-, Undervisnings- og Forskningsudvalget",
+        "short_name": "BUU"
+      },
+      {
         "id": 21476,
         "name": "Miljø- og Fødevareudvalget",
         "short_name": "MOF"
@@ -28382,9 +28345,9 @@
     "current_party_short": "V",
     "committees": [
       {
-        "id": 21479,
-        "name": "Børne-, Undervisnings- og Forskningsudvalget",
-        "short_name": "BUU"
+        "id": 21466,
+        "name": "Sundheds- og Ældreudvalget",
+        "short_name": "SUU"
       },
       {
         "id": 21477,
@@ -28867,11 +28830,11 @@
     "photo_source_name": null,
     "photo_photographer": null,
     "photo_credit_text": null,
-    "member_since_date": "2026-10-07",
+    "member_since_date": "2026-06-10",
     "member_since_year": 2026,
     "seniority_label": "Under 1 aar i Folketinget",
     "seniority_years": 0,
-    "seniority_months": 0,
+    "seniority_months": 3,
     "seniority_tag": "newcomer",
     "votes_total": 0,
     "votes_for": 0,
