@@ -1,0 +1,35 @@
+/* Hallmark - macrostructure: Poster Split (type left, one drawing right) - tone: playful - genre: playful
+ * theme: custom - vibe: sleepy civic mascot, cream paper, Danish red
+ * paper oklch(96% 0.02 85) - accent oklch(52% 0.19 27) - display: system serif, body: system sans
+ * axes: light / roman-serif / warm
+ */
+:root {
+  --color-paper: oklch(96% 0.02 85);
+  --color-ink: oklch(24% 0.05 265);
+  --color-muted: oklch(42% 0.04 265);
+  --color-accent: oklch(52% 0.19 27);
+  --color-cream: oklch(98.5% 0.01 90);
+  --color-box: oklch(74% 0.09 235);
+  --color-box-shade: oklch(62% 0.1 240);
+  --color-cheek: oklch(82% 0.1 20);
+  --color-shadow: oklch(86% 0.025 85);
+
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+
+  --text-body: clamp(1.0625rem, 0.95rem + 0.5vw, 1.3125rem);
+  --text-small: 0.9375rem;
+  --text-display: clamp(2.75rem, 1.2rem + 8vw, 6.75rem);
+
+  --rule-width: 3px;
+  --radius-sm: 4px;
+
+  --ease-in-out: cubic-bezier(0.45, 0, 0.55, 1);
+  --dur-slow: 3.2s;
+}
